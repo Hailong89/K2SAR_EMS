@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Specifying Attributes of Functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 8--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse11.html" >next</a>] [<a 
+href="main_gcc_ugch6.html" >prev</a>] [<a 
+href="main_gcc_ugch6.html#tailmain_gcc_ugch6.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse10.html">tail</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse10.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">6.1</span>  <a 
+href="main_gcc_ug.html#QQ2-20-29" id="x20-250006.1">Specifying Attributes of Functions</a></h3>
+<a 
+ id="dx20-25001"></a>
+<!--l. 10--><p class="noindent" >For <span 
+class="cmtt-12">tricore-gcc</span> you can specify attributes for functions. An attribute is assigned to a function
+in the declaration of the function prototype:
+</p><!--l. 12--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb23"><a 
+ id="x20-25003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x003C;Type&#x003E;</span><span 
+class="pcrr7t-x-x-144"> &#x003C;name</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> function&#x003E;</span><span 
+class="pcrr7t-x-x-144"> (&#x003C;parameter&#x003E;)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((&#x003C;attribute&#x003E;));</span></div>
+<!--l. 16--><p class="noindent" >The following example illustrates the use of an attribute:
+</p><!--l. 18--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb24"><a 
+ id="x20-25005r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> sayhello</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((const));</span></div>
+<!--l. 22--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">List</span>
+<span 
+class="cmssbx-10x-x-120">of</span>
+<span 
+class="cmssbx-10x-x-120">attributes</span>
+</p><!--l. 24--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">alias</span></span>             </dt><dd 
+class="list">
+                  <!--l. 25--><p class="noindent" >A function definition with this attribute causes the definition to become
+                  a weak alias of another function. It can be used in combination with
+                  <span class="lstinline"><span 
+class="ecss-1200">weak</span></span> attribute to define a weak alias. For instance,
+                  </p><!--l. 27--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb25"><a 
+ id="x20-25007r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> __f</span><span 
+class="pcrr7t-x-x-144"> ()</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> do</span><span 
+class="pcrr7t-x-x-144"> something</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/;</span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x20-25009r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> f</span><span 
+class="pcrr7t-x-x-144"> ()</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((weak,</span><span 
+class="pcrr7t-x-x-144"> alias</span><span 
+class="pcrr7t-x-x-144"> ("__f")));</span></div>
+                  <!--l. 32--><p class="noindent" >declares ”f” to be a weak alias for <span class="lstinline"><span 
+class="ecss-1200">__f</span></span>. In C++, the mangled name for the
+                  target must be used. </p>
+                  <div class="center" 
+>
+<!--l. 33--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox13"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Not all target machines support this attribute.                     </div>
+</div>
+                                                                                       
+                                                                                       
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">always_inline</span></span>    </dt><dd 
+class="list">
+                  <!--l. 34--><p class="noindent" ><a 
+ id="dx20-25010"></a> A function with this attribute that is declared as being inline, will always be
+                  expanded as inline code, even when no optimization is specified. This
+                  attribute forces the compiler to inline the function ignoring the size of the
+                  function
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">const</span></span>             </dt><dd 
+class="list">
+                  <!--l. 36--><p class="noindent" ><a 
+ id="dx20-25011"></a> Many functions do not examine any values except their arguments, and have
+                  no effects except the return value. Basically this is just slightly
+                  more strict class than the <span class="lstinline"><span 
+class="ecss-1200">pure</span></span> attribute, since function is not
+                  allowed to read global memory. Note that a function that has pointer
+                  arguments and examines the data pointed to must not be declared
+                  <span class="lstinline"><span 
+class="ecsx-1200">const</span></span>. Likewise, a function that calls a non-const function usually
+                  must not be <span class="lstinline"><span 
+class="ecsx-1200">const</span></span>. It does not make sense for a const function to
+                  return void. The <span class="lstinline"><span 
+class="ecsx-1200">const</span></span> attribute gives the optimizer more freedom
+                  than <span class="lstinline"><span 
+class="ecss-1200">pure</span></span> because there is no need to make certain that all global
+                  values are updated before the function is called. With this attribute
+                  Common Subexpression Elimination (CSE) and loop optimization is
+                  improved.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">constructor</span></span>      </dt><dd 
+class="list">
+                  <!--l. 37--><p class="noindent" ><a 
+ id="dx20-25012"></a> The constructor attribute causes the function to be called automatically
+                  before execution enters <span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">()</span></span>. Functions with these attributes
+                  are useful for initializing data that will be used implicitly during
+                  the execution of the program. Also see the <span class="lstinline"><span 
+class="ecss-1200">destructor</span></span> attribute.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 38--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox14"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />These attributes are not currently implemented for Objective-C.    </div>
+</div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">deprecated</span></span>       </dt><dd 
+class="list">
+                  <!--l. 40--><p class="noindent" >A function with this attribute will cause the compiler to issue a warning
+                  message whenever it is called. This is useful when identifying functions
+                  that are expected to be removed in a future version of a program.
+                  The warning also includes the location of the declaration of the
+                  deprecated function, to enable users to easily find further information
+                                                                                       
+                                                                                       
+                  about why the function is deprecated, or what they should do
+                  instead.
+                  </p><!--l. 42--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb26"><a 
+ id="x20-25014r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> old_fn</span><span 
+class="pcrr7t-x-x-144"> ()</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((deprecated));</span>
+                  <br class="fancyvrb" /><a 
+ id="x20-25016r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> old_fn</span><span 
+class="pcrr7t-x-x-144"> ();</span><br class="fancyvrb" /><a 
+ id="x20-25018r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> (&#x22C6;fn_ptr)()</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> old_fn;</span></div>
+                  <div class="center" 
+>
+<!--l. 48--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox15"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Results in a warning on line 3 but not line 2.                       </div>
+</div>
+                  <!--l. 49--><p class="noindent" >The deprecated attribute can also be used for variables and types (see
+                  <a 
+href="main_gcc_ugse11.html#x21-260006.2">Listing 6.2</a>).
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">destructor</span></span>       </dt><dd 
+class="list">
+                  <!--l. 50--><p class="noindent" ><a 
+ id="dx20-25019"></a> A function with this attribute is called automatically after <span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">()</span></span> has
+                  returned or <span class="lstinline"><span 
+class="ecss-1200">exit</span><span 
+class="ecss-1200">()</span></span> has been called.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">format</span></span>            </dt><dd 
+class="list">
+                  <!--l. 51--><p class="noindent" ><a 
+ id="dx20-25020"></a> A function with this attribute has one argument that is a format
+                  string and a variable number of arguments for the values to be
+                  formatted. This makes it possible for the compiler to check the format
+                  content against the list of arguments to verify that the types match
+                  the formatting. There are different types of formatting, so it is
+                  also necessary to specify whether validation is to be for the <span class="lstinline"><span 
+class="ecss-1200">printf</span></span>,
+                  <span class="lstinline"><span 
+class="ecss-1200">scanf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">strftime</span></span>, or <span class="lstinline"><span 
+class="ecss-1200">strfmon</span></span> style. For example the following attribute
+                  specifies that the second argument passed to the function is the
+                  formatting string, the formatting string is expected to be of the
+                  <span class="lstinline"><span 
+class="ecss-1200">printf</span></span> type, and the variable-length argument list begins with third
+                  arguments:
+                  </p><!--l. 53--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb27"><a 
+ id="x20-25022r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> int</span>
+                  <br class="fancyvrb" /><a 
+ id="x20-25024r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> my_printf</span><span 
+class="pcrr7t-x-x-144"> (void</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;my_object,</span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;my_format,</span><span 
+class="pcrr7t-x-x-144"> ...)</span>
+                                                                                       
+                                                                                       
+                  <br class="fancyvrb" /><a 
+ id="x20-25026r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((format</span><span 
+class="pcrr7t-x-x-144"> (printf,</span><span 
+class="pcrr7t-x-x-144"> 2,</span><span 
+class="pcrr7t-x-x-144"> 3)));</span></div>
+                  <!--l. 59--><p class="noindent" >Warning messages are issued when format string is found to be invalid only if
+                  the <span 
+class="cmtt-12">-Wformat</span> option is specified. (You can also use <span class="lstinline"><span 
+class="ecss-1200">__printf__</span></span>,
+                  <span class="lstinline"><span 
+class="ecss-1200">__scanf__</span></span>, <span class="lstinline"><span 
+class="ecss-1200">__strftime__</span></span> or <span class="lstinline"><span 
+class="ecss-1200">__strfmon__</span></span>.) For functions where the
+                  arguments are not available to be checked (such as <span class="lstinline"><span 
+class="ecss-1200">vprintf</span></span>), specify the third
+                  parameter as zero. In this case the compiler only checks the format string for
+                  consistency. For <span class="lstinline"><span 
+class="ecss-1200">strftime</span></span> formats, the third parameter is required to be
+                  zero. In the example above, the format string (<span class="lstinline"><span 
+class="ecss-1200">my_format</span></span>) is the
+                  second argument of the function <span class="lstinline"><span 
+class="ecss-1200">my_print</span></span>, and the arguments to
+                  check start with the third argument, so the correct parameters for
+                  the format attribute are 2 and 3. The format attribute allows
+                  you to identify your own functions which take format strings as
+                  arguments, so that GCC can check the calls to these functions
+                  for errors. The compiler always (unless <span 
+class="cmtt-12">-ffreestanding</span> is used)
+                  checks formats for the standard library functions <span class="lstinline"><span 
+class="ecss-1200">printf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">fprintf</span></span>,
+                  <span class="lstinline"><span 
+class="ecss-1200">sprintf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">scanf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">fscanf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">sscanf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">strftime</span></span>, <span class="lstinline"><span 
+class="ecss-1200">vprintf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">vfprintf</span></span> and <span class="lstinline"><span 
+class="ecss-1200">vsprintf</span></span>
+                  whenever such warnings are requested (using <span 
+class="cmtt-12">-Wformat</span>), so there
+                  is no need to modify the header file stdio.h. In C99 mode, the
+                  functions <span class="lstinline"><span 
+class="ecss-1200">snprintf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">vsnprintf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">vscanf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">vfscanf</span></span> and <span class="lstinline"><span 
+class="ecss-1200">vsscanf</span></span> are also
+                  checked.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">format_arg</span></span>       </dt><dd 
+class="list">
+                  <!--l. 62--><p class="noindent" ><a 
+ id="dx20-25027"></a> A function with this attribute accepts a formatting string as one of its
+                  arguments and makes a modification to the string so that the result can be
+                  passed on to a <span class="lstinline"><span 
+class="ecss-1200">print</span><span 
+class="ecss-1200">()</span></span>, <span class="lstinline"><span 
+class="ecss-1200">scanf</span><span 
+class="ecss-1200">()</span></span>, <span class="lstinline"><span 
+class="ecss-1200">strftime</span></span>, or <span class="lstinline"><span 
+class="ecss-1200">strfmon</span><span 
+class="ecss-1200">(()</span></span> type function. This
+                  attribute will suppress warning messages issued when the option
+                  <span 
+class="cmtt-12">-Wformat-nonliteral</span> is set to detect nonconstant formatting
+                  strings. The following example demonstrates the setting of this
+                  attribute for a function that has such a format string as its second
+                  argument:
+                  </p><!--l. 64--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb28"><a 
+ id="x20-25029r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;</span>
+                  <br class="fancyvrb" /><a 
+ id="x20-25031r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> my_dgettext</span><span 
+class="pcrr7t-x-x-144"> (char</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;my_domain,</span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;my_format)</span>
+                  <br class="fancyvrb" /><a 
+ id="x20-25033r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((format_arg</span><span 
+class="pcrr7t-x-x-144"> (2)));</span></div>
+                  <!--l. 70--><p class="noindent" >This causes the compiler to check the arguments in calls to a <span class="lstinline"><span 
+class="ecss-1200">printf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">scanf</span></span>,
+                  <span class="lstinline"><span 
+class="ecss-1200">strftime</span></span> or <span class="lstinline"><span 
+class="ecss-1200">strfmon</span></span> type function, whose format string argument
+                  is a call to the <span class="lstinline"><span 
+class="ecss-1200">my_dgettext</span></span> function, for consistency with the
+                  format string argument <span class="lstinline"><span 
+class="ecss-1200">my_format</span></span>. The <span class="lstinline"><span 
+class="ecss-1200">format_arg</span></span> attribute
+                  allows you to identify your own functions which modify format
+                  strings, so that GCC can check the calls to <span class="lstinline"><span 
+class="ecss-1200">printf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">scanf</span></span>, <span class="lstinline"><span 
+class="ecss-1200">strftime</span></span> or
+                  <span class="lstinline"><span 
+class="ecss-1200">strfmon</span></span> type function whose operands are a call to one of your own
+                                                                                       
+                                                                                       
+                  function.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">malloc</span></span>            </dt><dd 
+class="list">
+                  <!--l. 73--><p class="noindent" ><a 
+ id="dx20-25034"></a> A function with this attribute informs the compiler that it can be
+                  treated as if it were the <span class="lstinline"><span 
+class="ecss-1200">malloc</span><span 
+class="ecss-1200">()</span></span> function. For the purposes of
+                  optimization, the compiler is to assume the returned pointer cannot alias
+                  anything.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">no_instrument_function</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 75--><p class="noindent" ><a 
+ id="dx20-25035"></a> A function with this attribute will not be instrumented and will not have
+                  profiling code inserted into it by the compiler, even if the option
+                  <span 
+class="cmtt-12">-finstrument-function</span> is set.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">noinline</span></span>         </dt><dd 
+class="list">
+                  <!--l. 76--><p class="noindent" ><a 
+ id="dx20-25036"></a> A function with this attribute will never be expanded as inline
+                  code.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">noreturn</span></span>         </dt><dd 
+class="list">
+                  <!--l. 77--><p class="noindent" ><a 
+ id="dx20-25037"></a> A function with this attribute does not return to its caller (e.g. function
+                  <span class="lstinline"><span 
+class="ecss-1200">exit</span></span>). A call of a function with this attribute within another function implies
+                  that this function will also have no return. All functions that will not return
+                  the attribute <span class="lstinline"><span 
+class="ecss-1200">noreturn</span></span> is meaningfully. This attribute suppresses
+                  warnings and makes slightly better code because the compiler
+                  does not regard to what would happen if fatal ever did return.
+                  More importantly, it helps avoid spurious warnings of uninitialized
+                  variables.
+                  </p><!--l. 79--><p class="noindent" >With <span 
+class="cmtt-12">-Wmissing-noreturn</span><a 
+ id="dx20-25038"></a> a warning is issued, if a function that will not
+                  return the attribute <span class="lstinline"><span 
+class="ecss-1200">noreturn</span></span> is not used.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">pure</span></span>              </dt><dd 
+class="list">
+                  <!--l. 80--><p class="noindent" >Many functions have no effects except the return value and their return value
+                  depends only on the parameters and/or global variables. That is, there will
+                  be no changes to global values, locations addressed by arguments, or the
+                  contents of files. Unlike the <span class="lstinline"><span 
+class="ecsx-1200">const</span></span> attribute, this function may read global
+                  values. Such a function makes it possible for the compiler to perform
+                  common subexpression optimization because all the values are guaranteed to
+                  be stable. These functions should be declared with the attribute <span class="lstinline"><span 
+class="ecss-1200">pure</span></span>. For
+                  example,
+                  </p><!--l. 82--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+                  <div class="fancyvrb" id="fancyvrb29"><a 
+ id="x20-25040r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> square</span><span 
+class="pcrr7t-x-x-144"> (int)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((pure));</span></div>
+                  <!--l. 86--><p class="noindent" >says that the hypothetical function <span class="lstinline"><span 
+class="ecss-1200">square</span></span> is safe to call fewer times than the
+                  program says.
+                  </p><!--l. 88--><p class="noindent" >Some of common examples of pure functions are <span class="lstinline"><span 
+class="ecss-1200">strlen</span></span> or <span class="lstinline"><span 
+class="ecss-1200">memcmp</span></span>.
+                  Interesting non-pure functions are functions with infinite loops or those
+                  depending on volatile memory or other system resource, that may change
+                  between two consecutive calls (such as <span class="lstinline"><span 
+class="ecss-1200">feof</span></span> in a multithreading environment).
+                  </p>
+                  <div class="center" 
+>
+<!--l. 89--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox16"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The attribute <span class="lstinline"><span 
+class="ecss-1200">pure</span></span> is not implemented in GCC versions earlier than
+2.96.                                                               </div>
+</div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">section</span></span>          </dt><dd 
+class="list">
+                  <!--l. 91--><p class="noindent" ><a 
+ id="dx20-25041"></a> A function with this attribute <span class="lstinline"><span 
+class="ecss-1200">section</span><span 
+class="ecss-1200">(&#x003C;</span><span 
+class="ecss-1200">section</span><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">name</span><span 
+class="ecss-1200">&#x003E;)</span></span> will have its
+                  assembly language code placed into the named section instead of the default
+                  <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span> section.
+                  </p><!--l. 93--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb30"><a 
+ id="x20-25043r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> sayhello</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section(".foo")));</span></div>
+                  <!--l. 97--><p class="noindent" >The use of the tricore-gcc with <span 
+class="cmtt-12">-ffunction-sections</span><a 
+ id="dx20-25044"></a> option advises
+                  the compiler to create a section with the function name in the
+                  output file. E.g. the function <span class="lstinline"><span 
+class="ecss-1200">main</span></span> is located in the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">main</span></span>.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 98--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+<div 
+class="colorbox" id="colorbox17"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />To  get  access  to  the  section  for  debugging  the  sections  must  be
+declared in the linker description file (see <a 
+href="main_gcc_ugse45.html#x70-13500020.2">Listing 20.2</a>). Some file
+formats do not support arbitrary sections so the <span class="lstinline"><span 
+class="ecss-1200">section</span></span> attribute is
+not available on all platforms. If you need to map the entire contents
+of a module to a particular section, consider using the facilities of the
+linker instead.                                                     </div>
+</div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">unused</span></span>            </dt><dd 
+class="list">
+                  <!--l. 104--><p class="noindent" ><a 
+ id="dx20-25045"></a> This attribute, attached to a function, means that the function is meant to
+                  be possibly unused. GCC will not produce a warning for this function.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 105--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox18"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" /><span 
+class="cmsl-12">GNU  </span>C++ does not currently support this attribute as definitions
+without parameters are valid in C++.                              </div>
+</div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">used</span></span>              </dt><dd 
+class="list">
+                  <!--l. 106--><p class="noindent" ><a 
+ id="dx20-25046"></a> A function with this attribute causes the compiler to generate code for the
+                  function body, even if the compiler determines the function is not being used.
+                  This can be useful for functions that are called only from inline
+                  assembly.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">weak</span></span>              </dt><dd 
+class="list">
+                  <!--l. 108--><p class="noindent" ><a 
+ id="dx20-25047"></a> A function with this attribute has its name emitted as a weak symbol
+                  instead of a global name. This is primarily for the naming of library routines
+                  that can be overridden by user code. Weak symbols are supported for ELF
+                  targets, and also for a.out targets when using the <span 
+class="cmsl-12">GNU </span>assembler and
+                  linker.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 112--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse11.html" >next</a>] [<a 
+href="main_gcc_ugch6.html" >prev</a>] [<a 
+href="main_gcc_ugch6.html#tailmain_gcc_ugch6.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse10.html" >front</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse10.html" >up</a>] </p></div>
+<!--l. 112--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse10.html"></a> </p> 
+</body></html> 

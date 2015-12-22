@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>7 Inline Functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch8.html" >next</a>] [<a 
+href="main_gcc_ugse14.html" >prev</a>] [<a 
+href="main_gcc_ugse14.html#tailmain_gcc_ugse14.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch7.html">tail</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch7.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">7</span>  <a 
+href="main_gcc_ug.html#QQ2-25-37" id="x25-330007">Inline Functions</a></h2>
+<a 
+ id="dx25-33001"></a>
+<a 
+ id="dx25-33002"></a>
+<a 
+ id="dx25-33003"></a>
+<!--l. 4--><p class="noindent" >At the reference point of a function normally a instruction <span class="lstinline"><span 
+class="ecss-1200">call</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">name</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">of</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">function</span><span 
+class="ecss-1200">&#x003E;</span></span> is generated
+by the compiler. The programm counter is moved to the address of the referred function and
+the programm execution continues at this address. At the end of a function it will return to the
+reference point.
+</p><!--l. 6--><p class="noindent" >For tricore-gcc a function can be declared inline, and its code will be expanded much like a
+macro at the point it is called. This makes execution faster by eliminating the function-call
+overhead; in addition, if any of the actual argument values are constant, their known values may
+permit simplifications at compile time so that not all of the inline function’s code needs to be
+included. The effect on code size is less predictable; object code may be larger or smaller with
+function inlining, depending on the particular case. Inlining code will be expanded much
+like a macro at the point it is called, therefore normally it is used only for small
+functions. Inlining of functions is an optimization and it really ”works” only in optimizing
+compilation.
+</p>
+<div class="center" 
+>
+<!--l. 10--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox23"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />No functions are actually expanded inline unless you use <span 
+class="cmtt-12">-O</span> option
+to specify some level optimization. A function can be forced to be
+expanded inline by assigning it the <span class="lstinline"><span 
+class="ecss-1200">always_inline</span></span> attribute. If this
+attribute is set for a function it will always be inlined, regardless of its
+size and the optimization level. The function prototype and the code
+of a inline function must be defined in the same source file before it
+is referenced.                                                      </div>
+</div>
+<!--l. 12--><p class="noindent" >For using an inline function in several source files you can define the inline function in a header
+file.
+</p><!--l. 14--><p class="noindent" >Inline functions are included in the ISO C99 standard, but there are currently substantial
+differences between what GCC implements and what the ISO C99 standard requires.
+</p><!--l. 16--><p class="noindent" >If you are writing a header file to be included in ISO C programs, use the keyword <span class="lstinline"><span 
+class="ecss-1200">inline</span></span> for
+inline functions.
+</p><!--l. 18--><p class="noindent" >You may use the keyword <span class="lstinline"><span 
+class="ecsx-1200">extern</span></span> together with the declarations of inline-functions. In this case,
+                                                                                       
+                                                                                       
+the compiler will always inline this function ignoring any biases you have set using the option
+<span 
+class="cmtt-12">-finline-limit</span> and will never create a callable instance of the function. This is
+necessary because the compiler can not rely on the implementation of the extern
+inline-function in another module. By inlining all of these functions linker errors are
+prevented.
+</p><!--l. 20--><p class="noindent" >You may also use the keyword <span class="lstinline"><span 
+class="ecsx-1200">static</span></span> together with the declaration of inline-functions.
+</p>
+<div class="fancyvrb" id="fancyvrb59"><a 
+ id="x25-33005r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> static</span><span 
+class="pcrr7t-x-x-144"> inline</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> foo(void)</span><br class="fancyvrb" /><a 
+ id="x25-33007r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x25-33009r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> some</span><span 
+class="pcrr7t-x-x-144"> code</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x25-33011r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 29--><p class="noindent" >In this case a callable instance of the function is created by the compiler if the function is called
+via a function pointer or the size of the function exceedes the maximum size of an inline
+function. If the function is too large to be inlined it will always called using the instruction call.
+If it is small enough to be inlined, the function will be inlined everywhere it is called.
+Everywhere a function pointer is used, the function will be called using the instruction
+call.
+</p><!--l. 31--><p class="noindent" >If you do not use <span class="lstinline"><span 
+class="ecsx-1200">extern</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">static</span></span>, the compiler will always create a callable instance of the
+function. The decision whether the function is inlined or called using the instruction call is
+made based on the size of the function. Even if the function is inlined the compiler will output
+a callable instance of the function because this function may be called from other
+modules.
+</p>
+<div class="fancyvrb" id="fancyvrb60"><a 
+ id="x25-33013r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> inline</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> foo(void)</span><br class="fancyvrb" /><a 
+ id="x25-33015r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x25-33017r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> some</span><span 
+class="pcrr7t-x-x-144"> code</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x25-33019r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 44--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Options</span>
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-O</span>                </dt><dd 
+class="list">
+                  <!--l. 48--><p class="noindent" ><a 
+ id="dx25-33020"></a> This option enables optimization, so the a function declared as inline
+                  is expanded like a macro. The following options are only valid if the
+                  <span 
+class="cmtt-12">-O</span> is specified.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-fargument-noalias-global</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 50--><p class="noindent" ><a 
+ id="dx25-33021"></a> Specifies that arguments do not alias each other and do not alias global
+                  storage.
+                  </p><!--l. 52--><p class="noindent" >Each language will automatically use whatever option is required by
+                  the  language  standard.  You  should  not  need  to  use  these  options
+                  yourself.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-fno-inline</span>      </dt><dd 
+class="list">
+                  <!--l. 54--><p class="noindent" ><a 
+ id="dx25-33022"></a> The keyword <span class="lstinline"><span 
+class="ecss-1200">inline</span></span> is ignored by the compiler.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-finline-limit=&#x003C;number&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 56--><p class="noindent" ><a 
+ id="dx25-33023"></a> Limits the size of inlined functions to <span 
+class="cmmi-12">&#x003C;</span>number<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-fkeep-inline-functions</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 58--><p class="noindent" ><a 
+ id="dx25-33024"></a> If an inline function is not declared as static, its body must be also
+                  generated by the compiler because it could be called from another
+                  module. Declaring a function as both inline and static will cause all
+                  occurrences of the function to be expanded inline, and the code for
+                  function is never generated. The option <span 
+class="cmtt-12">-fkeep-inline-functions</span> of
+                  <span 
+class="cmtt-12">tricore-gcc</span> will override this behavior and cause the function body
+                  to always be created.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-finline-functions</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 60--><p class="noindent" ><a 
+ id="dx25-33025"></a> This option can be used to instruct the compiler to automatically
+                  select functions that are appropriate for being expanded inline, even
+                  if the function is not declared as <span class="lstinline"><span 
+class="ecss-1200">inline</span></span>. These functions are selected if
+                  their size does not exceed the limit set by <span 
+class="cmtt-12">-finline-limit=&#x003C;number&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Winline</span>         </dt><dd 
+class="list">
+                  <!--l. 62--><p class="noindent" ><a 
+ id="dx25-33026"></a> This  command-line  option  will  issue  a  warning  when  a  function
+                  declared as inline cannot be expanded inline.
+</p>
+                  </dd></dl>
+<!--l. 66--><p class="noindent" >To declare a function inline, use the <span class="lstinline"><span 
+class="ecss-1200">inline</span></span> keyword in its declaration, like this:
+</p><!--l. 68--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p>
+<div class="fancyvrb" id="fancyvrb61">
+<a 
+ id="x25-33028r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a,b,c;</span>
+<br class="fancyvrb" /><a 
+ id="x25-33030r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x25-33032r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> inline</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> add1</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> p,</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> q)</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x25-33034r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x25-33036r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> (p</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> q);</span>
+<br class="fancyvrb" /><a 
+ id="x25-33038r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x25-33040r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x25-33042r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x25-33044r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x25-33046r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x25-33048r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> add1</span><span 
+class="pcrr7t-x-x-144"> (b,</span><span 
+class="pcrr7t-x-x-144"> c);</span>
+<br class="fancyvrb" /><a 
+ id="x25-33050r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x25-33052r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> 0;</span>
+<br class="fancyvrb" /><a 
+ id="x25-33054r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+</div>
+<!--l. 72--><p class="noindent" >Without using the keyword <span class="lstinline"><span 
+class="ecss-1200">inline</span></span> for the function <span class="lstinline"><span 
+class="ecss-1200">add</span></span> the compiler generates the following
+assembly code using <span 
+class="cmtt-12">-O</span>:
+</p>
+<div class="fancyvrb" id="fancyvrb62">
+<a 
+ id="x25-33056r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> add1:</span>
+<br class="fancyvrb" /><a 
+ id="x25-33058r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> %d15,</span><span 
+class="pcrr7t-x-x-144"> %d4</span>
+<br class="fancyvrb" /><a 
+ id="x25-33060r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> %d0,</span><span 
+class="pcrr7t-x-x-144"> %d5</span>
+<br class="fancyvrb" /><a 
+ id="x25-33062r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> add</span><span 
+class="pcrr7t-x-x-144"> %d1,</span><span 
+class="pcrr7t-x-x-144"> %d15,</span><span 
+class="pcrr7t-x-x-144"> %d0</span>
+<br class="fancyvrb" /><a 
+ id="x25-33064r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> %d2,</span><span 
+class="pcrr7t-x-x-144"> %d1</span>
+<br class="fancyvrb" /><a 
+ id="x25-33066r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ret</span>
+<br class="fancyvrb" /><a 
+ id="x25-33068r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x25-33070r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main:</span>
+<br class="fancyvrb" /><a 
+ id="x25-33072r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %a15,</span><span 
+class="pcrr7t-x-x-144"> HI:b</span>
+<br class="fancyvrb" /><a 
+ id="x25-33074r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %a2,</span><span 
+class="pcrr7t-x-x-144"> HI:c</span>
+<br class="fancyvrb" /><a 
+ id="x25-33076r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ld.w</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d4,</span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:b</span>
+<br class="fancyvrb" /><a 
+ id="x25-33078r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ld.w</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d5,</span><span 
+class="pcrr7t-x-x-144"> [%a2]</span><span 
+class="pcrr7t-x-x-144"> LO:c</span>
+<br class="fancyvrb" /><a 
+ id="x25-33080r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> call</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> add1</span>
+<br class="fancyvrb" /><a 
+ id="x25-33082r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d15,</span><span 
+class="pcrr7t-x-x-144"> %d2</span>
+<br class="fancyvrb" /><a 
+ id="x25-33084r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %a15,</span><span 
+class="pcrr7t-x-x-144"> HI:a</span>
+<br class="fancyvrb" /><a 
+ id="x25-33086r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> st.w</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:a,</span><span 
+class="pcrr7t-x-x-144"> %d15</span>
+</div>
+<!--l. 76--><p class="noindent" >With the option <span 
+class="cmtt-12">-O</span> and the use of keyword <span class="lstinline"><span 
+class="ecss-1200">inline</span></span> the assembly language code results
+in:
+</p>
+<div class="fancyvrb" id="fancyvrb63">
+<a 
+ id="x25-33088r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main:</span>
+<br class="fancyvrb" /><a 
+ id="x25-33090r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %a15,</span><span 
+class="pcrr7t-x-x-144"> HI:b</span>
+<br class="fancyvrb" /><a 
+ id="x25-33092r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ld.w</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d0,</span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:b</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x25-33094r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %a15,</span><span 
+class="pcrr7t-x-x-144"> HI:c</span>
+<br class="fancyvrb" /><a 
+ id="x25-33096r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ld.w</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d15,</span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:c</span>
+<br class="fancyvrb" /><a 
+ id="x25-33098r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> add</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d0,</span><span 
+class="pcrr7t-x-x-144"> %d0,</span><span 
+class="pcrr7t-x-x-144"> %d15</span>
+<br class="fancyvrb" /><a 
+ id="x25-33100r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %a15,</span><span 
+class="pcrr7t-x-x-144"> HI:a</span>
+<br class="fancyvrb" /><a 
+ id="x25-33102r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> st.w</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:a,</span><span 
+class="pcrr7t-x-x-144"> %d0</span>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch8.html" >next</a>] [<a 
+href="main_gcc_ugse14.html" >prev</a>] [<a 
+href="main_gcc_ugse14.html#tailmain_gcc_ugse14.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch7.html" >front</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch7.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch7.html"></a> </p> 
+</body></html> 

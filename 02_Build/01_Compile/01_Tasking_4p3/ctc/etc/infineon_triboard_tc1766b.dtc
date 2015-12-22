@@ -1,0 +1,44 @@
+<!-- @(#)infineon_triboard_tc1766b.dtc	1.20 13/04/03 -->
+<!-- Debug Target Configuration for the Infineon TriBoard TC1766B -->
+
+<debugTarget
+    xmlns="http://com.tasking.dtc/dtc.xsd/1.0"
+    name="Infineon TriBoard TC1766B"
+    manufacturer="Infineon">
+
+    <processor id="tc1766b"/>
+
+    <!-- Define all common parts -->
+    <def id="120Mhz">
+	<initialize resourceId="init"	name="DBGSR"		value="0x00000017" cstart="false"/>
+	<initialize resourceId="init"	name="CBS_MCDBBS"	value="0x00090003" cstart="true"/>
+	<initialize resourceId="init"	name="DBGSR"		value="0x00000017" cstart="false"/>
+	<initialize resourceId="noinit"	name="PLL_CLC"		value="0x170384"   cstart="true"/>
+	<initialize resourceId="noinit"	name="Initialize clocks per sec" value="1" 	  cstart="true"/>
+	<initialize resourceId="noinit"	name="Oscillator frequency Hz"	 value="20000000" cstart="true"/>
+	<flashMonitor monitor="ftc1766b.sre" workspaceAddress="0xd0000400" flashSectorBufferSize="2048"/>
+    </def>
+
+    <!-- define all communication methods -->
+    <communicationMethod name="Universal Debug Access Server" debugInstrument="gdi2das" gdiMethod="tcpip">
+        <!-- DAS Resources:
+            DASserver:      the name (not the filename) of used DAS server (must be run and/or installed on the connected host
+            AccessPort:         the connection to the device e.g. for LPT server JTAGx means access via LPTx and the JTAG of device
+                            for USB server USBx means access via x and the USB of device
+            Addressdefinition:  the used register for registermap 
+            TerminateServer:    value != 0 means if a server is started by the debug instrument, then this server is terminated on exit
+            DasTimeOut:     xxx means max. timeout for client/server socket connection (ms)
+        -->
+        <resource id="DASserver" value="UDAS"/>
+        <resource id="AccessPort" value="JTAG0"/>
+        <resource id="RegisterFile" value="regbase_f7e1.dat"/>
+        <resource id="TerminateServer" value="1"/>
+        <resource id="DasTimeOut" value="0x4000"/>
+    </communicationMethod>
+
+    <configuration name="fCPU=120Mhz, PLL normal mode">
+        <ref id="120Mhz"/>
+    </configuration>
+
+</debugTarget> 
+

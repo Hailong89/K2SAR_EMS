@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>The Assembly Language Template</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+                                                                                       
+                                                                                       
+<!--l. 53--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse16.html" >next</a>] [<a 
+href="main_gcc_ugch8.html" >prev</a>] [<a 
+href="main_gcc_ugch8.html#tailmain_gcc_ugch8.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse15.html">tail</a>] [<a 
+href="main_gcc_ugch8.html#main_gcc_ugse15.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">8.1</span>  <a 
+href="main_gcc_ug.html#QQ2-27-39" id="x27-350008.1">The Assembly Language Template</a></h3>
+<!--l. 55--><p class="noindent" >The first entry in the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span> statement is called assembly language template. The assembly
+language template consists of one or more statements of assembly language and is the actual
+code to be inserted inline. All the assembly language is single-quoted string, and each line of the
+code requires a terminator. The terminator can be semicolon or a new line. Also, tabs can
+be inserted to improve readability. A small example shows the correct syntax for
+statements:
+</p><!--l. 57--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb66"><a 
+ id="x27-35002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm("statement</span><span 
+class="pcrr7t-x-x-144"> \n\</span><br class="fancyvrb" /><a 
+ id="x27-35004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> statement</span><span 
+class="pcrr7t-x-x-144"> \n\</span><br class="fancyvrb" /><a 
+ id="x27-35006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> statement"</span><br class="fancyvrb" /><a 
+ id="x27-35008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+<!--l. 64--><p class="noindent" >The backslash n control sequence is used for generating a new line. The second backslash
+says that the statement continues. The start and end of statement are in quotation
+marks.
+</p><!--l. 66--><p class="noindent" >For the assembler code use quotation marks. Each operand is described by an
+operand-constraint string followed by the C expression in parentheses. A colon separates the
+assembler template from the first output operand and another separates the last
+output operand from the first input, if any. Commas separate the operands within each
+group.
+</p><!--l. 69--><p class="noindent" >If there are no output operands but there are input operands, you must place two consecutive
+colons surrounding the place where the output operands would go. Usually the most
+convenient way to use these <span class="lstinline"><span 
+class="ecss-1200">asm</span></span> instructions is to encapsulate them in macros that look
+like:
+</p><!--l. 71--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb67"><a 
+ id="x27-35010r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #define</span><span 
+class="pcrr7t-x-x-144"> setasmlabel(lbl)</span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> (#lbl":")</span></div>
+<!--l. 75--><p class="noindent" >In this case do not use quotation marks. Within an assembly language template you can use
+mnemonic opcodes, labels or comments. The opcodes can address immediate (constant) values,
+the contents of registers, and memory locations. The following is a summary of the syntax rules
+for addressing values:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">Labels are written as symbols and are followed by a colon, e.g. <span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">:</span></span>
+   <span 
+class="cmsy-10x-x-120"><font face="Symbol">·</font></span> A register name begins with two percent strings, e.g. <span class="lstinline"><span 
+class="ecss-1200">%%</span><span 
+class="ecss-1200">d0</span></span>. The register names normally
+                                                                                       
+                                                                                       
+      begin with %, and the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span> template also requires a %. But please note: If the assembly
+      language template does not use either input nor output operands the second % must not
+      be set.
+      </li>
+      <li class="itemize">A memory location is one of the input or output operands. Each of these is specified by a
+      number according to the order of its declaration following the colons. The first output
+      operand starts with <span class="lstinline"><span 
+class="ecss-1200">%0</span></span>. If there is another output operand, it will be <span class="lstinline"><span 
+class="ecss-1200">%1</span></span> and so on. The
+      numbers continue with the input operands <span class="lstinline"><span 
+class="ecss-1200">%2</span></span>. The memory locations may have register
+      modifiers.
+      </li>
+      <li class="itemize">To get access to a special function register (SFRs) use $ as prefix, e.g. <span class="lstinline"><span 
+class="ecss-1200">$psw</span></span>. The names of
+      SFRs can be found in the TriCore architecture manual.
+      </li>
+      <li class="itemize">Comments are inserted using # and are only valid for each line.
+      </li>
+      <li class="itemize">To access the high or low word of a <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable use the characters ’H’ or ’L’
+      between the percent sign and the number of the memory location:
+      <!--l. 90--><p class="noindent" >
+</p>
+      <div class="fancyvrb" id="fancyvrb68"><a 
+ id="x27-35012r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> c;</span><br class="fancyvrb" /><a 
+ id="x27-35014r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> b;</span><br class="fancyvrb" /><a 
+ id="x27-35016r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x27-35018r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 42;</span>
+      <br class="fancyvrb" /><a 
+ id="x27-35020r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> ("mov</span><span 
+class="pcrr7t-x-x-144"> %0,</span><span 
+class="pcrr7t-x-x-144"> %L1":</span><span 
+class="pcrr7t-x-x-144"> "=d"(a):</span><span 
+class="pcrr7t-x-x-144"> "d"(c));</span>
+      <br class="fancyvrb" /><a 
+ id="x27-35022r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> ("mov</span><span 
+class="pcrr7t-x-x-144"> %0,</span><span 
+class="pcrr7t-x-x-144"> %H1":</span><span 
+class="pcrr7t-x-x-144"> "=d"(b):</span><span 
+class="pcrr7t-x-x-144"> "d"(c));</span></div>
+      </li></ul>
+                                                                                       
+                                                                                       
+<!--l. 100--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse16.html" >next</a>] [<a 
+href="main_gcc_ugch8.html" >prev</a>] [<a 
+href="main_gcc_ugch8.html#tailmain_gcc_ugch8.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse15.html" >front</a>] [<a 
+href="main_gcc_ugch8.html#main_gcc_ugse15.html" >up</a>] </p></div>
+<!--l. 100--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse15.html"></a> </p> 
+</body></html> 

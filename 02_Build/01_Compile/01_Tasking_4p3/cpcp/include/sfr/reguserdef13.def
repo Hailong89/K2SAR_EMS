@@ -1,0 +1,35 @@
+;***************************************************************************
+;**
+;** Version: @(#)reguserdef13.xml	1.14 11/05/30
+;** Generated from @(#)reguserdef13.xml	1.14 11/05/30
+;** 
+;** This file contains all SFR and BIT names and on-chip register definitions
+;** 
+;** Copyright 2002-2014 Altium BV
+;**
+;***************************************************************************
+	.if	!@DEF('_REGUSERDEF13_DEF')
+	.define	_REGUSERDEF13_DEF '1'
+; Macros, such as PSW, that expand to a 16-bit number do not directly represent a memory address.
+; They are intended to be used with the instructions mfcr and mtcr.
+core_base      	.equ	0xF7E1    	; The base address off the memory for the CSFR's
+PSW            	.equ	0xFE04    	; Program Status Word
+PCXI           	.equ	0xFE00    	; Previous Context Info Register
+FCX            	.equ	0xFE38    	; Free CSA List Head Pointer
+LCX            	.equ	0xFE3C    	; Free CSA List Limit Pointer
+ISP            	.equ	0xFE28    	; Interrupt Stack Pointer
+BIV            	.equ	0xFE20    	; Interrupt Vector Table
+BTV            	.equ	0xFE24    	; Trap Vector Table Pointer
+PC             	.equ	0xFE08    	; Program Counter
+ICR            	.equ	0xFE2C    	; Interrupt Unit Control Register
+WDT_CON0       	.equ	0xF0000020	; Watchdog Timer Control Register 0
+WDT_CON1       	.equ	0xF0000024	; Watchdog Timer Control Register 1
+STM_TIM0       	.equ	0xF0000210	; System Timer Bits 31:00 Register
+STM_CAP        	.equ	0xF000022C	; System Timer Bits 55:32; Capture Register
+DMU_CON        	.equ	0xF87FFC10	; DMU Configuration Register
+LFI_CON        	.equ	0xF87FFF10	; LFI Configuration Register
+EBU_BOOTCFG    	.equ	0xA0000004	; External Boot Memory Configuration Word
+PCP_RAM_BASE   	.equ	0xF0050000	; PCP Parameter Memory Start Address
+PCP_CS         	.equ	0xF0043F10	; PCP Control/Status Register
+CPU_SRC0       	.equ	0xF7E0FFFC	; CPU Service Request Control Register 0
+	.endif ; !@DEF('_REGUSERDEF13_DEF')

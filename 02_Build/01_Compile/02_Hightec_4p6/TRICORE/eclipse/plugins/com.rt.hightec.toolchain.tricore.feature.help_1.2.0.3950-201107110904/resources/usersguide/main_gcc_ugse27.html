@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>CSA Overhead</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse28.html" >next</a>] [<a 
+href="main_gcc_ugse26.html" >prev</a>] [<a 
+href="main_gcc_ugse26.html#tailmain_gcc_ugse26.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse27.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse27.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.7</span>  <a 
+href="main_gcc_ug.html#QQ2-45-69" id="x45-6400014.7">CSA Overhead</a></h3>
+<a 
+ id="dx45-64001"></a>
+<!--l. 3--><p class="noindent" >For the TriCore architecture, a function call using the instruction <span class="lstinline"><span 
+class="ecss-1200">call</span></span>, an interrupt and a trap,
+uses a context save mechanism. This mechanism saves the upper context
+</p>
+      <ul class="itemize1">
+      <li class="itemize">PSW (Processor Status Word)
+      </li>
+      <li class="itemize">A10 to A15 (Address Register)
+      </li>
+      <li class="itemize">D8 to D15 (Data Register)</li></ul>
+<!--l. 11--><p class="noindent" >in the Context Save Area (CSA). This is effected by the hardware within two instruction cycles.
+The upper context is restored by hardware after instructions like <span class="lstinline"><span 
+class="ecss-1200">ret</span></span> or <span class="lstinline"><span 
+class="ecss-1200">rfe</span></span>. In the instruction
+set of TriCore, alternative jump and link instruction like (<span class="lstinline"><span 
+class="ecss-1200">jl</span></span>, <span class="lstinline"><span 
+class="ecss-1200">jla</span></span>, <span class="lstinline"><span 
+class="ecss-1200">jli</span></span>) are available. These
+instructions need not save the context because the return address is stored in the address
+register <span class="lstinline"><span 
+class="ecss-1200">a11</span></span>.
+</p><!--l. 13--><p class="noindent" >If an interrupt occurs, the context will be saved. There is no need to save the context again
+while the corresponding interrupt routine is called in the interrupt table, if no register is
+modified before the call. If a <span class="lstinline"><span 
+class="ecss-1200">jump</span></span> or <span class="lstinline"><span 
+class="ecss-1200">link</span></span> instruction is used instead of <span class="lstinline"><span 
+class="ecss-1200">call</span></span>, an interrupt handler
+saves one context save and context restore process.
+</p><!--l. 15--><p class="noindent" >The function attributes <span class="lstinline"><span 
+class="ecss-1200">interrupt</span></span> and <span class="lstinline"><span 
+class="ecss-1200">interrupt_handler</span></span> are available (see <a 
+href="main_gcc_ugse13.html#x23-290006.4.1">Listing 6.4.1<!--tex4ht:ref: sec:intrinsic_fct --></a> for
+function attributes).
+</p><!--l. 17--><p class="noindent" >The <span class="lstinline"><span 
+class="ecss-1200">interrupt</span></span> and <span class="lstinline"><span 
+class="ecss-1200">interrupt_handler</span></span> attributes are used for optimising the CSA usage. Normally,
+with every interrupt entry and every call, a CSA (context save area) of 64 bytes is allocated by
+the processor. The mentioned attributes are notes to the compiler to treat the marked functions
+in a different way from normal functions. This means in particular that a different function
+prologue and epilogue are to be used. With a function marked with the <span class="lstinline"><span 
+class="ecss-1200">interrupt</span></span>
+attribute, the compiler can assume that this function is called by a jump-and-link
+command, not by a <span class="lstinline"><span 
+class="ecss-1200">call</span></span>, i.e. no CSA was allocated when the function was called,
+and the function has to be quit, not by a <span class="lstinline"><span 
+class="ecss-1200">ret</span></span> but by an indirect jump via the <span class="lstinline"><span 
+class="ecss-1200">a11</span></span>
+register.
+                                                                                       
+                                                                                       
+</p><!--l. 20--><p class="noindent" >The <span class="lstinline"><span 
+class="ecss-1200">interrupt_handler</span></span> attribute goes even further in its consequence. With functions of
+this type, the compiler assumes that they were called by a jump command, that
+the upper and lower context were saved beforehand, and that the functions must be
+quit by a defined interrupt return sequence which will restore the lower and upper
+context.
+</p><!--l. 22--><p class="noindent" >Thus, both attributes are used for optimising the interrupt behaviour, and make the usage of
+normal C functions as interrupt functions possible.
+</p>
+<div class="fancyvrb" id="fancyvrb106"><a 
+ id="x45-64003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #include</span><span 
+class="pcrr7t-x-x-144"> &#x003C;machine/cint.h&#x003E;</span><br class="fancyvrb" /><a 
+ id="x45-64005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> lfoo(void);</span>
+<br class="fancyvrb" /><a 
+ id="x45-64007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> ifoo(int)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((interrupt));</span>
+<br class="fancyvrb" /><a 
+ id="x45-64009r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> ihfoo(void)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((interrupt_handler));</span>
+<br class="fancyvrb" /><a 
+ id="x45-64011r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> nfoo(void);</span><br class="fancyvrb" /><a 
+ id="x45-64013r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64015r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> lf,</span><span 
+class="pcrr7t-x-x-144"> nf,</span><span 
+class="pcrr7t-x-x-144"> iif,</span><span 
+class="pcrr7t-x-x-144"> ihf;</span>
+<br class="fancyvrb" /><a 
+ id="x45-64017r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;</span><span 
+class="pcrr7t-x-x-144"> IntSrc</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> (unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;)0xf7e0fffc;</span>
+<br class="fancyvrb" /><a 
+ id="x45-64019r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> main(void)</span><br class="fancyvrb" /><a 
+ id="x45-64021r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x45-64023r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _install_int_handler(3,ifoo,0);</span>
+<br class="fancyvrb" /><a 
+ id="x45-64025r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> lfoo();</span><br class="fancyvrb" /><a 
+ id="x45-64027r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> nfoo();</span><br class="fancyvrb" /><a 
+ id="x45-64029r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ifoo(1);</span><br class="fancyvrb" /><a 
+ id="x45-64031r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;IntSrc</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0x1001;</span>
+<br class="fancyvrb" /><a 
+ id="x45-64033r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __asm__</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> ("enable");</span><br class="fancyvrb" /><a 
+ id="x45-64035r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;IntSrc</span><span 
+class="pcrr7t-x-x-144"> |=</span><span 
+class="pcrr7t-x-x-144"> 0x8000;</span><br class="fancyvrb" /><a 
+ id="x45-64037r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+<!--l. 44--><p class="noindent" >For the function <span class="lstinline"><span 
+class="ecss-1200">ifoo</span><span 
+class="ecss-1200">()</span></span> with attribute <span class="lstinline"><span 
+class="ecss-1200">interrupt</span></span>, a jump indirect instruction <span class="lstinline"><span 
+class="ecss-1200">ji</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">a11</span></span> is used
+instead of a <span class="lstinline"><span 
+class="ecss-1200">ret</span></span> instruction. The generated assembler code looks like:
+</p><!--l. 46--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb107"><a 
+ id="x45-64039r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> call</span><span 
+class="pcrr7t-x-x-144"> lfoo</span><br class="fancyvrb" /><a 
+ id="x45-64041r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .loc</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> 19</span><span 
+class="pcrr7t-x-x-144"> 0</span><br class="fancyvrb" /><a 
+ id="x45-64043r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> call</span><span 
+class="pcrr7t-x-x-144"> nfoo</span><br class="fancyvrb" /><a 
+ id="x45-64045r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .loc</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> 20</span><span 
+class="pcrr7t-x-x-144"> 0</span>
+<br class="fancyvrb" /><a 
+ id="x45-64047r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> %d4,</span><span 
+class="pcrr7t-x-x-144"> 1</span><br class="fancyvrb" /><a 
+ id="x45-64049r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> jl</span><span 
+class="pcrr7t-x-x-144"> ifoo</span><br class="fancyvrb" /><a 
+ id="x45-64051r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x45-64053r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ifoo:</span><br class="fancyvrb" /><a 
+ id="x45-64055r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span>
+<br class="fancyvrb" /><a 
+ id="x45-64057r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> %a15,HI:iif</span><br class="fancyvrb" /><a 
+ id="x45-64059r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> st.w</span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:iif,</span><span 
+class="pcrr7t-x-x-144"> %d4</span><br class="fancyvrb" /><a 
+ id="x45-64061r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ji</span><span 
+class="pcrr7t-x-x-144"> %a11</span></div>
+<!--l. 61--><p class="noindent" >A function declared with the attribute <span class="lstinline"><span 
+class="ecss-1200">interrupt_handler</span></span> uses a <span class="lstinline"><span 
+class="ecss-1200">jump</span></span> instruction instead of a <span class="lstinline"><span 
+class="ecss-1200">call</span></span>
+instruction. Such functions return with the instruction <span class="lstinline"><span 
+class="ecss-1200">rfe</span></span> instead of <span class="lstinline"><span 
+class="ecss-1200">ret</span></span>.
+</p><!--l. 63--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb108"><a 
+ id="x45-64063r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .loc</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> 54</span><span 
+class="pcrr7t-x-x-144"> 0</span><br class="fancyvrb" /><a 
+ id="x45-64065r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> %d15,</span><span 
+class="pcrr7t-x-x-144"> 1</span><br class="fancyvrb" /><a 
+ id="x45-64067r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> %a15,HI:ihf</span>
+<br class="fancyvrb" /><a 
+ id="x45-64069r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> st.w</span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:ihf,</span><span 
+class="pcrr7t-x-x-144"> %d15</span><br class="fancyvrb" /><a 
+ id="x45-64071r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> rslcx</span><br class="fancyvrb" /><a 
+ id="x45-64073r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> rfe</span></div>
+<!--l. 72--><p class="noindent" >Without the attribute <span class="lstinline"><span 
+class="ecss-1200">interrupt_handler</span></span> the following code is generated.
+</p><!--l. 74--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb109"><a 
+ id="x45-64075r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .loc</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> 54</span><span 
+class="pcrr7t-x-x-144"> 0</span><br class="fancyvrb" /><a 
+ id="x45-64077r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> %d15,</span><span 
+class="pcrr7t-x-x-144"> 1</span><br class="fancyvrb" /><a 
+ id="x45-64079r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> movh.a</span><span 
+class="pcrr7t-x-x-144"> %a15,HI:ihf</span>
+<br class="fancyvrb" /><a 
+ id="x45-64081r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> st.w</span><span 
+class="pcrr7t-x-x-144"> [%a15]</span><span 
+class="pcrr7t-x-x-144"> LO:ihf,</span><span 
+class="pcrr7t-x-x-144"> %d15</span><br class="fancyvrb" /><a 
+ id="x45-64083r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ret</span></div>
+                                                                                       
+                                                                                       
+<!--l. 82--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 84--><p class="noindent" >The interrupt interface makes it possible to define standard C functions as interrupt functions.
+The third argument of the Function <span class="lstinline"><span 
+class="ecss-1200">__install_int_handler</span></span> is defined as the argument of the
+interrupt function to be called, and makes it possible to parameterise an interrupt
+function.
+</p><!--l. 87--><p class="noindent" >If you want to avoid the overhead resulting from this type of interrupt interface, you have the
+possibility to define the interrupt vector by yourself and to call the appropriate interrupt
+function directly. The abovementioned attributes <span class="lstinline"><span 
+class="ecss-1200">interrupt</span></span> and <span class="lstinline"><span 
+class="ecss-1200">interrupt_handler</span></span> are used for
+enabling an optimised usage of this method. You can, for example, define an interrupt function
+in the following way:
+</p><!--l. 89--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb110"><a 
+ id="x45-64085r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> interrupt1(void)</span><span 
+class="pcrr7t-x-x-144"> __attribute__((interrupt_handler));</span><br class="fancyvrb" /><a 
+ id="x45-64087r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x45-64089r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> interrupt1(void)</span><br class="fancyvrb" /><a 
+ id="x45-64091r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x45-64093r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ...</span><span 
+class="pcrr7t-x-x-144"> some</span><span 
+class="pcrr7t-x-x-144"> code..</span><br class="fancyvrb" /><a 
+ id="x45-64095r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 98--><p class="noindent" >Entry in the interrupt vector
+</p><!--l. 100--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb111"><a 
+ id="x45-64097r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __interrupt_1:</span><br class="fancyvrb" /><a 
+ id="x45-64099r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   bisr</span><span 
+class="pcrr7t-x-x-144"> 1</span><br class="fancyvrb" /><a 
+ id="x45-64101r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   j  interrupt1</span></div>
+<!--l. 106--><p class="noindent" >or
+</p><!--l. 108--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb112"><a 
+ id="x45-64103r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> interrupt1(void)</span><span 
+class="pcrr7t-x-x-144"> __attribute__((interrupt));</span>
+<br class="fancyvrb" /><a 
+ id="x45-64105r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> interrupt1(void)</span><br class="fancyvrb" /><a 
+ id="x45-64107r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x45-64109r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ...</span><span 
+class="pcrr7t-x-x-144"> some</span><span 
+class="pcrr7t-x-x-144"> code..</span><br class="fancyvrb" /><a 
+ id="x45-64111r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 116--><p class="noindent" >Entry in the interrupt vector
+</p><!--l. 118--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb113"><a 
+ id="x45-64113r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __interrupt_1:</span><br class="fancyvrb" /><a 
+ id="x45-64115r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   bisr</span><span 
+class="pcrr7t-x-x-144"> 1</span><br class="fancyvrb" /><a 
+ id="x45-64117r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   jl  interrupt1</span>
+<br class="fancyvrb" /><a 
+ id="x45-64119r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ..addtional</span><span 
+class="pcrr7t-x-x-144"> intructions</span><br class="fancyvrb" /><a 
+ id="x45-64121r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   rslcx</span><br class="fancyvrb" /><a 
+ id="x45-64123r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64125r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64127r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   rfe</span></div>
+<!--l. 129--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 131--><p class="noindent" >This additional example explains the <span class="lstinline"><span 
+class="ecss-1200">__attribute__</span><span 
+class="ecss-1200">((</span><span 
+class="ecss-1200">interrupt</span><span 
+class="ecss-1200">))</span></span>. This feature can be used to
+execute functions without a context save and therefore saving RAM ressources.
+</p><!--l. 133--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div class="fancyvrb" id="fancyvrb114"><a 
+ id="x45-64129r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> x_u32;</span><br class="fancyvrb" /><a 
+ id="x45-64131r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64133r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> abort(void);</span>
+<br class="fancyvrb" /><a 
+ id="x45-64135r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> exit(int);</span><br class="fancyvrb" /><a 
+ id="x45-64137r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64139r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> __main(void);</span>
+<br class="fancyvrb" /><a 
+ id="x45-64141r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> __main(void){</span><span 
+class="pcrr7t-x-x-144"> return;</span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x45-64143r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64145r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x45-64147r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> csa_saving_func(void)</span><span 
+class="pcrr7t-x-x-144"> __attribute__((interrupt));</span>
+<br class="fancyvrb" /><a 
+ id="x45-64149r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> csa_saving_func(void)</span><br class="fancyvrb" /><a 
+ id="x45-64151r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x45-64153r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> x_u32++;</span><br class="fancyvrb" /><a 
+ id="x45-64155r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x45-64157r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64159r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> test</span><span 
+class="pcrr7t-x-x-144"> (void);</span>
+<br class="fancyvrb" /><a 
+ id="x45-64161r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> test</span><span 
+class="pcrr7t-x-x-144"> (void)</span><br class="fancyvrb" /><a 
+ id="x45-64163r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x45-64165r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> temp_a11;</span>
+<br class="fancyvrb" /><a 
+ id="x45-64167r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> variable</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> save</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> (register</span><span 
+class="pcrr7t-x-x-144"> A11)</span><span 
+class="pcrr7t-x-x-144"> on</span><span 
+class="pcrr7t-x-x-144"> stack</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64169r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> key</span><span 
+class="pcrr7t-x-x-144"> word</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> required</span><span 
+class="pcrr7t-x-x-144"> here</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64171r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> otherwise</span><span 
+class="pcrr7t-x-x-144"> temp_a11</span><span 
+class="pcrr7t-x-x-144"> would</span><span 
+class="pcrr7t-x-x-144"> be</span><span 
+class="pcrr7t-x-x-144"> kept</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> register</span><span 
+class="pcrr7t-x-x-144"> which</span><span 
+class="pcrr7t-x-x-144"> might</span><span 
+class="pcrr7t-x-x-144"> be</span><span 
+class="pcrr7t-x-x-144"> overridden.</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64173r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64175r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> save</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> manually</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64177r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __asm__</span><span 
+class="pcrr7t-x-x-144"> __volatile__("mov.d</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %[temp_a11],</span><span 
+class="pcrr7t-x-x-144"> %%a11"</span>
+<br class="fancyvrb" /><a 
+ id="x45-64179r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">       :</span><span 
+class="pcrr7t-x-x-144"> [temp_a11]"=d"(temp_a11)</span><br class="fancyvrb" /><a 
+ id="x45-64181r27"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">       :</span>
+<br class="fancyvrb" /><a 
+ id="x45-64183r28"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">       :</span><span 
+class="pcrr7t-x-x-144"> "memory");</span><br class="fancyvrb" /><a 
+ id="x45-64185r29"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64187r30"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> csa_saving_func();</span>
+<br class="fancyvrb" /><a 
+ id="x45-64189r31"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> JL</span><span 
+class="pcrr7t-x-x-144"> command</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> content</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> A11</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> modified</span><span 
+class="pcrr7t-x-x-144"> and</span><span 
+class="pcrr7t-x-x-144"> never</span><span 
+class="pcrr7t-x-x-144"> restored</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64191r32"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> RET</span><span 
+class="pcrr7t-x-x-144"> command</span><span 
+class="pcrr7t-x-x-144"> at</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> end</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> this</span><span 
+class="pcrr7t-x-x-144"> function</span><span 
+class="pcrr7t-x-x-144"> would</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> wrong</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64193r33"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> so</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> has</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> be</span><span 
+class="pcrr7t-x-x-144"> restored</span><span 
+class="pcrr7t-x-x-144"> manually</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64195r34"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64197r35"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> restore</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> manually</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64199r36"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __asm__</span><span 
+class="pcrr7t-x-x-144"> __volatile__("mov.a</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %%a11,</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %[temp_a11]"</span><br class="fancyvrb" /><a 
+ id="x45-64201r37"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">       :</span>
+<br class="fancyvrb" /><a 
+ id="x45-64203r38"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">       :</span><span 
+class="pcrr7t-x-x-144"> [temp_a11]"d"(temp_a11)</span><br class="fancyvrb" /><a 
+ id="x45-64205r39"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">       :</span><span 
+class="pcrr7t-x-x-144"> "memory");</span><br class="fancyvrb" /><a 
+ id="x45-64207r40"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x45-64209r41"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> now</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> restored</span><span 
+class="pcrr7t-x-x-144"> -</span><span 
+class="pcrr7t-x-x-144"> RET</span><span 
+class="pcrr7t-x-x-144"> command</span><span 
+class="pcrr7t-x-x-144"> will</span><span 
+class="pcrr7t-x-x-144"> work</span><span 
+class="pcrr7t-x-x-144"> again</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x45-64211r42"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64213r43"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return;</span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> RET</span><span 
+class="pcrr7t-x-x-144"> command</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x45-64215r44"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x45-64217r45"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64219r46"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x45-64221r47"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void);</span>
+<br class="fancyvrb" /><a 
+ id="x45-64223r48"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void)</span><br class="fancyvrb" /><a 
+ id="x45-64225r49"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x45-64227r50"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> test();</span><br class="fancyvrb" /><a 
+ id="x45-64229r51"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (x_u32</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 1)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x45-64231r52"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> exit(0);</span><br class="fancyvrb" /><a 
+ id="x45-64233r53"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return(0);</span><br class="fancyvrb" /><a 
+ id="x45-64235r54"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<div class="center" 
+>
+<!--l. 195--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+<div 
+class="colorbox" id="colorbox46"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />A function called with a JL instruction may override any registers of the
+calling function. So <span class="lstinline"><span 
+class="ecss-1200">__attribute__</span><span 
+class="ecss-1200">((</span><span 
+class="ecss-1200">interrupt</span><span 
+class="ecss-1200">))</span></span> may only be used if one of
+both is fulfilled:
+      <ul class="itemize1">
+      <li class="itemize">the calling function does not use any values kept in registers
+      </li>
+      <li class="itemize">the called function does not change any registers</li></ul>              </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse28.html" >next</a>] [<a 
+href="main_gcc_ugse26.html" >prev</a>] [<a 
+href="main_gcc_ugse26.html#tailmain_gcc_ugse26.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse27.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse27.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse27.html"></a> </p> 
+</body></html> 

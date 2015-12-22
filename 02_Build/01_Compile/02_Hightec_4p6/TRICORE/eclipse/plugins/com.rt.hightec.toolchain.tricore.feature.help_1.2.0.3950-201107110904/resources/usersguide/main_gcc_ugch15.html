@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>15 PCP Programming</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse34.html" >next</a>] [<a 
+href="main_gcc_ugse33.html" >prev</a>] [<a 
+href="main_gcc_ugse33.html#tailmain_gcc_ugse33.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch15.html">tail</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch15.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">15</span>  <a 
+href="main_gcc_ug.html#QQ2-52-106" id="x52-9900015">PCP Programming</a></h2>
+<!--l. 3--><p class="noindent" >The TriCore uses the following e-flags to identify the TriCore/PCP derivatives:
+</p>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug24x.png" alt=""  /></div>
+<!--l. 12--><p class="noindent" >TriCore supports programming of the PCP co-processor as follows:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">The  TriCore  assembler  understands  both  TriCore  and  PCP  instructions;  while
+      TriCore is the default mode, you can easily switch to the PCP mode by using the
+      pseudo-opcodes
+           <ul class="itemize2">
+           <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcptext</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcptext</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">some_section_name</span></span>
+           </li>
+           <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcpdata</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcpdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">some_section_name</span></span></li></ul>
+      <!--l. 22--><p class="noindent" >you can return to TriCore mode by entering any other section whose name doesn’t start
+      with <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcptext</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcpdata</span></span> (e.g., <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span>, etc.).
+</p>
+      <div class="center" 
+>
+<!--l. 26--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox55"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />There is no assembler command line option to enter PCP mode, so
+you have to explicitly use the <span class="lstinline"><span 
+class="ecss-1200">ext,data</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcpt</span></span> pseudo-opcodes.         </div>
+</div>
+      </li>
+      <li class="itemize">The TriCore linker provides the default output sections <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcptext</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcpdata</span></span> which
+      will be filled with any PCP text and data sections found in the input objects
+      of the current link run; in addition, the start and target addresses, as well as
+      the sizes of these <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcptext</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcpdata</span></span> output sections, will be entered into
+      the <span class="lstinline"><span 
+class="ecss-1200">__copy_table</span></span>; in addition, the linker can be directed to automatically
+      translate data addresses between TriCore and PCP (as required by certain TriCore
+      MCUs)
+                                                                                       
+                                                                                       
+      </li>
+      <li class="itemize">The TriCore startup code (<span 
+class="cmtt-12">crt0.o</span>) automatically copies the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcptext</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcpdata</span></span>
+      sections contained in a TriCore executable to the PCP’s code and data RAM areas, so
+      that all PCP code and data will be in place before the application’s <span class="lstinline"><span 
+class="ecss-1200">main</span></span> function is being
+      executed
+      </li>
+      <li class="itemize">The TriCore debugger <span 
+class="cmtt-12">tricore-gdb</span> and the <span 
+class="cmtt-12">tricore-objdump</span> tool can disassemble
+      PCP code sections; they automatically switch to PCP mode whenever they are
+      requested to disassemble some code section whose name starts with <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcptext</span></span> or
+      <span class="lstinline"><span 
+class="ecss-1200">pcptext</span><span 
+class="ecss-1200">.</span></span></li></ul>
+<!--l. 42--><p class="noindent" >A TriCore application that uses the PCP would typically consist of some C/C++ code (called
+by, or directly implemented in the program’s <span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">()</span></span> function) that initializes all relevant
+hardware registers (’SFRs’), plus one or more assembler files (<span 
+class="cmtt-12">*.s </span>or <span 
+class="cmtt-12">*.S</span>) that implement the
+PCP-specific code and data. Further information can be obtained from the following
+documents:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">PCP Assembler Mnemonics Specification (Infineon)
+      </li>
+      <li class="itemize">The TriCore Assembler Manual
+      </li>
+      <li class="itemize">Smart Interrupt Service via PCP; Application Note AP32025 (Infineon)</li></ul>
+<div class="sectionTOCS">
+</div>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse34.html" >next</a>] [<a 
+href="main_gcc_ugse33.html" >prev</a>] [<a 
+href="main_gcc_ugse33.html#tailmain_gcc_ugse33.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch15.html" >front</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch15.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch15.html"></a> </p> 
+</body></html> 

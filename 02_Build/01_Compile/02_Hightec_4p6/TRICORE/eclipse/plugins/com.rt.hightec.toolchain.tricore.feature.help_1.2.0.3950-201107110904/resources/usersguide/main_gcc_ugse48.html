@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-addr2line</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 20--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse49.html" >next</a>] [<a 
+href="main_gcc_ugli3.html" >prev</a>] [<a 
+href="main_gcc_ugli3.html#tailmain_gcc_ugli3.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse48.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse48.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.1</span>  <a 
+href="main_gcc_ug.html#QQ2-77-208" id="x77-19900021.1">tricore-addr2line</a></h3>
+<a 
+ id="dx77-199001"></a>
+<a 
+ id="dx77-199002"></a>
+<!--l. 23--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.1.1</span>  <a 
+href="#x77-20000021.1.1" id="x77-20000021.1.1">Description</a></h4>
+<!--l. 25--><p class="noindent" ><span 
+class="cmtt-12">addr2line [options] [address address ...]</span>
+</p><!--l. 27--><p class="noindent" ><span 
+class="cmtt-12">tricore-addr2line</span> translates program addresses into file names and line numbers. Given an
+address and an executable, it uses the debugging information in the executable to figure out
+which file name and line number are associated with a given address.
+</p><!--l. 29--><p class="noindent" >The executable to use is specified with the <span 
+class="cmtt-12">-e</span> option. The default output file is <span 
+class="cmtt-12">a.out</span>.
+</p><!--l. 31--><p class="noindent" ><span 
+class="cmtt-12">tricore-addr2line</span> has two operation modes.
+</p><!--l. 33--><p class="noindent" >In the first, hexadecimal addresses are specified on the command line, and line number for each
+address are displayed by <span 
+class="cmtt-12">tricore-addr2line</span>.
+</p><!--l. 35--><p class="noindent" >In the second, <span 
+class="cmtt-12">tricore-addr2line</span> reads hexadecimal addresses from standard input, and
+prints the file name and line number for each address on standard output. In this
+mode, <span 
+class="cmtt-12">tricore-addr2line</span> may be used in a pipe to convert dynamically chosen
+addresses.
+</p><!--l. 37--><p class="noindent" >The format of the output is <span 
+class="cmmi-12">&#x003C;</span>filename<span 
+class="cmmi-12">&#x003E;</span>:<span 
+class="cmmi-12">&#x003C;</span>lineno<span 
+class="cmmi-12">&#x003E;</span>. The file name and line number for each
+address is printed on a separate line. If the <span 
+class="cmtt-12">-f</span> option is used, then each <span 
+class="cmmi-12">&#x003C;</span>filename<span 
+class="cmmi-12">&#x003E;</span>:<span 
+class="cmmi-12">&#x003C;</span>lineno<span 
+class="cmmi-12">&#x003E;</span>
+line is preceded by a <span 
+class="cmmi-12">&#x003C;</span>functionname<span 
+class="cmmi-12">&#x003E; </span>line which is the name of the function containing the
+address.
+</p><!--l. 39--><p class="noindent" >If the file name or function name can not be determined, <span 
+class="cmtt-12">tricore-addr2line</span> will print two
+question marks in their place. <span 
+class="cmtt-12">tricore-addr2line</span> will print 0, if the line number can not be
+determined.
+                                                                                       
+                                                                                       
+</p><!--l. 41--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.1.2</span>  <a 
+href="#x77-20100021.1.2" id="x77-20100021.1.2">Invocation</a></h4>
+<!--l. 43--><p class="noindent" >The long and short forms of options, shown here as alternatives, are equivalent.
+</p><!--l. 45--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-b &#x003C;bfdname&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 46--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--target=&#x003C;bfdname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 47--><p class="noindent" >Set the binary file format
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-C [style]</span>       </dt><dd 
+class="list">
+                  <!--l. 49--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--demangle[=style]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 50--><p class="noindent" >Demangle function names. Decode <span 
+class="cmsl-12">demangle </span>low-level symbol names
+                  into user-level names. Besides removing any initial <span class="lstinline"><span 
+class="ecss-1200">_</span></span> prepended by the
+                  system, this makes C++ function names readable. Different compilers
+                  have different mangling styles. The optional demangling style argument
+                  can  be  used  to  choose  an  appropriate  demangling  style  for  your
+                  compiler.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-e &#x003C;executable&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 51--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--exe=&#x003C;executable&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 52--><p class="noindent" >Specify  the  name  of  the  executable  for  which  addresses  should  be
+                  translated. The default file is <span 
+class="cmtt-12">a.out</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-f --functions</span>  </dt><dd 
+class="list">
+                  <!--l. 53--><p class="noindent" >Display function names as well as file and line number information.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-s --basenames</span>  </dt><dd 
+class="list">
+                  <!--l. 54--><p class="noindent" >Strip directory names and display only the base of each file name.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h --help</span>        </dt><dd 
+class="list">
+                  <!--l. 55--><p class="noindent" >Display help information
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v --version</span>    </dt><dd 
+class="list">
+                  <!--l. 56--><p class="noindent" >Display the program’s version</p></dd></dl>
+<!--l. 59--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.1.3</span>  <a 
+href="#x77-20200021.1.3" id="x77-20200021.1.3">Example</a></h4>
+<!--l. 61--><p class="noindent" >In this example the code at addresses <span class="lstinline"><span 
+class="ecss-1200">0</span><span 
+class="ecss-1200">xa000031c</span></span> and <span class="lstinline"><span 
+class="ecss-1200">0</span><span 
+class="ecss-1200">xa00001f0</span></span> in the executable <span 
+class="cmtt-12">main </span>are of
+interest. <span 
+class="cmtt-12">Addr2line </span>is used to find out from which function in which file the code at these
+addresses are taken. Only the name of the files, not the complete paths are to be output by
+<span 
+class="cmtt-12">addr2line</span>
+</p><!--l. 63--><p class="noindent" ><span 
+class="cmtt-12">tricore-addr2line</span> <span 
+class="cmtt-12">--exe=main -s -f 0xa00001f0 0xa000031c</span>
+</p><!--l. 65--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb295"><a 
+ id="x77-202002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> main</span><br class="fancyvrb" /><a 
+ id="x77-202004r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> main.c:27</span><br class="fancyvrb" /><a 
+ id="x77-202006r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> asc0senddata</span><br class="fancyvrb" /><a 
+ id="x77-202008r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> uart.c:94</span></div>
+                                                                                       
+                                                                                       
+<!--l. 72--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse49.html" >next</a>] [<a 
+href="main_gcc_ugli3.html" >prev</a>] [<a 
+href="main_gcc_ugli3.html#tailmain_gcc_ugli3.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse48.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse48.html" >up</a>] </p></div>
+<!--l. 72--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse48.html"></a> </p> 
+</body></html> 

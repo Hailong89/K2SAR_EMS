@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>II Implementation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch5.html" >next</a>] [<a 
+href="main_gcc_ugch4.html" >prev</a>] [<a 
+href="main_gcc_ugch4.html#tailmain_gcc_ugch4.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugpa2.html">tail</a>] [<a 
+href="main_gcc_ug.html#main_gcc_ugpa2.html" >up</a>] </p></div>
+<h1 class="partHead"><span class="titlemark">Part II<br /></span><a 
+href="main_gcc_ug.html#QQ2-14-16" name="x14-13000II">Implementation</a></h1>
+                                                                                       
+                                                                                       
+<!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div class="chapterTOCS">
+<span class="chapterToc" >5  <a 
+href="main_gcc_ugch5.html#x15-140005">Implementation Issues</a></span>
+<br /> <span class="sectionToc" >5.1  <a 
+href="main_gcc_ugse7.html#x16-150005.1">Data Elements</a></span>
+<br /> <span class="sectionToc" >5.2  <a 
+href="main_gcc_ugse8.html#x17-160005.2">Bit Data Type</a></span>
+<br /> <span class="sectionToc" >5.3  <a 
+href="main_gcc_ugse9.html#x18-230005.3">Inquiring on Alignment of Types or Variables</a></span>
+<br /><span class="chapterToc" >6  <a 
+href="main_gcc_ugch6.html#x19-240006">Attributes</a></span>
+<br /> <span class="sectionToc" >6.1  <a 
+href="main_gcc_ugse10.html#x20-250006.1">Specifying Attributes of Functions</a></span>
+<br /> <span class="sectionToc" >6.2  <a 
+href="main_gcc_ugse11.html#x21-260006.2">Specifying Attributes of Variables</a></span>
+<br /> <span class="sectionToc" >6.3  <a 
+href="main_gcc_ugse12.html#x22-270006.3">Specifying Attributes of Types</a></span>
+<br /> <span class="sectionToc" >6.4  <a 
+href="main_gcc_ugse13.html#x23-280006.4">TriCore Specific Attributes</a></span>
+<br /> <span class="sectionToc" >6.5  <a 
+href="main_gcc_ugse14.html#x24-320006.5">Pragma section</a></span>
+<br /><span class="chapterToc" >7  <a 
+href="main_gcc_ugch7.html#x25-330007">Inline Functions</a></span>
+<br /><span class="chapterToc" >8  <a 
+href="main_gcc_ugch8.html#x26-340008">Inline Assembly</a></span>
+<br /> <span class="sectionToc" >8.1  <a 
+href="main_gcc_ugse15.html#x27-350008.1">The Assembly Language Template</a></span>
+<br /> <span class="sectionToc" >8.2  <a 
+href="main_gcc_ugse16.html#x28-360008.2">Input and Output Operands</a></span>
+<br /> <span class="sectionToc" >8.3  <a 
+href="main_gcc_ugse17.html#x29-400008.3">Clobber List</a></span>
+<br /><span class="chapterToc" >9  <a 
+href="main_gcc_ugch9.html#x30-410009">Intrinsic Functions</a></span>
+<br /><span class="chapterToc" >10  <a 
+href="main_gcc_ugch10.html#x31-4200010">Interrupts</a></span>
+<br /><span class="chapterToc" >11  <a 
+href="main_gcc_ugch11.html#x32-4300011">Traps</a></span>
+<br /><span class="chapterToc" >12  <a 
+href="main_gcc_ugch12.html#x33-4400012">Errata</a></span>
+<br /><span class="chapterToc" >13  <a 
+href="main_gcc_ugch13.html#x34-4500013">Startup Process</a></span>
+<br /> <span class="sectionToc" >13.1  <a 
+href="main_gcc_ugse18.html#x35-4600013.1">Startup code in crt0.o</a></span>
+<br /> <span class="sectionToc" >13.2  <a 
+href="main_gcc_ugse19.html#x36-4700013.2">The constructors for main()</a></span>
+<br /> <span class="sectionToc" >13.3  <a 
+href="main_gcc_ugse20.html#x37-4800013.3">Your program as ROM version</a></span>
+<br /><span class="chapterToc" >14  <a 
+href="main_gcc_ugch14.html#x38-5200014">Special Features</a></span>
+<br /> <span class="sectionToc" >14.1  <a 
+href="main_gcc_ugse21.html#x39-5300014.1">Multiple Bit-Data Sections</a></span>
+<br /> <span class="sectionToc" >14.2  <a 
+href="main_gcc_ugse22.html#x40-5400014.2">Relative Addressing</a></span>
+<br /> <span class="sectionToc" >14.3  <a 
+href="main_gcc_ugse23.html#x41-5500014.3">Storage of constants and variables using different addressing modes</a></span>
+<br /> <span class="sectionToc" >14.4  <a 
+href="main_gcc_ugse24.html#x42-6000014.4">Storage of constants in a read only section</a></span>
+                                                                                       
+                                                                                       
+<br /> <span class="sectionToc" >14.5  <a 
+href="main_gcc_ugse25.html#x43-6100014.5">Modifying the Default Sections</a></span>
+<br /> <span class="sectionToc" >14.6  <a 
+href="main_gcc_ugse26.html#x44-6300014.6">Circular Addressing</a></span>
+<br /> <span class="sectionToc" >14.7  <a 
+href="main_gcc_ugse27.html#x45-6400014.7">CSA Overhead</a></span>
+<br /> <span class="sectionToc" >14.8  <a 
+href="main_gcc_ugse28.html#x46-6500014.8">Default Case</a></span>
+<br /> <span class="sectionToc" >14.9  <a 
+href="main_gcc_ugse29.html#x47-6800014.9">Indirect Addressing by longcall</a></span>
+<br /> <span class="sectionToc" >14.10  <a 
+href="main_gcc_ugse30.html#x48-6900014.10">Position-Independent Code</a></span>
+<br /> <span class="sectionToc" >14.11  <a 
+href="main_gcc_ugse31.html#x49-7000014.11">Position Independent Data</a></span>
+<br /> <span class="sectionToc" >14.12  <a 
+href="main_gcc_ugse32.html#x50-7100014.12">Builtins</a></span>
+<br /> <span class="sectionToc" >14.13  <a 
+href="main_gcc_ugse33.html#x51-9800014.13">Options for testing purposes</a></span>
+<br /><span class="chapterToc" >15  <a 
+href="main_gcc_ugch15.html#x52-9900015">PCP Programming</a></span>
+<br /> <span class="sectionToc" >15.1  <a 
+href="main_gcc_ugse34.html#x53-10000015.1">PCP instruction syntax</a></span>
+</div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch5.html" >next</a>] [<a 
+href="main_gcc_ugch4.html" >prev</a>] [<a 
+href="main_gcc_ugch4.html#tailmain_gcc_ugch4.html" >prev-tail</a>] [<a 
+href="main_gcc_ugpa2.html" >front</a>] [<a 
+href="main_gcc_ug.html#main_gcc_ugpa2.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugpa2.html"></a> </p> 
+</body></html> 

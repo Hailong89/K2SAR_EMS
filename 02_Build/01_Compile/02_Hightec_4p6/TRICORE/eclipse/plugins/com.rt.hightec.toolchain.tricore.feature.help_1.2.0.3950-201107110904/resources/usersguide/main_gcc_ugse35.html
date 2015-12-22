@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Description</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 3--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse36.html" >next</a>] [<a 
+href="main_gcc_ugch16.html" >prev</a>] [<a 
+href="main_gcc_ugch16.html#tailmain_gcc_ugch16.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse35.html">tail</a>] [<a 
+href="main_gcc_ugch16.html#main_gcc_ugse35.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">16.1</span>  <a 
+href="main_gcc_ug.html#QQ2-56-112" id="x56-10500016.1">Description</a></h3>
+<a 
+ id="dx56-105001"></a>
+<!--l. 5--><p class="noindent" >The build process is coordinated by one control program. This control program invokes the
+necessary tools of the  TriCore Development Platform in the correct sequence and passes
+options and parameters to them. It provides a consistent user interface irrespective of the
+user’s current programming task. Sometimes the control program is called compiler
+driver.
+</p><!--l. 7--><p class="noindent" >The control program must be executed in a command line (DOS command line on
+DOS/Windows based systems, a shell like the bash on UNIX based systems). It accepts lots of
+options. Most of these options are passed through to appropriate program but some options are
+used to control the compiler driver itself.
+</p><!--l. 9--><p class="noindent" >The control program is called <span 
+class="cmtt-12">gcc</span>, which stands for <span 
+class="cmsl-12">GNU </span>Compiler Collection. Since our port
+of <span 
+class="cmtt-12">gcc </span>is target specific, all executables are preceded by <span 
+class="cmtt-12">tricore-gcc</span>. The resulting command
+to start the control program for compiling source code for TriCore based microcontrollers
+is:
+</p><!--l. 11--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">&#x003C;options&#x003E;</span>
+</p><!--l. 13--><p class="noindent" >To compile programs without concerning the various settings of the tools in the toolchain it is
+necessary to have defaults. These defaults are set by the control program <span 
+class="cmtt-12">tricore-gcc</span>. It
+invokes the programs of the toolchain with predefined settings. Among these settings are default
+include pathes for libraries and header files, a default type of target hardware, if there is more
+than one possible type of target hardware, or directives to include the startup code for the
+microcontroller. </p>
+<div class="center" 
+>
+                                                                                       
+                                                                                       
+<!--l. 14--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox56"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />You can find a complete list of the default options for each program
+of  the  toolchain  in  the  section  ”Default  options”  in  the  chapters
+describing the program. These default options are overwritten by user
+defined options passed to the control program.                      </div>
+</div>
+<!--l. 16--><p class="noindent" >Besides managing the options for the tools of the toolchain, <span 
+class="cmtt-12">tricore-gcc</span> is responsible to
+invoke the right programs in the right order and to start or stop the build process with a given
+program. </p>
+<div class="center" 
+>
+<!--l. 17--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox57"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />It  is  not  recommended  to  start  the  components  of  the  toolchain
+individually.  The  compilation  of  a  program  should  always  be
+coordinated by the control program.                                </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 19--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse36.html" >next</a>] [<a 
+href="main_gcc_ugch16.html" >prev</a>] [<a 
+href="main_gcc_ugch16.html#tailmain_gcc_ugch16.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse35.html" >front</a>] [<a 
+href="main_gcc_ugch16.html#main_gcc_ugse35.html" >up</a>] </p></div>
+<!--l. 19--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse35.html"></a> </p> 
+</body></html> 

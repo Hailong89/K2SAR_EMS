@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Introduction to tricore-gcov</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 18--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse60.html" >next</a>] [<a 
+href="main_gcc_ugch22.html" >prev</a>] [<a 
+href="main_gcc_ugch22.html#tailmain_gcc_ugch22.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse59.html">tail</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse59.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">22.1</span>  <a 
+href="main_gcc_ug.html#QQ2-89-254" id="x89-24500022.1">Introduction to tricore-gcov</a></h3>
+<!--l. 20--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcov</span> is a test coverage program. Use it in concert with <span 
+class="cmtt-12">tricore-gcc</span> to analyze your
+programs to help create more efficient, faster running code. You can use <span 
+class="cmtt-12">tricore-gcov</span> as a
+profiling tool to help discover where your optimization efforts will best affect your
+code.
+</p>
+<div class="center" 
+>
+<!--l. 22--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox129"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />For using <span 
+class="cmtt-12">tricore-gcov</span> <span 
+class="cmtt-12">-fprofile-arcs</span>, <span 
+class="cmtt-12">-ftest-coverage</span> must
+be set for <span 
+class="cmtt-12">tricore-gcc</span>. Additional use the compiler option <span 
+class="cmtt-12">-g</span> to
+generate debug information.                                        </div>
+</div>
+<!--l. 28--><p class="noindent" >Profiling tools help you analyze your code’s performance. Using <span 
+class="cmtt-12">tricore-gcov</span>, you can find out
+some basic performance statistics, such as:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">how often each line of code executes
+      </li>
+      <li class="itemize">what lines of code are actually executed
+                                                                                       
+                                                                                       
+      </li>
+      <li class="itemize">how much computing time each section of code uses</li></ul>
+<!--l. 36--><p class="noindent" >Once you know these things about how your code works when compiled, you can look at each
+module to see which modules should be optimized. <span 
+class="cmtt-12">tricore-gcov</span> helps you determine where to
+work on optimization.
+</p><!--l. 38--><p class="noindent" >Software developers also use coverage testing in concert with testsuites, to make sure software is
+actually good enough for a release. Testsuites can verify that a program works as expected; a
+coverage program tests to see how much of the program is exercised by the testsuite. Developers
+can then determine what kinds of test cases need to be added to the testsuites to create both
+better testing and a better final product.
+</p><!--l. 41--><p class="noindent" >You should compile your code without optimization if you plan to use <span 
+class="cmtt-12">tricore-gcov</span> because
+the optimization, by combining some lines of code into one function, may not give you as much
+information as you need to look for ’hot spots’ where the code is using a great deal of computer
+time. Likewise, because <span 
+class="cmtt-12">tricore-gcov</span> accumulates statistics by line (at the lowest resolution),
+it works best with a programming style that places only one statement on each line. If you use
+complicated macros that expand to loops or to other control structures, the statistics are less
+helpful˜they only report on the line where the macro call appears. If your complex
+macros behave like functions, you can replace them with inline functions to solve this
+problem.
+</p><!--l. 43--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcov</span> creates a logfile called <span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">sourcefile</span><span 
+class="cmmi-12">&#x003E;</span><span 
+class="cmtt-12">.gcov </span>which indicates how many times
+each line of a source file <span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">sourcefile</span><span 
+class="cmmi-12">&#x003E;</span><span 
+class="cmtt-12">.c </span>has executed.
+</p><!--l. 49--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcov</span> works only on code compiled with <span 
+class="cmtt-12">tricore-gcc</span>. It is not compatible with any
+other profiling or test coverage mechanism.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 51--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse60.html" >next</a>] [<a 
+href="main_gcc_ugch22.html" >prev</a>] [<a 
+href="main_gcc_ugch22.html#tailmain_gcc_ugch22.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse59.html" >front</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse59.html" >up</a>] </p></div>
+<!--l. 51--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse59.html"></a> </p> 
+</body></html> 

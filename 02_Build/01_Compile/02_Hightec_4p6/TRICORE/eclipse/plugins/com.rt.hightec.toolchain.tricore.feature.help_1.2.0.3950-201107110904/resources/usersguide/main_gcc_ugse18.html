@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Startup code in crt0.o</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 14--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse19.html" >next</a>] [<a 
+href="main_gcc_ugch13.html" >prev</a>] [<a 
+href="main_gcc_ugch13.html#tailmain_gcc_ugch13.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse18.html">tail</a>] [<a 
+href="main_gcc_ugch13.html#main_gcc_ugse18.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">13.1</span>  <a 
+href="main_gcc_ug.html#QQ2-35-50" id="x35-4600013.1">Startup code in crt0.o</a></h3>
+<!--l. 16--><p class="noindent" >The compiler suite contains an example of a startup code. This code is executed after a target
+reset and has to be placed at the address where the target expects its first instruction (the entry
+point). The default code initializes:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">The user and interrupt stack pointers
+                                                                                       
+                                                                                       
+      </li>
+      <li class="itemize">The access to system global register
+      </li>
+      <li class="itemize">Software breakpoint service for OCDS
+      </li>
+      <li class="itemize">SDA base pointers (see <a 
+href="main_gcc_ugse22.html#x40-5400014.2">Listing 14.2<!--tex4ht:ref: sec:intrinsic_fct --></a>)
+      </li>
+      <li class="itemize">Initialize context save areas (CSAs)</li></ul>
+<!--l. 26--><p class="noindent" >Furthermore uninitialized data is set to zero and initialized data is copied from ROM to RAM.
+This is done by using the tables <span class="lstinline"><span 
+class="ecss-1200">__clear_table</span></span> and <span class="lstinline"><span 
+class="ecss-1200">__copy_table</span></span> defined in the default linker
+description file.
+</p><!--l. 28--><p class="noindent" ><span class="lstinline"><span 
+class="ecss-1200">__clear_table</span></span> is used to set the uninitialized data, that is the sections <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sbss</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zbss</span></span>, to
+zero before <span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">()</span></span> is entered. This is done because ANSI defines uninitialized data to be
+zero.
+</p><!--l. 30--><p class="noindent" >With <span 
+class="cmtt-12">-fzero-initialized-in-bss</span> you can advise <span 
+class="cmtt-12">tricore-gcc</span> to put variables that are
+initialized to zero in the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section instead of the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span></span> section. Variables that use the modifier
+<span class="lstinline"><span 
+class="ecsx-1200">static</span></span> are not affected by this option.
+</p><!--l. 32--><p class="noindent" >Initialized data is located in a RAM area on reset. This data has to be copied to its RAM
+address before the program gets access to it.
+</p><!--l. 34--><p class="noindent" >In the default linker script the <span class="lstinline"><span 
+class="ecss-1200">__copy_table</span></span> is initialized. By means of this table, the startup
+code can copy the contents of the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span><span 
+class="cmsy-10x-x-120">*</span></span> sections from their load memory address (LMA) in the
+ROM to their virtual memory address (VMA) in the RAM.
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">VMA</span> </dt><dd 
+class="description">Virtual memory address used internally by the module when it is run.
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">LMA</span> </dt><dd 
+class="description">Loadable memory address specifying where the section is to be loaded.</dd></dl>
+<!--l. 41--><p class="noindent" >The source code of the default startup code is located in the file <span 
+class="cmtt-12">crt0.S</span>. The corresponding
+object, <span 
+class="cmtt-12">crt0.o</span>, is linked to the executable whenever an executable is generated by
+<span 
+class="cmtt-12">tricore-gcc</span>. If you want to create your own startup file, you have to remove this default by
+using the compiler option <span 
+class="cmtt-12">-nostartfiles</span>. Then you can include and link your own <span 
+class="cmtt-12">crt0.o </span>to
+your project.
+</p><!--l. 43--><p class="noindent" >By default the linker adds the start files <span 
+class="cmtt-12">crti.o</span>, <span 
+class="cmtt-12">crtbegin.o</span>, <span 
+class="cmtt-12">crt0.o </span>and the end files
+<span 
+class="cmtt-12">crtend.o </span>and <span 
+class="cmtt-12">crtn.o</span>. The option <span 
+class="cmtt-12">-nocrt0</span> avoids that the default <span 
+class="cmtt-12">crt0.o </span>are included, so the
+user can add his own startup code by using this option. With the option <span 
+class="cmtt-12">-nostartfiles</span>, the
+startfiles and endfiles are skipped. The option <span 
+class="cmtt-12">-nocrt0</span> is not documented in the help screen of
+the compiler.
+</p><!--l. 45--><p class="noindent" >The input sections <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">init</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">fini</span></span> are located in the output section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">init</span></span>. The function <span class="lstinline"><span 
+class="ecss-1200">__main</span></span> is
+replace by the function <span class="lstinline"><span 
+class="ecss-1200">_init</span></span>.
+                                                                                       
+                                                                                       
+</p>
+<div class="center" 
+>
+<!--l. 47--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox34"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The order of linking object is important, so parenthesise the user
+objects in this manner <span 
+class="cmtt-12">crti.o </span><span 
+class="cmmi-12">&#x003C;</span>user object<span 
+class="cmmi-12">&#x003E; </span><span 
+class="cmtt-12">crtn.o</span>.              </div>
+</div>
+<!--l. 49--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.init</span></span>             </dt><dd 
+class="list">
+                  <!--l. 50--><p class="noindent" >Contains the calls of all constructors.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.fini</span></span>             </dt><dd 
+class="list">
+                  <!--l. 51--><p class="noindent" >Contains the calls of all destructors.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.jcr</span></span>              </dt><dd 
+class="list">
+                  <!--l. 52--><p class="noindent" >Contains  java  constructors.  The  section  is  located  at  the  <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">rodata</span></span>
+                  section.</p></dd></dl>
+<!--l. 55--><p class="noindent" >In the file <span 
+class="cmtt-12">crti.o</span>, the symbol <span class="lstinline"><span 
+class="ecss-1200">_init</span></span> is defined in the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">init</span></span> section, and the symbol <span class="lstinline"><span 
+class="ecss-1200">_fini</span></span> is
+defined in the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">fini</span></span> section. The file <span 
+class="cmtt-12">crtn.o </span>contains the definition of the function epilog with
+the return instruction of the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">init</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">fini</span></span> section. The symbol <span class="lstinline"><span 
+class="ecss-1200">_init</span></span> is called as a function
+before main from the startup file <span 
+class="cmtt-12">crt0.o</span>. The section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">fini</span></span> will be generated to hold the code
+which has to be executed before <span class="lstinline"><span 
+class="ecss-1200">_exit</span></span>.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 57--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse19.html" >next</a>] [<a 
+href="main_gcc_ugch13.html" >prev</a>] [<a 
+href="main_gcc_ugch13.html#tailmain_gcc_ugch13.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse18.html" >front</a>] [<a 
+href="main_gcc_ugch13.html#main_gcc_ugse18.html" >up</a>] </p></div>
+<!--l. 57--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse18.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,255 @@
+/**************************************************************************
+**
+** Version: @(#)reguserdef16.xml	1.6 11/05/30
+** 
+** This file contains all Core-SFR and BIT names and on-chip register definitions
+** 
+** Copyright 2002-2014 Altium BV
+**
+**************************************************************************/
+#ifndef _REGUSERDEF16_H
+#define _REGUSERDEF16_H
+
+/* Core Base */
+#define core_base	0xF7E1	/* The base address off the memory for the CSFR's */
+
+/* Core Special Function Registers (CSFR). Macros, such as MMU_CON, that expand to a 16-bit number do not directly represent a memory address.
+   They are intended to be used with the intrinsic functions __mfcr(...) and __mtcr(...). */
+#define MMU_CON	0x8000	/* MMU Control Register */
+#define PCXI	0xfe00	/* Previous Context Information Register */
+#define PCX	0xfe00	/* Previous Context Pointer */
+#define PSW	0xfe04	/* Program Status Word */
+#define PC	0xfe08	/* Program Counter */
+#define SYSCON	0xfe14	/* System Configuration Register */
+#define CPU_ID	0xfe18	/* CPU Identification Register */
+#define BIV	0xfe20	/* Base Interrupt Vector Table Pointer */
+#define BTV	0xfe24	/* Base Trap Vector Table Pointer */
+#define ISP	0xfe28	/* Interrupt Stack Pointer */
+#define ICR	0xfe2c	/* Interrupt Control Register */
+#define FCX	0xfe38	/* Free CSA List Head Pointer */
+#define LCX	0xfe3c	/* Free CSA List Limit Pointer */
+#define PMA0	0x801c	/* Physical Memory Attributes */
+#define COMPAT	0x9400	/* Compatibility Control Register */
+
+/* Watch Dog Timer Timer (WDT) */
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned int ENDINIT        : 1;	/* End-of-Initialization Control Bit. */
+		unsigned int LCK            : 1;	/* Lock bit to Control Access to WDT_CON0. */
+		unsigned int HPW0           : 2;	/* Hardware Password 0. */
+		unsigned int HPW1           : 4;	/* Hardware Password 1. */
+		unsigned int PW             : 8;	/* User-Definable Password Field for Access to WDT_CON0. */
+		unsigned int WDTREL         : 16;	/* Reload Value for the Watchdog Timer. */
+	} B;
+	int I;
+	unsigned int U;
+
+} WDT_CON0_type;
+#define WDT_CON0	(*( WDT_CON0_type *) 0xf00005f0u)	/* WDT Control Register 0 */
+
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned int CLRIRF         : 1;
+		unsigned int                : 1;
+		unsigned int IR             : 1;	/* WDT Input Frequency Request Control Bit. */
+		unsigned int DR             : 1;	/* WDT Disable Request Control Bit. */
+		unsigned int                : 28;
+	} B;
+	int I;
+	unsigned int U;
+
+} WDT_CON1_type;
+#define WDT_CON1	(*( WDT_CON1_type *) 0xf00005f4u)	/* WDT Control Register 1 */
+
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned int AE             : 1;	/* Access Error status flag. */
+		/* const */ unsigned int OE             : 1;	/* Overflow Error status flag. */
+		/* const */ unsigned int IS             : 1;	/* Input Clock status flag. */
+		/* const */ unsigned int DS             : 1;	/* Enable/Disable status flag. */
+		/* const */ unsigned int TO             : 1;	/* Time-Out mode flag. */
+		/* const */ unsigned int PR             : 1;	/* Rewarning mode flag. */
+		/* const */ unsigned int                : 10;
+		/* const */ unsigned int TIM            : 16;	/* Timer value. */
+	} B;
+	int I;
+	unsigned int U;
+
+} WDT_SR_type;
+#define WDT_SR	(*( WDT_SR_type *) 0xf00005f8u)	/* WDT Status Register */
+
+
+/* System Timer (STM) */
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned int STM_31_0_      : 32;
+	} B;
+	int I;
+	unsigned int U;
+
+} STM_TIM0_type;
+#define STM_TIM0	(*( STM_TIM0_type *) 0xf0000210u)	/* STM Timer Register 0 */
+
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned int STM_55_32_     : 24;
+		/* const */ unsigned int                : 8;
+	} B;
+	int I;
+	unsigned int U;
+
+} STM_CAP_type;
+#define STM_CAP	(*( STM_CAP_type *) 0xf000022cu)	/* STM Timer Capture Register */
+
+#define SYSTIME_LOW	STM_TIM0.U
+#define SYSTIME_HIGH	STM_CAP.U
+
+/* External Bus Unit (EBU) */
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned __sfrbit32 PORTW          : 2;	/* Port width */
+		unsigned __sfrbit32 WAITRDC        : 5;	/* Read wait states */
+		unsigned __sfrbit32 ADDRC          : 4;	/* Address cycles */
+		unsigned __sfrbit32 WAITINV        : 1;	/* WAIT Level */
+		unsigned __sfrbit32 WAIT           : 2;	/* Variable wait-state insertion */
+		unsigned __sfrbit32 BCGEN          : 2;	/* Byte control signal timing */
+		unsigned __sfrbit32                : 16;
+	} B;
+	int I;
+	unsigned int U;
+
+} EBU_BOOTCFG_type;
+#define EBU_BOOTCFG	(*( EBU_BOOTCFG_type *) 0xA0000004u)	/* External Boot Memory Configuration Word */
+
+
+/* PCP2 */
+#define PCP_RAM_BASE	0xF0050000	/* PCP Parameter Memory Start Address */
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned __sfrbit32 CNT1           : 12;	/* Counter for BCOPY, COPY and EXIT */
+		unsigned __sfrbit32                : 2;
+		unsigned __sfrbit32 TOS            : 2;	/* Type Of Service */
+		unsigned __sfrbit32 SRPN           : 8;	/* Service Request Priority Number */
+		unsigned __sfrbit32 CPPN           : 8;	/* PCP Interrupt Priority Number */
+	} B;
+	int I;
+	unsigned int U;
+
+} PCP_GPR6_type;
+
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned __sfrbit32 Z              : 1;	/* Zero flag */
+		unsigned __sfrbit32 N              : 1;	/* Negative flag */
+		unsigned __sfrbit32 C              : 1;	/* Carry flag */
+		unsigned __sfrbit32 V              : 1;	/* Overflow flag */
+		unsigned __sfrbit32 CNZ            : 1;	/* Outerloop counter 1 Zero flag */
+		unsigned __sfrbit32 IEN            : 1;	/* Enable Interrupt of Channel */
+		unsigned __sfrbit32 CEN            : 1;	/* Channel Enable */
+		unsigned __sfrbit32                : 1;
+		unsigned __sfrbit32 DPTR           : 8;	/* Data Pointer */
+		unsigned __sfrbit32                : 16;
+	} B;
+	int I;
+	unsigned int U;
+
+} PCP_GPR7_type;
+
+typedef volatile struct
+{
+	PCP_GPR7_type R7;	/* General Purpose Register R7 */
+	PCP_GPR6_type R6;	/* General Purpose Register R6 */
+	unsigned int  R5;	/* General Purpose Register R5 */
+	unsigned int  R4;	/* General Purpose Register R4 */
+	unsigned int  R3;	/* General Purpose Register R3 */
+	unsigned int  R2;	/* General Purpose Register R2 */
+	unsigned int  R1;	/* General Purpose Register R1 */
+	unsigned int  R0;	/* General Purpose Register R0 */
+
+} PCP_CONTEXT_type;
+/* PCP Channel n - full context */
+#define	PCP_CONTEXT(n)	(*(PCP_CONTEXT_type*) (PCP_RAM_BASE + sizeof(PCP_CONTEXT_type) * (n)))
+
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned __sfrbit32 EN             : 1;
+		unsigned __sfrbit32                : 1;
+		/* const */ unsigned __sfrbit32 RS             : 1;
+		unsigned __sfrbit32                : 1;
+		unsigned __sfrbit32 RCB            : 1;
+		unsigned __sfrbit32 EIE            : 1;
+		unsigned __sfrbit32 CS             : 2;
+		unsigned __sfrbit32 PPE            : 1;
+		unsigned __sfrbit32 PPS            : 7;
+		unsigned __sfrbit32 CWE            : 1;
+		unsigned __sfrbit32 CWT            : 7;
+		unsigned __sfrbit32 ESR            : 8;
+	} B;
+	int I;
+	unsigned int U;
+
+} PCP_CS_type;
+#define PCP_CS	(*( PCP_CS_type *) 0xf0043f10u)	/* PCP Control/Status Register */
+
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned __sfrbit32 BER            : 1;
+		/* const */ unsigned __sfrbit32 IOP            : 1;
+		/* const */ unsigned __sfrbit32 DCR            : 1;
+		/* const */ unsigned __sfrbit32 IAE            : 1;
+		/* const */ unsigned __sfrbit32 DBE            : 1;
+		/* const */ unsigned __sfrbit32 ME             : 1;
+		/* const */ unsigned __sfrbit32 CWD            : 1;
+		/* const */ unsigned __sfrbit32 PPC            : 1;
+		/* const */ unsigned __sfrbit32 EPN            : 8;
+		/* const */ unsigned __sfrbit32 EPC            : 16;
+	} B;
+	int I;
+	unsigned int U;
+
+} PCP_ES_type;
+#define PCP_ES	(*( PCP_ES_type *) 0xf0043f14u)	/* PCP Error/Debug Status Register */
+
+
+/* CPU */
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned int SRPN           : 8;
+		unsigned int                : 2;
+		unsigned int TOS            : 1;
+		unsigned int                : 1;
+		unsigned int SRE            : 1;
+		/* const */ unsigned int SRR            : 1;
+		unsigned int CLRR           : 1;
+		unsigned int SETR           : 1;
+		unsigned int                : 16;
+	} B;
+	int I;
+	unsigned int U;
+
+} CPU_SRC0_type;
+#define CPU_SRC0	(*( CPU_SRC0_type *) 0xf7e0fffcu)	/* CPU Service Request Control Register 0 */
+
+#endif /*_REGUSERDEF16_H*/

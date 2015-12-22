@@ -1,0 +1,92 @@
+/**************************************************************************
+**
+**  FILE        :  new.stdh
+**
+**  DESCRIPTION :  Include file for C++ default operator new
+**
+**  COPYRIGHT   :  Copyright 1998-2014 Altium BV
+**
+**************************************************************************/
+
+#ifndef __NEW_STDH
+#define __NEW_STDH
+
+#include <tasking_config.h>
+#include __TASKING_CXX_NATIVE_HEADER(cstddef)
+#include __TASKING_CXX_NATIVE_HEADER(exception)
+
+__TASKING_START_NAMESPACE
+
+/* This lets users disable the TASKING supplied exception classes. */
+#ifdef __USE_TASKING_EXCEPTION_CLASSES
+
+  class bad_alloc : public exception {
+  public:
+    bad_alloc() throw();
+    bad_alloc(const bad_alloc&) throw();
+    bad_alloc& operator=(const bad_alloc&) throw();
+    virtual ~bad_alloc() throw();
+    virtual const char* what() const throw();
+  };
+
+#endif /* defined(__USE_TASKING_EXCEPTION_CLASSES) */
+
+  typedef void (*new_handler)();
+  new_handler set_new_handler(new_handler) throw();
+  struct nothrow_t { };
+  // Declaration of object nothrow to permit the use of the placement new
+  // syntax: new (nothrow) T;
+  const nothrow_t nothrow = {};
+
+__TASKING_END_NAMESPACE
+__TASKING_USING_NAMESPACE
+
+/* Normal operator new. */
+void *operator new(STD_NAMESPACE::size_t)
+        throw(STD_NAMESPACE::bad_alloc);
+
+/* Normal operator delete. */
+void operator delete(void*) throw ();
+
+/* Nothrow version of operator new. */
+void *operator new(STD_NAMESPACE::size_t,
+                   const STD_NAMESPACE::nothrow_t&) throw();
+
+/* Nothrow version of operator delete. */
+void operator delete(void*, const STD_NAMESPACE::nothrow_t&) throw();
+
+/* Placement new. */
+void *operator new(STD_NAMESPACE::size_t, void*) throw();
+
+/* Placement delete. */
+#ifdef __PLACEMENT_DELETE
+void operator delete(void*, void*) throw();
+#endif /* ifdef __PLACEMENT_DELETE */
+
+#ifdef __ARRAY_OPERATORS
+
+/* Array new. */
+void *operator new[](STD_NAMESPACE::size_t)
+        throw(STD_NAMESPACE::bad_alloc);
+
+/* Array delete. */
+void operator delete[](void*) throw ();
+
+/* Placement array new. */
+void *operator new[](STD_NAMESPACE::size_t, void*) throw();
+
+/* Placement array delete. */
+#ifdef __PLACEMENT_DELETE
+void operator delete[](void*, void*) throw();
+#endif /* ifdef __PLACEMENT_DELETE */
+
+/* Nothrow version of array new. */
+void *operator new[](STD_NAMESPACE::size_t,
+                     const STD_NAMESPACE::nothrow_t&) throw();
+
+/* Nothrow version of array delete. */
+void operator delete[](void*,
+                       const STD_NAMESPACE::nothrow_t&) throw();
+#endif /* __ARRAY_OPERATORS */
+
+#endif  /* ifndef __NEW_STDH */

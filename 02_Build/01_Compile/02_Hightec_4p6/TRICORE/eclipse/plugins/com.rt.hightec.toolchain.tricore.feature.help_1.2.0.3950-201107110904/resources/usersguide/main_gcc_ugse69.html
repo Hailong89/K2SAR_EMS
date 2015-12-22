@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Functions of libgcc.a</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 3--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse70.html" >next</a>] [<a 
+href="main_gcc_ugch26.html" >prev</a>] [<a 
+href="main_gcc_ugch26.html#tailmain_gcc_ugch26.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse69.html">tail</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse69.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">26.1</span>  <a 
+href="main_gcc_ug.html#QQ2-104-269" name="x104-26000026.1">Functions of libgcc.a</a></h3>
+<a 
+ id="dx104-260001"></a>
+<!--l. 5--><p class="noindent" >The libgcc includes the implementation of implicit called library routines. For some
+instructions like long long arithmetic the compiler generates implicit library calls to
+subroutines like <span class="lstinline"><span 
+class="ecss-1200">_muldi3</span></span>, <span class="lstinline"><span 
+class="ecss-1200">__divdi3</span></span> etc. Since the TriCore doesn’t support floating
+point arithmetic, all floating point arithmetic is done by library calls to function in
+libgcc.a.
+</p><!--l. 7--><p class="noindent" >The <span 
+class="cmtt-12">libgcc.a </span>includes the function <span class="lstinline"><span 
+class="ecss-1200">_bb_init_func</span></span> and <span class="lstinline"><span 
+class="ecss-1200">__bb_exit_func</span></span> to support the
+production of profiling information with the option <span 
+class="cmtt-12">-fprofile-arcs</span> and <span 
+class="cmtt-12">-ftest-coverage</span>.
+This feature is only available with some kind of stdio on the target platform. I.e. through
+simulated IO within the debugger and the included library <span 
+class="cmtt-12">libos.a</span>.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 10--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse70.html" >next</a>] [<a 
+href="main_gcc_ugch26.html" >prev</a>] [<a 
+href="main_gcc_ugch26.html#tailmain_gcc_ugch26.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse69.html" >front</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse69.html" >up</a>] </p></div>
+<!--l. 10--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse69.html"></a> </p> 
+</body></html> 

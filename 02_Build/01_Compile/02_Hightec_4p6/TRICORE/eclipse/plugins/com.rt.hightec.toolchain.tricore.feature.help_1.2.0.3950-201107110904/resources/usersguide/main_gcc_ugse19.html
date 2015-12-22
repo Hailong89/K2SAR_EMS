@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>The constructors for main()</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 57--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse20.html" >next</a>] [<a 
+href="main_gcc_ugse18.html" >prev</a>] [<a 
+href="main_gcc_ugse18.html#tailmain_gcc_ugse18.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse19.html">tail</a>] [<a 
+href="main_gcc_ugch13.html#main_gcc_ugse19.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">13.2</span>  <a 
+href="main_gcc_ug.html#QQ2-36-51" id="x36-4700013.2">The constructors for main()</a></h3>
+<!--l. 59--><p class="noindent" >You may set a function as constructor via the attribute <span class="lstinline"><span 
+class="ecss-1200">constructor</span></span>. These constructors are
+called in the function <span class="lstinline"><span 
+class="ecss-1200">_init</span></span> in the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">init</span></span>, which is called in <span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">()</span></span> before any other
+instruction is executed.
+</p><!--l. 61--><p class="noindent" >The libraries shipped with the  TriCore Development Platform contain two constructors, which
+are both located in separate objects in the library <span 
+class="cmtt-12">libos.a</span>:
+</p><!--l. 63--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_init_vectab</span></span>     </dt><dd 
+class="list">
+                  <!--l. 64--><p class="noindent" >This function initializes the trap vector table for interrupts and traps.
+                  It is only added to the executable if a function to handle interrupts
+                  or traps (e.g. <span class="lstinline"><span 
+class="ecss-1200">_install_int_handler</span><span 
+class="ecss-1200">()</span></span> or <span class="lstinline"><span 
+class="ecss-1200">_install_trap_handler</span><span 
+class="ecss-1200">()</span></span>) from
+                  the object <span class="lstinline"><span 
+class="ecss-1200">cint</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">o</span></span> of the library <span class="lstinline"><span 
+class="ecss-1200">libos</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">o</span></span> is referenced. Otherwise this
+                  constructor is not called from within <span class="lstinline"><span 
+class="ecss-1200">_init</span></span>.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_init_hnd_chain</span></span> </dt><dd 
+class="list">
+                  <!--l. 65--><p class="noindent" >This function initializes the chained interrupt handlers. It is only added
+                  to the executable if a function to handle chained interrupt handlers
+                  (e.g.  <span class="lstinline"><span 
+class="ecss-1200">_install_chained_int_handler</span></span>  or  <span class="lstinline"><span 
+class="ecss-1200">_remove_chained_int_handler</span></span>
+                  from  the  object  <span 
+class="cmtt-12">ccint.o </span>of  the  library  <span 
+class="cmtt-12">libos.o </span>is  referenced.
+                  Otherwise this constructor is not called from within <span class="lstinline"><span 
+class="ecss-1200">_init</span></span>.</p></dd></dl>
+<!--l. 68--><p class="noindent" >If you have referenced one of these functions, you cannot avoid the constructors to be called by
+<span class="lstinline"><span 
+class="ecss-1200">__init</span></span>. The only way to avoid this is to define your own <span class="lstinline"><span 
+class="ecss-1200">_init</span></span> as an empty function. In this case
+you have to take care of the initialization of the trap vector tables and the chained interrupt
+handlers if necessary. You may do this by explicitly calling the constructor-functions from your
+own <span class="lstinline"><span 
+class="ecss-1200">_init</span></span> or <span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">()</span></span>.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 70--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse20.html" >next</a>] [<a 
+href="main_gcc_ugse18.html" >prev</a>] [<a 
+href="main_gcc_ugse18.html#tailmain_gcc_ugse18.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse19.html" >front</a>] [<a 
+href="main_gcc_ugch13.html#main_gcc_ugse19.html" >up</a>] </p></div>
+<!--l. 70--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse19.html"></a> </p> 
+</body></html> 

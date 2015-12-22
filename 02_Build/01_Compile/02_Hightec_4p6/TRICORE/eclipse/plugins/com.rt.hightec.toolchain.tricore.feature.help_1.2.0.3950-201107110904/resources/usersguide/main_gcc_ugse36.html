@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Invocation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 19--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse37.html" >next</a>] [<a 
+href="main_gcc_ugse35.html" >prev</a>] [<a 
+href="main_gcc_ugse35.html#tailmain_gcc_ugse35.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse36.html">tail</a>] [<a 
+href="main_gcc_ugch16.html#main_gcc_ugse36.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">16.2</span>  <a 
+href="main_gcc_ug.html#QQ2-57-113" id="x57-10600016.2">Invocation</a></h3>
+<a 
+ id="dx57-106001"></a>
+<!--l. 21--><p class="noindent" >The control program <span 
+class="cmtt-12">tricore-gcc</span> is controlled by command line options. This chapter
+describes these options available for the control program of the  TriCore Development
+Platform.
+</p><!--l. 23--><p class="noindent" >A subset of the options available for a component of the toolchain are accessible from
+<span 
+class="cmtt-12">tricore-gcc</span>. These options are accepted by the control program and passed to the
+appropriate component. This chapter describes the options accepted by <span 
+class="cmtt-12">tricore-gcc</span>. The
+descriptions of these options include, if available, the component the option is passed
+to.
+</p><!--l. 25--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">16.2.1</span>  <a 
+href="#x57-10700016.2.1" id="x57-10700016.2.1">Overview</a></h4>
+<a 
+ id="dx57-107001"></a>
+<!--l. 27--><p class="noindent" >For a description of the available options of <span 
+class="cmtt-12">tricore-gcc</span> see the according section.
+</p><!--l. 29--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">16.2.2</span>  <a 
+href="#x57-10800016.2.2" id="x57-10800016.2.2">Options controlling the control program</a></h4>
+<a 
+ id="dx57-108001"></a>
+<!--l. 32--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">--help</span>           </dt><dd 
+class="list">
+                  <!--l. 33--><p class="noindent" ><a 
+ id="dx57-108002"></a> Prints a description of the command line options that are accepted by
+                  <span 
+class="cmtt-12">tricore-gcc</span>. If the option <span 
+class="cmtt-12">-v</span> is specified in combination with <span 
+class="cmtt-12">--help</span>,
+                  then this option is passed to the programs invoked by <span 
+class="cmtt-12">tricore-gcc</span>
+                  and a complete command reference of the programs included in the
+                  toolchain is generated.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--target-help</span>   </dt><dd 
+class="list">
+                  <!--l. 34--><p class="noindent" >Prints the description of TriCore specific options for each tool of the
+                  toolchain.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-dumpspecs</span>       </dt><dd 
+class="list">
+                  <!--l. 35--><p class="noindent" ><a 
+ id="dx57-108003"></a> The <a 
+ id="lbl:gcc!-dumpspecs">behavior</a> of  <span 
+class="cmtt-12">tricore-gcc</span> is controlled by so called specs. Per
+                  default <span 
+class="cmtt-12">tricore-gcc</span> uses the built in specs. These built in specs can
+                  be displayed by this option. For changing the built in specs see option
+                  <a 
+href="#lbl:gcc!-specs">-specs</a>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-dumpversion</span>    </dt><dd 
+class="list">
+                  <!--l. 36--><p class="noindent" ><a 
+ id="dx57-108004"></a> Displays the version of the compiler
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--version</span>        </dt><dd 
+class="list">
+                  <!--l. 37--><p class="noindent" ><a 
+ id="dx57-108005"></a> Displays  the  version  of  the  compiler  and  additional  copyright
+                  information
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-print-search-dirs</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 39--><p class="noindent" ><a 
+ id="dx57-108006"></a> This option prints out the default directories the control program
+                  searches for executables and libraries.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-print-libgcc-file-name</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 40--><p class="noindent" ><a 
+ id="dx57-108007"></a> Displays the name and the path to the library libgcc
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-print-file-name=&#x003C;library&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 41--><p class="noindent" ><a 
+ id="dx57-108008"></a> Displays the full path to the library <span 
+class="cmmi-12">&#x003C;</span>library<span 
+class="cmmi-12">&#x003E;</span>. In a default installation
+                  this would be:
+                  </p><!--l. 45--><p class="noindent" ><span 
+class="cmtt-12">C:</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmmi-12">&#x003E;</span><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-print-file-name=libgcc.a</span><br 
+class="newline" /><span 
+class="cmtt-12">C:</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;install-dir&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">bin</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><br 
+class="newline" /><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">gcc-lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;gcc-version&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">libgcc.a</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-print-prog-name=&#x003C;program&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 49--><p class="noindent" ><a 
+ id="dx57-108009"></a> Displays the full path to the toolchain component <span 
+class="cmmi-12">&#x003C;</span>program<span 
+class="cmmi-12">&#x003E;</span>. In a
+                  default installation this would be:
+                                                                                       
+                                                                                       
+                  </p><!--l. 53--><p class="noindent" ><span 
+class="cmtt-12">C:</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003E;</span><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-print-prog-name=cc1</span><br 
+class="newline" /><span 
+class="cmtt-12">C:</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;install-dir&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">bin</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><br 
+class="newline" /><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">gcc-lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;gcc-vercion&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">cc1.exe</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-save-temps</span>      </dt><dd 
+class="list">
+                  <!--l. 63--><p class="noindent" ><a 
+ id="dx57-108010"></a> The <a 
+ id="lbl:gcc!-save-temps">files</a> produced while compiling a source file are normally generated in a
+                  temporary directory and deleted after the compilation. Using the option
+                  <span 
+class="cmtt-12">-save-temps</span> prevents generating the intermediate files in the temporary
+                  directory but saves them in the build directory.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-save-temps-dir=&#x003C;directory&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 64--><p class="noindent" ><a 
+ id="dx57-108011"></a> The files produced while compiling a source file are normally generated in a
+                  temporary directory and deleted after the compilation. Using the option
+                  <span 
+class="cmtt-12">-save-temps-dir</span> prevents generating the intermediate files in the
+                  temporary directory but saves them in the directory specified by
+                  an user. If you also use <a 
+href="main_gcc_ugse41.html#lbl:cc1!-no-integrated-cpp">-no-integrated-cpp</a> then the <span 
+class="cmtt-12">.i </span>files are
+                  generated.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wp,&#x003C;options&#x003E;</span>   </dt><dd 
+class="list">
+                  <!--l. 65--><p class="noindent" ><a 
+ id="dx57-108012"></a> Pass options to the preprocessor. The options must be specified as comma
+                  separated list. This option must be used for all preprocessor options not
+                  directly accessible via <span 
+class="cmtt-12">tricore-gcc</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wa,&#x003C;options&#x003E;</span>   </dt><dd 
+class="list">
+                  <!--l. 66--><p class="noindent" ><a 
+ id="dx57-108013"></a> Pass options to the assembler. The options must be specified as comma
+                  separated list. This option must be used for all assembler options not directly
+                  accessible via <span 
+class="cmtt-12">tricore-gcc</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wl,&#x003C;options&#x003E;</span>   </dt><dd 
+class="list">
+                  <!--l. 67--><p class="noindent" ><a 
+ id="dx57-108014"></a> Pass options to the linker. The options must be specified as comma
+                  separated list. This option must be used for all linker options not directly
+                  accessible via <span 
+class="cmtt-12">tricore-gcc</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Xlinker &#x003C;arg&#x003E;</span>  </dt><dd 
+class="list">
+                  <!--l. 68--><p class="noindent" ><a 
+ id="dx57-108015"></a> Pass one option to the linker. This option <span 
+class="cmmi-12">&#x003C;</span>arg<span 
+class="cmmi-12">&#x003E; </span>may be either a command
+                  line option understood by the linker or an additional object file that should
+                  be linked into the executeable.
+                  </p></dd><dt class="list">
+                                                                                       
+                                                                                       
+<span 
+class="cmtt-12">-v</span>                </dt><dd 
+class="list">
+                  <!--l. 69--><p class="noindent" ><a 
+ id="dx57-108016"></a> Generate <a 
+ id="lbl:gcc!-v">verbose</a> output. The programs invoked by the control program and
+                  the options passed to them are written to the standard error output. This
+                  option also prints the version number of the compiler driver program and the
+                  invoked tools.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-###</span>              </dt><dd 
+class="list">
+                  <!--l. 70--><p class="noindent" ><a 
+ id="dx57-108017"></a> Equivalent to <a 
+href="#lbl:gcc!-v">-v</a> but the components are not executed. The way they would
+                  be started by <span 
+class="cmtt-12">tricore-gcc</span> is printed to the standard error output. This
+                  option can be used to check wether the right options are passed to the
+                  components without starting them.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-specs=&#x003C;file&#x003E;</span>   </dt><dd 
+class="list">
+                  <!--l. 71--><p class="noindent" ><a 
+ id="dx57-108018"></a> This <a 
+ id="lbl:gcc!-specs">o</a>ption passes the additional specs file <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>to the control program.
+                  The specs in this file define which options are passed to the components of
+                  the toolchain. The settings in this specs file override the default settings
+                  made by the built in specs. If more than one option <span 
+class="cmtt-12">-specs=&#x003C;file&#x003E;</span>
+                  is specified the specs files are read from left to right. Also see:
+                  <a 
+href="#lbl:gcc!-dumpspecs">-dumpspecs</a>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-B &#x003C;directory&#x003E;</span>  </dt><dd 
+class="list">
+                  <!--l. 72--><p class="noindent" ><a 
+ id="dx57-108019"></a> Adds <span 
+class="cmmi-12">&#x003C;</span>directory<span 
+class="cmmi-12">&#x003E; </span>to the library search path of the compiler.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-std=&#x003C;standard&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 77--><p class="noindent" ><a 
+ id="dx57-108020"></a> Specify the standard the code should be checked against. Allowed standards
+                  are:
+                       </p><dl class="description"><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">iso9899:1990, c89</span> </dt><dd 
+class="description">The  ISO  C  standard  from  1990.  c89  is  the
+                       customary shorthand for this version of the standard.
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">gnu89</span> </dt><dd 
+class="description">the ISO C standard from 1990 plus <span 
+class="cmsl-12">GNU </span>extensions. This is
+                       the default.
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">iso9899:199409</span> </dt><dd 
+class="description">The 1990 C standard, as amended in 1994.
+                       </dd><dt class="description">
+                                                                                       
+                                                                                       
+                  <span 
+class="cmssbx-10x-x-120">iso9899:1999, iso9899:199x, c99, c9x</span> </dt><dd 
+class="description">The revised ISO C standard,
+                       published in December 1999. Before publication, this was known
+                       as C9X.
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">gnu99, gnu9x</span> </dt><dd 
+class="description">The 1999 ISO C standard plus <span 
+class="cmsl-12">GNU </span>extensions.</dd></dl>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-x &#x003C;language&#x003E;</span>   </dt><dd 
+class="list">
+                  <!--l. 88--><p class="noindent" ><a 
+ id="dx57-108021"></a> Specify the language of the following input files. Permissable languages
+                  are:
+                  </p><!--l. 90--><p class="noindent" ><span 
+class="cmtt-12">c c++ assembler none</span>
+                  </p><!--l. 92--><p class="noindent" ><span 
+class="cmtt-12">none</span> means revert to the default behavior of guessing the language based on
+                  the file’s extension. For valid file extensions see <a 
+href="main_gcc_ugse2.html#x6-50042">Part 1.2</a>. Depending on the
+                  language of the input files the corresponding compiler is invoked. For C
+                  and C++ input files <span 
+class="cmtt-12">tricore-gcc</span> starts the C or C++ compiler
+                  respectively. If the input source files contain assembler code the starting
+                  of the C or C++ compiler is omitted and only the assembler is
+                  started.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-E</span>                </dt><dd 
+class="list">
+                  <!--l. 93--><p class="noindent" ><a 
+ id="dx57-108022"></a> Stop <a 
+ id="lbl:gcc!-E">after</a> preprocessing, do not compile anything. The output is
+                  preprocessed source code, which is sent to the standard output if the option
+                  <span 
+class="cmtt-12">-o &#x003C;file&#x003E;</span> is not given. Input files which are not preprocessed (e.g. <span 
+class="cmtt-12">.h </span>or <span 
+class="cmtt-12">.i</span>
+                  files) are ignored.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-S</span>                </dt><dd 
+class="list">
+                  <!--l. 94--><p class="noindent" ><a 
+ id="dx57-108023"></a> Stop the toolchain after the compiler. The output is one assembler code
+                  file for each input source file. The default file extension for files
+                  containing assembler code is .s, so the input file main.c becomes
+                  main.c. Input files which are not compiled (e.g. <span 
+class="cmtt-12">.s </span>or <span 
+class="cmtt-12">.S </span>files) are
+                  ignored.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-c</span>                </dt><dd 
+class="list">
+                  <!--l. 95--><p class="noindent" ><a 
+ id="dx57-108024"></a> Compile or assemble the source files, but do not link. The toolchain is
+                  stopped after the assembler. The output generated at this stage of comiling
+                  is a object file for each input file. By default, the object file name
+                  for a source file is made by replacing the extension <span 
+class="cmtt-12">.c</span>, <span 
+class="cmtt-12">.i</span>, <span 
+class="cmtt-12">.s</span>,
+                  etc., with <span 
+class="cmtt-12">.o</span>. Input files which are not assembled (e.g. <span 
+class="cmtt-12">.o</span>) are
+                  ignored.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o &#x003C;file&#x003E;</span>        </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 96--><p class="noindent" ><a 
+ id="dx57-108025"></a> Place output in <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E;</span>. This applies regardless to whatever sort of output is
+                  being produced, whether it be an executable file, an object file, an
+                  assembler file or preprocessed C code. Since only one output file can be
+                  specified, it does not make sense to use <span 
+class="cmtt-12">-o</span> when compiling more
+                  than one input file, unless you are producing an executable file as
+                  output. If <span 
+class="cmtt-12">-o</span> is not specified, the default is to put an executable
+                  file in <span 
+class="cmtt-12">a.out</span>, the object file for <span 
+class="cmtt-12">source.suffix </span>in <span 
+class="cmtt-12">source.o</span>, its
+                  assembler file in <span 
+class="cmtt-12">source.s</span>, and all preprocessed C source on standard
+                  output.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-pass-exit-codes</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 97--><p class="noindent" ><a 
+ id="dx57-108026"></a> Normally the <span 
+class="cmtt-12">tricore-gcc</span> program will exit with the code of 1 if any
+                  phase of the compiler returns a non-success return code. If you
+                  specify ’-pass-exit-codes’, the gcc program will instead return with
+                  numerically highest error produced by any phase that returned an error
+                  indication.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-nostartfiles</span>   </dt><dd 
+class="list">
+                  <!--l. 105--><p class="noindent" ><a 
+ id="dx57-108027"></a>
+                  </p><!--l. 107--><p class="noindent" >The standard system libraries are used normally, unless <span 
+class="cmtt-12">-nostdlib</span> or
+                  <span 
+class="cmtt-12">-nodefaultlibs</span> is set. With <span 
+class="cmtt-12">-nostartfiles</span> the standard system startup
+                  files are not used when linking.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-nodefaultlibs</span>  </dt><dd 
+class="list">
+                  <!--l. 109--><p class="noindent" ><a 
+ id="dx57-108028"></a> Do not use the standard system libraries when linking. Only the libraries
+                  you specify will be passed to the linker. The standard startup files are used
+                  normally, unless <span 
+class="cmtt-12">-nostartfiles</span> is used. The compiler may generate calls
+                  to memcmp, memset, and memcpy for System V (and ISO C)
+                  environments or to bcopy and bzero for BSD environments. These entries
+                  are usually resolved by entries in libc. These entry points should
+                  be supplied through some other mechanism when this option is
+                  specified.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-nostdlib</span>        </dt><dd 
+class="list">
+                  <!--l. 112--><p class="noindent" ><a 
+ id="dx57-108029"></a> Only search library directories explicitly specified on the command line.
+                  Library directories specified in linker scripts (including linker scripts specified
+                  on the command line) are ignored.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse37.html" >next</a>] [<a 
+href="main_gcc_ugse35.html" >prev</a>] [<a 
+href="main_gcc_ugse35.html#tailmain_gcc_ugse35.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse36.html" >front</a>] [<a 
+href="main_gcc_ugch16.html#main_gcc_ugse36.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse36.html"></a> </p> 
+</body></html> 

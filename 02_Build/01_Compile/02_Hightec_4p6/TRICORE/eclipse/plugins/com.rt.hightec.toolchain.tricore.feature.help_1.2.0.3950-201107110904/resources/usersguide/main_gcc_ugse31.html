@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Position Independent Data</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse32.html" >next</a>] [<a 
+href="main_gcc_ugse30.html" >prev</a>] [<a 
+href="main_gcc_ugse30.html#tailmain_gcc_ugse30.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse31.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse31.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.11</span>  <a 
+href="main_gcc_ug.html#QQ2-49-76" id="x49-7000014.11">Position Independent Data</a></h3>
+<a 
+ id="dx49-70001"></a>
+<!--l. 3--><p class="noindent" >The<span class="marginpar"><span class="fbox"><span 
+class="cmr-10">v3.4</span></span></span><a 
+ id="dx49-70002"></a> option <span 
+class="cmtt-12">-msmall-pid</span> generates position-independent data for small addressable
+data. This option is set per default and can be disabled via <span 
+class="cmtt-12">-mno-small-pid</span> option.
+The compiler accesses small addressable areas via one of the address registers <span class="lstinline"><span 
+class="ecss-1200">A0</span></span>,
+<span class="lstinline"><span 
+class="ecss-1200">A1</span></span>, <span class="lstinline"><span 
+class="ecss-1200">A8</span></span> or <span class="lstinline"><span 
+class="ecss-1200">A9</span></span>. If the compiler cannot generate position-independent data for a small
+addressable area, a warning will be issued. Because of the unit compile mechanism, the
+warning will be issued for the last line of the compiled module, if optimisation is
+enabled.
+</p>
+<div class="center" 
+>
+<!--l. 5--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox53"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Example: If a pointer is statically initialised with the address of a
+small addressable variable (<span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span></span> object) and the option <span 
+class="cmtt-12">-msmall-pid</span>
+is set, then the compiler will issue a warning. This warning can be
+disabled via the <span 
+class="cmtt-12">-mno-warn-smalldata-initializers</span> option.      </div>
+</div>
+<!--l. 7--><p class="noindent" >To support position-independent data by the compiler, a new relocation type is required. Since
+this relocation type is not part of the EABI-specification, the option <span 
+class="cmtt-12">-meabi</span> will implicitly set
+the option <span 
+class="cmtt-12">-mno-small-pid</span>.
+</p>
+<div class="center" 
+>
+<!--l. 9--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div 
+class="colorbox" id="colorbox54"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The inlining of functions is activated in different optimisation levels.
+The  functions  that  are  used  in  context  with  position-independent
+data may not be inlined, therefore the <span class="lstinline"><span 
+class="ecss-1200">__attribute__</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">((</span><span 
+class="ecss-1200">noinline</span><span 
+class="ecss-1200">))</span></span> is
+required.                                                           </div>
+</div>
+<!--l. 11--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 13--><p class="noindent" >In the following example, these flags are passed to the compiler driver.
+</p><!--l. 15--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-g3</span>               </dt><dd 
+class="list">
+                  <!--l. 16--><p class="noindent" >Generate debug info.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-O2</span>               </dt><dd 
+class="list">
+                  <!--l. 17--><p class="noindent" >Use optimisation level 2.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu=TC1796</span>    </dt><dd 
+class="list">
+                  <!--l. 18--><p class="noindent" >Select TC1796 derivative.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-msmall-pid</span>      </dt><dd 
+class="list">
+                  <!--l. 19--><p class="noindent" >Generate position-independent data.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Ttc1796.ld</span>      </dt><dd 
+class="list">
+                  <!--l. 20--><p class="noindent" >Specify user-defined linker description file.</p></dd></dl>
+<!--l. 23--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 25--><p class="noindent" >In the example the user-defined small data section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">a9</span></span> is applied for the <span class="lstinline"><span 
+class="ecsx-1200">struct</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">A9__org</span></span>
+and <span class="lstinline"><span 
+class="ecsx-1200">struct</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">A9__new</span></span>. This section is inserted into the output section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata4</span></span> of the linker
+description file.
+</p><!--l. 27--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb144"><a 
+ id="x49-70004r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .sdata4</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> AT(LOADADDR(.data)</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> SIZEOF(.data)</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> SIZEOF(.sdata2))</span><br class="fancyvrb" /><a 
+ id="x49-70006r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x49-70008r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> ALIGN(8)</span><span 
+class="pcrr7t-x-x-144"> ;</span><br class="fancyvrb" /><a 
+ id="x49-70010r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> SDA4_BASE</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> ABSOLUTE(.)</span><span 
+class="pcrr7t-x-x-144"> ;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70012r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;(.sdata.sdata4&#x22C6;)</span><br class="fancyvrb" /><a 
+ id="x49-70014r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _SMALL_DATA4_</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> ABSOLUTE(.);</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x49-70016r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> small_data_1</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> ABSOLUTE(.);</span><br class="fancyvrb" /><a 
+ id="x49-70018r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;(.sdata.a9_1&#x22C6;)</span>
+<br class="fancyvrb" /><a 
+ id="x49-70020r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> small_data_2</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> ABSOLUTE(.);</span><br class="fancyvrb" /><a 
+ id="x49-70022r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;(.sdata.a9_2&#x22C6;)</span>
+<br class="fancyvrb" /><a 
+ id="x49-70024r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;(.sdata.a9&#x22C6;)</span><br class="fancyvrb" /><a 
+ id="x49-70026r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> ALIGN(8)</span><span 
+class="pcrr7t-x-x-144"> ;</span><br class="fancyvrb" /><a 
+ id="x49-70028r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> int_dram</span></div>
+<!--l. 43--><p class="noindent" >The <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata4</span></span> section is addressed via <span class="lstinline"><span 
+class="ecss-1200">a9</span></span>. In <span class="lstinline"><span 
+class="ecss-1200">main</span></span> the address register <span class="lstinline"><span 
+class="ecss-1200">a9</span></span> is modified
+to
+</p><!--l. 45--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb145"><a 
+ id="x49-70030r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> A9</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> A9</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> (uint32)&amp;A9__new</span><span 
+class="pcrr7t-x-x-144"> -</span><span 
+class="pcrr7t-x-x-144"> (uint32)&amp;A9__org;</span></div>
+<!--l. 49--><p class="noindent" >so the data set 2 is accessed via <span class="lstinline"><span 
+class="ecss-1200">a9</span></span>. The access data will thus be position-independent
+and can be configured by switching the start address of the corresponding address
+register.
+</p><!--l. 51--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb146">
+<a 
+ id="x49-70032r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x49-70034r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> x0;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70036r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   short</span><span 
+class="pcrr7t-x-x-144"> x1;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70038r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> x2;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70040r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   int</span><span 
+class="pcrr7t-x-x-144"> x3;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70042r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><span 
+class="pcrr7t-x-x-144"> Data_t;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70044r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70046r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Address</span><span 
+class="pcrr7t-x-x-144"> registers</span>
+<br class="fancyvrb" /><a 
+ id="x49-70048r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> A0:</span><span 
+class="pcrr7t-x-x-144"> .sdata/.</span><span 
+class="pcrr7t-x-x-144"> sbss,</span><span 
+class="pcrr7t-x-x-144"> A1:</span><span 
+class="pcrr7t-x-x-144"> .sdata2/.sbss2,</span><span 
+class="pcrr7t-x-x-144"> A8:</span><span 
+class="pcrr7t-x-x-144"> .sdata3/.sbss3,</span><span 
+class="pcrr7t-x-x-144"> A9:</span><span 
+class="pcrr7t-x-x-144"> .sdata4/.sbss4</span>
+<br class="fancyvrb" /><a 
+ id="x49-70050r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70052r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> A0,</span><span 
+class="pcrr7t-x-x-144"> A1,</span><span 
+class="pcrr7t-x-x-144"> A8,</span><span 
+class="pcrr7t-x-x-144"> A9;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70054r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70056r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;  Structs</span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> testing</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> content</span>
+<br class="fancyvrb" /><a 
+ id="x49-70058r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .sdata.a9</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> put</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> sdata4</span><span 
+class="pcrr7t-x-x-144"> output</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> linker</span><span 
+class="pcrr7t-x-x-144"> description</span><span 
+class="pcrr7t-x-x-144"> file.</span>
+<br class="fancyvrb" /><a 
+ id="x49-70060r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   sdata4</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> addressed</span><span 
+class="pcrr7t-x-x-144"> via</span><span 
+class="pcrr7t-x-x-144"> register</span><span 
+class="pcrr7t-x-x-144"> a9</span>
+<br class="fancyvrb" /><a 
+ id="x49-70062r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70064r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70066r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .sdata.a9</span><span 
+class="pcrr7t-x-x-144"> aws</span>
+<br class="fancyvrb" /><a 
+ id="x49-70068r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Configuration</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> set</span><span 
+class="pcrr7t-x-x-144"> 1&#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70070r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> Data_t</span><span 
+class="pcrr7t-x-x-144"> A9__org</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x49-70072r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x0</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0,</span>
+<br class="fancyvrb" /><a 
+ id="x49-70074r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x1</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1,</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x49-70076r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x2</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 2,</span>
+<br class="fancyvrb" /><a 
+ id="x49-70078r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x3</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 3</span>
+<br class="fancyvrb" /><a 
+ id="x49-70080r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> };</span>
+<br class="fancyvrb" /><a 
+ id="x49-70082r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Configuration</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> set</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70084r27"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> Data_t</span><span 
+class="pcrr7t-x-x-144"> A9__new</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x49-70086r28"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x0</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 10,</span>
+<br class="fancyvrb" /><a 
+ id="x49-70088r29"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x1</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 11,</span>
+<br class="fancyvrb" /><a 
+ id="x49-70090r30"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x2</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 12,</span>
+<br class="fancyvrb" /><a 
+ id="x49-70092r31"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .x3</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 13</span>
+<br class="fancyvrb" /><a 
+ id="x49-70094r32"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> };</span>
+<br class="fancyvrb" /><a 
+ id="x49-70096r33"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> test;    //</span><span 
+class="pcrr7t-x-x-144"> small</span><span 
+class="pcrr7t-x-x-144"> addressable</span><span 
+class="pcrr7t-x-x-144"> variable</span>
+<br class="fancyvrb" /><a 
+ id="x49-70098r34"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span>
+<br class="fancyvrb" /><a 
+ id="x49-70100r35"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70102r36"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;test_p</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> &amp;test;  //</span><span 
+class="pcrr7t-x-x-144"> will</span><span 
+class="pcrr7t-x-x-144"> issue</span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> warning</span>
+<br class="fancyvrb" /><a 
+ id="x49-70104r37"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70106r38"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Position</span><span 
+class="pcrr7t-x-x-144"> Independent</span><span 
+class="pcrr7t-x-x-144"> Data</span><span 
+class="pcrr7t-x-x-144"> Test</span><span 
+class="pcrr7t-x-x-144"> Function</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70108r39"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> pid_test1(const</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> Data_t</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;mydata)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((noinline));</span>
+<br class="fancyvrb" /><a 
+ id="x49-70110r40"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> pid_test2(const</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> Data_t</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;mydata)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((noinline));</span>
+<br class="fancyvrb" /><a 
+ id="x49-70112r41"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70114r42"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> pid_test1(const</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> Data_t</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;mydata)</span>
+<br class="fancyvrb" /><a 
+ id="x49-70116r43"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x49-70118r44"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x0</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 0)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70120r45"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x1</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 1)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70122r46"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x2</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 2)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70124r47"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x3</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 3)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70126r48"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70128r49"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70130r50"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> pid_test2(const</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> Data_t</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;mydata)</span>
+<br class="fancyvrb" /><a 
+ id="x49-70132r51"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x49-70134r52"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x0</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 10)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70136r53"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x1</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 11)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70138r54"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x2</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 12)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70140r55"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   if</span><span 
+class="pcrr7t-x-x-144"> (mydata-&#x003E;x3</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 13)</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> abort();</span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70142r56"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x49-70144r57"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70146r58"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void)</span>
+<br class="fancyvrb" /><a 
+ id="x49-70148r59"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x49-70150r60"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Test</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> against</span><span 
+class="pcrr7t-x-x-144"> configuration</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> set</span><span 
+class="pcrr7t-x-x-144"> 1&#x22C6;/</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x49-70152r61"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   pid_test1(&amp;A9__org);</span>
+<br class="fancyvrb" /><a 
+ id="x49-70154r62"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70156r63"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Get</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> value</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> register</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70158r64"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   __asm__</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> ("mov.d</span><span 
+class="pcrr7t-x-x-144"> %[d],</span><span 
+class="pcrr7t-x-x-144"> %%a9"</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> [d]</span><span 
+class="pcrr7t-x-x-144"> "=d"</span><span 
+class="pcrr7t-x-x-144"> (A9)</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> );</span>
+<br class="fancyvrb" /><a 
+ id="x49-70160r65"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Modify</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> value</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> register;</span><span 
+class="pcrr7t-x-x-144"> set</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> configuration</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> set</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70162r66"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   A9</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> A9</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> (unsigned</span><span 
+class="pcrr7t-x-x-144"> int)&amp;A9__new</span><span 
+class="pcrr7t-x-x-144"> -</span><span 
+class="pcrr7t-x-x-144"> (unsigned</span><span 
+class="pcrr7t-x-x-144"> int)&amp;A9__org;</span>
+<br class="fancyvrb" /><a 
+ id="x49-70164r67"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   __asm__</span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> ("mov.a</span><span 
+class="pcrr7t-x-x-144"> %%a9,</span><span 
+class="pcrr7t-x-x-144"> %[d]"</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> :[d]</span><span 
+class="pcrr7t-x-x-144"> "d"</span><span 
+class="pcrr7t-x-x-144"> (A9)</span><span 
+class="pcrr7t-x-x-144"> );</span>
+<br class="fancyvrb" /><a 
+ id="x49-70166r68"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70168r69"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Check</span><span 
+class="pcrr7t-x-x-144"> whether</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> position</span><span 
+class="pcrr7t-x-x-144"> independent</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70170r70"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Test</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> against</span><span 
+class="pcrr7t-x-x-144"> configuration</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> set</span><span 
+class="pcrr7t-x-x-144"> 2&#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70172r71"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   pid_test2(&amp;A9__org);</span>
+<br class="fancyvrb" /><a 
+ id="x49-70174r72"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x49-70176r73"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> All</span><span 
+class="pcrr7t-x-x-144"> checks</span><span 
+class="pcrr7t-x-x-144"> passed</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x49-70178r74"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   exit</span><span 
+class="pcrr7t-x-x-144"> (0);</span>
+<br class="fancyvrb" /><a 
+ id="x49-70180r75"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   return(0);</span>
+<br class="fancyvrb" /><a 
+ id="x49-70182r76"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+</div>
+<!--l. 132--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<!--l. 137--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse32.html" >next</a>] [<a 
+href="main_gcc_ugse30.html" >prev</a>] [<a 
+href="main_gcc_ugse30.html#tailmain_gcc_ugse30.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse31.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse31.html" >up</a>] </p></div>
+<!--l. 137--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse31.html"></a> </p> 
+</body></html> 

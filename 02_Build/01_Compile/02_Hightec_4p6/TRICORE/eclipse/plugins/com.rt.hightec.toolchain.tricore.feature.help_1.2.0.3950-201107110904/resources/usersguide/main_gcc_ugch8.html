@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>8 Inline Assembly</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse15.html" >next</a>] [<a 
+href="main_gcc_ugch7.html" >prev</a>] [<a 
+href="main_gcc_ugch7.html#tailmain_gcc_ugch7.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch8.html">tail</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch8.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">8</span>  <a 
+href="main_gcc_ug.html#QQ2-26-38" id="x26-340008">Inline Assembly</a></h2>
+<a 
+ id="dx26-34001"></a>
+<a 
+ id="dx26-34002"></a>
+<a 
+ id="dx26-34003"></a>
+<a 
+ id="dx26-34004"></a>
+<!--l. 4--><p class="noindent" >By its very nature, there is nothing portable about assembly language. In most cases it does not
+make sense writing an entire program or module in assembly. The things that need to be done
+at the machine level can usually best be done by including a passage of assembly language
+inside the code of a higher level language. To this end, tricore-gcc provides the capability of
+inserting assembly language commands directly into a C function. In an assembler
+instruction using keyword <span class="lstinline"><span 
+class="ecss-1200">asm</span></span>, you can specify the operands of the instruction using C
+expressions. This means you need not guess which registers or memory locations will
+contain the data you want to use. You must specify an assembler instruction template
+much like what appears in an assembler language, plus a constraint string for each
+operand.
+</p>
+<div class="fancyvrb" id="fancyvrb64"><a 
+ id="x26-34006r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm("mov</span><span 
+class="pcrr7t-x-x-144"> %1,</span><span 
+class="pcrr7t-x-x-144"> %0":</span><span 
+class="pcrr7t-x-x-144"> "=d"</span><span 
+class="pcrr7t-x-x-144"> (result):</span><span 
+class="pcrr7t-x-x-144"> "m"</span><span 
+class="pcrr7t-x-x-144"> (source)</span><span 
+class="pcrr7t-x-x-144"> );</span></div>
+<!--l. 18--><p class="noindent" >The following is the syntax of the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span> construct:
+</p>
+<div class="fancyvrb" id="fancyvrb65"><a 
+ id="x26-34008r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm(&#x003C;assembly</span><span 
+class="pcrr7t-x-x-144"> language</span><span 
+class="pcrr7t-x-x-144"> template&#x003E;</span><br class="fancyvrb" /><a 
+ id="x26-34010r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :&#x003C;output</span><span 
+class="pcrr7t-x-x-144"> operands&#x003E;</span>
+<br class="fancyvrb" /><a 
+ id="x26-34012r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :&#x003C;input</span><span 
+class="pcrr7t-x-x-144"> operands&#x003E;</span><br class="fancyvrb" /><a 
+ id="x26-34014r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :&#x003C;clobber</span><span 
+class="pcrr7t-x-x-144"> list&#x003E;);</span></div>
+<!--l. 27--><p class="noindent" >If you want to prevent the compiler from trying to optimize your assembly language code, you
+can use the <span class="lstinline"><span 
+class="ecsx-1200">volatile</span></span> keyword. Also, if you need to be POSIX compliant, you can use the
+keywords <span class="lstinline"><span 
+class="ecss-1200">__asm__</span></span> and <span class="lstinline"><span 
+class="ecss-1200">__volatile__</span></span> instead of <span class="lstinline"><span 
+class="ecss-1200">asm</span></span> and <span class="lstinline"><span 
+class="ecsx-1200">volatile</span></span>.
+</p>
+<div class="center" 
+>
+<!--l. 29--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox24"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Please note that the assembler optimise the assembler code, e.g. the
+<span class="lstinline"><span 
+class="ecss-1200">add</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">d0</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200">d0</span><span 
+class="ecss-1200">,1</span></span> will  be  optimised  in  a  16bit  instruction  <span class="lstinline"><span 
+class="ecss-1200">add</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">d0</span><span 
+class="ecss-1200">,1</span></span>.  So
+the dissasembly of your object file may be different from your inline
+assembly code. To disable such optimisations you can specify different
+assembler options or directives.                                     </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 31--><p class="noindent" >You may not use the <span class="lstinline"><span 
+class="ecsx-1200">volatile</span></span> or <span class="lstinline"><span 
+class="ecss-1200">__volatile__</span></span> if you are using the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span>-statement outside a
+function, for example to define a user-defined function prologue.
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">source</span></span>            </dt><dd 
+class="list">
+                  <!--l. 34--><p class="noindent" >Is the C expression for the input operand.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">result</span></span>            </dt><dd 
+class="list">
+                  <!--l. 35--><p class="noindent" >Is the C expression for the output operand.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">=</span></span>                 </dt><dd 
+class="list">
+                  <!--l. 36--><p class="noindent" >Indicates, that the operand is an output.
+<span class="verb"><span 
+class="pcrr8t-">m and d/a</span></span>        Are constraints and indicate which types of addressing mode gcc has to use
+                  in the operand.
+                  </p></dd></dl>
+<!--l. 45--><p class="noindent" >Each input and output operand is described by a constraint string followed by a C expression in
+parentheses. Commas separate the operands within each group.
+</p><!--l. 47--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Options</span>
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-fno-asm</span>         </dt><dd 
+class="list">
+                  <!--l. 50--><p class="noindent" >The keyword <span class="lstinline"><span 
+class="ecss-1200">asm</span></span> is ignored by the compiler. GCC does not invoke the
+                  assembler anymore.</p></dd></dl>
+<div class="sectionTOCS">
+ <span class="sectionToc" >8.1  <a 
+href="main_gcc_ugse15.html#x27-350008.1">The Assembly Language Template</a></span>
+<br /> <span class="sectionToc" >8.2  <a 
+href="main_gcc_ugse16.html#x28-360008.2">Input and Output Operands</a></span>
+<br />  <span class="subsectionToc" >8.2.1  <a 
+href="main_gcc_ugse16.html#x28-370008.2.1" id="QQ2-28-41">Constraint characters</a></span>
+<br />  <span class="subsectionToc" >8.2.2  <a 
+href="main_gcc_ugse16.html#x28-380008.2.2" id="QQ2-28-42">Constraint modifiers</a></span>
+<br />  <span class="subsectionToc" >8.2.3  <a 
+href="main_gcc_ugse16.html#x28-390008.2.3" id="QQ2-28-43">Register modifiers</a></span>
+<br /> <span class="sectionToc" >8.3  <a 
+href="main_gcc_ugse17.html#x29-400008.3">Clobber List</a></span>
+</div>
+
+
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse15.html" >next</a>] [<a 
+href="main_gcc_ugch7.html" >prev</a>] [<a 
+href="main_gcc_ugch7.html#tailmain_gcc_ugch7.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch8.html" >front</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch8.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch8.html"></a> </p> 
+</body></html> 

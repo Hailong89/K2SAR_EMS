@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-ar</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 72--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse50.html" >next</a>] [<a 
+href="main_gcc_ugse48.html" >prev</a>] [<a 
+href="main_gcc_ugse48.html#tailmain_gcc_ugse48.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse49.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse49.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.2</span>  <a 
+href="main_gcc_ug.html#QQ2-78-212" id="x78-20300021.2">tricore-ar</a></h3>
+<a 
+ id="dx78-203001"></a>
+<a 
+ id="dx78-203002"></a>
+<a 
+ id="dx78-203003"></a>
+<!--l. 74--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.2.1</span>  <a 
+href="#x78-20400021.2.1" id="x78-20400021.2.1">Description</a></h4>
+<!--l. 76--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">[-]&#x003C;option&#x003E;[&#x003C;modifier&#x003E;] &#x003C;archive&#x003E; [&#x003C;member&#x003E; ...]</span>
+</p><!--l. 78--><p class="noindent" >The <span 
+class="cmtt-12">tricore-ar</span> program creates, modifies, and extracts from archives. An <span 
+class="cmsl-12">archive </span>is a single
+file holding a collection of other files in a structure that makes it possible to retrieve the original
+individual files (called ’members’ of the archive).
+</p><!--l. 80--><p class="noindent" >The original files contents, mode (permissions), timestamp, owner, and group are preserved in
+the archive, and can be restored on extraction.
+<a 
+ id="dx78-204001"></a>
+</p><!--l. 83--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> can maintain archives whose members have names of any length; however,
+depending on how <span 
+class="cmtt-12">tricore-ar</span> is configured on your system, a limit on member-name length
+may be imposed for compatibility with archive formats maintained with other tools. If it exists,
+the limit is often 15 characters (typical of formats related to a.out) or 16 characters (typical of
+formats related to coff).
+<a 
+ id="dx78-204002"></a>
+</p><!--l. 86--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> is considered a binary utility because archives created with <span 
+class="cmtt-12">tricore-ar</span> are most
+often used as <span 
+class="cmsl-12">libraries </span>holding commonly needed object files.
+<a 
+ id="dx78-204003"></a>
+</p><!--l. 89--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> creates an index to the symbols defined in relocatable object modules in the
+archive when you specify the modifier ’s’. Once created, this index is updated in the
+archive whenever <span 
+class="cmtt-12">tricore-ar</span> makes a change to its contents (save for the ’q’ update
+operation). An archive with such an index speeds up linking to the library, and allows
+routines in the library to call each other without regard to their placement in the
+archive.
+                                                                                       
+                                                                                       
+</p><!--l. 91--><p class="noindent" >You may use <span 
+class="cmtt-12">tricore-nm</span> <span 
+class="cmtt-12">-s </span>or <span 
+class="cmtt-12">tricore-nm</span> <span 
+class="cmtt-12">--print-armap </span>to list this index table. If an
+archive lacks the table <span 
+class="cmtt-12">tricore-ranlib</span> can be used to add just the table.
+</p><!--l. 93--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.2.2</span>  <a 
+href="#x78-20500021.2.2" id="x78-20500021.2.2">Invocation</a></h4>
+<!--l. 95--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">[-]&#x003C;option&#x003E;[&#x003C;modifier&#x003E;] &#x003C;archive&#x003E; [&#x003C;member&#x003E; ...]</span>
+</p><!--l. 97--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> is controlled by command line options. These command line options are always one
+letter which specifies the operation that is to be done and one ore more optional
+modifiers to modify the default behavior of the operation. <span 
+class="cmtt-12">tricore-ar</span> expects one
+option which defines what to do (optionally with a modifier) and one archive that is
+modified.
+</p><!--l. 99--><p class="noindent" >Most of the UNIX-tools expect a dash preceding the options. This dash is optional.
+</p><!--l. 101--><p class="noindent" >The available options for <span 
+class="cmtt-12">tricore-ar</span> are.
+</p><!--l. 103--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">d</span>                 </dt><dd 
+class="list">
+                  <!--l. 104--><p class="noindent" ><a 
+ id="dx78-205001"></a> Delete modules from the archive. Specify the names of modules to be
+                  deleted as <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E;</span>. The archive is untouched if you specify no files
+                  to delete. If you specify the ’v’ modifier, <span 
+class="cmtt-12">tricore-ar</span> lists each module
+                  as it is deleted.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">m</span>                 </dt><dd 
+class="list">
+                  <!--l. 106--><p class="noindent" ><a 
+ id="dx78-205002"></a> Use  this  operation  to  move  members  in  an  archive.  The  ordering
+                  of  members  in  an  archive  can  make  a  difference  in  how  programs
+                  are linked using the library, if a symbol is defined in more than one
+                  member. If no modifiers are used with <span 
+class="cmtt-12">m</span>, any members you name in the
+                  <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E; </span>arguments are moved to the end of the archive. You may
+                  use the modifiers <span 
+class="cmtt-12">a</span>, <span 
+class="cmtt-12">b</span> or <span 
+class="cmtt-12">i</span> to move them to a specified place instead.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">p</span>                 </dt><dd 
+class="list">
+                  <!--l. 109--><p class="noindent" ><a 
+ id="dx78-205003"></a> Print the specified members of the archive, to the standard output file.
+                  If the modifier <span 
+class="cmtt-12">v</span> is specified, show the member name before copying its
+                  contents to standard output. If you specify no <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E; </span>arguments,
+                  all the files in the archive are printed.
+</p>
+                                                                                       
+                                                                                       
+                  <div class="center" 
+>
+<!--l. 111--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox117"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This  option  prints  the  binary  contents  of  the  archive  member  to
+stdout! This will cause weird characters, beeps and line feeds.       </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">q</span>                 </dt><dd 
+class="list">
+                  <!--l. 113--><p class="noindent" ><a 
+ id="dx78-205004"></a> Quick add the files <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E; </span>to the end of <span 
+class="cmmi-12">&#x003C;</span>archive<span 
+class="cmmi-12">&#x003E; </span>without checking
+                  for replacement.
+                  </p><!--l. 115--><p class="noindent" >The modifiers <span 
+class="cmtt-12">a</span>, <span 
+class="cmtt-12">b</span> and <span 
+class="cmtt-12">i</span> do not affect this operation; new members are
+                  always placed at the end of the archive.
+                  </p><!--l. 117--><p class="noindent" >The modifier <span 
+class="cmtt-12">v</span> makes <span 
+class="cmtt-12">tricore-ar</span> list each file as it is appended.
+                  </p><!--l. 119--><p class="noindent" >Since the point of this operation is speed, the archive’s symbol table index is
+                  not updated, even if it already existed. You can use <span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">s</span>
+                  or <span 
+class="cmtt-12">tricore-ranlib</span> explicitly to update the symbol table index.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 120--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox118"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />However, too many different systems assume quick append rebuilds
+the index, so GNU ar implements <span 
+class="cmtt-12">q</span> as a synonym for <span 
+class="cmtt-12">r</span>.            </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">r</span>                 </dt><dd 
+class="list">
+                  <!--l. 122--><p class="noindent" ><a 
+ id="dx78-205005"></a> Insert the files <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E; </span>†into <span 
+class="cmmi-12">&#x003C;</span>archive<span 
+class="cmmi-12">&#x003E; </span>with replacement. This
+                  operation differs from ’q’ in that any previously existing members are deleted
+                  if their names match those being added.
+                  </p><!--l. 125--><p class="noindent" >If one of the files named in <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E; </span>†does not exist, <span 
+class="cmtt-12">tricore-ar</span> displays
+                  an error message, and leaves undisturbed any existing members of the
+                  archive matching that name.
+                  </p><!--l. 127--><p class="noindent" >By default, new members are added at the end of the file. But you may use
+                  one of the modifiers <span 
+class="cmtt-12">a</span>, <span 
+class="cmtt-12">b</span> or <span 
+class="cmtt-12">i</span> to request placement relative to some existing
+                  member.
+                                                                                       
+                                                                                       
+                  </p><!--l. 129--><p class="noindent" >The modifier <span 
+class="cmtt-12">v</span> used with this operation elicits a line of output for each file
+                  inserted, along with one of the letters <span 
+class="cmtt-12">a</span> or <span 
+class="cmtt-12">r</span> to indicate whether the file was
+                  appended (no old member deleted) or replaced.
+                  </p><!--l. 131--><p class="noindent" >To only update the files in the archive, use the modifier <span 
+class="cmtt-12">u</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">t</span>                 </dt><dd 
+class="list">
+                  <!--l. 133--><p class="noindent" ><a 
+ id="dx78-205006"></a> Display a table listing the contents of <span 
+class="cmmi-12">&#x003C;</span>archive<span 
+class="cmmi-12">&#x003E;</span>, or those of the files listed
+                  in <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E; </span>†that are present in the archive. Normally only the member
+                  name is shown. If you also want to see the modes (permissions), timestamp,
+                  owner, group, and size, you can request that by also specifying the modifier
+                  <span 
+class="cmtt-12">v</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">x[o]</span>              </dt><dd 
+class="list">
+                  <!--l. 135--><p class="noindent" ><a 
+ id="dx78-205007"></a> Extract members (named <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E;</span>) from the archive. You can use the
+                  modifier ’v’ with this operation, to request that <span 
+class="cmtt-12">tricore-ar</span> list each name
+                  as it extracts it.
+                  </p><!--l. 137--><p class="noindent" >If you do not specify a <span 
+class="cmmi-12">&#x003C;</span>member<span 
+class="cmmi-12">&#x003E;</span>, all files in the archive are
+                  extracted.</p></dd></dl>
+<!--l. 140--><p class="noindent" >A number of modifiers may immediately follow the option to specify variations on an
+operation’s behavior:
+</p><!--l. 142--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">a &#x003C;relpos&#x003E;</span>       </dt><dd 
+class="list">
+                  <!--l. 143--><p class="noindent" ><a 
+ id="dx78-205008"></a> Add new files after an existing member of the archive. If you use the
+                  modifier <span 
+class="cmtt-12">a</span>, the name of an existing archive member must be present
+                  as the <span 
+class="cmmi-12">&#x003C;</span>relpos<span 
+class="cmmi-12">&#x003E; </span>argument, before the <span 
+class="cmmi-12">&#x003C;</span>archive<span 
+class="cmmi-12">&#x003E; </span>specification.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">b &#x003C;relpos&#x003E;</span>       </dt><dd 
+class="list">
+                  <!--l. 145--><p class="noindent" >Add new files before an existing member of the archive. If you use the
+                  modifier <span 
+class="cmtt-12">b</span>, the name of an existing archive member must be present
+                  as the <span 
+class="cmmi-12">&#x003C;</span>relpos<span 
+class="cmmi-12">&#x003E; </span>argument, before the <span 
+class="cmmi-12">&#x003C;</span>archive<span 
+class="cmmi-12">&#x003E; </span>specification. This
+                  modifier is equivalent to <span 
+class="cmtt-12">i</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">c</span>                 </dt><dd 
+class="list">
+                  <!--l. 147--><p class="noindent" ><a 
+ id="dx78-205009"></a> Create the archive. The specified <span 
+class="cmmi-12">&#x003C;</span>archive<span 
+class="cmmi-12">&#x003E; </span>is always created if it
+                  did not exist, when you request an update. But a warning is issued
+                  unless you specify in advance that you expect to create it, by using
+                  this modifier.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">i</span>                 </dt><dd 
+class="list">
+                  <!--l. 153--><p class="noindent" >Same as ’b’.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">N &#x003C;count&#x003E;</span>        </dt><dd 
+class="list">
+                  <!--l. 155--><p class="noindent" >Uses the <span 
+class="cmmi-12">&#x003C;</span>count<span 
+class="cmmi-12">&#x003E; </span>parameter. This is used if there are multiple entries
+                  in the archive with the same name. Extract or delete instance <span 
+class="cmmi-12">&#x003C;</span>count<span 
+class="cmmi-12">&#x003E;</span>
+                  of the given name from the archive.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">o</span>                 </dt><dd 
+class="list">
+                  <!--l. 157--><p class="noindent" ><a 
+ id="dx78-205010"></a> Preserve the original dates of members when extracting them. If you do
+                  not specify this modifier, files extracted from the archive are stamped
+                  with the time of extraction.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">P</span>                 </dt><dd 
+class="list">
+                  <!--l. 159--><p class="noindent" >Use  the  full  path  name  when  matching  names  in  an  archive.
+                  <span 
+class="cmtt-12">tricore-ar</span> can not create an archive with a full path name (such
+                  archives are not POSIX compliant), but other archive creators can.
+                  This  option  will  cause  <span 
+class="cmtt-12">tricore-ar</span> to  match  file  names  using  a
+                  complete path name, which can be convenient when extracting a single
+                  file from an archive created by another tool.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">s</span>                 </dt><dd 
+class="list">
+                  <!--l. 161--><p class="noindent" ><a 
+ id="dx78-205011"></a> Write an object-file index into the archive, or update an existing one,
+                  even if no other change is made to the archive. You may use this
+                  modifier flag either with any operation, or alone. Running <span 
+class="cmtt-12">tricore-ar</span>
+                  <span 
+class="cmtt-12">s </span>on an archive is equivalent to running <span 
+class="cmtt-12">tricore-ranlib</span> on it.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">S</span>                 </dt><dd 
+class="list">
+                  <!--l. 163--><p class="noindent" ><a 
+ id="dx78-205012"></a> Do not generate an archive symbol table. This can speed up building
+                  a large library in several steps. The resulting archive can not be used
+                  with  the  linker.  In  order  to  build  a  symbol  table,  you  must  omit
+                  the <span 
+class="cmtt-12">S</span> modifier on the last execution of <span 
+class="cmtt-12">tricore-ar</span> or you must run
+                  <span 
+class="cmtt-12">tricore-ranlib</span> on the archive.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">u</span>                 </dt><dd 
+class="list">
+                  <!--l. 165--><p class="noindent" ><a 
+ id="dx78-205013"></a> Normally, <span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">r </span>inserts all files listed into the archive. If
+                  you would like to insert only those of the files you list that are newer
+                  than existing members of the same names, use this modifier. The ’u’
+                                                                                       
+                                                                                       
+                  modifier is allowed only for the operation <span 
+class="cmtt-12">r</span> (replace). In particular, the
+                  combination <span 
+class="cmtt-12">qu</span> is not allowed, since checking the timestamps would
+                  lose any speed advantage from the operation <span 
+class="cmtt-12">q</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">v</span>                 </dt><dd 
+class="list">
+                  <!--l. 167--><p class="noindent" >This  modifier  requests  the  verbose  version  of  an  operation.  Many
+                  operations display additional information, such as filenames processed,
+                  when the modifier <span 
+class="cmtt-12">v</span> is appended.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">V</span>                 </dt><dd 
+class="list">
+                  <!--l. 169--><p class="noindent" >This modifier shows the version number of <span 
+class="cmtt-12">tricore-ar</span>.
+</p>
+                  </dd></dl>
+<!--l. 173--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.2.3</span>  <a 
+href="#x78-20600021.2.3" id="x78-20600021.2.3">Examples</a></h4>
+<!--l. 175--><p class="noindent" >The following examples deal with the object files <span 
+class="cmtt-12">uart.o</span>, <span 
+class="cmtt-12">rs232.o </span>and <span 
+class="cmtt-12">tty.o</span>. These object files
+shall be placed in a library called <span 
+class="cmtt-12">libserial.a</span>.
+</p><!--l. 177--><p class="noindent" >First all objects are added to the library. To see what <span 
+class="cmtt-12">tricore-ar</span> is doing, the modifier <span 
+class="cmtt-12">v</span> is
+used to activate the verbose mode.
+</p><!--l. 179--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">rv libserial.a *.o</span>
+</p><!--l. 181--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb296"><a 
+ id="x78-206002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> a</span><span 
+class="pcrr7t-"> -</span><span 
+class="pcrr7t-"> rs232.o</span><br class="fancyvrb" /><a 
+ id="x78-206004r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> a</span><span 
+class="pcrr7t-"> -</span><span 
+class="pcrr7t-"> tty.o</span><br class="fancyvrb" /><a 
+ id="x78-206006r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> a</span><span 
+class="pcrr7t-"> -</span><span 
+class="pcrr7t-"> uart.o</span></div>
+<!--l. 187--><p class="noindent" >The content of the archive is displayed. If the modifier <span 
+class="cmtt-12">v</span> was not set, only the names of the
+objects would have been displayed.
+</p><!--l. 189--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">tv libserial.a</span>
+</p><!--l. 191--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb297"><a 
+ id="x78-206008r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> rw-rw-rw-</span><span 
+class="pcrr7t-"> 0/0</span><span 
+class="pcrr7t-"> 7208</span><span 
+class="pcrr7t-"> Mar</span><span 
+class="pcrr7t-"> 10</span><span 
+class="pcrr7t-"> 12:19</span><span 
+class="pcrr7t-"> 2004</span><span 
+class="pcrr7t-"> rs232.o</span><br class="fancyvrb" /><a 
+ id="x78-206010r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> rw-rw-rw-</span><span 
+class="pcrr7t-"> 0/0</span><span 
+class="pcrr7t-"> 4288</span><span 
+class="pcrr7t-"> Mar</span><span 
+class="pcrr7t-"> 10</span><span 
+class="pcrr7t-"> 12:19</span><span 
+class="pcrr7t-"> 2004</span><span 
+class="pcrr7t-"> tty.o</span>
+<br class="fancyvrb" /><a 
+ id="x78-206012r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> rw-rw-rw-</span><span 
+class="pcrr7t-"> 0/0</span><span 
+class="pcrr7t-"> 2095</span><span 
+class="pcrr7t-"> Mar</span><span 
+class="pcrr7t-"> 10</span><span 
+class="pcrr7t-"> 12:19</span><span 
+class="pcrr7t-"> 2004</span><span 
+class="pcrr7t-"> uart.o</span></div>
+<!--l. 197--><p class="noindent" >Now the file <span 
+class="cmtt-12">rs232.o </span>should be moved from the beginning of the archive to the location after
+the file <span 
+class="cmtt-12">tty.o</span>:
+                                                                                       
+                                                                                       
+</p><!--l. 199--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">mav tty.o libserial.a rs232.o</span>
+</p><!--l. 201--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb298"><a 
+ id="x78-206014r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> m</span><span 
+class="pcrr7t-"> -</span><span 
+class="pcrr7t-"> rs232.o</span></div>
+<!--l. 205--><p class="noindent" >If one of the object files has been changed, it must be updated in the archive. To update all files
+in the archive the modifier <span 
+class="cmtt-12">u</span> is used. In this example only the object <span 
+class="cmtt-12">tty.o </span>has changed and is
+replaced in the archive.
+</p><!--l. 207--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">ruv libserial.a *.o</span>
+</p><!--l. 209--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb299"><a 
+ id="x78-206016r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> r</span><span 
+class="pcrr7t-"> -</span><span 
+class="pcrr7t-"> tty.o</span></div>
+<!--l. 213--><p class="noindent" >To remove objects from an archive use the option <span 
+class="cmtt-12">d</span>:
+</p><!--l. 215--><p class="noindent" ><span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">dv libserial.a tty.o</span>
+</p><!--l. 217--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb300"><a 
+ id="x78-206018r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> -</span><span 
+class="pcrr7t-"> tty.o</span></div>
+                                                                                       
+                                                                                       
+<!--l. 222--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse50.html" >next</a>] [<a 
+href="main_gcc_ugse48.html" >prev</a>] [<a 
+href="main_gcc_ugse48.html#tailmain_gcc_ugse48.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse49.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse49.html" >up</a>] </p></div>
+<!--l. 222--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse49.html"></a> </p> 
+</body></html> 

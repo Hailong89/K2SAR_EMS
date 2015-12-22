@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Command Line Options</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 11--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse45.html" >next</a>] [<a 
+href="main_gcc_ugch20.html" >prev</a>] [<a 
+href="main_gcc_ugch20.html#tailmain_gcc_ugch20.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse44.html">tail</a>] [<a 
+href="main_gcc_ugch20.html#main_gcc_ugse44.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">20.1</span>  <a 
+href="main_gcc_ug.html#QQ2-69-140" id="x69-13300020.1">Command Line Options</a></h3>
+<a 
+ id="dx69-133001"></a>
+<a 
+ id="dx69-133002"></a>
+<!--l. 13--><p class="noindent" >The linker supports a lot of command-line options, but in practice few of them are used in any
+particular context.
+</p><!--l. 15--><p class="noindent" >Instance, a frequent use of ld is to link Unix object files on an Unix system. On such a system,
+to link a file <span 
+class="cmtt-12">hello.o</span>:
+</p><!--l. 17--><p class="noindent" ><span 
+class="cmtt-12">tricore-ld</span> <span 
+class="cmtt-12">-o &#x003C;output&#x003E; /lib/crt0.o hello.o -lc</span>
+</p><!--l. 19--><p class="noindent" >This tells tricore-ld to produce a file called <span 
+class="cmmi-12">&#x003C;</span>output<span 
+class="cmmi-12">&#x003E; </span>as the result of linking the file
+<span 
+class="cmtt-12">/lib/crt0.o </span>with <span 
+class="cmtt-12">hello.o </span>and the library <span 
+class="cmtt-12">libc.a</span>, which will come from the standard search
+directories. (See the discussion of the <span 
+class="cmtt-12">-l</span> option below.)
+</p><!--l. 21--><p class="noindent" >Some of the command-line options to tricore-ld may be specified at any point in the command
+line. However, options which refer to files, such as <span 
+class="cmtt-12">-l</span> or <span 
+class="cmtt-12">-T</span>, cause the file to be read at the point
+                                                                                       
+                                                                                       
+at which the option appears in the command line, relative to the object files and other file
+options. Repeating non-file options with a different argument will either have no further effect,
+or override prior occurrences (those further to the left on the command line) of that option.
+Options which may be meaningfully specified more than once are noted in the descriptions
+below.
+<a 
+ id="dx69-133003"></a>
+</p><!--l. 25--><p class="noindent" >Non-option arguments are object files or archives which are to be linked together. They may
+follow, precede, or be mixed in with command-line options, except that an object file argument
+may not be placed between an option and its argument.
+</p><!--l. 27--><p class="noindent" >Usually the linker is invoked with at least one object file, but you can specify other forms of
+binary input files using <span 
+class="cmtt-12">-l</span>, <span 
+class="cmtt-12">-R</span>, and the script command language. If <span 
+class="cmti-12">no </span>binary input files at all
+are specified, the linker does not produce any output, and issues the message ’No input
+files’.
+</p><!--l. 29--><p class="noindent" >If the linker can not recognize the format of an object file, it will assume that it is a linker
+script. A script specified in this way augments the main linker script used for the
+link (either the default linker script or the one specified by using <span 
+class="cmtt-12">-T</span>). This feature
+permits the linker to link against a file which appears to be an object or an archive, but
+actually merely defines some symbol values, or uses <span 
+class="cmtt-12">INPUT </span>or <span 
+class="cmtt-12">GROUP </span>to load other
+objects.
+</p>
+<div class="center" 
+>
+<!--l. 31--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox87"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Specifying a script in this way merely augments the main linker script;
+use the <span 
+class="cmtt-12">-T</span> option to replace the default linker script entirely.        </div>
+</div>
+<!--l. 33--><p class="noindent" >For options whose names are a single letter, option arguments must either follow the option
+letter without intervening whitespace, or be given as separate arguments immediately following
+the option that requires them.
+</p><!--l. 35--><p class="noindent" >For options whose names are multiple letters, either one dash or two can precede the option
+name; for example, <span 
+class="cmtt-12">-trace-symbol</span> and <span 
+class="cmtt-12">--trace-symbol</span> are equivalent.
+</p>
+<div class="center" 
+>
+<!--l. 37--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div 
+class="colorbox" id="colorbox88"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />There is one exception to this rule. Multiple letter options that start
+with a lower case ’o’ can only be preceded by two dashes. This is to
+reduce confusion with the <span 
+class="cmtt-12">-o</span> option. So for example <span 
+class="cmtt-12">-omagic</span> sets the
+output file name to <span 
+class="cmtt-12">magic </span>whereas <span 
+class="cmtt-12">--omagic</span> sets the <span 
+class="cmtt-12">NMAGIC </span>flag on
+the output.                                                        </div>
+</div>
+<!--l. 39--><p class="noindent" >Arguments to multiple-letter options must either be separated from the option name by an
+equals sign, or be given as separate arguments immediately following the option that requires
+them. For example, <span 
+class="cmtt-12">--trace-symbol foo</span> and <span 
+class="cmtt-12">--trace-symbol=foo</span> are equivalent. Unique
+abbreviations of the names of multiple-letter options are accepted.
+</p><!--l. 41--><p class="noindent" >If the linker is being invoked indirectly, via a compiler driver (e.g. <span 
+class="cmtt-12">tricore-gcc</span>) then all the
+linker command line options should be prefixed by <span 
+class="cmtt-12">-Wl,</span> (or whatever is appropriate for the
+particular compiler driver) like this:
+</p><!--l. 43--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-Wl,--startgroup foo.o bar.o -Wl,--endgroup</span>
+</p><!--l. 45--><p class="noindent" >This is important, because otherwise the compiler driver program may silently drop the linker
+options, resulting in a bad link.
+</p><!--l. 47--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-(, --start-group &#x003C;archives&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 48--><p class="noindent" ><a 
+ id="dx69-133004"></a><a 
+ id="dx69-133005"></a> The <span 
+class="cmmi-12">&#x003C;</span>archives<span 
+class="cmmi-12">&#x003E; </span>should be a list of archive files. They may be either
+                  explicit file names, or <span 
+class="cmtt-12">-l</span> options.
+                  </p><!--l. 50--><p class="noindent" >The specified archives are searched repeatedly until no new undefined
+                  references are created. Normally, an archive is searched only once in
+                  the order that it is specified on the command line. If a symbol in that
+                  archive is needed to resolve an undefined symbol referred to by an
+                  object in an archive that appears later on the command line, the linker
+                  would not be able to resolve that reference. By grouping the archives,
+                  they all be searched repeatedly until all possible references are resolved.
+                  </p><!--l. 52--><p class="noindent" >Using this option has a significant performance cost. It is best to use
+                  it only when there are unavoidable circular references between two or
+                  more archives.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-), --end-group</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 53--><p class="noindent" >End a group.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-A &#x003C;architecture&#x003E;, --architecture &#x003C;architecture&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 54--><p class="noindent" >Set architecture
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-a KEYWORD</span>       </dt><dd 
+class="list">
+                  <!--l. 55--><p class="noindent" >Shared library control for HP/UX compatibility
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--allow-multiple-definition</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 56--><p class="noindent" ><a 
+ id="dx69-133006"></a> Normally when a symbol is defined multiple times, the linker will
+                  report a fatal error. This option allows multiple definitions and the
+                  first definition will be used.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--allow-shlib-undefined</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 57--><p class="noindent" ><a 
+ id="dx69-133007"></a> Allow undefined symbols in shared objects even if <span 
+class="cmtt-12">--no-undefined</span> is
+                  set. The net result will be that undefined symbols in regular objects
+                  will  still  trigger  an  error,  but  undefined  symbols  in  shared  objects
+                  will be ignored. The implementation of <span 
+class="cmtt-12">--no-undefined</span> makes the
+                  assumption that the runtime linker will choke on undefined symbols.
+                  However there is at least one system (BeOS) where undefined symbols
+                  in shared libraries is normal since the kernel patches them at load
+                  time  to  select  which  function  is  most  appropriate  for  the  current
+                  architecture. This means dynamically select an appropriate memset
+                  function.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-assert &#x003C;keyword&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 58--><p class="noindent" ><a 
+ id="dx69-133008"></a> This option is ignored for SunOS compatibility.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-b &#x003C;target&#x003E;, --format &#x003C;target&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 59--><p class="noindent" >Specify target for following input files
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Bdynamic, -dy, -call</span><span 
+class="cmtt-12">_shared</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 60--><p class="noindent" ><a 
+ id="dx69-133009"></a><a 
+ id="dx69-133010"></a><a 
+ id="dx69-133011"></a> Link against dynamic libraries. This is only meaningful on platforms
+                  for which shared libraries are supported. This option is normally the
+                  default on such platforms. The different variants of this option are for
+                  compatibility with various systems. You may use this option multiple
+                  times on the command line: it affects library searching for <span 
+class="cmtt-12">-l</span> options
+                  which follow it.
+                  </p></dd><dt class="list">
+                                                                                       
+                                                                                       
+<span 
+class="cmtt-12">-Bstatic, -dn, -non</span><span 
+class="cmtt-12">_shared, -static</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 77--><p class="noindent" ><a 
+ id="dx69-133012"></a> <a 
+ id="dx69-133013"></a><a 
+ id="dx69-133014"></a> Do  not  link  against  shared  libraries.  This  is  only  meaningful  on
+                  platforms  for  which  shared  libraries  are  supported.  The  different
+                  variants of this option are for compatibility with various systems. You
+                  may use this option multiple times on the command line: it affects
+                  library searching for <span 
+class="cmtt-12">-l</span> options which follow it.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Bsymbolic</span>       </dt><dd 
+class="list">
+                  <!--l. 78--><p class="noindent" ><a 
+ id="dx69-133015"></a> When creating a shared library, bind references to global symbols to
+                  the definition within the shared library, if any. Normally, it is possible
+                  for a program linked against a shared library to override the definition
+                  within  the  shared  library.  This  option  is  only  meaningful  on  ELF
+                  platforms which support shared libraries.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-c</span>                </dt><dd 
+class="list">
+                  <!--l. 79--><p class="noindent" >The <span 
+class="cmtt-12">-c</span> is a synonym of the <span 
+class="cmtt-12">-T</span> option.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--check-sections</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 80--><p class="noindent" ><a 
+ id="dx69-133016"></a><a 
+ id="dx69-133017"></a> Asks the linker <span 
+class="cmti-12">not </span>to check section addresses after they have been assigned
+                  to see if there any overlaps. Normally the linker will perform this check, and
+                  if it finds any overlaps it will produce suitable error messages. The linker
+                  does know about, and does make allowances for sections in overlays. The
+                  default behavior can be restored by using the command line switch
+                  <span 
+class="cmtt-12">--check-sections</span>.
+<span 
+class="cmtt-12">-check-sdata</span>    <a 
+ id="dx69-133018"></a> The<span class="marginpar"><span class="fbox"><span 
+class="cmr-10">v3.4</span></span></span><a 
+ id="dx69-133019"></a> linker will issue a warning if a variable that is defined within a small
+                  data section or small addressing attribute and is referenced in a differnt
+                  module with a different addressing mode. With the linker option
+                  <span 
+class="cmtt-12">--fatal-warnings</span> the generation of an executable <span 
+class="cmtt-12">a.out </span>will be
+                  disabled.
+                  </p><!--l. 85--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb211"><a 
+ id="x69-133021r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Module</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x69-133023r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .sdata</span><span 
+class="pcrr7t-x-x-144"> aws</span><br class="fancyvrb" /><a 
+ id="x69-133025r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> var;</span>
+                  <br class="fancyvrb" /><a 
+ id="x69-133027r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><br class="fancyvrb" /><a 
+ id="x69-133029r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x69-133031r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> func(void);</span><br class="fancyvrb" /><a 
+ id="x69-133033r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x69-133035r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span>
+                  <br class="fancyvrb" /><a 
+ id="x69-133037r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void)</span><br class="fancyvrb" /><a 
+ id="x69-133039r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x69-133041r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   var</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> func();</span><br class="fancyvrb" /><a 
+ id="x69-133043r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x69-133045r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x69-133047r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Module</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+                  <br class="fancyvrb" /><a 
+ id="x69-133049r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> var;</span><br class="fancyvrb" /><a 
+ id="x69-133051r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x69-133053r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><br class="fancyvrb" /><a 
+ id="x69-133055r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> func</span><span 
+class="pcrr7t-x-x-144"> (void)</span><br class="fancyvrb" /><a 
+ id="x69-133057r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x69-133059r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   return</span><span 
+class="pcrr7t-x-x-144"> var;</span><br class="fancyvrb" /><a 
+ id="x69-133061r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+                  <!--l. 109--><p class="noindent" >The  TriCore Development Platform compiler support the small addressing
+                                                                                       
+                                                                                       
+                  mode for TriCore. The small data sections are prefixed by <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span></span>. The
+                  TriCore registers <span class="lstinline"><span 
+class="ecss-1200">a0</span></span>, <span class="lstinline"><span 
+class="ecss-1200">a1</span></span>, <span class="lstinline"><span 
+class="ecss-1200">a8</span></span>, <span class="lstinline"><span 
+class="ecss-1200">a9</span></span> are available for small addressing mode. The
+                  user can add these output sdata sections in the linker script (see <a 
+href="main_gcc_ugse22.html#x40-5400014.2">Listing 14.2</a>
+                  for details). This check is relevant if position independent data
+                  is required. One goal of stable software is to use it on different
+                  hardware without modification. The position independent brings this
+                  advantage to you, this means the location of your data may vary,
+                  but this has no effect for the software, because all relevant data
+                  is addressed small/relative. However the startup code must be
+                  modified to configure the register (e.g <span class="lstinline"><span 
+class="ecss-1200">a9</span></span>) for relative addressing
+                  mode.
+</p>
+                  <div class="center" 
+>
+<!--l. 112--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox89"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The debug info contains always absolute addresses, so if the register
+for relative addressing mode is modified without a rebuilt of your
+project, the debug info will not be valid anymore.                  </div>
+</div>
+                  <!--l. 114--><p class="noindent" >The option <span 
+class="cmtt-12">-check-sdata</span> checks if the small data is always accessed using
+                  the small addressing mode, otherwise these data will not be position
+                  independent.
+<span 
+class="cmtt-12">--mcpu=&#x003C;core&#x003E;</span>   <a 
+ id="dx69-133062"></a> Option to check linking of objects with different cores (tc12, tc13, tc131,
+                  tc2).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--cref</span>           </dt><dd 
+class="list">
+                  <!--l. 119--><p class="noindent" ><a 
+ id="dx69-133063"></a><a 
+ id="dx69-133064"></a> Output a cross reference table. If a linker map file is being generated, the
+                  cross reference table is printed to the map file. Otherwise, it is printed on the
+                  standard output.
+                  </p><!--l. 121--><p class="noindent" >The format of the table is intentionally simple, so that it may be easily
+                  processed by a script if necessary. The symbols are printed out, sorted by
+                  name. For each symbol, a list of file names is given. If the symbol is defined,
+                  the first file listed is the location of the definition. The remaining files
+                  contain references to the symbol.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-d, -dc, -dp</span>    </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 122--><p class="noindent" ><a 
+ id="dx69-133065"></a><a 
+ id="dx69-133066"></a><a 
+ id="dx69-133067"></a> These three options are equivalent; multiple forms are supported for
+                  compatibility with other linkers. They assign space to common
+                  symbols even if a relocatable output file is specified (with <span 
+class="cmtt-12">-r</span>).
+                  The script command <span 
+class="cmtt-12">FORCE</span><span 
+class="cmtt-12">_COMMON</span><span 
+class="cmtt-12">_ALLOCATION </span>has the same
+                  effect.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--defsym &#x003C;symbol&#x003E;=&#x003C;expression&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 123--><p class="noindent" ><a 
+ id="dx69-133068"></a> <a 
+ id="dx69-133069"></a>Create a global symbol in the output file, containing the absolute address
+                  given by <span 
+class="cmmi-12">&#x003C;</span>expression<span 
+class="cmmi-12">&#x003E;</span>. You may use this option as many times as necessary
+                  to define multiple symbols in the command line. A limited form
+                  of arithmetic is supported for the <span 
+class="cmmi-12">&#x003C;</span>expression<span 
+class="cmmi-12">&#x003E; </span>in this context:
+                  you may give a hexadecimal constant or the name of an existing
+                  symbol, or use <span 
+class="cmtt-12">+ </span>and <span 
+class="cmtt-12">- </span>to add or subtract hexadecimal constants or
+                  symbols.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--demangle [=&#x003C;style&#x003E;]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 124--><p class="noindent" ><a 
+ id="dx69-133070"></a> <a 
+ id="dx69-133071"></a><a 
+ id="dx69-133072"></a>
+                  </p><!--l. 127--><p class="noindent" >These options control whether to demangle symbol names in error messages
+                  and other output. When the linker is told to demangle, it tries to present
+                  symbol names in a readable fashion: it strips leading underscores if they are
+                  used by the object file format, and converts C++ mangled symbol names
+                  into user readable names. Different compilers have different mangling
+                  styles. The optional demangling style argument can be used to
+                  choose an appropriate demangling style for your compiler. The
+                  linker will demangle by default unless the environment variable
+                  <span 
+class="cmtt-12">COLLECT</span><span 
+class="cmtt-12">_NO</span><span 
+class="cmtt-12">_DEMANGLE </span>is set. These options may be used to override the
+                  default.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--discard-none</span>  </dt><dd 
+class="list">
+                  <!--l. 128--><p class="noindent" >Don’t discard any local symbols
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-e &#x003C;address&#x003E;, --entry &#x003C;address&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 129--><p class="noindent" ><a 
+ id="dx69-133073"></a> <a 
+ id="dx69-133074"></a><a 
+ id="dx69-133075"></a> Use <span 
+class="cmmi-12">&#x003C;</span>address<span 
+class="cmmi-12">&#x003E; </span>as the explicit symbol for beginning execution of your
+                  program, rather than the default entry point. If there is no symbol named
+                  <span 
+class="cmmi-12">&#x003C;</span>address<span 
+class="cmmi-12">&#x003E;</span>, the linker will try to parse <span 
+class="cmmi-12">&#x003C;</span>address<span 
+class="cmmi-12">&#x003E; </span>as a number, and use
+                  that as the entry address (the number will be interpreted in base
+                  10; you may use a leading <span class="lstinline"><span 
+class="ecss-1200">0</span><span 
+class="ecss-1200">x</span></span> for base 16, or a leading <span class="lstinline"><span 
+class="ecss-1200">0</span></span> for base
+                  8).
+                  </p></dd><dt class="list">
+                                                                                       
+                                                                                       
+<span 
+class="cmtt-12">-E, --export-dynamic</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 131--><p class="noindent" ><a 
+ id="dx69-133076"></a> <a 
+ id="dx69-133077"></a><a 
+ id="dx69-133078"></a> When creating a dynamically linked executable, add all symbols to the
+                  dynamic symbol table. The dynamic symbol table is the set of symbols which
+                  are visible from dynamic objects at run time.
+                  </p><!--l. 133--><p class="noindent" >If you do not use this option, the dynamic symbol table will normally
+                  contain only those symbols which are referenced by some dynamic object
+                  mentioned in the link.
+                  </p><!--l. 135--><p class="noindent" >If you use <span class="lstinline"><span 
+class="ecss-1200">dlopen</span></span> to load a dynamic object which needs to refer back to the
+                  symbols defined by the program, rather than some other dynamic object,
+                  then you will probably need to use this option when linking the program
+                  itself.
+                  </p><!--l. 137--><p class="noindent" >You can also use the version script to control what symbols should be added
+                  to the dynamic symbol table if the output format supports it. See the
+                  description of <span 
+class="cmtt-12">--version-script</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-EB</span>               </dt><dd 
+class="list">
+                  <!--l. 138--><p class="noindent" ><a 
+ id="dx69-133079"></a><a 
+ id="dx69-133080"></a><a 
+ id="dx69-133081"></a> Link big-endian objects. This affects the default output format.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-EL</span>               </dt><dd 
+class="list">
+                  <!--l. 139--><p class="noindent" ><a 
+ id="dx69-133082"></a><a 
+ id="dx69-133083"></a> Link little-endian objects. This affects the default output format.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--embedded-relocs</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 140--><p class="noindent" ><a 
+ id="dx69-133084"></a> This option is only meaningful when linking MIPS embedded position
+                  independent code, generated by the <span 
+class="cmtt-12">-membedded-pic</span> option to the
+                  <span 
+class="cmtt-12">tricore-gcc</span> and <span 
+class="cmtt-12">tricore-as</span>. It causes the linker to create a table which
+                  may be used at runtime to relocate any data which was statically initialized
+                  to pointer values.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--enable-new-dtags, --disable-new-dtags</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 141--><p class="noindent" ><a 
+ id="dx69-133085"></a> <a 
+ id="dx69-133086"></a>
+                  </p><!--l. 143--><p class="noindent" >This linker can create the new dynamic tags in ELF. But the
+                  older ELF systems may not understand them. If you specify the
+                  option <span 
+class="cmtt-12">--enable-new-dtags</span>, the dynamic tags will be created as
+                  needed. If you specify <span 
+class="cmtt-12">--disable-new-dtags</span>, no new dynamic
+                  tags will be created. By default, the new dynamic tags are not
+                  created.
+</p>
+                                                                                       
+                                                                                       
+                  <div class="center" 
+>
+<!--l. 145--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox90"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Those options are only available for ELF systems with shared library
+suppport.                                                          </div>
+</div>
+<span 
+class="cmtt-12">--extmap=&#x003C;output-option&#x003E;</span><br 
+class="newline" />                  <a 
+ id="dx69-133087"></a>
+                  <!--l. 151--><p class="noindent" >Generates an extended map file with additional information. This option
+                  must be used together with either <span 
+class="cmtt-12">--Map</span> or <span 
+class="cmtt-12">-M</span>. Valid output-options for
+                  <span 
+class="cmtt-12">--extmap</span> are:
+</p>
+<div class="pic-tabular">
+                  <img 
+src="main_gcc_ug32x.png" alt=""  /></div>
+                  <!--l. 164--><p class="noindent" >For a detailed description of the extended map file see <a 
+href="main_gcc_ugse47.html#x73-19000020.4">Listing 20.4</a>.
+<span 
+class="cmtt-12">--pcpmap[=type]</span><br 
+class="newline" />                  <a 
+ id="dx69-133088"></a> Use this option if your particular TriCore MCU requires an address mapping
+                  between PCP and TriCore memory accesses. This is currently only the case
+                  for the TC1796, where memory accesses performed by the PCP to addresses
+                  in TriCore’s memory segments 12 and 13 are mapped to segment 14 by the
+                  LFI bus bridge.
+                  </p><!--l. 169--><p class="noindent" >The ”type” argument to the <span 
+class="cmtt-12">--pcpmap</span> option may be omitted and defaults
+                  to ”0” in this case; if specified, however, it must be ”0” or ”tc1796”. When
+                  the <span 
+class="cmtt-12">--pcpmap</span> option is given, the linker changes its behavior as
+                  follows:
+</p>
+                       <ul class="itemize1">
+                       <li class="itemize">all symbolic data accesses by PCP data and code sections are
+                                                                                       
+                                                                                       
+                       subject to the following memory mapping:
+                       <!--l. 174--><p class="noindent" >
+</p>
+                       <div class="fancyvrb" id="fancyvrb212"><a 
+ id="x69-133090r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> Source</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> range:</span><span 
+class="pcrr7t-x-x-144"> Offset:</span><span 
+class="pcrr7t-x-x-144"> Target</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> range:</span>
+                       <br class="fancyvrb" /><a 
+ id="x69-133092r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ----------------------------------------------------------</span>
+                       <br class="fancyvrb" /><a 
+ id="x69-133094r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 0xc0000000..0xc03fffff</span><span 
+class="pcrr7t-x-x-144"> 0x28000000</span><span 
+class="pcrr7t-x-x-144"> 0xe8000000..0xe83fffff</span>
+                       <br class="fancyvrb" /><a 
+ id="x69-133096r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 0xd0000000..0xd00fffff</span><span 
+class="pcrr7t-x-x-144"> 0x18400000</span><span 
+class="pcrr7t-x-x-144"> 0xe8400000..0xe84fffff</span>
+                       <br class="fancyvrb" /><a 
+ id="x69-133098r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 0xd4000000..0xd40fffff</span><span 
+class="pcrr7t-x-x-144"> 0x14500000</span><span 
+class="pcrr7t-x-x-144"> 0xe8500000..0xe85fffff</span></div>
+                       <!--l. 182--><p class="noindent" >So, for instance, if a PCP code or data section references a variable
+                       called <span class="lstinline"><span 
+class="ecss-1200">c_var</span></span> that is located at address 0xc0000004, the linker will
+                       automatically add the appropriate offset (0x28000000) to the address,
+                       such that the PCP will access it at address 0xe8000004, where the LFI
+                       bus bridge will mirror it at runtime.
+                       </p></li>
+                       <li class="itemize">the same mapping applies to all sections whose name is either
+                       <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcp_c_ptr_init</span></span>, or starts with the string <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">pcp_c_ptr_init</span><span 
+class="ecss-1200">.</span></span>; you can use
+                       this feature for C/C++ functions that exclusively assign the
+                       addresses of C/C++ variables to PCP variables located in
+                       PRAM.</li></ul>
+                  <div class="center" 
+>
+<!--l. 187--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox91"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The option <span 
+class="cmtt-12">--pcpmap</span> can only map variables, no functions. Use this
+option only while final linking, not together with the option <span 
+class="cmtt-12">-r</span>     </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-f SHLIB, --auxiliary &#x003C;name&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 191--><p class="noindent" ><a 
+ id="dx69-133099"></a><a 
+ id="dx69-133100"></a> When creating an ELF shared object, set the internal <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_AUXILIARY </span>field to
+                  the specified name. This tells the dynamic linker that the symbol table of the
+                  shared object should be used as an auxiliary filter on the symbol table of the
+                  shared object <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p><!--l. 193--><p class="noindent" >If you later link a program against this filter object, then, when you run the
+                  program, the dynamic linker will see the <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_AUXILIARY </span>field. If the dynamic
+                  linker resolves any symbols from the filter object, it will first check whether
+                  there is a definition in the shared object <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E;</span>. If there is one,
+                                                                                       
+                                                                                       
+                  it will be used instead of the definition in the filter object. The
+                  shared object <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E; </span>need not exist. Thus the shared object
+                  <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E; </span>may be used to provide an alternative implementation of
+                  certain functions, perhaps for debugging or for machine specific
+                  performance.
+                  </p><!--l. 195--><p class="noindent" >This option may be specified more than once. The <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_AUXILIARY </span>entries will
+                  be created in the order in which they appear on the command
+                  line.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-F &#x003C;name&#x003E;, --filter &#x003C;name&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 196--><p class="noindent" ><a 
+ id="dx69-133101"></a><a 
+ id="dx69-133102"></a> When creating an ELF shared object, set the internal <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_FILTER </span>field to the
+                  specified name. This tells the dynamic linker that the symbol table of the
+                  shared object which is being created should be used as a filter on the symbol
+                  table of the shared object <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p><!--l. 198--><p class="noindent" >If you later link a program against this filter object, then, when you run the
+                  program, the dynamic linker will see the <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_FILTER </span>field. The dynamic
+                  linker will resolve symbols according to the symbol table of the
+                  filter object as usual, but it will actually link to the definitions
+                  found in the shared object <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E;</span>. Thus the filter object can
+                  be used to select a subset of the symbols provided by the object
+                  <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p><!--l. 200--><p class="noindent" >The <span 
+class="cmtt-12">tricore-ld</span> uses other mechanisms for this purpose: the <span 
+class="cmtt-12">--format</span>,
+                  <span 
+class="cmtt-12">--oformat</span>, <span 
+class="cmtt-12">-b</span> options, the <span 
+class="cmtt-12">TARGET </span>command in linker scripts, and the
+                  <span 
+class="cmtt-12">GNUTARGET </span>environment variable. The <span 
+class="cmtt-12">tricore-ld</span> will ignore the <span 
+class="cmtt-12">-F</span> option
+                  when not creating an ELF shared object.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--fatal-warnings</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 202--><p class="noindent" ><a 
+ id="dx69-133103"></a> Treat all warnings as errors.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-fini &#x003C;symbol&#x003E;</span>  </dt><dd 
+class="list">
+                  <!--l. 203--><p class="noindent" ><a 
+ id="dx69-133104"></a><a 
+ id="dx69-133105"></a> When creating an ELF executable or shared object, call <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E; </span>when
+                  the executable or shared object is unloaded, by setting <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_FINI </span>to the
+                  address of the function. By default, the linker uses <span class="lstinline"><span 
+class="ecss-1200">_fini</span></span> as the function to
+                  call.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--force-exe-suffix</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 204--><p class="noindent" ><a 
+ id="dx69-133106"></a> Force generation of file with <span 
+class="cmtt-12">.exe </span>suffix. If a successfully built fully linked
+                  output file does not have a <span 
+class="cmtt-12">.exe </span>or <span 
+class="cmtt-12">.dll </span>suffix, this option forces the linker
+                  to copy the output file to one of the same name with a <span 
+class="cmtt-12">.exe </span>suffix. This
+                                                                                       
+                                                                                       
+                  option is useful when using unmodified Unix makefiles on a Microsoft
+                  Windows host, since some versions of Windows won’t run an image unless it
+                  ends in a <span 
+class="cmtt-12">.exe </span>suffix.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--gc-sections</span>   </dt><dd 
+class="list">
+                  <!--l. 213--><p class="noindent" ><a 
+ id="dx69-133107"></a> <a 
+ id="dx69-133108"></a><a 
+ id="dx69-133109"></a>
+                  </p><!--l. 215--><p class="noindent" >Enable garbage collection of unused input sections. It is ignored
+                  on targets that do not support this option. This option is not
+                  compatible with <span 
+class="cmtt-12">-r</span>, nor should it be used with dynamic linking. The
+                  default behavior (of not performing this garbage collection) can
+                  be restored by specifying <span 
+class="cmtt-12">--no-gc-sections</span> on the command
+                  line.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h &#x003C;filename&#x003E;, -soname &#x003C;filename&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 217--><p class="noindent" ><a 
+ id="dx69-133110"></a><a 
+ id="dx69-133111"></a> <a 
+ id="dx69-133112"></a>When creating an ELF shared object, set the internal <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_SONAME </span>field to the
+                  specified name. When an executable is linked with a shared object
+                  which has a <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_SONAME </span>field, then when the executable is run the
+                  dynamic linker will attempt to load the shared object specified by
+                  the <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_SONAME </span>field rather than using the file name given to the
+                  linker.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--help</span>           </dt><dd 
+class="list">
+                  <!--l. 219--><p class="noindent" ><a 
+ id="dx69-133113"></a> Print a summary of the command-line options on the standard output and
+                  exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-I &#x003C;program&#x003E;, --dynamic-linker &#x003C;program&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 221--><p class="noindent" ><a 
+ id="dx69-133114"></a><a 
+ id="dx69-133115"></a> Set the name of the dynamic linker to <span 
+class="cmmi-12">&#x003C;</span>program<span 
+class="cmmi-12">&#x003E;</span>. This is only meaningful
+                  when generating dynamically linked ELF executables. The default dynamic
+                  linker is normally correct; don’t use this unless you know what you are
+                  doing.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-init &#x003C;symbol&#x003E;</span>  </dt><dd 
+class="list">
+                  <!--l. 223--><p class="noindent" ><a 
+ id="dx69-133116"></a><a 
+ id="dx69-133117"></a> When creating an ELF executable or shared object, call <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E; </span>when
+                  the executable or shared object is loaded, by setting <span 
+class="cmtt-12">DT</span><span 
+class="cmtt-12">_INIT </span>to the address
+                  of the function. By default, the linker uses <span class="lstinline"><span 
+class="ecss-1200">_init</span></span> as the function to
+                  call.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-L &#x003C;directory&#x003E;, --library-path &#x003C;directory&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 225--><p class="noindent" ><a 
+ id="dx69-133118"></a> <a 
+ id="dx69-133119"></a><a 
+ id="dx69-133120"></a> Add path <span 
+class="cmmi-12">&#x003C;</span>directory<span 
+class="cmmi-12">&#x003E; </span>to the list of paths that <span 
+class="cmtt-12">tricore-ld</span> will search for
+                  archive libraries and <span 
+class="cmtt-12">tricore-ld</span> control scripts. You may use this option
+                  any number of times. The directories are searched in the order in which they
+                  are specified on the command line. Directories specified on the command
+                  line are searched before the default directories. All <span 
+class="cmtt-12">-L</span> options
+                  apply to all <span 
+class="cmtt-12">-l</span> options, regardless of the order in which the options
+                  appear.
+</p>
+                  <div class="center" 
+>
+<!--l. 227--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox92"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The paths can also be specified in a link script with the <span 
+class="cmtt-12">SEARCH</span><span 
+class="cmtt-12">_DIR</span>
+command. Directories specified this way are searched at the point in
+which the linker script appears in the command line.               </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-l &#x003C;library&#x003E;, --library &#x003C;library&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 229--><p class="noindent" ><a 
+ id="dx69-133121"></a> <a 
+ id="dx69-133122"></a><a 
+ id="dx69-133123"></a> Add archive file <span 
+class="cmmi-12">&#x003C;</span>library<span 
+class="cmmi-12">&#x003E; </span>to the list of files to link. This option
+                  may be used any number of times. <span 
+class="cmtt-12">tricore-ld</span> will search its
+                  path-list for occurrences of <span 
+class="cmtt-12">lib</span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">library</span><span 
+class="cmmi-12">&#x003E;</span><span 
+class="cmtt-12">.a </span>for every <span 
+class="cmmi-12">&#x003C;</span>library<span 
+class="cmmi-12">&#x003E;</span>
+                  specified.
+                  </p><!--l. 231--><p class="noindent" >If the archive defines a symbol which was undefined in some object which
+                  appeared before the archive on the command line, the linker will include the
+                  appropriate file(s) from the archive. However, an undefined symbol in an
+                  object appearing later on the command line will not cause the linker to
+                  search the archive again.
+                  </p><!--l. 233--><p class="noindent" >See the <span 
+class="cmtt-12">-(</span> option for a way to force the linker to search archives multiple
+                  times.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-m &#x003C;emulation&#x003E;</span>  </dt><dd 
+class="list">
+                  <!--l. 235--><p class="noindent" ><a 
+ id="dx69-133124"></a><a 
+ id="dx69-133125"></a> Emulate the <span 
+class="cmmi-12">&#x003C;</span>emulation<span 
+class="cmmi-12">&#x003E; </span>linker. You can list the available emulations with
+                  the <span 
+class="cmtt-12">--verbose</span> or <span 
+class="cmtt-12">-V</span> options. If the <span 
+class="cmtt-12">-m</span> option is not used, the emulation is
+                  taken from the <span 
+class="cmtt-12">LDEMULATION </span>environment variable, if that is defined.
+                  Otherwise, the default emulation depends upon how the linker was
+                  configured.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-M, --print-map</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 237--><p class="noindent" ><a 
+ id="dx69-133126"></a> <a 
+ id="dx69-133127"></a><a 
+ id="dx69-133128"></a> Print <a 
+ id="lbl:Linker!opt!-M">map</a> file on standard output. A link map provides information about
+                  the link, including the following:
+</p>
+                       <ul class="itemize1">
+                       <li class="itemize">Where object files and symbols are mapped into memory.
+                       </li>
+                       <li class="itemize">How common symbols are allocated.
+                       </li>
+                       <li class="itemize">All archive members included in the link, with a mention of the
+                       symbol which caused the archive member to be brought in.</li></ul>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-Map &#x003C;file&#x003E;</span>      </dt><dd 
+class="list">
+                  <!--l. 245--><p class="noindent" ><a 
+ id="dx69-133129"></a> Print a link map to the file <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E;</span>. See the description of the <a 
+href="#lbl:Linker!opt!-M"><span 
+class="cmtt-12">-M</span></a>
+                  option.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-n, --nmagic</span>    </dt><dd 
+class="list">
+                  <!--l. 247--><p class="noindent" ><a 
+ id="dx69-133130"></a> <a 
+ id="dx69-133131"></a><a 
+ id="dx69-133132"></a> <a 
+ id="dx69-133133"></a>Turn off page alignment of sections, and mark the output as <span 
+class="cmtt-12">NMAGIC </span>if
+                  possible.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-N, --omagic</span>    </dt><dd 
+class="list">
+                  <!--l. 249--><p class="noindent" ><a 
+ id="dx69-133134"></a> <a 
+ id="dx69-133135"></a><a 
+ id="dx69-133136"></a> <a 
+ id="dx69-133137"></a>
+                  </p><!--l. 251--><p class="noindent" >Set the text and data sections to be readable and writable. Also, do not
+                  page-align the data segment. If the output format supports Unix style magic
+                  numbers, mark the output as <span 
+class="cmtt-12">OMAGIC</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-check-sections</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 253--><p class="noindent" >Do not check section addresses for overlaps
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-define-common</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 255--><p class="noindent" ><a 
+ id="dx69-133138"></a> <a 
+ id="dx69-133139"></a>This option inhibits the assignment of addresses to common symbols.
+                  The script command <span 
+class="cmtt-12">INHIBIT</span><span 
+class="cmtt-12">_COMMON</span><span 
+class="cmtt-12">_ALLOCATION </span>has the same
+                  effect.
+                  </p><!--l. 257--><p class="noindent" >The <span 
+class="cmtt-12">--no-define-common</span> option allows decoupling the decision to assign
+                  addresses to Common symbols from the choice of the output file type;
+                  otherwise a non-relocatable output type forces assigning addresses to
+                  Common symbols.
+                                                                                       
+                                                                                       
+                  </p><!--l. 259--><p class="noindent" >Using <span 
+class="cmtt-12">--no-define-common</span> allows Common symbols that are referenced
+                  from a shared library to be assigned addresses only in the main program.
+                  This eliminates the unused duplicate space in the shared library, and also
+                  prevents any possible confusion over resolving to the wrong duplicate when
+                  there are many dynamic modules with specialized search paths for runtime
+                  symbol resolution.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-demangle</span>   </dt><dd 
+class="list">
+                  <!--l. 261--><p class="noindent" >Do not demangle symbol names
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-gc-sections</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 263--><p class="noindent" >Don’t remove unused sections (default)
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--noinhibit-exec</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 265--><p class="noindent" ><a 
+ id="dx69-133140"></a><a 
+ id="dx69-133141"></a> Retain the executable output file whenever it is still usable. Normally, the
+                  linker will not produce an output file if it encounters errors during the link
+                  process; it exits without writing an output file when it issues any error
+                  whatsoever.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-keep-memory</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 267--><p class="noindent" ><a 
+ id="dx69-133142"></a><a 
+ id="dx69-133143"></a>
+                  </p><!--l. 269--><p class="noindent" >The linker normally optimizes for speed over memory usage by caching the
+                  symbol tables of input files in memory. The option tells <span 
+class="cmtt-12">tricore-ld</span> to
+                  instead optimize for memory usage, by rereading the symbol tables as
+                  necessary. This may be required if <span 
+class="cmtt-12">tricore-ld</span> runs out of memory space
+                  while linking a large executable.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-undefined</span>  </dt><dd 
+class="list">
+                  <!--l. 271--><p class="noindent" ><a 
+ id="dx69-133144"></a> Normally when creating a non-symbolic shared library, undefined symbols
+                  are allowed and left to be resolved by the runtime loader. These options
+                  disallows such undefined symbols.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-warn-mismatch</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 273--><p class="noindent" ><a 
+ id="dx69-133145"></a> Normally <span 
+class="cmtt-12">tricore-ld</span> will give an error if you try to link together input files
+                  that are mismatched for some reason, perhaps because they have been
+                  compiled for different processors or for different endiannesses. This option
+                  tells <span 
+class="cmtt-12">tricore-ld</span> that it should silently permit such possible errors. This
+                                                                                       
+                                                                                       
+                  option should only be used with care, in cases when you have
+                  taken some special action that ensures that the linker errors are
+                  inappropriate.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-whole-archive</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 275--><p class="noindent" ><a 
+ id="dx69-133146"></a> Turn off the effect of the <span 
+class="cmtt-12">--whole-archive</span> option for subsequent archive
+                  files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o &#x003C;file&#x003E;, --output &#x003C;file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 277--><p class="noindent" ><a 
+ id="dx69-133147"></a> <a 
+ id="dx69-133148"></a><a 
+ id="dx69-133149"></a> Use <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>as the name for the program produced by <span 
+class="cmtt-12">tricore-ld</span>; if this
+                  option is not specified, the name <span 
+class="cmtt-12">a.out </span>is used by default. The script
+                  command <span 
+class="cmtt-12">OUTPUT </span>can also specify the output file name.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--oformat &#x003C;target&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 285--><p class="noindent" ><a 
+ id="dx69-133150"></a> Specify target of output file. <span 
+class="cmtt-12">tricore-ld</span> may be configured to support
+                  more than one kind of object file. If your <span 
+class="cmtt-12">tricore-ld</span> is configured this way,
+                  you can use the <span 
+class="cmtt-12">--oformat</span> option to specify the binary format for the
+                  output object file. <span 
+class="cmmi-12">&#x003C;</span>target<span 
+class="cmmi-12">&#x003E; </span>is a text string, the name of a particular
+                  format supported by the BFD libraries. (You can list the available
+                  binary formats with <span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">-i</span>.) The script command
+                  <span 
+class="cmtt-12">OUTPUT</span><span 
+class="cmtt-12">_FORMAT </span>can also specify the output format, but this option overrides
+                  it.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-q, --emit-relocs</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 287--><p class="noindent" ><a 
+ id="dx69-133151"></a><a 
+ id="dx69-133152"></a><a 
+ id="dx69-133153"></a> Leave relocation sections and contents in fully linked executables. Post link
+                  analysis and optimization tools may need this information in order to
+                  perform correct modifications of executables. This results in larger
+                  executables.
+</p>
+                  <div class="center" 
+>
+<!--l. 289--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox93"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This option is currently only supported on ELF platforms.          </div>
+</div>
+                                                                                       
+                                                                                       
+                  <!--l. 291--><p class="noindent" >Generate relocations in final output
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-qmagic</span>          </dt><dd 
+class="list">
+                  <!--l. 293--><p class="noindent" >Ignored for Linux compatibility.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Qy</span>               </dt><dd 
+class="list">
+                  <!--l. 294--><p class="noindent" >Ignored for SVR4 compatibility
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-R &#x003C;file&#x003E;, --just-symbols &#x003C;file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 295--><p class="noindent" ><a 
+ id="dx69-133154"></a><a 
+ id="dx69-133155"></a><a 
+ id="dx69-133156"></a>
+                  </p><!--l. 297--><p class="noindent" >Read from <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>symbol names and their addresses, but do not relocate it
+                  or include it in the output. This allows your output file to refer symbolically
+                  to absolute locations of memory defined in other programs. You may use this
+                  option more than once.
+                  </p><!--l. 299--><p class="noindent" >For compatibility with other ELF linkers, if the <span 
+class="cmtt-12">-R</span> option is followed by a
+                  directory name, rather than a file name, it is treated as the <span 
+class="cmtt-12">-rpath</span>
+                  option.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-r, -i, --relocateable</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 301--><p class="noindent" >
+<a 
+ id="dx69-133157"></a>
+<a 
+ id="dx69-133158"></a>
+<a 
+ id="dx69-133159"></a>
+<a 
+ id="dx69-133160"></a>
+<a 
+ id="dx69-133161"></a>
+                  </p><!--l. 303--><p class="noindent" >Perform an incremental link (generate relocatable output). When an input
+                  file does not have the same format as the output file, partial linking is only
+                  supported if that input file does not contain any relocations. Different output
+                  formats can have further restrictions; for example some <span 
+class="cmtt-12">a.out</span>-based formats
+                  do not support partial linking with input files in other formats at
+                  all.
+                  </p><!--l. 305--><p class="noindent" >This option does the same thing as <span 
+class="cmtt-12">-i</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--relax</span>          </dt><dd 
+class="list">
+                  <!--l. 307--><p class="noindent" ><a 
+ id="dx69-133162"></a> <a 
+ id="dx69-133163"></a><a 
+ id="dx69-133164"></a> Relax branches on certain targets. On some platforms these link time global
+                  optimizations may make symbolic debugging of the resulting executable
+                  impossible. On platforms where this is not supported, <span 
+class="cmtt-12">--relax</span> is accepted,
+                  but ignored.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--relax-24rel</span>   </dt><dd 
+class="list">
+                  <!--l. 309--><p class="noindent" ><a 
+ id="dx69-133165"></a> Relax call and jump instructions whose target address cannot be reached
+                  with a PC-relative offset, nor by switching to instructions using TriCore’s
+                  absolute addressing mode. This option only takes effect in final (i.e.,
+                  non-relocateable) link runs, and is also enabled implicitly by <span 
+class="cmtt-12">--relax</span>.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 311--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox94"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The target of such <span class="lstinline"><span 
+class="ecss-1200">call</span></span> and <span class="lstinline"><span 
+class="ecss-1200">jump</span></span> instructions must be a global symbol.
+Also, the <span class="lstinline"><span 
+class="ecss-1200">call</span></span> or <span class="lstinline"><span 
+class="ecss-1200">jump</span></span> instruction must be located in a code section
+(section attribute ’x’).                                             </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--relax-bdata</span>   </dt><dd 
+class="list">
+                  <!--l. 313--><p class="noindent" ><a 
+ id="dx69-133166"></a> Compress bit objects contained in <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span></span> input sections. This option only
+                  takes effect in final (i.e., non-relocateable) link runs, and is also enabled
+                  implicitly by <span 
+class="cmtt-12">--relax</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--retain-symbols-file &#x003C;file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 316--><p class="noindent" ><a 
+ id="dx69-133167"></a> <a 
+ id="dx69-133168"></a><a 
+ id="dx69-133169"></a>
+                  </p><!--l. 318--><p class="noindent" >Retain <span 
+class="cmti-12">only </span>the symbols listed in the file <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E;</span>, discarding all
+                  others. <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>is simply a flat file, with one symbol name per line.
+                  <span 
+class="cmtt-12">--retain-symbols-file</span> does <span 
+class="cmti-12">not </span>discard undefined symbols, or symbols
+                  needed for relocations.
+                  </p><!--l. 321--><p class="noindent" >You may only specify <span 
+class="cmtt-12">--retain-symbols-file</span> once in the command line. It
+                  overrides <span 
+class="cmtt-12">-s</span> and <span 
+class="cmtt-12">-S</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-rpath &#x003C;path&#x003E;</span>   </dt><dd 
+class="list">
+                  <!--l. 323--><p class="noindent" ><a 
+ id="dx69-133170"></a><a 
+ id="dx69-133171"></a> Add a directory to the runtime library search path. This is used when
+                  linking an ELF executable with shared objects. All <span 
+class="cmtt-12">-rpath</span> arguments are
+                  concatenated and passed to the runtime linker, which uses them to
+                  locate shared objects at runtime. The <span 
+class="cmtt-12">-rpath</span> option is also used
+                  when locating shared objects which are needed by shared objects
+                  explicitly included in the link; see the description of the <span 
+class="cmtt-12">-rpath-link</span>
+                  option. If <span 
+class="cmtt-12">-rpath</span> is not used when linking an ELF executable, the
+                                                                                       
+                                                                                       
+                  contents of the environment variable <span 
+class="cmtt-12">LD</span><span 
+class="cmtt-12">_RUN</span><span 
+class="cmtt-12">_PATH </span>will be used if it is
+                  defined.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-rpath-link &#x003C;path&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 326--><p class="noindent" ><a 
+ id="dx69-133172"></a> Set link time shared library search path.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-s, --strip-all</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 327--><p class="noindent" ><a 
+ id="dx69-133173"></a><a 
+ id="dx69-133174"></a><a 
+ id="dx69-133175"></a> Strip all symbols information from the output file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-S, --strip-debug</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 328--><p class="noindent" ><a 
+ id="dx69-133176"></a><a 
+ id="dx69-133177"></a><a 
+ id="dx69-133178"></a>
+                  </p><!--l. 330--><p class="noindent" >Omit debugger symbol information (but not all symbols) from the output
+                  file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--section-start &#x003C;section&#x003E;=&#x003C;address&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 331--><p class="noindent" >Set address of named section
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-shared, -Bshareable</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 332--><p class="noindent" ><a 
+ id="dx69-133179"></a> <a 
+ id="dx69-133180"></a><a 
+ id="dx69-133181"></a> Create a shared library. This is currently only supported on ELF, XCOFF
+                  and SunOS platforms. On SunOS, the linker will automatically create a
+                  shared library if the <span 
+class="cmtt-12">-e</span> option is not used and there are undefined symbols in
+                  the link.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--sort-common</span>   </dt><dd 
+class="list">
+                  <!--l. 334--><p class="noindent" ><a 
+ id="dx69-133182"></a> This option tells <span 
+class="cmtt-12">tricore-ld</span> to sort the common symbols by size when it
+                  places them in the appropriate output sections. First come all the one byte
+                  symbols, then all the two byte, then all the four byte, and then everything
+                  else. This is to prevent gaps between symbols due to alignment
+                  constraints.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--spare-dynamic-tags &#x003C;count&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 336--><p class="noindent" >How many tags to reserve in .dynamic section
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--split-by-file [=&#x003C;size&#x003E;]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 337--><p class="noindent" ><a 
+ id="dx69-133183"></a> Similar to <span 
+class="cmtt-12">--split-by-reloc</span> but creates a new output section for each
+                  input file when <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>is reached.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--split-by-reloc [=&#x003C;size&#x003E;]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 338--><p class="noindent" ><a 
+ id="dx69-133184"></a> <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>defaults to a size of 1 if not given. Tries to creates extra sections in
+                  the output file so that no single output section in the file contains more than
+                  <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>relocations. This is useful when generating huge relocatable files for
+                  downloading into certain real time kernels with the COFF object file format;
+                  since COFF cannot represent more than 65535 relocations in a single
+                  section.
+</p>
+                  <div class="center" 
+>
+<!--l. 340--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox95"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This will fail to work with object file formats which do not support
+arbitrary  sections.  The  linker  will  not  split  up  individual  input
+sections for redistribution, so if a single input section contains more
+than <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>relocations one output section will contain that many
+relocations. <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>defaults to a value of 32768.                    </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--stats</span>          </dt><dd 
+class="list">
+                  <!--l. 342--><p class="noindent" ><a 
+ id="dx69-133185"></a> Compute and display statistics about the operation of the linker, such as
+                  execution time and memory usage.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-T &#x003C;file&#x003E;, --script &#x003C;file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 344--><p class="noindent" ><a 
+ id="dx69-133186"></a><a 
+ id="dx69-133187"></a> Use <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>as the linker script. and replace default linker script (rather than
+                  adding to it), so <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>must specify everything necessary to describe the
+                  output file. If <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>does not exist in the current directory, <span 
+class="cmtt-12">tricore-ld</span>
+                  looks for it in the directories specified by any preceding <span 
+class="cmtt-12">-L</span> options. Multiple
+                  <span 
+class="cmtt-12">-T</span> options accumulate.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-t, --trace</span>      </dt><dd 
+class="list">
+                  <!--l. 346--><p class="noindent" ><a 
+ id="dx69-133188"></a><a 
+ id="dx69-133189"></a><a 
+ id="dx69-133190"></a> Print the names of the input files as <span 
+class="cmtt-12">tricore-ld</span> processes them.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--target-help</span>   </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 348--><p class="noindent" ><a 
+ id="dx69-133191"></a> Print a summary of all target specific options on the standard output and
+                  exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--task-link &#x003C;symbol&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 350--><p class="noindent" >Do task level linking
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Tbss &#x003C;address&#x003E;, -Tdata &#x003C;address&#x003E;, -Ttext &#x003C;address&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 352--><p class="noindent" >Use <span 
+class="cmmi-12">&#x003C;</span>address<span 
+class="cmmi-12">&#x003E; </span>as the starting address of <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span> section.
+</p>
+                  <div class="center" 
+>
+<!--l. 354--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox96"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Be  careful  to  use  these  options  when  the  linker  script  contains
+<span class="lstinline"><span 
+class="ecss-1200">MEMORY</span></span> statements.                                              </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-u &#x003C;symbol&#x003E;, --undefined &#x003C;symbol&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 356--><p class="noindent" ><a 
+ id="dx69-133192"></a><a 
+ id="dx69-133193"></a><a 
+ id="dx69-133194"></a>
+                  </p><!--l. 358--><p class="noindent" >Force <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E; </span>to be entered in the output file as an undefined symbol.
+                  Doing this may, for example, trigger linking of additional modules from
+                  standard libraries. <span 
+class="cmtt-12">-u</span> may be repeated with different option arguments to
+                  enter additional undefined symbols. This option is equivalent to the <span 
+class="cmtt-12">EXTERN</span>
+                  linker script command.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--unique [=&#x003C;section&#x003E;]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 360--><p class="noindent" ><a 
+ id="dx69-133195"></a><a 
+ id="dx69-133196"></a> Creates a separate output section for every input section matching
+                  <span 
+class="cmmi-12">&#x003C;</span>section<span 
+class="cmmi-12">&#x003E;</span>, or if the optional wildcard <span 
+class="cmmi-12">&#x003C;</span>section<span 
+class="cmmi-12">&#x003E; </span>argument is missing, for
+                  every orphan input section. An orphan section is one not specifically
+                  mentioned in a linker script. You may use this option multiple times on the
+                  command line; It prevents the normal merging of input sections with
+                  the same name, overriding output section assignments in a linker
+                  script.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Ur</span>               </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 362--><p class="noindent" ><a 
+ id="dx69-133197"></a> For anything other than C++ programs, this option is equivalent
+                  to <span 
+class="cmtt-12">-r</span>: it generates relocatable output˜i.e., an output file that
+                  can in turn serve as input to <span 
+class="cmtt-12">tricore-ld</span>. When linking C++
+                  programs, <span 
+class="cmtt-12">-Ur</span> <span 
+class="cmti-12">does </span>resolve references to constructors, unlike <span 
+class="cmtt-12">-r</span>.
+                  It does not work to use <span 
+class="cmtt-12">-Ur</span> on files that were themselves linked
+                  with <span 
+class="cmtt-12">-Ur</span>; once the constructor table has been built, it cannot be
+                  added to. Use <span 
+class="cmtt-12">-Ur</span> only for the last partial link, and <span 
+class="cmtt-12">-r</span> for the
+                  others.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v, --version</span>   </dt><dd 
+class="list">
+                  <!--l. 364--><p class="noindent" ><a 
+ id="dx69-133198"></a><a 
+ id="dx69-133199"></a> Print version information.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-V</span>                </dt><dd 
+class="list">
+                  <!--l. 365--><p class="noindent" >Print version and also list the supported emulations.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--verbose</span>        </dt><dd 
+class="list">
+                  <!--l. 366--><p class="noindent" >Output lots of information during link
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--version-exports-section &#x003C;symbol&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 367--><p class="noindent" >Take export symbols list from .exports, using <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E; </span>as the
+                  version.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--version-script &#x003C;file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 368--><p class="noindent" ><a 
+ id="dx69-133200"></a> Specify the name of a version script to the linker. This is typically used
+                  when creating shared libraries to specify additional information
+                  about the version hierarchy for the library being created. This
+                  option is only meaningful on ELF platforms which support shared
+                  libraries.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--warn-common</span>   </dt><dd 
+class="list">
+                  <!--l. 370--><p class="noindent" ><a 
+ id="dx69-133201"></a><a 
+ id="dx69-133202"></a> Warn about duplicate common symbols. This option allows you to find
+                  potential problems from combining global symbols. Unfortunately, some C
+                  libraries use this practice, so you may get some warnings about symbols in
+                  the libraries as well as in your programs.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--warn-once</span>      </dt><dd 
+class="list">
+                  <!--l. 372--><p class="noindent" ><a 
+ id="dx69-133203"></a><a 
+ id="dx69-133204"></a> Only warn once for each undefined symbol, rather than once per module
+                  which refers to it.
+                                                                                       
+                                                                                       
+<span 
+class="cmtt-12">--warn-orphan</span>   <a 
+ id="dx69-133205"></a> Issue a warning message if there is no dedicated mapping between an input
+                  section and an output section.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--warn-section-align</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 378--><p class="noindent" ><a 
+ id="dx69-133206"></a><a 
+ id="dx69-133207"></a>
+                  </p><!--l. 380--><p class="noindent" >Warn if the address of an output section is changed because of alignment.
+                  Typically, the alignment will be set by an input section. The address will
+                  only be changed if it not explicitly specified; that is, if the <span 
+class="cmtt-12">SECTIONS</span>
+                  command does not specify a start address for the section (see
+                  <a 
+href="main_gcc_ugli2.html#x71-15000020.2.8">Listing 20.2.8</a>).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--whole-archive</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 382--><p class="noindent" ><a 
+ id="dx69-133208"></a><a 
+ id="dx69-133209"></a> For each archive mentioned after the <span 
+class="cmtt-12">--whole-archive</span> option on the
+                  command line, include every object file in the archive in the link, rather than
+                  searching the archive for the required object files. This is normally used to
+                  turn an archive file into a shared library, forcing every object to be included
+                  in the resulting shared library. This option may be used more than
+                  once.
+</p>
+                  <div class="center" 
+>
+<!--l. 384--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox97"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />When using this option from <span 
+class="cmtt-12">tricore-gcc</span>: First, you have to use
+<span 
+class="cmtt-12">-Wl,-whole-archive</span>, because <span 
+class="cmtt-12">tricore-gcc</span> doesn’t know about this
+option. Second, don’t forget to use <span 
+class="cmtt-12">-Wl,-no-whole-archive</span> after
+your list of archives, because <span 
+class="cmtt-12">tricore-gcc</span> will add its own list of
+archives to your link and you may not want this flag to affect those
+as well.                                                            </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--wrap &#x003C;symbol&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 386--><p class="noindent" ><a 
+ id="dx69-133210"></a> Use wrapper functions for <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E;</span>. Any undefined reference to
+                  <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E; </span>will be resolved to <span class="lstinline"><span 
+class="ecss-1200">__wrap_</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">symbol</span><span 
+class="ecss-1200">&#x003E;</span></span>. Any undefined reference
+                  to <span class="lstinline"><span 
+class="ecss-1200">__real_</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">symbol</span><span 
+class="ecss-1200">&#x003E;</span></span> will be resolved to <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E;</span>.
+                                                                                       
+                                                                                       
+                  </p><!--l. 388--><p class="noindent" >This can be used to provide a wrapper for a system function. The wrapper
+                  function should be called <span class="lstinline"><span 
+class="ecss-1200">__wrap_</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">symbol</span><span 
+class="ecss-1200">&#x003E;</span></span>. If it wishes to call the system
+                  function, it should call <span class="lstinline"><span 
+class="ecss-1200">__real_</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">symbol</span><span 
+class="ecss-1200">&#x003E;</span></span>.
+                  </p><!--l. 390--><p class="noindent" >Here is a trivial example:
+                  </p><!--l. 392--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb213"><a 
+ id="x69-133212r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;</span><br class="fancyvrb" /><a 
+ id="x69-133214r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __wrap_malloc</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> c)</span><br class="fancyvrb" /><a 
+ id="x69-133216r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+                  <br class="fancyvrb" /><a 
+ id="x69-133218r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> printf</span><span 
+class="pcrr7t-x-x-144"> ("malloc</span><span 
+class="pcrr7t-x-x-144"> called</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> %ld\n",</span><span 
+class="pcrr7t-x-x-144"> c);</span>
+                  <br class="fancyvrb" /><a 
+ id="x69-133220r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __real_malloc</span><span 
+class="pcrr7t-x-x-144"> (c);</span><br class="fancyvrb" /><a 
+ id="x69-133222r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+                  <!--l. 401--><p class="noindent" >If you link other code with this file using <span 
+class="cmtt-12">--wrap malloc</span>, then all
+                  calls to <span class="lstinline"><span 
+class="ecss-1200">malloc</span></span> will call the function <span class="lstinline"><span 
+class="ecss-1200">__wrap_malloc</span></span> instead. The
+                  call to <span class="lstinline"><span 
+class="ecss-1200">__real_malloc</span></span> in <span class="lstinline"><span 
+class="ecss-1200">__wrap_malloc</span></span> will call the real <span class="lstinline"><span 
+class="ecss-1200">malloc</span></span>
+                  function.
+                  </p><!--l. 403--><p class="noindent" >You may wish to provide a <span class="lstinline"><span 
+class="ecss-1200">__real_malloc</span></span> function as well, so that links
+                  without the <span 
+class="cmtt-12">--wrap</span> option will succeed. If you do this, you should not put
+                  the definition of <span class="lstinline"><span 
+class="ecss-1200">__real_malloc</span></span> in the same file as <span class="lstinline"><span 
+class="ecss-1200">__wrap_malloc</span></span>; if you
+                  do, the assembler may resolve the call before the linker has a chance to wrap
+                  it to <span class="lstinline"><span 
+class="ecss-1200">malloc</span></span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-x, --discard-all</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 405--><p class="noindent" ><a 
+ id="dx69-133223"></a><a 
+ id="dx69-133224"></a><a 
+ id="dx69-133225"></a> Discard all local symbols.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-X, --discard-locals</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 407--><p class="noindent" ><a 
+ id="dx69-133226"></a> <a 
+ id="dx69-133227"></a><a 
+ id="dx69-133228"></a> Delete all temporary local symbols. For most targets, this is all local
+                  symbols whose names begin with <span 
+class="cmtt-12">L</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-y &#x003C;symbol&#x003E;, --trace-symbol &#x003C;symbol&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 411--><p class="noindent" ><a 
+ id="dx69-133229"></a> <a 
+ id="dx69-133230"></a><a 
+ id="dx69-133231"></a> Print the name of each linked file in which <span 
+class="cmmi-12">&#x003C;</span>symbol<span 
+class="cmmi-12">&#x003E; </span>appears. This option
+                  may be given any number of times. On many systems it is necessary to
+                  prepend an underscore. This option is useful when you have an undefined
+                  symbol in your link but don’t know where the reference is coming
+                  from.</p></dd></dl>
+<!--l. 414--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<h4 class="subsectionHead"><span class="titlemark">20.1.1</span>  <a 
+href="#x69-13400020.1.1" id="x69-13400020.1.1">Default options</a></h4>
+<a 
+ id="dx69-134001"></a>
+<!--l. 416--><p class="noindent" >The <span 
+class="cmtt-12">tricore-ld</span> looks for library inputs in the following directories:
+</p>
+      <ul class="itemize1">
+      <li class="itemize"><span 
+class="cmtt-12">&#x003C;install-dir&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">bin</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">gcc-lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;gcc-version&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">crt0.o</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-L&#x003C;install-dir&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">bin</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">gcc-lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;gcc-version&#x003E;</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-L&#x003C;install-dir&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">bin</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">gcc-lib</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-L&#x003C;install-dir&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">bin</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">gcc-lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;gcc-version&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><br 
+class="newline" /><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-L&#x003C;install-dir&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">bin</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">gcc-lib</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">tricore</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">&#x003C;gcc-version&#x003E;</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">..</span>
+      </li>
+      <li class="itemize">-lgcc
+      </li>
+      <li class="itemize">-lc
+      </li>
+      <li class="itemize">-los
+      </li>
+      <li class="itemize">-lc
+      </li>
+      <li class="itemize">-lgcc</li></ul>
+<!--l. 433--><p class="noindent" >E.g. if you <span 
+class="cmtt-12">-lgcc</span> the library <span 
+class="cmtt-12">libgcc.a </span>is used.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse45.html" >next</a>] [<a 
+href="main_gcc_ugch20.html" >prev</a>] [<a 
+href="main_gcc_ugch20.html#tailmain_gcc_ugch20.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse44.html" >front</a>] [<a 
+href="main_gcc_ugch20.html#main_gcc_ugse44.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse44.html"></a> </p> 
+</body></html> 

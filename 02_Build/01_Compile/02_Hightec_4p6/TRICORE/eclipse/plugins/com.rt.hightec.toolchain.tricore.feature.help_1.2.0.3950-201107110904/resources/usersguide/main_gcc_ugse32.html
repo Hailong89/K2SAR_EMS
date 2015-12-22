@@ -1,0 +1,2654 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Builtins</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 137--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse33.html" >next</a>] [<a 
+href="main_gcc_ugse31.html" >prev</a>] [<a 
+href="main_gcc_ugse31.html#tailmain_gcc_ugse31.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse32.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse32.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.12</span>  <a 
+href="main_gcc_ug.html#QQ2-50-77" id="x50-7100014.12">Builtins</a></h3>
+<!--l. 138--><p class="noindent" >The  TriCore Development Platform supports the intrinsics listed below. Note, that by using an
+intrinsic you make the compiler inject algebraic representations of the intrinsic’s semantic into
+the internal algebraic representation of your C code.
+</p><!--l. 140--><p class="noindent" >Thus, using intrinsics gives the compiler a notion of what it is doing, a precondition for
+optimising. For example, <span class="lstinline"><span 
+class="ecss-1200">n</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">=</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">__SUBS</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(1,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">n</span><span 
+class="ecss-1200">);</span></span> may be compiled as <span class="lstinline"><span 
+class="ecss-1200">rsub</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d0</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d0</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">1</span></span>, provided
+<span class="lstinline"><span 
+class="ecss-1200">n</span></span> is an integer living in register <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d0</span></span>. In most cases they are machine instruction equivalents to
+intrinsics but exceptions exist. Moreover, there is no guarantee that the compiler will choose a
+specific machine instruction, even if one exists. It will choose machine instructions that have the
+desired effect on the machine, that’s all.
+</p><!--l. 142--><p class="noindent" >To insert specific machine instructions into your code, please use Inline Assembler. The
+disadvantage of using Inline Aassembler is that you cannot benefit from an optimising compiler,
+because the optimising compiler perceives Inline Assembler templates as mere strings and thus
+has <span 
+class="cmti-12">no </span>notion of what is going on.
+</p><!--l. 144--><p class="noindent" >Note that for builtins, the <span class="lstinline"><span 
+class="ecss-1200">__FOO</span></span> is just a predefined macro that resolves to <span class="lstinline"><span 
+class="ecss-1200">__builtin_foo</span></span>,
+the very builtin’s name. This allows you to check for the presence of a specific builtin:
+</p><!--l. 146--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb147"><a 
+ id="x50-71002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> get</span><span 
+class="pcrr7t-x-x-144"> absolute</span><span 
+class="pcrr7t-x-x-144"> value</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> not</span><span 
+class="pcrr7t-x-x-144"> caring</span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> overflow</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x50-71004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> _abs</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> a)</span><br class="fancyvrb" /><a 
+ id="x50-71006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-71008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #if</span><span 
+class="pcrr7t-x-x-144"> defined</span><span 
+class="pcrr7t-x-x-144"> (__ABS)</span><br class="fancyvrb" /><a 
+ id="x50-71010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __ABS</span><span 
+class="pcrr7t-x-x-144"> (a);</span>
+<br class="fancyvrb" /><a 
+ id="x50-71012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #else</span><br class="fancyvrb" /><a 
+ id="x50-71014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> (a</span><span 
+class="pcrr7t-x-x-144"> &#x003E;=</span><span 
+class="pcrr7t-x-x-144"> 0)</span><span 
+class="pcrr7t-x-x-144"> ?</span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> -a;</span><br class="fancyvrb" /><a 
+ id="x50-71016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #endif</span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> have</span><span 
+class="pcrr7t-x-x-144"> __ABS</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x50-71018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 158--><p class="noindent" >Before listing all the intrinsics and their prototypes, we take a detailed look at some of
+them. Suppose you want an ‘unsigned multiply-add’, i.e. something equivalent to
+the <span class="lstinline"><span 
+class="ecss-1200">madd</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">u</span></span> instruction. From the handbook, you learn that this instruction has the
+format:
+</p><!--l. 161--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb148"><a 
+ id="x50-71020r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> madd.u</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> E[c],</span><span 
+class="pcrr7t-x-x-144"> E[d],</span><span 
+class="pcrr7t-x-x-144"> D[a],</span><span 
+class="pcrr7t-x-x-144"> D[b]</span></div>
+                                                                                       
+                                                                                       
+<!--l. 165--><p class="noindent" >which implements <span 
+class="cmmi-12">c </span>= <span 
+class="cmmi-12">d </span>+ <span 
+class="cmmi-12">a </span><span 
+class="cmsy-10x-x-120"><font face="Symbol">×</font> </span><span 
+class="cmmi-12">b</span>. To use it for a multiply-add of unsigned integers we use the
+<a 
+href="#lbl:MADDU.proto"><span class="lstinline"><span 
+class="ecss-1200">__MADDU</span></span></a> builtin and write
+</p><!--l. 167--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb149"><a 
+ id="x50-71022r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> d</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> a&#x22C6;b</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x50-71024r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> maddu</span><span 
+class="pcrr7t-x-x-144"> (unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> d,</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> b)</span>
+<br class="fancyvrb" /><a 
+ id="x50-71026r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-71028r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __MADDU</span><span 
+class="pcrr7t-x-x-144"> (d,</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> b);</span><br class="fancyvrb" /><a 
+ id="x50-71030r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 175--><p class="noindent" >The generated code is then
+</p><!--l. 177--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb150"><a 
+ id="x50-71032r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> maddu:</span><br class="fancyvrb" /><a 
+ id="x50-71034r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> madd</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d2,</span><span 
+class="pcrr7t-x-x-144"> %d4,</span><span 
+class="pcrr7t-x-x-144"> %d5,</span><span 
+class="pcrr7t-x-x-144"> %d6</span><br class="fancyvrb" /><a 
+ id="x50-71036r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ret</span></div>
+<!--l. 183--><p class="noindent" >Note that there is no difference between an unsigned multiply-add and a signed multiply-add,
+since only 32-bit values are involved and the MCU status is no concern. Therefore, the compiler
+uses a <span class="lstinline"><span 
+class="ecss-1200">madd</span></span> instruction that has less overhead than a <span class="lstinline"><span 
+class="ecss-1200">madd</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">u</span></span>. To get a 64-bit result,
+write:
+</p><!--l. 185--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb151"><a 
+ id="x50-71038r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> d</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> a&#x22C6;b</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x50-71040r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> maddul</span><span 
+class="pcrr7t-x-x-144"> (unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> d,</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> b)</span>
+<br class="fancyvrb" /><a 
+ id="x50-71042r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-71044r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __MADDU</span><span 
+class="pcrr7t-x-x-144"> (d,</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> b);</span><br class="fancyvrb" /><a 
+ id="x50-71046r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x50-71048r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x50-71050r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> maddull</span><span 
+class="pcrr7t-x-x-144"> (unsigned</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> d,</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> b)</span>
+<br class="fancyvrb" /><a 
+ id="x50-71052r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-71054r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __MADDU</span><span 
+class="pcrr7t-x-x-144"> (d,</span><span 
+class="pcrr7t-x-x-144"> a,</span><span 
+class="pcrr7t-x-x-144"> b);</span><br class="fancyvrb" /><a 
+ id="x50-71056r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 198--><p class="noindent" >Here, the compiler has to take the <span class="lstinline"><span 
+class="ecss-1200">madd</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">u</span></span> instruction.
+</p><!--l. 200--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb152"><a 
+ id="x50-71058r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> maddul:</span><br class="fancyvrb" /><a 
+ id="x50-71060r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d2,</span><span 
+class="pcrr7t-x-x-144"> %d4</span><br class="fancyvrb" /><a 
+ id="x50-71062r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %d3,</span><span 
+class="pcrr7t-x-x-144"> 0</span>
+<br class="fancyvrb" /><a 
+ id="x50-71064r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> madd.u</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %e2,</span><span 
+class="pcrr7t-x-x-144"> %e2,</span><span 
+class="pcrr7t-x-x-144"> %d5,</span><span 
+class="pcrr7t-x-x-144"> %d6</span><br class="fancyvrb" /><a 
+ id="x50-71066r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ret</span><br class="fancyvrb" /><a 
+ id="x50-71068r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-71070r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> maddull:</span>
+<br class="fancyvrb" /><a 
+ id="x50-71072r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> madd.u</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> %e2,</span><span 
+class="pcrr7t-x-x-144"> %e4,</span><span 
+class="pcrr7t-x-x-144"> %d6,</span><span 
+class="pcrr7t-x-x-144"> %d7</span><br class="fancyvrb" /><a 
+ id="x50-71074r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ret</span></div>
+<!--l. 215--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.12.1</span>  <a 
+href="#x50-7200014.12.1" id="x50-7200014.12.1">Overview</a></h4>
+                                                                                       
+                                                                                       
+<!--l. 217--><p class="noindent" >This section gives a short overview of supported builtins.
+</p><!--l. 219--><p class="noindent" >For clarity reasons, notations in this sections lack the ultimate mathematical strictness.
+</p><!--l. 221--><p class="noindent" >Most operators come in different flavours. The signed and unsigned incarnation of
+Operator <span 
+class="cmsy-10x-x-120">&#x2218; </span>will be denoted as subscript <span 
+class="cmmi-12">s </span>and <span 
+class="cmmi-12">u</span>, resp., or will become clear from the
+context.
+</p><!--l. 224--><p class="noindent" >The small suffixes appended to each intrinsic denote the number of machine instructions that
+you may expect when applying the respective builtin. However, as stated above, there is no
+guarantee for that number of instructions, since the compiler will optimise the inserted algebraic
+transcriptions against the transcriptions of other builtins or the transcriptions of plain C/C++
+code.
+</p><!--l. 226--><p class="noindent" >Not all functionalities are implemented as intrinsics. Some of these functionalities — esp. those
+tagged with an asterisk — can easily be accomplished by using another intrinsic that is then
+tagged <sup><span style="margin-left:0.3em" class="thinspace"></span><span 
+class="cmsy-8">*</span></sup> and stands in place of the unimplemented builtin. Suppose you want to count the
+number of trainling ones of an integer. In the corresponding table you will find the
+entry:
+</p><!--l. 228--><p class="noindent" ><a 
+href="#lbl:CTZ.proto"><span class="lstinline"><span 
+class="ecss-1200">__CTZ</span></span></a><span style="margin-left:0.3em" class="thinspace"></span><sub>
+<span 
+class="cmr-8">6</span></sub><sup><span style="margin-left:0.3em" class="thinspace"></span><span 
+class="cmsy-8">*</span></sup>
+</p><!--l. 230--><p class="noindent" >which leads you to the <span class="lstinline"><span 
+class="ecss-1200">__CTZ</span></span> intrinsic and thereby states that the best way to implement the
+desired functionality is by using that intrinsic. In this particular case the solution to the
+problem may look like this:
+</p><!--l. 232--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb153"><a 
+ id="x50-72002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #define</span><span 
+class="pcrr7t-x-x-144"> __CTO(X)</span><span 
+class="pcrr7t-x-x-144"> \</span><br class="fancyvrb" /><a 
+ id="x50-72004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __CTZ</span><span 
+class="pcrr7t-x-x-144"> (~(X))</span></div>
+<!--l. 237--><p class="noindent" >or like that
+</p><!--l. 239--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb154"><a 
+ id="x50-72006r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> static</span><span 
+class="pcrr7t-x-x-144"> inline</span><span 
+class="pcrr7t-x-x-144"> int</span><br class="fancyvrb" /><a 
+ id="x50-72008r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __cto</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> x)</span><br class="fancyvrb" /><a 
+ id="x50-72010r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-72012r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __CTZ</span><span 
+class="pcrr7t-x-x-144"> (~x);</span><br class="fancyvrb" /><a 
+ id="x50-72014r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 247--><p class="noindent" >In both cases, the assembler output will contain instruction sequences that accomplish the
+desired computation.
+</p><!--l. 263--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.1  </span> <a 
+href="#x50-7300014.12.1.1" id="x50-7300014.12.1.1">Extracting Components of Packed Vectors</a></h5>
+<div class="pic-tabular">
+                                                                                       
+                                                                                       
+<img 
+src="main_gcc_ug8x.png" alt=""  /></div>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug9x.png" alt=""  /></div>
+<!--l. 279--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.2  </span> <a 
+href="#x50-7400014.12.1.2" id="x50-7400014.12.1.2">Saturation</a></h5>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug10x.png" alt=""  /></div>
+<!--l. 289--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.3  </span> <a 
+href="#x50-7500014.12.1.3" id="x50-7500014.12.1.3">Saturated Addition and Subtraction</a></h5>
+<!--l. 291--><p class="noindent" >For ordinary addition resp. subtraction of packed vectors you will write <span 
+class="cmmi-12">a </span>+ <span 
+class="cmmi-12">b </span>resp. <span 
+class="cmmi-12">a </span><span 
+class="cmsy-10x-x-120">- </span><span 
+class="cmmi-12">b</span>.
+</p>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug11x.png" alt=""  /></div>
+<!--l. 305--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.4  </span> <a 
+href="#x50-7600014.12.1.4" id="x50-7600014.12.1.4">Multiplication</a></h5>
+<div class="pic-tabular">
+                                                                                       
+                                                                                       
+<img 
+src="main_gcc_ug12x.png" alt=""  /></div>
+<!--l. 315--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.5  </span> <a 
+href="#x50-7700014.12.1.5" id="x50-7700014.12.1.5">Multiply-Add and Multiply-Subtract</a></h5>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug13x.png" alt=""  /></div>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug14x.png" alt=""  /></div>
+<!--l. 339--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.6  </span> <a 
+href="#x50-7800014.12.1.6" id="x50-7800014.12.1.6">Minimun and Maximum</a></h5>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug15x.png" alt=""  /></div>
+<!--l. 352--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.7  </span> <a 
+href="#x50-7900014.12.1.7" id="x50-7900014.12.1.7">Absolute Value, Absolute Value of Difference</a></h5>
+<!--l. 354--><p class="noindent" >Note that the absolute value is defined as </p><div class="eqnarray">
+                                                                                       
+                                                                                       
+<center class="math-display" >
+<img 
+src="main_gcc_ug16x.png" alt="              {  x - y,  if x <font face="Symbol">³</font> y
+&#x2225;x -  y&#x2225;  :=
+                 y - x,  if x &#x003C; y
+    &#x2225;x &#x2225;  :=   &#x2225;x - 0&#x2225;
+" class="math-display"  /></center>
+</div>which may be negative provided you interpret the values as signed values. The result may be
+negative even if no underflow/overflow occurs in the computation of the difference. Just imagine
+the 32 bit integer example <span 
+class="cmsy-10x-x-120">&#x2225;</span><span 
+class="cmsy-10x-x-120">-</span>2<sup><span 
+class="cmr-8">31</span></sup><span 
+class="cmsy-10x-x-120">&#x2225; </span>= <span 
+class="cmsy-10x-x-120">-</span>2<sup><span 
+class="cmr-8">31</span></sup>.
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug17x.png" alt=""  /></div>
+<!--l. 377--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.8  </span> <a 
+href="#x50-8000014.12.1.8" id="x50-8000014.12.1.8">Comparison</a></h5>
+<!--l. 379--><p class="noindent" >These comparison operators set all bits if the comparison holds and clear all bits,
+otherwise.
+</p>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug18x.png" alt=""  /></div>
+<!--l. 391--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.9  </span> <a 
+href="#x50-8100014.12.1.9" id="x50-8100014.12.1.9">Shift, Rotate and Saturated Shift</a></h5>
+<div class="pic-tabular">
+                                                                                       
+                                                                                       
+<img 
+src="main_gcc_ug19x.png" alt=""  /></div>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug20x.png" alt=""  /></div>
+<!--l. 412--><p class="noindent" >To compute (<span 
+class="cmmi-12">a </span><span 
+class="cmsy-10x-x-120">&#x226B; </span><span 
+class="cmmi-12">b</span>)<span style="margin-left:0.3em" class="thinspace"></span>&amp;<span style="margin-left:0.3em" class="thinspace"></span>(2<sup><span 
+class="cmmi-8">w</span></sup> <span 
+class="cmsy-10x-x-120">- </span>1) see also <a 
+href="#lbl:EXTR.table"><span class="lstinline"><span 
+class="ecss-1200">__EXTR</span></span></a> and <a 
+href="#lbl:EXTRU.table"><span class="lstinline"><span 
+class="ecss-1200">__EXTRU</span></span></a>.
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.10  </span> <a 
+href="#x50-8200014.12.1.10" id="x50-8200014.12.1.10">Bit Inventory</a></h5>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug21x.png" alt=""  /></div>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug22x.png" alt=""  /></div>
+<!--l. 458--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.1.11  </span> <a 
+href="#x50-8300014.12.1.11" id="x50-8300014.12.1.11">Core</a></h5>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug23x.png" alt=""  /></div>
+<!--l. 476--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.12.2</span>  <a 
+href="#x50-8400014.12.2" id="x50-8400014.12.2">Short Descriptions and Prototypes</a></h4>
+<!--l. 478--><p class="noindent" >The following sections list the builtins with their respective prototypes and associated machine
+instructions. In case an assembler mnemonic is given, the builtin’s semantic is the same (from
+the C programmer’s point of view) as the semantic of the machine instruction. We do not
+repeat the instruction set manual here.
+</p><!--l. 480--><p class="noindent" >The entries look like this:
+</p><!--l. 482--><p class="noindent" ><a 
+ id="lbl:FOO.table"></a> <a 
+ id="lbl:FOO.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:FOO.table"><span 
+class="ecss-1095">__FOO</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">mnemonic</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 483--><p class="noindent" ><span 
+class="ecss-1095">&#x003C;return type&#x003E;</span><br 
+class="newline" /><span 
+class="ecss-1095">__FOO (&#x003C;argument list&#x003E;)</span></p></dd></dl>
+<!--l. 486--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.1  </span> <a 
+href="#x50-8500014.12.2.1" id="x50-8500014.12.2.1">Extracting from Packed Vectors and Integers</a></h5>
+<!--l. 488--><p class="noindent" ><span class="lstinline"><span 
+class="ecss-1200">cn</span></span> denotes an <span class="lstinline"><span 
+class="ecss-1200">n</span></span> bit compile time constant.
+</p><!--l. 490--><p class="noindent" ><a 
+ id="lbl:GETBYTE.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:GETBYTE.table"><span 
+class="ecss-1095">__GETBYTE</span></a>  </span>     </dt><dd 
+class="list">
+                  <!--l. 490--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__GETBYTE (__vector signed char</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> c2)</span></p></dd></dl>
+<!--l. 491--><p class="noindent" ><a 
+ id="lbl:GETUBYTE.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:GETUBYTE.table"><span 
+class="ecss-1095">__GETUBYTE</span></a>  </span>   </dt><dd 
+class="list">
+                  <!--l. 491--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__GETUBYTE (__vector unsigned char</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> c2)</span></p></dd></dl>
+<!--l. 492--><p class="noindent" ><a 
+ id="lbl:GETHWORD.proto"></a>
+                                                                                       
+                                                                                       
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:GETHWORD.table"><span 
+class="ecss-1095">__GETHWORD</span></a>  </span>  </dt><dd 
+class="list">
+                  <!--l. 492--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__GETHWORD (__vector signed short</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> c1)</span></p></dd></dl>
+<!--l. 493--><p class="noindent" ><a 
+ id="lbl:GETUHWORD.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:GETUHWORD.table"><span 
+class="ecss-1095">__GETUHWORD</span></a>  </span> </dt><dd 
+class="list">
+                  <!--l. 493--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__GETUHWORD (__vector unsigned short</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> c1)</span></p></dd></dl>
+<!--l. 500--><p class="noindent" ><a 
+ id="lbl:EXTR.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:EXTR.table"><span 
+class="ecss-1095">__EXTR</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">extr</span></span><span 
+class="pcrr8t-">)</span></span>  </dt><dd 
+class="list">
+                  <!--l. 500--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__EXTR (int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> pos, unsigned int</span><span 
+class="ecss-1095"> c5)</span></p></dd></dl>
+<!--l. 505--><p class="noindent" ><a 
+ id="lbl:EXTRU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:EXTRU.table"><span 
+class="ecss-1095">__EXTRU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">extr.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 505--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__EXTRU (unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> pos, unsigned int</span><span 
+class="ecss-1095"> c5)</span></p></dd></dl>
+<!--l. 509--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.2  </span> <a 
+href="#x50-8600014.12.2.2" id="x50-8600014.12.2.2">Saturation</a></h5>
+<!--l. 511--><p class="noindent" ><a 
+ id="lbl:SATB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SATB.table"><span 
+class="ecss-1095">__SATB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sat.b</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 511--><p class="noindent" ><span 
+class="ecss-1095">char</span><br 
+class="newline" /><span 
+class="ecss-1095">__SATB (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 512--><p class="noindent" ><a 
+ id="lbl:SATBU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SATBU.table"><span 
+class="ecss-1095">__SATBU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sat.bu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 512--><p class="noindent" ><span 
+class="ecss-1095">unsigned char</span><br 
+class="newline" /><span 
+class="ecss-1095">__SATBU (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 513--><p class="noindent" ><a 
+ id="lbl:SATH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SATH.table"><span 
+class="ecss-1095">__SATH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sat.h</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 513--><p class="noindent" ><span 
+class="ecss-1095">short</span><br 
+class="newline" /><span 
+class="ecss-1095">__SATH (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 514--><p class="noindent" ><a 
+ id="lbl:SATHU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SATHU.table"><span 
+class="ecss-1095">__SATHU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sat.hu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 514--><p class="noindent" ><span 
+class="ecss-1095">unsigned short</span><br 
+class="newline" /><span 
+class="ecss-1095">__SATHU (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 516--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.3  </span> <a 
+href="#x50-8700014.12.2.3" id="x50-8700014.12.2.3">Saturated Addition and Subtraction</a></h5>
+<!--l. 518--><p class="noindent" ><a 
+ id="lbl:ADDS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ADDS.table"><span 
+class="ecss-1095">__ADDS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">adds</span></span><span 
+class="pcrr8t-">)</span></span>  </dt><dd 
+class="list">
+                  <!--l. 518--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__ADDS (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 519--><p class="noindent" ><a 
+ id="lbl:ADDSU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ADDSU.table"><span 
+class="ecss-1095">__ADDSU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">adds.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 519--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__ADDSU (unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 520--><p class="noindent" ><a 
+ id="lbl:ADDSH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ADDSH.table"><span 
+class="ecss-1095">__ADDSH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">adds.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 520--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ADDSH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 521--><p class="noindent" ><a 
+ id="lbl:ADDSHU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ADDSHU.table"><span 
+class="ecss-1095">__ADDSHU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">adds.hu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 521--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ADDSHU (__vector unsigned short</span><span 
+class="ecss-1095"> a, __vector unsigned short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 522--><p class="noindent" ><a 
+ id="lbl:ADDSB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ADDSB.table"><span 
+class="ecss-1095">__ADDSB</span></a>  </span>       </dt><dd 
+class="list">
+                  <!--l. 522--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__ADDSB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 523--><p class="noindent" ><a 
+ id="lbl:ADDSBU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ADDSBU.table"><span 
+class="ecss-1095">__ADDSBU</span></a>  </span>      </dt><dd 
+class="list">
+                  <!--l. 523--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned char</span><br 
+class="newline" /><span 
+class="ecss-1095">__ADDSBU (__vector unsigned char</span><span 
+class="ecss-1095"> a, __vector unsigned char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 525--><p class="noindent" ><a 
+ id="lbl:SUBS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SUBS.table"><span 
+class="ecss-1095">__SUBS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">subs</span></span><span 
+class="pcrr8t-">)</span></span>  </dt><dd 
+class="list">
+                  <!--l. 525--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__SUBS (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 526--><p class="noindent" ><a 
+ id="lbl:SUBSU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SUBSU.table"><span 
+class="ecss-1095">__SUBSU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">subs.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 526--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__SUBSU (unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 527--><p class="noindent" ><a 
+ id="lbl:SUBSH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SUBSH.table"><span 
+class="ecss-1095">__SUBSH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">subs.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 527--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__SUBSH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 528--><p class="noindent" ><a 
+ id="lbl:SUBSHU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SUBSHU.table"><span 
+class="ecss-1095">__SUBSHU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">subs.hu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 528--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned short</span><br 
+class="newline" /><span 
+class="ecss-1095">__SUBSHU (__vector unsigned short</span><span 
+class="ecss-1095"> a, __vector unsigned short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 529--><p class="noindent" ><a 
+ id="lbl:SUBSB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SUBSB.table"><span 
+class="ecss-1095">__SUBSB</span></a>  </span>        </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 529--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__SUBSB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 530--><p class="noindent" ><a 
+ id="lbl:SUBSBU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SUBSBU.table"><span 
+class="ecss-1095">__SUBSBU</span></a>  </span>      </dt><dd 
+class="list">
+                  <!--l. 530--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned char</span><br 
+class="newline" /><span 
+class="ecss-1095">__SUBSBU (__vector unsigned char</span><span 
+class="ecss-1095"> a, __vector unsigned char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 533--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.4  </span> <a 
+href="#x50-8800014.12.2.4" id="x50-8800014.12.2.4">Multiplication</a></h5>
+<!--l. 535--><p class="noindent" ><a 
+ id="lbl:MUL.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MUL.table"><span 
+class="ecss-1095">__MUL</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">mul</span></span><span 
+class="pcrr8t-">)</span></span>    </dt><dd 
+class="list">
+                  <!--l. 535--><p class="noindent" ><span 
+class="ecss-1095">long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MUL (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 536--><p class="noindent" ><a 
+ id="lbl:MULU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MULU.table"><span 
+class="ecss-1095">__MULU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">mul.u</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 536--><p class="noindent" ><span 
+class="ecss-1095">unsigned long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MULU (unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 537--><p class="noindent" ><a 
+ id="lbl:MULS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MULS.table"><span 
+class="ecss-1095">__MULS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">muls</span></span><span 
+class="pcrr8t-">)</span></span>  </dt><dd 
+class="list">
+                  <!--l. 537--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MULS (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 538--><p class="noindent" ><a 
+ id="lbl:MULSU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MULSU.table"><span 
+class="ecss-1095">__MULSU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">muls.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 538--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MULSU (unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 541--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.5  </span> <a 
+href="#x50-8900014.12.2.5" id="x50-8900014.12.2.5">Multiply-Add and Multiply-Subtract</a></h5>
+<!--l. 543--><p class="noindent" ><a 
+ id="lbl:MADD.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MADD.table"><span 
+class="ecss-1095">__MADD</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">madd</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 543--><p class="noindent" ><span 
+class="ecss-1095">long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MADD (long int</span><span 
+class="ecss-1095"> d, int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 544--><p class="noindent" ><a 
+ id="lbl:MADDU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MADDU.table"><span 
+class="ecss-1095">__MADDU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">madd.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 544--><p class="noindent" ><span 
+class="ecss-1095">unsigned long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MADDU (unsigned long int</span><span 
+class="ecss-1095"> d, unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 545--><p class="noindent" ><a 
+ id="lbl:MADDS32.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MADDS32.table"><span 
+class="ecss-1095">__MADDS32</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">madds</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 545--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MADDS32 (long int</span><span 
+class="ecss-1095"> d, int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 546--><p class="noindent" ><a 
+ id="lbl:MADDS64.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MADDS64.table"><span 
+class="ecss-1095">__MADDS64</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">madds</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 546--><p class="noindent" ><span 
+class="ecss-1095">long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MADDS64 (long int</span><span 
+class="ecss-1095"> d, int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 547--><p class="noindent" ><a 
+ id="lbl:MADDSU32.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MADDSU32.table"><span 
+class="ecss-1095">__MADDSU32</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">madds.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 547--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MADDSU32 (unsigned long int</span><span 
+class="ecss-1095"> d, unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 548--><p class="noindent" ><a 
+ id="lbl:MADDSU64.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MADDSU64.table"><span 
+class="ecss-1095">__MADDSU64</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">madds.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 548--><p class="noindent" ><span 
+class="ecss-1095">unsigned long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MADDSU64 (unsigned long int</span><span 
+class="ecss-1095"> d, unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 550--><p class="noindent" ><a 
+ id="lbl:MSUB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MSUB.table"><span 
+class="ecss-1095">__MSUB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">msub</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 550--><p class="noindent" ><span 
+class="ecss-1095">long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MSUB (long int</span><span 
+class="ecss-1095"> d, int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 551--><p class="noindent" ><a 
+ id="lbl:MSUBU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MSUBU.table"><span 
+class="ecss-1095">__MSUBU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">msub.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 551--><p class="noindent" ><span 
+class="ecss-1095">unsigned long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MSUBU (unsigned long int</span><span 
+class="ecss-1095"> d, unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 552--><p class="noindent" ><a 
+ id="lbl:MSUBS32.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MSUBS32.table"><span 
+class="ecss-1095">__MSUBS32</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">msubs</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 552--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MSUBS32 (long int</span><span 
+class="ecss-1095"> d, int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 553--><p class="noindent" ><a 
+ id="lbl:MSUBS64.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MSUBS64.table"><span 
+class="ecss-1095">__MSUBS64</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">msubs</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 553--><p class="noindent" ><span 
+class="ecss-1095">long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MSUBS64 (long int</span><span 
+class="ecss-1095"> d, int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 554--><p class="noindent" ><a 
+ id="lbl:MSUBSU32.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MSUBSU32.table"><span 
+class="ecss-1095">__MSUBSU32</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">msubs.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 554--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MSUBSU32 (unsigned long int</span><span 
+class="ecss-1095"> d, unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 558--><p class="noindent" ><a 
+ id="lbl:MSUBSU64.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MSUBSU64.table"><span 
+class="ecss-1095">__MSUBSU64</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">msubs.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 558--><p class="noindent" ><span 
+class="ecss-1095">unsigned long int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MSUBSU64 (unsigned long int</span><span 
+class="ecss-1095"> d, unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 561--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.6  </span> <a 
+href="#x50-9000014.12.2.6" id="x50-9000014.12.2.6">Minimun and Maximum</a></h5>
+<!--l. 563--><p class="noindent" ><a 
+ id="lbl:MAX.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MAX.table"><span 
+class="ecss-1095">__MAX</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">max</span></span><span 
+class="pcrr8t-">)</span></span>    </dt><dd 
+class="list">
+                  <!--l. 563--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MAX (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 564--><p class="noindent" ><a 
+ id="lbl:MAXU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MAXU.table"><span 
+class="ecss-1095">__MAXU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">max.u</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 564--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MAXU (unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 565--><p class="noindent" ><a 
+ id="lbl:MAXB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MAXB.table"><span 
+class="ecss-1095">__MAXB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">max.b</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 565--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__MAXB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 566--><p class="noindent" ><a 
+ id="lbl:MAXBU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MAXBU.table"><span 
+class="ecss-1095">__MAXBU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">max.bu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 566--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned char</span><br 
+class="newline" /><span 
+class="ecss-1095">__MAXBU (__vector unsigned char</span><span 
+class="ecss-1095"> a, __vector unsigned char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 567--><p class="noindent" ><a 
+ id="lbl:MAXH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MAXH.table"><span 
+class="ecss-1095">__MAXH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">max.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 567--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__MAXH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 568--><p class="noindent" ><a 
+ id="lbl:MAXHU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MAXHU.table"><span 
+class="ecss-1095">__MAXHU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">max.hu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 568--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned short</span><br 
+class="newline" /><span 
+class="ecss-1095">__MAXHU (__vector unsigned short</span><span 
+class="ecss-1095"> a, __vector unsigned short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 570--><p class="noindent" ><a 
+ id="lbl:MIN.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MIN.table"><span 
+class="ecss-1095">__MIN</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">min</span></span><span 
+class="pcrr8t-">)</span></span>     </dt><dd 
+class="list">
+                  <!--l. 570--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MIN (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 571--><p class="noindent" ><a 
+ id="lbl:MINU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MINU.table"><span 
+class="ecss-1095">__MINU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">min.u</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 571--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MINU (unsigned int</span><span 
+class="ecss-1095"> a, unsigned int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 572--><p class="noindent" ><a 
+ id="lbl:MINB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MINB.table"><span 
+class="ecss-1095">__MINB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">min.b</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 572--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__MINB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 573--><p class="noindent" ><a 
+ id="lbl:MINBU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MINBU.table"><span 
+class="ecss-1095">__MINBU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">min.bu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 573--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned char</span><br 
+class="newline" /><span 
+class="ecss-1095">__MINBU (__vector unsigned char</span><span 
+class="ecss-1095"> a, __vector unsigned char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 574--><p class="noindent" ><a 
+ id="lbl:MINH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MINH.table"><span 
+class="ecss-1095">__MINH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">min.h</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 574--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__MINH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 575--><p class="noindent" ><a 
+ id="lbl:MINHU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MINHU.table"><span 
+class="ecss-1095">__MINHU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">min.hu</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 575--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned short</span><br 
+class="newline" /><span 
+class="ecss-1095">__MINHU (__vector unsigned short</span><span 
+class="ecss-1095"> a, __vector unsigned short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 578--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.7  </span> <a 
+href="#x50-9100014.12.2.7" id="x50-9100014.12.2.7">Absolute Value, Absolute Value of Difference</a></h5>
+<!--l. 580--><p class="noindent" ><a 
+ id="lbl:ABS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABS.table"><span 
+class="ecss-1095">__ABS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">abs</span></span><span 
+class="pcrr8t-">)</span></span>    </dt><dd 
+class="list">
+                  <!--l. 580--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABS (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 581--><p class="noindent" ><a 
+ id="lbl:ABSS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSS.table"><span 
+class="ecss-1095">__ABSS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">abss</span></span><span 
+class="pcrr8t-">)</span></span>  </dt><dd 
+class="list">
+                  <!--l. 581--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSS (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 582--><p class="noindent" ><a 
+ id="lbl:ABSH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSH.table"><span 
+class="ecss-1095">__ABSH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">abs.h</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 582--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSH (__vector signed short</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 583--><p class="noindent" ><a 
+ id="lbl:ABSSH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSSH.table"><span 
+class="ecss-1095">__ABSSH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">abss.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 583--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSSH (__vector signed short</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 584--><p class="noindent" ><a 
+ id="lbl:ABSB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSB.table"><span 
+class="ecss-1095">__ABSB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">abs.b</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 584--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSB (__vector signed char</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 586--><p class="noindent" ><a 
+ id="lbl:ABSDIF.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSDIF.table"><span 
+class="ecss-1095">__ABSDIF</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">absdif</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 586--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSDIF (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 587--><p class="noindent" ><a 
+ id="lbl:ABSDIFH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSDIFH.table"><span 
+class="ecss-1095">__ABSDIFH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">absdif.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 587--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSDIFH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 588--><p class="noindent" ><a 
+ id="lbl:ABSDIFB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSDIFB.table"><span 
+class="ecss-1095">__ABSDIFB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">absdif.b</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 588--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSDIFB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 589--><p class="noindent" ><a 
+ id="lbl:ABSDIFS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSDIFS.table"><span 
+class="ecss-1095">__ABSDIFS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">absdifs</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 589--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSDIFS (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 590--><p class="noindent" ><a 
+ id="lbl:ABSDIFSH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSDIFSH.table"><span 
+class="ecss-1095">__ABSDIFSH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">absdifs.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 590--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSDIFSH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 592--><p class="noindent" ><a 
+ id="lbl:ABSDIFSB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ABSDIFSB.table"><span 
+class="ecss-1095">__ABSDIFSB</span></a>  </span>    </dt><dd 
+class="list">
+                  <!--l. 592--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__ABSDIFSB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 595--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.8  </span> <a 
+href="#x50-9200014.12.2.8" id="x50-9200014.12.2.8">Comparison</a></h5>
+<!--l. 597--><p class="noindent" ><a 
+ id="lbl:LTB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:LTB.table"><span 
+class="ecss-1095">__LTB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">lt.b</span></span><span 
+class="pcrr8t-">)</span></span>   </dt><dd 
+class="list">
+                  <!--l. 597--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__LTB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 598--><p class="noindent" ><a 
+ id="lbl:LTBU.proto"></a>
+                                                                                       
+                                                                                       
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:LTBU.table"><span 
+class="ecss-1095">__LTBU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">lt.bu</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 598--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned char</span><br 
+class="newline" /><span 
+class="ecss-1095">__LTBU (__vector unsigned char</span><span 
+class="ecss-1095"> a, __vector unsigned char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 599--><p class="noindent" ><a 
+ id="lbl:LTH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:LTH.table"><span 
+class="ecss-1095">__LTH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">lt.h</span></span><span 
+class="pcrr8t-">)</span></span>   </dt><dd 
+class="list">
+                  <!--l. 599--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__LTH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 600--><p class="noindent" ><a 
+ id="lbl:LTHU.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:LTHU.table"><span 
+class="ecss-1095">__LTHU</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">lt.hu</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 600--><p class="noindent" ><span 
+class="ecss-1095">__vector unsigned short</span><br 
+class="newline" /><span 
+class="ecss-1095">__LTHU (__vector unsigned short</span><span 
+class="ecss-1095"> a, __vector unsigned short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 601--><p class="noindent" ><a 
+ id="lbl:EQB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:EQB.table"><span 
+class="ecss-1095">__EQB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">eq.b</span></span><span 
+class="pcrr8t-">)</span></span>   </dt><dd 
+class="list">
+                  <!--l. 601--><p class="noindent" ><span 
+class="ecss-1095">__vector signed char</span><br 
+class="newline" /><span 
+class="ecss-1095">__EQB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 602--><p class="noindent" ><a 
+ id="lbl:EQH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:EQH.table"><span 
+class="ecss-1095">__EQH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">eq.h</span></span><span 
+class="pcrr8t-">)</span></span>   </dt><dd 
+class="list">
+                  <!--l. 602--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__EQH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 603--><p class="noindent" ><a 
+ id="lbl:EQANYB.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:EQANYB.table"><span 
+class="ecss-1095">__EQANYB</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">eqany.b</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 603--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__EQANYB (__vector signed char</span><span 
+class="ecss-1095"> a, __vector signed char</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 604--><p class="noindent" ><a 
+ id="lbl:EQANYH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:EQANYH.table"><span 
+class="ecss-1095">__EQANYH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">eqany.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 604--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__EQANYH (__vector signed short</span><span 
+class="ecss-1095"> a, __vector signed short</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 607--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.9  </span> <a 
+href="#x50-9300014.12.2.9" id="x50-9300014.12.2.9">Shift, Rotate and Saturated Shift</a></h5>
+<!--l. 612--><p class="noindent" ><a 
+ id="lbl:ROTATEL.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ROTATEL.table"><span 
+class="ecss-1095">__ROTATEL</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">dextr</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 612--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__ROTATEL (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 614--><p class="noindent" ><a 
+ id="lbl:SHAS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:SHAS.table"><span 
+class="ecss-1095">__SHAS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">shas</span></span><span 
+class="pcrr8t-">)</span></span>  </dt><dd 
+class="list">
+                  <!--l. 614--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__SHAS (int</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 616--><p class="noindent" ><a 
+ id="lbl:ASHIFTRH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ASHIFTRH.table"><span 
+class="ecss-1095">__ASHIFTRH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sha.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 616--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ASHIFTRH (__vector signed short</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 617--><p class="noindent" ><a 
+ id="lbl:ASHIFTLH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:ASHIFTLH.table"><span 
+class="ecss-1095">__ASHIFTLH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sha.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 617--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__ASHIFTLH (__vector signed short</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 618--><p class="noindent" ><a 
+ id="lbl:LSHIFTRH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:LSHIFTRH.table"><span 
+class="ecss-1095">__LSHIFTRH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sh.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 618--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__LSHIFTRH (__vector signed short</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+<!--l. 619--><p class="noindent" ><a 
+ id="lbl:LSHIFTLH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:LSHIFTLH.table"><span 
+class="ecss-1095">__LSHIFTLH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">sh.h</span></span><span 
+class="pcrr8t-">)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 619--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__LSHIFTLH (__vector signed short</span><span 
+class="ecss-1095"> a, int</span><span 
+class="ecss-1095"> b)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 622--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.10  </span> <a 
+href="#x50-9400014.12.2.10" id="x50-9400014.12.2.10">Bit Inventory</a></h5>
+<!--l. 625--><p class="noindent" ><a 
+ id="lbl:PARITY.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:PARITY.table"><span 
+class="ecss-1095">__PARITY</span></a>  </span>       </dt><dd 
+class="list">
+                  <!--l. 625--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__PARITY (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 640--><p class="noindent" ><a 
+ id="lbl:CLS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:CLS.table"><span 
+class="ecss-1095">__CLS</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">cls</span></span><span 
+class="pcrr8t-">)</span></span>     </dt><dd 
+class="list">
+                  <!--l. 640--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__CLS (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 642--><p class="noindent" ><a 
+ id="lbl:CLSH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:CLSH.table"><span 
+class="ecss-1095">__CLSH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">cls.h</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 642--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__CLSH (__vector signed short</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 646--><p class="noindent" ><a 
+ id="lbl:CLZ.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:CLZ.table"><span 
+class="ecss-1095">__CLZ</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">clz</span></span><span 
+class="pcrr8t-">)</span></span>     </dt><dd 
+class="list">
+                  <!--l. 646--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__CLZ (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 650--><p class="noindent" ><a 
+ id="lbl:CLZH.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:CLZH.table"><span 
+class="ecss-1095">__CLZH</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">clz.h</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 650--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__CLZH (__vector signed short</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 653--><p class="noindent" ><a 
+ id="lbl:CTZ.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:CTZ.table"><span 
+class="ecss-1095">__CTZ</span></a>  </span>          </dt><dd 
+class="list">
+                  <!--l. 653--><p class="noindent" ><span 
+class="ecss-1095">__vector signed short</span><br 
+class="newline" /><span 
+class="ecss-1095">__CTZ (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 658--><p class="noindent" ><a 
+ id="lbl:FFS.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:FFS.table"><span 
+class="ecss-1095">__FFS</span></a>  </span>           </dt><dd 
+class="list">
+                  <!--l. 658--><p class="noindent" ><span 
+class="ecss-1095">int</span><br 
+class="newline" /><span 
+class="ecss-1095">__FFS (int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 669--><p class="noindent" >
+</p>
+<h5 class="subsubsectionHead"><span class="titlemark">14.12.2.11  </span> <a 
+href="#x50-9500014.12.2.11" id="x50-9500014.12.2.11">Core</a></h5>
+<!--l. 671--><p class="noindent" ><a 
+ id="lbl:MFCR.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MFCR.table"><span 
+class="ecss-1095">__MFCR</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">mfcr</span></span><span 
+class="pcrr8t-">)</span></span>  </dt><dd 
+class="list">
+                  <!--l. 671--><p class="noindent" ><span 
+class="ecss-1095">unsigned int</span><br 
+class="newline" /><span 
+class="ecss-1095">__MFCR (unsigned int</span><span 
+class="ecss-1095"> c16)</span></p></dd></dl>
+<!--l. 672--><p class="noindent" ><a 
+ id="lbl:MTCR.proto"></a>
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><a 
+href="#lbl:MTCR.table"><span 
+class="ecss-1095">__MTCR</span></a>  <span 
+class="pcrr8t-">(</span><span class="verb"><span 
+class="pcrr8t-">mtcr</span></span><span 
+class="pcrr8t-">)</span></span> </dt><dd 
+class="list">
+                  <!--l. 672--><p class="noindent" ><span 
+class="ecss-1095">void</span><br 
+class="newline" /><span 
+class="ecss-1095">__MTCR (unsigned int</span><span 
+class="ecss-1095"> c16, unsigned int</span><span 
+class="ecss-1095"> a)</span></p></dd></dl>
+<!--l. 676--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.12.3</span>  <a 
+href="#x50-9600014.12.3" id="x50-9600014.12.3">Examples for Saturation/Packed Instruction</a></h4>
+<!--l. 678--><p class="noindent" >The<span class="marginpar"><span class="fbox"><span 
+class="cmr-10">v3.4</span></span></span><a 
+ id="dx50-96001"></a> packed arithmetic instructions partition a 32-bit word into several identical objects
+which can then be fetched, processed and stored in parallel.
+</p><!--l. 680--><p class="noindent" >The TriCore architecture supports two packed formats. The first format divides a 32-bit word
+into two 16-bit (halfword) values. Instructions which handle data in this way, are denoted in the
+instruction memonic by the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">h</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">hu</span></span> data type modifiers.
+</p><!--l. 682--><p class="noindent" >The second packed format divides a 32-bit word into four 8-bit values. Instructions which
+handle the data in this way, are denoted by the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">b</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bu</span></span> data type modifiers. For example, an
+addition to individual packed bytes or halfwords with saturation is performed by using <span class="lstinline"><span 
+class="ecss-1200">adds</span><span 
+class="ecss-1200">.[</span><span 
+class="ecss-1200">bu</span><span 
+class="ecss-1200">]</span></span>
+or<span class="lstinline"><span 
+class="ecss-1200">add</span><span 
+class="ecss-1200">.[</span><span 
+class="ecss-1200">hu</span><span 
+class="ecss-1200">]</span></span> instruction, respectively.
+</p><!--l. 685--><p class="noindent" >The sat instructions can be used to saturate the result of a 32-bit calculation before storing it in
+                                                                                       
+                                                                                       
+a byte or halfword in memory or a register. In the following Example1 the compiler generates a
+<span class="lstinline"><span 
+class="ecss-1200">sat</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bu</span></span> instruction for a test of the <span class="lstinline"><span 
+class="ecsx-1200">unsigned</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">char</span></span> boundaries.
+</p><!--l. 687--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example1</span>
+</p><!--l. 689--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb155"><a 
+ id="x50-96003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><br class="fancyvrb" /><a 
+ id="x50-96005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> satbu</span><span 
+class="pcrr7t-x-x-144"> (unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> z)</span><br class="fancyvrb" /><a 
+ id="x50-96007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x50-96009r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> z</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> (z</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> 0xff)</span><span 
+class="pcrr7t-x-x-144"> ?</span><span 
+class="pcrr7t-x-x-144"> 0xff</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> z;</span><br class="fancyvrb" /><a 
+ id="x50-96011r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 697--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example2</span>
+</p><!--l. 699--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb156"><a 
+ id="x50-96013r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><br class="fancyvrb" /><a 
+ id="x50-96015r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> adds</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> i,</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> j)</span><br class="fancyvrb" /><a 
+ id="x50-96017r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-96019r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __ADDS</span><span 
+class="pcrr7t-x-x-144"> (i,</span><span 
+class="pcrr7t-x-x-144"> j);</span><br class="fancyvrb" /><a 
+ id="x50-96021r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 707--><p class="noindent" >or
+</p><!--l. 709--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb157"><a 
+ id="x50-96023r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><br class="fancyvrb" /><a 
+ id="x50-96025r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> satfoo</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> i,</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s)</span><br class="fancyvrb" /><a 
+ id="x50-96027r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x50-96029r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Add</span><span 
+class="pcrr7t-x-x-144"> signed</span><span 
+class="pcrr7t-x-x-144"> saturate</span><span 
+class="pcrr7t-x-x-144"> and</span><span 
+class="pcrr7t-x-x-144"> saturate</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> byte</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x50-96031r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> __SATBU</span><span 
+class="pcrr7t-x-x-144"> (__ADDS</span><span 
+class="pcrr7t-x-x-144"> (i,</span><span 
+class="pcrr7t-x-x-144"> s));</span><br class="fancyvrb" /><a 
+ id="x50-96033r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 718--><p class="noindent" >The intrinsic function <span class="lstinline"><span 
+class="ecss-1200">__ADDS</span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">i</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">j</span><span 
+class="ecss-1200">)</span></span> will saturate individual <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> to the highest positive
+32-bit signed integer on individual overflow, or to the highest negative 32-bit signed integer on
+individual underflow.
+</p><!--l. 720--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.12.4</span>  <a 
+href="#x50-9700014.12.4" id="x50-9700014.12.4">Examples SIMD</a></h4>
+<a 
+ id="dx50-97001"></a>
+<!--l. 723--><p class="noindent" >In<span class="marginpar"><span class="fbox"><span 
+class="cmr-10">v3.4</span></span></span><a 
+ id="dx50-97002"></a> computing, SIMD (Single Instruction, Multiple Data) is a set of operations for
+efficiently handling large quantities of data in parallel, as in a vector processor or array
+processor.
+</p><!--l. 725--><p class="noindent" >TriCore’s data path supports SIMD operations; the processor can split its data path to process
+two 16-bit halfwords or four 8-bit bytes. Using its SIMD capabilities, TriCore can execute two
+16-bit multiplications with single-cycle throughput, i.e. with a throughput that is twice as high
+as the multiplication throughput of today’s midrange DSP processors.
+                                                                                       
+                                                                                       
+</p><!--l. 727--><p class="noindent" >With the <span class="lstinline"><span 
+class="ecss-1200">__vector</span></span> attribute for a variable, the compiler tries to use the SIMD for arithmetic
+operations.
+</p><!--l. 729--><p class="noindent" >A vector consists either of an array of two <span class="lstinline"><span 
+class="ecsx-1200">short</span></span>, or of an array of four <span class="lstinline"><span 
+class="ecsx-1200">char</span></span>. The <a 
+href="#x50-970033">Listing 14.3<!--tex4ht:ref: sec:intrinsic_fct --></a>
+shows the summation of two vectors named vector1 and vector2. It is also possible to use
+SIMD for two-dimensional arrays if one dimension consists of either two <span class="lstinline"><span 
+class="ecsx-1200">short</span></span> or four
+<span class="lstinline"><span 
+class="ecsx-1200">char</span></span>.
+</p><!--l. 731--><p class="noindent" >For other types of arrays the <span class="lstinline"><span 
+class="ecss-1200">__vector</span></span> is not supported, therefore the compiler will issue an
+error.
+</p>
+<hr class="figure" /><div class="figure" 
+>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+<!--l. 733--><p class="noindent" ><img 
+src="simd.png" alt="pict"  
+ />
+<br /> </p><div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id"><a 
+ id="x50-970033">Figure 14.3</a>:  
+Single Instruction Multiple Data</td></tr></table></div><!--tex4ht:label?: x50-970033 -->
+                                                                                       
+                                                                                       
+</div><hr class="endfigure" />
+<!--l. 735--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p>
+<div class="fancyvrb" id="fancyvrb158"><a 
+ id="x50-97005r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> c1_vector</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {10,</span><span 
+class="pcrr7t-x-x-144"> 11,</span><span 
+class="pcrr7t-x-x-144"> 12,</span><span 
+class="pcrr7t-x-x-144"> 13};</span><br class="fancyvrb" /><a 
+ id="x50-97007r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> c2_vector;</span>
+<br class="fancyvrb" /><a 
+ id="x50-97009r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97011r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> c1_array_vector[4]</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-97013r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {10,</span><span 
+class="pcrr7t-x-x-144"> 11,</span><span 
+class="pcrr7t-x-x-144"> 12,</span><span 
+class="pcrr7t-x-x-144"> 13},</span>
+<br class="fancyvrb" /><a 
+ id="x50-97015r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {20,</span><span 
+class="pcrr7t-x-x-144"> 21,</span><span 
+class="pcrr7t-x-x-144"> 22,</span><span 
+class="pcrr7t-x-x-144"> 23},</span><br class="fancyvrb" /><a 
+ id="x50-97017r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {30,</span><span 
+class="pcrr7t-x-x-144"> 31,</span><span 
+class="pcrr7t-x-x-144"> 32,</span><span 
+class="pcrr7t-x-x-144"> 33},</span><br class="fancyvrb" /><a 
+ id="x50-97019r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {40,</span><span 
+class="pcrr7t-x-x-144"> 41,</span><span 
+class="pcrr7t-x-x-144"> 42,</span><span 
+class="pcrr7t-x-x-144"> 43}</span>
+<br class="fancyvrb" /><a 
+ id="x50-97021r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> };</span><br class="fancyvrb" /><a 
+ id="x50-97023r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97025r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> c2_array_vector[4];</span>
+<br class="fancyvrb" /><a 
+ id="x50-97027r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97029r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s1_vector</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {10,</span><span 
+class="pcrr7t-x-x-144"> 11};</span>
+<br class="fancyvrb" /><a 
+ id="x50-97031r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s1_array_vector[4]</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x50-97033r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {10,</span><span 
+class="pcrr7t-x-x-144"> 11},</span><br class="fancyvrb" /><a 
+ id="x50-97035r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {20,</span><span 
+class="pcrr7t-x-x-144"> 21},</span><br class="fancyvrb" /><a 
+ id="x50-97037r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {30,</span><span 
+class="pcrr7t-x-x-144"> 31},</span><br class="fancyvrb" /><a 
+ id="x50-97039r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {40,</span><span 
+class="pcrr7t-x-x-144"> 41}</span>
+<br class="fancyvrb" /><a 
+ id="x50-97041r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> };</span><br class="fancyvrb" /><a 
+ id="x50-97043r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97045r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s2_array_vector[4];</span>
+<br class="fancyvrb" /><a 
+ id="x50-97047r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __vector</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s2_vector;</span><br class="fancyvrb" /><a 
+ id="x50-97049r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97051r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> foo(void)</span><br class="fancyvrb" /><a 
+ id="x50-97053r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-97055r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i;</span>
+<br class="fancyvrb" /><a 
+ id="x50-97057r27"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Add</span><span 
+class="pcrr7t-x-x-144"> multiple</span><span 
+class="pcrr7t-x-x-144"> data</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x50-97059r28"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> 4;</span><span 
+class="pcrr7t-x-x-144"> i++)</span>
+<br class="fancyvrb" /><a 
+ id="x50-97061r29"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c2_array_vector[i]</span><span 
+class="pcrr7t-x-x-144"> +=</span><span 
+class="pcrr7t-x-x-144"> c1_array_vector[i];</span>
+<br class="fancyvrb" /><a 
+ id="x50-97063r30"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97065r31"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c2_vector</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> c1_vector;</span>
+<br class="fancyvrb" /><a 
+ id="x50-97067r32"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> sizeof(c2_array_vector)</span><span 
+class="pcrr7t-x-x-144"> /</span><span 
+class="pcrr7t-x-x-144"> sizeof(c2_array_vector[0]);</span><span 
+class="pcrr7t-x-x-144"> i++)</span>
+<br class="fancyvrb" /><a 
+ id="x50-97069r33"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c2_array_vector[i]</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> c1_array_vector[i];</span><br class="fancyvrb" /><a 
+ id="x50-97071r34"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x50-97073r35"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x50-97075r36"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> sfoo(void)</span><br class="fancyvrb" /><a 
+ id="x50-97077r37"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x50-97079r38"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i;</span><br class="fancyvrb" /><a 
+ id="x50-97081r39"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97083r40"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> 4;</span><span 
+class="pcrr7t-x-x-144"> i++)</span>
+<br class="fancyvrb" /><a 
+ id="x50-97085r41"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> s1_vector</span><span 
+class="pcrr7t-x-x-144"> +=</span><span 
+class="pcrr7t-x-x-144"> s1_array_vector[i];</span><br class="fancyvrb" /><a 
+ id="x50-97087r42"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x50-97089r43"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> s2_vector</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> s1_vector;</span>
+<br class="fancyvrb" /><a 
+ id="x50-97091r44"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> sizeof(s2_vector)</span><span 
+class="pcrr7t-x-x-144"> /</span><span 
+class="pcrr7t-x-x-144"> sizeof(s2_vector[0]);</span><span 
+class="pcrr7t-x-x-144"> i++)</span>
+<br class="fancyvrb" /><a 
+ id="x50-97093r45"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> s2_array_vector[i]</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> s1_array_vector[i];</span><br class="fancyvrb" /><a 
+ id="x50-97095r46"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse33.html" >next</a>] [<a 
+href="main_gcc_ugse31.html" >prev</a>] [<a 
+href="main_gcc_ugse31.html#tailmain_gcc_ugse31.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse32.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse32.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse32.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>TriCore Specific Attributes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 308--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse14.html" >next</a>] [<a 
+href="main_gcc_ugse12.html" >prev</a>] [<a 
+href="main_gcc_ugse12.html#tailmain_gcc_ugse12.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse13.html">tail</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse13.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">6.4</span>  <a 
+href="main_gcc_ug.html#QQ2-23-32" id="x23-280006.4">TriCore Specific Attributes</a></h3>
+<!--l. 1--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">6.4.1</span>  <a 
+href="main_gcc_ugch6.html#QQ2-23-33" id="x23-290006.4.1">Specifying Attributes of Functions</a></h4>
+<a 
+ id="dx23-29001"></a>
+<!--l. 3--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">asection</span></span>         </dt><dd 
+class="list">
+                  <!--l. 4--><p class="noindent" >In programming embedded systems more control for locating functions
+                  and   variables   is   needed.   Therefore   the   attribute   <span class="lstinline"><span 
+class="ecss-1200">asection</span></span>   was
+                  introduced. The syntax of this attribute is:
+                  </p><!--l. 6--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb45"><a 
+ id="x23-29003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((asection("&#x003C;name&#x003E;",</span><span 
+class="pcrr7t-x-x-144"> "a=&#x003C;align&#x003E;",</span><span 
+class="pcrr7t-x-x-144"> "f=&#x003C;flags&#x003E;")))</span></div>
+                  <!--l. 10--><p class="noindent" >The parameter <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E; </span>specifies the name of the section in which the object
+                  (variable, type or function) should be located. The alignment of the
+                  section, which is set by the parameter a=<span 
+class="cmmi-12">&#x003C;</span>alignment<span 
+class="cmmi-12">&#x003E; </span>must be a
+                  power of 2 value (eg 2<sup><span 
+class="cmr-8">1</span></sup>, 2<sup><span 
+class="cmr-8">2</span></sup>, 2<sup><span 
+class="cmr-8">4</span></sup> †). Additional flags may be set by
+                  the parameter f=<span 
+class="cmmi-12">&#x003C;</span>flags<span 
+class="cmmi-12">&#x003E;</span>. These flags for attributed sections are
+                  available:
+                       </p><dl class="description"><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">a</span> </dt><dd 
+class="description">allocatable. (This is always set.)
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">x</span> </dt><dd 
+class="description">executable
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">p</span> </dt><dd 
+class="description">PCP section</dd></dl>
+                                                                                       
+                                                                                       
+                  <!--l. 18--><p class="noindent" >Setting the alignment and the flags for the attributed section is optional. The
+                  default alignment depends on the data stored in the section and the default
+                  flags are a and w.
+                  </p><!--l. 20--><p class="noindent" >If code is to be allocated in a section defined by the attribute <span class="lstinline"><span 
+class="ecss-1200">asection</span></span> the
+                  x-flag has to be set.
+</p>
+                  <div class="center" 
+>
+<!--l. 22--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox20"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />That sections containing executable code must be word aligned and
+must have the x-flag set.                                           </div>
+</div>
+                  <!--l. 24--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Restriction</span>
+                  </p><!--l. 26--><p class="noindent" >In 1-byte aligned sections integers may reside on odd addresses. This
+                  will lead to a malfunction of the program since the compiler uses
+                  <span class="lstinline"><span 
+class="ecss-1200">st</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> and <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> instructions to access integers. However <span class="lstinline"><span 
+class="ecss-1200">st</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> and
+                  <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> instructions are only valid to access 16-bit aligned memory
+                  locations.
+                  </p><!--l. 28--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+                  </p><!--l. 30--><p class="noindent" >In this example attribute <span class="lstinline"><span 
+class="ecss-1200">asection</span></span> is used to locate the <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">foo</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200">)</span></span>
+                  function in the user defined section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">fastram</span></span>.
+                  </p><!--l. 32--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb46"><a 
+ id="x23-29005r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> foo</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((asection(".fastram",</span><span 
+class="pcrr7t-x-x-144"> "a=4",</span><span 
+class="pcrr7t-x-x-144"> "f=x")));</span></div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">interrupt</span></span>        </dt><dd 
+class="list">
+                  <!--l. 37--><p class="noindent" ><a 
+ id="dx23-29006"></a><a 
+ id="dx23-29007"></a> A function declared with the attribute interrupt uses a jump
+                  and link instruction instead of a <span class="lstinline"><span 
+class="ecss-1200">call</span></span> instruction. Such functions
+                  return with the instruction <span class="lstinline"><span 
+class="ecss-1200">ji</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">a11</span></span> instead of ret (see <a 
+href="main_gcc_ugse27.html#x45-6400014.7">Listing 14.7</a> for
+                  details).
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">interrupt_handler</span></span> </dt><dd 
+class="list">
+                  <!--l. 40--><p class="noindent" ><a 
+ id="dx23-29008"></a><a 
+ id="dx23-29009"></a> A function declared with the attribute <span class="lstinline"><span 
+class="ecss-1200">interrupt_handler</span></span> uses
+                  a <span class="lstinline"><span 
+class="ecss-1200">jump</span></span> instruction instead of a <span class="lstinline"><span 
+class="ecss-1200">call</span></span> instruction. Such functions
+                                                                                       
+                                                                                       
+                  return with the instruction <span class="lstinline"><span 
+class="ecss-1200">rfe</span></span> instead of <span class="lstinline"><span 
+class="ecss-1200">ret</span></span> (see <a 
+href="main_gcc_ugse27.html#x45-6400014.7">Listing 14.7</a> for
+                  details).
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">longcall</span></span>         </dt><dd 
+class="list">
+                  <!--l. 41--><p class="noindent" ><a 
+ id="dx23-29010"></a> With the function attribute <span class="lstinline"><span 
+class="ecss-1200">longcall</span></span> arbitrary function can be called by <span class="lstinline"><span 
+class="ecss-1200">calli</span></span>
+                  instead of <span class="lstinline"><span 
+class="ecss-1200">call</span></span> instruction. The code and the execution time is
+                  reduced.</p></dd></dl>
+<!--l. 45--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">6.4.2</span>  <a 
+href="main_gcc_ugch6.html#QQ2-23-34" id="x23-300006.4.2">Specifying Attributes of Variables</a></h4>
+<a 
+ id="dx23-30001"></a>
+<!--l. 47--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">asection</span></span>         </dt><dd 
+class="list">
+                  <!--l. 48--><p class="noindent" ><a 
+ id="dx23-30002"></a> Besides the attribute <span class="lstinline"><span 
+class="ecss-1200">section</span></span> the attribute <span class="lstinline"><span 
+class="ecss-1200">asection</span></span> may be used to
+                  locate variables. This attribute has a more sophisticated interface to
+                  adjust the settings of the section the variable is to be located in. The
+                  syntax of the attribute <span class="lstinline"><span 
+class="ecss-1200">asection</span></span> is:
+                  </p><!--l. 51--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb47"><a 
+ id="x23-30004r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((asection("&#x003C;name&#x003E;",</span><span 
+class="pcrr7t-x-x-144"> "a=&#x003C;align&#x003E;",</span><span 
+class="pcrr7t-x-x-144"> "f=&#x003C;flags&#x003E;")))</span></div>
+                  <!--l. 55--><p class="noindent" >The parameter <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E; </span>specifies the name of the section in which the
+                  variable should be located. The alignment of the section, which is set by the
+                  parameter a=<span 
+class="cmmi-12">&#x003C;</span>alignment<span 
+class="cmmi-12">&#x003E; </span>must be a power of 2 value (e.g. 2<sup><span 
+class="cmr-8">0</span></sup>, 2<sup><span 
+class="cmr-8">1</span></sup>, 2<sup><span 
+class="cmr-8">2</span></sup>, 2<sup><span 
+class="cmr-8">4</span></sup> †).
+                  Additional flags may be set by the parameter f=<span 
+class="cmmi-12">&#x003C;</span>flags<span 
+class="cmmi-12">&#x003E;</span>. These flags for
+                  attributed sections are available:
+                       </p><dl class="description"><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">a</span> </dt><dd 
+class="description">allocatable. (This is always set.)
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">b</span> </dt><dd 
+class="description">section flag for bits (for details see <a 
+href="main_gcc_ugse21.html#x39-5300014.1">Listing 14.1</a>)
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">w</span> </dt><dd 
+class="description">writable
+                                                                                       
+                                                                                       
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">p</span> </dt><dd 
+class="description">PCP section
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">s</span> </dt><dd 
+class="description">using small addressing
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">z</span> </dt><dd 
+class="description">using absolute addressing</dd></dl>
+                  <!--l. 66--><p class="noindent" >If data is to be put into small or absolute addressable memory regions the
+                  name of the section must start with <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sbss</span><span 
+class="ecss-1200">.</span></span> for small addressable
+                  memory regions or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span><span 
+class="ecss-1200">.</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zbss</span><span 
+class="ecss-1200">.</span></span> for absolute addressable memory regions.
+                  This is the only way to tell the linker to put the data in the appropriate
+                  memory region.
+                  </p><!--l. 68--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+                  </p><!--l. 70--><p class="noindent" >This example shows how to define the section of a variable with pragma
+                  section. The integer variable <span class="lstinline"><span 
+class="cmss-12">a</span></span> is located within a 2-byte aligned section
+                  named <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">absolute</span></span>. This section is allocatable, writable and absolutely
+                  addressable:
+                  </p><!--l. 72--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb48"><a 
+ id="x23-30006r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((asection(".zdata.absolute","a=2","f=awz")));</span></div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">ptr64</span></span>             </dt><dd 
+class="list">
+                  <!--l. 77--><p class="noindent" ><a 
+ id="dx23-30007"></a> Types or values with this attribute will be handled circular buffer
+                  pointer.
+</p>
+                  </dd></dl>
+<!--l. 86--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">6.4.3</span>  <a 
+href="main_gcc_ugch6.html#QQ2-23-35" id="x23-310006.4.3">Specifying Attributes of Types</a></h4>
+<a 
+ id="dx23-31001"></a>
+<!--l. 88--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">alignedaccess</span></span>    </dt><dd 
+class="list">
+                  <!--l. 89--><p class="noindent" >This type <a 
+ id="lbl:alignedaccess">attribute</a> ensures for 4 byte access within PRAM. The option
+                  <span 
+class="cmtt-12">-maligned-access</span> is required. A small example illustrates the use of
+                                                                                       
+                                                                                       
+                  this attribute.
+                  </p><!--l. 91--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb49"><a 
+ id="x23-31003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> pram_int</span><span 
+class="pcrr7t-x-x-144"> __attribute__((alignedaccess("4")));</span>
+                  <br class="fancyvrb" /><a 
+ id="x23-31005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x23-31007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> pram_int</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;pi</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0x10000;</span></div>
+                  <!--l. 97--><p class="noindent" >Here for an <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> type a typedef called e.g. <span class="lstinline"><span 
+class="ecss-1200">pram_int</span></span> is defined. The typedef for
+                  PRAM access is specified by a type attribute <span class="lstinline"><span 
+class="ecss-1200">alignedaccess</span></span>. The argument
+                  ”4” is used to indicate the 4 byte access. The shown method constricts the 4
+                  byte access to the declared typedef <span class="lstinline"><span 
+class="ecss-1200">pram_int</span></span>. For other types than <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> use an
+                  equivalent <span class="lstinline"><span 
+class="ecsx-1200">typedef</span></span>.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse14.html" >next</a>] [<a 
+href="main_gcc_ugse12.html" >prev</a>] [<a 
+href="main_gcc_ugse12.html#tailmain_gcc_ugse12.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse13.html" >front</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse13.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse13.html"></a> </p> 
+</body></html> 

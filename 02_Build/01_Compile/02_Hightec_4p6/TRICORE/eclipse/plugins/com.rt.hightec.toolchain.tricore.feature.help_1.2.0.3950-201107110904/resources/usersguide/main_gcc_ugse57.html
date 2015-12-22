@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-strip</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 949--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse58.html" >next</a>] [<a 
+href="main_gcc_ugse56.html" >prev</a>] [<a 
+href="main_gcc_ugse56.html#tailmain_gcc_ugse56.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse57.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse57.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.10</span>  <a 
+href="main_gcc_ug.html#QQ2-86-245" id="x86-23600021.10">tricore-strip</a></h3>
+<a 
+ id="dx86-236001"></a>
+<a 
+ id="dx86-236002"></a>
+<a 
+ id="dx86-236003"></a>
+<a 
+ id="dx86-236004"></a>
+<!--l. 951--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.10.1</span>  <a 
+href="#x86-23700021.10.1" id="x86-23700021.10.1">Description</a></h4>
+<!--l. 953--><p class="noindent" ><span 
+class="cmtt-12">tricore-strip</span> <span 
+class="cmtt-12">[options] &#x003C;objfile&#x003E;</span>
+</p><!--l. 955--><p class="noindent" >The <span 
+class="cmtt-12">tricore-strip</span> utility removes the debugging symbol table information from the object file
+or files named on the command line. The object file can be static library, a shared
+library, or an object file produced by the compiler. Depending on how much debugging
+information has been included in the file, stripping can dramatically reduce the size of the
+file.
+</p>
+<div class="center" 
+>
+<!--l. 958--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox127"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The <span 
+class="cmtt-12">tricore-strip</span> utility replaces the existing file with the stripped
+version, so if you want to be able to restore the original unstripped
+versions, you will need to save the files before stripping them or use
+the <span 
+class="cmtt-12">-o</span> option to produce the output in a different file.              </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 960--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.10.2</span>  <a 
+href="#x86-23800021.10.2" id="x86-23800021.10.2">Invocation</a></h4>
+<!--l. 962--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">--strip-unneeded</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 963--><p class="noindent" >Remove all symbols that are not needed for relocation processing.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-F &#x003C;bfdname&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 965--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--target=&#x003C;bfdname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 966--><p class="noindent" >Treat  the  original  <span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E; </span>as  a  file  with  the  object  code  format
+                  <span 
+class="cmmi-12">&#x003C;</span>bfdname<span 
+class="cmmi-12">&#x003E;</span>, and rewrite it in the same format.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-g -S -d --strip-debug</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 968--><p class="noindent" >Remove debugging symbols only.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h --help</span>        </dt><dd 
+class="list">
+                  <!--l. 970--><p class="noindent" >Show a summary of the options to <span 
+class="cmtt-12">tricore-strip</span> and exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-I --input-target=&#x003C;bfdname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 972--><p class="noindent" >Treat  the  original  <span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E; </span>as  a  file  with  the  object  code  format
+                  <span 
+class="cmmi-12">&#x003C;</span>bfdname<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-K &#x003C;symbolname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 974--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--keep-symbol=&#x003C;symbolname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 975--><p class="noindent" >Keep only symbol <span 
+class="cmmi-12">&#x003C;</span>symbolname<span 
+class="cmmi-12">&#x003E; </span>from the source file. This option
+                  may be given more than once.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-N &#x003C;symbolname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 977--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--strip-symbol=&#x003C;symbolname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 978--><p class="noindent" >Do not copy symbol <span 
+class="cmmi-12">&#x003C;</span>symbolname<span 
+class="cmmi-12">&#x003E;</span>. This option may be given more
+                  than once, and may be combined with strip options other than <span 
+class="cmtt-12">-K</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o &#x003C;outfile&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 980--><p class="noindent" >Instead of overwriting the original file, the output is written to a new
+                  file named <span 
+class="cmmi-12">&#x003C;</span>outfile<span 
+class="cmmi-12">&#x003E;</span>. Using this option limits the command to operate
+                  on a single file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-O &#x003C;bfdname&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 982--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--output-target=&#x003C;bfdname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 983--><p class="noindent" >Create an output file in format <span 
+class="cmmi-12">&#x003C;</span>bfdname<span 
+class="cmmi-12">&#x003E;</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-p --preserve-dates</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 985--><p class="noindent" >Copy modified/access timestamps to the output.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-R &#x003C;sectionname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 987--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--remove-section=&#x003C;sectionname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 988--><p class="noindent" >Remove any section named <span 
+class="cmmi-12">&#x003C;</span>sectionname<span 
+class="cmmi-12">&#x003E; </span>from the output file. This option
+                  may be given more than once. </p>
+                  <div class="center" 
+>
+<!--l. 989--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox128"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Using this option inappropriately may make the output file unusable.</div>
+                                                                                       
+                                                                                       
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-s --strip-all</span>  </dt><dd 
+class="list">
+                  <!--l. 991--><p class="noindent" >Remove all symbol and relocation information.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v --verbose</span>    </dt><dd 
+class="list">
+                  <!--l. 993--><p class="noindent" >Verbose output: list all object files modified. In the case of archives,
+                  <span 
+class="cmtt-12">tricore-strip</span> <span 
+class="cmtt-12">-v </span>lists all members of the archive.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-V --version</span>    </dt><dd 
+class="list">
+                  <!--l. 995--><p class="noindent" >Display this program’s version number.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-x --discard-all</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 997--><p class="noindent" >Remove all non-global symbols.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-X --discard-locals</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 999--><p class="noindent" >Remove any compiler-generated symbols.</p></dd></dl>
+<!--l. 1002--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.10.3</span>  <a 
+href="#x86-23900021.10.3" id="x86-23900021.10.3">Example</a></h4>
+<!--l. 1004--><p class="noindent" >As an example, the following command will strip all debugging information from the file
+<span 
+class="cmtt-12">main.o</span>
+</p><!--l. 1006--><p class="noindent" ><span 
+class="cmtt-12">tricore-strip</span> <span 
+class="cmtt-12">main.o</span>
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1009--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse58.html" >next</a>] [<a 
+href="main_gcc_ugse56.html" >prev</a>] [<a 
+href="main_gcc_ugse56.html#tailmain_gcc_ugse56.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse57.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse57.html" >up</a>] </p></div>
+<!--l. 1009--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse57.html"></a> </p> 
+</body></html> 

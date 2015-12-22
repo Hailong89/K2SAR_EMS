@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>19 The TriCore Assembler</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse42.html" >next</a>] [<a 
+href="main_gcc_ugse41.html" >prev</a>] [<a 
+href="main_gcc_ugse41.html#tailmain_gcc_ugse41.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch19.html">tail</a>] [<a 
+href="main_gcc_ugpa3.html#main_gcc_ugch19.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">19</span>  <a 
+href="main_gcc_ug.html#QQ2-65-126" id="x65-11900019">The TriCore Assembler</a></h2>
+<a 
+ id="dx65-119001"></a>
+<!--l. 3--><p class="noindent" >If you use the GNU assembler on one architecture, you should find a fairly similar environment
+when you use it on another architecture. Each version has much in common with the others,
+including object file formats, most assembler directives (often called <span 
+class="cmmi-12">&#x003C;</span>pseudo-ops<span 
+class="cmmi-12">&#x003E;</span>) and
+assembler syntax.
+</p><!--l. 5--><p class="noindent" >The GNU assembler is primarily designed to assemble the output of the GNU C compiler into
+an object code format for use by the linker <span class="lstinline"><span 
+class="ecss-1200">ld</span></span>. Nevertheless, we’ve tried to make <span 
+class="cmtt-12">tricore-as</span>
+assemble correctly everything that other assemblers for the same machine would
+assemble. If you need to write an assembly module, the best way to start is to write a
+simple program in C that contains all the structural elements you need and then use
+<span 
+class="cmtt-12">tricore-gcc</span> with the <span 
+class="cmtt-12">-S</span> option to generate assembly language source. If you do not
+need much assembly language, it may be easier to insert it as inline assembly (see
+<a 
+href="main_gcc_ugch8.html#x26-340008">Listing 8</a>).
+</p><!--l. 7--><p class="noindent" >When you are writing in a higher level language, <span 
+class="cmtt-12">tricore-gcc</span> normally invokes the
+assembler for you, so you seldom need to deal with the command-line options. But you
+can also use the <span 
+class="cmtt-12">-Wa</span> option with <span 
+class="cmtt-12">tricore-gcc</span> to pass arguments through to the
+assembler. The assembler arguments must be separated from each other (and the <span 
+class="cmtt-12">-Wa</span>) by
+commas.
+</p>
+<div class="sectionTOCS">
+</div>
+
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse42.html" >next</a>] [<a 
+href="main_gcc_ugse41.html" >prev</a>] [<a 
+href="main_gcc_ugse41.html#tailmain_gcc_ugse41.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch19.html" >front</a>] [<a 
+href="main_gcc_ugpa3.html#main_gcc_ugch19.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch19.html"></a> </p> 
+</body></html> 

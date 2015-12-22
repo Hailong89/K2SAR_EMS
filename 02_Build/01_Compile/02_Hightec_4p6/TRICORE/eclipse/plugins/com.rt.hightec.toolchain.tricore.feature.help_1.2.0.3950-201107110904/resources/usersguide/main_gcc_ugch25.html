@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>25 JTAG Server for TriCore</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugpa5.html" >next</a>] [<a 
+href="main_gcc_ugse68.html" >prev</a>] [<a 
+href="main_gcc_ugse68.html#tailmain_gcc_ugse68.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch25.html">tail</a>] [<a 
+href="main_gcc_ugpa4.html#main_gcc_ugch25.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">25</span>  <a 
+href="main_gcc_ug.html#QQ2-101-266" name="x101-25700025">JTAG Server for TriCore</a></h2>
+<!--l. 3--><p class="noindent" >The jtag interface of TriCore gives the user an convenient access mechanism for debugging an
+embedded systems. When JTAG is used as a debugging tool, an in-circuit emulator which in
+turn uses JTAG as the transport mechanism enables a programmer to access an on-chip debug
+module which is integrated into the CPU via JTAG.
+</p><!--l. 5--><p class="noindent" >The <span 
+class="cmtt-12">tricore-jtagsrv</span> requires an environment variable <span 
+class="cmtt-12">JIOBASE</span>, that is set to the directory
+where the <span 
+class="cmtt-12">tricore/jtag</span><span 
+class="cmtt-12">_targets/*.ini </span>files for the derivatives are located.
+</p>
+<div class="center" 
+>
+<!--l. 7--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox132"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />For debugging via JTAG-Interface the BIOS settings for the printer
+port must not be configured for ECP-Mode. Select EPP or SPP mode.</div>
+</div>
+<!--l. 9--><p class="noindent" >For debugging your application do the following steps:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">Apply a power supply to your board
+      </li>
+      <li class="itemize">Connect the target board with JTAG
+      </li>
+      <li class="itemize">Start the JTAG-Server <span 
+class="cmtt-12">tricore-jtagsrv</span></li></ul>
+<!--l. 17--><p class="noindent" >The <span 
+class="cmtt-12">tricore-jtagsrv</span> supports the following command line option.
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-n, --no-reset</span>  </dt><dd 
+class="list">
+                  <!--l. 20--><p class="noindent" >Per  default  the  <span 
+class="cmtt-12">tricore-jtagsrv</span>  performs  a  reset  of  target.
+                  Sometimes the user wants to keep the state of the application and the
+                  content of special function registers or RAM. With this option the reset
+                  is suppressed, otherwise the content of RAM and direction of the port
+                  pins are set to default values.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-i, --init &#x003C;target-ini-file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 21--><p class="noindent" >The inifile specified with the option <span 
+class="cmtt-12">-i</span> contains information about
+                  derivative specific board configuration. This information is required for
+                  the initialization of the board and to get access via jtag.
+</p>
+                  <div class="fancyvrb" id="fancyvrb321"><a 
+ name="x101-257002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> [Init]</span><br class="fancyvrb" /><a 
+ name="x101-257004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> EBU_CON</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0x0000FF44</span>
+                  <br class="fancyvrb" /><a 
+ name="x101-257006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> EBU_ADDRSEL0</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xA4000853</span><br class="fancyvrb" /><a 
+ name="x101-257008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+                  <!--l. 30--><p class="noindent" >If the environment variable <span 
+class="cmtt-12">JIOBASE </span>is set, the use of option will not be
+                  necessary.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v, --version</span>   </dt><dd 
+class="list">
+                  <!--l. 32--><p class="noindent" >Prints version information of the <span 
+class="cmtt-12">tricore-jtagsrv</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-p, --port</span>       </dt><dd 
+class="list">
+                  <!--l. 33--><p class="noindent" >Per default the port is set to 6785. With this option the port for debugging
+                  can be modified.
+                  </p><!--l. 35--><p class="noindent" ><span 
+class="cmtt-12">tricore-jtagsrv</span> <span 
+class="cmtt-12">-p :3210</span></p></dd></dl>
+<!--l. 1--><p class="noindent" >support flashtypes amd, intel
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugpa5.html" >next</a>] [<a 
+href="main_gcc_ugse68.html" >prev</a>] [<a 
+href="main_gcc_ugse68.html#tailmain_gcc_ugse68.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch25.html" >front</a>] [<a 
+href="main_gcc_ugpa4.html#main_gcc_ugch25.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch25.html"></a> </p> 
+</body></html> 

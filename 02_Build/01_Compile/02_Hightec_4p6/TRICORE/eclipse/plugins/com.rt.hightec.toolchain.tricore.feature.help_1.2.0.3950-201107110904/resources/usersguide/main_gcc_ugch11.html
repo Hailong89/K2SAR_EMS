@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>11 Traps</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch12.html" >next</a>] [<a 
+href="main_gcc_ugch10.html" >prev</a>] [<a 
+href="main_gcc_ugch10.html#tailmain_gcc_ugch10.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch11.html">tail</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch11.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">11</span>  <a 
+href="main_gcc_ug.html#QQ2-32-47" id="x32-4300011">Traps</a></h2>
+<a 
+ id="dx32-43001"></a>
+<!--l. 3--><p class="noindent" >A trap occurs as a result of an event such as a non-maskable interrupt, an instruction
+exception, a <a 
+href="main_gcc_ugch9.html#lbl:syscall"><span class="lstinline"><span 
+class="ecss-1200">_syscall</span><span 
+class="ecss-1200">()</span></span></a>, or illegal access. Traps are always active; they cannot be
+disabled.
+</p><!--l. 5--><p class="noindent" >The available traps are divided into 8 classes. The trap class is used to index into the trap
+vector table. Each trap is assigned a Trap Identification Number (TIN), that identifies the cause
+of the trap within its class. Each class is assigned a Trap Service Routine (TSR), which is
+served as soon as the trap of this class occurs. The TIN is identified before the first instruction
+of the trap handler is executed. A TSR requires a parameter of type <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> and a return value
+<span class="lstinline"><span 
+class="ecsx-1200">void</span></span>.
+</p><!--l. 7--><p class="noindent" >Here a small example of trap service routine:
+</p>
+<div class="fancyvrb" id="fancyvrb78"><a 
+ id="x32-43003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> class4_tsr</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> tin)</span><br class="fancyvrb" /><a 
+ id="x32-43005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x32-43007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> switch</span><span 
+class="pcrr7t-x-x-144"> (tin)</span><br class="fancyvrb" /><a 
+ id="x32-43009r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x32-43011r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> 1:</span>
+<br class="fancyvrb" /><a 
+ id="x32-43013r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> serve</span><span 
+class="pcrr7t-x-x-144"> trap</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> TIN</span><span 
+class="pcrr7t-x-x-144"> 1</span><br class="fancyvrb" /><a 
+ id="x32-43015r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x32-43017r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x32-43019r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> 2:</span>
+<br class="fancyvrb" /><a 
+ id="x32-43021r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> serve</span><span 
+class="pcrr7t-x-x-144"> trap</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> TIN</span><span 
+class="pcrr7t-x-x-144"> 2</span><br class="fancyvrb" /><a 
+ id="x32-43023r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x32-43025r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x32-43027r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> 3:</span>
+<br class="fancyvrb" /><a 
+ id="x32-43029r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> serve</span><span 
+class="pcrr7t-x-x-144"> trap</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> TIN</span><span 
+class="pcrr7t-x-x-144"> 3</span><br class="fancyvrb" /><a 
+ id="x32-43031r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x32-43033r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x32-43035r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 29--><p class="noindent" >The function <span class="lstinline"><span 
+class="ecss-1200">_install_trap_handler</span></span><a 
+ id="dx32-43036"></a> installs a trap handler, this means a pointer to TSR, for a
+trap class. The syntax is:
+</p>
+<div class="fancyvrb" id="fancyvrb79"><a 
+ id="x32-43038r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> _install_trap_handler</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> trapno,</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> (&#x22C6;handler)</span><span 
+class="pcrr7t-x-x-144"> (int))}</span></div>
+<!--l. 35--><p class="noindent" >The trap service routine is assigned to the trap class <span 
+class="cmmi-12">&#x003C;</span>trapno<span 
+class="cmmi-12">&#x003E;</span>. The TSR is specified with
+<span 
+class="cmmi-12">&#x003C;</span>handler<span 
+class="cmmi-12">&#x003E;</span>. If the installation of a trap handler is successful the return value of the function
+will be unequal zero. In case that the return value is zero the installation has failed. A reason
+can be an illegal trap class number. When no TSR is specified the default trap service
+routine is assigned. The default trap routine only executes the <span class="lstinline"><span 
+class="ecss-1200">_debug</span><span 
+class="ecss-1200">()</span></span> instruction.
+</p>
+<div class="center" 
+>
+<!--l. 36--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox31"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This function is located in the header file machine/cint.h.           </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 38--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 40--><p class="noindent" >A small example illustrates the installation of trap service routine <span class="lstinline"><span 
+class="ecss-1200">class4_tsr</span></span> for a trap class.
+The <span class="lstinline"><span 
+class="ecss-1200">class4_tsr</span></span> returns the TIN. In <span class="lstinline"><span 
+class="ecss-1200">install_trap_handler</span></span> the first parameter specifies the trap
+class 4, and <span class="lstinline"><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="cmsy-10x-x-120">*</span><span 
+class="ecss-1200">)</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200">)</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">class4_tsr</span></span> is the name of the TSR.
+</p>
+<div class="fancyvrb" id="fancyvrb80"><a 
+ id="x32-43040r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #include</span><span 
+class="pcrr7t-x-x-144"> &#x003C;machine/cint.h&#x003E;</span><br class="fancyvrb" /><a 
+ id="x32-43042r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x32-43044r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> class4_tsr</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> tin)</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x32-43046r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x32-43048r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> switch</span><span 
+class="pcrr7t-x-x-144"> (tin)</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x32-43050r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x32-43052r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> 1:</span><br class="fancyvrb" /><a 
+ id="x32-43054r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> serve</span><span 
+class="pcrr7t-x-x-144"> trap</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> TIN</span><span 
+class="pcrr7t-x-x-144"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x32-43056r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x32-43058r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x32-43060r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> 2:</span><br class="fancyvrb" /><a 
+ id="x32-43062r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> serve</span><span 
+class="pcrr7t-x-x-144"> trap</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> TIN</span><span 
+class="pcrr7t-x-x-144"> 2</span>
+<br class="fancyvrb" /><a 
+ id="x32-43064r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x32-43066r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x32-43068r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> 3:</span><br class="fancyvrb" /><a 
+ id="x32-43070r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> serve</span><span 
+class="pcrr7t-x-x-144"> trap</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> TIN</span><span 
+class="pcrr7t-x-x-144"> 3</span>
+<br class="fancyvrb" /><a 
+ id="x32-43072r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x32-43074r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x32-43076r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x32-43078r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x32-43080r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> init</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x32-43082r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span>
+<br class="fancyvrb" /><a 
+ id="x32-43084r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> install_trap_handler</span><span 
+class="pcrr7t-x-x-144"> (4,</span><span 
+class="pcrr7t-x-x-144"> (void</span><span 
+class="pcrr7t-x-x-144"> (&#x22C6;)</span><span 
+class="pcrr7t-x-x-144"> (int)</span><span 
+class="pcrr7t-x-x-144"> class4_tsr);</span><br class="fancyvrb" /><a 
+ id="x32-43086r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x32-43088r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch12.html" >next</a>] [<a 
+href="main_gcc_ugch10.html" >prev</a>] [<a 
+href="main_gcc_ugch10.html#tailmain_gcc_ugch10.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch11.html" >front</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch11.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch11.html"></a> </p> 
+</body></html> 

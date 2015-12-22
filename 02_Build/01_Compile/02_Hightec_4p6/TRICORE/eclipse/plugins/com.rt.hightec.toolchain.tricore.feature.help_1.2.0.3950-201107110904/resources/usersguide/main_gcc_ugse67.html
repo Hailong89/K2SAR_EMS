@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Introduction</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 3--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse68.html" >next</a>] [<a 
+href="main_gcc_ugch24.html" >prev</a>] [<a 
+href="main_gcc_ugch24.html#tailmain_gcc_ugch24.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse67.html">tail</a>] [<a 
+href="main_gcc_ugch24.html#main_gcc_ugse67.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">24.1</span>  <a 
+href="main_gcc_ug.html#QQ2-99-264" id="x99-25500024.1">Introduction</a></h3>
+<!--l. 5--><p class="noindent" >The warnings that are issued by the compiler are marked by an index number. The docu
+of the warnings is available in the files <span 
+class="cmtt-12">list-of-errors-and-warnings.pdf </span>and
+<span 
+class="cmtt-12">warningsfilter/Help/gcc.html</span>.
+</p><!--l. 7--><p class="noindent" >Normally the build process of a program is controlled by a makefile. To save the make output of
+stdout to a log-file, type:
+</p><!--l. 9--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb319"><a 
+ id="x99-255002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> make</span><span 
+class="pcrr7t-"> &#x003C;options&#x003E;</span><span 
+class="pcrr7t-"> &#x003E;</span><span 
+class="pcrr7t-"> name.log</span><span 
+class="pcrr7t-"> 2&#x003E;&amp;1</span></div>
+<!--l. 13--><p class="noindent" >The log file can be analyzed be the warningsfilter by invoking the following command.
+</p><!--l. 15--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb320"><a 
+ id="x99-255004r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> perl</span><span 
+class="pcrr7t-"> WarnungsFilter.pl</span><span 
+class="pcrr7t-"> --input-file=name.log</span><span 
+class="pcrr7t-"> --out-dir=&#x003C;directory&#x003E;</span></div>
+<!--l. 19--><p class="noindent" >The generated output is stored in the specified directory <span 
+class="cmtt-12">--out-dir=</span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">directory</span><span 
+class="cmmi-12">&#x003E;</span>, if the
+output directory is not specified the files will be stored in the default directory <span 
+class="cmtt-12">.auto</span><span 
+class="cmtt-12">_wf</span>. The
+script <span 
+class="cmtt-12">WarnungsFilter.pl </span>generates a HTML file called <span 
+class="cmtt-12">index.html</span>. This file gives you an
+overview which source <span 
+class="cmtt-12">name.c </span>generates a warning with the corresponding line. Additionally
+the HTML file contains a link to the HMTL docu <span 
+class="cmtt-12">gcc.html </span>of the warnings with its
+description.
+</p><!--l. 21--><p class="noindent" >The <span 
+class="cmtt-12">WarnungsFilter.pl </span>supports several command line options.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 23--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse68.html" >next</a>] [<a 
+href="main_gcc_ugch24.html" >prev</a>] [<a 
+href="main_gcc_ugch24.html#tailmain_gcc_ugch24.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse67.html" >front</a>] [<a 
+href="main_gcc_ugch24.html#main_gcc_ugse67.html" >up</a>] </p></div>
+<!--l. 23--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse67.html"></a> </p> 
+</body></html> 

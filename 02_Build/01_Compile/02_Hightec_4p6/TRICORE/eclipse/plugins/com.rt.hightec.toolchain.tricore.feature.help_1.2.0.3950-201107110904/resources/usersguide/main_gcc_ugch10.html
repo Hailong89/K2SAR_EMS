@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>10 Interrupts</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch11.html" >next</a>] [<a 
+href="main_gcc_ugch9.html" >prev</a>] [<a 
+href="main_gcc_ugch9.html#tailmain_gcc_ugch9.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch10.html">tail</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch10.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">10</span>  <a 
+href="main_gcc_ug.html#QQ2-31-46" id="x31-4200010">Interrupts</a></h2>
+<a 
+ id="dx31-42001"></a>
+<!--l. 3--><p class="noindent" >The TriCore architecture provides two handler vectors, one for interrupts and one for traps.
+Each peripheral or an external input can generate service requests. Also software
+interrupts are possible. With <span class="lstinline"><span 
+class="ecss-1200">_enable</span><span 
+class="ecss-1200">()</span></span> or <span class="lstinline"><span 
+class="ecss-1200">_disable</span><span 
+class="ecss-1200">()</span></span> global interrupt is enabled or
+disabled (see <a 
+href="main_gcc_ugch9.html#lbl:eint">enable irq</a> on page <a 
+href="main_gcc_ugch9.html#x30-410009">123<!--tex4ht:ref: sec:intrinsic_fct --></a>). All service requests are assigned priority numbers
+(IPN).
+</p><!--l. 5--><p class="noindent" >To install an interrupt service routine the function <span class="lstinline"><span 
+class="ecss-1200">_install_int_handler</span></span> must be
+used.
+</p>
+<div class="fancyvrb" id="fancyvrb76"><a 
+ id="x31-42003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> _install_int_handler</span><span 
+class="pcrr7t-x-x-144"> (int</span><span 
+class="pcrr7t-x-x-144"> intno,</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> (&#x22C6;handler)</span><span 
+class="pcrr7t-x-x-144"> (int),</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> arg)</span></div>
+<!--l. 11--><p class="noindent" >The interrupt service routine is assigned to the ISR priority <span 
+class="cmmi-12">&#x003C;</span>intno<span 
+class="cmmi-12">&#x003E;</span>. The ISR is specified with
+<span 
+class="cmmi-12">&#x003C;</span>handler<span 
+class="cmmi-12">&#x003E;</span>. If the installation of a interrupt handler is successful the return value of the
+function will be different from zero. In case that the return value is zero the installation has
+failed. A reason can be a illegal priority. If an interrupt occurs the interrupt service routine with
+the argument <span class="lstinline"><span 
+class="ecss-1200">arg</span></span> is served. </p>
+<div class="center" 
+>
+<!--l. 12--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox29"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The  argument  <span 
+class="cmmi-12">&#x003C;</span>handler<span 
+class="cmmi-12">&#x003E;  </span>in  <span class="lstinline"><span 
+class="ecss-1200">_install_int_handler</span></span>  is  a  pointer
+to  the  ISR  in  the  vector  table  and  does  not  automatically
+enable the appropriate interrupt. <span class="lstinline"><span 
+class="ecss-1200">_install_int_handler</span></span> is defined in
+<span 
+class="cmtt-12">machine/cint.h</span>.                                                  </div>
+</div>
+<!--l. 14--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 16--><p class="noindent" >In our example <span class="lstinline"><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">rxint</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200">)</span></span> will be an interrupt service request of the asynchronous serial
+interface. The first argument of <span class="lstinline"><span 
+class="ecss-1200">_install_int_handler</span></span> is the priority number of the interrupt
+service request. </p>
+<div class="center" 
+>
+<!--l. 17--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+<div 
+class="colorbox" id="colorbox30"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The argument allows to use the same code for two different interrupts.</div>
+</div>
+<!--l. 17--><p class="noindent" >Here the argument is 0, that means uart0 is used. With setting the argument to 1 you get
+access to uart1 interrupt. The intrinsic function <span class="lstinline"><span 
+class="ecss-1200">_enable</span><span 
+class="ecss-1200">()</span></span> is necessary for enabling global
+interrupt.
+</p>
+<div class="fancyvrb" id="fancyvrb77"><a 
+ id="x31-42005r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #include</span><span 
+class="pcrr7t-x-x-144"> &#x003C;machine/cint.h&#x003E;</span><br class="fancyvrb" /><a 
+ id="x31-42007r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #include</span><span 
+class="pcrr7t-x-x-144"> &#x003C;machine/intrinsics.h&#x003E;</span>
+<br class="fancyvrb" /><a 
+ id="x31-42009r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #include</span><span 
+class="pcrr7t-x-x-144"> &#x003C;tc1796Regs.h&#x003E;</span><br class="fancyvrb" /><a 
+ id="x31-42011r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x31-42013r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> rxint</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x31-42015r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //do</span><span 
+class="pcrr7t-x-x-144"> something...</span>
+<br class="fancyvrb" /><a 
+ id="x31-42017r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x31-42019r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x31-42021r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> init</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x31-42023r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x31-42025r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ASC0_RSRC</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0x00001002;</span>
+<br class="fancyvrb" /><a 
+ id="x31-42027r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _install_int_handler(2,</span><span 
+class="pcrr7t-x-x-144"> (void</span><span 
+class="pcrr7t-x-x-144"> (&#x22C6;)</span><span 
+class="pcrr7t-x-x-144"> (int))</span><span 
+class="pcrr7t-x-x-144"> rxint,</span><span 
+class="pcrr7t-x-x-144"> 0);</span>
+<br class="fancyvrb" /><a 
+ id="x31-42029r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _enable();</span><br class="fancyvrb" /><a 
+ id="x31-42031r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x31-42033r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 37--><p class="noindent" >With <span class="lstinline"><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200"> </span><span 
+class="cmsy-10x-x-120">*</span><span 
+class="ecss-1200">_install_chained_int_handler</span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">intno</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="cmsy-10x-x-120">*</span><span 
+class="ecss-1200">handler</span><span 
+class="ecss-1200">)</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200">),</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">arg</span><span 
+class="ecss-1200">)</span></span> another
+possibility is given to install a handler. With this function several interrupts of the same priority
+can be combined and use the same interrupt vector. Within the interrupt service routine the
+user code detects the appropriate service request.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch11.html" >next</a>] [<a 
+href="main_gcc_ugch9.html" >prev</a>] [<a 
+href="main_gcc_ugch9.html#tailmain_gcc_ugch9.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch10.html" >front</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch10.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch10.html"></a> </p> 
+</body></html> 

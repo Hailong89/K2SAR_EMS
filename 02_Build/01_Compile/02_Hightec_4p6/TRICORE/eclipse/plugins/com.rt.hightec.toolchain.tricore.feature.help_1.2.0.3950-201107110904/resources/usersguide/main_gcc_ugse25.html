@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Modifying the Default Sections</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse26.html" >next</a>] [<a 
+href="main_gcc_ugse24.html" >prev</a>] [<a 
+href="main_gcc_ugse24.html#tailmain_gcc_ugse24.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse25.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse25.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.5</span>  <a 
+href="main_gcc_ug.html#QQ2-43-65" id="x43-6100014.5">Modifying the Default Sections</a></h3>
+<!--l. 3--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.5.1</span>  <a 
+href="#x43-6200014.5.1" id="x43-6200014.5.1">Divided Default Sections</a></h4>
+<!--l. 5--><p class="noindent" >To avoid alignment gaps between modules, the default sections are divided depending on the
+alignment.
+</p><!--l. 7--><p class="noindent" >The <a 
+href="#x43-620011">Listing 14.1<!--tex4ht:ref: sec:intrinsic_fct --></a> illustrates the behaviour of data alignment without and with the option
+<a 
+ id="lbl:aligned_data_section"><span 
+class="cmtt-12">-maligned-data-sections</span></a>.
+</p>
+<hr class="figure" /><div class="figure" 
+>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+<!--l. 9--><p class="noindent" ><img 
+src="aligned_data.png" alt="pict"  
+ />
+<br /> </p><div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id"><a 
+ id="x43-620011">Figure 14.1</a>:  
+Comparison of aligned data</td></tr></table></div><!--tex4ht:label?: x43-620011 -->
+                                                                                       
+                                                                                       
+</div><hr class="endfigure" />
+<!--l. 11--><p class="noindent" >The alignment of data is considered for its addressing. Therefore an address of 4-byte of aligned
+data is a multiple of ”4” (0000b, 0100b, 1000b, 1100b ...). On the left hand side of the
+<a 
+href="#x43-620011">Listing 14.1<!--tex4ht:ref: sec:intrinsic_fct --></a> 1-byte of aligned data is followed by 4-byte of aligned data. The result is a gap of 3
+bytes. For 2-byte of aligned data it is a gap of 1 byte.
+</p><!--l. 13--><p class="noindent" >By means of <span 
+class="cmtt-12">-maligned-data-sections</span>, data can be sorted without having gaps. A multiple of
+1-byte alignment is a 2-byte alignment. A multiple of 2-byte alignment is a 4-byte alignment. If
+data are sorted in descending order depending on their alignment, gaps will be avoided. This
+can be seen on the right hand side of <a 
+href="#x43-620011">Listing 14.1<!--tex4ht:ref: sec:intrinsic_fct --></a>.
+</p><!--l. 15--><p class="noindent" >The alignment of uninitialised variables in <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section.
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.bss.a1</span></span>          </dt><dd 
+class="list">
+                  <!--l. 18--><p class="noindent" >uninitialised 1-byte variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.bss.a2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 19--><p class="noindent" >uninitialised 2-byte variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.bss.a4</span></span>          </dt><dd 
+class="list">
+                  <!--l. 20--><p class="noindent" >uninitialised 4-byte variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.bss.a8</span></span>          </dt><dd 
+class="list">
+                  <!--l. 21--><p class="noindent" >uninitialised variable <span 
+class="cmsy-10x-x-120"><font face="Symbol">³</font> </span>8-byte</p></dd></dl>
+<!--l. 24--><p class="noindent" >The alignment of initialised variables in <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span></span> section.
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.data.a1</span></span>         </dt><dd 
+class="list">
+                  <!--l. 27--><p class="noindent" >initialised 1-byte variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.data.a2</span></span>         </dt><dd 
+class="list">
+                  <!--l. 28--><p class="noindent" >initialised 2-byte variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.data.a4</span></span>         </dt><dd 
+class="list">
+                  <!--l. 29--><p class="noindent" >initialised 4-byte variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.data.a8</span></span>         </dt><dd 
+class="list">
+                  <!--l. 30--><p class="noindent" >initialised variable <span 
+class="cmsy-10x-x-120"><font face="Symbol">³</font> </span>8-byte</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 33--><p class="noindent" >The alignment of constants in <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">rodata</span></span> section.
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.rodata.a1</span></span>       </dt><dd 
+class="list">
+                  <!--l. 36--><p class="noindent" >1-byte constants
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.rodata.a2</span></span>       </dt><dd 
+class="list">
+                  <!--l. 37--><p class="noindent" >2-byte constants
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.rodata.a4</span></span>       </dt><dd 
+class="list">
+                  <!--l. 38--><p class="noindent" >4-byte constants
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.rodata.a8</span></span>       </dt><dd 
+class="list">
+                  <!--l. 39--><p class="noindent" >constants <span 
+class="cmsy-10x-x-120"><font face="Symbol">³</font> </span>8 byte</p></dd></dl>
+<div class="center" 
+>
+<!--l. 42--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox43"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The described mechanism is also valid for the default sections <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zbss</span></span>,
+<span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zrodata</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sbss</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">rodata</span></span>. These sections are used
+in absolute (<span 
+class="cmtt-12">-mabs</span>) and relative (<span 
+class="cmtt-12">-msmall</span>) addressing mode.       </div>
+</div>
+<!--l. 44--><p class="noindent" >This mechanism is not used for the following sections:
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.text</span></span>             </dt><dd 
+class="list">
+                  <!--l. 47--><p class="noindent" >code section
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.bbss</span></span>             </dt><dd 
+class="list">
+                  <!--l. 48--><p class="noindent" >section for uninitialised bit variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.bdata</span></span>            </dt><dd 
+class="list">
+                  <!--l. 49--><p class="noindent" >section for initialised bit variables</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse26.html" >next</a>] [<a 
+href="main_gcc_ugse24.html" >prev</a>] [<a 
+href="main_gcc_ugse24.html#tailmain_gcc_ugse24.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse25.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse25.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse25.html"></a> </p> 
+</body></html> 

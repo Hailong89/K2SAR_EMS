@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>4 Another Sample Program</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugpa2.html" >next</a>] [<a 
+href="main_gcc_ugch3.html" >prev</a>] [<a 
+href="main_gcc_ugch3.html#tailmain_gcc_ugch3.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch4.html">tail</a>] [<a 
+href="main_gcc_ugpa1.html#main_gcc_ugch4.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">4</span>  <a 
+href="main_gcc_ug.html#QQ2-13-15" name="x13-120004">Another Sample Program</a></h2>
+<a 
+ id="dx13-12001"></a>
+<a 
+ id="dx13-12002"></a>
+<a 
+ id="dx13-12003"></a>
+<a 
+ id="dx13-12004"></a>
+<a 
+ id="dx13-12005"></a>
+<!--l. 5--><p class="noindent" >In this chapter you will learn how to generate a more complex program with more than one
+input file. These input files require additional header files which are not in the build directory.
+This example is for the target board TriBoard.
+</p><!--l. 7--><p class="noindent" >HelloSerial is a simple application, which demonstrates how to use the UART-Interface. The
+main-routine reads a character from serial interface. Depending on the value of this character,
+the main-routine does one of following
+</p>
+      <ul class="itemize1">
+      <li class="itemize">switches LED to off (if character is ”0”)
+      </li>
+      <li class="itemize">switches LED to on (if character is ”1”)
+      </li>
+      <li class="itemize">print ”Hello world (if character is ”2”)
+      </li>
+      <li class="itemize">finish program (if character is ”E”)</li></ul>
+<!--l. 16--><p class="noindent" >otherwise read a character again.
+</p><!--l. 18--><p class="noindent" >This example shows how to compile each source file of a project in a object file and how to link
+them afterwards together to a executable. The sources for this example are delivered with the
+compiler and are installed in the subdir <span 
+class="cmtt-12">Examples</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">HelloSerial</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">src</span>.
+</p><!--l. 20--><p class="noindent" >The first step of compiling this sample program to a executable is to compile all C source files
+to object files. These object files contain the program code as the executable would but this
+code has no addresses associated yet. The addresses are not defined until the linking has been
+done. To compile these files open a command line interface, change to the example’s directory
+and type the following:
+</p><!--l. 22--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-c -I defs -o triuart.o triuart.c</span> <a 
+ id="dx13-12006"></a><a 
+ id="dx13-12007"></a> <a 
+ id="dx13-12008"></a>
+</p><!--l. 27--><p class="noindent" >This command will compile the source file <span 
+class="cmtt-12">triuart.c </span>to the object file <span 
+class="cmtt-12">triuart.o</span>. The files in
+the subdirectory <span 
+class="cmtt-12">defs </span>are included in the compiler’s search path for include files. The same
+command is used for the second source file:
+</p><!--l. 29--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-c -I defs -o hello.o hello.c</span>
+</p><!--l. 31--><p class="noindent" >Now the two objects of this project are created and they must be linked. This is done by the
+                                                                                       
+                                                                                       
+control program <span 
+class="cmtt-12">tricore-gcc</span>, too. It can figure out which part of the toolchain
+must be started by inspecting the extension of the input files and if files with the
+extension <span 
+class="cmtt-12">.o </span>are passed as input, the linker is started. To link the files, type the
+following:
+</p><!--l. 33--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-o helloserial hello.o triuart.o</span>
+</p><!--l. 35--><p class="noindent" >This will link the two previously generated object files <span 
+class="cmtt-12">hello.o </span>and <span 
+class="cmtt-12">triuart.o </span>together to the
+executable <span 
+class="cmtt-12">helloserial</span>. Now this file can be downloaded to a target hardware, treated with
+the binutils or inspected with the debugger.
+</p><!--l. 37--><p class="noindent" >Open the ”COM Direct”-Terminal. Now, you can type a ”0” at your keyboard to switch a
+LED to off at your development board. A ”1” to turn the LED on. If you type a
+”2” in the terminal the Text ”Hello world!” appears. To finish the program type
+”E”.
+</p><!--l. 39--><p class="noindent" >For a complete reference of <span 
+class="cmtt-12">tricore-gcc</span> and what it can do for you see <a 
+href="main_gcc_ugch16.html#x55-10400016">Listing 16</a>.
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugpa2.html" >next</a>] [<a 
+href="main_gcc_ugch3.html" >prev</a>] [<a 
+href="main_gcc_ugch3.html#tailmain_gcc_ugch3.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch4.html" >front</a>] [<a 
+href="main_gcc_ugpa1.html#main_gcc_ugch4.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch4.html"></a> </p> 
+</body></html> 

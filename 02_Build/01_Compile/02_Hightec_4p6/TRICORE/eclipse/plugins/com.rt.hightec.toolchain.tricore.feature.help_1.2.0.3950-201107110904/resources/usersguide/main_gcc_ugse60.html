@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Invoking tricore-gcov</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 51--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse61.html" >next</a>] [<a 
+href="main_gcc_ugse59.html" >prev</a>] [<a 
+href="main_gcc_ugse59.html#tailmain_gcc_ugse59.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse60.html">tail</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse60.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">22.2</span>  <a 
+href="main_gcc_ug.html#QQ2-90-255" id="x90-24600022.2">Invoking tricore-gcov</a></h3>
+<!--l. 53--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcov</span> <span 
+class="cmtt-12">[options] </span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">sourcefile</span><span 
+class="cmmi-12">&#x003E;</span>
+</p>
+<div class="center" 
+>
+<!--l. 55--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox130"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />When using <span 
+class="cmtt-12">tricore-gcov</span>, you must first compile your program with
+two       special       <span 
+class="cmtt-12">tricore-gcc</span>    options:       <span 
+class="cmtt-12">-fprofile-arcs</span>
+<span 
+class="cmtt-12">-ftest-coverage</span>. Additional use the compiler option <span 
+class="cmtt-12">-g</span> to generate
+debug information.                                                 </div>
+</div>
+<!--l. 57--><p class="noindent" >This tells the compiler to generate additional information needed by <span 
+class="cmtt-12">tricore-gcov</span> (basically a
+flow graph of the program) and also includes additional code in the object files for generating
+the extra profiling information needed by <span 
+class="cmtt-12">tricore-gcov</span>. These additional files are placed in the
+directory where the source code is located.
+</p><!--l. 59--><p class="noindent" >Running the program will cause profile output to be generated. For each source file compiled
+with <span 
+class="cmtt-12">-fprofile-arcs</span>, an accompanying <span 
+class="cmtt-12">.da </span>file will be placed in the source directory. This
+feature is only available with some kind of stdio on the target platform. I.e. through simulated
+IO within the debugger and the included library <span 
+class="cmtt-12">libos.a</span>.
+</p><!--l. 61--><p class="noindent" >Running <span 
+class="cmtt-12">tricore-gcov</span> with your program’s source file names as arguments will now produce a
+listing of the code along with frequency of execution for each line. For example, if your
+program is called <span 
+class="cmtt-12">tmp.c</span>, this is what you see when you use the basic <span 
+class="cmtt-12">tricore-gcov</span>
+facility:
+</p><!--l. 63--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-fprofile-arcs -ftest-coverage tmp.c</span>
+</p><!--l. 65--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcov</span> <span 
+class="cmtt-12">tmp.c</span>
+</p>
+                                                                                       
+                                                                                       
+<div class="center" 
+>
+<!--l. 67--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox131"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Use exit(0); in main, so the <span 
+class="cmtt-12">.da </span>can be generated e.g. by the debugger
+at runtime.                                                        </div>
+</div>
+<!--l. 69--><p class="noindent" >The file <span 
+class="cmtt-12">tmp.c.gcov </span>contains output <span 
+class="cmtt-12">tricore-gcov</span>.
+</p><!--l. 71--><p class="noindent" >Here is a sample:
+</p><!--l. 73--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb312"><a 
+ id="x90-246002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main()</span><br class="fancyvrb" /><a 
+ id="x90-246004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x90-246006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i,</span><span 
+class="pcrr7t-x-x-144"> total;</span><br class="fancyvrb" /><a 
+ id="x90-246008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x90-246010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> total</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><br class="fancyvrb" /><a 
+ id="x90-246012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x90-246014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 11</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> 10;</span><span 
+class="pcrr7t-x-x-144"> i++)</span>
+<br class="fancyvrb" /><a 
+ id="x90-246016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 10</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> total</span><span 
+class="pcrr7t-x-x-144"> +=</span><span 
+class="pcrr7t-x-x-144"> i;</span><br class="fancyvrb" /><a 
+ id="x90-246018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x90-246020r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (total</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 45)</span>
+<br class="fancyvrb" /><a 
+ id="x90-246022r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ######</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> printf</span><span 
+class="pcrr7t-x-x-144"> ("Failure\n");</span><br class="fancyvrb" /><a 
+ id="x90-246024r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span>
+<br class="fancyvrb" /><a 
+ id="x90-246026r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> printf</span><span 
+class="pcrr7t-x-x-144"> ("Success\n");</span><br class="fancyvrb" /><a 
+ id="x90-246028r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 90--><p class="noindent" >When you use the <span 
+class="cmtt-12">-b</span> option, your output looks like this:
+</p><!--l. 92--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcov</span> <span 
+class="cmtt-12">-b tmp.c</span>
+</p><!--l. 94--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb313"><a 
+ id="x90-246030r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 87.50%</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> 8</span><span 
+class="pcrr7t-x-x-144"> source</span><span 
+class="pcrr7t-x-x-144"> lines</span><span 
+class="pcrr7t-x-x-144"> executed</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> file</span><span 
+class="pcrr7t-x-x-144"> tmp.c</span>
+<br class="fancyvrb" /><a 
+ id="x90-246032r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 80.00%</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> 5</span><span 
+class="pcrr7t-x-x-144"> branches</span><span 
+class="pcrr7t-x-x-144"> executed</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> file</span><span 
+class="pcrr7t-x-x-144"> tmp.c</span>
+<br class="fancyvrb" /><a 
+ id="x90-246034r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 80.00%</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> 5</span><span 
+class="pcrr7t-x-x-144"> branches</span><span 
+class="pcrr7t-x-x-144"> taken</span><span 
+class="pcrr7t-x-x-144"> at</span><span 
+class="pcrr7t-x-x-144"> least</span><span 
+class="pcrr7t-x-x-144"> once</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> file</span><span 
+class="pcrr7t-x-x-144"> tmp.c</span>
+<br class="fancyvrb" /><a 
+ id="x90-246036r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 50.00%</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> calls</span><span 
+class="pcrr7t-x-x-144"> executed</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> file</span><span 
+class="pcrr7t-x-x-144"> tmp.c</span><br class="fancyvrb" /><a 
+ id="x90-246038r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> Creating</span><span 
+class="pcrr7t-x-x-144"> tmp.c.gcov.</span></div>
+<!--l. 102--><p class="noindent" >Here is a sample of a resulting <span 
+class="cmtt-12">tmp.c.gcov </span>file:
+</p><!--l. 104--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb314"><a 
+ id="x90-246040r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main()</span><br class="fancyvrb" /><a 
+ id="x90-246042r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x90-246044r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i,</span><span 
+class="pcrr7t-x-x-144"> total;</span><br class="fancyvrb" /><a 
+ id="x90-246046r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x90-246048r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> total</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><br class="fancyvrb" /><a 
+ id="x90-246050r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x90-246052r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 11</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> 10;</span><span 
+class="pcrr7t-x-x-144"> i++)</span><br class="fancyvrb" /><a 
+ id="x90-246054r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> branch</span><span 
+class="pcrr7t-x-x-144"> 0</span><span 
+class="pcrr7t-x-x-144"> taken</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 91%</span>
+<br class="fancyvrb" /><a 
+ id="x90-246056r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> branch</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> taken</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 100%</span><br class="fancyvrb" /><a 
+ id="x90-246058r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> branch</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> taken</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 100%</span>
+<br class="fancyvrb" /><a 
+ id="x90-246060r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 10</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> total</span><span 
+class="pcrr7t-x-x-144"> +=</span><span 
+class="pcrr7t-x-x-144"> i;</span><br class="fancyvrb" /><a 
+ id="x90-246062r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x90-246064r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (total</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> 45)</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x90-246066r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> branch</span><span 
+class="pcrr7t-x-x-144"> 0</span><span 
+class="pcrr7t-x-x-144"> taken</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 100%</span><br class="fancyvrb" /><a 
+ id="x90-246068r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ######</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> printf</span><span 
+class="pcrr7t-x-x-144"> ("Failure\n");</span>
+<br class="fancyvrb" /><a 
+ id="x90-246070r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> call</span><span 
+class="pcrr7t-x-x-144"> 0</span><span 
+class="pcrr7t-x-x-144"> never</span><span 
+class="pcrr7t-x-x-144"> executed</span><br class="fancyvrb" /><a 
+ id="x90-246072r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> branch</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> never</span><span 
+class="pcrr7t-x-x-144"> executed</span>
+<br class="fancyvrb" /><a 
+ id="x90-246074r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x90-246076r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> printf</span><span 
+class="pcrr7t-x-x-144"> ("Success\n");</span>
+<br class="fancyvrb" /><a 
+ id="x90-246078r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> call</span><span 
+class="pcrr7t-x-x-144"> 0</span><span 
+class="pcrr7t-x-x-144"> returns</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 100%</span><br class="fancyvrb" /><a 
+ id="x90-246080r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 128--><p class="noindent" >For each basic block, a line is printed after the last line of the basic block describing the branch
+or call that ends the basic block. There can be multiple branches and calls listed
+for a single source line if there are multiple basic blocks that end on that line. In
+this case, the branches and calls are each given a number. There is no simple way
+to map these branches and calls back to source constructs. In general, though, the
+lowest numbered branch or call will correspond to the leftmost construct on the source
+line.
+</p><!--l. 132--><p class="noindent" >For a branch, if it was executed at least once, then a percentage indicating the number of times
+the branch was taken divided by the number of times the branch was executed will be printed.
+Otherwise, the message ”never executed” is printed.
+</p><!--l. 134--><p class="noindent" >For a call, if it was executed at least once, then a percentage indicating the number of times the
+call returned divided by the number of times the call was executed will be printed. This will
+usually be 100%, but may be less for functions call <span class="lstinline"><span 
+class="ecss-1200">exit</span></span> or <span class="lstinline"><span 
+class="ecss-1200">longjmp</span></span>, and thus may not return
+every time they are called.
+</p><!--l. 136--><p class="noindent" >The execution counts are cumulative. If the example program were executed again without
+removing the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">da</span></span> file, the count for the number of times each line in the source was executed
+would be added to the results of the previous run(s). This is potentially useful in several ways.
+For example, it could be used to accumulate data over a number of program runs as part of a
+test verification suite, or to provide more accurate long-term information over a large number of
+program runs.
+</p><!--l. 138--><p class="noindent" >The data in the <span 
+class="cmtt-12">.da </span>files is saved immediately before the program exits. For each source file
+compiled with <span 
+class="cmtt-12">-fprofile-arcs</span>, the profiling code first attempts to read in an existing <span 
+class="cmtt-12">.da </span>file;
+if the file doesn’t match the executable (differing number of basic block counts) it will ignore
+the contents of the file. It then adds in the new execution counts and finally writes the data to
+the file.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 140--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse61.html" >next</a>] [<a 
+href="main_gcc_ugse59.html" >prev</a>] [<a 
+href="main_gcc_ugse59.html#tailmain_gcc_ugse59.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse60.html" >front</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse60.html" >up</a>] </p></div>
+<!--l. 140--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse60.html"></a> </p> 
+</body></html> 

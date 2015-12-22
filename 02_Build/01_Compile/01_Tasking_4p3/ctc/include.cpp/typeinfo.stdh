@@ -1,0 +1,74 @@
+/**************************************************************************
+**
+**  FILE        :  typeinfo.h
+**
+**  DESCRIPTION :  Include file for type information
+**
+**  COPYRIGHT   :  Copyright 1998-2014 Altium BV
+**
+**************************************************************************/
+
+#ifndef _TYPEINFO_STDH
+#define _TYPEINFO_STDH
+
+#include <tasking_config.h>
+#include __TASKING_CXX_NATIVE_HEADER(exception)
+  
+__TASKING_START_NAMESPACE
+
+  /*
+  If bool is not supported, use a typedef for bool.
+  */
+  #ifdef _BOOL
+  typedef bool __bool;
+  #else /* ifndef _BOOL */
+  typedef int __bool;
+  #endif /* ifdef _BOOL */
+
+/* The following pragma is used so that the compiler knows that this definition
+   of type_info is the one that corresponds to the type returned by typeid. */
+#pragma define_type_info
+  class type_info {
+  public:
+    virtual ~type_info();
+    __bool operator==(const type_info&) const;
+    __bool operator!=(const type_info&) const;
+    __bool before(const type_info&) const;
+    const char* name() const;
+  private:
+    type_info& operator=(const type_info&);  // Not actually defined
+#if 0
+#else /* 0 */
+  protected:
+    // Protected instead of private to suppress the "no accessible
+    // constructor" warning
+#endif /* 0 */
+    type_info(const type_info&);  // Not actually defined
+#ifdef __IA64_ABI
+  private:
+    const char *__type_name;
+#endif /* ifdef __IA64_ABI */
+  };
+
+  class bad_cast : public exception {
+  public:
+    bad_cast() throw();
+    bad_cast(const bad_cast&) throw();
+    bad_cast& operator=(const bad_cast&) throw();
+    virtual ~bad_cast() throw();
+    virtual const char* what() const throw();
+  };
+
+  class bad_typeid : public exception {
+  public:
+    bad_typeid() throw();
+    bad_typeid(const bad_typeid&) throw();
+    bad_typeid& operator=(const bad_typeid&) throw();
+    virtual ~bad_typeid() throw();
+    virtual const char* what() const throw();
+  };
+
+__TASKING_END_NAMESPACE
+__TASKING_USING_NAMESPACE
+
+#endif /* _TYPEINFO_STDH */

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Clobber List</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 248--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch9.html" >next</a>] [<a 
+href="main_gcc_ugse16.html" >prev</a>] [<a 
+href="main_gcc_ugse16.html#tailmain_gcc_ugse16.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse17.html">tail</a>] [<a 
+href="main_gcc_ugch8.html#main_gcc_ugse17.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">8.3</span>  <a 
+href="main_gcc_ug.html#QQ2-29-44" id="x29-400008.3">Clobber List</a></h3>
+<!--l. 250--><p class="noindent" >The list of registers that are clobbered by your code is simply a list of the register names (a or
+d) separated by commas.
+</p><!--l. 262--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb73"><a 
+ id="x29-40002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm(&#x003C;assembly</span><span 
+class="pcrr7t-x-x-144"> language</span><span 
+class="pcrr7t-x-x-144"> template&#x003E;</span><br class="fancyvrb" /><a 
+ id="x29-40004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :&#x003C;output</span><span 
+class="pcrr7t-x-x-144"> operands&#x003E;</span>
+<br class="fancyvrb" /><a 
+ id="x29-40006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :&#x003C;input</span><span 
+class="pcrr7t-x-x-144"> operands&#x003E;</span><br class="fancyvrb" /><a 
+ id="x29-40008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "d0",</span><span 
+class="pcrr7t-x-x-144"> "d1",</span><span 
+class="pcrr7t-x-x-144"> "d2",</span><span 
+class="pcrr7t-x-x-144"> "d3",</span><span 
+class="pcrr7t-x-x-144"> "d4",</span><span 
+class="pcrr7t-x-x-144"> "d5");</span></div>
+<!--l. 270--><p class="noindent" >This information is passed on to the compiler so it will know not to expect any values to be
+retained in these registers.
+</p><!--l. 273--><p class="noindent" >If you want to clobber an extended data register the clobber list must not contain the extended
+register name e.g. <span class="lstinline"><span 
+class="ecss-1200">%%</span><span 
+class="ecss-1200">e0</span></span>, but must contain the corresponding data registers <span class="lstinline"><span 
+class="ecss-1200">%%</span><span 
+class="ecss-1200">d0</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%%</span><span 
+class="ecss-1200">d1</span></span>
+instead. This also applies for extended address registers.
+</p><!--l. 276--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 278--><p class="noindent" >The identified number of leading zeros of variable <span class="lstinline"><span 
+class="ecss-1200">val</span></span> shall be stored in <span class="lstinline"><span 
+class="ecss-1200">clz</span></span>.
+</p><!--l. 280--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb74"><a 
+ id="x29-40010r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> val,</span><span 
+class="pcrr7t-x-x-144"> zeros;</span><br class="fancyvrb" /><a 
+ id="x29-40012r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x29-40014r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> ("clz</span><span 
+class="pcrr7t-x-x-144"> %0,</span><span 
+class="pcrr7t-x-x-144"> %1":</span><span 
+class="pcrr7t-x-x-144"> "=d"(zeros):</span><span 
+class="pcrr7t-x-x-144"> "d"(val));</span></div>
+<!--l. 286--><p class="noindent" >If your assembler instruction modifies memory in an unpredictable fashion, add <span 
+class="cmmi-12">&#x003C;</span>memory<span 
+class="cmmi-12">&#x003E; </span>to
+the list of clobbered registers. This will cause GCC to not keep memory values cached in
+registers across the assembler instruction. You will also want to add the <span class="lstinline"><span 
+class="ecsx-1200">volatile</span></span> keyword if the
+memory affected is not listed in the inputs or outputs of the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span>, as the <span 
+class="cmmi-12">&#x003C;</span>memory<span 
+class="cmmi-12">&#x003E; </span>clobber
+does not count as a side-effect of the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span>.
+</p>
+<div class="center" 
+>
+                                                                                       
+                                                                                       
+<!--l. 288--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox27"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The
+construct <span class="lstinline"><span 
+class="ecss-1200">__asm__</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">__volatile__</span><span 
+class="ecss-1200">(</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">:</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">:</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">:</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">memory</span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">);</span></span> generates a
+sequence point. The compiler will not schedule any instruction over
+this point.                                                         </div>
+</div>
+<!--l. 290--><p class="noindent" >If a program is written like
+</p><!--l. 292--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb75"><a 
+ id="x29-40016r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x003C;some</span><span 
+class="pcrr7t-x-x-144"> instructions&#x003E;</span><br class="fancyvrb" /><a 
+ id="x29-40018r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __asm__</span><span 
+class="pcrr7t-x-x-144"> __volatile__(</span><span 
+class="pcrr7t-x-x-144"> "":</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "memory");</span>
+<br class="fancyvrb" /><a 
+ id="x29-40020r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x003C;some</span><span 
+class="pcrr7t-x-x-144"> more</span><span 
+class="pcrr7t-x-x-144"> instructions&#x003E;</span></div>
+<!--l. 298--><p class="noindent" >no assembler instructions generated from the instructions in <span class="lstinline"><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">some</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">instructions</span><span 
+class="ecss-1200">&#x003E;</span></span> will be placed
+after the sequence point.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch9.html" >next</a>] [<a 
+href="main_gcc_ugse16.html" >prev</a>] [<a 
+href="main_gcc_ugse16.html#tailmain_gcc_ugse16.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse17.html" >front</a>] [<a 
+href="main_gcc_ugch8.html#main_gcc_ugse17.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse17.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>TriCore Derivative Specs File</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch17.html" >next</a>] [<a 
+href="main_gcc_ugse36.html" >prev</a>] [<a 
+href="main_gcc_ugse36.html#tailmain_gcc_ugse36.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse37.html">tail</a>] [<a 
+href="main_gcc_ugch16.html#main_gcc_ugse37.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">16.3</span>  <a 
+href="main_gcc_ug.html#QQ2-58-116" id="x58-10900016.3">TriCore Derivative Specs File</a></h3>
+<!--l. 3--><p class="noindent" >For the TriCore a derivative specific configuration file called <span 
+class="cmtt-12">tricore.specs </span>is available in
+<span 
+class="cmtt-12">lib/gcc-lib/tricore/&#x003C;gcc-version&#x003E;</span>. In this file you can configure every derivative with
+specific compiler options (e.g. setting errata for derivative). The derivative is selected by
+using the compiler option <span 
+class="cmtt-12">-mcpu=&#x003C;derivative&#x003E;</span>. Here a code snippet of TriCore specs
+file.
+</p><!--l. 5--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb159"><a 
+ id="x58-109002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x58-109004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;tc1775_errata:</span><br class="fancyvrb" /><a 
+ id="x58-109006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mcpu018</span><span 
+class="pcrr7t-x-x-144"> -mcpu024</span><span 
+class="pcrr7t-x-x-144"> -mcpu031</span><span 
+class="pcrr7t-x-x-144"> -mcpu034</span><span 
+class="pcrr7t-x-x-144"> -mcpu048</span><span 
+class="pcrr7t-x-x-144"> -mcpu050</span>
+<br class="fancyvrb" /><a 
+ id="x58-109008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x58-109010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC1775:</span><br class="fancyvrb" /><a 
+ id="x58-109012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mtc12</span><span 
+class="pcrr7t-x-x-144"> %(tc1775_errata)</span><br class="fancyvrb" /><a 
+ id="x58-109014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+<div class="center" 
+>
+<!--l. 15--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox58"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />All tags must start with a leading <span class="lstinline"><span 
+class="cmsy-10x-x-120">*</span></span>. It is also possible to define own
+tags.                                                               </div>
+</div>
+<!--l. 17--><p class="noindent" >With <span class="lstinline"><span 
+class="ecss-1200">%(</span><span 
+class="ecss-1200">tc1775_errata</span><span 
+class="ecss-1200">)</span></span> the contents of <span class="lstinline"><span 
+class="cmsy-10x-x-120">*</span><span 
+class="ecss-1200">tc1775_errata</span></span> is substituted. You can access the tag
+<span class="lstinline"><span 
+class="cmsy-10x-x-120">*</span><span 
+class="ecss-1200">TC1775</span></span> by invocation of
+</p><!--l. 19--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-mcpu=TC1775 ...</span>
+</p><!--l. 21--><p class="noindent" >this corresponds to
+</p><!--l. 23--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-mtc12 -mcpu018 -mcpu024 -mcpu031 -mcpu034 -mcpu048 -mcpu050</span>
+<span 
+class="cmtt-12">...</span>
+</p>
+                                                                                       
+                                                                                       
+<div class="center" 
+>
+<!--l. 25--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox59"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />With <span 
+class="cmtt-12">-mcpu-specs=&#x003C;file&#x003E;</span> it is also possible to specify a <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>with
+your own configuration settings.                                    </div>
+</div>
+<!--l. 27--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 29--><p class="noindent" >The TriCore derivatives distinguish in memory location, port configuration etc. For this reason
+often preprocessor statements like
+</p><!--l. 31--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb160"><a 
+ id="x58-109016r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #ifdef</span><span 
+class="pcrr7t-x-x-144"> TC1775</span><br class="fancyvrb" /><a 
+ id="x58-109018r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #define</span><span 
+class="pcrr7t-x-x-144"> MEMCPY_START</span><span 
+class="pcrr7t-x-x-144"> (0x...)</span><br class="fancyvrb" /><a 
+ id="x58-109020r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #endif</span></div>
+<!--l. 37--><p class="noindent" >set the derivative specific settings. To enable the settings the option <span 
+class="cmtt-12">-DTC1775</span> must be passed
+to the compiler. A more comfortable way is given with the possibility to declare the target
+specific ’defines’ or parameters within a configuration file. For example modify the user specs
+file <span 
+class="cmtt-12">tricore.specs </span>by adding a <span class="lstinline"><span 
+class="ecss-1200">define</span></span>.
+</p><!--l. 39--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb161"><a 
+ id="x58-109022r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC1775:</span><br class="fancyvrb" /><a 
+ id="x58-109024r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mtc12</span><span 
+class="pcrr7t-x-x-144"> %(tc1765_errata)</span><span 
+class="pcrr7t-x-x-144"> -DTC1775</span></div>
+<!--l. 44--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+<span 
+class="cmssbx-10x-x-120">for</span>
+<span 
+class="cmssbx-10x-x-120">TC1796</span>
+</p><!--l. 46--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb162"><a 
+ id="x58-109026r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;tc1796_errata:</span><br class="fancyvrb" /><a 
+ id="x58-109028r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mcpu048=1</span><span 
+class="pcrr7t-x-x-144"> -mcpu060</span><span 
+class="pcrr7t-x-x-144"> -mcpu069</span><span 
+class="pcrr7t-x-x-144"> -mcpu070</span><span 
+class="pcrr7t-x-x-144"> -mcpu072</span><span 
+class="pcrr7t-x-x-144"> -mcpu076</span><span 
+class="pcrr7t-x-x-144"> -mcpu081</span><span 
+class="pcrr7t-x-x-144"> -mcpu082</span><span 
+class="pcrr7t-x-x-144"> -mcpu083</span><span 
+class="pcrr7t-x-x-144"> -mcpu094</span><span 
+class="pcrr7t-x-x-144"> -mcpu095</span><span 
+class="pcrr7t-x-x-144"> -mcpu096</span><span 
+class="pcrr7t-x-x-144"> -mcpu101</span><span 
+class="pcrr7t-x-x-144"> -mno-all-errata</span>
+<br class="fancyvrb" /><a 
+ id="x58-109030r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109032r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;tc13_OP1_errata:</span>
+<br class="fancyvrb" /><a 
+ id="x58-109034r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mcpu048=1</span><span 
+class="pcrr7t-x-x-144"> -mcpu060</span><span 
+class="pcrr7t-x-x-144"> -mcpu069</span><span 
+class="pcrr7t-x-x-144"> -mcpu070</span><span 
+class="pcrr7t-x-x-144"> -mcpu072</span><span 
+class="pcrr7t-x-x-144"> -mcpu081</span><span 
+class="pcrr7t-x-x-144"> -mcpu082</span><span 
+class="pcrr7t-x-x-144"> -mcpu083</span><span 
+class="pcrr7t-x-x-144"> -mcpu095</span><span 
+class="pcrr7t-x-x-144"> -mcpu096</span><span 
+class="pcrr7t-x-x-144"> -mcpu101</span><span 
+class="pcrr7t-x-x-144"> -mno-all-errata</span>
+<br class="fancyvrb" /><a 
+ id="x58-109036r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109038r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;tc13_err13x_OP1_errata:</span>
+<br class="fancyvrb" /><a 
+ id="x58-109040r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mcpu048=1</span><span 
+class="pcrr7t-x-x-144"> -mcpu060</span><span 
+class="pcrr7t-x-x-144"> -mcpu069</span><span 
+class="pcrr7t-x-x-144"> -mcpu070</span><span 
+class="pcrr7t-x-x-144"> -mcpu072</span><span 
+class="pcrr7t-x-x-144"> -mcpu081</span><span 
+class="pcrr7t-x-x-144"> -mcpu082</span><span 
+class="pcrr7t-x-x-144"> -mcpu083</span><span 
+class="pcrr7t-x-x-144"> -mcpu095</span><span 
+class="pcrr7t-x-x-144"> -mcpu096</span><span 
+class="pcrr7t-x-x-144"> -mcpu101</span><span 
+class="pcrr7t-x-x-144"> -mno-all-errata</span>
+<br class="fancyvrb" /><a 
+ id="x58-109042r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109044r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;tc1796_OP1_errata:</span>
+<br class="fancyvrb" /><a 
+ id="x58-109046r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mcpu048=1</span><span 
+class="pcrr7t-x-x-144"> -mcpu060</span><span 
+class="pcrr7t-x-x-144"> -mcpu069</span><span 
+class="pcrr7t-x-x-144"> -mcpu070</span><span 
+class="pcrr7t-x-x-144"> -mcpu072</span><span 
+class="pcrr7t-x-x-144"> -mcpu081</span><span 
+class="pcrr7t-x-x-144"> -mcpu082</span><span 
+class="pcrr7t-x-x-144"> -mcpu083</span><span 
+class="pcrr7t-x-x-144"> -mcpu095</span><span 
+class="pcrr7t-x-x-144"> -mcpu096</span><span 
+class="pcrr7t-x-x-144"> -mcpu101</span><span 
+class="pcrr7t-x-x-144"> -mno-all-errata</span>
+<br class="fancyvrb" /><a 
+ id="x58-109048r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109050r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;tc1766_OP1_errata:</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x58-109052r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -mcpu048=1</span><span 
+class="pcrr7t-x-x-144"> -mcpu060</span><span 
+class="pcrr7t-x-x-144"> -mcpu069</span><span 
+class="pcrr7t-x-x-144"> -mcpu070</span><span 
+class="pcrr7t-x-x-144"> -mcpu072</span><span 
+class="pcrr7t-x-x-144"> -mcpu081</span><span 
+class="pcrr7t-x-x-144"> -mcpu082</span><span 
+class="pcrr7t-x-x-144"> -mcpu083</span><span 
+class="pcrr7t-x-x-144"> -mcpu095</span><span 
+class="pcrr7t-x-x-144"> -mcpu096</span><span 
+class="pcrr7t-x-x-144"> -mcpu101</span><span 
+class="pcrr7t-x-x-144"> -mno-all-errata</span>
+<br class="fancyvrb" /><a 
+ id="x58-109054r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109056r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC13_OP1:</span><br class="fancyvrb" /><a 
+ id="x58-109058r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   -D__TC13__</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -D__TRICORE_NAME__=0x13</span><span 
+class="pcrr7t-x-x-144"> -mtc13</span><span 
+class="pcrr7t-x-x-144"> %(tc13_OP1_errata)</span>
+<br class="fancyvrb" /><a 
+ id="x58-109060r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109062r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC13_ERR13X_OP1:</span>
+<br class="fancyvrb" /><a 
+ id="x58-109064r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   -D__TC13__</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -D__TRICORE_NAME__=0x13</span><span 
+class="pcrr7t-x-x-144"> -mtc13</span><span 
+class="pcrr7t-x-x-144"> %(tc13_err13x_OP1_errata)</span><br class="fancyvrb" /><a 
+ id="x58-109066r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x58-109068r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC13-FPU_OP1:</span><br class="fancyvrb" /><a 
+ id="x58-109070r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   -D__TC13_FPU__</span><span 
+class="pcrr7t-x-x-144"> -D__TC13__</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -D__TRICORE_NAME__=0x13</span><span 
+class="pcrr7t-x-x-144"> -mtc13</span><span 
+class="pcrr7t-x-x-144"> %(tc13_OP1_errata)</span><span 
+class="pcrr7t-x-x-144"> -mhard-float</span>
+<br class="fancyvrb" /><a 
+ id="x58-109072r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109074r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC13-FPU_ERR13X_OP1:</span>
+<br class="fancyvrb" /><a 
+ id="x58-109076r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   -D__TC13_FPU__</span><span 
+class="pcrr7t-x-x-144"> -D__TC13__</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -D__TRICORE_NAME__=0x13</span><span 
+class="pcrr7t-x-x-144"> -mtc13</span><span 
+class="pcrr7t-x-x-144"> %(tc13_err13x_OP1_errata)</span><span 
+class="pcrr7t-x-x-144"> -mhard-float</span>
+<br class="fancyvrb" /><a 
+ id="x58-109078r27"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109080r28"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC1766_OP1:</span><br class="fancyvrb" /><a 
+ id="x58-109082r29"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   -D__TC1766__</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -D__TRICORE_NAME__=0x1766</span><span 
+class="pcrr7t-x-x-144"> -mtc13</span><span 
+class="pcrr7t-x-x-144"> %(tc1766_OP1_errata)</span><span 
+class="pcrr7t-x-x-144"> -mhard-float</span><span 
+class="pcrr7t-x-x-144"> -mcpu=tc1766</span>
+<br class="fancyvrb" /><a 
+ id="x58-109084r30"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x58-109086r31"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;TC1796_OP1:</span><br class="fancyvrb" /><a 
+ id="x58-109088r32"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   -D__TC1796__</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> -D__TRICORE_NAME__=0x1796</span><span 
+class="pcrr7t-x-x-144"> -mtc13</span><span 
+class="pcrr7t-x-x-144"> %(tc1796_OP1_errata)</span><span 
+class="pcrr7t-x-x-144"> -mhard-float</span><span 
+class="pcrr7t-x-x-144"> -mcpu=tc1796</span>
+<br class="fancyvrb" /><a 
+ id="x58-109090r33"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span></div>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch17.html" >next</a>] [<a 
+href="main_gcc_ugse36.html" >prev</a>] [<a 
+href="main_gcc_ugse36.html#tailmain_gcc_ugse36.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse37.html" >front</a>] [<a 
+href="main_gcc_ugch16.html#main_gcc_ugse37.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse37.html"></a> </p> 
+</body></html> 

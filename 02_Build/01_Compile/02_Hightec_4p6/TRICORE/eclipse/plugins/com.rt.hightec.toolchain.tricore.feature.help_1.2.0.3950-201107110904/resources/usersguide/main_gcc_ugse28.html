@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Default Case</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse29.html" >next</a>] [<a 
+href="main_gcc_ugse27.html" >prev</a>] [<a 
+href="main_gcc_ugse27.html#tailmain_gcc_ugse27.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse28.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse28.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.8</span>  <a 
+href="main_gcc_ug.html#QQ2-46-70" id="x46-6500014.8">Default Case</a></h3>
+<a 
+ id="dx46-65001"></a>
+<!--l. 3--><p class="noindent" ><span class="lstinline"><span 
+class="ecsx-1200">if</span></span>-<span class="lstinline"><span 
+class="ecsx-1200">else</span></span> constructions are used quite often in source files. In most cases, one branch is the default
+case while the other case is rarely used. An <span class="lstinline"><span 
+class="ecsx-1200">else</span></span> case might for instance contain an error
+handling.
+</p><!--l. 5--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb115"><a 
+ id="x46-65003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (v_battery</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> LOW_BATTERY)</span><br class="fancyvrb" /><a 
+ id="x46-65005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-65007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> FLAG</span><span 
+class="pcrr7t-x-x-144"> |=</span><span 
+class="pcrr7t-x-x-144"> FLAG_LOW_BATTERY;</span>
+<br class="fancyvrb" /><a 
+ id="x46-65009r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-65011r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-65013r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-65015r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> error_status</span><span 
+class="pcrr7t-x-x-144"> (FLAG_LOW_BATTERY);</span><br class="fancyvrb" /><a 
+ id="x46-65017r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 16--><p class="noindent" >In the example the variable <span class="lstinline"><span 
+class="ecss-1200">v_battery</span></span> contains the value of A/D-converted battery
+voltage. For monitoring purposes, the battery voltage is compared against a lower limit
+<span class="lstinline"><span 
+class="ecss-1200">LOW_BATTERY</span></span>. If the voltage drops below <span class="lstinline"><span 
+class="ecss-1200">LOW_BATTERY</span></span>, an error handling function
+<span class="lstinline"><span 
+class="ecss-1200">error_status</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">();</span></span> is called. In the example, the error handling function reports the
+status <span class="lstinline"><span 
+class="ecss-1200">FLAG_LOW_BATTERY</span></span>. This error function is used only in the exception case,
+therefore it is advisable to optimise the code for the default case. To transfer this
+knowledge to the compiler, a <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span></span> statement with the following notation is
+introduced:
+</p><!--l. 18--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb116"><a 
+ id="x46-65019r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span><br class="fancyvrb" /><a 
+ id="x46-65021r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (v_battery</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> LOW_BATTERY)</span>
+<br class="fancyvrb" /><a 
+ id="x46-65023r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-65025r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> FLAG</span><span 
+class="pcrr7t-x-x-144"> |=</span><span 
+class="pcrr7t-x-x-144"> FLAG_LOW_BATTERY;</span><br class="fancyvrb" /><a 
+ id="x46-65027r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-65029r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-65031r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x46-65033r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> error_status</span><span 
+class="pcrr7t-x-x-144"> (FLAG_LOW_BATTERY);</span><br class="fancyvrb" /><a 
+ id="x46-65035r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<div class="center" 
+>
+<!--l. 30--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+<div 
+class="colorbox" id="colorbox47"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The compiler uses this information on the code for optimising the
+cash and pipeline access for the default case. Thus the execution time
+is reduced.                                                         </div>
+</div>
+<!--l. 32--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">#pragma branch_if_default</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 33--><p class="noindent" ><a 
+ id="dx46-65036"></a> Indicates the <span class="lstinline"><span 
+class="ecsx-1200">if</span></span>-case as default case.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">#pragma branch_else_default</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 34--><p class="noindent" ><a 
+ id="dx46-65037"></a> Indicates the <span class="lstinline"><span 
+class="ecsx-1200">else</span></span>-case as default case.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">#pragma branch_no_default</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 35--><p class="noindent" ><a 
+ id="dx46-65038"></a> Indicates that neither the <span class="lstinline"><span 
+class="ecsx-1200">if</span></span>-case nor the <span class="lstinline"><span 
+class="ecsx-1200">else</span></span> case is preferred.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">#pragma branch_case_default</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 37--><p class="noindent" >Mark the default case within a <span class="lstinline"><span 
+class="ecsx-1200">switch</span></span> statement.</p></dd></dl>
+<!--l. 40--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.8.1</span>  <a 
+href="#x46-6600014.8.1" id="x46-6600014.8.1">Restriction</a></h4>
+      <ul class="itemize1">
+      <li class="itemize">The  statements  <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">branch_if_default</span></span>  or  <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">branch_else_default</span></span>
+      must be followed immediately by an <span class="lstinline"><span 
+class="ecsx-1200">if</span></span>-<span class="lstinline"><span 
+class="ecsx-1200">else</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">if</span></span> statement (comments are the sole
+      allowed insertion between these statements). Otherwise an error message will be
+      issued.
+      </li>
+      <li class="itemize">With  <span class="lstinline"><span 
+class="ecsx-1200">switch</span></span>  blocks  also,  the  <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">branch_case_default</span></span>  statement  must
+      be   followed   immediately   by   a   <span class="lstinline"><span 
+class="ecsx-1200">case</span></span>  statement,   the   only   exception   being
+      comments.  Otherwise  an  error  message  will  be  issued.  The  same  applies  for
+      <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">branch_no_default</span></span> and <span class="lstinline"><span 
+class="ecsx-1200">if</span></span>-<span class="lstinline"><span 
+class="ecsx-1200">else</span></span>-, <span class="lstinline"><span 
+class="ecsx-1200">if</span></span>- or <span class="lstinline"><span 
+class="ecsx-1200">switch</span></span>-statements.
+                                                                                       
+                                                                                       
+      </li>
+      <li class="itemize">Wrong  use  of  pragma  statements,  e.g.  <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">branch_if_default</span></span>  before  a
+      <span class="lstinline"><span 
+class="ecsx-1200">switch</span></span>-statement will issue an error.
+      </li>
+      <li class="itemize">The scope of a pragma is only valid for the next <span class="lstinline"><span 
+class="ecsx-1200">if</span></span>, <span class="lstinline"><span 
+class="ecsx-1200">if</span></span>-<span class="lstinline"><span 
+class="ecsx-1200">else</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">switch</span></span> statement.
+      To select a conditional statement within a nested structure, you must select the
+      statement by a separate <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span></span> instruction.
+      </li>
+      <li class="itemize">If a conditional expression is used without specifying the default or non-default case,
+      (<span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">branch_no_default</span></span>), a warning will be issued. To enable the warning
+      message, the option <span 
+class="cmtt-12">-mwarn-pragma-branch</span> must be set. Per default the warnings
+      are not enabled.
+      </li>
+      <li class="itemize">Using contrary pragma statements within conditional statements will generate an
+      error.</li></ul>
+<div class="center" 
+>
+<!--l. 51--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox48"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Comments   and   preprocessor   directives   between   pragma   and
+conditional statements are accepted.                                </div>
+</div>
+<!--l. 53--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.8.2</span>  <a 
+href="#x46-6700014.8.2" id="x46-6700014.8.2">Syntax Examples</a></h4>
+<!--l. 55--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb117"><a 
+ id="x46-67002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span><br class="fancyvrb" /><a 
+ id="x46-67004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ctemp</span><span 
+class="pcrr7t-x-x-144"> =1;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> error_handler</span><span 
+class="pcrr7t-x-x-144"> ();</span><br class="fancyvrb" /><a 
+ id="x46-67018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 67--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+<div class="fancyvrb" id="fancyvrb118"><a 
+ id="x46-67020r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_else_default</span><br class="fancyvrb" /><a 
+ id="x46-67022r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #ifdef</span><span 
+class="pcrr7t-x-x-144"> OWNTEST</span><br class="fancyvrb" /><a 
+ id="x46-67024r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span>
+<br class="fancyvrb" /><a 
+ id="x46-67026r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #endif</span><br class="fancyvrb" /><a 
+ id="x46-67028r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #ifndef</span><span 
+class="pcrr7t-x-x-144"> OWNTEST</span><br class="fancyvrb" /><a 
+ id="x46-67030r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (!B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67032r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #endif</span><br class="fancyvrb" /><a 
+ id="x46-67034r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x46-67036r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ctemp</span><span 
+class="pcrr7t-x-x-144"> =1;</span><br class="fancyvrb" /><a 
+ id="x46-67038r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67040r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67042r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67044r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> error_handler</span><span 
+class="pcrr7t-x-x-144"> ();</span><br class="fancyvrb" /><a 
+ id="x46-67046r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 84--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Using</span>
+<span 
+class="cmssbx-10x-x-120">Comments</span>
+</p><!--l. 86--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb119"><a 
+ id="x46-67048r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span><br class="fancyvrb" /><a 
+ id="x46-67050r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> comment1</span><br class="fancyvrb" /><a 
+ id="x46-67052r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> comment2</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x46-67054r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67056r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67058r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =100;</span><br class="fancyvrb" /><a 
+ id="x46-67060r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67062r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67064r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67066r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =0;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67068r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67070r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_else_default</span><br class="fancyvrb" /><a 
+ id="x46-67072r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //</span><span 
+class="pcrr7t-x-x-144"> comment3</span>
+<br class="fancyvrb" /><a 
+ id="x46-67074r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> comment4</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x46-67076r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67078r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67080r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =100;</span><br class="fancyvrb" /><a 
+ id="x46-67082r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67084r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+<!--l. 108--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Error</span>
+<span 
+class="cmssbx-10x-x-120">Cases</span>
+</p><!--l. 110--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb120"><a 
+ id="x46-67086r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span><br class="fancyvrb" /><a 
+ id="x46-67088r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //Comment</span><br class="fancyvrb" /><a 
+ id="x46-67090r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;Another</span><span 
+class="pcrr7t-x-x-144"> comment</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x46-67092r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp_U32</span><span 
+class="pcrr7t-x-x-144"> =0x78546897;</span><br class="fancyvrb" /><a 
+ id="x46-67094r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67096r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67098r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =100;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67100r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67102r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67104r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67106r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =0;</span><br class="fancyvrb" /><a 
+ id="x46-67108r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 125--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb121"><a 
+ id="x46-67110r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_no_default</span><br class="fancyvrb" /><a 
+ id="x46-67112r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67114r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67116r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =100;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67118r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67120r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_else_default</span><br class="fancyvrb" /><a 
+ id="x46-67122r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67124r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67126r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =0;</span><br class="fancyvrb" /><a 
+ id="x46-67128r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 138--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb122"><a 
+ id="x46-67130r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_case_default</span><br class="fancyvrb" /><a 
+ id="x46-67132r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67134r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x46-67136r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =100;</span><br class="fancyvrb" /><a 
+ id="x46-67138r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67140r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67142r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67144r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =0;</span><br class="fancyvrb" /><a 
+ id="x46-67146r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 150--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb123"><a 
+ id="x46-67148r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //Comment</span><br class="fancyvrb" /><a 
+ id="x46-67150r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;Another</span><span 
+class="pcrr7t-x-x-144"> comment</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x46-67152r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67154r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x46-67156r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 100;</span><br class="fancyvrb" /><a 
+ id="x46-67158r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67160r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67162r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67164r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =0;</span><br class="fancyvrb" /><a 
+ id="x46-67166r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+                                                                                       
+                                                                                       
+<!--l. 163--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Nested</span>
+<span 
+class="cmssbx-10x-x-120">Constructs</span>
+</p><!--l. 165--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb124"><a 
+ id="x46-67168r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_else_default</span><br class="fancyvrb" /><a 
+ id="x46-67170r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67172r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67174r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67176r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67178r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (tmot</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> 15)</span><br class="fancyvrb" /><a 
+ id="x46-67180r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67182r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span><br class="fancyvrb" /><a 
+ id="x46-67184r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67186r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span>
+<br class="fancyvrb" /><a 
+ id="x46-67188r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span><br class="fancyvrb" /><a 
+ id="x46-67190r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (tmot</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> 30)</span><br class="fancyvrb" /><a 
+ id="x46-67192r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67194r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 2;</span><br class="fancyvrb" /><a 
+ id="x46-67196r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x46-67198r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67200r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span><br class="fancyvrb" /><a 
+ id="x46-67202r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (tmot</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> 100)</span><br class="fancyvrb" /><a 
+ id="x46-67204r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67206r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 3;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67208r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67210r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67212r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67214r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> -1;</span><br class="fancyvrb" /><a 
+ id="x46-67216r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67218r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (B_stend)</span><br class="fancyvrb" /><a 
+ id="x46-67220r27"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67222r28"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><br class="fancyvrb" /><a 
+ id="x46-67224r29"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ id="x46-67226r30"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67228r31"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (tmot</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> 15)</span><br class="fancyvrb" /><a 
+ id="x46-67230r32"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67232r33"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span><br class="fancyvrb" /><a 
+ id="x46-67234r34"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67236r35"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67238r36"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (tmot</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> 30)</span>
+<br class="fancyvrb" /><a 
+ id="x46-67240r37"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67242r38"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 2;</span><br class="fancyvrb" /><a 
+ id="x46-67244r39"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67246r40"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67248r41"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span>
+<br class="fancyvrb" /><a 
+ id="x46-67250r42"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (tmot</span><span 
+class="pcrr7t-x-x-144"> &#x003E;</span><span 
+class="pcrr7t-x-x-144"> 100)</span><br class="fancyvrb" /><a 
+ id="x46-67252r43"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67254r44"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 3;</span><br class="fancyvrb" /><a 
+ id="x46-67256r45"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x46-67258r46"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x46-67260r47"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67262r48"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> -1;</span><br class="fancyvrb" /><a 
+ id="x46-67264r49"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 217--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Switch</span>
+<span 
+class="cmssbx-10x-x-120">Statements</span>
+</p><!--l. 219--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb125"><a 
+ id="x46-67266r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> switch</span><span 
+class="pcrr7t-x-x-144"> (state)</span><br class="fancyvrb" /><a 
+ id="x46-67268r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x46-67270r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> INIT:</span><br class="fancyvrb" /><a 
+ id="x46-67272r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67274r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> state</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> STATE1;</span><br class="fancyvrb" /><a 
+ id="x46-67276r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x46-67278r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> STATE1:</span><br class="fancyvrb" /><a 
+ id="x46-67280r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67282r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> state</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> STATE2;</span><br class="fancyvrb" /><a 
+ id="x46-67284r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x46-67286r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_case_default</span>
+<br class="fancyvrb" /><a 
+ id="x46-67288r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> case</span><span 
+class="pcrr7t-x-x-144"> STATE2:</span><br class="fancyvrb" /><a 
+ id="x46-67290r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 234;</span><br class="fancyvrb" /><a 
+ id="x46-67292r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> state</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> STATE3;</span><br class="fancyvrb" /><a 
+ id="x46-67294r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span>
+<br class="fancyvrb" /><a 
+ id="x46-67296r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span><br class="fancyvrb" /><a 
+ id="x46-67298r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> default:</span><br class="fancyvrb" /><a 
+ id="x46-67300r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><br class="fancyvrb" /><a 
+ id="x46-67302r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> state</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> INIT;</span><br class="fancyvrb" /><a 
+ id="x46-67304r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> break;</span><br class="fancyvrb" /><a 
+ id="x46-67306r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 243--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Conditional</span>
+<span 
+class="cmssbx-10x-x-120">Expression</span>
+</p><!--l. 245--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb126"><a 
+ id="x46-67308r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> branch_if_default</span><br class="fancyvrb" /><a 
+ id="x46-67310r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> temp</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> (B_stend</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> FALSE)</span><span 
+class="pcrr7t-x-x-144"> ?</span><span 
+class="pcrr7t-x-x-144"> temp1</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> temp2;</span></div>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse29.html" >next</a>] [<a 
+href="main_gcc_ugse27.html" >prev</a>] [<a 
+href="main_gcc_ugse27.html#tailmain_gcc_ugse27.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse28.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse28.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse28.html"></a> </p> 
+</body></html> 

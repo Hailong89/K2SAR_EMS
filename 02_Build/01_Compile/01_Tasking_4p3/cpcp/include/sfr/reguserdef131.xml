@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+
+
+<sfrfile core="userdef131" xmlns="http://www.tasking.com/schema/sfrfile/v1.0">
+	<header>
+
+Version: @(#)reguserdef131.xml	1.4 09/08/26
+Generated from @(#)reguserdef131.xml	1.4 09/08/26
+
+This file contains all SFR and BIT names and on-chip register definitions
+
+Copyright 2002-2014 Altium BV
+
+	</header>
+	<group name="Core Base">
+		<sfr name="core_base" address="0xf7e1" description="The base address off the memory for the CSFR's"/>
+	</group>
+	<group name="CSFR" description="Core Special Function Registers">
+		<sfr name="PCXI" address="0xfe00" description="Previous Context Info Register"/>
+		<sfr name="PSW" address="0xfe04" description="Program Status Word"/>
+		<sfr name="PC"  address="0xfe08" description="Program Counter"/>
+		<sfr name="BIV" address="0xfe20" description="Interrupt Vector Table"/>
+		<sfr name="BTV" address="0xfe24" description="Trap Vector Table Pointer"/>
+		<sfr name="ISP" address="0xfe28" description="Interrupt Stack Pointer"/>
+		<sfr name="FCX" address="0xfe38" description="Free CSA List Head Pointer"/>
+		<sfr name="LCX" address="0xfe3c" description="Free CSA List Limit Pointer"/>
+		<sfr name="ICR" address="0xfe2c" description="Interrupt Control Register "/>
+	</group>
+	<group name="WDT" description="Watch Dog Timer Timer">
+		<sfrtype name="WDT_CON0_type">
+			<bitfield name="ENDINIT" start="0" end="0" access="rw"/>
+			<bitfield name="LCK" start="1" end="1" access="rw"/>
+			<bitfield name="HPW0" start="2" end="3" access="w"/>
+			<bitfield name="HPW1" start="4" end="7" access="w"/>
+			<bitfield name="PW" start="8" end="15" access="rw"/>
+			<bitfield name="REL" start="16" end="31" access="rw"/>
+		</sfrtype>
+		<sfr name="WDT_CON0" address="0xf00005f0" sfrtype="WDT_CON0_type" description="WDT Control Register 0 "/>
+		<sfrtype name="WDT_CON1_type">
+			<bitfield name="CLRIRF" start="0" end="0" access="rw"/>
+			<bitfield name="IR" start="2" end="2" access="rw"/>
+			<bitfield name="DR" start="3" end="3" access="rw"/>
+		</sfrtype>
+		<sfr name="WDT_CON1" address="0xf00005f4" sfrtype="WDT_CON1_type" description="WDT Control Register 1 "/>
+	</group>
+	<group name="STM" description="System Timer">
+		<sfrtype name="STM_TIM0_type">
+			<bitfield name="STM[31:0]" start="0" end="31" access="r"/>
+		</sfrtype>
+		<sfr name="STM_TIM0" address="0xf0000210" sfrtype="STM_TIM0_type" description="STM Timer Register 0 "/>
+		<sfrtype name="STM_CAP_type">
+			<bitfield name="STM[55:32]" start="0" end="23" access="r"/>
+		</sfrtype>
+		<sfr name="STM_CAP" address="0xf000022c" sfrtype="STM_CAP_type" description="STM Timer Capture Register "/>
+		<sfrtype name="LFI_CON_type">
+			<bitfield name="LTAG" start="4" end="6" access="r"/>
+			<bitfield name="FTAG" start="8" end="11" access="r"/>
+		</sfrtype>
+		<sfr name="LFI_CON" address="0xf87fff10" sfrtype="LFI_CON_type" description="LFI Configuration Register "/>
+		<alias name="SYSTIME_LOW" definition="STM_TIM0.U"/>
+ 		<alias name="SYSTIME_HIGH" definition="STM_CAP.U"/>
+ 	</group>
+	<group name="EBU" description="External Bus Unit">
+		<sfrtype name="EBU_EXTBOOT_type">
+			<bitfield name="CFGEND" start="0" end="0" access="r" qualify="__sfrbit32"/>
+			<bitfield name="CFGERR" start="1" end="1" access="r" qualify="__sfrbit32"/>
+			<bitfield name="RES" start="2" end="30" access="r" qualify="__sfrbit32"/>
+			<bitfield name="EBUCFG" start="31" end="31" access="w" qualify="__sfrbit32"/>
+		</sfrtype>
+		<sfr name="EBU_EXTBOOT" address="0xf8000010" sfrtype="EBU_EXTBOOT_type" description="EBU External Boot Configuration Register "/>
+		<alias name="EBU_BOOTCFG" definition="EBU_EXTBOOT"/>
+ 	</group>
+</sfrfile>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>3 A Sample Program</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch4.html" >next</a>] [<a 
+href="main_gcc_ugse6.html" >prev</a>] [<a 
+href="main_gcc_ugse6.html#tailmain_gcc_ugse6.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch3.html">tail</a>] [<a 
+href="main_gcc_ugpa1.html#main_gcc_ugch3.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">3</span>  <a 
+href="main_gcc_ug.html#QQ2-12-14" name="x12-110003">A Sample Program</a></h2>
+<a 
+ id="dx12-11001"></a>
+<a 
+ id="dx12-11002"></a>
+<!--l. 4--><p class="noindent" >This chapter describes how you can create your first executable from a very simple sample
+program.
+</p><!--l. 6--><p class="noindent" >This is the source code of this program, saved in the file <a 
+href="examples/SampleProgram/main.c" ><span class="lstinline"><span 
+class="ecss-1200">main</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">c</span></span></a>:
+</p>
+<div class="fancyvrb" id="fancyvrb1">
+<a 
+ name="x12-11004r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> Description:</span>
+<br class="fancyvrb" /><a 
+ name="x12-11006r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11008r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> A</span><span 
+class="pcrr7t-x-x-144"> simple</span><span 
+class="pcrr7t-x-x-144"> sample</span><span 
+class="pcrr7t-x-x-144"> program</span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> introduction</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> user's</span><span 
+class="pcrr7t-x-x-144"> guide.</span>
+<br class="fancyvrb" /><a 
+ name="x12-11010r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> this</span><span 
+class="pcrr7t-x-x-144"> example</span><span 
+class="pcrr7t-x-x-144"> should</span><span 
+class="pcrr7t-x-x-144"> be</span><span 
+class="pcrr7t-x-x-144"> target</span><span 
+class="pcrr7t-x-x-144"> independent</span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> using</span><span 
+class="pcrr7t-x-x-144"> as</span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> general</span><span 
+class="pcrr7t-x-x-144"> example.</span>
+<br class="fancyvrb" /><a 
+ name="x12-11012r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11014r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> (c)</span><span 
+class="pcrr7t-x-x-144"> HighTec</span><span 
+class="pcrr7t-x-x-144"> EDV-Systeme</span><span 
+class="pcrr7t-x-x-144"> GmbH</span><span 
+class="pcrr7t-x-x-144"> 2003</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ name="x12-11016r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11018r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> table[7]</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {'T','H','E','C','H','I','G'};</span>
+<br class="fancyvrb" /><a 
+ name="x12-11020r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> indices[7]</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {4,</span><span 
+class="pcrr7t-x-x-144"> 0,</span><span 
+class="pcrr7t-x-x-144"> 5,</span><span 
+class="pcrr7t-x-x-144"> 6,</span><span 
+class="pcrr7t-x-x-144"> 3,</span><span 
+class="pcrr7t-x-x-144"> 1,</span><span 
+class="pcrr7t-x-x-144"> 2};</span>
+<br class="fancyvrb" /><a 
+ name="x12-11022r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11024r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void)</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ name="x12-11026r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11028r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i;</span>
+<br class="fancyvrb" /><a 
+ name="x12-11030r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> result[7];</span>
+<br class="fancyvrb" /><a 
+ name="x12-11032r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11034r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> place;</span>
+<br class="fancyvrb" /><a 
+ name="x12-11036r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11038r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> 7;</span><span 
+class="pcrr7t-x-x-144"> i++)</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ name="x12-11040r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   place</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> indices[i];</span>
+<br class="fancyvrb" /><a 
+ name="x12-11042r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   result[place]</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> table[i];</span>
+<br class="fancyvrb" /><a 
+ name="x12-11044r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+<br class="fancyvrb" /><a 
+ name="x12-11046r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ name="x12-11048r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span>
+</div>
+<!--l. 10--><p class="noindent" >To compile this program in a executable open a command line interface. This is the DOS-Box
+on a Microsoft Windows system or a shell like the bash or the ksh on UNIX or Linux. Then
+                                                                                       
+                                                                                       
+change to the directory the file is stored at and type:
+</p><!--l. 12--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-o main main.c</span>
+</p><!--l. 14--><p class="noindent" >Now the compiler is started and the input file <span 
+class="cmtt-12">main.c </span>is compiled to the executable <span 
+class="cmtt-12">main</span>. This
+file is ready to be loaded into the target.
+</p>
+<div class="center" 
+>
+<!--l. 16--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox7"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If you want to use a makefile for linux and other operating system
+you can check the system with <span class="lstinline"><span 
+class="ecss-1200">ifeq</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecss-1200">$</span><span 
+class="ecss-1200">(</span><span 
+class="ecss-1200">OSTYPE</span><span 
+class="ecss-1200">),</span><span 
+class="ecss-1200">linux</span><span 
+class="ecss-1200">)</span></span>              </div>
+</div>
+<!--l. 18--><p class="noindent" >Here a small example:
+</p>
+<div class="fancyvrb" id="fancyvrb2"><a 
+ name="x12-11050r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ifeq</span><span 
+class="pcrr7t-x-x-144"> ($(OSTYPE),linux)</span><br class="fancyvrb" /><a 
+ name="x12-11052r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> RDF</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> rm</span><span 
+class="pcrr7t-x-x-144"> -rf</span><br class="fancyvrb" /><a 
+ name="x12-11054r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ name="x12-11056r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> RDF</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> rd</span><br class="fancyvrb" /><a 
+ name="x12-11058r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> endif</span></div>
+<!--l. 28--><p class="noindent" >If you test <span class="lstinline"><span 
+class="ecss-1200">$</span><span 
+class="ecss-1200">(</span><span 
+class="ecss-1200">OSTYPE</span><span 
+class="ecss-1200">)</span></span> under linux it returns <span class="lstinline"><span 
+class="ecss-1200">linux</span></span>, independent of your linux version. Under
+windows it depends on the windows version (NT,2000,XP).
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch4.html" >next</a>] [<a 
+href="main_gcc_ugse6.html" >prev</a>] [<a 
+href="main_gcc_ugse6.html#tailmain_gcc_ugse6.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch3.html" >front</a>] [<a 
+href="main_gcc_ugpa1.html#main_gcc_ugch3.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch3.html"></a> </p> 
+</body></html> 

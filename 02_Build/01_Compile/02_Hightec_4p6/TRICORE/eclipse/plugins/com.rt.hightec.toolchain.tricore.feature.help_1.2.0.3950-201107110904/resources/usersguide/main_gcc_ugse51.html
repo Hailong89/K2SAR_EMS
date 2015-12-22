@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-nm</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 277--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse52.html" >next</a>] [<a 
+href="main_gcc_ugse50.html" >prev</a>] [<a 
+href="main_gcc_ugse50.html#tailmain_gcc_ugse50.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse51.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse51.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.4</span>  <a 
+href="main_gcc_ug.html#QQ2-80-220" id="x80-21100021.4">tricore-nm</a></h3>
+<a 
+ id="dx80-211001"></a>
+<!--l. 279--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.4.1</span>  <a 
+href="#x80-21200021.4.1" id="x80-21200021.4.1">Description</a></h4>
+<!--l. 281--><p class="noindent" ><span 
+class="cmtt-12">tricore-nm</span> <span 
+class="cmtt-12">[options] [&#x003C;filename&#x003E;]</span>
+</p><!--l. 283--><p class="noindent" >The <span 
+class="cmtt-12">tricore-nm</span> utility can be used to list all the symbols defined in (or referenced from) an
+object file, static archive library or a shared library. If no file is named on the command line,
+the file name <span 
+class="cmtt-12">a.out </span>is assumed. Using the command-line options, the symbols can be organized
+according to their address, size, or name, and the output can be formatted in number of ways.
+The symbols can also be demangled and presented in the same form as they appear in the
+original source code.
+</p><!--l. 285--><p class="noindent" >The type of symbol is coded in a letter. You will find the descriptions of these letters later in
+this chapter.
+</p><!--l. 287--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.4.2</span>  <a 
+href="#x80-21300021.4.2" id="x80-21300021.4.2">Invocation</a></h4>
+<!--l. 289--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-a, --debug-syms</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 290--><p class="noindent" ><a 
+ id="dx80-213001"></a> Displays the symbols intended for use by the debugger. Normally these
+                  are not listed.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-A, --print-file-name</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 292--><p class="noindent" ><a 
+ id="dx80-213002"></a><a 
+ id="dx80-213003"></a><a 
+ id="dx80-213004"></a> Print name of the input file before every symbol
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-B</span>                </dt><dd 
+class="list">
+                  <!--l. 294--><p class="noindent" ><a 
+ id="dx80-213005"></a> Same as <span 
+class="cmtt-12">--format=bsd</span>. This is the default.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-C &#x003C;style&#x003E;</span>       </dt><dd 
+class="list">
+                  <!--l. 296--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--demangle[=&#x003C;style&#x003E;]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 297--><p class="noindent" ><a 
+ id="dx80-213006"></a> Decode  (<span 
+class="cmsl-12">demangle</span>)  low-level  symbol  names  into  user-level  names.
+                  Besides  removing  any  initial  underscore  prepended  by  the  system,
+                  this makes C++ function names readable. Different compilers have
+                  different mangling styles. The optional demangling style argument can
+                  be used to choose an appropriate demangling style for your compiler.
+                  The <span 
+class="cmtt-12">style</span>, if specified, can be ’auto’ (the default), ’gnu’, ’lucid’, ’arm’,
+                  ’hp’, ’edg’ or ’gnu-new-abi’.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-demangle</span>   </dt><dd 
+class="list">
+                  <!--l. 299--><p class="noindent" >Do not demangle low-level symbol names. This is the default.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-D, --dynamic</span>   </dt><dd 
+class="list">
+                  <!--l. 301--><p class="noindent" ><a 
+ id="dx80-213007"></a> Display the dynamic symbols rather than the normal symbols. This is
+                  only meaningful for dynamic objects, such as certain types of shared
+                  libraries.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--defined-only</span>  </dt><dd 
+class="list">
+                  <!--l. 303--><p class="noindent" ><a 
+ id="dx80-213008"></a><a 
+ id="dx80-213009"></a> Display only defined symbols for each object file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-e</span>                </dt><dd 
+class="list">
+                  <!--l. 305--><p class="noindent" >(ignored)
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-f &#x003C;format&#x003E;</span>      </dt><dd 
+class="list">
+                  <!--l. 307--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--format=&#x003C;format&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 308--><p class="noindent" ><a 
+ id="dx80-213010"></a> Use the output format <span 
+class="cmmi-12">&#x003C;</span>format<span 
+class="cmmi-12">&#x003E;</span>, which can be ’bsd’, ’sysv’, or ’posix’.
+                  The default is ’bsd’. Only the first character of <span 
+class="cmmi-12">&#x003C;</span>format<span 
+class="cmmi-12">&#x003E; </span>is significant;
+                  it can be either upper or lower case.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-g, --extern-only</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 312--><p class="noindent" ><a 
+ id="dx80-213011"></a> Display only external symbols.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-l, --line-numbers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 314--><p class="noindent" ><a 
+ id="dx80-213012"></a> For each symbol, use debugging information to try to find a filename
+                  and line number. For a defined symbol, look for the line number of
+                  the address of the symbol. For an undefined symbol, look for the line
+                  number of a relocation entry which refers to the symbol. If line number
+                  information can be found, print it after the other symbol information.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-n, --numeric-sort</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 316--><p class="noindent" >Sort symbols numerically by address.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o</span>                </dt><dd 
+class="list">
+                  <!--l. 318--><p class="noindent" >Same as -A.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-p, --no-sort</span>   </dt><dd 
+class="list">
+                  <!--l. 320--><p class="noindent" ><a 
+ id="dx80-213013"></a> Do not sort the symbols; print them in the order encountered.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-P, --portability</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 323--><p class="noindent" >Same as <span 
+class="cmtt-12">--format=posix</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-r, --reverse-sort</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 325--><p class="noindent" >Reverse the sense of the sort whether numeric or alphabetic.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-S, --print-size</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 327--><p class="noindent" >Print size of defined symbols for the ’bsd’ output format.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-s, --print-armap</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 329--><p class="noindent" ><a 
+ id="dx80-213014"></a> Include index for symbols from archive members.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--size-sort</span>      </dt><dd 
+class="list">
+                  <!--l. 331--><p class="noindent" >Sort symbols by size. The size is computed as the difference between
+                  the value of the symbol and the value of the symbol with the next
+                  higher value. The size of the symbol is printed, rather than the value.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-t, --radix=&#x003C;radix&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 333--><p class="noindent" >Use <span 
+class="cmmi-12">&#x003C;</span>radix<span 
+class="cmmi-12">&#x003E; </span>for printing symbol values. It must be ’d’ for decimal, ’o’
+                  for octal, or ’x’ for hexadecimal.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--target=&#x003C;bfdname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 335--><p class="noindent" ><a 
+ id="dx80-213015"></a> Specify an object code format <span 
+class="cmmi-12">&#x003C;</span>bfdname<span 
+class="cmmi-12">&#x003E; </span>other than your system’s
+                  default format.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-u, --undefined-only</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 337--><p class="noindent" ><a 
+ id="dx80-213016"></a> Display only undefined symbols, those external to each object file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h, --help</span>       </dt><dd 
+class="list">
+                  <!--l. 340--><p class="noindent" >Display the helpscreen
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-V, --version</span>   </dt><dd 
+class="list">
+                  <!--l. 342--><p class="noindent" >Display this program’s version number</p></dd></dl>
+<!--l. 345--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.4.3</span>  <a 
+href="#x80-21400021.4.3" id="x80-21400021.4.3">Symbol types</a></h4>
+<!--l. 347--><p class="noindent" >While displaying symbols <span 
+class="cmtt-12">tricore-nm</span> outputs the type of the symbol coded with the
+following symbols. If lowercase, the symbol is local; if uppercase, the symbol is global
+(external).
+</p><!--l. 349--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">A</span>                 </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 350--><p class="noindent" >The symbols value is absolute, and will not be changed by further
+                  linking.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">B</span>                 </dt><dd 
+class="list">
+                  <!--l. 351--><p class="noindent" >The symbol is in the uninitialized data section (known as BSS).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">C</span>                 </dt><dd 
+class="list">
+                  <!--l. 352--><p class="noindent" >The symbol is common. Common symbols are uninitialized data. When
+                  linking, multiple common symbols may appear with the same name.
+                  If the symbol is defined anywhere, the common symbols are treated as
+                  undefined references.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">D</span>                 </dt><dd 
+class="list">
+                  <!--l. 353--><p class="noindent" >The symbol is in the initialized data section.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">G</span>                 </dt><dd 
+class="list">
+                  <!--l. 354--><p class="noindent" >The symbol is in an initialized data section for small objects. Some
+                  object file formats permit more efficient access to small data objects,
+                  such as a global int variable as opposed to a large global array.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">I</span>                 </dt><dd 
+class="list">
+                  <!--l. 355--><p class="noindent" >The symbol is an indirect reference to another symbol. This is a GNU
+                  extension to the a.out object file format which is rarely used.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">N</span>                 </dt><dd 
+class="list">
+                  <!--l. 356--><p class="noindent" >The symbol is a debugging symbol.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">R</span>                 </dt><dd 
+class="list">
+                  <!--l. 357--><p class="noindent" >The symbol is in a read only data section.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">S</span>                 </dt><dd 
+class="list">
+                  <!--l. 358--><p class="noindent" >The symbol is in an uninitialized data section for small objects.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">T</span>                 </dt><dd 
+class="list">
+                  <!--l. 359--><p class="noindent" >The symbol is in the text (code) section.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">U</span>                 </dt><dd 
+class="list">
+                  <!--l. 360--><p class="noindent" >The symbol is undefined.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">V</span>                 </dt><dd 
+class="list">
+                  <!--l. 361--><p class="noindent" >The symbol is a weak object. When a weak defined symbol is linked
+                  with a normal defined symbol, the normal defined symbol is used with
+                  no error. When a weak undefined symbol is linked and the symbol is
+                  not defined, the value of the weak symbol becomes zero with no error.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">W</span>                 </dt><dd 
+class="list">
+                  <!--l. 362--><p class="noindent" >The symbol is a weak symbol that has not been specifically tagged
+                  as a weak object symbol. When a weak defined symbol is linked with
+                  a normal defined symbol, the normal defined symbol is used with no
+                  error. When a weak undefined symbol is linked and the symbol is not
+                  defined, the value of the weak symbol becomes zero with no error.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">?</span>                 </dt><dd 
+class="list">
+                  <!--l. 363--><p class="noindent" >The symbol type is unknown, or object file format specific.</p></dd></dl>
+<!--l. 366--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.4.4</span>  <a 
+href="#x80-21500021.4.4" id="x80-21500021.4.4">Examples</a></h4>
+<!--l. 368--><p class="noindent" ><span 
+class="cmtt-12">tricore-nm</span> is normally used to display the symbols in an object file or an executable. This
+example shows how to display the symbols of <span 
+class="cmtt-12">uart.o</span>:
+</p><!--l. 370--><p class="noindent" ><span 
+class="cmtt-12">tricore-nm</span> <span 
+class="cmtt-12">uart.o</span>
+</p><!--l. 372--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb303"><a 
+ id="x80-215002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> _install_int_handler</span><br class="fancyvrb" /><a 
+ id="x80-215004r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> asc0</span><span 
+class="pcrr7t-"> 000000d0</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> asc0getdata</span>
+<br class="fancyvrb" /><a 
+ id="x80-215006r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 000000e2</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> asc0senddata</span><br class="fancyvrb" /><a 
+ id="x80-215008r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000024</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> inituart</span><br class="fancyvrb" /><a 
+ id="x80-215010r5"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> lock_wdtcon</span><br class="fancyvrb" /><a 
+ id="x80-215012r6"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> port0</span>
+<br class="fancyvrb" /><a 
+ id="x80-215014r7"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000104</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> rxint</span><br class="fancyvrb" /><a 
+ id="x80-215016r8"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> C</span><span 
+class="pcrr7t-"> uarts</span><br class="fancyvrb" /><a 
+ id="x80-215018r9"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> unlock_wdtcon</span><br class="fancyvrb" /><a 
+ id="x80-215020r10"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> C</span><span 
+class="pcrr7t-"> val</span></div>
+<!--l. 385--><p class="noindent" >To display the symbols in a library use the name of the library as parameter to <span 
+class="cmtt-12">tricore-nm</span>. To
+additionally display the archive index use the option <span 
+class="cmtt-12">-s</span>:
+</p><!--l. 387--><p class="noindent" ><span 
+class="cmtt-12">tricore-nm</span> <span 
+class="cmtt-12">libserial.a -s</span>
+</p><!--l. 389--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div class="fancyvrb" id="fancyvrb304"><a 
+ id="x80-215022r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Archive</span><span 
+class="pcrr7t-"> index:</span><br class="fancyvrb" /><a 
+ id="x80-215024r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> val</span><span 
+class="pcrr7t-"> in</span><span 
+class="pcrr7t-"> uart.o</span><br class="fancyvrb" /><a 
+ id="x80-215026r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> inituart</span><span 
+class="pcrr7t-"> in</span><span 
+class="pcrr7t-"> uart.o</span><br class="fancyvrb" /><a 
+ id="x80-215028r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> uarts</span><span 
+class="pcrr7t-"> in</span><span 
+class="pcrr7t-"> uart.o</span><br class="fancyvrb" /><a 
+ id="x80-215030r5"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> rxint</span><span 
+class="pcrr7t-"> in</span><span 
+class="pcrr7t-"> uart.o</span>
+<br class="fancyvrb" /><a 
+ id="x80-215032r6"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> asc0getdata</span><span 
+class="pcrr7t-"> in</span><span 
+class="pcrr7t-"> uart.o</span><br class="fancyvrb" /><a 
+ id="x80-215034r7"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> asc0sendd1ata</span><span 
+class="pcrr7t-"> in</span><span 
+class="pcrr7t-"> uart.o</span><br class="fancyvrb" /><a 
+ id="x80-215036r8"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><br class="fancyvrb" /><a 
+ id="x80-215038r9"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> uart.o:</span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> _install_int_handler</span>
+<br class="fancyvrb" /><a 
+ id="x80-215040r10"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> asc0</span><span 
+class="pcrr7t-"> 000000d0</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> asc0getdata</span><br class="fancyvrb" /><a 
+ id="x80-215042r11"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 000000e2</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> asc0senddata</span><br class="fancyvrb" /><a 
+ id="x80-215044r12"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000024</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> inituart</span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> lock_wdtcon</span>
+<br class="fancyvrb" /><a 
+ id="x80-215046r13"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> port0</span><br class="fancyvrb" /><a 
+ id="x80-215048r14"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000104</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> rxint</span><br class="fancyvrb" /><a 
+ id="x80-215050r15"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> C</span><span 
+class="pcrr7t-"> uarts</span><br class="fancyvrb" /><a 
+ id="x80-215052r16"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> unlock_wdtcon</span><br class="fancyvrb" /><a 
+ id="x80-215054r17"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> C</span><span 
+class="pcrr7t-"> val</span></div>
+<!--l. 408--><p class="noindent" >There are many options to modify the way <span 
+class="cmtt-12">tricore-nm</span> displays the symbol information. This
+example shows the functionality of three of these options.
+</p><!--l. 410--><p class="noindent" >The external symbols of the object <span 
+class="cmtt-12">uart.o </span>shall be displayed in descending order of
+addresses:
+</p><!--l. 412--><p class="noindent" ><span 
+class="cmtt-12">tricore-nm</span> <span 
+class="cmtt-12">-n -r -g uart.o</span>
+</p><!--l. 414--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb305"><a 
+ id="x80-215056r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000104</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> rxint</span><br class="fancyvrb" /><a 
+ id="x80-215058r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 000000e2</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> asc0senddata</span><br class="fancyvrb" /><a 
+ id="x80-215060r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 000000d0</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> asc0getdata</span>
+<br class="fancyvrb" /><a 
+ id="x80-215062r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000024</span><span 
+class="pcrr7t-"> T</span><span 
+class="pcrr7t-"> inituart</span><br class="fancyvrb" /><a 
+ id="x80-215064r5"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> C</span><span 
+class="pcrr7t-"> val</span><br class="fancyvrb" /><a 
+ id="x80-215066r6"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> C</span><span 
+class="pcrr7t-"> uarts</span><br class="fancyvrb" /><a 
+ id="x80-215068r7"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> unlock_wdtcon</span>
+<br class="fancyvrb" /><a 
+ id="x80-215070r8"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> lock_wdtcon</span><br class="fancyvrb" /><a 
+ id="x80-215072r9"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> U</span><span 
+class="pcrr7t-"> _install_int_handler}</span></div>
+                                                                                       
+                                                                                       
+<!--l. 427--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse52.html" >next</a>] [<a 
+href="main_gcc_ugse50.html" >prev</a>] [<a 
+href="main_gcc_ugse50.html#tailmain_gcc_ugse50.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse51.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse51.html" >up</a>] </p></div>
+<!--l. 427--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse51.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Multiple Bit-Data Sections</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 3--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse22.html" >next</a>] [<a 
+href="main_gcc_ugch14.html" >prev</a>] [<a 
+href="main_gcc_ugch14.html#tailmain_gcc_ugch14.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse21.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse21.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.1</span>  <a 
+href="main_gcc_ug.html#QQ2-39-57" id="x39-5300014.1">Multiple Bit-Data Sections</a></h3>
+<a 
+ id="dx39-53001"></a>
+<!--l. 5--><p class="noindent" >By default all data of the <span class="lstinline"><span 
+class="ecss-1200">_bit</span></span> type is allocated to the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span></span> section. The  TriCore Development
+Platform supports an arbitrary number of bit data sections, which can be defined by
+user.
+</p><!--l. 7--><p class="noindent" >Since both the assembler and the linker can process <span class="lstinline"><span 
+class="ecss-1200">_bit</span></span> data, the user-defined sections must
+have either the prefix <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span><span 
+class="ecss-1200">.</span></span> for initialised bits or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span><span 
+class="ecss-1200">.</span></span> for uninitialised bits.
+</p><!--l. 9--><p class="noindent" >The default section name for bit data is <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span></span>.
+</p><!--l. 11--><p class="noindent" >To ensure correct handling of bit data sections by the compiler, the section flag <span class="lstinline"><span 
+class="ecss-1200">b</span></span> and <span class="lstinline"><span 
+class="ecss-1200">z</span></span> for
+absolute addressable section is required. If a <span class="lstinline"><span 
+class="ecss-1200">_bit</span></span> is defined without having a section assigned,
+the data will be allocated to the default sections <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span></span>.
+</p><!--l. 13--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb84"><a 
+ id="x39-53003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b1;</span><br class="fancyvrb" /><a 
+ id="x39-53005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b2</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><br class="fancyvrb" /><a 
+ id="x39-53007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b3</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span></div>
+<!--l. 19--><p class="noindent" >In the first example <span class="lstinline"><span 
+class="ecss-1200">b1</span></span> is allocated to the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span></span> section. The initialised bit data <span class="lstinline"><span 
+class="ecss-1200">b2</span></span> and <span class="lstinline"><span 
+class="ecss-1200">b3</span></span> are
+allocated to the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span></span> section.
+</p><!--l. 21--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb85"><a 
+ id="x39-53009r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .bdata.bits</span><span 
+class="pcrr7t-x-x-144"> awbz</span><br class="fancyvrb" /><a 
+ id="x39-53011r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b4;</span><br class="fancyvrb" /><a 
+ id="x39-53013r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b5</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span>
+<br class="fancyvrb" /><a 
+ id="x39-53015r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 28--><p class="noindent" >The bit data <span class="lstinline"><span 
+class="ecss-1200">b4</span></span> and <span class="lstinline"><span 
+class="ecss-1200">b5</span></span> are allocated to the user-defined <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bits</span></span> section.
+</p><!--l. 30--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+<div class="fancyvrb" id="fancyvrb86"><a 
+ id="x39-53017r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .bbss.bits</span><span 
+class="pcrr7t-x-x-144"> awbz</span><br class="fancyvrb" /><a 
+ id="x39-53019r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b6;</span><br class="fancyvrb" /><a 
+ id="x39-53021r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b7;</span>
+<br class="fancyvrb" /><a 
+ id="x39-53023r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b8</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span><br class="fancyvrb" /><a 
+ id="x39-53025r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 38--><p class="noindent" ><span class="lstinline"><span 
+class="ecss-1200">b6</span></span> and <span class="lstinline"><span 
+class="ecss-1200">b7</span></span> are allocated to the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bits</span></span> which contains uninitialised bit variables.
+<span class="lstinline"><span 
+class="ecss-1200">b8</span></span> issues a warning, because initialised data should not be allocated to the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span><span 
+class="ecss-1200">.</span><span 
+class="cmsy-10x-x-120">*</span></span>
+section.
+</p><!--l. 40--><p class="noindent" >Another possibility is the usage of attributes.
+</p><!--l. 42--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb87"><a 
+ id="x39-53027r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b9</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section(".bdata.bits")));</span>
+<br class="fancyvrb" /><a 
+ id="x39-53029r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b10</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section(".bbss.bits,\"awbz\",@progbits")));</span>
+<br class="fancyvrb" /><a 
+ id="x39-53031r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b11</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section(".bdata.bits,\"awbz\",@progbits")))</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span>
+<br class="fancyvrb" /><a 
+ id="x39-53033r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _bit</span><span 
+class="pcrr7t-x-x-144"> b12</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((asection(".bdata.bits","a=1","f=awbz")));</span></div>
+<!--l. 49--><p class="noindent" ><span class="lstinline"><span 
+class="ecss-1200">b9</span></span> is allocated to the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bits</span></span> section. <span class="lstinline"><span 
+class="ecss-1200">b10</span></span> is allocated to the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bits</span></span> which
+contains uninitialised bit variables, in the same manner as <span class="lstinline"><span 
+class="ecss-1200">b7</span></span>. The two notations are
+equivalent.
+</p><!--l. 51--><p class="noindent" >The linker allocates all sections which contain one of the prefixes <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span><span 
+class="ecss-1200">.</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span></span> to the object
+file. In the default linker script, the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bdata</span><span 
+class="ecss-1200">.</span></span> section is listed in the <span class="lstinline"><span 
+class="ecss-1200">__copy_table</span></span> table. During
+runtime, the corresponding memory section is copied.
+</p><!--l. 53--><p class="noindent" >All sections carrying one of the prefixes <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span><span 
+class="ecss-1200">.</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span></span> are declared as <span class="lstinline"><span 
+class="ecss-1200">NOLOAD</span></span> by the linker
+and do not occupy any space in the object file. In the default linker script the section
+<span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bbss</span><span 
+class="ecss-1200">.</span></span> is listed in <span class="lstinline"><span 
+class="ecss-1200">__clear_table</span></span>. During runtime the corresponding memory section is
+cleared.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse22.html" >next</a>] [<a 
+href="main_gcc_ugch14.html" >prev</a>] [<a 
+href="main_gcc_ugch14.html#tailmain_gcc_ugch14.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse21.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse21.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse21.html"></a> </p> 
+</body></html> 

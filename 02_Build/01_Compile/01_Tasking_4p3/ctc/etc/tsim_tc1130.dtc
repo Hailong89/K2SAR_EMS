@@ -1,0 +1,52 @@
+<!-- @(#)tsim_tc1130.dtc	1.1 13/07/19 -->
+<!-- Debug Target Configuration for the TriCore 1 Instruction Set Simulator -->
+
+<debugTarget
+    xmlns="http://com.tasking.dtc/dtc.xsd/1.0"
+    name="TriCore 1.3 Instruction Set Simulator for TC1130"
+    manufacturer="Infineon">
+
+    <!-- core="tc1.3" -->
+    <processor id="tc1130"/>
+
+    <communicationMethod name="TSIM1 Simulator" debugInstrument="tsim"/>
+
+    <!-- non-flash chips must be defined using LSL -->
+    <lsl>
+	memory xrom_8_a
+	{
+		mau = 8;
+		size = 512k;
+		type = rom;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x80000000,           size=512k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa0000000, reserved, size=512k);
+	}
+	memory xram_8_a
+	{
+		mau = 8;
+		size =448k;
+		type = ram;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x80080000,           size=448k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa0080000, reserved, size=448k);
+	}
+	memory xrom2_8_a
+	{
+		mau = 8;
+		size = 9k;
+		type = rom;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x800f0000,           size=9k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa00f0000, reserved, size=9k);
+	}
+
+	memory xram2_8_a
+	{
+		mau = 8;
+		size = 64567k;
+		type = ram;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x800f2400,           size=64567k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa00f2400, reserved, size=64567k);
+	}
+    </lsl>
+
+</debugTarget> 
+

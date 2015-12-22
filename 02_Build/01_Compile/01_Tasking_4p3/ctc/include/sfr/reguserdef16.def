@@ -1,0 +1,40 @@
+;***************************************************************************
+;**
+;** Version: @(#)reguserdef16.xml	1.6 11/05/30
+;** 
+;** This file contains all Core-SFR and BIT names and on-chip register definitions
+;** 
+;** Copyright 2002-2014 Altium BV
+;**
+;***************************************************************************
+	.if	!@DEF('_REGUSERDEF16_DEF')
+	.define	_REGUSERDEF16_DEF '1'
+; Macros, such as MMU_CON, that expand to a 16-bit number do not directly represent a memory address.
+; They are intended to be used with the instructions mfcr and mtcr.
+core_base      	.equ	0xF7E1    	; The base address off the memory for the CSFR's
+MMU_CON        	.equ	0x8000    	; MMU Control Register
+PCXI           	.equ	0xfe00    	; Previous Context Information Register
+PCX            	.equ	0xfe00    	; Previous Context Pointer
+PSW            	.equ	0xfe04    	; Program Status Word
+PC             	.equ	0xfe08    	; Program Counter
+SYSCON         	.equ	0xfe14    	; System Configuration Register
+CPU_ID         	.equ	0xfe18    	; CPU Identification Register
+BIV            	.equ	0xfe20    	; Base Interrupt Vector Table Pointer
+BTV            	.equ	0xfe24    	; Base Trap Vector Table Pointer
+ISP            	.equ	0xfe28    	; Interrupt Stack Pointer
+ICR            	.equ	0xfe2c    	; Interrupt Control Register
+FCX            	.equ	0xfe38    	; Free CSA List Head Pointer
+LCX            	.equ	0xfe3c    	; Free CSA List Limit Pointer
+PMA0           	.equ	0x801c    	; Physical Memory Attributes
+COMPAT         	.equ	0x9400    	; Compatibility Control Register
+WDT_CON0       	.equ	0xf00005f0	; WDT Control Register 0
+WDT_CON1       	.equ	0xf00005f4	; WDT Control Register 1
+WDT_SR         	.equ	0xf00005f8	; WDT Status Register
+STM_TIM0       	.equ	0xf0000210	; STM Timer Register 0
+STM_CAP        	.equ	0xf000022c	; STM Timer Capture Register
+EBU_BOOTCFG    	.equ	0xA0000004	; External Boot Memory Configuration Word
+PCP_RAM_BASE   	.equ	0xF0050000	; PCP Parameter Memory Start Address
+PCP_CS         	.equ	0xf0043f10	; PCP Control/Status Register
+PCP_ES         	.equ	0xf0043f14	; PCP Error/Debug Status Register
+CPU_SRC0       	.equ	0xf7e0fffc	; CPU Service Request Control Register 0
+	.endif ; !@DEF('_REGUSERDEF16_DEF')

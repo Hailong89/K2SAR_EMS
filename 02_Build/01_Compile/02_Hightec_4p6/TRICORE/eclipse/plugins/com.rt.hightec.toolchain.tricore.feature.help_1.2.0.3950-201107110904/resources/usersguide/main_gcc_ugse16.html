@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Input and Output Operands</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 100--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse17.html" >next</a>] [<a 
+href="main_gcc_ugse15.html" >prev</a>] [<a 
+href="main_gcc_ugse15.html#tailmain_gcc_ugse15.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse16.html">tail</a>] [<a 
+href="main_gcc_ugch8.html#main_gcc_ugse16.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">8.2</span>  <a 
+href="main_gcc_ug.html#QQ2-28-40" id="x28-360008.2">Input and Output Operands</a></h3>
+<!--l. 102--><p class="noindent" >The input and the output operands consists of a list of variable names that you wish to be able
+to reference in the assembly code. You can use any valid C expression to address memory.
+This means you need not guess which registers or memory locations will contain the
+data you want to use. You must specify an assembler instruction template much like
+what appears in an assembler language, plus an operand constraint string for each
+operand.
+</p><!--l. 104--><p class="noindent" >Constraints are rules for specifying the input and output variables as follows:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">The  C  expression,  which  results  in  an  address  in  your  program,  is  enclosed  in
+      parentheses.
+      </li>
+      <li class="itemize">A variable can be constrained to be addressed in memory instead of being loaded
+      into a register by using <span class="lstinline"><span 
+class="ecss-1200">m</span></span> constraint.
+      </li>
+      <li class="itemize">You may use any number of input and output operands by separating them with
+      commas.
+      </li>
+      <li class="itemize">The output and input operands are numbered sequentially beginning with <span class="lstinline"><span 
+class="ecss-1200">$0</span></span> and
+      continuing through <span class="lstinline"><span 
+class="ecss-1200">$n</span><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">1</span></span>, where <span class="lstinline"><span 
+class="ecss-1200">n</span></span> is the total number of both input and output
+      operands.
+      </li>
+      <li class="itemize">The constraint characters can have constraint modifiers</li></ul>
+<!--l. 116--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">8.2.1</span>  <a 
+href="main_gcc_ugch8.html#QQ2-28-41" id="x28-370008.2.1">Constraint characters</a></h4>
+<!--l. 118--><p class="noindent" ><span 
+class="cmtt-12">tricore-as</span> knows the following constraint characters:
+                                                                                       
+                                                                                       
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">m</span> </dt><dd 
+class="description">memory label
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">n</span> </dt><dd 
+class="description">variable or operand is const
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">i</span> </dt><dd 
+class="description">immediate integer operand. This includes symbolic constants whose values will be known
+      only at assembly time.</dd></dl>
+<!--l. 128--><p class="noindent" >The following additional constraints are available for TriCore inline assembly:
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">a</span> </dt><dd 
+class="description">address register
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">A</span> </dt><dd 
+class="description">address register a15
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">d</span> </dt><dd 
+class="description">data register
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">D</span> </dt><dd 
+class="description">data register d15
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">I</span> </dt><dd 
+class="description">signed character constant
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">J</span> </dt><dd 
+class="description">unsigned character constant
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">K</span> </dt><dd 
+class="description">signed short constant
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">L</span> </dt><dd 
+class="description">constant with <span 
+class="cmmi-12">value &#x003C; </span>15&amp;&amp;<span 
+class="cmmi-12">value &#x003E;</span>= 0
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">M</span> </dt><dd 
+class="description">constant with <span 
+class="cmmi-12">value &#x003C; </span>8&amp;&amp;<span 
+class="cmmi-12">value &#x003E;</span>= <span 
+class="cmsy-10x-x-120">-</span>8
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">N</span> </dt><dd 
+class="description">constant with <span 
+class="cmmi-12">value &#x003C; </span>16&amp;&amp;<span 
+class="cmmi-12">value &#x003E;</span>= 0
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">O</span> </dt><dd 
+class="description">operand is zero constant
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">P</span> </dt><dd 
+class="description">signed 10 bit constant
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">Q</span> </dt><dd 
+class="description">no sdata symbol and no bss + 16 Bit offset
+                                                                                       
+                                                                                       
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">S</span> </dt><dd 
+class="description">small addressable memory (sdata symbol)
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">Z</span> </dt><dd 
+class="description">absolute addressable memory
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">B</span> </dt><dd 
+class="description">absolute addressable bit
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">T</span> </dt><dd 
+class="description">valid <span class="lstinline"><span 
+class="ecss-1200">CONST_INT</span></span> for absolut addressing
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">b</span> </dt><dd 
+class="description">a 32-bit constant with only one bit set
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">c</span> </dt><dd 
+class="description">a 32-bit constant with only one bit zero (complement of ’b’)
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">U</span> </dt><dd 
+class="description">a 4-bit constant positiv positive signed 4-bit constant
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">k</span> </dt><dd 
+class="description">a 32-bit constant with low 16-bit all zero (a <span class="lstinline"><span 
+class="ecss-1200">const16</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">&#x003C;&#x003C;</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">16</span></span>)
+      </dd></dl>
+<!--l. 146--><p class="noindent" >When the constraints for the read-write operand (or the operand in which only some of the bits
+are to be changed) allows a register, you may, as an alternative, logically split its function into
+two separate operands, one input operand and one write-only output operand. The
+connection between them is expressed by constraints which say they need to be in the
+same location when the instruction executes. You can use the same C expression for
+both operands, or different expressions. For example, here we write the (fictitious)
+<span 
+class="cmmi-12">&#x003C;</span>combine<span 
+class="cmmi-12">&#x003E; </span>instruction with <span class="lstinline"><span 
+class="ecss-1200">bar</span></span> as its read-only source operand and <span class="lstinline"><span 
+class="ecss-1200">foo</span></span> as its read-write
+destination:
+</p><!--l. 155--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb69"><a 
+ id="x28-37002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> ("combine</span><span 
+class="pcrr7t-x-x-144"> %2,%0"</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "=d"</span><span 
+class="pcrr7t-x-x-144"> (foo)</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "0"</span><span 
+class="pcrr7t-x-x-144"> (foo),</span><span 
+class="pcrr7t-x-x-144"> "d"</span><span 
+class="pcrr7t-x-x-144"> (bar));</span></div>
+<div class="center" 
+>
+<!--l. 160--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox25"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The constraint <span 
+class="cmmi-12">&#x003C;</span>”0”<span 
+class="cmmi-12">&#x003E; </span>for operand 1 says that it must occupy the
+same location as operand 0. A number in constraint is allowed only
+in an input operand and it must refer to an output operand.        </div>
+                                                                                       
+                                                                                       
+</div>
+<!--l. 162--><p class="noindent" >Only a number in the constraint can guarantee that one operand will be in the same place as
+another. The mere fact that <span class="lstinline"><span 
+class="ecss-1200">foo</span></span> is the value of both operands is not enough to guarantee that
+they will be in the same place in the generated assembler code. The following would not work
+reliably:
+</p><!--l. 171--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb70"><a 
+ id="x28-37004r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> ("combine</span><span 
+class="pcrr7t-x-x-144"> %2,%0"</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "=d"</span><span 
+class="pcrr7t-x-x-144"> (foo)</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "d"</span><span 
+class="pcrr7t-x-x-144"> (foo),</span><span 
+class="pcrr7t-x-x-144"> "d"</span><span 
+class="pcrr7t-x-x-144"> (bar));</span></div>
+<!--l. 176--><p class="noindent" >Various optimizations or reloading could cause operands 0 and 1 to be in different registers;
+GCC knows no reason not to do so. For example, the compiler might find a copy of the value of
+<span class="lstinline"><span 
+class="ecss-1200">foo</span></span> in one register and use it for operand 1, but generate the output operand 0 in a different
+register (copying it afterward to <span class="lstinline"><span 
+class="ecss-1200">foo</span></span>’s own address). Of course, since the register for operand 1
+is not even mentioned in the assembler code, the result will not work, but GCC can’t tell
+that.
+</p><!--l. 178--><p class="noindent" >It is possible to specify input and output operands using symbolic names which can be
+referenced within the assembler code. These names are specified inside square brackets
+preceding the constraint string, and can be referenced inside the assembler code using <span class="lstinline"><span 
+class="ecss-1200">%[</span><span 
+class="ecss-1200">name</span><span 
+class="ecss-1200">]</span></span>
+instead of a percentage sign followed by the operand number. Using named operands the above
+example could look like:
+</p><!--l. 180--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb71"><a 
+ id="x28-37006r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> ("add</span><span 
+class="pcrr7t-x-x-144"> %[angle],%[output]"</span><br class="fancyvrb" /><a 
+ id="x28-37008r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> [output]</span><span 
+class="pcrr7t-x-x-144"> "=d"</span><span 
+class="pcrr7t-x-x-144"> (result)</span>
+<br class="fancyvrb" /><a 
+ id="x28-37010r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> [angle]</span><span 
+class="pcrr7t-x-x-144"> "d"</span><span 
+class="pcrr7t-x-x-144"> (angle));</span></div>
+<div class="center" 
+>
+<!--l. 186--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox26"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The symbolic operand names have no relation whatsoever to other
+C identifiers. You may use any name you like, even those of existing
+C symbols, but must ensure that no two operands within the same
+assembler construct use the same symbolic name.                   </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 188--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">8.2.2</span>  <a 
+href="main_gcc_ugch8.html#QQ2-28-42" id="x28-380008.2.2">Constraint modifiers</a></h4>
+<!--l. 190--><p class="noindent" >The constraint characters can have constraint modifiers. These modifiers instruct the compiler
+how the registers for the operands are to be allocated.
+</p><!--l. 192--><p class="noindent" >These constraint modifiers are available:
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">=</span> </dt><dd 
+class="description">The operand is written in the inline assembly statement and is an output operand
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">+</span> </dt><dd 
+class="description">The operand is read and written in the inline assembly statement, it is input and
+      output operand. This constraint modifier is to be assigned only to operands placed
+      in the list of the output operand of the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span>-statement.
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">&amp;</span> </dt><dd 
+class="description">The  operand  is  an  early  clobber.  This  modifier  is  used  for  output  operands.  The
+      operand is used in the inline assembly statement before the last input operand is
+      evaluated. So this modifier is necessary, because the compiler sometimes uses the
+      same registers for input and output operands. If an input and an output operand
+      are using the same register, the content of the register may have an undefined value
+      within the <span class="lstinline"><span 
+class="ecss-1200">asm</span></span>-statement.
+      <!--l. 199--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+      </p><!--l. 202--><p class="noindent" >
+</p>
+      <div class="fancyvrb" id="fancyvrb72"><a 
+ id="x28-38002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> signed</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;ptr;</span><br class="fancyvrb" /><a 
+ id="x28-38004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> signed</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> n;</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> signed</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> temp;</span><br class="fancyvrb" /><a 
+ id="x28-38008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> signed</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i;</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> signed</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> read;</span><br class="fancyvrb" /><a 
+ id="x28-38012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x28-38014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> asm</span><span 
+class="pcrr7t-x-x-144"> volatile("ld.h</span><span 
+class="pcrr7t-x-x-144"> %L1,[%4+]2</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> jlt</span><span 
+class="pcrr7t-x-x-144"> %3,</span><span 
+class="pcrr7t-x-x-144"> 2,</span><span 
+class="pcrr7t-x-x-144"> 3f</span><span 
+class="pcrr7t-x-x-144"> \n\</span><br class="fancyvrb" /><a 
+ id="x28-38018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> add</span><span 
+class="pcrr7t-x-x-144"> %0,</span><span 
+class="pcrr7t-x-x-144"> %3,-2</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38020r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> mov.a</span><span 
+class="pcrr7t-x-x-144"> %2,</span><span 
+class="pcrr7t-x-x-144"> %0</span><span 
+class="pcrr7t-x-x-144"> \n\</span><br class="fancyvrb" /><a 
+ id="x28-38022r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 2:</span><span 
+class="pcrr7t-x-x-144"> ld.h</span><span 
+class="pcrr7t-x-x-144"> %0,[%4+]2</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38024r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> add</span><span 
+class="pcrr7t-x-x-144"> %L1,</span><span 
+class="pcrr7t-x-x-144"> %L1,</span><span 
+class="pcrr7t-x-x-144"> %0</span><span 
+class="pcrr7t-x-x-144"> \n\</span><br class="fancyvrb" /><a 
+ id="x28-38026r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> loop</span><span 
+class="pcrr7t-x-x-144"> %2,</span><span 
+class="pcrr7t-x-x-144"> 2b</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38028r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> dvinit</span><span 
+class="pcrr7t-x-x-144"> %A1,</span><span 
+class="pcrr7t-x-x-144"> %L1,%3</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38030r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> dvstep</span><span 
+class="pcrr7t-x-x-144"> %A1,</span><span 
+class="pcrr7t-x-x-144"> %A1,%3</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38032r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> dvstep</span><span 
+class="pcrr7t-x-x-144"> %A1,</span><span 
+class="pcrr7t-x-x-144"> %A1,%3</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38034r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> dvstep</span><span 
+class="pcrr7t-x-x-144"> %A1,</span><span 
+class="pcrr7t-x-x-144"> %A1,%3</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38036r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> dvstep</span><span 
+class="pcrr7t-x-x-144"> %A1,</span><span 
+class="pcrr7t-x-x-144"> %A1,%3</span><span 
+class="pcrr7t-x-x-144"> \n\</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38038r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> dvadj</span><span 
+class="pcrr7t-x-x-144"> %A1,</span><span 
+class="pcrr7t-x-x-144"> %A1,%3</span><span 
+class="pcrr7t-x-x-144"> \n\</span><br class="fancyvrb" /><a 
+ id="x28-38040r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 3:</span><span 
+class="pcrr7t-x-x-144"> \n\"</span>
+      <br class="fancyvrb" /><a 
+ id="x28-38042r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "=&amp;d"(read),"=&amp;d"</span><span 
+class="pcrr7t-x-x-144"> (temp),</span><span 
+class="pcrr7t-x-x-144"> "=&amp;a"(i)</span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> "d"(n),</span><span 
+class="pcrr7t-x-x-144"> "a"(ptr)</span><span 
+class="pcrr7t-x-x-144"> );</span></div>
+                                                                                       
+                                                                                       
+      <!--l. 226--><p class="noindent" >In this example the output operands must have the constraint modifier &amp; set because the
+      output operands %0 to %2 are used the first time before the input operands %3 and %4
+      are used the last time.
+      </p></dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">%</span> </dt><dd 
+class="description">The operand with the modifier and the following one are commutative. This means that the
+      compiler may interchange the two operands if that is the cheapest way to make all
+      operands fit the constraints. tricore-gcc can only handle one commutative pair in an <span class="lstinline"><span 
+class="ecss-1200">asm</span></span>,
+      if you use more, the compiler may fail.</dd></dl>
+<!--l. 232--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">8.2.3</span>  <a 
+href="main_gcc_ugch8.html#QQ2-28-43" id="x28-390008.2.3">Register modifiers</a></h4>
+<!--l. 234--><p class="noindent" >The memory locations in the Assembly Language Template may have register modifiers. These
+modifiers are used to handle extended registers in the assembler code. Sometimes the contents
+of an extended register <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">e2</span></span> must be referenced by the name of the extended register <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">e1</span></span>,
+sometimes as <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d2</span></span> and <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d3</span></span>. To distinguish between those two kinds of reference,
+register modifiers may be added to memory locations which are used to reference
+<span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span>-variables.
+</p><!--l. 237--><p class="noindent" >These register modifiers are available:
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">A</span> </dt><dd 
+class="description">References to the alternative name of the register, e.g. <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">e2</span></span>
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">L</span> </dt><dd 
+class="description">References  to  the  lower  32-Bit-register  of  the  extended  register,  e.g.  <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d2</span></span>  for  the
+      extended register <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">e2</span></span>
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">H</span> </dt><dd 
+class="description">References  to  the  higher  32-Bit-register  of  the  extended  register,  e.g.  <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d3</span></span>  for  the
+      extended register <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">e2</span></span></dd></dl>
+<!--l. 245--><p class="noindent" >For a detailed example please see the example for the constraint modifier &amp; in <a 
+href="#x28-380008.2.2">Listing 8.2.2</a>.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 248--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse17.html" >next</a>] [<a 
+href="main_gcc_ugse15.html" >prev</a>] [<a 
+href="main_gcc_ugse15.html#tailmain_gcc_ugse15.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse16.html" >front</a>] [<a 
+href="main_gcc_ugch8.html#main_gcc_ugse16.html" >up</a>] </p></div>
+<!--l. 248--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse16.html"></a> </p> 
+</body></html> 

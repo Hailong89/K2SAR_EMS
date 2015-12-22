@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Description of libgcc.a and libgccoptfp.a</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 41--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch27.html" >next</a>] [<a 
+href="main_gcc_ugse75.html" >prev</a>] [<a 
+href="main_gcc_ugse75.html#tailmain_gcc_ugse75.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse76.html">tail</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse76.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">26.8</span>  <a 
+href="main_gcc_ug.html#QQ2-111-278" name="x111-26900026.8">Description of libgcc.a and libgccoptfp.a</a></h3>
+<a 
+ id="dx111-269001"></a>
+<a 
+ id="dx111-269002"></a>
+<!--l. 43--><p class="noindent" >These functions are part of <span 
+class="cmtt-12">libgcc.a </span>and <span 
+class="cmtt-12">libgccoptfp.a</span>:
+</p><!--l. 45--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_fpadd_parts</span></span>     </dt><dd 
+class="list">
+                  <!--l. 46--><p class="noindent" >Adds two floating point values, which are split into sign, exponent and
+                  mantissa
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__absvdi2</span></span>        </dt><dd 
+class="list">
+                  <!--l. 71--><p class="noindent" >Returns the absolute value of a <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__absvsi2</span></span>        </dt><dd 
+class="list">
+                  <!--l. 72--><p class="noindent" >Returns the absolute value of a <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__addvdi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 73--><p class="noindent" >Adds two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variables and verifies signed overflow
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__addvsi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 74--><p class="noindent" >Adds two <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> variables and verifies signed overflow
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__bb_exit_func</span></span>  </dt><dd 
+class="list">
+                  <!--l. 75--><p class="noindent" >Outputs   the   results   of   a   code   coverage   check   generated   by
+                  <span 
+class="cmtt-12">--profile-arcs</span> to a <span 
+class="cmtt-12">.da</span>-file
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__bb_fork_func</span></span>  </dt><dd 
+class="list">
+                  <!--l. 76--><p class="noindent" >This function is called before <span class="lstinline"><span 
+class="ecss-1200">fork</span><span 
+class="ecss-1200">()</span></span> or <span class="lstinline"><span 
+class="ecss-1200">cmd</span><span 
+class="ecss-1200">()</span></span> if code coverage checks
+                  are enabled. It writes out and resets the profile information gathered
+                  so far
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__bb_init_func</span></span>  </dt><dd 
+class="list">
+                  <!--l. 77--><p class="noindent" >Initializes the code coverage. This function is called automatically by
+                  <span class="lstinline"><span 
+class="ecss-1200">__main</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__clear_cache</span></span>    </dt><dd 
+class="list">
+                  <!--l. 78--><p class="noindent" >Clears parts of an instruction cache
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__cmpdf2</span></span>         </dt><dd 
+class="list">
+                  <!--l. 79--><p class="noindent" >Compares two <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__cmpsf2</span></span>         </dt><dd 
+class="list">
+                  <!--l. 80--><p class="noindent" >Compares two <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__divdi3</span></span>         </dt><dd 
+class="list">
+                  <!--l. 86--><p class="noindent" >Performs a division of two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variables
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__do_global_ctors</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 87--><p class="noindent" >Runs all the global constructors on entry to the program
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__do_global_dtors</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 88--><p class="noindent" >Runs all the global destructors on exit from the program
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_add</span></span>          </dt><dd 
+class="list">
+                  <!--l. 89--><p class="noindent" >Adds two <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_div</span></span>          </dt><dd 
+class="list">
+                  <!--l. 90--><p class="noindent" >Divides two <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_dtof</span></span>         </dt><dd 
+class="list">
+                  <!--l. 91--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> to a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_dtoi</span></span>         </dt><dd 
+class="list">
+                  <!--l. 92--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> to an <span class="lstinline"><span 
+class="ecsx-1200">int</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_dtoui</span></span>        </dt><dd 
+class="list">
+                  <!--l. 93--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> to an <span class="lstinline"><span 
+class="ecsx-1200">unsigned</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">int</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_itod</span></span>         </dt><dd 
+class="list">
+                  <!--l. 94--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> to a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_mul</span></span>          </dt><dd 
+class="list">
+                  <!--l. 95--><p class="noindent" >Multiplies two <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_neg</span></span>          </dt><dd 
+class="list">
+                  <!--l. 96--><p class="noindent" >Negates a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_sub</span></span>          </dt><dd 
+class="list">
+                  <!--l. 97--><p class="noindent" >Subtracts two <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variables
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__d_uitod</span></span>        </dt><dd 
+class="list">
+                  <!--l. 98--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">unsigned</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">int</span></span> to a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__eprintf</span></span>        </dt><dd 
+class="list">
+                  <!--l. 100--><p class="noindent" >This function is mapped to <span class="lstinline"><span 
+class="ecss-1200">fprintf</span><span 
+class="ecss-1200">()</span></span> and outputs a string to <span 
+class="cmtt-12">stderr</span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__eqdf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 101--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> is equal to another <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__eqsf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 102--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> is equal to another <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__ffsdi2</span></span>         </dt><dd 
+class="list">
+                  <!--l. 105--><p class="noindent" >Finds first set bit in a <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fixunsdfdi</span></span>     </dt><dd 
+class="list">
+                  <!--l. 106--><p class="noindent" >Performs  an  unsigned  cast  from  a  <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>  variable  to  <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span>
+                  variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fixunsdfsi</span></span>     </dt><dd 
+class="list">
+                  <!--l. 107--><p class="noindent" >Performs an unsigned cast from a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variable to <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fixunssfdi</span></span>     </dt><dd 
+class="list">
+                  <!--l. 108--><p class="noindent" >Performs an unsigned cast from a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variable to <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fixunssfsi</span></span>     </dt><dd 
+class="list">
+                  <!--l. 109--><p class="noindent" >Performs an unsigned cast from a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variable to <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fixdfdi</span></span>        </dt><dd 
+class="list">
+                  <!--l. 110--><p class="noindent" >Performs a cast from a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variable to <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fixsfdi</span></span>        </dt><dd 
+class="list">
+                  <!--l. 111--><p class="noindent" >Performs a cast from a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variable to <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__floatdidf</span></span>      </dt><dd 
+class="list">
+                  <!--l. 112--><p class="noindent" >Performs a cast from a <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable to <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__floatdisf</span></span>      </dt><dd 
+class="list">
+                  <!--l. 113--><p class="noindent" >Performs a cast from a <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable to <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fpcmp_parts_d</span></span> </dt><dd 
+class="list">
+                  <!--l. 114--><p class="noindent" >Compares two <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variables which are split into sign, exponent and
+                  mantissa
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__fpcmp_parts_f</span></span> </dt><dd 
+class="list">
+                  <!--l. 115--><p class="noindent" >Compares two <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variables which are split into sign, exponent and
+                  mantissa
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_add</span></span>          </dt><dd 
+class="list">
+                  <!--l. 116--><p class="noindent" >Adds two <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_div</span></span>          </dt><dd 
+class="list">
+                  <!--l. 117--><p class="noindent" >Divides two <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_ftod</span></span>         </dt><dd 
+class="list">
+                  <!--l. 118--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> to a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_ftoi</span></span>         </dt><dd 
+class="list">
+                  <!--l. 119--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> to an <span class="lstinline"><span 
+class="ecsx-1200">int</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_ftoui</span></span>        </dt><dd 
+class="list">
+                  <!--l. 120--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> to an <span class="lstinline"><span 
+class="ecsx-1200">unsigned</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">int</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_itof</span></span>         </dt><dd 
+class="list">
+                  <!--l. 121--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> to a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_mul</span></span>          </dt><dd 
+class="list">
+                  <!--l. 122--><p class="noindent" >Multiplies two <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variables
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_neg</span></span>          </dt><dd 
+class="list">
+                  <!--l. 123--><p class="noindent" >Negates a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_sub</span></span>          </dt><dd 
+class="list">
+                  <!--l. 124--><p class="noindent" >Subtracts two <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__f_uitof</span></span>        </dt><dd 
+class="list">
+                  <!--l. 125--><p class="noindent" >Converts an <span class="lstinline"><span 
+class="ecsx-1200">unsigned</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">int</span></span> to a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__gcc_bcmp</span></span>       </dt><dd 
+class="list">
+                  <!--l. 126--><p class="noindent" >Compares two strings
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__gedf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 127--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> is greater or equal to another <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__gesf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 128--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> is greater or equal to another <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__gtdf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 129--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> is greater than another <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__gtsf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 130--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> is greater than another <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__ledf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 131--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> is less or equal to another <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__lesf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 132--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> is less or equal to another <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__ltdf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 133--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> is less than another <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__ltsf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 134--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> is less than another <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__main</span></span>            </dt><dd 
+class="list">
+                  <!--l. 135--><p class="noindent" >Initializes the program by executing <span class="lstinline"><span 
+class="ecss-1200">__do_global_ctors</span><span 
+class="ecss-1200">()</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__make_dp</span></span>        </dt><dd 
+class="list">
+                  <!--l. 136--><p class="noindent" >Generates  a  double  precision  float  value  from  sign,  exponent  and
+                  mantissa
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__make_fp</span></span>        </dt><dd 
+class="list">
+                  <!--l. 137--><p class="noindent" >Generates  a  single  precision  float  value  from  sign,  exponent  and
+                  mantissa
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__moddi3</span></span>         </dt><dd 
+class="list">
+                  <!--l. 138--><p class="noindent" >Performs a modulo operation of two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__mulvdi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 139--><p class="noindent" >Multiplies and verifies signed overflow two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__mulvsi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 140--><p class="noindent" >Multiplies and verifies signed overflow two <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__nedf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 141--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> is not equal to another <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__negvdi2</span></span>        </dt><dd 
+class="list">
+                  <!--l. 142--><p class="noindent" >Negates and verifies signed overflow a <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__negvsi2</span></span>        </dt><dd 
+class="list">
+                  <!--l. 143--><p class="noindent" >Negates and verifies signed overflow a <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> variable
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__nesf2</span></span>          </dt><dd 
+class="list">
+                  <!--l. 144--><p class="noindent" >Checks if a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> is not equal to another <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__pack_d</span></span>         </dt><dd 
+class="list">
+                  <!--l. 145--><p class="noindent" >Generates a IEEE-<span class="lstinline"><span 
+class="ecsx-1200">double</span></span> variable from sign, exponent and mantissa
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__pack_f</span></span>         </dt><dd 
+class="list">
+                  <!--l. 146--><p class="noindent" >Generates a IEEE-<span class="lstinline"><span 
+class="ecsx-1200">float</span></span> variable from sign, exponent and mantissa
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__subvdi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 160--><p class="noindent" >Subtracts two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__subvsi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 161--><p class="noindent" >Subtracts two <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__udivdi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 162--><p class="noindent" >Performs an unsigned division of two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__udivmoddi4</span></span>     </dt><dd 
+class="list">
+                  <!--l. 163--><p class="noindent" >Performs an unsigned division and modulo operation of two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span>
+                  variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__udiv_w_sdiv</span></span>    </dt><dd 
+class="list">
+                  <!--l. 164--><p class="noindent" >unsigned division by using signed division
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__umoddi3</span></span>        </dt><dd 
+class="list">
+                  <!--l. 165--><p class="noindent" >Performs an unsigned modulo operation of two <span class="lstinline"><span 
+class="ecsx-1200">long</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">long</span></span> variables
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__unorddf2</span></span>       </dt><dd 
+class="list">
+                  <!--l. 166--><p class="noindent" >unordered compare of a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__unordsf2</span></span>       </dt><dd 
+class="list">
+                  <!--l. 167--><p class="noindent" >unordered compare of a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__unpack_d</span></span>       </dt><dd 
+class="list">
+                  <!--l. 168--><p class="noindent" >Splits a IEEE-<span class="lstinline"><span 
+class="ecsx-1200">double</span></span> in sign, exponent and mantissa
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">__unpack_f</span></span>       </dt><dd 
+class="list">
+                  <!--l. 169--><p class="noindent" >Splits a IEEE-<span class="lstinline"><span 
+class="ecsx-1200">float</span></span> in sign, exponent and mantissa</p></dd></dl>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch27.html" >next</a>] [<a 
+href="main_gcc_ugse75.html" >prev</a>] [<a 
+href="main_gcc_ugse75.html#tailmain_gcc_ugse75.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse76.html" >front</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse76.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse76.html"></a> </p> 
+</body></html> 

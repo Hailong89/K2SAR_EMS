@@ -1,0 +1,66 @@
+/**************************************************************************
+**
+**  FILE        :  exception.h
+**
+**  DESCRIPTION :  Include file for exception handling
+**
+**  COPYRIGHT   :  Copyright 1998-2014 Altium BV
+**
+**************************************************************************/
+
+#ifndef _EXCEPTION_STDH
+#define _EXCEPTION_STDH
+
+#include <tasking_config.h>
+
+/* This lets users disable the TASKING supplied exception classes. */
+#ifndef __NO_TASKING_EXCEPTION_CLASSES
+
+__TASKING_START_NAMESPACE
+
+  class exception {
+  public:
+    exception() throw();
+    exception(const exception&) throw();
+    exception& operator=(const exception&) throw();
+    virtual ~exception() throw();
+    virtual const char* what() const throw();
+  };
+
+  /*
+  If bool is not supported, use a typedef for bool.
+  */
+  #ifdef _BOOL
+  typedef bool __bool;
+  #else /* ifndef _BOOL */
+  typedef int __bool;
+  #endif /* ifdef _BOOL */
+
+  class bad_exception : public exception {
+  public:
+    bad_exception() throw();
+    bad_exception(const bad_exception&) throw();
+    bad_exception& operator=(const bad_exception&) throw();
+    virtual ~bad_exception() throw();
+    virtual const char* what() const throw();
+  };
+
+  typedef void (*terminate_handler)();
+  extern terminate_handler set_terminate(terminate_handler) throw();
+
+  typedef void (*unexpected_handler)();
+  extern unexpected_handler set_unexpected(unexpected_handler) throw();
+
+  /* unexpected and terminate are in the WP definition of exception.h.
+     It is not clear why. */
+  void terminate();
+  void unexpected();
+
+  extern __bool uncaught_exception() throw();
+
+__TASKING_END_NAMESPACE
+__TASKING_USING_NAMESPACE
+
+#endif /* defined(__USE_TASKING_EXCEPTION_CLASSES) */
+
+#endif /* _EXCEPTION_STDH */

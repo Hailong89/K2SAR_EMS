@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Invocation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 36--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch18.html" >next</a>] [<a 
+href="main_gcc_ugse38.html" >prev</a>] [<a 
+href="main_gcc_ugse38.html#tailmain_gcc_ugse38.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse39.html">tail</a>] [<a 
+href="main_gcc_ugch17.html#main_gcc_ugse39.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">17.2</span>  <a 
+href="main_gcc_ug.html#QQ2-61-119" id="x61-11200017.2">Invocation</a></h3>
+<a 
+ id="dx61-112001"></a>
+<!--l. 38--><p class="noindent" >For a description of the available options of preprocessor see the according section.
+</p><!--l. 40--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-$</span>                </dt><dd 
+class="list">
+                  <!--l. 41--><p class="noindent" ><a 
+ id="dx61-112002"></a> Do <a 
+ id="lbl:cpp!-dollar">not</a> allow ’$’ in identifiers.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-+</span>                </dt><dd 
+class="list">
+                  <!--l. 42--><p class="noindent" ><a 
+ id="dx61-112003"></a> Allow parsing of C++ style features.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-A &#x003C;question&#x003E;=&#x003C;answer&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 43--><p class="noindent" ><a 
+ id="dx61-112004"></a> Assert the <span 
+class="cmmi-12">&#x003C;</span>answer<span 
+class="cmmi-12">&#x003E; </span>to <span 
+class="cmmi-12">&#x003C;</span>question<span 
+class="cmmi-12">&#x003E;</span>. One assertion may have more
+                  than one answers. This assertion can be evaluated by the following C
+                  construct:
+                  </p><!--l. 45--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb163"><a 
+ id="x61-112006r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #&#x003C;question&#x003E;</span><span 
+class="pcrr7t-x-x-144"> (&#x003C;answer&#x003E;)</span></div>
+                  <!--l. 49--><p class="noindent" >Conditional code can be created using an assertion:
+                  </p><!--l. 51--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb164"><a 
+ id="x61-112008r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #if</span><span 
+class="pcrr7t-x-x-144"> #&#x003C;question&#x003E;</span><span 
+class="pcrr7t-x-x-144"> (&#x003C;answer&#x003E;)</span></div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-A -&#x003C;question&#x003E;=&#x003C;answer&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 55--><p class="noindent" ><a 
+ id="dx61-112009"></a> Undefines the answer <span 
+class="cmmi-12">&#x003C;</span>answer<span 
+class="cmmi-12">&#x003E; </span>of <span 
+class="cmmi-12">&#x003C;</span>question<span 
+class="cmmi-12">&#x003E;</span>.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-C</span>                </dt><dd 
+class="list">
+                  <!--l. 56--><p class="noindent" ><a 
+ id="dx61-112010"></a> The comments of the input file are preserved in the output file. This option
+                  is accepted by <span 
+class="cmtt-12">tricore-gcc</span> only in combination with the option
+                  <a 
+href="main_gcc_ugse36.html#lbl:gcc!-E"><span 
+class="cmtt-12">-E</span></a>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-D &#x003C;macro&#x003E;</span>       </dt><dd 
+class="list">
+                  <!--l. 57--><p class="noindent" ><a 
+ id="dx61-112011"></a> Defines the <span 
+class="cmmi-12">&#x003C;</span>macro<span 
+class="cmmi-12">&#x003E; </span>with the string <span class="lstinline"><span 
+class="ecss-1200">1</span></span> as its value. This macro can be used
+                  together with the <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">ifdef</span></span> directive.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-D &#x003C;macro&#x003E;=&#x003C;value&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 58--><p class="noindent" ><a 
+ id="dx61-112012"></a> Defines the <span 
+class="cmmi-12">&#x003C;</span>macro<span 
+class="cmmi-12">&#x003E; </span>with <span 
+class="cmmi-12">&#x003C;</span>value<span 
+class="cmmi-12">&#x003E; </span>as its value.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-dD</span>               </dt><dd 
+class="list">
+                  <!--l. 59--><p class="noindent" ><a 
+ id="dx61-112013"></a> Generates <a 
+ id="lbl:cpp!-dD">a</a> list of all defined macros and their values before preprocessing
+                  the input file. This list does not contain the predefined macros. If the
+                  preprocessor is invoked by <span 
+class="cmtt-12">tricore-gcc</span> this option only produces
+                  output to standard output if used in conjunction with the option
+                  <a 
+href="main_gcc_ugse36.html#lbl:gcc!-E"><span 
+class="cmtt-12">-E</span></a>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-dI</span>               </dt><dd 
+class="list">
+                  <!--l. 60--><p class="noindent" ><a 
+ id="dx61-112014"></a> Include <a 
+ id="lbl:cpp!-dI"><span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span></span></a> directives in the output.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-dM</span>               </dt><dd 
+class="list">
+                  <!--l. 61--><p class="noindent" ><a 
+ id="dx61-112015"></a> Generate <a 
+ id="lbl:cpp!-dM">a</a> list of all defined macros and their values at the end of the
+                  preprocessing instead of the normal output. If the preprocessor is invoked by
+                  <span 
+class="cmtt-12">tricore-gcc</span> this option only produces output to standard output if used in
+                  conjunction with the option <a 
+href="main_gcc_ugse36.html#lbl:gcc!-E"><span 
+class="cmtt-12">-E</span></a>. Otherwise the output is written to the
+                  generated <span 
+class="cmtt-12">.i</span>-file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-dN</span>               </dt><dd 
+class="list">
+                  <!--l. 62--><p class="noindent" ><a 
+ id="dx61-112016"></a> Generates a list of all defined macros without their values before
+                  preprocessing the input file. This list does not contain the predefined macros.
+                  If the preprocessor is invoked by <span 
+class="cmtt-12">tricore-gcc</span> this option only produces
+                  output to standard output if used in conjunction with the option
+                  <a 
+href="main_gcc_ugse36.html#lbl:gcc!-E"><span 
+class="cmtt-12">-E</span></a>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-ftabstop=&#x003C;number&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 64--><p class="noindent" ><a 
+ id="dx61-112017"></a> Set the number of whitespaces replacing a tabstop in the output.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h or --help</span>    </dt><dd 
+class="list">
+                  <!--l. 65--><p class="noindent" ><a 
+ id="dx61-112018"></a> <a 
+ id="dx61-112019"></a>Display the online help.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-H</span>                </dt><dd 
+class="list">
+                  <!--l. 66--><p class="noindent" ><a 
+ id="dx61-112020"></a> Print the name of header files in the order they are used. For system header
+                  files the absolute path is included.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-I-</span>               </dt><dd 
+class="list">
+                  <!--l. 67--><p class="noindent" ><a 
+ id="dx61-112021"></a> See option <a 
+href="#lbl:cpp!-I"><span 
+class="cmtt-12">-I</span></a> for a description.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-I &#x003C;dir&#x003E;</span>         </dt><dd 
+class="list">
+                  <!--l. 68--><p class="noindent" ><a 
+ id="dx61-112022"></a> Add <a 
+ id="lbl:cpp!-I">dir</a> to the end of the main include path. If this option is set before the
+                  option <span 
+class="cmtt-12">-I-</span> the specified directory will be only searched for header
+                  files included by <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;</span><span 
+class="ecss-1200">"</span></span>. If this option is set after the
+                  option <span 
+class="cmtt-12">-I-</span> the directory <span 
+class="cmmi-12">&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>will be searched for header files
+                  included with both <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;</span><span 
+class="ecss-1200">"</span></span> and <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">&#x003C;&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;&#x003E;</span></span>. In
+                  addition, <span 
+class="cmtt-12">-I-</span> inhibits the use of the directory of the current file as the
+                  first search directory for <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;</span><span 
+class="ecss-1200">"</span></span>. The preprocessor
+                  automatically checks the content of the system environment variable
+                  CPATH. The content of this variable is processed after any of
+                  the <span 
+class="cmtt-12">-I</span>-options processed, regardless of the location of the option
+                  <span 
+class="cmtt-12">-I-</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-idirafter &#x003C;dir&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 69--><p class="noindent" ><a 
+ id="dx61-112023"></a> Add <span 
+class="cmmi-12">&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>to the end of the system include path. The files in <span 
+class="cmmi-12">&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>are
+                  searched for header files included with <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">&#x003C;&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;&#x003E;</span></span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-imacros &#x003C;file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 71--><p class="noindent" ><a 
+ id="dx61-112024"></a> The macros defined in <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>are defined before any input file is processed.
+                  This option does the same as <span 
+class="cmtt-12">-include &#x003C;file&#x003E;</span> except that only the macro
+                  definitions are read. No function declarations from <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>are read. The files
+                  specified with <span 
+class="cmtt-12">imacros</span> are processed before the files specified with
+                  <span 
+class="cmtt-12">include</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-include &#x003C;file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 72--><p class="noindent" ><a 
+ id="dx61-112025"></a> Include the contents of <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>to the preprocessed file before processing the
+                  <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span></span> directives of the input file. Specifying this option has the same
+                  effect as inserting <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">&#x003C;&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;&#x003E;</span></span> at the very beginning of all input
+                  files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-iprefix &#x003C;path&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 73--><p class="noindent" ><a 
+ id="dx61-112026"></a> For the options <span 
+class="cmtt-12">-iwithprefix</span> and <span 
+class="cmtt-12">-iwithprefixbefore</span> <span 
+class="cmmi-12">&#x003C;</span>path<span 
+class="cmmi-12">&#x003E; </span>is set as
+                  the prefix.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-isystem &#x003C;dir&#x003E;</span>  </dt><dd 
+class="list">
+                  <!--l. 74--><p class="noindent" ><a 
+ id="dx61-112027"></a> Add <a 
+ id="lbl:cpp!-isystem">dir</a> to the start of the system include path. The directory <span 
+class="cmmi-12">&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>is
+                  searched for header files before the predefined system include path. By using
+                  this option predefined header files can be replaced without changing the
+                  source code.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-iwithprefix &#x003C;dir&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 75--><p class="noindent" ><a 
+ id="dx61-112028"></a> Add <span 
+class="cmmi-12">&#x003C;</span>prefix<span 
+class="cmmi-12">&#x003E;&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>to the end of the system include path. The prefix must
+                  be set by the option <span 
+class="cmtt-12">-iprefix</span> before. The files in <span 
+class="cmmi-12">&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>are searched for
+                  header files included with <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">&#x003C;&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;&#x003E;</span></span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-iwithprefixbefore &#x003C;dir&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 76--><p class="noindent" ><a 
+ id="dx61-112029"></a> Add <span 
+class="cmmi-12">&#x003C;</span>prefix<span 
+class="cmmi-12">&#x003E;&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>to the end of the main include path. The prefix must
+                  be set by the option <span 
+class="cmtt-12">-iprefix</span> before. The files in <span 
+class="cmmi-12">&#x003C;</span>dir<span 
+class="cmmi-12">&#x003E; </span>are searched for
+                  header files included with <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">"</span><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">file</span><span 
+class="ecss-1200">&#x003E;</span><span 
+class="ecss-1200">"</span></span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-lang-asm</span>        </dt><dd 
+class="list">
+                  <!--l. 77--><p class="noindent" ><a 
+ id="dx61-112030"></a> By default the language is recognized by its extension. With this option you
+                  can assume that the input sources are in assembler, even if a different
+                  extension is used.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-lang-c</span>          </dt><dd 
+class="list">
+                  <!--l. 78--><p class="noindent" ><a 
+ id="dx61-112031"></a> Assume that the input sources are in C.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-lang-c++</span>        </dt><dd 
+class="list">
+                  <!--l. 79--><p class="noindent" ><a 
+ id="dx61-112032"></a> Assume that the input sources are in C++.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-M</span>                </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 85--><p class="noindent" ><a 
+ id="dx61-112033"></a> This <a 
+ id="lbl:cpp!-M">option</a> generates the dependencies of the preprocessed file to include in
+                  a makefile.
+                  </p><!--l. 93--><p class="noindent" >After generating this output the toolchain is stopped. No compilation is
+                  done.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MD</span>               </dt><dd 
+class="list">
+                  <!--l. 94--><p class="noindent" ><a 
+ id="dx61-112034"></a> Generates <span 
+class="cmtt-12">make </span>dependencies and continues the toolchain after the
+                  preprocessor. The make dependencies are output in a file with the extension
+                  <span 
+class="cmtt-12">.d</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MF &#x003C;file&#x003E;</span>       </dt><dd 
+class="list">
+                  <!--l. 95--><p class="noindent" ><a 
+ id="dx61-112035"></a> Write the dependency output generated by the preprocessor to <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E;</span>
+                  instead of file <span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">inputfile</span><span 
+class="cmmi-12">&#x003E;</span><span 
+class="cmtt-12">.d</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MG</span>               </dt><dd 
+class="list">
+                  <!--l. 96--><p class="noindent" ><a 
+ id="dx61-112036"></a> Treat missing header file as generated files. This allows the preprocessor to
+                  generate a make dependency for header files not existing in the source file’s
+                  directory yet. If the preprocessor is invoked with <span 
+class="cmtt-12">-M</span> and a required header
+                  file does not exist, it will exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MMD</span>              </dt><dd 
+class="list">
+                  <!--l. 97--><p class="noindent" ><a 
+ id="dx61-112037"></a> Generates make dependencies and continues the toolchain after the
+                  preprocessor, but ignores system header files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MP</span>               </dt><dd 
+class="list">
+                  <!--l. 98--><p class="noindent" ><a 
+ id="dx61-112038"></a> Generate phony targets for all headers included in the input file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MQ &#x003C;target&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 99--><p class="noindent" ><a 
+ id="dx61-112039"></a> The <a 
+ id="lbl:cpp!-MQ">default</a> name of the target created by the option <a 
+href="#lbl:cpp!-M"><span 
+class="cmtt-12">-M</span></a> is the name
+                  of the output object file. By using the option <span 
+class="cmtt-12">MQ</span> the target can
+                  be renamed to <span 
+class="cmmi-12">&#x003C;</span>target<span 
+class="cmmi-12">&#x003E;</span>. If <span 
+class="cmmi-12">&#x003C;</span>target<span 
+class="cmmi-12">&#x003E; </span>contains characters that
+                  are recognized by <span 
+class="cmtt-12">make </span>as special characters these characters are
+                  quoted.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MT &#x003C;target&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 100--><p class="noindent" ><a 
+ id="dx61-112040"></a> The same as <a 
+href="#lbl:cpp!-MQ"><span 
+class="cmtt-12">-MQ</span></a> except that the special characters in the target name are
+                  not quoted.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-nostdinc</span>        </dt><dd 
+class="list">
+                  <!--l. 101--><p class="noindent" ><a 
+ id="dx61-112041"></a> Do not search the predefined system include directories. The user
+                  defined directories specified by <a 
+href="#lbl:cpp!-isystem"><span 
+class="cmtt-12">-isystem</span></a> will be searched for header
+                  files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-nostdinc++</span>      </dt><dd 
+class="list">
+                  <!--l. 102--><p class="noindent" ><a 
+ id="dx61-112042"></a> Do not search the predefined C++ standard include directories. All other
+                  predefined directories are searched for header files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o &#x003C;file&#x003E;</span>        </dt><dd 
+class="list">
+                  <!--l. 103--><p class="noindent" ><a 
+ id="dx61-112043"></a> The output generated by the preprocessor is put into <span 
+class="cmmi-12">&#x003C;</span>file<span 
+class="cmmi-12">&#x003E; </span>instead of
+                  stdout. Convention is to write the preprocessor’s output into a file with the
+                  extension <span 
+class="cmtt-12">.i</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-P</span>                </dt><dd 
+class="list">
+                  <!--l. 104--><p class="noindent" ><a 
+ id="dx61-112044"></a> Do not generate #line directives and line information in the output.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-pedantic</span>        </dt><dd 
+class="list">
+                  <!--l. 105--><p class="noindent" ><a 
+ id="dx61-112045"></a> Issue a warning if the source code is not confirm with the standard set by
+                  the option <a 
+href="#lbl:cpp!-std"><span 
+class="cmtt-12">-std</span></a>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-pedantic-errors</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 106--><p class="noindent" ><a 
+ id="dx61-112046"></a> Issue an error if the source code is not confirm with the standard set by the
+                  option <a 
+href="#lbl:cpp!-std"><span 
+class="cmtt-12">-std</span></a>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-remap</span>           </dt><dd 
+class="list">
+                  <!--l. 107--><p class="noindent" ><a 
+ id="dx61-112047"></a> Enable special code to work around file systems which only permit very
+                  short file names, such as MS-DOS.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-std=&#x003C;standard&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 108--><p class="noindent" ><a 
+ id="dx61-112048"></a> Specify <a 
+ id="lbl:cpp!-std">the</a> standard the code should be checked against. Allowed standards
+                  are:
+                       </p><dl class="description"><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">iso9899:1990, c89</span> </dt><dd 
+class="description">The  ISO  C  standard  from  1990.  c89  is  the
+                       customary shorthand for this version of the standard.
+                                                                                       
+                                                                                       
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">gnu89</span> </dt><dd 
+class="description">the ISO C standard from 1990 plus <span 
+class="cmsl-12">GNU </span>extensions. This is
+                       the default.
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">iso9899:199409</span> </dt><dd 
+class="description">The 1990 C standard, as amended in 1994.
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">iso9899:1999, iso9899:199x, c99, c9x</span> </dt><dd 
+class="description">The revised ISO C standard,
+                       published in December 1999. Before publication, this was known
+                       as C9X.
+                       </dd><dt class="description">
+                  <span 
+class="cmssbx-10x-x-120">gnu99, gnu9x</span> </dt><dd 
+class="description">The 1999 ISO C standard plus <span 
+class="cmsl-12">GNU </span>extensions.</dd></dl>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-trigraphs</span>       </dt><dd 
+class="list">
+                  <!--l. 119--><p class="noindent" ><a 
+ id="dx61-112049"></a> Support ISO C trigraphs.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-U &#x003C;macro&#x003E;</span>       </dt><dd 
+class="list">
+                  <!--l. 120--><p class="noindent" ><a 
+ id="dx61-112050"></a> Undefines <span 
+class="cmmi-12">&#x003C;</span>macro<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--version</span>        </dt><dd 
+class="list">
+                  <!--l. 121--><p class="noindent" ><a 
+ id="dx61-112051"></a> Display version information of the preprocessor.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v</span>                </dt><dd 
+class="list">
+                  <!--l. 122--><p class="noindent" ><a 
+ id="dx61-112052"></a> Displays the version number.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-w</span>                </dt><dd 
+class="list">
+                  <!--l. 123--><p class="noindent" ><a 
+ id="dx61-112053"></a> Suppress all warnings, including those which the preprocessor issues by
+                  default.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wall</span>             </dt><dd 
+class="list">
+                  <!--l. 124--><p class="noindent" ><a 
+ id="dx61-112054"></a> Turns on all optional warnings which are desirable for normal code. At
+                  present this is <span 
+class="cmtt-12">-Wcomment</span> and <span 
+class="cmtt-12">-Wtrigraphs</span>. Note that many of the
+                  preprocessor’s warnings are on by default and have no options to control
+                  them.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wcomment</span>        </dt><dd 
+class="list">
+                  <!--l. 125--><p class="noindent" >Same as <span 
+class="cmtt-12">-Wcomments</span>.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wcomments</span>       </dt><dd 
+class="list">
+                  <!--l. 126--><p class="noindent" ><a 
+ id="dx61-112055"></a> <a 
+ id="dx61-112056"></a>Warn whenever a comment-start sequence <span class="lstinline"><span 
+class="ecss-1200">/</span><span 
+class="cmsy-10x-x-120">*</span></span> appears in a <span class="lstinline"><span 
+class="ecss-1200">/</span><span 
+class="cmsy-10x-x-120">*</span></span> comment, or
+                  whenever a backslash-newline appears in a <span class="lstinline"><span 
+class="ecss-1200">//</span></span> comment.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Werror</span>          </dt><dd 
+class="list">
+                  <!--l. 127--><p class="noindent" ><a 
+ id="dx61-112057"></a> Make all warnings into hard errors. Source code which triggers
+                  warnings will not be preprocessed and the compilation will be
+                  stopped.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wimport</span>         </dt><dd 
+class="list">
+                  <!--l. 128--><p class="noindent" ><a 
+ id="dx61-112058"></a> Warn the first time <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecss-1200">import</span></span> is used.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wno-trigraphs</span>  </dt><dd 
+class="list">
+                  <!--l. 129--><p class="noindent" ><a 
+ id="dx61-112059"></a> Do not warn about trigraphs.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wno-comments</span>   </dt><dd 
+class="list">
+                  <!--l. 130--><p class="noindent" ><a 
+ id="dx61-112060"></a> Do not warn about comments.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wno-traditional</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 131--><p class="noindent" ><a 
+ id="dx61-112061"></a> Do not warn about traditional C.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wno-undef</span>       </dt><dd 
+class="list">
+                  <!--l. 132--><p class="noindent" ><a 
+ id="dx61-112062"></a> Do not warn about testing undefined macros.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wno-import</span>      </dt><dd 
+class="list">
+                  <!--l. 133--><p class="noindent" ><a 
+ id="dx61-112063"></a> Do not warn about the use of <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecss-1200">import</span></span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wno-error</span>       </dt><dd 
+class="list">
+                  <!--l. 134--><p class="noindent" ><a 
+ id="dx61-112064"></a> Do not treat warnings as errors.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wno-system-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 135--><p class="noindent" ><a 
+ id="dx61-112065"></a> Suppress warnings from system headers.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wsystem-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 136--><p class="noindent" ><a 
+ id="dx61-112066"></a> Issue warnings for code in system headers. These are normally
+                  unhelpful in finding bugs in your own code, therefore suppressed. If
+                  you are responsible for the system library, you may want to see
+                  them.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wtrigraphs</span>      </dt><dd 
+class="list">
+                  <!--l. 137--><p class="noindent" ><a 
+ id="dx61-112067"></a> Warn if trigraphs are encountered. Trigraphs are special control sequences
+                  defined in ANSI C for generating special characters. These trigraphs are
+                  rarely used and replaced by other characters while preprocessing. They
+                  should be avoided if possible.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wtraditional</span>   </dt><dd 
+class="list">
+                  <!--l. 138--><p class="noindent" ><a 
+ id="dx61-112068"></a> Warn about certain constructs that behave differently in traditional and
+                  ISO C. Also warn about ISO C constructs that have no traditional C
+                  equivalent, and problematic constructs which should be avoided.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Wundef</span>          </dt><dd 
+class="list">
+                  <!--l. 139--><p class="noindent" ><a 
+ id="dx61-112069"></a> Warn whenever an identifier which is not a macro is encountered in an
+                  <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">if</span></span> directive, outside of <span class="lstinline"><span 
+class="ecss-1200">defined</span></span>. Such identifiers are replaced by
+                  zero.
+<span 
+class="cmtt-12">-mno-warn-skipped-cpp-directives</span><br 
+class="newline" />                  Don’t warn about invalid preprocessor directives in skipped blocks.
+<span 
+class="cmtt-12">-mwarn-skipped-cpp-directives</span><br 
+class="newline" />                  Warn about invalid preprocessor directives in skipped blocks. This option is
+                  not set by default.
+                  </p></dd></dl>
+<!--l. 1--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">17.2.1</span>  <a 
+href="#x61-11300017.2.1" id="x61-11300017.2.1">Default options and defines</a></h4>
+<a 
+ id="dx61-113001"></a>
+<!--l. 4--><p class="noindent" >The following options are set by default for the preprocessor by the compiler driver program
+<span 
+class="cmtt-12">tricore-gcc</span>:
+</p>
+                                                                                       
+                                                                                       
+      <ul class="itemize1">
+      <li class="itemize"><span 
+class="cmtt-12">-fomit-frame-pointer</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-funsigned-bitfields</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-quiet</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mversion-info-string=</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mtc12</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu018</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu024</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu031</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu034</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu048=all</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu050</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu060</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu069</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu070</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-mcpu072</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-auxbase</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-iprefix &#x003C;install-dir&#x003E;/bin/../lib/gcc-lib/tricore/&#x003C;gcc-version&#x003E;/</span>
+      </li>
+      <li class="itemize"><span 
+class="cmtt-12">-isystem</span></li></ul>
+                                                                                       
+                                                                                       
+<!--l. 29--><p class="noindent" >Where <span 
+class="cmmi-12">&#x003C;</span>install-dir<span 
+class="cmmi-12">&#x003E; </span>represents the directory where the toolchain is installed to and
+<span 
+class="cmmi-12">&#x003C;</span>gcc-version<span 
+class="cmmi-12">&#x003E; </span>stands for the version of the <span 
+class="cmsl-12">GNU </span>compiler collection that provided the base for
+the  TriCore Development Platform.
+</p><!--l. 31--><p class="noindent" >These defines are set by default either by command line options or by internal settings of the
+preprocessor:
+</p>
+      <ul class="itemize1">
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DRIDER_B</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">D__TC12__</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">D__RIDER_B__</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">D__SOFT_FLOAT__</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU8</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU31</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU18</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU34</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU24</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU60</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU69</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU70</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU72</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU16</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU48</span></span>
+                                                                                       
+                                                                                       
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU48_1</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU48_2</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">DERRATA_CPU50</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">D__TC12__</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">D__TRICORE_NAME__</span><span 
+class="ecss-1200">=0</span><span 
+class="ecss-1200">x12</span></span></li></ul>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch18.html" >next</a>] [<a 
+href="main_gcc_ugse38.html" >prev</a>] [<a 
+href="main_gcc_ugse38.html#tailmain_gcc_ugse38.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse39.html" >front</a>] [<a 
+href="main_gcc_ugch17.html#main_gcc_ugse39.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse39.html"></a> </p> 
+</body></html> 

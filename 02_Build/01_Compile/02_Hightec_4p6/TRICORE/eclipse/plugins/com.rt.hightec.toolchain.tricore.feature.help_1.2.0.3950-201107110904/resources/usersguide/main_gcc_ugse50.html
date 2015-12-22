@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-c++filt</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 222--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse51.html" >next</a>] [<a 
+href="main_gcc_ugse49.html" >prev</a>] [<a 
+href="main_gcc_ugse49.html#tailmain_gcc_ugse49.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse50.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse50.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.3</span>  <a 
+href="main_gcc_ug.html#QQ2-79-216" id="x79-20700021.3">tricore-c++filt</a></h3>
+<!--l. 224--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.3.1</span>  <a 
+href="#x79-20800021.3.1" id="x79-20800021.3.1">Description</a></h4>
+<!--l. 226--><p class="noindent" ><span 
+class="cmtt-12">tricore-c++filt</span> <span 
+class="cmtt-12">[options] &#x003C;symbol&#x003E;</span>
+</p><!--l. 228--><p class="noindent" >The C++ language provides function overloading, which means that you can write many
+functions with the same name (providing each takes parameters of different types). All C++
+function names are encoded into a low-level assembly label (this process is known as mangling).
+The tricore-c++filt program does the inverse mapping: it decodes (demangles) low-level names
+into user-level names so that the linker can keep these overloaded functions from
+clashing.
+</p><!--l. 230--><p class="noindent" >Every alphanumeric word (consisting of letters, digits, underscores, dollars, or periods) seen in
+the input is a potential label. If the label decodes into a C++ name, the C++ name replaces
+the low-level name in the output.
+</p><!--l. 232--><p class="noindent" >If no symbol arguments are given, tricore-c++filt reads symbol names from the standard input
+and writes the demangled names to the standard output. All results are printed on the standard
+output.
+</p><!--l. 234--><p class="noindent" >Warning: tricore-c++filt is a new utility, and the details of its user interface are subject to
+change in future releases. In particular, a command-line option may be required in the the
+future to decode a name passed as an argument on the command line; in other words
+<span 
+class="cmtt-12">tricore-c++filt</span> <span 
+class="cmtt-12">&#x003C;symbol&#x003E; </span>may in a future release become <span 
+class="cmtt-12">tricore-c++filt</span> <span 
+class="cmtt-12">&#x003C;option&#x003E;</span>
+<span 
+class="cmtt-12">&#x003C;symbol&#x003E;</span>
+</p><!--l. 240--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.3.2</span>  <a 
+href="#x79-20900021.3.2" id="x79-20900021.3.2">Invocation</a></h4>
+<!--l. 242--><p class="noindent" >
+                                                                                       
+                                                                                       
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-</span><span 
+class="cmtt-12">_, --strip-underscores</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 243--><p class="noindent" >On some systems, both the C and C++ compilers put an underscore
+                  in front of every name. For example, the C name <span class="lstinline"><span 
+class="ecss-1200">foo</span></span> gets the low-level
+                  name  <span class="lstinline"><span 
+class="ecss-1200">_foo</span></span>.  This  option  removes  the  initial  underscore.  Whether
+                  tricore-c++filt removes the underscore by default is target dependent.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-n --no-strip-underscores</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 245--><p class="noindent" >Do not remove the initial underscore.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--help</span>           </dt><dd 
+class="list">
+                  <!--l. 247--><p class="noindent" >Print a summary of the options to tricore-c++filt and exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--version</span>        </dt><dd 
+class="list">
+                  <!--l. 249--><p class="noindent" >Print the version number of tricore-c++filt and exit.
+</p>
+                  </dd></dl>
+<!--l. 253--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.3.3</span>  <a 
+href="#x79-21000021.3.3" id="x79-21000021.3.3">Example</a></h4>
+<!--l. 255--><p class="noindent" >Assumed you have a C++-program with a class <span class="lstinline"><span 
+class="ecss-1200">Serial_T</span></span>, which as a method <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">init</span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200">)</span></span>.
+This program is compiled to an object file and the symbols in it are displayed by
+<span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">-t</span>:
+</p><!--l. 257--><p class="noindent" ><span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">-t serial.o</span>
+</p><!--l. 259--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb301"><a 
+ id="x79-210002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> serial.o:</span><span 
+class="pcrr7t-"> file</span><span 
+class="pcrr7t-"> format</span><span 
+class="pcrr7t-"> elf32-tricore</span><br class="fancyvrb" /><a 
+ id="x79-210004r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><br class="fancyvrb" /><a 
+ id="x79-210006r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> SYMBOL</span><span 
+class="pcrr7t-"> TABLE:</span><br class="fancyvrb" /><a 
+ id="x79-210008r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> l</span><span 
+class="pcrr7t-"> df</span><span 
+class="pcrr7t-"> &#x22C6;ABS&#x22C6;</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> text.cpp</span>
+<br class="fancyvrb" /><a 
+ id="x79-210010r5"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> l</span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> .text</span><span 
+class="pcrr7t-"> 00000000</span><br class="fancyvrb" /><a 
+ id="x79-210012r6"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> l</span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> .data</span><span 
+class="pcrr7t-"> 00000000</span><br class="fancyvrb" /><a 
+ id="x79-210014r7"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> l</span><span 
+class="pcrr7t-"> d</span><span 
+class="pcrr7t-"> .bss</span><span 
+class="pcrr7t-"> 00000000</span>
+<br class="fancyvrb" /><a 
+ id="x79-210016r8"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> &#x22C6;UND&#x22C6;</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> _ZN8Serial_T4initEv</span></div>
+<!--l. 270--><p class="noindent" >The name of the method is output in the symbol table as <span 
+class="cmtt-12">_ZN8Serial</span><span 
+class="cmtt-12">_T4initEv</span>. This is the
+compiler internal low-level format for C++ function. To demangle this function name use
+<span 
+class="cmtt-12">tricore-c++filt</span>:
+</p><!--l. 272--><p class="noindent" ><span 
+class="cmtt-12">tricore-c++filt</span> <span 
+class="cmtt-12">_ZN8Serial</span><span 
+class="cmtt-12">_T4initEv</span>
+                                                                                       
+                                                                                       
+</p>
+<div class="fancyvrb" id="fancyvrb302"><a 
+ id="x79-210018r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Serial_T::init()</span></div>
+                                                                                       
+                                                                                       
+<!--l. 277--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse51.html" >next</a>] [<a 
+href="main_gcc_ugse49.html" >prev</a>] [<a 
+href="main_gcc_ugse49.html#tailmain_gcc_ugse49.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse50.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse50.html" >up</a>] </p></div>
+<!--l. 277--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse50.html"></a> </p> 
+</body></html> 

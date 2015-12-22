@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>The Linker Script File</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugli2.html" >next</a>] [<a 
+href="main_gcc_ugse44.html" >prev</a>] [<a 
+href="main_gcc_ugse44.html#tailmain_gcc_ugse44.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse45.html">tail</a>] [<a 
+href="main_gcc_ugch20.html#main_gcc_ugse45.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">20.2</span>  <a 
+href="main_gcc_ug.html#QQ2-70-142" id="x70-13500020.2">The Linker Script File</a></h3>
+<a 
+ id="dx70-135001"></a>
+<!--l. 3--><p class="noindent" >The <span 
+class="cmtt-12">tricore-ld</span> is controlled by a scripting language. If you do not specify a script, the one
+that was compiled into the linker when it is installed is used by default.
+</p><!--l. 5--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">20.2.1</span>  <a 
+href="#x70-13600020.2.1" id="x70-13600020.2.1">Sections and Relocation</a></h4>
+<a 
+ id="dx70-136001"></a>
+<a 
+ id="dx70-136002"></a>
+<!--l. 7--><p class="noindent" >Roughly, a section is a range of addresses, with no gaps; all data ”in” those addresses is
+treated the same for some particular purpose. For example there may be a ”read only”
+section.
+<a 
+ id="dx70-136003"></a>
+<a 
+ id="dx70-136004"></a>
+</p><!--l. 12--><p class="noindent" >The linker <span 
+class="cmtt-12">tricore-ld</span> reads many object files (partial programs) and combines their contents
+to form a runable program. When <span 
+class="cmtt-12">tricore-as</span> emits an object file, the partial program is
+assumed to start at address 0. <span 
+class="cmtt-12">tricore-ld</span> assigns the final addresses for the partial program,
+so that different partial programs do not overlap. This is actually an oversimplification, but it
+suffices to explain how <span 
+class="cmtt-12">tricore-as</span> uses sections.
+</p><!--l. 14--><p class="noindent" ><span 
+class="cmtt-12">tricore-ld</span> moves blocks of bytes of your program to their run-time addresses. These blocks
+slide to their run-time addresses as rigid units; their length does not change and
+neither does the order of bytes within them. Such a rigid unit is called a <span 
+class="cmti-12">section</span>.
+Assigning run-time addresses to sections is called <span 
+class="cmsl-12">relocation</span>. It includes the task
+of adjusting mentions of object-file addresses so they refer to the proper run-time
+addresses.
+<a 
+ id="dx70-136005"></a>
+</p><!--l. 18--><p class="noindent" >An object file written by <span 
+class="cmtt-12">tricore-as</span> has at least three sections, any of which may be empty.
+These are named <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> sections. The <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section is used for local common
+variable storage. You may allocate address space in the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section, but you may not dictate
+                                                                                       
+                                                                                       
+data to load into it before your program executes. When your program starts running, all the
+contents of the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section are zeroed bytes.
+</p><!--l. 20--><p class="noindent" >To let tricore-ld know which data changes when the sections are relocated, and how to change
+that data, <span 
+class="cmtt-12">tricore-as</span> also writes to the object file details of the relocation needed. To
+perform relocation <span 
+class="cmtt-12">tricore-ld</span> must know, each time an address in the object file is
+mentioned:
+</p><!--l. 22--><p class="noindent" >In this manual we use the notation <span 
+class="cmmi-12">&#x003C;</span>secname<span 
+class="cmmi-12">&#x003E; &#x003C;</span>N<span 
+class="cmmi-12">&#x003E; </span>to mean ”offset <span 
+class="cmmi-12">&#x003C;</span>N<span 
+class="cmmi-12">&#x003E; </span>into section
+<span 
+class="cmmi-12">&#x003C;</span>secname<span 
+class="cmmi-12">&#x003E;</span>.
+</p><!--l. 24--><p class="noindent" >Apart from text, data and bss sections you need to know about the <span 
+class="cmsl-12">absolute </span>section. When
+<span 
+class="cmtt-12">tricore-ld</span> mixes partial programs, addresses in the absolute section remain unchanged. For
+example, address <span class="lstinline"><span 
+class="ecss-1200">0</span></span> is ”relocated” to run-time address 0 by <span 
+class="cmtt-12">tricore-ld</span>. Although the linker
+never arranges two partial programs’ data sections with overlapping addresses after linking, <span 
+class="cmti-12">by</span>
+<span 
+class="cmti-12">definition </span>their absolute sections must overlap. Address <span class="lstinline"><span 
+class="ecss-1200">absolute</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">239</span></span> in one art of a program is
+always the same address when the program is running as address <span class="lstinline"><span 
+class="ecss-1200">absolute</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">239</span></span> in any other part
+of the program.
+</p><!--l. 26--><p class="noindent" >The idea of sections is extended to the <span 
+class="cmsl-12">undefined </span>section. Any address whose section is
+unknown at assembly time is by definition rendered undefined <span 
+class="cmmi-12">&#x003C;</span>U<span 
+class="cmmi-12">&#x003E;</span>˜where <span 
+class="cmmi-12">&#x003C;</span>U<span 
+class="cmmi-12">&#x003E; </span>is filled
+in later. Since numbers are always defined, the only way to generate an undefined
+address is to mention an undefined symbol. A reference to a named common block
+would be such a symbol: its value is unknown at assembly time so it has section
+<span 
+class="cmti-12">undefined</span>.
+</p><!--l. 28--><p class="noindent" >By analogy the word <span 
+class="cmti-12">section </span>is used to describe groups of sections in the linked program.
+<span 
+class="cmtt-12">tricore-ld</span> puts all partial programs’ text sections in contiguous addresses in the
+linked program. It is customary to refer to the <span 
+class="cmti-12">text section </span>of a program, meaning
+all the addresses of all partial programs’ text sections. Likewise for data and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span>
+sections.
+</p><!--l. 31--><p class="noindent" >Some sections are manipulated by <span 
+class="cmtt-12">tricore-ld</span>; others are invented for use of <span 
+class="cmtt-12">tricore-as</span> and
+have no meaning except during assembly.
+</p>
+<hr class="figure" /><div class="figure" 
+>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+<!--l. 33--><p class="noindent" ><img 
+src="sections.png" alt="pict"  
+ />
+<br /> </p><div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id"><a 
+ id="x70-1360061">Figure 20.1</a>:  
+Sections</td></tr></table></div><!--tex4ht:label?: x70-1360061 -->
+                                                                                       
+                                                                                       
+</div><hr class="endfigure" />
+<div class="center" 
+>
+<!--l. 34--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox98"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If you call the linker from the command-line, using the default linker
+description file, the sections of the input files are put together in the
+order they are passed to the linker. If you use an own linker description
+the order is indifferent.                                             </div>
+</div>
+                  <dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">named sections</span></span>  </dt><dd 
+class="list">
+                  <!--l. 36--><p class="noindent" >These sections hold your program. <span 
+class="cmtt-12">tricore-as</span> and <span 
+class="cmtt-12">tricore-ld</span> treat
+                  them as separate but equal sections. Anything you can say of one
+                  section is true for another.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">.bss</span></span>              </dt><dd 
+class="list">
+                  <!--l. 37--><p class="noindent" ><a 
+ id="dx70-136007"></a> This section contains zeroed bytes when your program begins running.
+                  It is used to hold uninitialized variables or common storage. The length
+                  of each partial program’s <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section is important, but because it starts
+                  out containing zeroed bytes there is no need to store explicit zero bytes
+                  in the object file. The <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section was invented to eliminate those
+                  explicit zeros from object files.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">absolute section</span></span> </dt><dd 
+class="list">
+                  <!--l. 38--><p class="noindent" ><a 
+ id="dx70-136008"></a> Address 0 of this section is always “relocated” to runtime address
+                  0. This is useful if you want to refer to an address that <span 
+class="cmtt-12">tricore-ld</span>
+                  must not change when relocating. In this sense we speak of absolute
+                  addresses being “unrelocatable”: they do not change during relocation.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">undefined section</span></span> </dt><dd 
+class="list">
+                  <!--l. 39--><p class="noindent" ><a 
+ id="dx70-136009"></a> This “section” is a catch-all for address references to objects not in
+                  the preceding sections.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugli2.html" >next</a>] [<a 
+href="main_gcc_ugse44.html" >prev</a>] [<a 
+href="main_gcc_ugse44.html#tailmain_gcc_ugse44.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse45.html" >front</a>] [<a 
+href="main_gcc_ugch20.html#main_gcc_ugse45.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse45.html"></a> </p> 
+</body></html> 

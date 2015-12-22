@@ -1,0 +1,80 @@
+<!-- @(#)phycore_tricore_tc1796b.dtc	1.11 13/04/03 -->
+<!-- Debug Target Configuration for the Phytec Phycore TC1796B -->
+
+<debugTarget
+    xmlns="http://com.tasking.dtc/dtc.xsd/1.0"
+    name="Phytec Phycore TC1796B"
+    manufacturer="Phytec">
+
+    <processor id="tc1796b"/>
+
+    <!-- Define all common parts -->
+    <def id="150Mhz">
+	<initialize resourceId="init"	name="DBGSR"		value="0x00000017" cstart="false"/>
+	<initialize resourceId="init"	name="EBU_CON"		value="0x0000FF68" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL0"	value="0xA4000833" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON0"	value="0x00922200" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP0"	value="0x80D81D00" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL1"	value="0xA1000853" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON1"	value="0x00820000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP1"	value="0x45b80000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL2"	value="0xA8000873" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON2"	value="0x00920000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP2"	value="0x40D01100" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL3"	value="0xD80000C1" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON3"	value="0x00420000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP3"	value="0x41A00100" cstart="true"/>
+	<initialize resourceId="init"	name="CBS_MCDBBS"	value="0x00090003" cstart="true"/>
+	<initialize resourceId="init"	name="DBGSR"		value="0x00000017" cstart="false"/>
+	<initialize resourceId="noinit"	name="PLL_CLC"		value="0x1d0384"   cstart="true"/>
+	<initialize resourceId="noinit"	name="Initialize clocks per sec" value="1" 	  cstart="true"/>
+	<initialize resourceId="noinit"	name="Oscillator frequency Hz"	 value="20000000" cstart="true"/>
+	<flashMonitor monitor="ftc1796b.sre" workspaceAddress="0xd0000400" flashSectorBufferSize="2048"/>
+    </def>
+
+    <!-- define all communication methods -->
+    <communicationMethod name="Universal Debug Access Server" debugInstrument="gdi2das" gdiMethod="tcpip">
+        <!-- DAS Resources:
+            DASserver:      the name (not the filename) of used DAS server (must be run and/or installed on the connected host
+            AccessPort:         the connection to the device e.g. for LPT server JTAGx means access via LPTx and the JTAG of device
+                            for USB server USBx means access via x and the USB of device
+            Addressdefinition:  the used register for registermap 
+            TerminateServer:    value != 0 means if a server is started by the debug instrument, then this server is terminated on exit
+            DasTimeOut:     xxx means max. timeout for client/server socket connection (ms)
+        -->
+        <resource id="DASserver" value="UDAS"/>
+        <resource id="AccessPort" value="JTAG0"/>
+        <resource id="RegisterFile" value="regbase_f7e1.dat"/>
+        <resource id="TerminateServer" value="1"/>
+        <resource id="DasTimeOut" value="0x4000"/>
+    </communicationMethod>
+
+    <configuration name="fCPU=150Mhz, PLL normal mode">
+        <ref id="150Mhz"/>
+    </configuration>
+
+    <!-- define all external on board flash chips -->
+    <flashChips>
+        <chip vendor="Intel" chip="28F640J3" width="16" chips="2" baseAddress="0xa4000000" chipSize="0x800000"/>
+    </flashChips>
+
+    <!-- non-flash chips must be defined using LSL -->
+    <lsl>
+	memory xrom_a
+	{
+		mau = 8;
+		size = 4M;
+		type = rom;
+		map (dest=bus:spe:fpi_bus, dest_offset=0xa1000000, size=4M);
+	}
+	memory xram_a
+	{
+		mau = 8;
+		size = 1M;
+		type = ram;
+		map (dest=bus:spe:fpi_bus, dest_offset=0xa8000000, size=1M);
+	}
+    </lsl>
+
+</debugTarget> 
+

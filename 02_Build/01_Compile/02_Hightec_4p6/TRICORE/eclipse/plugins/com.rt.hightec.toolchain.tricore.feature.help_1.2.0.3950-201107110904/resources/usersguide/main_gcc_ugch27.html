@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>27 TriCore Header</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugpa6.html" >next</a>] [<a 
+href="main_gcc_ugse76.html" >prev</a>] [<a 
+href="main_gcc_ugse76.html#tailmain_gcc_ugse76.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch27.html">tail</a>] [<a 
+href="main_gcc_ugpa5.html#main_gcc_ugch27.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">27</span>  <a 
+href="main_gcc_ug.html#QQ2-112-279" name="x112-27000027">TriCore Header</a></h2>
+<!--l. 3--><p class="noindent" >The TriCore header files are generated using the descriptions from the Infineon’s Dave
+description of TriCore. In the headerfiles the hardware description for the derivatives is
+available. The docu of TriCore headers is in the <span 
+class="cmtt-12">html </span>directory of your installation
+path.
+</p><!--l. 5--><p class="noindent" >If you open the file e.g. <span 
+class="cmtt-12">html/</span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">derivative</span><span 
+class="cmmi-12">&#x003E;</span><span 
+class="cmtt-12">/index.html </span>(see option <span 
+class="cmtt-12">-mcpu=</span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">derivative</span><span 
+class="cmmi-12">&#x003E;</span>)
+you find the docu of the generated header files.
+</p><!--l. 7--><p class="noindent" >You find the structs of the function units e.g. TC1130 Step A in the following directory relative
+to your installation path.
+</p>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug36x.png" alt=""  /></div>
+<!--l. 21--><p class="noindent" >If you select for example P0 in the HTML-file, you will be redirected to the port P0 description.
+The special function register are listed with the following information.
+</p>
+      <ul class="itemize1">
+      <li class="itemize">Register Name
+      </li>
+      <li class="itemize">Description
+      </li>
+      <li class="itemize">Address
+      </li>
+      <li class="itemize">Type
+      </li>
+      <li class="itemize">Reset
+      </li>
+      <li class="itemize">Access (read)
+      </li>
+      <li class="itemize">Access (write)</li></ul>
+                                                                                       
+                                                                                       
+<!--l. 33--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 35--><p class="noindent" >Select for example the special function register <span class="lstinline"><span 
+class="ecss-1200">P0_OUT</span></span>. The read and write access is enabled
+in user mode (U) and supervisor mode (SV). The <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> of the <span class="lstinline"><span 
+class="ecss-1200">P0_OUT</span></span> is defined in
+<span class="lstinline"><span 
+class="ecss-1200">Pn_OUT_t</span></span>. In this <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> all port pins are accessable as bitfield by the name of the port
+pin.
+</p>
+<div class="fancyvrb" id="fancyvrb324"><a 
+ name="x112-270002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> P0:1;</span><br class="fancyvrb" /><a 
+ name="x112-270004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> P1:1;</span><br class="fancyvrb" /><a 
+ name="x112-270006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+<!--l. 43--><p class="noindent" >E.g. you get access to pin 0 of port 0 and set it in your source by:
+</p>
+<div class="fancyvrb" id="fancyvrb325"><a 
+ name="x112-270008r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> P0_OUT.bits.P0</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span></div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugpa6.html" >next</a>] [<a 
+href="main_gcc_ugse76.html" >prev</a>] [<a 
+href="main_gcc_ugse76.html#tailmain_gcc_ugse76.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch27.html" >front</a>] [<a 
+href="main_gcc_ugpa5.html#main_gcc_ugch27.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch27.html"></a> </p> 
+</body></html> 

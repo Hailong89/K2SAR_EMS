@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Indirect Addressing by longcall</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse30.html" >next</a>] [<a 
+href="main_gcc_ugse28.html" >prev</a>] [<a 
+href="main_gcc_ugse28.html#tailmain_gcc_ugse28.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse29.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse29.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.9</span>  <a 
+href="main_gcc_ug.html#QQ2-47-73" id="x47-6800014.9">Indirect Addressing by longcall</a></h3>
+                                                                                       
+                                                                                       
+<a 
+ id="dx47-68001"></a>
+<!--l. 3--><p class="noindent" >Because of the memory mapping of the TC1796 with internal RAM located at <span class="lstinline"><span 
+class="ecss-1200">0</span><span 
+class="ecss-1200">xD4000000</span></span>, all
+calls from external memory to internal RAM must be done via indirect addressing. The internal
+RAM is significantly faster in execution time, so it is advisable to map functions which are very
+often used to the internal RAM. Especially the runtime of operating system functions, which
+are called frequently, can be improved by factors.
+</p><!--l. 5--><p class="noindent" >The linker supports mapping of code to internal RAM with the option <span 
+class="cmtt-12">--relax-24rel</span>.
+This is realised by having calls to a jump table and from there to the function with
+indirect addressing. This method is not very efficient in terms of runtime and memory
+consumption.
+</p><!--l. 7--><p class="noindent" >A better method is to select functions, which are called via indirect addressing, by
+an additional attribute. Because the operating system is supplied as a library, it
+is required that the addressing mode is selected at the compiler stage already. At
+the linker stage it is not possible to change the code to indirect addressing, because
+indirect addressing takes more space in the object code than absolute or relative
+addressing.
+</p><!--l. 10--><p class="noindent" >With the function attribute <span class="lstinline"><span 
+class="ecss-1200">longcall</span></span>, arbitrary functions can be called by <span class="lstinline"><span 
+class="ecss-1200">calli</span></span>. The code and the
+execution time is thus reduced.
+</p><!--l. 12--><p class="noindent" >This mechanism is available for all types of functions and should be applied to all functions that
+are not accessible by a normal <span class="lstinline"><span 
+class="ecss-1200">call</span></span> (e.g. internal RAM).
+</p>
+<div class="center" 
+>
+<!--l. 14--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox49"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If a function is declared with the attribute <span class="lstinline"><span 
+class="ecss-1200">longcall</span></span> the function will
+be referenced by a <span class="lstinline"><span 
+class="ecss-1200">calli</span></span> instead of <span class="lstinline"><span 
+class="ecss-1200">call</span></span> instruction.                   </div>
+</div>
+<!--l. 17--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb127"><a 
+ id="x47-68003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> func02</span><span 
+class="pcrr7t-x-x-144"> (void)__attribute__((longcall));</span>
+<br class="fancyvrb" /><a 
+ id="x47-68005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x47-68007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> func01</span><span 
+class="pcrr7t-x-x-144"> (void)__attribute__((longcall));</span><br class="fancyvrb" /><a 
+ id="x47-68009r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x47-68011r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> func01</span><span 
+class="pcrr7t-x-x-144"> ()</span><br class="fancyvrb" /><a 
+ id="x47-68013r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x47-68015r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;do</span><span 
+class="pcrr7t-x-x-144"> something</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/;</span><br class="fancyvrb" /><a 
+ id="x47-68017r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse30.html" >next</a>] [<a 
+href="main_gcc_ugse28.html" >prev</a>] [<a 
+href="main_gcc_ugse28.html#tailmain_gcc_ugse28.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse29.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse29.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse29.html"></a> </p> 
+</body></html> 

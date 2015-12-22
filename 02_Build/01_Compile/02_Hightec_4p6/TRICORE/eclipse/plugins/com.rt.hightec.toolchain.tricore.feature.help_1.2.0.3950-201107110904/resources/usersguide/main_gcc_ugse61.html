@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Using tricore-gcov with tricore-gcc optimization</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 140--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse62.html" >next</a>] [<a 
+href="main_gcc_ugse60.html" >prev</a>] [<a 
+href="main_gcc_ugse60.html#tailmain_gcc_ugse60.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse61.html">tail</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse61.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">22.3</span>  <a 
+href="main_gcc_ug.html#QQ2-91-256" id="x91-24700022.3">Using tricore-gcov with tricore-gcc optimization</a></h3>
+<!--l. 142--><p class="noindent" >If you plan to use <span 
+class="cmtt-12">tricore-gcov</span> to help optimize your code, you must first compile your
+program with two special <span 
+class="cmtt-12">tricore-gcc</span> options <span 
+class="cmtt-12">-fprofile-arcs -ftest-coverage</span>.
+Aside from that, you can use any other <span 
+class="cmtt-12">tricore-gcc</span> options; but if you want to
+prove that every single line in your program was executed, you should not compile
+with optimization at the same time. On some machines the optimizer can eliminate
+some simple code lines by combining them with other lines. For example, code like
+this:
+</p><!--l. 144--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb315"><a 
+ id="x91-247002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (a</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> b)</span><br class="fancyvrb" /><a 
+ id="x91-247004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span><br class="fancyvrb" /><a 
+ id="x91-247006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x91-247008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span></div>
+<!--l. 151--><p class="noindent" >can be compiled into one instruction on some machines. In this case, there is no way for
+<span 
+class="cmtt-12">tricore-gcov</span> to calculate separate execution counts for each line because there isn’t separate
+code for each line. Hence the <span 
+class="cmtt-12">tricore-gcov</span> output looks like this if you compiled the program
+with optimization:
+</p><!--l. 153--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb316"><a 
+ id="x91-247010r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 100</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> if</span><span 
+class="pcrr7t-x-x-144"> (a</span><span 
+class="pcrr7t-x-x-144"> !=</span><span 
+class="pcrr7t-x-x-144"> b)</span><br class="fancyvrb" /><a 
+ id="x91-247012r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 100</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1;</span>
+<br class="fancyvrb" /><a 
+ id="x91-247014r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 100</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> else</span><br class="fancyvrb" /><a 
+ id="x91-247016r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> 100</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> c</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span></div>
+<!--l. 160--><p class="noindent" >The output shows that this block of code, combined by optimization, executed 100 times. In one
+sense this result is correct, because there was only one instruction representing all four of these
+lines. However, the output does not indicate how many times the result was 0 and how many
+times the result was 1.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 162--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse62.html" >next</a>] [<a 
+href="main_gcc_ugse60.html" >prev</a>] [<a 
+href="main_gcc_ugse60.html#tailmain_gcc_ugse60.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse61.html" >front</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse61.html" >up</a>] </p></div>
+<!--l. 162--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse61.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,102 @@
+<!-- @(#)infineon_triboard_tc11ib.dtc	1.26 13/04/03 -->
+<!-- Debug Target Configuration for the Infineon TriBoard TC11IB -->
+
+<debugTarget
+    xmlns="http://com.tasking.dtc/dtc.xsd/1.0"
+    name="Infineon TriBoard TC11IB"
+    manufacturer="Infineon">
+
+    <processor id="tc11ib"/>
+
+    <!-- Define all common parts -->
+    <def id="96Mhz">
+	<initialize resourceId="init"	name="EBU_CON"      value="0x00F9FF68" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL0" value="0xA4000051" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON0"  value="0x00860000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP0"   value="0x23ff0100" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL1" value="0xA0000833" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON1"  value="0x30B20000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP1"   value="0x22070000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL2" value="0xA1000833" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON2"  value="0x30B20000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP2"   value="0x22070000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL3" value="0x00000000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL4" value="0x00000000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL5" value="0x00000000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL6" value="0x00000000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BFCON"    value="0x00000053" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_SDRMCON0" value="0x01161075" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_SDRMOD0"  value="0x00000023" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_SDRMREF0" value="0x000000d7" cstart="true"/>
+	<initialize resourceId="init"	name="MCDBBS"       value="0xFF080003" cstart="true"/>
+	<initialize resourceId="noinit"	name="PLL_CLC"	    value="0x200"      cstart="true"/>
+	<initialize resourceId="noinit"	name="Initialize clocks per sec" value="1" 	  cstart="true"/>
+	<initialize resourceId="noinit"	name="Oscillator frequency Hz"	 value="12000000" cstart="true"/>
+	<flashMonitor monitor="ftc11ib.sre" workspaceAddress="0xd0000400" flashSectorBufferSize="2048"/>
+    </def>
+
+    <!-- define all communication methods -->
+    <communicationMethod name="Universal Debug Access Server" debugInstrument="gdi2das" gdiMethod="tcpip">
+        <!-- DAS Resources:
+            DASserver:      the name (not the filename) of used DAS server (must be run and/or installed on the connected host
+            AccessPort:         the connection to the device e.g. for LPT server JTAGx means access via LPTx and the JTAG of device
+                            for USB server USBx means access via x and the USB of device
+            Addressdefinition:  the used register for registermap 
+            TerminateServer:    value != 0 means if a server is started by the debug instrument, then this server is terminated on exit
+            DasTimeOut:     xxx means max. timeout for client/server socket connection (ms)
+        -->
+        <resource id="DASserver" value="UDAS"/>
+        <resource id="AccessPort" value="JTAG0"/>
+        <resource id="RegisterFile" value="regbase_f7e1.dat"/>
+        <resource id="TerminateServer" value="1"/>
+        <resource id="DasTimeOut" value="0x4000"/>
+    </communicationMethod>
+
+    <configuration name="fCPU=96Mhz, PLL normal mode">
+        <ref id="96Mhz"/>
+    </configuration>
+
+    <!-- define all external on board flash chips -->
+    <flashChips>
+        <chip vendor="AMD" chip="AM29BL162C" width="16" chips="2" baseAddress="0xa4000000" chipSize="0x200000"/>
+    </flashChips>
+
+    <!-- non-flash chips must be defined using LSL -->
+    <lsl>
+	memory xrom_8_a
+	{
+		mau = 8;
+		size = 512k;
+		type = rom;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x80000000,           size=512k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa0000000, reserved, size=512k);
+	}
+	memory xram_8_a
+	{
+		mau = 8;
+		size =448k;
+		type = ram;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x80080000,           size=448k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa0080000, reserved, size=448k);
+	}
+	memory xrom2_8_a
+	{
+		mau = 8;
+		size = 9k;
+		type = rom;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x800f0000,           size=9k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa00f0000, reserved, size=9k);
+	}
+
+	memory xram2_8_a
+	{
+		mau = 8;
+		size = 31799k;
+		type = ram;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x800f2400,           size=31799k);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa00f2400, reserved, size=31799k);
+	}
+    </lsl>
+
+</debugTarget> 
+

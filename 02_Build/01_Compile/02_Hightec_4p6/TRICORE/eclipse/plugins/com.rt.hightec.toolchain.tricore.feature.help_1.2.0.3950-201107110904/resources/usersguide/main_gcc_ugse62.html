@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Brief description of tricore-gcov data files</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 162--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch23.html" >next</a>] [<a 
+href="main_gcc_ugse61.html" >prev</a>] [<a 
+href="main_gcc_ugse61.html#tailmain_gcc_ugse61.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse62.html">tail</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse62.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">22.4</span>  <a 
+href="main_gcc_ug.html#QQ2-92-257" id="x92-24800022.4">Brief description of tricore-gcov data files</a></h3>
+<!--l. 164--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcov</span> uses three files for doing profiling. The names of these files are derived from the
+original <span 
+class="cmti-12">source </span>file by substituting the file suffix with either <span 
+class="cmtt-12">.bb</span>, <span 
+class="cmtt-12">.bbg</span>, or <span 
+class="cmtt-12">.da</span>. All of these
+files are placed in the same directory as the source file, and contain data stored in a
+platform-independent method.
+</p><!--l. 166--><p class="noindent" >The <span 
+class="cmtt-12">.bb </span>and <span 
+class="cmtt-12">.bbg </span>files are generated when the source file is compiled with the option
+<span 
+class="cmtt-12">-ftest-coverage</span> of <span 
+class="cmtt-12">tricore-gcc</span>. The <span 
+class="cmtt-12">.bb </span>file contains a list of source files (including
+headers), functions within those files, and line numbers corresponding to each basic block in the
+source file.
+</p><!--l. 168--><p class="noindent" >The <span 
+class="cmtt-12">.bb </span>file format consists of several lists of 4-byte integers which correspond to the line
+numbers of each basic block in the file. Each list is terminated by a line number of 0. A line
+number of <span 
+class="cmsy-10x-x-120">-</span>1 is used to designate that the source file name (padded to a 4-byte boundary and
+followed by another <span 
+class="cmsy-10x-x-120">-</span>1) follows. In addition, a line number of <span 
+class="cmsy-10x-x-120">-</span>2 is used to designate that
+the name of a function (also padded to a 4-byte boundary and followed by a <span 
+class="cmsy-10x-x-120">-</span>2)
+follows.
+</p><!--l. 172--><p class="noindent" >The <span 
+class="cmtt-12">.bbg </span>file is used to reconstruct the program flow graph for the source file. It contains a list
+of the program flow arcs (possible branches taken from one basic block to another) for each
+function which, in combination with the <span 
+class="cmtt-12">.bb </span>file, enables <span 
+class="cmtt-12">tricore-gcov</span> to reconstruct the
+program flow.
+</p><!--l. 174--><p class="noindent" >In the <span 
+class="cmtt-12">.bbg </span>file, the format is:
+</p><!--l. 176--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb317"><a 
+ id="x92-248002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> number</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> basic</span><span 
+class="pcrr7t-x-x-144"> blocks</span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> function</span><span 
+class="pcrr7t-x-x-144"> #0</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> total</span><span 
+class="pcrr7t-x-x-144"> number</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> arcs</span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> function</span><span 
+class="pcrr7t-x-x-144"> #0</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> count</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> arcs</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> basic</span><span 
+class="pcrr7t-x-x-144"> block</span><span 
+class="pcrr7t-x-x-144"> #0</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> destination</span><span 
+class="pcrr7t-x-x-144"> basic</span><span 
+class="pcrr7t-x-x-144"> block</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> arc</span><span 
+class="pcrr7t-x-x-144"> #0</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> flag</span><span 
+class="pcrr7t-x-x-144"> bits</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> destination</span><span 
+class="pcrr7t-x-x-144"> basic</span><span 
+class="pcrr7t-x-x-144"> block</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> arc</span><span 
+class="pcrr7t-x-x-144"> #1</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> flag</span><span 
+class="pcrr7t-x-x-144"> bits</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span><br class="fancyvrb" /><a 
+ id="x92-248016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span>
+<br class="fancyvrb" /><a 
+ id="x92-248018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> destination</span><span 
+class="pcrr7t-x-x-144"> basic</span><span 
+class="pcrr7t-x-x-144"> block</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> arc</span><span 
+class="pcrr7t-x-x-144"> #N</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x92-248020r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> flag</span><span 
+class="pcrr7t-x-x-144"> bits</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248022r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> count</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> arcs</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> basic</span><span 
+class="pcrr7t-x-x-144"> block</span><span 
+class="pcrr7t-x-x-144"> #1</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248024r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> destination</span><span 
+class="pcrr7t-x-x-144"> basic</span><span 
+class="pcrr7t-x-x-144"> block</span><span 
+class="pcrr7t-x-x-144"> of</span><span 
+class="pcrr7t-x-x-144"> arc</span><span 
+class="pcrr7t-x-x-144"> #0</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span>
+<br class="fancyvrb" /><a 
+ id="x92-248026r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> flag</span><span 
+class="pcrr7t-x-x-144"> bits</span><span 
+class="pcrr7t-x-x-144"> (4-byte</span><span 
+class="pcrr7t-x-x-144"> number)</span><br class="fancyvrb" /><a 
+ id="x92-248028r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+<!--l. 193--><p class="noindent" >A <span 
+class="cmsy-10x-x-120">-</span>1 (stored as a 4-byte number) is used to separate each function’s list of basic blocks, and to
+verify that the file has been read correctly.
+</p><!--l. 195--><p class="noindent" >The <span 
+class="cmtt-12">.da </span>file is generated when a program containing object files built with the option
+<span 
+class="cmtt-12">-fprofile-arcs</span> of <span 
+class="cmtt-12">tricore-gcc</span>. A separate <span 
+class="cmtt-12">.da </span>file is created for each source file compiled
+with this option, and the name of the <span 
+class="cmtt-12">.da </span>file is stored as an absolute pathname in the resulting
+object file. This path name is derived from the source file name by substituting a <span 
+class="cmtt-12">.da</span>
+suffix.
+</p><!--l. 197--><p class="noindent" >The format of the <span 
+class="cmtt-12">.da </span>file is fairly simple. The first 8-byte number is the number of counts in
+the file, followed by the counts (stored as 8-byte numbers). Each count corresponds to the
+number of times each arc in the program is executed. The counts are cumulative; each time the
+program is executed, it attempts to combine the existing <span 
+class="cmtt-12">.da </span>files with the new counts
+for this invocation of the program. It ignores the contents of any <span 
+class="cmtt-12">.da </span>files whose
+number of arcs doesn’t correspond to the current program, and merely overwrites them
+instead.
+</p><!--l. 200--><p class="noindent" >All three of these files use the functions in <span 
+class="cmtt-12">gcov-io.h </span>to store integers; the functions in this
+header provide a machine-independent mechanism for storing and retrieving data from a
+stream.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch23.html" >next</a>] [<a 
+href="main_gcc_ugse61.html" >prev</a>] [<a 
+href="main_gcc_ugse61.html#tailmain_gcc_ugse61.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse62.html" >front</a>] [<a 
+href="main_gcc_ugch22.html#main_gcc_ugse62.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse62.html"></a> </p> 
+</body></html> 

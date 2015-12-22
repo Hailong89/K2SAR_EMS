@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Functions in libos.a</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 17--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse72.html" >next</a>] [<a 
+href="main_gcc_ugse70.html" >prev</a>] [<a 
+href="main_gcc_ugse70.html#tailmain_gcc_ugse70.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse71.html">tail</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse71.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">26.3</span>  <a 
+href="main_gcc_ug.html#QQ2-106-271" name="x106-26200026.3">Functions in libos.a</a></h3>
+<a 
+ id="dx106-262001"></a>
+<!--l. 19--><p class="noindent" >Interrupt interface in the module cint.c/cint.h. Functions to lock/unlock access to protected
+SFRs in wdtcon.c/wdtcon.h
+</p><!--l. 21--><p class="noindent" >Functions for the I/O-simulation in connection with a debugger GDB. All I/O-calls like open,
+read, write, close, create, unlink, lseek will generate a break condition which can be evaluated
+by the GDB to perform the I/O call for the target application.
+</p><!--l. 23--><p class="noindent" >The module <span 
+class="cmtt-12">libos.c </span>contains some useful routines
+</p><!--l. 25--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">abort, exit</span></span>      </dt><dd 
+class="list">
+                  <!--l. 26--><p class="noindent" >Generate a debug trap.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">sbrk</span></span>              </dt><dd 
+class="list">
+                  <!--l. 27--><p class="noindent" >Allocate memory from the HEAP.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">fork, wait, fstat</span></span> </dt><dd 
+class="list">
+                  <!--l. 28--><p class="noindent" >Standard system calls.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">stat</span></span>              </dt><dd 
+class="list">
+                  <!--l. 29--><p class="noindent" >Calling abort.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">times, usec</span></span>      </dt><dd 
+class="list">
+                  <!--l. 30--><p class="noindent" >Returns the contents of the system timer.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 33--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse72.html" >next</a>] [<a 
+href="main_gcc_ugse70.html" >prev</a>] [<a 
+href="main_gcc_ugse70.html#tailmain_gcc_ugse70.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse71.html" >front</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse71.html" >up</a>] </p></div>
+<!--l. 33--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse71.html"></a> </p> 
+</body></html> 

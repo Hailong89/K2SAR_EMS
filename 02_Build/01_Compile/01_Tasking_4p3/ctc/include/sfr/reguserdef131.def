@@ -1,0 +1,31 @@
+;***************************************************************************
+;**
+;** Version: @(#)reguserdef131.xml	1.4 09/08/26
+;** Generated from @(#)reguserdef131.xml	1.4 09/08/26
+;** 
+;** This file contains all SFR and BIT names and on-chip register definitions
+;** 
+;** Copyright 2002-2014 Altium BV
+;**
+;***************************************************************************
+	.if	!@DEF('_REGUSERDEF131_DEF')
+	.define	_REGUSERDEF131_DEF '1'
+; Macros, such as PCXI, that expand to a 16-bit number do not directly represent a memory address.
+; They are intended to be used with the instructions mfcr and mtcr.
+core_base      	.equ	0xf7e1    	; The base address off the memory for the CSFR's
+PCXI           	.equ	0xfe00    	; Previous Context Info Register
+PSW            	.equ	0xfe04    	; Program Status Word
+PC             	.equ	0xfe08    	; Program Counter
+BIV            	.equ	0xfe20    	; Interrupt Vector Table
+BTV            	.equ	0xfe24    	; Trap Vector Table Pointer
+ISP            	.equ	0xfe28    	; Interrupt Stack Pointer
+FCX            	.equ	0xfe38    	; Free CSA List Head Pointer
+LCX            	.equ	0xfe3c    	; Free CSA List Limit Pointer
+ICR            	.equ	0xfe2c    	; Interrupt Control Register 
+WDT_CON0       	.equ	0xf00005f0	; WDT Control Register 0 
+WDT_CON1       	.equ	0xf00005f4	; WDT Control Register 1 
+STM_TIM0       	.equ	0xf0000210	; STM Timer Register 0 
+STM_CAP        	.equ	0xf000022c	; STM Timer Capture Register 
+LFI_CON        	.equ	0xf87fff10	; LFI Configuration Register 
+EBU_EXTBOOT    	.equ	0xf8000010	; EBU External Boot Configuration Register 
+	.endif ; !@DEF('_REGUSERDEF131_DEF')

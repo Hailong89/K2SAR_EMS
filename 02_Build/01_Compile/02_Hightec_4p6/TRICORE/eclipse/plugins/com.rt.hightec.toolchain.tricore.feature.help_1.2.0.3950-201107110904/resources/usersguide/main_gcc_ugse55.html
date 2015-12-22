@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-readelf</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 748--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse56.html" >next</a>] [<a 
+href="main_gcc_ugse54.html" >prev</a>] [<a 
+href="main_gcc_ugse54.html#tailmain_gcc_ugse54.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse55.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse55.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.8</span>  <a 
+href="main_gcc_ug.html#QQ2-84-237" id="x84-22800021.8">tricore-readelf</a></h3>
+<a 
+ id="dx84-228001"></a>
+<a 
+ id="dx84-228002"></a>
+<!--l. 750--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.8.1</span>  <a 
+href="#x84-22900021.8.1" id="x84-22900021.8.1">Description</a></h4>
+<!--l. 752--><p class="noindent" ><span 
+class="cmtt-12">tricore-readelf</span> <span 
+class="cmtt-12">[options] </span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">elffile</span><span 
+class="cmmi-12">&#x003E; </span><span 
+class="cmtt-12">†</span>
+</p><!--l. 754--><p class="noindent" ><span 
+class="cmtt-12">tricore-readelf</span> displays information about one or more ELF format object files. The options
+control what particular information to display.
+</p><!--l. 756--><p class="noindent" ><span 
+class="cmmi-12">&#x003C;</span>elffile<span 
+class="cmmi-12">&#x003E; </span>†are the object files to be examined. </p>
+<div class="center" 
+>
+<!--l. 757--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox126"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />At  the  moment,  <span 
+class="cmtt-12">tricore-readelf</span> does  not  support  examining
+archives, nor does it support examining 64 bit ELF files.            </div>
+</div>
+<!--l. 759--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.8.2</span>  <a 
+href="#x84-23000021.8.2" id="x84-23000021.8.2">Invocation</a></h4>
+<!--l. 761--><p class="noindent" >
+                                                                                       
+                                                                                       
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">--debug-dump[=line,=info,=abbrev,=pubnames,=ranges,=macro,=frames,=str,=loc]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 764--><p class="noindent" >Same as <span 
+class="cmtt-12">-w</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-a --all</span>         </dt><dd 
+class="list">
+                  <!--l. 766--><p class="noindent" >Equivalent              to              specifying              <span 
+class="cmtt-12">--file-header</span>,
+                  <span 
+class="cmtt-12">--program-headers</span>, <span 
+class="cmtt-12">--sections</span>, <span 
+class="cmtt-12">--symbols</span>, <span 
+class="cmtt-12">--relocs</span>, <span 
+class="cmtt-12">--dynamic</span>,
+                  <span 
+class="cmtt-12">--notes</span> and <span 
+class="cmtt-12">--version-info</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-A --arch-specific</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 768--><p class="noindent" >Display architecture specific information (if any).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-d --dynamic</span>    </dt><dd 
+class="list">
+                  <!--l. 770--><p class="noindent" ><a 
+ id="dx84-230001"></a> Displays the contents of the file’s dynamic section, if it has one.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-D --use-dynamic</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 772--><p class="noindent" >When displaying symbols, this option makes <span 
+class="cmtt-12">tricore-readelf</span> use the
+                  symbol table in the file’s dynamic section, rather than the one in the
+                  symbols section.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-e --headers</span>    </dt><dd 
+class="list">
+                  <!--l. 774--><p class="noindent" >Display all the headers in the file. Equivalent to <span 
+class="cmtt-12">-h -l -S</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h --file-header</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 776--><p class="noindent" ><a 
+ id="dx84-230002"></a> Displays the information contained in the ELF header at the start of
+                  the file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-H --help</span>        </dt><dd 
+class="list">
+                  <!--l. 778--><p class="noindent" >Display the command line options understood by <span 
+class="cmtt-12">tricore-readelf</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-I --histogram</span>  </dt><dd 
+class="list">
+                  <!--l. 780--><p class="noindent" >Display a histogram of bucket list lengths when displaying the contents
+                  of the symbol tables.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-l --program-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 782--><p class="noindent" >Display the program headers
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-n --notes</span>       </dt><dd 
+class="list">
+                  <!--l. 784--><p class="noindent" ><a 
+ id="dx84-230003"></a> Displays the contents of the notes segment, if it exists.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-r --relocs</span>      </dt><dd 
+class="list">
+                  <!--l. 786--><p class="noindent" ><a 
+ id="dx84-230004"></a> Displays the contents of the file’s relocation section, if it has one.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-S --section-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 788--><p class="noindent" >Display the sections’ header
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-s --syms</span>        </dt><dd 
+class="list">
+                  <!--l. 790--><p class="noindent" ><a 
+ id="dx84-230005"></a> Displays the entries in symbol table section of the file, if it has one.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--sections</span>       </dt><dd 
+class="list">
+                  <!--l. 792--><p class="noindent" ><a 
+ id="dx84-230006"></a> An alias for <span 
+class="cmtt-12">--section-headers</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--segments</span>       </dt><dd 
+class="list">
+                  <!--l. 794--><p class="noindent" ><a 
+ id="dx84-230007"></a> <a 
+ id="dx84-230008"></a>An alias for <span 
+class="cmtt-12">--program-headers</span>. Displays the information contained
+                  in the file’s segment headers, if it has any.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--symbols</span>        </dt><dd 
+class="list">
+                  <!--l. 796--><p class="noindent" >An alias for <span 
+class="cmtt-12">--syms</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v --version</span>    </dt><dd 
+class="list">
+                  <!--l. 802--><p class="noindent" >Display the version number of <span 
+class="cmtt-12">tricore-readelf</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-V --version-info</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 804--><p class="noindent" ><a 
+ id="dx84-230009"></a> Displays the contents of the version sections in the file, it they
+                  exist.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-w[liaprmfFso]</span>  </dt><dd 
+class="list">
+                  <!--l. 806--><p class="noindent" >Displays the contents of the debug sections in the file, if any are present. If
+                  one of the optional letters or words follows the switch then only data found
+                  in those specific sections will be dumped.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-W --wide</span>        </dt><dd 
+class="list">
+                  <!--l. 808--><p class="noindent" >Allow output width to exceed 80 characters.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-x &#x003C;section&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 810--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--hex-dump=&#x003C;section&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 811--><p class="noindent" >Displays the contents of the indicated <span 
+class="cmmi-12">&#x003C;</span>section<span 
+class="cmmi-12">&#x003E; </span>as a hexadecimal
+                  dump.</p></dd></dl>
+<!--l. 814--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.8.3</span>  <a 
+href="#x84-23100021.8.3" id="x84-23100021.8.3">Example</a></h4>
+<!--l. 816--><p class="noindent" >To view the symbol table of an object use the option <span 
+class="cmtt-12">-s</span>:
+</p><!--l. 818--><p class="noindent" ><span 
+class="cmtt-12">tricore-readelf</span> <span 
+class="cmtt-12">-s main.o</span>
+</p><!--l. 820--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb307"><a 
+ id="x84-231002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Symbol</span><span 
+class="pcrr7t-"> table</span><span 
+class="pcrr7t-"> '.symtab'</span><span 
+class="pcrr7t-"> contains</span><span 
+class="pcrr7t-"> 16</span><span 
+class="pcrr7t-"> entries:</span><br class="fancyvrb" /><a 
+ id="x84-231004r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Num:</span><span 
+class="pcrr7t-"> Value</span><span 
+class="pcrr7t-"> Size</span><span 
+class="pcrr7t-"> Type</span><span 
+class="pcrr7t-"> Bind</span><span 
+class="pcrr7t-"> Vis</span><span 
+class="pcrr7t-"> Ndx</span><span 
+class="pcrr7t-"> Name</span>
+<br class="fancyvrb" /><a 
+ id="x84-231006r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 0:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> NOTYPE</span><span 
+class="pcrr7t-"> LOCAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> UND</span><br class="fancyvrb" /><a 
+ id="x84-231008r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 1:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> FILE</span><span 
+class="pcrr7t-"> LOCAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> ABS</span><span 
+class="pcrr7t-"> main.c</span>
+<br class="fancyvrb" /><a 
+ id="x84-231010r5"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 2:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> SECTION</span><span 
+class="pcrr7t-"> LOCAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> 1</span><br class="fancyvrb" /><a 
+ id="x84-231012r6"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 3:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> SECTION</span><span 
+class="pcrr7t-"> LOCAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> 3</span>
+<br class="fancyvrb" /><a 
+ id="x84-231014r7"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 4:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> SECTION</span><span 
+class="pcrr7t-"> LOCAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> 4</span><br class="fancyvrb" /><a 
+ id="x84-231016r8"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 5:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> SECTION</span><span 
+class="pcrr7t-"> LOCAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> 5</span>
+<br class="fancyvrb" /><a 
+ id="x84-231018r9"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 6:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 112</span><span 
+class="pcrr7t-"> FUNC</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> 1</span><span 
+class="pcrr7t-"> main</span><br class="fancyvrb" /><a 
+ id="x84-231020r10"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 7:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> NOTYPE</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> UND</span><span 
+class="pcrr7t-"> __main</span>
+<br class="fancyvrb" /><a 
+ id="x84-231022r11"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 8:</span><span 
+class="pcrr7t-"> 00000004</span><span 
+class="pcrr7t-"> 4</span><span 
+class="pcrr7t-"> OBJECT</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> COM</span><span 
+class="pcrr7t-"> foo</span><br class="fancyvrb" /><a 
+ id="x84-231024r12"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 9:</span><span 
+class="pcrr7t-"> 00000001</span><span 
+class="pcrr7t-"> 65535</span><span 
+class="pcrr7t-"> OBJECT</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> COM</span><span 
+class="pcrr7t-"> foo1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231026r13"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 10:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> NOTYPE</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> UND</span><span 
+class="pcrr7t-"> read</span><br class="fancyvrb" /><a 
+ id="x84-231028r14"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 11:</span><span 
+class="pcrr7t-"> 00000001</span><span 
+class="pcrr7t-"> 65535</span><span 
+class="pcrr7t-"> OBJECT</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> COM</span><span 
+class="pcrr7t-"> foo2</span>
+<br class="fancyvrb" /><a 
+ id="x84-231030r15"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 12:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> NOTYPE</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> UND</span><span 
+class="pcrr7t-"> unlink</span><br class="fancyvrb" /><a 
+ id="x84-231032r16"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 13:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> NOTYPE</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> UND</span><span 
+class="pcrr7t-"> write</span>
+<br class="fancyvrb" /><a 
+ id="x84-231034r17"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 14:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> NOTYPE</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> UND</span><span 
+class="pcrr7t-"> close</span><br class="fancyvrb" /><a 
+ id="x84-231036r18"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 15:</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> NOTYPE</span><span 
+class="pcrr7t-"> GLOBAL</span><span 
+class="pcrr7t-"> DEFAULT</span><span 
+class="pcrr7t-"> UND</span><span 
+class="pcrr7t-"> printf</span></div>
+<!--l. 841--><p class="noindent" >To output the sections of an object or an executable plus some information on the file use the
+option <span 
+class="cmtt-12">-e</span>:
+</p><!--l. 843--><p class="noindent" ><span 
+class="cmtt-12">tricore-readelf</span> <span 
+class="cmtt-12">-e main</span>
+</p><!--l. 845--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div class="fancyvrb" id="fancyvrb308"><a 
+ id="x84-231038r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> ELF</span><span 
+class="pcrr7t-"> Header:</span><br class="fancyvrb" /><a 
+ id="x84-231040r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Magic:</span><span 
+class="pcrr7t-"> 7f</span><span 
+class="pcrr7t-"> 45</span><span 
+class="pcrr7t-"> 4c</span><span 
+class="pcrr7t-"> 46</span><span 
+class="pcrr7t-"> 01</span><span 
+class="pcrr7t-"> 01</span><span 
+class="pcrr7t-"> 01</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 00</span><br class="fancyvrb" /><a 
+ id="x84-231042r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Class:</span><span 
+class="pcrr7t-"> ELF32</span>
+<br class="fancyvrb" /><a 
+ id="x84-231044r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Data:</span><span 
+class="pcrr7t-"> 2's</span><span 
+class="pcrr7t-"> complement,</span><span 
+class="pcrr7t-"> little</span><span 
+class="pcrr7t-"> endian</span><br class="fancyvrb" /><a 
+ id="x84-231046r5"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Version:</span><span 
+class="pcrr7t-"> 1</span><span 
+class="pcrr7t-"> (current)</span><br class="fancyvrb" /><a 
+ id="x84-231048r6"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> OS/ABI:</span><span 
+class="pcrr7t-"> UNIX</span><span 
+class="pcrr7t-"> -</span><span 
+class="pcrr7t-"> System</span><span 
+class="pcrr7t-"> V</span>
+<br class="fancyvrb" /><a 
+ id="x84-231050r7"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> ABI</span><span 
+class="pcrr7t-"> Version:</span><span 
+class="pcrr7t-"> 0</span><br class="fancyvrb" /><a 
+ id="x84-231052r8"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Type:</span><span 
+class="pcrr7t-"> EXEC</span><span 
+class="pcrr7t-"> (Executable</span><span 
+class="pcrr7t-"> file)</span><br class="fancyvrb" /><a 
+ id="x84-231054r9"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Machine:</span><span 
+class="pcrr7t-"> Siemens</span><span 
+class="pcrr7t-"> Tricore</span><br class="fancyvrb" /><a 
+ id="x84-231056r10"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Version:</span><span 
+class="pcrr7t-"> 0x1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231058r11"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Entry</span><span 
+class="pcrr7t-"> point</span><span 
+class="pcrr7t-"> address:</span><span 
+class="pcrr7t-"> 0xa0000000</span><br class="fancyvrb" /><a 
+ id="x84-231060r12"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Start</span><span 
+class="pcrr7t-"> of</span><span 
+class="pcrr7t-"> program</span><span 
+class="pcrr7t-"> headers:</span><span 
+class="pcrr7t-"> 52</span><span 
+class="pcrr7t-"> (bytes</span><span 
+class="pcrr7t-"> into</span><span 
+class="pcrr7t-"> file)</span>
+<br class="fancyvrb" /><a 
+ id="x84-231062r13"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Start</span><span 
+class="pcrr7t-"> of</span><span 
+class="pcrr7t-"> section</span><span 
+class="pcrr7t-"> headers:</span><span 
+class="pcrr7t-"> 67476</span><span 
+class="pcrr7t-"> (bytes</span><span 
+class="pcrr7t-"> into</span><span 
+class="pcrr7t-"> file)</span><br class="fancyvrb" /><a 
+ id="x84-231064r14"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Flags:</span><span 
+class="pcrr7t-"> 0x2</span>
+<br class="fancyvrb" /><a 
+ id="x84-231066r15"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Size</span><span 
+class="pcrr7t-"> of</span><span 
+class="pcrr7t-"> this</span><span 
+class="pcrr7t-"> header:</span><span 
+class="pcrr7t-"> 52</span><span 
+class="pcrr7t-"> (bytes)</span><br class="fancyvrb" /><a 
+ id="x84-231068r16"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Size</span><span 
+class="pcrr7t-"> of</span><span 
+class="pcrr7t-"> program</span><span 
+class="pcrr7t-"> headers:</span><span 
+class="pcrr7t-"> 32</span><span 
+class="pcrr7t-"> (bytes)</span>
+<br class="fancyvrb" /><a 
+ id="x84-231070r17"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Number</span><span 
+class="pcrr7t-"> of</span><span 
+class="pcrr7t-"> program</span><span 
+class="pcrr7t-"> headers:</span><span 
+class="pcrr7t-"> 3</span><br class="fancyvrb" /><a 
+ id="x84-231072r18"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Size</span><span 
+class="pcrr7t-"> of</span><span 
+class="pcrr7t-"> section</span><span 
+class="pcrr7t-"> headers:</span><span 
+class="pcrr7t-"> 40</span><span 
+class="pcrr7t-"> (bytes)</span>
+<br class="fancyvrb" /><a 
+ id="x84-231074r19"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Number</span><span 
+class="pcrr7t-"> of</span><span 
+class="pcrr7t-"> section</span><span 
+class="pcrr7t-"> headers:</span><span 
+class="pcrr7t-"> 16</span><br class="fancyvrb" /><a 
+ id="x84-231076r20"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Section</span><span 
+class="pcrr7t-"> header</span><span 
+class="pcrr7t-"> string</span><span 
+class="pcrr7t-"> table</span><span 
+class="pcrr7t-"> index:</span><span 
+class="pcrr7t-"> 15</span><br class="fancyvrb" /><a 
+ id="x84-231078r21"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><br class="fancyvrb" /><a 
+ id="x84-231080r22"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Section</span><span 
+class="pcrr7t-"> Headers:</span>
+<br class="fancyvrb" /><a 
+ id="x84-231082r23"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [Nr]</span><span 
+class="pcrr7t-"> Name</span><span 
+class="pcrr7t-"> Type</span><span 
+class="pcrr7t-"> Addr</span><span 
+class="pcrr7t-"> Off</span><span 
+class="pcrr7t-"> Size</span><span 
+class="pcrr7t-"> ES</span><span 
+class="pcrr7t-"> Flg</span><span 
+class="pcrr7t-"> Lk</span><span 
+class="pcrr7t-"> Inf</span><span 
+class="pcrr7t-"> Al</span><br class="fancyvrb" /><a 
+ id="x84-231084r24"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 0]</span><span 
+class="pcrr7t-"> NULL</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span>
+<br class="fancyvrb" /><a 
+ id="x84-231086r25"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 1]</span><span 
+class="pcrr7t-"> .startup</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a0000000</span><span 
+class="pcrr7t-"> 004000</span><span 
+class="pcrr7t-"> 0001ec</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> AX</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 2</span>
+<br class="fancyvrb" /><a 
+ id="x84-231088r26"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 2]</span><span 
+class="pcrr7t-"> .zbss</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a00001f0</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> W</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231090r27"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 3]</span><span 
+class="pcrr7t-"> .zdata</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a00001f0</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> W</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231092r28"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 4]</span><span 
+class="pcrr7t-"> .text</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a00001f0</span><span 
+class="pcrr7t-"> 0041f0</span><span 
+class="pcrr7t-"> 009e10</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> AX</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 8192</span>
+<br class="fancyvrb" /><a 
+ id="x84-231094r29"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 5]</span><span 
+class="pcrr7t-"> .rodata</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a000a000</span><span 
+class="pcrr7t-"> 00e000</span><span 
+class="pcrr7t-"> 0004f8</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> A</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 4</span>
+<br class="fancyvrb" /><a 
+ id="x84-231096r30"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 6]</span><span 
+class="pcrr7t-"> .eh_frame</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a000a4f8</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> W</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231098r31"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 7]</span><span 
+class="pcrr7t-"> .ctors</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a000a4f8</span><span 
+class="pcrr7t-"> 00e4f8</span><span 
+class="pcrr7t-"> 00000c</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> A</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231100r32"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 8]</span><span 
+class="pcrr7t-"> .dtors</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a000a504</span><span 
+class="pcrr7t-"> 00e504</span><span 
+class="pcrr7t-"> 000008</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> WA</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231102r33"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [</span><span 
+class="pcrr7t-"> 9]</span><span 
+class="pcrr7t-"> .pcptext</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> f0020000</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> W</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231104r34"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [10]</span><span 
+class="pcrr7t-"> .pcpdata</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> f0010000</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> W</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231106r35"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [11]</span><span 
+class="pcrr7t-"> .data</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a0080000</span><span 
+class="pcrr7t-"> 010000</span><span 
+class="pcrr7t-"> 000720</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> WA</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 8</span>
+<br class="fancyvrb" /><a 
+ id="x84-231108r36"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [12]</span><span 
+class="pcrr7t-"> .sdata</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a0080720</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> WA</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 8</span>
+<br class="fancyvrb" /><a 
+ id="x84-231110r37"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [13]</span><span 
+class="pcrr7t-"> .sbss</span><span 
+class="pcrr7t-"> PROGBITS</span><span 
+class="pcrr7t-"> a0080720</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000000</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> W</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span>
+<br class="fancyvrb" /><a 
+ id="x84-231112r38"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [14]</span><span 
+class="pcrr7t-"> .bss</span><span 
+class="pcrr7t-"> NOBITS</span><span 
+class="pcrr7t-"> a0080720</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 0208b8</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> WA</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 8</span>
+<br class="fancyvrb" /><a 
+ id="x84-231114r39"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> [15]</span><span 
+class="pcrr7t-"> .shstrtab</span><span 
+class="pcrr7t-"> STRTAB</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 010720</span><span 
+class="pcrr7t-"> 000071</span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> 1</span><br class="fancyvrb" /><a 
+ id="x84-231116r40"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><br class="fancyvrb" /><a 
+ id="x84-231118r41"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Key</span><span 
+class="pcrr7t-"> to</span><span 
+class="pcrr7t-"> Flags:</span>
+<br class="fancyvrb" /><a 
+ id="x84-231120r42"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> W</span><span 
+class="pcrr7t-"> (write),</span><span 
+class="pcrr7t-"> A</span><span 
+class="pcrr7t-"> (alloc),</span><span 
+class="pcrr7t-"> X</span><span 
+class="pcrr7t-"> (execute),</span><span 
+class="pcrr7t-"> M</span><span 
+class="pcrr7t-"> (merge),</span><span 
+class="pcrr7t-"> S</span><span 
+class="pcrr7t-"> (strings)</span>
+<br class="fancyvrb" /><a 
+ id="x84-231122r43"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> I</span><span 
+class="pcrr7t-"> (info),</span><span 
+class="pcrr7t-"> L</span><span 
+class="pcrr7t-"> (link</span><span 
+class="pcrr7t-"> order),</span><span 
+class="pcrr7t-"> G</span><span 
+class="pcrr7t-"> (group),</span><span 
+class="pcrr7t-"> x</span><span 
+class="pcrr7t-"> (unknown)</span>
+<br class="fancyvrb" /><a 
+ id="x84-231124r44"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> O</span><span 
+class="pcrr7t-"> (extra</span><span 
+class="pcrr7t-"> OS</span><span 
+class="pcrr7t-"> processing</span><span 
+class="pcrr7t-"> required)</span><span 
+class="pcrr7t-"> o</span><span 
+class="pcrr7t-"> (OS</span><span 
+class="pcrr7t-"> specific),</span><span 
+class="pcrr7t-"> p</span><span 
+class="pcrr7t-"> (processor</span><span 
+class="pcrr7t-"> specific)</span><br class="fancyvrb" /><a 
+ id="x84-231126r45"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span>
+<br class="fancyvrb" /><a 
+ id="x84-231128r46"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Program</span><span 
+class="pcrr7t-"> Headers:</span><br class="fancyvrb" /><a 
+ id="x84-231130r47"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Type</span><span 
+class="pcrr7t-"> Offset</span><span 
+class="pcrr7t-"> VirtAddr</span><span 
+class="pcrr7t-"> PhysAddr</span><span 
+class="pcrr7t-"> FileSiz</span><span 
+class="pcrr7t-"> MemSiz</span><span 
+class="pcrr7t-"> Flg</span><span 
+class="pcrr7t-"> Align</span>
+<br class="fancyvrb" /><a 
+ id="x84-231132r48"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> LOAD</span><span 
+class="pcrr7t-"> 0x004000</span><span 
+class="pcrr7t-"> 0xa0000000</span><span 
+class="pcrr7t-"> 0xa0000000</span><span 
+class="pcrr7t-"> 0x0a50c</span><span 
+class="pcrr7t-"> 0x0a50c</span><span 
+class="pcrr7t-"> RWE</span><span 
+class="pcrr7t-"> 0x4000</span>
+<br class="fancyvrb" /><a 
+ id="x84-231134r49"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> LOAD</span><span 
+class="pcrr7t-"> 0x010000</span><span 
+class="pcrr7t-"> 0xa0080000</span><span 
+class="pcrr7t-"> 0xa000a50c</span><span 
+class="pcrr7t-"> 0x00720</span><span 
+class="pcrr7t-"> 0x00720</span><span 
+class="pcrr7t-"> RW</span><span 
+class="pcrr7t-"> 0x4000</span>
+<br class="fancyvrb" /><a 
+ id="x84-231136r50"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> LOAD</span><span 
+class="pcrr7t-"> 0x010720</span><span 
+class="pcrr7t-"> 0xa0080720</span><span 
+class="pcrr7t-"> 0xa0080720</span><span 
+class="pcrr7t-"> 0x00000</span><span 
+class="pcrr7t-"> 0x208b8</span><span 
+class="pcrr7t-"> RW</span><span 
+class="pcrr7t-"> 0x4000</span><br class="fancyvrb" /><a 
+ id="x84-231138r51"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><br class="fancyvrb" /><a 
+ id="x84-231140r52"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Section</span><span 
+class="pcrr7t-"> to</span><span 
+class="pcrr7t-"> Segment</span><span 
+class="pcrr7t-"> mapping:</span>
+<br class="fancyvrb" /><a 
+ id="x84-231142r53"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Segment</span><span 
+class="pcrr7t-"> Sections...</span><br class="fancyvrb" /><a 
+ id="x84-231144r54"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 00</span><span 
+class="pcrr7t-"> .startup</span><span 
+class="pcrr7t-"> .text</span><span 
+class="pcrr7t-"> .rodata</span><span 
+class="pcrr7t-"> .ctors</span><span 
+class="pcrr7t-"> .dtors</span><br class="fancyvrb" /><a 
+ id="x84-231146r55"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 01</span><span 
+class="pcrr7t-"> .data</span><br class="fancyvrb" /><a 
+ id="x84-231148r56"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 02</span><span 
+class="pcrr7t-"> .bss</span></div>
+                                                                                       
+                                                                                       
+<!--l. 904--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse56.html" >next</a>] [<a 
+href="main_gcc_ugse54.html" >prev</a>] [<a 
+href="main_gcc_ugse54.html#tailmain_gcc_ugse54.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse55.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse55.html" >up</a>] </p></div>
+<!--l. 904--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse55.html"></a> </p> 
+</body></html> 

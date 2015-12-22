@@ -1,0 +1,180 @@
+<silentsettings activeinstalltype="{type_Full}">
+	<features>
+		<feature id="{feat_Toolchain}"/>
+		<feature id="{feat_Toolchain_bin_win32}"/>
+		<feature id="{feat_Simulator_bin_win32}"/>
+		<feature id="{feat_PCP_bin_win32}"/>
+		<feature id="{feat_Rlm_bin_win32}"/>
+		<feature id="{feat_Rlm_license}"/>
+		<feature id="{feat_kdiff}"/>
+		<feature id="{feat_Warningsfilter}"/>
+		<feature id="{feat_Eclipse}"/>
+		<feature id="{feat_Eclipse_bin_win32}"/>
+	</features>
+	<variables>
+		<var name="CompressionAlgorithm" value="1"/>
+		<var name="UninstallPath" value="%InstallPath%"/>
+		<var name="UrlText" value="http://www.hightec-rt.com"/>
+		<var name="UrlLink" value="%UrlText%"/>
+<!--		<var name="ConflictFile"/>
+		<var name="PackageName"/>
+		<var name="PackageLocation"/> -->
+		<var name="LicenseCheckboxChecked" value="0"/>
+		<var name="AllowReboot"/>
+		<var name="SuccessInstallation"/>
+		<var name="Output" value="/tricore"/>
+		<var name="DestToolchain"/>
+		<var defvalue="%ProgramFiles%\gInstall\Ghost Installer" name="GIBaseLocation" regkey="HKLM\Software\gInstall\Ghost Installer\2.0" regparam="InstallPath" type="reg"/>
+		<var name="Debugger" value="PLS"/>
+		<var name="HostOS" value="win32"/>
+		<var name="Freigabe" value="n:"/>
+		<var name="Auslieferung" value="d:\work\auslieferung"/>
+		<var name="ProgramGroup" value="TriCore PXROS Development Platform  v3.4.8"/>
+		<var name="InstallPath" value="C:\HighTec\TriCore"/>
+		<var name="ht_SubDirs" value="normal"/>
+		<var name="ht_InstallMode" value="current"/>
+		<var name="AppVersion_Release" value="v3.4.8"/>
+		<var name="AppVersion_Suffix"/>
+<!-- Add path to environment -->
+<!--
+		<var condition='%ht_InstallMode% = "current" and %HostOS% = "win32"' flags="add_path" name="PATH" value="%Path_s%" type="envvar"/>
+		<var condition='%ht_InstallMode% = "all" and %HostOS% = "win32"' flags="add_path,sys_envvar" name="PATH" value="%Path_s%" type="envvar"/>
+-->
+		<var name="ToolchainVersion" value="%AppVersion_Release%%AppVersion_Suffix%"/>
+		<var condition='%ht_SubDirs% = "normal" and %HostOS% = "win32"' name="Path_s" value="%InstallPath%\bin"/>
+		<var condition='%HostOS% = "win32"' flags="add_path,sys_envvar" name="PATH" value="%Path_s%" type="envvar"/>
+		<var condition='%ht_InstallMode% = "current" and %HostOS% = "win32"' name="TRICORE_TOOLS" value="%InstallPath%" type="envvar"/>
+<!-- main package compiler -->
+		<var name="DestMake"/>
+		<var name="DestMsys"/>
+		<var name="Make_root" value="%Freigabe%/make"/>
+		<var name="MakeVersion" value="3.80_TV1.3"/>
+		<var name="License_root" value="%Freigabe%/license/gpl"/>
+		<var name="LGPL_root" value="%Freigabe%/license/lgpl"/>
+		<var name="GPL3_root" value="%Freigabe%/license/gpl3"/>
+		<var name="NewLib_root" value="%Freigabe%/license/newlib"/>
+		<var name="Llvm_root" value="%Freigabe%/license/llvm"/>
+		<var name="Agb_root" value="%Freigabe%/license/agb"/>
+		<var name="Toolchain_root" value="%Freigabe%/compiler/tricore/%HostOS%_%AppVersion_Release%"/>
+		<var name="Toolchain_root_linux" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%"/>
+		<var name="gcc_mo_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%/share/locale/nr/LC_MESSAGES"/>
+		<var name="Libraries_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%/tricore/lib"/>
+		<var name="CompilerLibraries_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%/lib/gcc/tricore/%GccBase%"/>
+		<var name="ldscripts_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%/tricore/lib/ldscripts"/>
+		<var name="Libgccoptfp_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%/lib/gcc/tricore/%GccBase%"/>
+		<var name="Libos_src_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%"/>
+		<var name="Headers_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%/tricore/include"/>
+		<var name="CPPHeaders_root" value="%Freigabe%/compiler/tricore/linux_%AppVersion_Release%/include/c++/%GccBase%"/>
+		<var name="Versionbat_root" value="%Freigabe%/versionsscripts/tricore"/>
+		<var name="ToolchainLicense_root" value="%Freigabe%/license/gpl"/>
+		<var name="ToolchainReadme_root" value="%Freigabe%/documentation/readme"/>
+		<var name="SourceTxt_root" value="%Freigabe%/documentation/readme"/>
+<!-- head files -->
+		<var name="Msys_root" value="%Freigabe%/msys"/>
+		<var name="MsysVersion" value="1.0.8"/>
+		<var name="HeadertoolHeaders_root" value="%Freigabe%/bsp/tricore/include"/>
+<!-- PXROS version -->
+		<var name="HeadertoolDoku_root" value="%Freigabe%/bsp/tricore/html"/>
+<!-- codeblocks package -->
+		<var name="TargetHeaders_root" value="%Freigabe%/bsp/tricore/regs"/>
+		<var name="PXROS" value="HR"/>
+		<var name="Codeblocks_root" value="%Freigabe%/codeblocks/%HostOS%"/>
+		<var name="Codeblocks_root_linux" value="%Freigabe%/codeblocks/linux"/>
+		<var name="Codeblockswizards_root" value="%Freigabe%/codeblocks/wizard"/>
+<!-- Examples -->
+		<var name="Codeblocks_examples_root" value="%Freigabe%/examples"/>
+		<var name="Codeblocks_doku_root" value="%Freigabe%/documentation/codeblocks"/>
+		<var name="Bsp_root" value="%Freigabe%/examples/tricore/bsp"/>
+<!-- Documentation -->
+		<var name="ToolchainExamples_root" value="%Freigabe%/examples/tricore/examples"/>
+		<var name="ToolchainDave_root" value="%Freigabe%/examples/tricore/dave"/>
+		<var name="DokuRelnotes_base" value="/documentation/relnotes/tricore"/>
+		<var name="DokuRelnotes_root" value="%Freigabe%%DokuRelnotes_base%"/>
+		<var name="DokuUsersguide_base" value="/documentation/toolchain/usersguide/tricore"/>
+		<var name="DokuUsersguide_root" value="%Freigabe%%DokuUsersguide_base%"/>
+		<var name="DokuEclipseQuickstart_root" value="%Freigabe%/documentation/toolchain/eclipse/tricore"/>
+		<var name="DokuQuickstart_root" value="%Freigabe%/documentation/toolchain/quickstart/tricore"/>
+		<var name="DokuTraining_root" value="%Freigabe%/documentation/toolchain/training/tricore"/>
+		<var name="DokuDave_root" value="%Freigabe%/documentation/toolchain/dave/tricore"/>
+		<var name="DokuListoferrors_root" value="%Freigabe%/documentation/toolchain/list-of-errors"/>
+		<var name="DokuFlyer_root" value="%Freigabe%/documentation/toolchain/flyer"/>
+		<var name="DokuSim_root" value="%Freigabe%/documentation/toolchain/simulator/tricore"/>
+		<var name="DokuGNU_GCC_root" value="%Freigabe%/documentation/gnu/gcc/v3.4"/>
+		<var name="DokuGNU_BinUtils_root" value="%Freigabe%/documentation/gnu/binutils/v2.13"/>
+<!-- Debugger -->
+		<var name="DokuGNU_Make_root" value="%Freigabe%/documentation/gnu/make"/>
+		<var name="DokuGNU_Libraries_root" value="%Freigabe%/documentation/gnu/libraries"/>
+		<var name="Debugger_root" value="%Freigabe%/gdb/tricore/%HostOS%"/>
+<!-- Simulator and Flash tools -->
+<!--		<var condition='%HostOS% = "win32"' name="JIOBASE" value="%InstallPath%\tricore\jtag_targets" type="envvar"/> -->
+		<var name="Debugger_root_linux" value="%Freigabe%/gdb/tricore/linux"/>
+		<var name="DokuGNU_GDB_root" value="%Freigabe%/documentation/gnu/gdb/v6.1"/>
+		<var condition='%HostOS% = "win32"' name="TSIM_CONFIG_DIR" value="%InstallPath%\tricore\SimConfig" type="envvar"/>
+		<var name="Simulator_root" value="%Freigabe%/simulator/tricore/%HostOS%"/>
+		<var name="Simulator_root_linux" value="%Freigabe%/simulator/tricore/linux"/>
+		<var name="SimulatorSimConfig_root" value="%Freigabe%/simulator/tricore/SimConfig"/>
+		<var name="JTAGServer_root" value="%Freigabe%/jtag/tricore/%HostOS%/server"/>
+		<var name="JTAGServer_root_linux" value="%Freigabe%/jtag/tricore/linux/server"/>
+		<var name="JTAGServerHR_root" value="%Freigabe%/jtag/tricore/%HostOS%/server-hr"/>
+		<var name="JTAGServerHR_root_linux" value="%Freigabe%/jtag/tricore/linux/server-hr"/>
+		<var name="JTAGInstall_root" value="%Freigabe%/jtag/tricore/%HostOS%/install"/>
+		<var name="JTAGTargets_root" value="%Freigabe%/jtag/tricore/targets"/>
+		<var name="JTAGFlash_root" value="%Freigabe%/jtag/tricore/%HostOS%/flashloader"/>
+<!-- Kdiff 3-->
+		<var name="JTAGFlash_root_linux" value="%Freigabe%/jtag/tricore/linux/flashloader"/>
+<!-- Warningsfilter -->
+		<var name="Flashdriver_root" value="%Freigabe%/jtag/tricore/flash_driver"/>
+<!-- Disable Installer as standalone Version -->
+		<var name="Kdiff_root" value="%Freigabe%/kdiff3/%HostOS%"/>
+		<var name="Warningsfilter_root" value="%Freigabe%/warningsfilter"/>
+		<var name="AbortNow" value="0"/>
+		<var name="PXROS" value="HR"/>
+		<var name="Eclipse_root_win32" value="%Freigabe%/eclipse/tricore/win32"/>
+		<var name="Eclipse_root_linux" value="%Freigabe%/eclipse/tricore/linux"/>
+<!-- RLM variables -->
+		<var name="EclipseModels_root" value="%Freigabe%/eclipse/models/tricore"/>
+		<var name="Eclipse_examples_root" value="%Freigabe%/examples/tricore/eclipse"/>
+		<var name="rlm_root_win32" value="%Freigabe%/rlm/v9.x/win32"/>
+<!--		<var name="RLM_LICENSE" value="%InstallPath%\lic\%LICENSE_FILE%" type="envvar"/> -->
+		<var name="rlm_root_linux" value="%Freigabe%/rlm/v9.x/linux"/>
+<!-- Select Eclipse feature -->
+		<var name="rlm_license_file_root" value="%Freigabe%/rlm/licenses"/>
+		<var name="LICENSE_FILE" value="tricore.lic"/>
+		<var inifile=".\..\..\setup.ini" iniparam="CodeBlocks" inisection="IDE" name="CodeBlocks" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="Eclipse" inisection="IDE" name="Eclipse" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1130" inisection="Derivatives" name="TC1130" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1161" inisection="Derivatives" name="TC1161" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1162" inisection="Derivatives" name="TC1162" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1163" inisection="Derivatives" name="TC1163" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1164" inisection="Derivatives" name="TC1164" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1165" inisection="Derivatives" name="TC1165" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1166" inisection="Derivatives" name="TC1166" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1167" inisection="Derivatives" name="TC1167" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1197" inisection="Derivatives" name="TC1197" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1337" inisection="Derivatives" name="TC1337" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1367" inisection="Derivatives" name="TC1367" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1387" inisection="Derivatives" name="TC1387" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1724" inisection="Derivatives" name="TC1724" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1728" inisection="Derivatives" name="TC1728" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1736" inisection="Derivatives" name="TC1736" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1762" inisection="Derivatives" name="TC1762" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1764" inisection="Derivatives" name="TC1764" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1766" inisection="Derivatives" name="TC1766" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1767" inisection="Derivatives" name="TC1767" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1782" inisection="Derivatives" name="TC1782" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1784" inisection="Derivatives" name="TC1784" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1791" inisection="Derivatives" name="TC1791" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1793" inisection="Derivatives" name="TC1793" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1792" inisection="Derivatives" name="TC1792" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1796" inisection="Derivatives" name="TC1796" type="ini"/>
+<!-- Set environment variable at the beginning; not documented trigered by MC -->
+		<var inifile=".\..\..\setup.ini" iniparam="TC1797" inisection="Derivatives" name="TC1797" type="ini"/>
+		<var inifile=".\..\..\setup.ini" iniparam="TC1798" inisection="Derivatives" name="TC1798" type="ini"/>
+		<var name="AddPathAtBegin" value="1"/>
+		<var name="GccBase" value="3.4.5"/>
+		<var name="ShortDouble" value="sd"/>
+		<var name="InstalledAppUninstallPath"/>
+		<var name="LangID" value="ENU"/>
+		<var name="ConflictFile" value="C:\HighTec\TriCore\eclipse\configuration\org.eclipse.update\platform.xml"/>
+	</variables>
+</silentsettings>

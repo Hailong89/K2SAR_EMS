@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-size</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 904--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse57.html" >next</a>] [<a 
+href="main_gcc_ugse55.html" >prev</a>] [<a 
+href="main_gcc_ugse55.html#tailmain_gcc_ugse55.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse56.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse56.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.9</span>  <a 
+href="main_gcc_ug.html#QQ2-85-241" id="x85-23200021.9">tricore-size</a></h3>
+<a 
+ id="dx85-232001"></a>
+<a 
+ id="dx85-232002"></a>
+<!--l. 906--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.9.1</span>  <a 
+href="#x85-23300021.9.1" id="x85-23300021.9.1">Description</a></h4>
+<!--l. 908--><p class="noindent" ><span 
+class="cmtt-12">tricore-size</span> <span 
+class="cmtt-12">[options] [&#x003C;objfile&#x003E; &#x003C;objfile&#x003E; ... ]</span>
+</p><!--l. 910--><p class="noindent" >The <span 
+class="cmtt-12">tricore-size</span> utility lists the section sizes and the total size for each of the object or
+archive files <span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E; </span>in its argument list.
+</p><!--l. 912--><p class="noindent" >By default, one line of output is generated for each object file or each module in an
+archive.
+</p><!--l. 914--><p class="noindent" ><span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E; </span>†are the object files to be examined. If none are specified, the file <span 
+class="cmtt-12">a.out </span>will be
+used.
+</p><!--l. 916--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.9.2</span>  <a 
+href="#x85-23400021.9.2" id="x85-23400021.9.2">Invocation</a></h4>
+<!--l. 918--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-A</span>                </dt><dd 
+class="list">
+                  <!--l. 920--><p class="noindent" >Equal to <span 
+class="cmtt-12">--format=sysv</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-B</span>                </dt><dd 
+class="list">
+                  <!--l. 921--><p class="noindent" >Equal to <span 
+class="cmtt-12">--format=berkeley</span>
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--format=&#x003C;format&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 922--><p class="noindent" ><a 
+ id="dx85-234001"></a> Select output style. The output style may be one of <span 
+class="cmtt-12">sysv</span> or <span 
+class="cmtt-12">berkeley</span>.
+                  Default is <span 
+class="cmtt-12">berkeley</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o</span>                </dt><dd 
+class="list">
+                  <!--l. 924--><p class="noindent" >Equal to <span 
+class="cmtt-12">--radix=8</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-d</span>                </dt><dd 
+class="list">
+                  <!--l. 925--><p class="noindent" >Equal to <span 
+class="cmtt-12">--radix=10</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-x</span>                </dt><dd 
+class="list">
+                  <!--l. 926--><p class="noindent" >Equal to <span 
+class="cmtt-12">--radix=16</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--radix=&#x003C;number&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 927--><p class="noindent" ><a 
+ id="dx85-234002"></a><a 
+ id="dx85-234003"></a> Display numbers in octal, decimal or hex. In <span 
+class="cmtt-12">--radix=</span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">number</span><span 
+class="cmmi-12">&#x003E;</span>,
+                  only the three values 8, 10 or 16 are supported. The total size is always
+                  given in two radices; decimal and hexadecimal for <span 
+class="cmtt-12">-d</span> or <span 
+class="cmtt-12">-x</span> output, or
+                  octal and hexadecimal if you’re using <span 
+class="cmtt-12">-o</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-t --totals</span>      </dt><dd 
+class="list">
+                  <!--l. 930--><p class="noindent" >Show totals of all objects listed (Berkeley format listing mode only).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--target=&#x003C;bfdname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 931--><p class="noindent" ><a 
+ id="dx85-234004"></a> Specify  that  the  object-code  format  for  <span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E; </span>is  <span 
+class="cmmi-12">&#x003C;</span>bfdname<span 
+class="cmmi-12">&#x003E;</span>
+                  (binary file format). This option may not be necessary; <span 
+class="cmtt-12">tricore-size</span>
+                  can automatically recognize many formats.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h --help</span>        </dt><dd 
+class="list">
+                  <!--l. 933--><p class="noindent" >Show a summary of acceptable arguments and options.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v --version</span>    </dt><dd 
+class="list">
+                  <!--l. 934--><p class="noindent" >Display the version number of <span 
+class="cmtt-12">tricore-size</span>.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 937--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.9.3</span>  <a 
+href="#x85-23500021.9.3" id="x85-23500021.9.3">Example</a></h4>
+<!--l. 939--><p class="noindent" ><span 
+class="cmtt-12">tricore-size</span> shows the sizes of the sections of all object in a library file. The sizes are
+displayed as hexadecimal values and the sums of the sizes for all objects are output:
+</p><!--l. 941--><p class="noindent" ><span 
+class="cmtt-12">tricore-size</span> <span 
+class="cmtt-12">-x -t libserial.a</span>
+</p><!--l. 943--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb309"><a 
+ id="x85-235002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> text</span><span 
+class="pcrr7t-"> data</span><span 
+class="pcrr7t-"> bss</span><span 
+class="pcrr7t-"> dec</span><span 
+class="pcrr7t-"> hex</span><span 
+class="pcrr7t-"> filename</span><br class="fancyvrb" /><a 
+ id="x85-235004r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 0x112</span><span 
+class="pcrr7t-"> 0x8</span><span 
+class="pcrr7t-"> 0x0</span><span 
+class="pcrr7t-"> 282</span><span 
+class="pcrr7t-"> 11a</span><span 
+class="pcrr7t-"> uart.o</span><span 
+class="pcrr7t-"> (ex</span><span 
+class="pcrr7t-"> libserial.a)</span>
+<br class="fancyvrb" /><a 
+ id="x85-235006r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 0x112</span><span 
+class="pcrr7t-"> 0x8</span><span 
+class="pcrr7t-"> 0x0</span><span 
+class="pcrr7t-"> 282</span><span 
+class="pcrr7t-"> 11a</span><span 
+class="pcrr7t-"> (TOTALS)</span></div>
+                                                                                       
+                                                                                       
+<!--l. 949--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse57.html" >next</a>] [<a 
+href="main_gcc_ugse55.html" >prev</a>] [<a 
+href="main_gcc_ugse55.html#tailmain_gcc_ugse55.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse56.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse56.html" >up</a>] </p></div>
+<!--l. 949--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse56.html"></a> </p> 
+</body></html> 

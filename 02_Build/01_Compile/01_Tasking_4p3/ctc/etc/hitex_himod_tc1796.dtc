@@ -1,0 +1,78 @@
+<!-- @(#)hitex_himod_tc1796.dtc	1.15 13/04/03 -->
+<!-- Debug Target Configuration for Hitex' HiMOD TC1796 Applications Module -->
+
+<debugTarget
+    xmlns="http://com.tasking.dtc/dtc.xsd/1.0"
+    name="Hitex HiMOD TC1796 Applications Module"
+    manufacturer="Hitex">
+
+    <processor id="tc1796b"/>
+
+    <!-- Define all common parts -->
+    <def id="150Mhz">
+	<initialize resourceId="init"	name="DBGSR"		value="0x00000017" cstart="false"/>
+	<initialize resourceId="init"	name="EBU_CON"		value="0x0000FF68" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL0"	value="0xA1000853" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON0"	value="0x00928000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP0"	value="0x42880000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL1"	value="0xA2000031" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON1"	value="0x00928000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP1"	value="0x40900000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL2"	value="0xA3000031" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSCON2"	value="0x00422000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSAP2"	value="0xC3200000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL3"	value="0x00000000" cstart="true"/>
+	<initialize resourceId="init"	name="CBS_MCDBBS"	value="0x00090003" cstart="true"/>
+	<initialize resourceId="noinit"	name="PLL_CLC"		value="0x1d0384"   cstart="true"/>
+	<initialize resourceId="noinit"	name="Initialize clocks per sec" value="1" 	  cstart="true"/>
+	<initialize resourceId="noinit"	name="Oscillator frequency Hz"	 value="20000000" cstart="true"/>
+	<flashMonitor monitor="ftc1796b.sre" workspaceAddress="0xd0000400" flashSectorBufferSize="2048"/>
+    </def>
+
+    <!-- define all communication methods -->
+    <communicationMethod name="DAS over MiniWiggler" debugInstrument="gdi2das" gdiMethod="tcpip">
+        <!-- DAS Resources:
+            DASserver:      the name (not the filename) of used DAS server (must be run and/or installed on the connected host
+            AccessPort:         the connection to the device e.g. for LPT server JTAGx means access via LPTx and the JTAG of device
+                            for USB server USBx means access via x and the USB of device
+            Addressdefinition:  the used register for registermap 
+            TerminateServer:    value != 0 means if a server is started by the debug instrument, then this server is terminated on exit
+            DasTimeOut:     xxx means max. timeout for client/server socket connection (ms)
+        -->
+        <resource id="DASserver" value="UDAS"/>
+        <resource id="AccessPort" value="JTAG0"/>
+        <resource id="RegisterFile" value="regbase_f7e1.dat"/>
+        <resource id="TerminateServer" value="1"/>
+        <resource id="DasTimeOut" value="0x4000"/>
+    </communicationMethod>
+
+    <configuration name="fCPU=150Mhz, PLL normal mode">
+        <ref id="150Mhz"/>
+    </configuration>
+
+    <!-- define all external on board flash chips -->
+    <flashChips>
+        <chip vendor="AMD" chip="AM29BL162C" width="16" chips="2" baseAddress="0xa1000000" chipSize="0x200000"/>
+    </flashChips>
+
+    <!-- non-flash chips must be defined using LSL -->
+
+    <lsl>
+    memory sram
+    {
+	mau = 8;
+	size = 1024k;
+	type = ram;
+	map (dest=bus:spe:fpi_bus, dest_offset=0xa2000000, size=1024k);
+    }
+    memory lpsram
+    {
+	mau = 8;
+	size = 512k;
+	type = ram;
+	map (dest=bus:spe:fpi_bus, dest_offset=0xa3000000, size=512k);
+    }
+    </lsl>
+
+</debugTarget> 
+

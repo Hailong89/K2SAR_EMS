@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.cdt.hightec.examples.category"
+            name="HighTec Examples"
+            parentCategory="org.eclipse.ui.Examples">
+      </category>
+      <wizard
+            canFinishEarly="false"
+            category="org.eclipse.ui.Examples/org.eclipse.cdt.hightec.examples.category"
+            class="com.rt.hightec.support.example.ui.HighTecExampleWizard"
+            hasPages="true"
+            icon="resources/icons/htc_logo_16x16.png"
+            id="org.eclipse.cdt.tricoregcc.examples.category.2"
+            name="HighTec Examples"
+            project="true">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="resources/intro/hightecIntro.xml">
+      </configExtension>
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="resources/intro/hightecSample.xml">
+      </configExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="resources/help/toc.xml"
+            primary="true">
+      </toc>
+   </extension>
+  
+</plugin>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Storage of constants and variables using different addressing modes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse24.html" >next</a>] [<a 
+href="main_gcc_ugse22.html" >prev</a>] [<a 
+href="main_gcc_ugse22.html#tailmain_gcc_ugse22.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse23.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse23.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.3</span>  <a 
+href="main_gcc_ug.html#QQ2-41-59" id="x41-5500014.3">Storage of constants and variables using different addressing modes</a></h3>
+<!--l. 3--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.3.1</span>  <a 
+href="#x41-5600014.3.1" id="x41-5600014.3.1">Small Addressing Mode</a></h4>
+<!--l. 5--><p class="noindent" >The compiler option <span 
+class="cmtt-12">-msmall=&#x003C;size&#x003E;</span> enables the small (register relative) addressing mode for
+variables and constants, and allocates them to a <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="cmsy-10x-x-120">*</span></span> section. The boundary value for the
+small addressing mode can be set by the optional <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>paramater. The boundary value will
+then be <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>x Bytes. If you set the boundary value <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>to zero, all variables and
+constants will be addressed using the small addressing mode.
+</p><!--l. 11--><p class="noindent" >The user can separately select the small addressing mode for variables (RAM) and constants
+(ROM) by the compiler options <span 
+class="cmtt-12">-msmall-const</span> and <span 
+class="cmtt-12">-msmall-data</span>.
+</p><!--l. 14--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-msmall-const=&#x003C;size&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 15--><p class="noindent" ><a 
+ id="dx41-56001"></a> This option selects the small addressing mode for constants. Constants
+                  are marked by the type modifier <span class="lstinline"><span 
+class="ecsx-1200">const</span></span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-msmall-data=&#x003C;size&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 17--><p class="noindent" ><a 
+ id="dx41-56002"></a> This option selects the small addressing mode for variables. Variables
+                  do not have the type modifier <span class="lstinline"><span 
+class="ecsx-1200">const</span></span>.</p></dd></dl>
+<div class="center" 
+>
+<!--l. 21--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div 
+class="colorbox" id="colorbox40"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If the <span 
+class="cmtt-12">-msmall</span> and <span 
+class="cmtt-12">-msmall-data</span> options and/or the <span 
+class="cmtt-12">-msmall-const</span>
+option are set simultaneously, the compiler will issue an error.      </div>
+</div>
+<!--l. 23--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.3.2</span>  <a 
+href="#x41-5700014.3.2" id="x41-5700014.3.2">Examples</a></h4>
+<!--l. 25--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb99"><a 
+ id="x41-57002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Variables</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x41-57004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> c1;</span><br class="fancyvrb" /><a 
+ id="x41-57006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s1;</span>
+<br class="fancyvrb" /><a 
+ id="x41-57008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i1;</span><br class="fancyvrb" /><a 
+ id="x41-57010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x41-57012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Constants</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x41-57014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> c2;</span>
+<br class="fancyvrb" /><a 
+ id="x41-57016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s2;</span><br class="fancyvrb" /><a 
+ id="x41-57018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i2;</span><br class="fancyvrb" /><a 
+ id="x41-57020r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ...</span></div>
+<!--l. 38--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-msmall=4</span>        </dt><dd 
+class="list">
+                  <!--l. 39--><p class="noindent" >All variables and constants with a size <span 
+class="cmsy-10x-x-120"><font face="Symbol">£</font> </span>4 Byte will be accessed using
+                  the small addressing mode. In this example <span class="lstinline"><span 
+class="ecss-1200">c1</span></span>, <span class="lstinline"><span 
+class="ecss-1200">s1</span></span>, <span class="lstinline"><span 
+class="ecss-1200">i1</span></span>, <span class="lstinline"><span 
+class="ecss-1200">c2</span></span>, <span class="lstinline"><span 
+class="ecss-1200">s2</span></span>, <span class="lstinline"><span 
+class="ecss-1200">i2</span></span> are
+                  accessed like this.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-msmall-data=2</span>  </dt><dd 
+class="list">
+                  <!--l. 40--><p class="noindent" >All variables with a size <span 
+class="cmsy-10x-x-120"><font face="Symbol">£</font> </span>2 Byte will use the small addressing mode.
+                  In this example <span class="lstinline"><span 
+class="ecss-1200">c1</span></span>, <span class="lstinline"><span 
+class="ecss-1200">s1</span></span> are accessed like this.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-msmall-const=1</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 41--><p class="noindent" >All constants with a size of 1 Byte will use the small addressing mode.
+                  In this example <span class="lstinline"><span 
+class="ecss-1200">c2</span></span> are accessed like this.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-msmall-const=0</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 42--><p class="noindent" >All constants will use the small addressing mode. In this example <span class="lstinline"><span 
+class="ecss-1200">c2</span></span>,
+                  <span class="lstinline"><span 
+class="ecss-1200">s2</span></span>, <span class="lstinline"><span 
+class="ecss-1200">i2</span></span> are accessed like this.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 45--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.3.3</span>  <a 
+href="#x41-5800014.3.3" id="x41-5800014.3.3">Definition and Declaration</a></h4>
+<!--l. 47--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb100"><a 
+ id="x41-58002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Module</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x41-58004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a;</span></div>
+<!--l. 52--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb101"><a 
+ id="x41-58006r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Module</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x41-58008r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a;</span></div>
+<!--l. 57--><p class="noindent" >In the first module you can find the definition of the variable <span class="lstinline"><span 
+class="ecss-1200">a</span></span>. In the second module, <span class="lstinline"><span 
+class="ecss-1200">a</span></span> is
+declared as <span class="lstinline"><span 
+class="ecsx-1200">extern</span></span> but with the modifier <span class="lstinline"><span 
+class="ecsx-1200">const</span></span>. In this case the option <span 
+class="cmtt-12">-msmall-const</span> will
+cause a linker error. In the first module the variable will be accessed using the normal
+addressing mode, because the modifier <span class="lstinline"><span 
+class="ecsx-1200">const</span></span> is missing, so the variable will not be allocated to
+a <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="cmsy-10x-x-120">*</span></span> section. In the second module, the constant <span class="lstinline"><span 
+class="ecss-1200">a</span></span> will be accessed using the small
+addressing mode. This contradiction will cause the linker error because the variable <span class="lstinline"><span 
+class="ecss-1200">a</span></span> is
+not in the small addressable section with the prefix <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="cmsy-10x-x-120">*</span></span>. See <a 
+href="main_gcc_ugse22.html#x40-5400014.2">Listing 14.2<!--tex4ht:ref: sec:intrinsic_fct --></a> for
+details.
+</p><!--l. 59--><p class="noindent" >The following case will not result in a linker error. In the first module, the constant <span class="lstinline"><span 
+class="ecss-1200">a</span></span> is
+defined.
+</p><!--l. 61--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb102"><a 
+ id="x41-58010r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Module</span><span 
+class="pcrr7t-x-x-144"> 1</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x41-58012r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> const</span><span 
+class="pcrr7t-x-x-144"> a;</span></div>
+<!--l. 66--><p class="noindent" >In the second module, the variable <span class="lstinline"><span 
+class="ecss-1200">a</span></span> is declared by <span class="lstinline"><span 
+class="ecsx-1200">extern</span></span>.
+</p><!--l. 68--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb103"><a 
+ id="x41-58014r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> Module</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x41-58016r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> extern</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a;</span></div>
+<!--l. 73--><p class="noindent" >With <span 
+class="cmtt-12">-msmall-const=4</span> the constant <span class="lstinline"><span 
+class="ecss-1200">a</span></span> in the first module will be accessed using the small
+addressing mode and allocated to a <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="cmsy-10x-x-120">*</span></span> section. The second module will not be
+accessed using the small addressing mode because the modifier <span class="lstinline"><span 
+class="ecsx-1200">const</span></span> is missing. A
+small addressing area <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="cmsy-10x-x-120">*</span></span> can always be accessed using the normal addressing
+mode.
+                                                                                       
+                                                                                       
+</p><!--l. 75--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">14.3.4</span>  <a 
+href="#x41-5900014.3.4" id="x41-5900014.3.4">Absolute Addressing Mode</a></h4>
+<!--l. 77--><p class="noindent" >The compiler option <span 
+class="cmtt-12">-mabs=&#x003C;size&#x003E;</span> enables the absolute (register relative) addressing
+mode for variables and constants and allocates them to a <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span><span 
+class="ecss-1200">.</span><span 
+class="cmsy-10x-x-120">*</span></span> section. With the
+optional <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>parameter, the boundary value for absolute addressing mode is set.
+The boundary value will be <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E; </span>x Bytes. If you set the boundary value <span 
+class="cmmi-12">&#x003C;</span>size<span 
+class="cmmi-12">&#x003E;</span>
+to zero, all variables and constants will be addressed using the absolute addressing
+mode.
+</p><!--l. 85--><p class="noindent" >The user can separately select the absolute addressing mode for variables (RAM) and constants
+(ROM) by the compiler options <span 
+class="cmtt-12">-mabs-const</span> and <span 
+class="cmtt-12">-mabs-data</span>.
+</p><!--l. 88--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-mabs-const=&#x003C;size&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 89--><p class="noindent" ><a 
+ id="dx41-59001"></a> This  option  selects  the  absolute  addressing  mode  for  constants.
+                  Constants are marked by the type modifier <span class="lstinline"><span 
+class="ecsx-1200">const</span></span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mabs-data=&#x003C;size&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 92--><p class="noindent" ><a 
+ id="dx41-59002"></a> This  option  selects  the  absolute  addressing  mode  for  variables.
+                  Variables do not have the type modifier <span class="lstinline"><span 
+class="ecsx-1200">const</span></span>.</p></dd></dl>
+<div class="center" 
+>
+<!--l. 99--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox41"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If the <span 
+class="cmtt-12">-mabs</span> and <span 
+class="cmtt-12">-mabs-data</span> options and/or the <span 
+class="cmtt-12">-mabs-const</span> option
+are set simultaneously, the compiler will issue an error.             </div>
+</div>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse24.html" >next</a>] [<a 
+href="main_gcc_ugse22.html" >prev</a>] [<a 
+href="main_gcc_ugse22.html#tailmain_gcc_ugse22.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse23.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse23.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse23.html"></a> </p> 
+</body></html> 

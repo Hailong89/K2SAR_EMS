@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Base : Release Notes (1.2.0) (en)</title>
+	    <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">	    
+    </head>
+
+    <body>
+	    <table class="pagecontent" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+		    <tr>
+			    <td valign="top" class="pagebody">
+				    
+				    <h1><a name="ReleaseNotes%281.2.0%29%28en%29-ReleaseNotesHeliosSR2%281.2.0%29"></a>TriCore Development Platform - Release Notes Helios SR2 (1.2.0)</h1><div>
+<ul>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-ParallelBuilds'>Parallel Builds</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-GlobalOptions'>Global Options</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-LicensingWizard'>Licensing Wizard</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-ExampleWizard'>Example Wizard</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-LDFModelEditor'>LDF Model Editor</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-NonManagedMakefileSupport'>Non Managed Makefile Support</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-LinkOrderTab'>Link Order Tab</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-DAvEIntegration'>DAvE Integration</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-ProjectConverter'>Project-Converter</a></li>
+    <li><a href='#ReleaseNotes%281.2.0%29%28en%29-Systemvalidation'>Systemvalidation</a></li>
+</ul></div>
+
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-ParallelBuilds"></a><b>Parallel Builds</b></h2>
+
+<p>The support for parallel build on Windows platforms has been enabled (make -j &lt;job numbers&gt;). In the number of parallel jobs can be set in the project properties C/C++ Build -&gt; Behaviour.</p>
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-GlobalOptions"></a><b>Global Options</b></h2>
+
+<p>Since this release you can define so-called global options which are passed to all tools of the toolchain. The options can be defined in the category "global options" in the settings dialog of the project properties.</p>
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619976.png" width="600" style="border: 1px solid black"/></span></p>
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-LicensingWizard"></a><b>Licensing Wizard</b></h2>
+
+<p>The HighTec tools have an integrated license manager to support different license models. The status of installed and active licenses can be reviewed in the license-manager in the Eclipse Preference Store. The dialog can be opened via the menu Window-&gt;Preferences-&gt;HighTec Preferences-&gt;Licensing.</p>
+
+<ul>
+	<li>An overview of installed licenses is displayed.</li>
+	<li>New licenses can be created via internet activation by using an activation key..</li>
+	<li>An provided licensing file can be added to the toolchain</li>
+</ul>
+
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619977.png" width="500" style="border: 1px solid black"/></span></p>
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-ExampleWizard"></a>Example Wizard</h2>
+
+<p>The examples are now categorized in architecture and boards. The new hierarchical view improves the readability.</p>
+
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619980.png" width="500" style="border: 1px solid black"/></span></p>
+
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-LDFModelEditor"></a>LDF Model Editor</h2>
+
+<p>The LDF-Editor has been rewritten. We improved:</p>
+
+<ul>
+	<li>design,</li>
+	<li>usability,</li>
+	<li>functionality.</li>
+</ul>
+
+
+<p>The attributes of a model entry can be accessed over the editor. The layout of the attributes in the editor can be changed. There are two modes:</p>
+
+<ol>
+	<li>horizontal: the attributes are shown on the right of the model</li>
+	<li>vertical: the attributes are shown on the bottom of the model</li>
+</ol>
+
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619984.png" width="700" style="border: 1px solid black"/></span></p>
+
+<p>The Model-Editor pop-ups with mouse-over functionality an summary of model-items e.g. the layout configuration of a board. The displayed columns can be sorted by clicking the column heading.</p>
+
+<p>Features of the summary view:</p>
+
+<ul>
+	<li>The view is a clearly structured table, in which the keyfacts of the elements are displayed.</li>
+	<li>The view supports a sorting for all columns</li>
+	<li>You can access modell-items directly through this table. A double-click opens the model-item in the editor.</li>
+</ul>
+
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619983.png" width="500" style="border: 1px solid black"/></span></p>
+
+<p>Another useful feature is the validation of the model after each save. If you make error-nous  modification in a model, then the editor will display an error while saving the model. "Problems-View" indicates the errors, which are linked to the corresponding model entries. A double-click on such an item will jump the linked entry.</p>
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619982.png" width="700" style="border: 1px solid black"/></span></p>
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-NonManagedMakefileSupport"></a>Non Managed Makefile Support</h2>
+
+<p>The project wizard is extended by a "Non Managed Makefile Project". When creating a project, all board-specific headers, sources and models will be copied into the project, but you have to create your own makefile or add an existing one. Please create a makefile in the root of your project and create at least the makefile targets "clean-target" and "all-target".</p>
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619985.png" width="500" style="border: 1px solid black"/></span></p>
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-LinkOrderTab"></a>Link Order Tab</h2>
+
+<p>The option which defines the link-order, was refactored. The option was moved to an own property tab in the project settings.</p>
+
+<p>You can define in this tab:</p>
+
+<ul>
+	<li>The link order of the object-files</li>
+	<li>The include/exclude build-state of the corresponding source-files</li>
+</ul>
+
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619978.png" width="700" style="border: 1px solid black"/></span></p>
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-DAvEIntegration"></a>DAvE Integration</h2>
+
+<p>We have extended the DAvE integration with a DAvE-Launcher button in Eclipse. This enables you to import an existing DAvE-Project and to pass the imported DAvE project for editing to the the DAvE-Application.</p>
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619979.png" height="500" style="border: 1px solid black"/></span></p>
+
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-ProjectConverter"></a>Project-Converter</h2>
+
+<p>Some of the new integrated features use an extended project format, there "existing" projects need to be converted to the new project format. If you try to build a former project this may result in build errors. If you go to the Problem View console you can use the context menu "Quick Fixes" to migrate to the new project format.</p>
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619975.png" width="500" style="border: 1px solid black"/></span></p>
+
+<h2><a name="ReleaseNotes%281.2.0%29%28en%29-Systemvalidation"></a>Systemvalidation</h2>
+
+<p>Different versions of a toolchain can be installed in different installation directories. The installer of the toolchain set the environment variable TRICORE_TOOLS. This variable is referenced by Eclipse and used within the Toolchain configuration. The configuration will be check on start-up and returns an error in case that the environment variable TRICORE_TOOLS does not exist or points to a wrong directory.</p>
+
+<p><span class="image-wrap" style=""><img src="attachments/33488947/33619981.png" height="500" style="border: 1px solid black"/></span></p>
+
+				    					    <br/>
+                        				    
+                    			    </td>
+		    </tr>
+	    </table>
+	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td height="12" background="http://jira.software.htc:8090/confluence/images/border/border_bottom.gif"><img src="images/border/spacer.gif" width="1" height="1" border="0"/></td>
+			</tr>
+		    <tr>
+			    <td align="center"><font color="grey">Document generated by Confluence on Jul 11, 2011 07:29</font></td>
+		    </tr>
+	    </table>
+    </body>
+</html>

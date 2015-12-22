@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Inquiring on Alignment of Types or Variables</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 34--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch6.html" >next</a>] [<a 
+href="main_gcc_ugse8.html" >prev</a>] [<a 
+href="main_gcc_ugse8.html#tailmain_gcc_ugse8.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse9.html">tail</a>] [<a 
+href="main_gcc_ugch5.html#main_gcc_ugse9.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">5.3</span>  <a 
+href="main_gcc_ug.html#QQ2-18-27" name="x18-230005.3">Inquiring on Alignment of Types or Variables</a></h3>
+<a 
+ id="dx18-23001"></a>
+<a 
+ id="dx18-23002"></a>
+<a 
+ id="dx18-23003"></a>
+<!--l. 38--><p class="noindent" >The keyword <span class="lstinline"><span 
+class="ecss-1200">__alignof__</span></span> allows you to inquire about how an object is aligned, or the
+minimum alignment usually required by a type. Its syntax is just like <span class="lstinline"><span 
+class="ecsx-1200">sizeof</span></span>. For example, if the
+target machine requires a double value to be aligned on an 8-byte boundary, then
+<span class="lstinline"><span 
+class="ecss-1200">__alignof__</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">double</span><span 
+class="ecss-1200">)</span></span> is 8.
+</p>
+<div class="center" 
+>
+<!--l. 40--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox11"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This is true on many RISC machines. On more traditional machine
+designs, <span class="lstinline"><span 
+class="ecss-1200">__alignof__</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">double</span><span 
+class="ecss-1200">)</span></span> is 4 or even 2. Some machines never
+actually  require  alignment;  they  allow  reference  to  any  data  type
+even at an odd address. For these machines, <span class="lstinline"><span 
+class="ecss-1200">__alignof__</span></span> reports the
+recommended alignment of a type.                                 </div>
+</div>
+<!--l. 42--><p class="noindent" >If the operand of <span class="lstinline"><span 
+class="ecss-1200">__alignof__</span></span> is an lvalue rather than a type, its value is the required
+alignment for its type, taking into account any minimum alignment specified with GCCs
+<span class="lstinline"><span 
+class="ecss-1200">__attribute__</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">extension</span></span> (see <a 
+href="main_gcc_ugch6.html#x19-240006">Listing 6</a>).
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch6.html" >next</a>] [<a 
+href="main_gcc_ugse8.html" >prev</a>] [<a 
+href="main_gcc_ugse8.html#tailmain_gcc_ugse8.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse9.html" >front</a>] [<a 
+href="main_gcc_ugch5.html#main_gcc_ugse9.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse9.html"></a> </p> 
+</body></html> 

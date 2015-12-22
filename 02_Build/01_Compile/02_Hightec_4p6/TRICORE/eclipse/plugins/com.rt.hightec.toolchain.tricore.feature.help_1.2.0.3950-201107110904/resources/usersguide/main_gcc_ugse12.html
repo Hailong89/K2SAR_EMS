@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Specifying Attributes of Types</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 218--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse13.html" >next</a>] [<a 
+href="main_gcc_ugse11.html" >prev</a>] [<a 
+href="main_gcc_ugse11.html#tailmain_gcc_ugse11.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse12.html">tail</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse12.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">6.3</span>  <a 
+href="main_gcc_ug.html#QQ2-22-31" id="x22-270006.3">Specifying Attributes of Types</a></h3>
+<a 
+ id="dx22-27001"></a>
+<!--l. 220--><p class="noindent" >The keyword <span class="lstinline"><span 
+class="ecss-1200">__attribute__</span></span> allows you to specify special attributes of <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> and <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> types
+when you define such types. This keyword is followed by an attribute specification inside double
+parentheses. Five attributes are currently defined for types:
+</p>
+      <ul class="itemize1">
+      <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">aligned</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">deprecated</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">packed</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">transparent_union</span></span>
+      </li>
+      <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">unused</span></span></li></ul>
+<!--l. 231--><p class="noindent" >Other attributes are defined for functions (see <a 
+href="main_gcc_ugse10.html#x20-250006.1">Listing 6.1</a>) and for variables (see
+<a 
+href="main_gcc_ugse11.html#x21-260006.2">Listing 6.2</a>).
+</p><!--l. 233--><p class="noindent" >You may also specify any one of these attributes with <span class="lstinline"><span 
+class="ecss-1200">__</span></span> preceding and following its keyword.
+This allows you to use these attributes in header files without being concerned about a
+possible macro of the same name. For example, you may use <span class="lstinline"><span 
+class="ecss-1200">__aligned__</span></span> instead of
+<span class="lstinline"><span 
+class="ecss-1200">aligned</span></span>.
+</p><!--l. 235--><p class="noindent" >You may specify the <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> and <span class="lstinline"><span 
+class="ecss-1200">transparent_union</span></span> attributes either in a <span class="lstinline"><span 
+class="ecsx-1200">typedef</span></span> declaration or
+just past the closing curly brace of a complete <span class="lstinline"><span 
+class="ecsx-1200">enum</span></span>, <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type and the <span class="lstinline"><span 
+class="ecss-1200">packed</span></span>
+attribute only past the closing brace of a definition.
+</p><!--l. 237--><p class="noindent" >You may also specify attributes between the enum, struct or union tag and the name of the
+type rather than after the closing brace.
+</p><!--l. 239--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">aligned</span></span>          </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 241--><p class="noindent" ><a 
+ id="dx22-27002"></a> A type declared with this attribute is aligned on a memory address
+                  that is an even multiple of the number specified for the alignment. For
+                  example, the declarations:
+                  </p><!--l. 243--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb40"><a 
+ id="x22-27004r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> S</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> f[3];</span><span 
+class="pcrr7t-x-x-144"> }</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((aligned</span><span 
+class="pcrr7t-x-x-144"> (8)));</span>
+                  <br class="fancyvrb" /><a 
+ id="x22-27006r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> more_aligned_int</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((aligned</span><span 
+class="pcrr7t-x-x-144"> (8)));</span></div>
+                  <!--l. 248--><p class="noindent" >force the compiler to insure (as far as it can) that each variable whose type is
+                  <span class="lstinline"><span 
+class="ecsx-1200">struct</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">S</span></span> or <span class="lstinline"><span 
+class="ecss-1200">more_aligned_int</span></span> will be allocated and aligned ’at least’ on a
+                  8-byte boundary. The <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attribute can only be used to increase the
+                  alignment, not reduce it.
+                  </p><!--l. 250--><p class="noindent" >Note that the alignment of any given <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type is required by the
+                  ISO C standard to be at least a perfect multiple of the lowest common
+                  multiple of the alignments of all of the members of the <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> in
+                  question. This means that you ’can’ effectively adjust the alignment of a
+                  <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type by attaching an <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attribute to any one of the
+                  members of such a type, but the notation illustrated in the example
+                  above is a more obvious, intuitive, and readable way to request the
+                  compiler to adjust the alignment of an entire <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">union</span></span>
+                  type.
+                  </p><!--l. 252--><p class="noindent" >As in the preceding example, you can explicitly specify the alignment (in
+                  bytes) that you wish the compiler to use for a given <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type.
+                  Alternatively, you can leave out the alignment factor and just ask the
+                  compiler to align a type to the maximum useful alignment for the
+                  target machine you are compiling for. For example, you could
+                  write:
+                  </p><!--l. 254--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb41"><a 
+ id="x22-27008r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> S</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> f[3];</span><span 
+class="pcrr7t-x-x-144"> }</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((aligned));</span></div>
+                  <!--l. 258--><p class="noindent" >Whenever you leave out the alignment factor in an <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attribute
+                  specification, the compiler automatically sets the alignment for the type to
+                  the largest alignment which is ever used for any data type on the target
+                  machine you are compiling for. Doing this can often make copy operations
+                  more efficient, because the compiler can use whatever instructions
+                  copy the biggest chunks of memory when performing copies to or
+                  from the variables which have types that you have aligned this
+                  way.
+                  </p><!--l. 260--><p class="noindent" >The <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attribute can only increase the alignment; but you can decrease
+                  it by specifying <span class="lstinline"><span 
+class="ecss-1200">packed</span></span> as well. </p>
+                                                                                       
+                                                                                       
+                  <div class="center" 
+>
+<!--l. 261--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox19"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Note that the effectiveness of <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attributes may be limited by
+inherent limitations in your linker.                                 </div>
+</div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">deprecated</span></span>       </dt><dd 
+class="list">
+                  <!--l. 262--><p class="noindent" ><a 
+ id="dx22-27009"></a> A type declared with this attribute cause a warning message to be issued
+                  each time the type is used in a declaration. The message includes location
+                  information for the type declaration. The <span class="lstinline"><span 
+class="ecss-1200">deprecated</span></span> attribute
+                  can also be used for functions and variables (see <a 
+href="main_gcc_ugse10.html#x20-250006.1">Listing 6.1</a> and
+                  <a 
+href="main_gcc_ugse11.html#x21-260006.2">Listing 6.2</a>).
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">packed</span></span>            </dt><dd 
+class="list">
+                  <!--l. 264--><p class="noindent" ><a 
+ id="dx22-27010"></a> This attribute, attached to an <span class="lstinline"><span 
+class="ecsx-1200">enum</span></span>, <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span>, or <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type definition,
+                  specified that the minimum required memory be used to represent the type.
+                  Specifying this attribute for <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span> and <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> types is equivalent to
+                  specifying the <span class="lstinline"><span 
+class="ecss-1200">packed</span></span> attribute on each of the structure or union members.
+                  The command-line option <span 
+class="cmtt-12">-fshort-enums</span> is the same as using
+                  <span class="lstinline"><span 
+class="ecss-1200">packed</span></span> attribute on all <span class="lstinline"><span 
+class="ecsx-1200">enum</span></span> declarations. Likewise is the option
+                  <span 
+class="cmtt-12">-fpack-struct</span> for a <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span>. You may only specify this attribute after
+                  a closing curly brace on an <span class="lstinline"><span 
+class="ecsx-1200">enum</span></span> definition, not in a <span class="lstinline"><span 
+class="ecsx-1200">typedef</span></span>
+                  declaration, unless that declaration also contains the definition of the
+                  <span class="lstinline"><span 
+class="ecsx-1200">enum</span></span>.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">transparent_union</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 269--><p class="noindent" ><a 
+ id="dx22-27011"></a> This attribute, attached to a <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type definition, indicates that any
+                  function parameter having that <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type causes calls to that function to
+                  be treated in a special way.
+                  </p><!--l. 271--><p class="noindent" >First, the argument corresponding to a transparent <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> type can be of any
+                  type in the union; no cast is required. Also, if the union contains a pointer
+                  type, the corresponding argument can be a null pointer constant or a
+                  void pointer expression; and if the union contains a void pointer
+                  type, the corresponding argument can be any pointer expression. If
+                  the union member type is a pointer, qualifiers like <span class="lstinline"><span 
+class="ecsx-1200">const</span></span> on the
+                  referenced type must be respected, just as with normal pointer
+                  conversions.
+                  </p><!--l. 275--><p class="noindent" >Second, the argument is passed to the function using the calling conventions
+                                                                                       
+                                                                                       
+                  of first member of the transparent union, not the calling conventions of the
+                  union itself. All members of the union must have the same machine
+                  representation; this is necessary for this argument passing to work
+                  properly.
+                  </p><!--l. 277--><p class="noindent" >Transparent unions are designed for library functions that have multiple
+                  interfaces for compatibility reasons. For example, suppose the <span class="lstinline"><span 
+class="ecss-1200">wait</span></span> function
+                  must accept either a value of type <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="cmsy-10x-x-120">*</span></span> to comply with Posix, or a value of
+                  type <span class="lstinline"><span 
+class="ecsx-1200">union</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">wait</span><span 
+class="ecss-1200"> </span><span 
+class="cmsy-10x-x-120">*</span></span> to comply with the 4.1BSD interface. If <span class="lstinline"><span 
+class="ecss-1200">wait</span></span>’s parameter
+                  were <span class="lstinline"><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200"> </span><span 
+class="cmsy-10x-x-120">*</span></span>, <span class="lstinline"><span 
+class="ecss-1200">wait</span></span> would accept both kinds of arguments, but it would also
+                  accept any other pointer type and this would make argument type checking
+                  less useful. Instead, <span class="lstinline"><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">sys</span><span 
+class="ecss-1200">/</span><span 
+class="ecss-1200">wait</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">h</span><span 
+class="ecss-1200">&#x003E;</span></span> might define the interface as
+                  follows:
+                  </p><!--l. 280--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb42"><a 
+ id="x22-27013r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> union</span><br class="fancyvrb" /><a 
+ id="x22-27015r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x22-27017r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;__ip;</span><br class="fancyvrb" /><a 
+ id="x22-27019r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> union</span><span 
+class="pcrr7t-x-x-144"> wait</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;__up;</span>
+                  <br class="fancyvrb" /><a 
+ id="x22-27021r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><span 
+class="pcrr7t-x-x-144"> wait_status_ptr_t</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((__transparent_union__));</span>
+                  <br class="fancyvrb" /><a 
+ id="x22-27023r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x22-27025r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> pid_t</span><span 
+class="pcrr7t-x-x-144"> wait</span><span 
+class="pcrr7t-x-x-144"> (wait_status_ptr_t);</span></div>
+                  <!--l. 290--><p class="noindent" >This allows either <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="cmsy-10x-x-120">*</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">union</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">wait</span><span 
+class="ecss-1200"> </span><span 
+class="cmsy-10x-x-120">*</span></span> arguments to be passed, using the
+                  <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="cmsy-10x-x-120">*</span></span> calling convention. The program can call <span class="lstinline"><span 
+class="ecss-1200">wait</span></span> with arguments of either
+                  type:
+                  </p><!--l. 292--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb43"><a 
+ id="x22-27027r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> w1</span><span 
+class="pcrr7t-x-x-144"> ()</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> w;</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> wait</span><span 
+class="pcrr7t-x-x-144"> (&amp;w);</span><span 
+class="pcrr7t-x-x-144"> }</span>
+                  <br class="fancyvrb" /><a 
+ id="x22-27029r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> w2</span><span 
+class="pcrr7t-x-x-144"> ()</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> union</span><span 
+class="pcrr7t-x-x-144"> wait</span><span 
+class="pcrr7t-x-x-144"> w;</span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> wait</span><span 
+class="pcrr7t-x-x-144"> (&amp;w);</span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+                  <!--l. 297--><p class="noindent" >With this interface, <span class="lstinline"><span 
+class="ecss-1200">wait</span></span>’s implementation might look like this:
+                  </p><!--l. 299--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb44"><a 
+ id="x22-27031r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> pid_t</span><span 
+class="pcrr7t-x-x-144"> wait</span><span 
+class="pcrr7t-x-x-144"> (wait_status_ptr_t</span><span 
+class="pcrr7t-x-x-144"> p)</span><br class="fancyvrb" /><a 
+ id="x22-27033r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span>
+                  <br class="fancyvrb" /><a 
+ id="x22-27035r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> waitpid</span><span 
+class="pcrr7t-x-x-144"> (-1,</span><span 
+class="pcrr7t-x-x-144"> p.__ip,</span><span 
+class="pcrr7t-x-x-144"> 0);</span><br class="fancyvrb" /><a 
+ id="x22-27037r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">unused</span></span>            </dt><dd 
+class="list">
+                  <!--l. 305--><p class="noindent" ><a 
+ id="dx22-27038"></a> When attached to a type (including a <span class="lstinline"><span 
+class="ecsx-1200">union</span></span> or a <span class="lstinline"><span 
+class="ecsx-1200">struct</span></span>), this attribute
+                  means that variables of that type are meant to appear possibly unused. GCC
+                  will not produce a warning for any variables of that type, even if the variable
+                  appears to do nothing. This is often the case with lock or thread classes,
+                  which are usually defined and then not referenced, but contain
+                                                                                       
+                                                                                       
+                  constructors and destructors that have nontrivial bookkeeping
+                  functions.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 308--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse13.html" >next</a>] [<a 
+href="main_gcc_ugse11.html" >prev</a>] [<a 
+href="main_gcc_ugse11.html#tailmain_gcc_ugse11.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse12.html" >front</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse12.html" >up</a>] </p></div>
+<!--l. 308--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse12.html"></a> </p> 
+</body></html> 

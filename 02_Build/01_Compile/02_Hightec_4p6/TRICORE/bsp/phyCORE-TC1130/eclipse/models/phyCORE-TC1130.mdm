@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinkerModel:LDFMemoryDescripton xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:LinkerModel="http://LinkerModel" Description="" Name="phyCORE-TC1130" EBMCFG="0x00009031">
+  <Memory Description="Data Memory Unit (DMU)" Name="Data Unit">
+    <Region Description="Data Memory" Name="SRAM" Begin="0xAFC00000" Attributes="w!xp" Length="64" LengthUnit="KB"/>
+  </Memory>
+  <Memory Description="Program Memory Unit (PMU)" Name="Program Unit">
+    <Region Description="Boot ROM (BROM)" Name="BROM" Begin="0xDFFFC000" Attributes="rx!p" Length="8" LengthUnit="KB"/>
+  </Memory>
+  <Memory Description="Program Memory Interface (PMI)" Name="Program Interface">
+    <Region Description="Scratch-Pad RAM (SPRAM)" Name="PMI_SPRAM" Begin="0xD4000000" Attributes="wx!p" Length="48" LengthUnit="KB"/>
+  </Memory>
+  <Memory Description="Data Memory Interface (DMI)" Name="Data Interface">
+    <Region Description="Local Data RAM (LDRAM)" Name="DMI_LDRAM" Begin="0xD0000000" Attributes="w!xp" Length="56" LengthUnit="KB"/>
+  </Memory>
+  <Memory Description="External RAM" Name="ERAM">
+    <Region Description="External Code Memory" Name="EXT_FLASH" Begin="0x80400000" Attributes="rx!p" Length="4"/>
+    <Region Description="External Data Memory" Name="EXT_RAM" Begin="0xa0000000" Attributes="w!xp" Length="4"/>
+  </Memory>
+  <Memory Description="" Name="EROM">
+    <Region Description="Intel Burst Flash" Name="EFLASH" Begin="0x84000000" Attributes="rx!p" Length="32"/>
+  </Memory>
+</LinkerModel:LDFMemoryDescripton>

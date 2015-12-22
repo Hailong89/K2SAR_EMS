@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<!-- saved from url=(0022)http://internet.e-mail --><!-- saved from url=(0022)http://internet.e-mail -->
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>TASKING VX-toolset for TriCore v4.3r3 Release Note</title>
+
+  
+  
+  <style type="text/css">
+p, pre, table, th, td, ul, ol, h2, h3, h4, dd, dt { margin-left: 5px; margin-right: 5px; }
+dd { font-size:10pt; font-family: sans-serif; }
+dt { font-size:10pt; font-family: sans-serif; font-weight: bold; margin-top: 10px; }
+body { font-size:10pt; font-family: sans-serif; background: #ffffff; max-width: 800px; min-width: 200px; margin: 0 0 0 30px; }
+p, th, td { font-size:10pt; font-family: sans-serif; margin-top: 2px; margin-bottom: 7px; }
+pre { font-size:10pt; font-family: monospace; margin-top: 2px; margin-bottom: 7px; }
+ul, ol { font-size:10pt; font-family: sans-serif; sans-serif; padding-left: 20px; }
+h1 { font-size: 18pt; font-style: italic; font-weight: bold; color: #006bb6; padding-left: 5px; padding-right: 5px; padding-top: 10px; padding-bottom: 10px; text-align: left; margin-top: 10px; margin-bottom: 20px; border-top: 4px solid #006bb6; border-bottom: 2px solid #006bb6; }
+h2 { font-size: 16pt; color: #006bb6; padding-top: 15px; padding-bottom: 2px; padding-left: 5px; padding-right: 5px; margin-top: 10px; margin-left: 0; margin-right: 0; margin-bottom: 5px; border-bottom: 2px solid #006bb6; }
+h3 { font-size: 12pt; color: #006bb6; margin-top:10px; margin-bottom: 5px; }
+h4 { font-size: 10pt; color: #006bb6; font-weight: bold; margin-top:5px; margin-bottom: 5px; }
+hr { border: 1px solid #006bb6; }
+table,td,th { border: 1px solid #000000; padding: 2px; border-collapse: collapse; text-align: left; vertical-align: top; }
+table { margin-bottom: 10px; margin-top: 10px; }
+a { color: #006bb6; text-decoration: none; }
+a:hover { color: #006bb6; text-decoration: underline; }
+  </style>
+</head><body>
+<h1>TASKING VX-toolset for&nbsp;TriCore v4.3r3<br>
+Release Note</h1>
+
+<h2>Scope</h2>
+
+<p>This release note covers the changes between v4.2r2
+and v4.3r3 of the <i style="font-weight: bold;">TASKING VX-toolset for
+TriCore</i>.</p>
+
+<p>For release notes prior to v4.3r1, please visit the <a style="font-weight: bold;" href="http://www.tasking.com/support/tricore/">TASKING
+TriCore support website</a>.</p>
+
+<h2>Contents</h2>
+
+<ul>
+
+  <li><a href="#important_notices">Important
+Notices</a></li>
+  <li><a href="#new_v43r3">New in v4.3r3</a></li>
+  <li><a href="#new_v43r2">New in v4.3r2</a></li>
+  <li><a href="#new_v43r1">New in v4.3r1</a></li>
+  <li><a href="#v4.3r2">Fixed Issues in v4.3r2</a></li>
+  <li><a href="#v4.3r1">Fixed Issues in v4.3r1</a></li>
+  <li><a href="#quick_start">Quick start</a></li>
+  <li><a href="#license_information">License
+information</a></li>
+</ul>
+
+<h2><a name="important_notices">Important Notices</a></h2>
+
+<h3>TriCore C++ libraries (exception handling)</h3>
+
+<p>The TriCore toolset comes with 2 sets of C++ libraries: <span style="font-family: Courier New,Courier,monospace;">libcp</span> and <span style="font-family: Courier New,Courier,monospace;">libcps</span>. The
+libcp libraries provide exception handling, while the <span style="font-family: Courier New,Courier,monospace;">libcps</span>
+libraries should not have any exception handling. The <span style="font-family: Courier New,Courier,monospace;">libcps</span> was
+build incorrectly causing the library still to hold some exception
+handling
+(option <span style="font-family: Courier New,Courier,monospace;">--c++0x</span>
+enables exception handling). This is resolved by using
+option <span style="font-family: Courier New,Courier,monospace;">--no-exception</span>.</p>
+
+<p>When you relied on the <span style="font-family: Courier New,Courier,monospace;">libcps</span>
+libraries to catch any exception, then you should now switch over to
+the
+<span style="font-family: Courier New,Courier,monospace;">libcp</span>
+library instead.<br>
+</p>
+
+<h3>TriCore _fpu libraries (rounding mode and exception flags)</h3>
+
+<p>When generating code and using the FPU the compiler will generate
+FPU instructions and in some cases a library call. These library calls
+exist in <span style="font-family: Courier New,Courier,monospace;">_fpu</span>
+libraries. These calls will be generated when optimizing for code size.
+These functions on their turn would call the FPU and perform some extra
+instructions to fulfill the desired operation. As extra, these
+functions
+would clear the exception flags and set the rounding mode to 'rounding
+to nearest' (which is also default of the FPU).</p>
+
+<p>The problem occurred in case in the user startup
+code the rounding mode was set different than 'rounding to nearest'.
+The mode would be changed in the library function and would not be
+restored afterwards. The result of floating point operations might be
+not as expected. However the compiler is not changing the exception
+flags or rounding mode when generating the FPU
+instructions.</p>
+
+<p>The functions of the <span style="font-family: Courier New,Courier,monospace;">_fpu</span>
+libraries that are called by compiler generated code are no longer
+resetting the exception flags and do not change the rounding mode of
+the FPU. According to the IEEE, standard resetting the exception flags
+and setting the desired rounding mode is the responsibility of the user.<br>
+</p>
+
+<p>When you use FPU and you set another rounding mode than 'rounding to
+nearest', you must be aware of the fact that results may differ when
+using the new <span style="font-family: Courier New,Courier,monospace;">_fpu</span>
+libraries.</p>
+
+<h3>DAS 4.4.2 required</h3>
+
+<p>With this release the new TC23x TriBoard is supported. This board
+requires the latest DAS 4.4.2 of Infineon for debugging. When startinga
+debug session with any TriBoard, the installed DAS version is checked.
+In case it is lower than 4.4.2 you are notfied about this. You may
+download the latest DAS version from the <a style="font-weight: bold;" href="http://www.infineon.com/das" target="_blank">Infineon website</a>.</p>
+
+<h3>C pragma clear/noclear in C++ source</h3>
+
+<p>With the fix of problem <a href="http://issues.tasking.com/?issueid=160-38960">160-38960</a> the
+following must be taken into account:</p>
+
+<p>The C pragma's are originally not designed for use in C++ sources.
+They are supported as far as possible. The way the C++ compiler handles
+them may therefor deviate from how the C compiler does.
+With the #pragma clear /noclear there is a small deviation which must
+be taken into account.
+When twice the same pragma is used with a restore and no data is
+defined between, as shown below:
+<br>
+<br>
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+noclear on
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;int
+var1;
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+noclear restore
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;functions....
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+noclear on
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;int
+var2;
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+noclear restore
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;int
+var3; </span><br>
+<br>
+then the C++ compiler will not generate the first #pragma noclear
+restore. This means that the C compiler handles only one restore on 2
+"noclear" settings. This means that var3 will also be uninitialized.
+Since the default setting of the toolset is that variables are cleared
+(initialized with zero) these pragma's must be used as follows, taken
+the example above:
+<br>
+<br>
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+noclear
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;int
+var1;
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+clear
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;functions....
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+noclear
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;int
+var2;
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;#pragma
+clear
+</span><br style="font-family: Courier New,Courier,monospace;">
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;int
+var3; </span><br>
+<br>
+This will make var3 being initialized with zero. </p>
+
+<h2><a name="new_v43r3">New in v4.3r3</a></h2>
+
+<p>This section gives an overview of the most important new
+features and improvements in v4.3r3. See the sections with <a href="#v4.3r3">fixed issues</a>
+for a complete list.</p>
+
+<h3>SFR support TC27x C-step<br>
+</h3>
+
+<p>In this release one new derivative is supported, the TC27x C-step.
+Only SFR build support is available and tested with the Infineon
+simulator (TSIM).
+No hardware of the TC27x C-step was available to test on.</p>
+
+<h3>Updated TC27x B-step SFR file</h3>
+
+<p>For the AURIX derivative TC27x B-step the SFR file has
+been updated to the latest User Manual from Infineon, version v1.4.1.
+The updated files
+(<span style="font-family: Courier New,Courier,monospace;">tc&lt;xx&gt;.sfr</span>,
+<span style="font-family: Courier New,Courier,monospace;">tc&lt;xx&gt;def</span>
+and <span style="font-family: Courier New,Courier,monospace;">tc&lt;xx&gt;.xml</span>)
+can be found
+in the <span style="font-family: Courier New,Courier,monospace;">include/sfr</span>
+directory (for TriCore and MCS).</p>
+
+<h3>Updated TC29x SFR file</h3>
+
+<p>For the AURIX derivative TC29x the SFR file has
+been updated to the latest User Manual from Infineon, version v1.1.1.
+The updated files
+(<span style="font-family: Courier New,Courier,monospace;">tc&lt;xx&gt;.sfr</span>,
+<span style="font-family: Courier New,Courier,monospace;">tc&lt;xx&gt;def</span>
+and <span style="font-family: Courier New,Courier,monospace;">tc&lt;xx&gt;.xml</span>)
+can be found
+in the <span style="font-family: Courier New,Courier,monospace;">include/sfr</span>
+directory (for TriCore and MCS).</p>
+
+<h3>TriBoard TC29x support</h3>
+
+<p>The AURIX TriBoard TC29x is supported.</p>
+
+<h3>TriBoard TC26x support</h3>
+
+<p>The AURIX TriBoard TC26x is supported. However it is not possible to
+access the XC800 core through the Debug Access Port which is in this
+AURIX derivative.</p>
+
+<h3>TriBoard TC23x support<br>
+</h3>
+
+<p>The AURIX TriBoard TC23x is supported.</p>
+
+<p><span style="font-weight: bold;">Important notice</span>: To be able
+to access this board you need DAS version 4.4.2.<br>
+</p>
+
+<p>
+</p>
+
+<p>
+</p>
+
+<h2><a name="new_v43r2">New in v4.3r2</a></h2>
+
+<p>This section gives an overview of the most important new
+features and improvements in v4.3r2. See the sections with <a href="#v4.3r2">fixed issues</a>
+for a complete list.</p>
+
+<h3>SFR support TC23x and TC23x_adas</h3>
+
+<p>In this release 2 new derivatives are supported, the TC23x and
+TC23x_adas. Although these are AURIX multi-core devices they have 1
+TriCore core (lockstep). They also only have 1 MCS which is supported
+too.</p>
+
+<p> Only SFR build support is available and tested with the Infineon
+TSIM. No hardware of the TC27x was available to test on.<br>
+</p>
+
+<h2><a name="new_v43r1">New in v4.3r1</a></h2>
+
+<p>This section gives an overview of the most important new
+features and improvements in v4.3r1. See the sections with <a href="#v4.3r1">fixed issues</a>
+for a complete list.</p>
+
+<h3>Generate a makefile using Eclipse IDE<br>
+</h3>
+
+<p>For batch-processing it is now possible to call the Eclipsec.exe to
+generate a makefile for a project without user interference and without
+starting Eclipse GUI. The makefile can then be used to build the
+project in batch-mode without Eclipse being started, but by invoking
+the make utility (<span style="font-family: Courier New,Courier,monospace;">amk.exe</span>)
+from command-line. Refer to <a href="http://issues.tasking.com/?issueid=160-38819">160-38819</a>.</p>
+
+<h3>Support for AURIX Boot Mode Header (CRC)</h3>
+
+<p>In this release the TriCore linker is capable of generating up to
+four valid Boot Mode Headers (BMHs) for AURIX derivatives. An extension
+in LSL is available. The start address, begin address and end address
+need to be specified. The linker will calculate the CRC and writes this
+into the BMH section.<br>
+</p>
+
+<p>An interface within Eclipse is available for specifying the required
+information for the linker. At least one BMH needs to be reserved, to
+make sure that the Triboard won't be bricked. The interface-page can be
+found under menu "<span style="font-family: Courier New,Courier,monospace;">Project
+Properties-&gt;C/C++ Build-&gt;Memory, tab
+Boot Mode Headers</span>". This is only valid for AURIX derivatives.<br>
+</p>
+
+<h3>TriBoard TC27xB support</h3>
+
+<p>The AURIX TriBoard TC27x B-step (production device) is supported.<br>
+</p>
+
+<h2><a name="v4.3r3"> Fixed issues for v4.3r3 </a></h2>
+
+<h3>New Features </h3>
+
+<ul>
+
+  <li><a href="http://issues.tasking.com/?issueid=160-39072">160-39072</a>
+- TriBoard TC29x support </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39325">160-39325</a>
+- TriBoard TC26x support </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39624">160-39624</a>
+- Updated SFR file for TC29x </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39659">160-39659</a>
+- Updated SFR file for TC27xB </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39758">160-39758</a>
+- SFR support for TC27xC </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39778">160-39778</a>
+- TriBoard TC23x support </li>
+</ul>
+
+<h3>Fixed Problems </h3>
+
+<ul>
+
+  <li><a href="http://issues.tasking.com/?issueid=160-37975">160-37975</a>
+- TC1167 LSL file has incorrect PFlash size </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-38428">160-38428</a>
+- cctc sub option -pB causes cctc F106: ["cctc.spec" 505/0] script
+error: invalid diagnostics tag </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-38921">160-38921</a>
+- C++ <span style="font-family: Courier New,Courier,monospace;">#pragma
+message</span> is not ignored / passed through to C compiler </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-38960">160-38960</a>
+- C++ compiler no longer supports <span style="font-family: Courier New,Courier,monospace;">#pragma clear</span>
+/ <span style="font-family: Courier New,Courier,monospace;">noclear</span>
+  </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39590">160-39590</a>
+- C++ <span style="font-family: Courier New,Courier,monospace;">#pragma
+section</span> not working for the initialized module static variables </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39595">160-39595</a>
+- ctc issues error E209: #pragma clear: unexpected argument</li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39606">160-39606</a>
+- When there is no XC800 init data the section .rodata.xc800init should
+not be generated </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39634">160-39634</a>
+- Segmentation fault error when -g (debug) switch is passed to the C++
+compiler </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39768">160-39768</a>
+- Missing debugger config-files for AURIX derivatives tc29x, tc26x and
+tc23x </li>
+</ul>
+
+<p>The list of <a href="http://issues.tasking.com/?project=160&amp;version=v4.3r3">open
+issues for v4.3r3</a> can be found on the internet.</p>
+
+<h2><a name="v4.3r2"> Fixed issues for v4.3r2 </a></h2>
+
+<h3>New Features </h3>
+
+<ul>
+
+  <li><a href="http://issues.tasking.com/?issueid=160-39739">160-39739</a>
+- SFR support for TC23x_adas </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39740">160-39740</a>
+- SFR support for TC23x </li>
+</ul>
+
+<p>The list of <a href="http://issues.tasking.com/?project=160&amp;version=v4.3r2">open
+issues for v4.3r2</a> can be found on the internet.</p>
+
+<h2><a name="v4.3r1"> Fixed issues for v4.3r1 </a></h2>
+
+<h3>New Features </h3>
+
+<ul>
+
+  <li><a href="http://issues.tasking.com/?issueid=160-38819">160-38819</a>
+- possibility to generate or update the makefile(s) from the command
+line </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-38891">160-38891</a>
+- TriCore TC27x family Boot Mode Header support </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-38983">160-38983</a>
+- support for TC2xxx CRC unit </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39326">160-39326</a>
+- TriBoard tc27xb support </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39372">160-39372</a>
+- Elfpatch: give overview when finished with input file(s) </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39373">160-39373</a>
+- Elfpatch: a --warning option is required </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39374">160-39374</a>
+- Elfpatch: an extra option to minimize the growth of an object for DRM
+  </li>
+</ul>
+
+<h3>Fixed Problems </h3>
+
+<ul>
+
+  <li><a href="http://issues.tasking.com/?issueid=160-38438">160-38438</a>
+- incorrect generated code when using constant propagation
+optimization. </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39177">160-39177</a>
+- No warning W154 when estimated user stack size is larger than the
+allocated size </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39518">160-39518</a>
+- Possible incorrect alignment of groups of sections </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39525">160-39525</a>
+- FPU floating point libraries should not set rounding mode nor should
+they clear the exception flags </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39561">160-39561</a>
+- LSL memory references in run_addr/load_addr resolve to the first
+mapping result for a memory mirror </li>
+  <li><a href="http://issues.tasking.com/?issueid=160-39574">160-39574</a>
+- libcps contains exception handling , even if exception handling is
+turned off </li>
+</ul>
+
+<p>The list of <a href="http://issues.tasking.com/?project=160&amp;version=v4.3r1">open
+issues for v4.3r1</a> can be found on the internet.</p>
+
+<h2><a name="quick start">Quick
+start</a></h2>
+
+<p>For a quick start, just start the <i>TriCore Eclipse IDE</i>
+from the Start menu. This will start the Eclipse based
+development environment. You will be asked to select a workspace. In
+case you used Eclipse before it is recommended to select a new
+workspace. After clicking OK, you will see the 'Welcome' view. On this
+view you will see icons that link to specific information. You can, for
+example, select the 'Samples' icon and import the TriCore project
+examples, PCP project examples, MCS project examples, 8051 project
+examples and/or ARM example projects.</p>
+
+<p>Another icon on the Welcome page,
+the 'First
+Steps' icon,
+links to the 'TriCore Getting Started' document. This is a good
+starting point for exploring the capabilities
+of the environment and the tools.</p>
+
+<h2><a name="license information">License
+Information</a></h2>
+
+<h3>15-day Trial</h3>
+
+<p>This release
+does not support the
+regular 15-day
+trial mode.
+</p>
+
+<h3>How to obtain a license key</h3>
+
+<p>All
+TASKING products include the industry standard FLEXlm license
+management software. In order to be able to run this toolset, you will
+need a license key. You can only obtain a license key if you have
+purchased this product.</p>
+
+<p>To
+obtain a license key, you can start the License Administrator from the
+program group of your installed TASKING toolset. In case you still need
+to install the toolset, you can start the License Administrator by
+setting a check mark at the end of the setup/installation process. The
+wizard of the License Administrator will guide you through the steps to
+obtain your license key.</p>
+
+<p>Once you have received your license key from Altium, you can
+install it on your system by running the License Administrator again.
+Alternatively you can simply save the license key as the file
+'license.dat' in the <span style="font-family: Courier New,Courier,monospace;">C:\flexlm</span>
+folder on your PC's hard disk.</p>
+
+<p>More
+information is available on&nbsp;<a href="http://www.tasking.com/support/flexlm">http://www.tasking.com/support/flexlm</a>.
+On this page you also find assistance to setup a floating network
+license, or for installation on Linux or Sun systems.</p>
+
+<h3>Bundles</h3>
+
+<p>Altium's
+<i>TASKING VX-toolset for TriCore</i>
+is available
+as Standard, Professional and Premium Edition. At installation time all
+tools are installed, no matter what bundle you purchased or want to
+evaluate. However, each tool is protected with its own unique key.
+After your purchase you will receive a license key - specific for the
+bundle - to unlock the appropriate tools.</p>
+
+<hr>
+</body></html>

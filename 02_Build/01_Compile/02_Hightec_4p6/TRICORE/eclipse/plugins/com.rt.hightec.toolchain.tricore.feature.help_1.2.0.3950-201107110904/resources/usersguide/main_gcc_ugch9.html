@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>9 Intrinsic Functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch10.html" >next</a>] [<a 
+href="main_gcc_ugse17.html" >prev</a>] [<a 
+href="main_gcc_ugse17.html#tailmain_gcc_ugse17.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch9.html">tail</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch9.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">9</span>  <a 
+href="main_gcc_ug.html#QQ2-30-45" id="x30-410009">Intrinsic Functions</a></h2>
+<a 
+ id="dx30-41001"></a>
+<a 
+ id="dx30-41002"></a>
+<!--l. 3--><p class="noindent" >Inline assembly is very powerful method of inserting a passage of assembly language inside the
+C code. Often used assembly instruction are collected in header file. The intrinsic functions
+distinguish from the assembly instruction in a leading <span class="lstinline"><span 
+class="ecss-1200">__</span></span>. Some of these intrinsics functions
+request a parameter.
+</p><!--l. 6--><p class="noindent" >The intrinsic functions are declared in the header file machine/intrinsics.h
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_bisr(int)</span></span>       </dt><dd 
+class="list">
+                  <!--l. 2--><p class="noindent" ><a 
+ id="dx30-41003"></a> Begin ISR. Save the lower context of the currently executing task, set
+                  the current CPU priority number to a value, and enable interrupts.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_mfcr(int)</span></span>       </dt><dd 
+class="list">
+                  <!--l. 3--><p class="noindent" ><a 
+ id="dx30-41004"></a> Move from core register. Move the contents of the core SFR register
+                  to a data register.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_mtcr(int, int)</span></span> </dt><dd 
+class="list">
+                  <!--l. 4--><p class="noindent" ><a 
+ id="dx30-41005"></a> Move to core register. Move the value from a data register to the core SFR.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 4--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox28"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This instruction can be executed in supervisor mode only.          </div>
+</div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_syscall(&#x003C;tin&#x003E;)</span></span> </dt><dd 
+class="list">
+                  <!--l. 5--><p class="noindent" ><a 
+ id="dx30-41006"></a> Generates a <a 
+ id="lbl:syscall">system call</a>, this means generating a trap of class 6 with the
+                  trap identification number <span 
+class="cmmi-12">&#x003C;</span>tin<span 
+class="cmmi-12">&#x003E;</span>. The parameter <span 
+class="cmmi-12">&#x003C;</span>tin<span 
+class="cmmi-12">&#x003E; </span>must
+                  be a literal from 0 to 255, otherwise the assembler will issue a
+                  error message. For the declaration of a trap service routine see
+                  <a 
+href="main_gcc_ugch11.html#x32-4300011">Listing 11</a>.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_enable()</span></span>        </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 6--><p class="noindent" ><a 
+ id="dx30-41007"></a> Global interrupt <a 
+ id="lbl:eint">enable</a>.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_disable()</span></span>       </dt><dd 
+class="list">
+                  <!--l. 7--><p class="noindent" ><a 
+ id="dx30-41008"></a> Disables global interrupt.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_debug()</span></span>         </dt><dd 
+class="list">
+                  <!--l. 8--><p class="noindent" ><a 
+ id="dx30-41009"></a> If the debug mode is enabled, cause a debug event; otherwise, execute a
+                  NOP.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_dsync()</span></span>         </dt><dd 
+class="list">
+                  <!--l. 9--><p class="noindent" ><a 
+ id="dx30-41010"></a> All data access is served before the next data access.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_isync()</span></span>         </dt><dd 
+class="list">
+                  <!--l. 10--><p class="noindent" ><a 
+ id="dx30-41011"></a> All preceding instructions are executed by the CPU. Then the pipeline is
+                  flushed before the next instruction is executed.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_rstv()</span></span>          </dt><dd 
+class="list">
+                  <!--l. 11--><p class="noindent" ><a 
+ id="dx30-41012"></a> Reset overflow status flags/bits in PSW.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_rslcx()</span></span>         </dt><dd 
+class="list">
+                  <!--l. 12--><p class="noindent" ><a 
+ id="dx30-41013"></a> Restore lower context and load the contents of the memory location pointed
+                  to by the PCX field in PCXI into register A2-A7,D0-D7, and the PC. This
+                  operation in effect restores the register contents of a previously saved lower
+                  context.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_svlcx()</span></span>         </dt><dd 
+class="list">
+                  <!--l. 13--><p class="noindent" ><a 
+ id="dx30-41014"></a> Save lower context. Store the contents of register A2-A7, D0-D7, and the
+                  current PC to the memory location pointed to by the PCX field in PCXI.
+                  This operation in effect saves the lower context of the currently executing
+                  task.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">_nop()</span></span>            </dt><dd 
+class="list">
+                  <!--l. 14--><p class="noindent" ><a 
+ id="dx30-41015"></a> no operation.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch10.html" >next</a>] [<a 
+href="main_gcc_ugse17.html" >prev</a>] [<a 
+href="main_gcc_ugse17.html#tailmain_gcc_ugse17.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch9.html" >front</a>] [<a 
+href="main_gcc_ugpa2.html#main_gcc_ugch9.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch9.html"></a> </p> 
+</body></html> 

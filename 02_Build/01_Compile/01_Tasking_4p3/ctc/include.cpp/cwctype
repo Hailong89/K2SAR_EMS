@@ -1,0 +1,38 @@
+/**************************************************************************
+**
+**  FILE        :  cwctype
+**
+**  DESCRIPTION :  new style standard C include file
+**
+**  COPYRIGHT   :  Copyright 1998-2014 Altium BV
+**
+**************************************************************************/
+
+#ifndef __CWCTYPE_H
+#define __CWCTYPE_H     1
+
+#include <tasking_config.h>
+
+__TASKING_START_NAMESPACE
+
+#include        __TASKING_C_NATIVE_HEADER(wctype.h)
+
+#undef iswalnum
+#undef iswalpha
+#undef iswblank
+#undef iswcntrl
+#undef iswdigit
+#undef iswgraph
+#undef iswlower
+#undef iswprint
+#undef iswpunct
+#undef iswspace
+#undef iswupper
+#undef iswxdigit
+#undef towlower
+#undef towupper
+
+__TASKING_END_NAMESPACE
+__TASKING_USING_NAMESPACE
+
+#endif /* __CWCTYPE_H */

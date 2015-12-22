@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Circular Addressing</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse27.html" >next</a>] [<a 
+href="main_gcc_ugse25.html" >prev</a>] [<a 
+href="main_gcc_ugse25.html#tailmain_gcc_ugse25.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse26.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse26.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.6</span>  <a 
+href="main_gcc_ug.html#QQ2-44-68" id="x44-6300014.6">Circular Addressing</a></h3>
+<a 
+ id="dx44-63001"></a>
+<!--l. 3--><p class="noindent" >The TriCore Architecture supports the circular addressing mode. This mode implements a ring
+buffer structure in the hardware. The buffer has a predefined amount of items which can be
+accessed in a circular way: Each time a value is read from the buffer, the pointer to the item
+which is to be read on the next access, is incremented. If the last item is read, the pointer to
+this buffer is set to the first field. By using this technique it is possible to access a field of values
+in turn by using only one pointer. This is extremely useful in DSP applications such as digital
+filters.
+</p><!--l. 5--><p class="noindent" >Each ring buffer is defined by a control structure held by an instance of the type <span class="lstinline"><span 
+class="ecss-1200">circ_t</span></span>. This
+instance holds status information for each ring buffer. It defines the base address, the current
+index and the length of the ring buffer. By using this status information, the microcontroller
+calculates the effective address by adding the base address and the current index.
+<a 
+ id="dx44-63002"></a>
+</p><!--l. 8--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb104"><a 
+ id="x44-63004r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x44-63006r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> void</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;buf;</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> base</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x44-63008r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> index;</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> index</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x44-63010r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> length;</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> length</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> bytes</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x44-63012r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><span 
+class="pcrr7t-x-x-144"> circ_t</span><span 
+class="pcrr7t-x-x-144"> __attribute__((__ptr64__));</span></div>
+<div class="center" 
+>
+<!--l. 16--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox44"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The status information should not be written by the program.      </div>
+</div>
+<!--l. 18--><p class="noindent" >This structure is defined in <span 
+class="cmtt-12">machine</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">circ.h</span>. This headerfile also defines macros for initialising
+the ring buffer in order to put items to it or get items from it. The following functions are
+available:
+                                                                                       
+                                                                                       
+</p><!--l. 20--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">opPd(&#x003C;type&#x003E;,&#x003C;gettype&#x003E;,&#x003C;puttype&#x003E;,&#x003C;size&#x003E;,[A])</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 21--><p class="noindent" >Wherein <span class="lstinline"><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">type</span><span 
+class="ecss-1200">&#x003E;</span></span> is the type of the items which are to be stored in
+                  the ring buffer, <span class="lstinline"><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">gettype</span><span 
+class="ecss-1200">&#x003E;</span></span> and <span class="lstinline"><span 
+class="ecss-1200">&#x003C;</span><span 
+class="ecss-1200">puttype</span><span 
+class="ecss-1200">&#x003E;</span></span> are the TriCore types for
+                  the get and put instructions (e.g. <span class="lstinline"><span 
+class="ecss-1200">w</span></span> for <span class="lstinline"><span 
+class="ecsx-1200">int</span></span>, <span class="lstinline"><span 
+class="ecss-1200">h</span></span> for <span class="lstinline"><span 
+class="ecsx-1200">short</span></span> or <span class="lstinline"><span 
+class="ecss-1200">b</span></span> for <span class="lstinline"><span 
+class="ecsx-1200">char</span></span>),
+                  <span class="lstinline"><span 
+class="ecss-1200">size</span></span> is the size of the ring buffer in bytes. If double names should be
+                  used inside the functions, the last parameter <span class="lstinline"><span 
+class="ecss-1200">A</span></span> may be added. This
+                  parameter is optional.
+                  </p><!--l. 23--><p class="noindent" >Depending on this macro the following inline functions are created for
+                  each type:
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">circ_t init_circ_&#x003C;type&#x003E; (circ_t control, &#x003C;type&#x003E; *buffer, short length)</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 25--><p class="noindent" >Initialises  the  ring  buffer  at  the  location  <span class="lstinline"><span 
+class="ecss-1200">buffer</span></span>  with  the  control
+                  structure <span class="lstinline"><span 
+class="ecss-1200">control</span></span> and the length <span class="lstinline"><span 
+class="ecss-1200">length</span></span> for the storage of variables of
+                  the type <span class="lstinline"><span 
+class="ecss-1200">type</span></span>. This function returns the modified control structure.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">circ_t get_circ_&#x003C;type&#x003E; (circ_t control, &#x003C;type&#x003E; *ptrreturn);</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 27--><p class="noindent" >Reads the current value of the ring buffer defined by <span class="lstinline"><span 
+class="ecss-1200">control</span></span> and returns
+                  it in <span class="lstinline"><span 
+class="ecss-1200">ptrreturn</span></span>. This pointer must be of the same type as the items stored
+                  in the buffer. The function returns the modified control structure.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">circ_t put_circ_&#x003C;type&#x003E; (circ_t control, &#x003C;type&#x003E; value);</span></span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 29--><p class="noindent" >Writes <span class="lstinline"><span 
+class="ecss-1200">value</span></span> to the current item of the ring buffer defined by <span class="lstinline"><span 
+class="ecss-1200">control</span></span>.
+                  <span class="lstinline"><span 
+class="ecss-1200">value</span></span> must be of the same type as the items stored in the buffer. The
+                  function returns the modified control structure.</p></dd></dl>
+<div class="center" 
+>
+<!--l. 32--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox45"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The functions defined by the macro <span class="lstinline"><span 
+class="ecss-1200">opPd</span><span 
+class="ecss-1200">()</span></span> are inline functions. To
+expand them inline, either the option <span 
+class="cmtt-12">-finline</span> or an optimisation
+level must be set. If this is not done, function calls are generated.   </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 34--><p class="noindent" >The functions for the most common used types are predefined in <span 
+class="cmtt-12">machine</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">circ.h</span>. Since some
+of these types consist of two words, and a space is not allowed in a function call, these
+types are aliased by a <span class="lstinline"><span 
+class="ecsx-1200">typedef</span></span> in <span 
+class="cmtt-12">machine</span><span 
+class="cmsy-10x-x-120">\</span><span 
+class="cmtt-12">circ.h</span>. Because of that it is normally not
+necessary to execute <span class="lstinline"><span 
+class="ecss-1200">opPd</span><span 
+class="ecss-1200">()</span></span> in user-defined programs. The functions for these types are
+available:
+</p>
+<div class="center" 
+>
+<!--l. 36--><p class="noindent" >
+</p>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug7x.png" alt=""  /></div></div>
+<!--l. 54--><p class="noindent" >These predefined functions include <span class="lstinline"><span 
+class="ecss-1200">init_circ_ulong</span></span>, <span class="lstinline"><span 
+class="ecss-1200">get_circ_short</span></span>, <span class="lstinline"><span 
+class="ecss-1200">put_circ_llong</span></span>
+etc.
+</p><!--l. 56--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 58--><p class="noindent" >This example shows how to create a buffer using circular addressing. The buffer <span class="lstinline"><span 
+class="ecss-1200">buf</span></span>
+contains 20 items which are controlled by <span class="lstinline"><span 
+class="ecss-1200">ctrl</span></span>. The buffer is initialised with the sequence
+<span class="lstinline"><span 
+class="ecss-1200">20,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">19,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">18,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">...</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">2,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">1</span></span>. Afterwards the content of the buffer is read. Note that the variable <span class="lstinline"><span 
+class="ecss-1200">i</span></span>
+is never used to address the current item in the ring buffer; this is all done by the
+hardware.
+</p><!--l. 60--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb105"><a 
+ id="x44-63014r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #include</span><span 
+class="pcrr7t-x-x-144"> "machine/circ.h"</span><br class="fancyvrb" /><a 
+ id="x44-63016r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x44-63018r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .zdata</span>
+<br class="fancyvrb" /><a 
+ id="x44-63020r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> buf[20]</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((aligned(8)))</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> 1,2,3,4,5,6,7,8,9,0</span><span 
+class="pcrr7t-x-x-144"> };</span>
+<br class="fancyvrb" /><a 
+ id="x44-63022r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><br class="fancyvrb" /><a 
+ id="x44-63024r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x44-63026r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main()</span><br class="fancyvrb" /><a 
+ id="x44-63028r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x44-63030r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x44-63032r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> circ_t</span><span 
+class="pcrr7t-x-x-144"> ctrl;</span><br class="fancyvrb" /><a 
+ id="x44-63034r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> long</span><span 
+class="pcrr7t-x-x-144"> ll;</span>
+<br class="fancyvrb" /><a 
+ id="x44-63036r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> i;</span><br class="fancyvrb" /><a 
+ id="x44-63038r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x44-63040r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ctrl</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> init_circ_long(ctrl,</span><span 
+class="pcrr7t-x-x-144"> buf,</span><span 
+class="pcrr7t-x-x-144"> 20&#x22C6;sizeof(long));</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x44-63042r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x44-63044r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //initialize</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> buffer</span><br class="fancyvrb" /><a 
+ id="x44-63046r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> 20;</span><span 
+class="pcrr7t-x-x-144"> i++)</span>
+<br class="fancyvrb" /><a 
+ id="x44-63048r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ctrl</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> put_circ_long(ctrl,</span><span 
+class="pcrr7t-x-x-144"> 20-i);</span><br class="fancyvrb" /><a 
+ id="x44-63050r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x44-63052r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //read</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> buffer</span><br class="fancyvrb" /><a 
+ id="x44-63054r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> (i</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span><span 
+class="pcrr7t-x-x-144"> i</span><span 
+class="pcrr7t-x-x-144"> &#x003C;</span><span 
+class="pcrr7t-x-x-144"> 20;</span><span 
+class="pcrr7t-x-x-144"> i++)</span><span 
+class="pcrr7t-x-x-144"> {</span>
+<br class="fancyvrb" /><a 
+ id="x44-63056r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ctrl</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> get_circ_long(ctrl,</span><span 
+class="pcrr7t-x-x-144"> &amp;ll);</span>
+<br class="fancyvrb" /><a 
+ id="x44-63058r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> //do</span><span 
+class="pcrr7t-x-x-144"> something</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> ll</span><br class="fancyvrb" /><a 
+ id="x44-63060r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x44-63062r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> return</span><span 
+class="pcrr7t-x-x-144"> 1;</span><br class="fancyvrb" /><a 
+ id="x44-63064r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse27.html" >next</a>] [<a 
+href="main_gcc_ugse25.html" >prev</a>] [<a 
+href="main_gcc_ugse25.html#tailmain_gcc_ugse25.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse26.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse26.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse26.html"></a> </p> 
+</body></html> 

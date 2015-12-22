@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>tricore-objdump</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 590--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse54.html" >next</a>] [<a 
+href="main_gcc_ugse52.html" >prev</a>] [<a 
+href="main_gcc_ugse52.html#tailmain_gcc_ugse52.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse53.html">tail</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse53.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">21.6</span>  <a 
+href="main_gcc_ug.html#QQ2-82-229" id="x82-22000021.6">tricore-objdump</a></h3>
+<!--l. 592--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.6.1</span>  <a 
+href="#x82-22100021.6.1" id="x82-22100021.6.1">Description</a></h4>
+<!--l. 594--><p class="noindent" ><span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">[options] &#x003C;objfile&#x003E;</span>
+</p><!--l. 596--><p class="noindent" >The <span 
+class="cmtt-12">tricore-objdump</span> utility can be used to extract information from object files, static
+libraries, and shared libraries and then list information in a human-readable form. It can be
+used to dump the information from several different formats of object files. This information is
+mostly useful to programmers who are working on the compilation tools, as opposed to
+programmers who just want their program to compile and work.
+</p><!--l. 598--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.6.2</span>  <a 
+href="#x82-22200021.6.2" id="x82-22200021.6.2">Invocation</a></h4>
+<!--l. 600--><p class="noindent" >At least one of the following switches must be given
+</p><!--l. 602--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-a, --archive-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 603--><p class="noindent" ><a 
+ id="dx82-222001"></a> If any of the <span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E; </span>files are archives, display the archive header
+                  information (in a format similar to ’ls -l’). Besides the information you
+                  could list with <span 
+class="cmtt-12">tricore-ar</span> <span 
+class="cmtt-12">tv</span>, <span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">-a </span>shows the object
+                  file format of each archive member.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-d, --disassemble</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 605--><p class="noindent" ><a 
+ id="dx82-222002"></a> Display the assembler mnemonics for the machine instructions from
+                  <span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E;</span>. This option only disassembles those sections which are expected
+                  to contain instructions. </p>
+                  <div class="center" 
+>
+<!--l. 606--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox124"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If you have compiled your program with <span 
+class="cmtt-12">-mcode-pic</span> the compiler
+writes the original address of each function before its first instruction.
+If this function is disassembled, random mnemonics are displayed in
+the disassembly at the start of the function. This does not affect the
+correct working of the program!                                    </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-D, --disassemble-all</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 608--><p class="noindent" >Like <span 
+class="cmtt-12">-d</span>, but disassemble the contents of all sections, not just those expected
+                  to contain instructions.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-f, --file-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 610--><p class="noindent" ><a 
+ id="dx82-222003"></a> Display summary information from the overall header of each of the
+                  <span 
+class="cmmi-12">&#x003C;</span>objfile<span 
+class="cmmi-12">&#x003E; </span>files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-g, --debugging</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 612--><p class="noindent" >Display debug information in object file.  This is a generic option and not
+                  available for TriCore-targets, since it can not handle DWARF-2 debug
+                  information.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-h, --section-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 621--><p class="noindent" ><a 
+ id="dx82-222004"></a> Display summary information from the section headers of the object
+                  file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-H, --help</span>       </dt><dd 
+class="list">
+                  <!--l. 623--><p class="noindent" >Print a summary of the options of <span 
+class="cmtt-12">tricore-objdump</span> and exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-i, --info</span>       </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 625--><p class="noindent" ><a 
+ id="dx82-222005"></a><a 
+ id="dx82-222006"></a> List object formats and architectures supported.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-p, --private-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 627--><p class="noindent" >File header contents that are specific to the object format.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-r, --reloc</span>      </dt><dd 
+class="list">
+                  <!--l. 629--><p class="noindent" ><a 
+ id="dx82-222007"></a> Print the relocation entries of the file. If used with <span 
+class="cmtt-12">-d</span> or <span 
+class="cmtt-12">-D</span>, the relocations
+                  are printed interspersed with the disassembly.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-R, --dynamic-reloc</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 631--><p class="noindent" ><a 
+ id="dx82-222008"></a> Print the dynamic relocation entries of the file. This is only meaningful for
+                  dynamic objects, such as certain types of shared libraries.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-s, --full-contents</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 633--><p class="noindent" ><a 
+ id="dx82-222009"></a><a 
+ id="dx82-222010"></a> Display the full contents of all sections requested.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-S, --source</span>    </dt><dd 
+class="list">
+                  <!--l. 635--><p class="noindent" ><a 
+ id="dx82-222011"></a><a 
+ id="dx82-222012"></a> Display source code intermixed with disassembly, if possible. Implies
+                  <span 
+class="cmtt-12">-d</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-t, --syms</span>       </dt><dd 
+class="list">
+                  <!--l. 637--><p class="noindent" ><a 
+ id="dx82-222013"></a> Print the symbol table entries of the file. This is similar to the information
+                  provided by the <span 
+class="cmtt-12">tricore-nm</span> program.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-T, --dynamic-syms</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 639--><p class="noindent" ><a 
+ id="dx82-222014"></a> Print the dynamic symbol table entries of the file. This is only meaningful
+                  for dynamic objects, such as certain types of shared libraries. This is similar
+                  to the information provided by the ’nm’ program when given the <span 
+class="cmtt-12">-D</span>
+                  (<span 
+class="cmtt-12">--dynamic</span>) option.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v, --version</span>   </dt><dd 
+class="list">
+                  <!--l. 641--><p class="noindent" >Print the version number of <span 
+class="cmtt-12">tricore-objdump</span> and exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-x, --all-headers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 643--><p class="noindent" ><a 
+ id="dx82-222015"></a><a 
+ id="dx82-222016"></a> Display all available header information, including the symbol table and
+                  relocation entries. Using <span 
+class="cmtt-12">-x</span> is equivalent to specifying all of <span 
+class="cmtt-12">-a</span> <span 
+class="cmtt-12">-f</span> <span 
+class="cmtt-12">-h</span> <span 
+class="cmtt-12">-r</span>
+                  <span 
+class="cmtt-12">-t</span>.</p></dd></dl>
+<!--l. 646--><p class="noindent" >The following switches are optional:
+</p><!--l. 648--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">--adjust-vma=&#x003C;offset&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 649--><p class="noindent" ><a 
+ id="dx82-222017"></a> Add <span 
+class="cmmi-12">&#x003C;</span>offset<span 
+class="cmmi-12">&#x003E; </span>to all displayed section addresses. This is useful if the
+                  section addresses do not correspond to the symbol table, which can
+                  happen when putting sections at particular addresses when using a
+                  format which can not represent section addresses, such as a.out.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-b, --target=&#x003C;bfdname&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 651--><p class="noindent" ><a 
+ id="dx82-222018"></a>  Specify   that   the   object-code   format   for   the   object   files   is
+                  <span 
+class="cmmi-12">&#x003C;</span>bfdname<span 
+class="cmmi-12">&#x003E;</span>. This option may not be necessary; <span 
+class="cmtt-12">tricore-objdump</span> can
+                  automatically recognize many formats.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-C [&#x003C;style&#x003E;]</span>    </dt><dd 
+class="list">
+                  <!--l. 653--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--demangle[=&#x003C;style&#x003E;]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 654--><p class="noindent" ><a 
+ id="dx82-222019"></a> Decode  (demangle)  low-level  symbol  names  into  user-level  names.
+                  Besides  removing  any  initial  underscore  prepended  by  the  system,
+                  this makes C++ function names readable. Different compilers have
+                  different mangling styles. The optional demangling style argument can
+                  be used to choose an appropriate demangling style for your compiler.
+                  The <span 
+class="cmmi-12">&#x003C;</span>style<span 
+class="cmmi-12">&#x003E;</span>, if specified, can be ‘auto’, ’gnu’,’lucid’, ’arm’, ’hp’, ’edg’,
+                  or ’gnu-new-abi’.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-EB --endian=big</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 656--><p class="noindent" ><a 
+ id="dx82-222020"></a><a 
+ id="dx82-222021"></a>  Assume  big  endian  format  when  disassembling.  Specifies  the
+                  endianness of the object files. This only affects disassembly. This can
+                  be useful when disassembling a file format which does not describe
+                  endianness information, such as S-records.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-EL --endian=little</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 658--><p class="noindent" ><a 
+ id="dx82-222022"></a><a 
+ id="dx82-222023"></a> Assume little endian format when disassembling.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--file-start-context</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 660--><p class="noindent" ><a 
+ id="dx82-222024"></a> Specify  that  when  displaying  interlisted  source  code/disassembly
+                  (assumes <span 
+class="cmtt-12">-S</span>) from a file that has not yet been displayed, extend the
+                  context to the start of the file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-j &#x003C;name&#x003E;</span>        </dt><dd 
+class="list">
+                  <!--l. 662--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--section=&#x003C;name&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 663--><p class="noindent" ><a 
+ id="dx82-222025"></a> Display information only for section <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-l, --line-numbers</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 665--><p class="noindent" ><a 
+ id="dx82-222026"></a> Label the display (using debugging information) with the filename and
+                  source line numbers corresponding to the object code or relocs shown.
+                  Only useful with <span 
+class="cmtt-12">-d</span>, <span 
+class="cmtt-12">-D</span>, or <span 
+class="cmtt-12">-r</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-m &#x003C;machine&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 668--><p class="noindent" >
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--architecture=&#x003C;machine&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 669--><p class="noindent" ><a 
+ id="dx82-222027"></a><a 
+ id="dx82-222028"></a> Specify the architecture to use when disassembling object files. This
+                  can be useful when disassembling object files which do not describe
+                  architecture information, such as S-records. You can list the available
+                  architectures with the <span 
+class="cmtt-12">-i</span> option.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-M, --disassembler-options=&#x003C;option&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 671--><p class="noindent" >Pass target specific information to the disassembler. </p>
+                  <div class="center" 
+>
+<!--l. 672--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox125"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Only supported on some targets.                                   </div>
+                                                                                       
+                                                                                       
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--prefix-addresses</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 674--><p class="noindent" >When disassembling, print the complete address on each line.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--[no-]show-raw-insn</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 676--><p class="noindent" >Display hexadecimal opcodes along with the mnemonic assembly language
+                  instruction. This is the default except if <span 
+class="cmtt-12">--prefix-addresses</span> is used. Using
+                  <span 
+class="cmtt-12">--no-show-raw-insn</span> does not print the instruction bytes, when
+                  disassembling instructions.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--start-address=&#x003C;addr&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 678--><p class="noindent" ><a 
+ id="dx82-222029"></a> Only process data who’s address is <span 
+class="cmsy-10x-x-120"><font face="Symbol">³</font> </span><span 
+class="cmmi-12">&#x003C;</span>addr<span 
+class="cmmi-12">&#x003E;</span>. This affects the output of
+                  the options <span 
+class="cmtt-12">-d</span>, <span 
+class="cmtt-12">-r</span> and <span 
+class="cmtt-12">-s</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--stop-address=&#x003C;addr&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 680--><p class="noindent" ><a 
+ id="dx82-222030"></a> Only process data who’s address is <span 
+class="cmsy-10x-x-120"><font face="Symbol">³</font> </span><span 
+class="cmmi-12">&#x003C;</span>addr<span 
+class="cmmi-12">&#x003E;</span>. This affects the output of
+                  the options <span 
+class="cmtt-12">-d</span>, <span 
+class="cmtt-12">-r</span> and <span 
+class="cmtt-12">-s</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-w, --wide</span>       </dt><dd 
+class="list">
+                  <!--l. 682--><p class="noindent" ><a 
+ id="dx82-222031"></a> Format some lines for output devices that have more than 80 columns. Also
+                  do not truncate symbol names when they are displayed.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-z, --disassemble-zeroes</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 684--><p class="noindent" >Normally the disassembly output will skip blocks of zeroes. This option
+                  directs the disassembler to disassemble those blocks, just like any other
+                  data.</p></dd></dl>
+<!--l. 687--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">21.6.3</span>  <a 
+href="#x82-22300021.6.3" id="x82-22300021.6.3">Examples</a></h4>
+<!--l. 689--><p class="noindent" >To view the sections in an object file or an executable type: <span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">-h</span>
+<span 
+class="cmtt-12">main.o</span>
+                                                                                       
+                                                                                       
+</p><!--l. 692--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb306"><a 
+ id="x82-223002r1"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> main.o:</span><span 
+class="pcrr7t-"> file</span><span 
+class="pcrr7t-"> format</span><span 
+class="pcrr7t-"> elf32-tricore</span><br class="fancyvrb" /><a 
+ id="x82-223004r2"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><br class="fancyvrb" /><a 
+ id="x82-223006r3"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Sections:</span><br class="fancyvrb" /><a 
+ id="x82-223008r4"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> Idx</span><span 
+class="pcrr7t-"> Name</span><span 
+class="pcrr7t-"> Size</span><span 
+class="pcrr7t-"> VMA</span><span 
+class="pcrr7t-"> LMA</span><span 
+class="pcrr7t-"> File</span><span 
+class="pcrr7t-"> off</span><span 
+class="pcrr7t-"> Algn</span>
+<br class="fancyvrb" /><a 
+ id="x82-223010r5"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 0</span><span 
+class="pcrr7t-"> .text</span><span 
+class="pcrr7t-"> 00000066</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000034</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;1</span>
+<br class="fancyvrb" /><a 
+ id="x82-223012r6"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> ALLOC,</span><span 
+class="pcrr7t-"> LOAD,</span><span 
+class="pcrr7t-"> RELOC,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> CODE</span>
+<br class="fancyvrb" /><a 
+ id="x82-223014r7"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 1</span><span 
+class="pcrr7t-"> .data</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 000000a0</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;3</span><br class="fancyvrb" /><a 
+ id="x82-223016r8"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> ALLOC,</span><span 
+class="pcrr7t-"> LOAD,</span><span 
+class="pcrr7t-"> DATA</span>
+<br class="fancyvrb" /><a 
+ id="x82-223018r9"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 2</span><span 
+class="pcrr7t-"> .bss</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 000000a0</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;3</span><br class="fancyvrb" /><a 
+ id="x82-223020r10"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> ALLOC</span>
+<br class="fancyvrb" /><a 
+ id="x82-223022r11"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 3</span><span 
+class="pcrr7t-"> .debug_abbrev</span><span 
+class="pcrr7t-"> 0000013f</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 000000a0</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;0</span>
+<br class="fancyvrb" /><a 
+ id="x82-223024r12"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DEBUGGING</span><br class="fancyvrb" /><a 
+ id="x82-223026r13"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 4</span><span 
+class="pcrr7t-"> .debug_info</span><span 
+class="pcrr7t-"> 00000a6f</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 000001df</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;0</span>
+<br class="fancyvrb" /><a 
+ id="x82-223028r14"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> RELOC,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DEBUGGING</span>
+<br class="fancyvrb" /><a 
+ id="x82-223030r15"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 5</span><span 
+class="pcrr7t-"> .debug_line</span><span 
+class="pcrr7t-"> 000001e1</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000c4e</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;0</span>
+<br class="fancyvrb" /><a 
+ id="x82-223032r16"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> RELOC,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DEBUGGING</span>
+<br class="fancyvrb" /><a 
+ id="x82-223034r17"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 6</span><span 
+class="pcrr7t-"> .rodata</span><span 
+class="pcrr7t-"> 0000002c</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000e30</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;2</span>
+<br class="fancyvrb" /><a 
+ id="x82-223036r18"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> ALLOC,</span><span 
+class="pcrr7t-"> LOAD,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DATA</span>
+<br class="fancyvrb" /><a 
+ id="x82-223038r19"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 7</span><span 
+class="pcrr7t-"> .debug_frame</span><span 
+class="pcrr7t-"> 00000024</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000e5c</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;2</span>
+<br class="fancyvrb" /><a 
+ id="x82-223040r20"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> RELOC,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DEBUGGING</span>
+<br class="fancyvrb" /><a 
+ id="x82-223042r21"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 8</span><span 
+class="pcrr7t-"> .debug_pubnames</span><span 
+class="pcrr7t-"> 0000002d</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000e80</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;0</span>
+<br class="fancyvrb" /><a 
+ id="x82-223044r22"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> RELOC,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DEBUGGING</span>
+<br class="fancyvrb" /><a 
+ id="x82-223046r23"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 9</span><span 
+class="pcrr7t-"> .debug_aranges</span><span 
+class="pcrr7t-"> 00000020</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000ead</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;0</span>
+<br class="fancyvrb" /><a 
+ id="x82-223048r24"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> RELOC,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DEBUGGING</span>
+<br class="fancyvrb" /><a 
+ id="x82-223050r25"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> 10</span><span 
+class="pcrr7t-"> .debug_str</span><span 
+class="pcrr7t-"> 00000012</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000000</span><span 
+class="pcrr7t-"> 00000ecd</span><span 
+class="pcrr7t-"> 2&#x22C6;&#x22C6;0</span><br class="fancyvrb" /><a 
+ id="x82-223052r26"></a><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> </span><span 
+class="pcrr7t-"> CONTENTS,</span><span 
+class="pcrr7t-"> READONLY,</span><span 
+class="pcrr7t-"> DEBUGGING</span></div>
+<!--l. 721--><p class="noindent" >To disassemble the contents of the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span> use:
+</p><!--l. 723--><p class="noindent" ><span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">-d -j .text main.o</span>
+</p><!--l. 725--><p class="noindent" >If the option <span 
+class="cmtt-12">-j</span> is not given, <span 
+class="cmtt-12">tricore-objdump</span> will disassemble all sections that contain
+executable code. This is normally only the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span>.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 727--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse54.html" >next</a>] [<a 
+href="main_gcc_ugse52.html" >prev</a>] [<a 
+href="main_gcc_ugse52.html#tailmain_gcc_ugse52.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse53.html" >front</a>] [<a 
+href="main_gcc_ugch21.html#main_gcc_ugse53.html" >up</a>] </p></div>
+<!--l. 727--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse53.html"></a> </p> 
+</body></html> 

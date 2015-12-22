@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Specifying Attributes of Variables</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 112--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse12.html" >next</a>] [<a 
+href="main_gcc_ugse10.html" >prev</a>] [<a 
+href="main_gcc_ugse10.html#tailmain_gcc_ugse10.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse11.html">tail</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse11.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">6.2</span>  <a 
+href="main_gcc_ug.html#QQ2-21-30" id="x21-260006.2">Specifying Attributes of Variables</a></h3>
+<a 
+ id="dx21-26001"></a>
+<!--l. 114--><p class="noindent" >The keyword <span class="lstinline"><span 
+class="ecss-1200">__attribute__</span></span> allows you to specify special attributes of variables or structure
+fields. This keyword is followed by an attribute specification inside double parentheses. Ten
+attributes are currently defined for variables: <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span>, <span class="lstinline"><span 
+class="ecss-1200">deprecated</span></span>, <span class="lstinline"><span 
+class="ecss-1200">mode</span></span>, <span class="lstinline"><span 
+class="ecss-1200">nocommon</span></span>, <span class="lstinline"><span 
+class="ecss-1200">packed</span></span>,
+<span class="lstinline"><span 
+class="ecss-1200">section</span></span>, <span class="lstinline"><span 
+class="ecss-1200">transparent_union</span></span>, <span class="lstinline"><span 
+class="ecss-1200">unused</span></span>, <span class="lstinline"><span 
+class="ecss-1200">vector_size</span></span>, and <span class="lstinline"><span 
+class="ecss-1200">weak</span></span>. Some other attributes are defined for
+variables on particular target systems. Other attributes are available for functions (see
+<a 
+href="main_gcc_ugse10.html#x20-250006.1">Listing 6.1</a>) and for types (see <a 
+href="main_gcc_ugse12.html#x22-270006.3">Listing 6.3</a>).
+</p><!--l. 116--><p class="noindent" >You may also specify attributes with <span class="lstinline"><span 
+class="ecss-1200">__</span></span> preceding and following each keyword. This allows you
+to use them in header files without being concerned about a possible macro of the same name.
+For example,you may use <span class="lstinline"><span 
+class="ecss-1200">__aligned__</span></span> instead of <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span>.
+</p><!--l. 118--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">aligned</span></span>          </dt><dd 
+class="list">
+                  <!--l. 119--><p class="noindent" ><a 
+ id="dx21-26002"></a> This  attribute  specifies  a  minimum  alignment  for  the  variable  or
+                  structure field, measured in bytes. For example, the declaration:
+                  </p><!--l. 121--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb31"><a 
+ id="x21-26004r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> x</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((aligned</span><span 
+class="pcrr7t-x-x-144"> (16)))</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span></div>
+                  <!--l. 125--><p class="noindent" >causes the compiler to allocate the global variable <span class="lstinline"><span 
+class="ecss-1200">x</span></span> on a 16-byte
+                  boundary.
+                  </p><!--l. 127--><p class="noindent" >You can also specify the alignment of structure fields. For example, to create
+                  a double-word aligned <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> pair, you could write:
+                  </p><!--l. 129--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb32"><a 
+ id="x21-26006r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> foo</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> x[2]</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((aligned</span><span 
+class="pcrr7t-x-x-144"> (8)));</span><span 
+class="pcrr7t-x-x-144"> };</span></div>
+                  <!--l. 133--><p class="noindent" >This is an alternative to creating a union with a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> member that forces
+                  the union to be double-word aligned.
+                                                                                       
+                                                                                       
+                  </p><!--l. 135--><p class="noindent" >As in the preceding examples, you can explicitly specify the alignment (in
+                  bytes) that you wish the compiler to use for a given variable or structure
+                  field. Alternatively, you can leave out the alignment factor and just ask the
+                  compiler to align a variable or field to the maximum useful alignment for the
+                  target machine you are compiling for. For example, you could
+                  write:
+                  </p><!--l. 137--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb33"><a 
+ id="x21-26008r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> array[3]</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((aligned));</span></div>
+                  <!--l. 141--><p class="noindent" >Whenever you leave out the alignment factor in an <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attribute
+                  specification, the compiler automatically sets the alignment for the declared
+                  variable or field to the largest alignment which is ever used for any data type
+                  on the target machine you are compiling for. Doing this can often make copy
+                  operations more efficient, because the compiler can use whatever
+                  instructions copy the biggest chunks of memory when performing
+                  copies to or from the variables or fields that you have aligned this
+                  way.
+                  </p><!--l. 143--><p class="noindent" >The <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attribute can only increase the alignment; but you can decrease
+                  it by specifying <span class="lstinline"><span 
+class="ecss-1200">packed</span></span> as well. See below.
+                  </p><!--l. 145--><p class="noindent" >Note that the effectiveness of <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span> attributes may be limited by
+                  inherent limitations in your linker. On many systems, the linker is
+                  only able to arrange for variables to be aligned up to a certain
+                  maximum alignment. (For some linkers, the maximum supported
+                  alignment may be very very small.) If your linker is only able
+                  to align variables up to a maximum of 8 byte alignment, then
+                  specifying <span class="lstinline"><span 
+class="ecss-1200">aligned</span><span 
+class="ecss-1200">(16)</span></span> in an <span class="lstinline"><span 
+class="ecss-1200">__attribute__</span></span> will still only provide you
+                  with 8 byte alignment. See your linker documentation for further
+                  information.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">deprecated</span></span>       </dt><dd 
+class="list">
+                  <!--l. 148--><p class="noindent" ><a 
+ id="dx21-26009"></a> A variable with this attribute will cause the compiler to issue a warning
+                  every place it is referenced. This is useful when identifying types that are
+                  expected to be removed in a future version of a program. If possible,
+                  the warning also includes the location of the declaration of the
+                  deprecated type, to enable users to easily find further information about
+                  why the type is deprecated, or what they should do instead. Note
+                  that the warnings only occur for uses and then only if the type is
+                  being applied to an identifier that itself is not being declared as
+                  deprecated.
+                  </p><!--l. 150--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+                  <div class="fancyvrb" id="fancyvrb34"><a 
+ id="x21-26011r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> T1</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((deprecated));</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26013r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> T1</span><span 
+class="pcrr7t-x-x-144"> x;</span><br class="fancyvrb" /><a 
+ id="x21-26015r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> T1</span><span 
+class="pcrr7t-x-x-144"> T2;</span><br class="fancyvrb" /><a 
+ id="x21-26017r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> T2</span><span 
+class="pcrr7t-x-x-144"> y;</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26019r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> typedef</span><span 
+class="pcrr7t-x-x-144"> T1</span><span 
+class="pcrr7t-x-x-144"> T3</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((deprecated));</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26021r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> T3</span><span 
+class="pcrr7t-x-x-144"> z</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((deprecated));</span></div>
+                  <!--l. 159--><p class="noindent" >results in a warning on line 2 and 3 but not lines 4, 5, or 6. No warning is
+                  issued for line 4 because T2 is not explicitly deprecated. Line 5 has no
+                  warning because T3 is explicitly deprecated. Similarly for line
+                  6.
+                  </p><!--l. 161--><p class="noindent" >The <span class="lstinline"><span 
+class="ecss-1200">deprecated</span></span> attribute can also be used for functions and variables (see
+                  <a 
+href="main_gcc_ugse10.html#x20-250006.1">Listing 6.1</a> and <a 
+href="#x21-260006.2">Listing 6.2</a>.)
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">mode</span></span>              </dt><dd 
+class="list">
+                  <!--l. 162--><p class="noindent" ><a 
+ id="dx21-26022"></a> A variable with this attribute is sized to match the size of the specified
+                  <span class="lstinline"><span 
+class="ecss-1200">mode</span></span>. The mode can be set to byte, word, or pointer. The mode attribute
+                  determines the data type. For example, the following creates an <span class="lstinline"><span 
+class="ecsx-1200">int</span></span> that is
+                  size of a single byte:
+                  </p><!--l. 164--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb35"><a 
+ id="x21-26024r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> x</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((mode(byte)));</span></div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">nocommon</span></span>         </dt><dd 
+class="list">
+                  <!--l. 167--><p class="noindent" ><a 
+ id="dx21-26025"></a> This attribute requests GCC not to place a variable into the common
+                  section pool but instead to allocate space for it directly in <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span>
+                  section. If you specify the <span 
+class="cmtt-12">-fno-common</span> flag, GCC will do this for all
+                  variables.
+                  </p><!--l. 169--><p class="noindent" >Specifying the <span class="lstinline"><span 
+class="ecss-1200">nocommon</span></span> attribute for a variable provides an initialization of
+                  zeros. A variable may only be initialized in one source file.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">packed</span></span>            </dt><dd 
+class="list">
+                  <!--l. 170--><p class="noindent" ><a 
+ id="dx21-26026"></a> The <span class="lstinline"><span 
+class="ecss-1200">packed</span></span> attribute specifies that a variable or structure field should have
+                  the smallest possible alignment˜one byte for a variable, and one
+                  bit for a field, unless you specify a larger value with the <span class="lstinline"><span 
+class="ecss-1200">aligned</span></span>
+                  attribute.
+                  </p><!--l. 172--><p class="noindent" >Here is a structure in which the field <span class="lstinline"><span 
+class="ecss-1200">x</span></span> is packed, so that it immediately
+                  follows <span class="lstinline"><span 
+class="ecss-1200">a</span></span>:
+                  </p><!--l. 174--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+                  <div class="fancyvrb" id="fancyvrb36"><a 
+ id="x21-26028r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> foo</span><br class="fancyvrb" /><a 
+ id="x21-26030r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x21-26032r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> a;</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26034r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> x[2]</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((packed));</span><br class="fancyvrb" /><a 
+ id="x21-26036r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> };</span></div>
+                  </dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">section</span></span>          </dt><dd 
+class="list">
+                  <!--l. 182--><p class="noindent" ><a 
+ id="dx21-26037"></a> A variable with this attribute will be placed into the named section instead
+                  of the default <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> section. Sometimes, however, you need additional
+                  sections, or you need certain particular variables to appear in special
+                  sections, for example to map to special hardware. The <span class="lstinline"><span 
+class="ecss-1200">section</span></span>
+                  attribute specifies that a variable (or function) lives in a particular
+                  section. For example, this small program uses several specific section
+                  names:
+                  </p><!--l. 184--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb37"><a 
+ id="x21-26039r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> duart</span><span 
+class="pcrr7t-x-x-144"> a</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section</span><span 
+class="pcrr7t-x-x-144"> ("DUART_A")))</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> 0</span><span 
+class="pcrr7t-x-x-144"> };</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26041r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> duart</span><span 
+class="pcrr7t-x-x-144"> b</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section</span><span 
+class="pcrr7t-x-x-144"> ("DUART_B")))</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> 0</span><span 
+class="pcrr7t-x-x-144"> };</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26043r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> char</span><span 
+class="pcrr7t-x-x-144"> stack[10000]</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section</span><span 
+class="pcrr7t-x-x-144"> ("STACK")))</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> 0</span><span 
+class="pcrr7t-x-x-144"> };</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26045r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> init_data</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((section</span><span 
+class="pcrr7t-x-x-144"> ("INITDATA")))</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0;</span></div>
+                  <!--l. 191--><p class="noindent" >Because of the way the linker handles data, data declared in its own section
+                  must be initialized data. This attribute will be ignored on system that do not
+                  support sectioning.
+                  </p><!--l. 193--><p class="noindent" >Use the <span class="lstinline"><span 
+class="ecss-1200">section</span></span> attribute with an <span 
+class="cmmi-12">&#x003C;</span>initialized<span 
+class="cmmi-12">&#x003E; </span>definition of a <span 
+class="cmmi-12">&#x003C;</span>global<span 
+class="cmmi-12">&#x003E;</span>
+                  variable, as shown in the example. GCC issues a warning and
+                  otherwise ignores the <span class="lstinline"><span 
+class="ecss-1200">section</span></span> attribute in uninitialized variable
+                  declarations.
+                  </p><!--l. 195--><p class="noindent" >You can force a variable to be initialized with the <span 
+class="cmtt-12">-fno-common</span> flag or the
+                  <span class="lstinline"><span 
+class="ecss-1200">nocommon</span></span> attribute.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">unused</span></span>            </dt><dd 
+class="list">
+                  <!--l. 196--><p class="noindent" ><a 
+ id="dx21-26046"></a> This attribute, attached to a variable, means that the variable is meant
+                  to be possibly unused. GCC will not produce a warning for this
+                  variable.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">vector_size</span></span>      </dt><dd 
+class="list">
+                  <!--l. 197--><p class="noindent" ><a 
+ id="dx21-26047"></a> This attribute specifies the vector size for the variable, measured in bytes.
+                  For example, the declaration:
+                  </p><!--l. 199--><p class="noindent" >
+</p>
+                                                                                       
+                                                                                       
+                  <div class="fancyvrb" id="fancyvrb38"><a 
+ id="x21-26049r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> foo</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((vector_size</span><span 
+class="pcrr7t-x-x-144"> (16)));</span></div>
+                  <!--l. 203--><p class="noindent" >causes the compiler to set the mode for <span class="lstinline"><span 
+class="ecss-1200">foo</span></span>, to be 16 bytes, divided into <span class="lstinline"><span 
+class="ecsx-1200">int</span></span>
+                  sized units.
+                  </p><!--l. 205--><p class="noindent" >This attribute is only applicable to integral and float scalars, although
+                  arrays, pointers, and function return values are allowed in conjunction with
+                  this construct.
+                  </p><!--l. 207--><p class="noindent" >Aggregates with this attribute are invalid, even if they are of the same size as
+                  a corresponding scalar. For example, the declaration:
+                  </p><!--l. 209--><p class="noindent" >
+</p>
+                  <div class="fancyvrb" id="fancyvrb39"><a 
+ id="x21-26051r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> S</span><span 
+class="pcrr7t-x-x-144"> {</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a;</span><span 
+class="pcrr7t-x-x-144"> };</span>
+                  <br class="fancyvrb" /><a 
+ id="x21-26053r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> S</span><span 
+class="pcrr7t-x-x-144"> __attribute__</span><span 
+class="pcrr7t-x-x-144"> ((vector_size</span><span 
+class="pcrr7t-x-x-144"> (16)))</span><span 
+class="pcrr7t-x-x-144"> foo;</span></div>
+                  <!--l. 214--><p class="noindent" >is invalid even if the size of the structure is the same as the size of the
+                  <span class="lstinline"><span 
+class="ecsx-1200">int</span></span>.
+                  </p></dd><dt class="list">
+<span class="verb"><span 
+class="pcrr8t-">weak</span></span>              </dt><dd 
+class="list">
+                  <!--l. 215--><p class="noindent" ><a 
+ id="dx21-26054"></a> A variable with this attribute has its name emitted as a weak symbol
+                  instead of as a global name. This is primarily for the naming of library
+                  variables that can be overridden by user code.</p></dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 218--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse12.html" >next</a>] [<a 
+href="main_gcc_ugse10.html" >prev</a>] [<a 
+href="main_gcc_ugse10.html#tailmain_gcc_ugse10.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse11.html" >front</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse11.html" >up</a>] </p></div>
+<!--l. 218--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse11.html"></a> </p> 
+</body></html> 

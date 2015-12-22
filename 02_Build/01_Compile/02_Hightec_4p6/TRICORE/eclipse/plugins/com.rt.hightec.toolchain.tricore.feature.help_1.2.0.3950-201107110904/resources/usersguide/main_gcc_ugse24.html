@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Storage of constants in a read only section</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse25.html" >next</a>] [<a 
+href="main_gcc_ugse23.html" >prev</a>] [<a 
+href="main_gcc_ugse23.html#tailmain_gcc_ugse23.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse24.html">tail</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse24.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">14.4</span>  <a 
+href="main_gcc_ug.html#QQ2-42-64" id="x42-6000014.4">Storage of constants in a read only section</a></h3>
+<a 
+ id="dx42-60001"></a>
+<a 
+ id="dx42-60002"></a>
+<!--l. 4--><p class="noindent" >In C, <span class="lstinline"><span 
+class="ecsx-1200">const</span></span> should not be modified during runtime. To save RAM, constants should be stored
+in the Flash and not be copied to the RAM by the startup code. Constants, therefore, must not
+be stored in the sections for variables.
+</p>
+      <ul class="itemize1">
+      <li class="itemize">By default, constants are stored in the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">rodata</span></span> section.
+      </li>
+      <li class="itemize">Apart from this, they can also be stored in the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">rodata</span></span> section for relative
+      addressing  mode  (<span 
+class="cmtt-12">-msmall</span>)  or  in  the  <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zrodata</span></span>  section  for  absolute  addressable
+      constants (<span 
+class="cmtt-12">-mabs</span>).
+      </li>
+      <li class="itemize">Constants will never be stored in sections that contain the attribute ’w’.
+      </li>
+      <li class="itemize">Uninitialised constants are assumed to be zero.
+      </li>
+      <li class="itemize">Write access to a constant will issue a compiler warning.
+      </li>
+      <li class="itemize">Per default 32 bit addressing is used for constants.
+      </li>
+      <li class="itemize">The settings can be changed by:
+           <ul class="itemize2">
+           <li class="itemize">Compiler                     options                     <span 
+class="cmtt-12">-muninit-const-in-rodata</span>,
+           <span 
+class="cmtt-12">-mno-uninit-const-in-rodata</span>,      <span 
+class="cmtt-12">-mvolatile-const-in-rodata</span>    and
+           <span 
+class="cmtt-12">-mno-volatile-in-rodata</span>.
+           </li>
+           <li class="itemize">Using <span class="lstinline"><span 
+class="ecss-1200">__attribute__</span></span> for changing the addressing mode or the section.
+           </li>
+           <li class="itemize">Using <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span></span> for changing the addressing mode or the section.</li></ul>
+      </li></ul>
+<div class="center" 
+>
+                                                                                       
+                                                                                       
+<!--l. 22--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox42"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The above properties are also valid for constants that use <span class="lstinline"><span 
+class="ecsx-1200">volatile</span></span> as
+qualifier.                                                           </div>
+</div>
+<!--l. 24--><p class="noindent" >The options <span 
+class="cmtt-12">-muninit-const-in-rodata</span> and <span 
+class="cmtt-12">-mvolatile-const-in-rodata</span> are set by
+default.
+</p><!--l. 26--><p class="noindent" >The following table illustrates the effect of using these options.
+</p>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug6x.png" alt=""  /></div>
+<!--l. 44--><p class="noindent" >For constants which are to be adressed as absolute, the letter ’z’ must be added (e.g. <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> <span 
+class="cmsy-10x-x-120"><font face="Symbol">®</font></span>
+<span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zbbs</span></span> etc.).
+</p><!--l. 46--><p class="noindent" >For constants which are to be adressed as small, the letter ’s’ must be added (e.g. <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">bss</span></span> <span 
+class="cmsy-10x-x-120"><font face="Symbol">®</font></span><span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sbss</span></span>
+etc.). The <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">srodata</span></span> section is renamed to <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">rodata</span></span>.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse25.html" >next</a>] [<a 
+href="main_gcc_ugse23.html" >prev</a>] [<a 
+href="main_gcc_ugse23.html#tailmain_gcc_ugse23.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse24.html" >front</a>] [<a 
+href="main_gcc_ugch14.html#main_gcc_ugse24.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse24.html"></a> </p> 
+</body></html> 

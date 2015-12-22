@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head>       <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<div class="titlepage">
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!--l. 55--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 55--><p class="noindent" ><span 
+class="cmbx-12x-x-207">User’s Guide HighTec GNU Toolchain</span>
+<span 
+class="cmbx-12x-x-207">for TriCore</span><br 
+class="newline" /><span 
+class="cmbx-12x-x-120">Version 1.21 </span><br 
+class="newline" />
+                                                                                       
+                                                                                       
+</p>
+</div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!--l. 49--><p class="noindent" >This manual contains descriptions for copyrighted products that are not explicitly indicated as
+such. The absence of the <sup class="textsuperscript"><span 
+class="cmr-10x-x-109">TM</span></sup> symbol does not infer that a product is not protected.
+Additionally, registered patents and trademarks are similarly not expressly indicated in this
+manual.
+</p><!--l. 49--><p class="noindent" >The information in this document has been carefully checked and is believed to be entirely
+reliable. However, HighTec EDV-Systeme GmbH assumes no responsibility for any inaccuracies.
+HighTec EDV-Systeme GmbH neither gives any guarantee nor accepts any liability whatsoever
+for consequential damages resulting from the use of this manual or its associated product.
+HighTec EDV-Systeme GmbH reserves the right to alter the information contained herein
+without prior notification and accepts no responsibility for any damages that might
+result.
+</p><!--l. 49--><p class="noindent" >Additionally, HighTec EDV-Systeme GmbH offers no guarantee nor accepts any liability for
+damages arising from the improper usage or improper installation of the hardware or software.
+HighTec EDV-Systeme GmbH further reserves the right to alter the layout and/or
+design of the hardware without prior notification and accepts no liability for doing
+so.
+</p><!--l. 49--><p class="noindent" >Copyright <span 
+class="cmsy-10x-x-120">©</span> 2011 HighTec EDV-Systeme GmbH, D-66119 Saarbr&#x00FC;cken. Rights - including
+those of translation, reprint, broadcast, photomechanical or similar reproduction and
+storage or processing in computer systems, in whole or in part - are reserved. No
+reproduction may occur without the express written consent from HighTec EDV-Systeme
+GmbH.
+</p>
+<div class="center" 
+>
+<!--l. 53--><p class="noindent" >
+</p>
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug0x.png" alt=""  /></div></div>
+<div  
+class="centerline">                                  <a 
+href="http://www.hightec-rt.com" >www.hightec-rt.com</a>                                  </div>
+<!--l. 55--><p class="noindent" >
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div class="tableofcontents">
+<span class="partToc" >I  <a 
+href="main_gcc_ugpa1.html#x2-1000I" id="QQ2-2-1">Introduction</a></span>
+<br /><span class="chapterToc" >1  <a 
+href="main_gcc_ugch1.html#x3-20001" id="QQ2-3-2">The TriCore Development Platform</a></span>
+<br /> <span class="likesectionToc" ><a 
+href="main_gcc_ugli1.html#x4-30001" id="QQ2-4-3">Purpose</a></span>
+<br /> <span class="sectionToc" >1.1  <a 
+href="main_gcc_ugse1.html#x5-40001.1" id="QQ2-5-4">Conventions</a></span>
+<br /> <span class="sectionToc" >1.2  <a 
+href="main_gcc_ugse2.html#x6-50001.2" id="QQ2-6-6">Introduction to the TriCore Development Platform</a></span>
+<br /> <span class="sectionToc" >1.3  <a 
+href="main_gcc_ugse3.html#x7-60001.3" id="QQ2-7-9">Working with the TriCore Development Platform</a></span>
+<br /><span class="chapterToc" >2  <a 
+href="main_gcc_ugch2.html#x8-70002" id="QQ2-8-10">Software Installation</a></span>
+<br /> <span class="sectionToc" >2.1  <a 
+href="main_gcc_ugse4.html#x9-80002.1" id="QQ2-9-11">System Requirements</a></span>
+<br /> <span class="sectionToc" >2.2  <a 
+href="main_gcc_ugse5.html#x10-90002.2" id="QQ2-10-12">Components of TriCore Development Platform</a></span>
+<br /> <span class="sectionToc" >2.3  <a 
+href="main_gcc_ugse6.html#x11-100002.3" id="QQ2-11-13">Installation</a></span>
+<br /><span class="chapterToc" >3  <a 
+href="main_gcc_ugch3.html#x12-110003" id="QQ2-12-14">A Sample Program</a></span>
+<br /><span class="chapterToc" >4  <a 
+href="main_gcc_ugch4.html#x13-120004" id="QQ2-13-15">Another Sample Program</a></span>
+<br /><span class="partToc" >II  <a 
+href="main_gcc_ugpa2.html#x14-13000II" id="QQ2-14-16">Implementation</a></span>
+<br /><span class="chapterToc" >5  <a 
+href="main_gcc_ugch5.html#x15-140005" id="QQ2-15-17">Implementation Issues</a></span>
+<br /> <span class="sectionToc" >5.1  <a 
+href="main_gcc_ugse7.html#x16-150005.1" id="QQ2-16-18">Data Elements</a></span>
+<br /> <span class="sectionToc" >5.2  <a 
+href="main_gcc_ugse8.html#x17-160005.2" id="QQ2-17-20">Bit Data Type</a></span>
+<br /> <span class="sectionToc" >5.3  <a 
+href="main_gcc_ugse9.html#x18-230005.3" id="QQ2-18-27">Inquiring on Alignment of Types or Variables</a></span>
+<br /><span class="chapterToc" >6  <a 
+href="main_gcc_ugch6.html#x19-240006" id="QQ2-19-28">Attributes</a></span>
+<br /> <span class="sectionToc" >6.1  <a 
+href="main_gcc_ugse10.html#x20-250006.1" id="QQ2-20-29">Specifying Attributes of Functions</a></span>
+<br /> <span class="sectionToc" >6.2  <a 
+href="main_gcc_ugse11.html#x21-260006.2" id="QQ2-21-30">Specifying Attributes of Variables</a></span>
+<br /> <span class="sectionToc" >6.3  <a 
+href="main_gcc_ugse12.html#x22-270006.3" id="QQ2-22-31">Specifying Attributes of Types</a></span>
+<br /> <span class="sectionToc" >6.4  <a 
+href="main_gcc_ugse13.html#x23-280006.4" id="QQ2-23-32">TriCore Specific Attributes</a></span>
+<br /> <span class="sectionToc" >6.5  <a 
+href="main_gcc_ugse14.html#x24-320006.5" id="QQ2-24-36">Pragma section</a></span>
+<br /><span class="chapterToc" >7  <a 
+href="main_gcc_ugch7.html#x25-330007" id="QQ2-25-37">Inline Functions</a></span>
+<br /><span class="chapterToc" >8  <a 
+href="main_gcc_ugch8.html#x26-340008" id="QQ2-26-38">Inline Assembly</a></span>
+<br /> <span class="sectionToc" >8.1  <a 
+href="main_gcc_ugse15.html#x27-350008.1" id="QQ2-27-39">The Assembly Language Template</a></span>
+<br /> <span class="sectionToc" >8.2  <a 
+href="main_gcc_ugse16.html#x28-360008.2" id="QQ2-28-40">Input and Output Operands</a></span>
+<br /> <span class="sectionToc" >8.3  <a 
+href="main_gcc_ugse17.html#x29-400008.3" id="QQ2-29-44">Clobber List</a></span>
+                                                                                       
+                                                                                       
+<br /><span class="chapterToc" >9  <a 
+href="main_gcc_ugch9.html#x30-410009" id="QQ2-30-45">Intrinsic Functions</a></span>
+<br /><span class="chapterToc" >10  <a 
+href="main_gcc_ugch10.html#x31-4200010" id="QQ2-31-46">Interrupts</a></span>
+<br /><span class="chapterToc" >11  <a 
+href="main_gcc_ugch11.html#x32-4300011" id="QQ2-32-47">Traps</a></span>
+<br /><span class="chapterToc" >12  <a 
+href="main_gcc_ugch12.html#x33-4400012" id="QQ2-33-48">Errata</a></span>
+<br /><span class="chapterToc" >13  <a 
+href="main_gcc_ugch13.html#x34-4500013" id="QQ2-34-49">Startup Process</a></span>
+<br /> <span class="sectionToc" >13.1  <a 
+href="main_gcc_ugse18.html#x35-4600013.1" id="QQ2-35-50">Startup code in crt0.o</a></span>
+<br /> <span class="sectionToc" >13.2  <a 
+href="main_gcc_ugse19.html#x36-4700013.2" id="QQ2-36-51">The constructors for main()</a></span>
+<br /> <span class="sectionToc" >13.3  <a 
+href="main_gcc_ugse20.html#x37-4800013.3" id="QQ2-37-52">Your program as ROM version</a></span>
+<br /><span class="chapterToc" >14  <a 
+href="main_gcc_ugch14.html#x38-5200014" id="QQ2-38-56">Special Features</a></span>
+<br /> <span class="sectionToc" >14.1  <a 
+href="main_gcc_ugse21.html#x39-5300014.1" id="QQ2-39-57">Multiple Bit-Data Sections</a></span>
+<br /> <span class="sectionToc" >14.2  <a 
+href="main_gcc_ugse22.html#x40-5400014.2" id="QQ2-40-58">Relative Addressing</a></span>
+<br /> <span class="sectionToc" >14.3  <a 
+href="main_gcc_ugse23.html#x41-5500014.3" id="QQ2-41-59">Storage of constants and variables using different addressing modes</a></span>
+<br /> <span class="sectionToc" >14.4  <a 
+href="main_gcc_ugse24.html#x42-6000014.4" id="QQ2-42-64">Storage of constants in a read only section</a></span>
+<br /> <span class="sectionToc" >14.5  <a 
+href="main_gcc_ugse25.html#x43-6100014.5" id="QQ2-43-65">Modifying the Default Sections</a></span>
+<br /> <span class="sectionToc" >14.6  <a 
+href="main_gcc_ugse26.html#x44-6300014.6" id="QQ2-44-68">Circular Addressing</a></span>
+<br /> <span class="sectionToc" >14.7  <a 
+href="main_gcc_ugse27.html#x45-6400014.7" id="QQ2-45-69">CSA Overhead</a></span>
+<br /> <span class="sectionToc" >14.8  <a 
+href="main_gcc_ugse28.html#x46-6500014.8" id="QQ2-46-70">Default Case</a></span>
+<br /> <span class="sectionToc" >14.9  <a 
+href="main_gcc_ugse29.html#x47-6800014.9" id="QQ2-47-73">Indirect Addressing by longcall</a></span>
+<br /> <span class="sectionToc" >14.10  <a 
+href="main_gcc_ugse30.html#x48-6900014.10" id="QQ2-48-74">Position-Independent Code</a></span>
+<br /> <span class="sectionToc" >14.11  <a 
+href="main_gcc_ugse31.html#x49-7000014.11" id="QQ2-49-76">Position Independent Data</a></span>
+<br /> <span class="sectionToc" >14.12  <a 
+href="main_gcc_ugse32.html#x50-7100014.12" id="QQ2-50-77">Builtins</a></span>
+<br /> <span class="sectionToc" >14.13  <a 
+href="main_gcc_ugse33.html#x51-9800014.13" id="QQ2-51-105">Options for testing purposes</a></span>
+<br /><span class="chapterToc" >15  <a 
+href="main_gcc_ugch15.html#x52-9900015" id="QQ2-52-106">PCP Programming</a></span>
+<br /> <span class="sectionToc" >15.1  <a 
+href="main_gcc_ugse34.html#x53-10000015.1" id="QQ2-53-107">PCP instruction syntax</a></span>
+<br /><span class="partToc" >III  <a 
+href="main_gcc_ugpa3.html#x54-103000III" id="QQ2-54-110">Components of the TriCore Development Platform</a></span>
+<br /><span class="chapterToc" >16  <a 
+href="main_gcc_ugch16.html#x55-10400016" id="QQ2-55-111">The TriCore Control Program</a></span>
+<br /> <span class="sectionToc" >16.1  <a 
+href="main_gcc_ugse35.html#x56-10500016.1" id="QQ2-56-112">Description</a></span>
+<br /> <span class="sectionToc" >16.2  <a 
+href="main_gcc_ugse36.html#x57-10600016.2" id="QQ2-57-113">Invocation</a></span>
+<br /> <span class="sectionToc" >16.3  <a 
+href="main_gcc_ugse37.html#x58-10900016.3" id="QQ2-58-116">TriCore Derivative Specs File</a></span>
+<br /><span class="chapterToc" >17  <a 
+href="main_gcc_ugch17.html#x59-11000017" id="QQ2-59-117">The TriCore Preprocessor</a></span>
+                                                                                       
+                                                                                       
+<br /> <span class="sectionToc" >17.1  <a 
+href="main_gcc_ugse38.html#x60-11100017.1" id="QQ2-60-118">Description</a></span>
+<br /> <span class="sectionToc" >17.2  <a 
+href="main_gcc_ugse39.html#x61-11200017.2" id="QQ2-61-119">Invocation</a></span>
+<br /><span class="chapterToc" >18  <a 
+href="main_gcc_ugch18.html#x62-11400018" id="QQ2-62-121">The TriCore Compiler</a></span>
+<br /> <span class="sectionToc" >18.1  <a 
+href="main_gcc_ugse40.html#x63-11500018.1" id="QQ2-63-122">Description</a></span>
+<br /> <span class="sectionToc" >18.2  <a 
+href="main_gcc_ugse41.html#x64-11600018.2" id="QQ2-64-123">Invocation</a></span>
+<br /><span class="chapterToc" >19  <a 
+href="main_gcc_ugch19.html#x65-11900019" id="QQ2-65-126">The TriCore Assembler</a></span>
+<br /> <span class="sectionToc" >19.1  <a 
+href="main_gcc_ugse42.html#x66-12000019.1" id="QQ2-66-127">The <span 
+class="cmsl-12">GNU </span>Assembler</a></span>
+<br /> <span class="sectionToc" >19.2  <a 
+href="main_gcc_ugse43.html#x67-12300019.2" id="QQ2-67-130">Assembler Directives</a></span>
+<br /><span class="chapterToc" >20  <a 
+href="main_gcc_ugch20.html#x68-13200020" id="QQ2-68-139">The TriCore Linker</a></span>
+<br /> <span class="sectionToc" >20.1  <a 
+href="main_gcc_ugse44.html#x69-13300020.1" id="QQ2-69-140">Command Line Options</a></span>
+<br /> <span class="sectionToc" >20.2  <a 
+href="main_gcc_ugse45.html#x70-13500020.2" id="QQ2-70-142">The Linker Script File</a></span>
+<br /> <span class="likesectionToc" ><a 
+href="main_gcc_ugli2.html#x71-13700020.2.1" id="QQ2-71-145">TriCore Sections</a></span>
+<br /> <span class="sectionToc" >20.3  <a 
+href="main_gcc_ugse46.html#x72-18200020.3" id="QQ2-72-190">The Mapfile</a></span>
+<br /> <span class="sectionToc" >20.4  <a 
+href="main_gcc_ugse47.html#x73-19000020.4" id="QQ2-73-198">The Extended Mapfile</a></span>
+<br /><span class="partToc" >IV  <a 
+href="main_gcc_ugpa4.html#x74-196000IV" id="QQ2-74-205">More BinUtils and Tools</a></span>
+<br /><span class="chapterToc" >21  <a 
+href="main_gcc_ugch21.html#x75-19700021" id="QQ2-75-206">Binutils</a></span>
+<br /> <span class="likesectionToc" ><a 
+href="main_gcc_ugli3.html#x76-19800021" id="QQ2-76-207">Introduction</a></span>
+<br /> <span class="sectionToc" >21.1  <a 
+href="main_gcc_ugse48.html#x77-19900021.1" id="QQ2-77-208">tricore-addr2line</a></span>
+<br /> <span class="sectionToc" >21.2  <a 
+href="main_gcc_ugse49.html#x78-20300021.2" id="QQ2-78-212">tricore-ar</a></span>
+<br /> <span class="sectionToc" >21.3  <a 
+href="main_gcc_ugse50.html#x79-20700021.3" id="QQ2-79-216">tricore-c++filt</a></span>
+<br /> <span class="sectionToc" >21.4  <a 
+href="main_gcc_ugse51.html#x80-21100021.4" id="QQ2-80-220">tricore-nm</a></span>
+<br /> <span class="sectionToc" >21.5  <a 
+href="main_gcc_ugse52.html#x81-21600021.5" id="QQ2-81-225">tricore-objcopy</a></span>
+<br /> <span class="sectionToc" >21.6  <a 
+href="main_gcc_ugse53.html#x82-22000021.6" id="QQ2-82-229">tricore-objdump</a></span>
+<br /> <span class="sectionToc" >21.7  <a 
+href="main_gcc_ugse54.html#x83-22400021.7" id="QQ2-83-233">tricore-ranlib</a></span>
+<br /> <span class="sectionToc" >21.8  <a 
+href="main_gcc_ugse55.html#x84-22800021.8" id="QQ2-84-237">tricore-readelf</a></span>
+<br /> <span class="sectionToc" >21.9  <a 
+href="main_gcc_ugse56.html#x85-23200021.9" id="QQ2-85-241">tricore-size</a></span>
+<br /> <span class="sectionToc" >21.10  <a 
+href="main_gcc_ugse57.html#x86-23600021.10" id="QQ2-86-245">tricore-strip</a></span>
+<br /> <span class="sectionToc" >21.11  <a 
+href="main_gcc_ugse58.html#x87-24000021.11" id="QQ2-87-249">tricore-strings</a></span>
+<br /><span class="chapterToc" >22  <a 
+href="main_gcc_ugch22.html#x88-24400022" id="QQ2-88-253">tricore-gcov</a></span>
+<br /> <span class="sectionToc" >22.1  <a 
+href="main_gcc_ugse59.html#x89-24500022.1" id="QQ2-89-254">Introduction to tricore-gcov</a></span>
+                                                                                       
+                                                                                       
+<br /> <span class="sectionToc" >22.2  <a 
+href="main_gcc_ugse60.html#x90-24600022.2" id="QQ2-90-255">Invoking tricore-gcov</a></span>
+<br /> <span class="sectionToc" >22.3  <a 
+href="main_gcc_ugse61.html#x91-24700022.3" id="QQ2-91-256">Using tricore-gcov with tricore-gcc optimization</a></span>
+<br /> <span class="sectionToc" >22.4  <a 
+href="main_gcc_ugse62.html#x92-24800022.4" id="QQ2-92-257">Brief description of tricore-gcov data files</a></span>
+<br /><span class="chapterToc" >23  <a 
+href="main_gcc_ugch23.html#x93-24900023" id="QQ2-93-258">tricore-version-info</a></span>
+<br /> <span class="sectionToc" >23.1  <a 
+href="main_gcc_ugse63.html#x94-25000023.1" id="QQ2-94-259">Description</a></span>
+<br /> <span class="sectionToc" >23.2  <a 
+href="main_gcc_ugse64.html#x95-25100023.2" id="QQ2-95-260">Invocation</a></span>
+<br /> <span class="sectionToc" >23.3  <a 
+href="main_gcc_ugse65.html#x96-25200023.3" id="QQ2-96-261">Example</a></span>
+<br /> <span class="sectionToc" >23.4  <a 
+href="main_gcc_ugse66.html#x97-25300023.4" id="QQ2-97-262">Tool Version of GCC</a></span>
+<br /><span class="chapterToc" >24  <a 
+href="main_gcc_ugch24.html#x98-25400024" id="QQ2-98-263">Warningsfilter</a></span>
+<br /> <span class="sectionToc" >24.1  <a 
+href="main_gcc_ugse67.html#x99-25500024.1" id="QQ2-99-264">Introduction</a></span>
+<br /> <span class="sectionToc" >24.2  <a 
+href="main_gcc_ugse68.html#x100-25600024.2" id="QQ2-100-265">Options</a></span>
+<br /><span class="chapterToc" >25  <a 
+href="main_gcc_ugch25.html#x101-25700025" id="QQ2-101-266">JTAG Server for TriCore</a></span>
+<br /><span class="partToc" >V  <a 
+href="main_gcc_ugpa5.html#x102-258000V" id="QQ2-102-267">Libraries and Headers</a></span>
+<br /><span class="chapterToc" >26  <a 
+href="main_gcc_ugch26.html#x103-25900026" id="QQ2-103-268">Libraries of the Compiler</a></span>
+<br /> <span class="sectionToc" >26.1  <a 
+href="main_gcc_ugse69.html#x104-26000026.1" id="QQ2-104-269">Functions of libgcc.a</a></span>
+<br /> <span class="sectionToc" >26.2  <a 
+href="main_gcc_ugse70.html#x105-26100026.2" id="QQ2-105-270">Functions of libgccoptfp.a</a></span>
+<br /> <span class="sectionToc" >26.3  <a 
+href="main_gcc_ugse71.html#x106-26200026.3" id="QQ2-106-271">Functions in libos.a</a></span>
+<br /> <span class="sectionToc" >26.4  <a 
+href="main_gcc_ugse72.html#x107-26300026.4" id="QQ2-107-272">Function of libnosys.a</a></span>
+<br /> <span class="sectionToc" >26.5  <a 
+href="main_gcc_ugse73.html#x108-26400026.5" id="QQ2-108-273">Function of libm.a</a></span>
+<br /> <span class="sectionToc" >26.6  <a 
+href="main_gcc_ugse74.html#x109-26500026.6" id="QQ2-109-274">Function of libc.a/libg.a</a></span>
+<br /> <span class="sectionToc" >26.7  <a 
+href="main_gcc_ugse75.html#x110-26600026.7" id="QQ2-110-275">Floating Point Support</a></span>
+<br /> <span class="sectionToc" >26.8  <a 
+href="main_gcc_ugse76.html#x111-26900026.8" id="QQ2-111-278">Description of libgcc.a and libgccoptfp.a</a></span>
+<br /><span class="chapterToc" >27  <a 
+href="main_gcc_ugch27.html#x112-27000027" id="QQ2-112-279">TriCore Header</a></span>
+<br /><span class="partToc" >VI  <a 
+href="main_gcc_ugpa6.html#x113-271000VI" id="QQ2-113-280">Appendices</a></span>
+<br /><span class="chapterToc" >28  <a 
+href="main_gcc_ugch28.html#x114-27200028" id="QQ2-114-281">The <span 
+class="cmsl-12">GNU </span>project</a></span>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+                                                                                       
+                                                                                       
+<!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+                                                                                       
+                                                                                       
+<!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+                                                                                       
+                                                                                       
+<!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+                                                                                       
+                                                                                       
+<!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p><!--l. 1--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<!--l. 48--><p class="noindent" ><span class="next">[<a 
+href="main_gcc_ugpa1.html" id="tailmain_gcc_ug" >next</a>]</span></p> 
+</body></html> 
+
+                                                                                       
+
+

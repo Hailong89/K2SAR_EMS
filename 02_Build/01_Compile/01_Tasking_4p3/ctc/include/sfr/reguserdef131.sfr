@@ -1,0 +1,126 @@
+/**************************************************************************
+**
+** Version: @(#)reguserdef131.xml	1.4 09/08/26
+** Generated from @(#)reguserdef131.xml	1.4 09/08/26
+** 
+** This file contains all SFR and BIT names and on-chip register definitions
+** 
+** Copyright 2002-2014 Altium BV
+**
+**************************************************************************/
+#ifndef _REGUSERDEF131_H
+#define _REGUSERDEF131_H
+
+/* Core Base */
+#define core_base	0xf7e1	/* The base address off the memory for the CSFR's */
+
+/* Core Special Function Registers (CSFR). Macros, such as PCXI, that expand to a 16-bit number do not directly represent a memory address.
+   They are intended to be used with the intrinsic functions __mfcr(...) and __mtcr(...). */
+#define PCXI	0xfe00	/* Previous Context Info Register */
+#define PSW	0xfe04	/* Program Status Word */
+#define PC	0xfe08	/* Program Counter */
+#define BIV	0xfe20	/* Interrupt Vector Table */
+#define BTV	0xfe24	/* Trap Vector Table Pointer */
+#define ISP	0xfe28	/* Interrupt Stack Pointer */
+#define FCX	0xfe38	/* Free CSA List Head Pointer */
+#define LCX	0xfe3c	/* Free CSA List Limit Pointer */
+#define ICR	0xfe2c	/* Interrupt Control Register  */
+
+/* Watch Dog Timer Timer (WDT) */
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned int ENDINIT        : 1;
+		unsigned int LCK            : 1;
+		unsigned int HPW0           : 2;
+		unsigned int HPW1           : 4;
+		unsigned int PW             : 8;
+		unsigned int REL            : 16;
+	} B;
+	int I;
+	unsigned int U;
+
+} WDT_CON0_type;
+#define WDT_CON0	(*( WDT_CON0_type *) 0xf00005f0u)	/* WDT Control Register 0  */
+
+typedef volatile union
+{
+	struct
+	{ 
+		unsigned int CLRIRF         : 1;
+		unsigned int                : 1;
+		unsigned int IR             : 1;
+		unsigned int DR             : 1;
+		unsigned int                : 28;
+	} B;
+	int I;
+	unsigned int U;
+
+} WDT_CON1_type;
+#define WDT_CON1	(*( WDT_CON1_type *) 0xf00005f4u)	/* WDT Control Register 1  */
+
+
+/* System Timer (STM) */
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned int STM_31_0_      : 32;
+	} B;
+	int I;
+	unsigned int U;
+
+} STM_TIM0_type;
+#define STM_TIM0	(*( STM_TIM0_type *) 0xf0000210u)	/* STM Timer Register 0  */
+
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned int STM_55_32_     : 24;
+		/* const */ unsigned int                : 8;
+	} B;
+	int I;
+	unsigned int U;
+
+} STM_CAP_type;
+#define STM_CAP	(*( STM_CAP_type *) 0xf000022cu)	/* STM Timer Capture Register  */
+
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned int                : 4;
+		/* const */ unsigned int LTAG           : 3;
+		/* const */ unsigned int                : 1;
+		/* const */ unsigned int FTAG           : 4;
+		/* const */ unsigned int                : 20;
+	} B;
+	int I;
+	unsigned int U;
+
+} LFI_CON_type;
+#define LFI_CON	(*( LFI_CON_type *) 0xf87fff10u)	/* LFI Configuration Register  */
+
+#define SYSTIME_LOW	STM_TIM0.U
+#define SYSTIME_HIGH	STM_CAP.U
+
+/* External Bus Unit (EBU) */
+typedef volatile union
+{
+	struct
+	{ 
+		/* const */ unsigned __sfrbit32 CFGEND         : 1;
+		/* const */ unsigned __sfrbit32 CFGERR         : 1;
+		/* const */ unsigned __sfrbit32 RES            : 29;
+		unsigned __sfrbit32 EBUCFG         : 1;
+	} B;
+	int I;
+	unsigned int U;
+
+} EBU_EXTBOOT_type;
+#define EBU_EXTBOOT	(*( EBU_EXTBOOT_type *) 0xf8000010u)	/* EBU External Boot Configuration Register  */
+
+#define EBU_BOOTCFG	EBU_EXTBOOT
+#endif /*_REGUSERDEF131_H*/

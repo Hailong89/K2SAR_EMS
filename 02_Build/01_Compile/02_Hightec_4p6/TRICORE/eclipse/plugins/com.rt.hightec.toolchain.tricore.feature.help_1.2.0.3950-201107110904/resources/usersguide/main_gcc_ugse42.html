@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>The GNU Assembler</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 9--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse43.html" >next</a>] [<a 
+href="main_gcc_ugch19.html" >prev</a>] [<a 
+href="main_gcc_ugch19.html#tailmain_gcc_ugch19.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse42.html">tail</a>] [<a 
+href="main_gcc_ugch19.html#main_gcc_ugse42.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">19.1</span>  <a 
+href="main_gcc_ug.html#QQ2-66-127" id="x66-12000019.1">The <span 
+class="cmsl-12">GNU </span>Assembler</a></h3>
+<a 
+ id="dx66-120001"></a>
+<a 
+ id="dx66-120002"></a>
+<!--l. 11--><p class="noindent" >This manual is a short introduction to the <span 
+class="cmsl-12">GNU </span>assembler. Following is a brief summary of
+generally available command-line options; for machine specific options see <a 
+href="#x66-12200019.1.2">Listing 19.1.2</a>.
+</p><!--l. 13--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">19.1.1</span>  <a 
+href="#x66-12100019.1.1" id="x66-12100019.1.1">Common Command-Line Options</a></h4>
+                                                                                       
+                                                                                       
+<!--l. 15--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-a[opts][=file]</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 16--><p class="noindent" ><a 
+ id="dx66-121001"></a><a 
+ id="dx66-121002"></a> <a 
+ id="dx66-121003"></a><a 
+ id="dx66-121004"></a> <a 
+ id="dx66-121005"></a><a 
+ id="dx66-121006"></a> <a 
+ id="dx66-121007"></a><a 
+ id="dx66-121008"></a> Turn on the output listing. A combination of one or more <span 
+class="cmtt-12">opts</span> can be
+                  used to specify the format and the content of the output listing. The default
+                  option is <span 
+class="cmtt-12">-ahls</span>. The output listing can be directed to a file by assigning the
+                  file name as part of the sub-option. By itself, <span 
+class="cmtt-12">-a</span> requests high-level,
+                  assembly, and symbols listing. You can use other letters to select specific
+                  options for the list: <span 
+class="cmtt-12">-ah</span> requests a high-level language listing, Note
+                  if the assembler source is coming from the standard input (eg
+                  because it is being created by <span 
+class="cmtt-12">tricore-gcc</span> and the <span 
+class="cmtt-12">-pipe</span> command
+                  line switch is being used) then the listing will not contain any
+                  comments or preprocessor directives. This is because the listing
+                  code buffers input source lines from stdin only after they have
+                  been preprocessed by the assembler. This reduces memory usage
+                  and makes the code more efficient. Once you have specified one
+                  of these options, you can further control listing output and its
+                  appearance using the directives <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">list</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">nolist</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">psize</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">eject</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">title</span></span>, and
+                  <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sbttl</span></span>. High-level listings require that a compiler debugging option
+                  like <span 
+class="cmtt-12">-g</span> be used, and that assembly listings (<span 
+class="cmtt-12">-al</span>) be requested
+                  also.
+                                     </p><dl class="list2"><dt class="list">
+                  <span 
+class="cmtt-12">-ac</span>               </dt><dd 
+class="list">
+                                     <!--l. 23--><p class="noindent" >Use the <span 
+class="cmtt-12">-ac</span> option to omit false conditionals from a
+                                     listing. Any lines which are not assembled because
+                                     of a false <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecsx-1200">if</span></span> (or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">ifdef</span></span>, or any other conditional), or
+                                     a true <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecsx-1200">if</span></span> followed by an <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecsx-1200">else</span></span>, will be omitted from
+                                     the listing.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">-ad</span>               </dt><dd 
+class="list">
+                                     <!--l. 24--><p class="noindent" >Omits debugging directives found in source files.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">-ah</span>               </dt><dd 
+class="list">
+                                     <!--l. 25--><p class="noindent" >Include high-level language source.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">-al</span>               </dt><dd 
+class="list">
+                                     <!--l. 26--><p class="noindent" >Includes    assembled    code.    <span 
+class="cmtt-12">-al</span>  requests    an
+                                     output-program assembly listing.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">-am</span>               </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                                     <!--l. 27--><p class="noindent" >Includes macro expansions.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">-an</span>               </dt><dd 
+class="list">
+                                     <!--l. 28--><p class="noindent" >Omit  forms  processing.  The  <span 
+class="cmtt-12">-an</span> option  turns
+                                     off  all  forms  processing.  If  you  do  not  request
+                                     listing  output  with  one  of  the  <span 
+class="cmtt-12">-a</span> options,  the
+                                     listing-control directives have no effect.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">-as</span>               </dt><dd 
+class="list">
+                                     <!--l. 29--><p class="noindent" >Includes a symbols cross-reference table.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">=file</span>             </dt><dd 
+class="list">
+                                     <!--l. 30--><p class="noindent" >List to file (e.g. <span 
+class="cmtt-12">-ahls=assembly.list</span>).</p></dd></dl>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-D</span>                </dt><dd 
+class="list">
+                  <!--l. 32--><p class="noindent" >Ignored. This option is accepted for script compatibility with calls to other
+                  assemblers.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--defsym &#x003C;symbol&#x003E;=&#x003C;value&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 33--><p class="noindent" >Defines the symbol <span 
+class="cmmi-12">&#x003C;</span>sym<span 
+class="cmmi-12">&#x003E; </span>to be <span 
+class="cmmi-12">&#x003C;</span>value<span 
+class="cmmi-12">&#x003E; </span>before assembling the input file.
+                  <span 
+class="cmmi-12">&#x003C;</span>value<span 
+class="cmmi-12">&#x003E; </span>must be an integer constant.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-f</span>                </dt><dd 
+class="list">
+                  <!--l. 35--><p class="noindent" ><a 
+ id="dx66-121009"></a><a 
+ id="dx66-121010"></a><a 
+ id="dx66-121011"></a> <span 
+class="cmtt-12">-f</span> should only be used when assembling programs written by a
+                  (trusted) compiler. <span 
+class="cmtt-12">-f</span> stops the assembler from doing whitespace and
+                  comment preprocessing on the input file(s) before assembling them.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 37--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox71"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If you use <span 
+class="cmtt-12">-f</span> when the files actually need to be preprocessed (if they
+contain comments, for example), <span 
+class="cmtt-12">tricore-as</span> does not work correctly.</div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--fatal-warnings</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 38--><p class="noindent" ><a 
+ id="dx66-121012"></a> Treat warnings as errors.
+<span 
+class="cmtt-12">--gdwarf2</span>        <a 
+ id="dx66-121013"></a> Generate DWARF2 debugging information for each assembler line and
+                  include it in the object file. </p>
+                  <div class="center" 
+>
+<!--l. 41--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox72"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If you compile your program using either debug info or no debug info,
+the resulting code/object may differ.                               </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--help</span>           </dt><dd 
+class="list">
+                  <!--l. 47--><p class="noindent" ><a 
+ id="dx66-121014"></a> Print a summary of the command line options and exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-I &#x003C;dir&#x003E;</span>         </dt><dd 
+class="list">
+                  <!--l. 48--><p class="noindent" ><a 
+ id="dx66-121015"></a><a 
+ id="dx66-121016"></a> Use this option to add a <span 
+class="cmmi-12">&#x003C;</span>path<span 
+class="cmmi-12">&#x003E; </span>to the list of directories <span 
+class="cmtt-12">tricore-as</span>
+                  searches for files specified in <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">include</span></span> directives (<a 
+href="main_gcc_ugse43.html#x67-12400019.2.1">Listing 19.2.1</a>). You may use
+                  <span 
+class="cmtt-12">-I</span> as many times as necessary to include a variety of paths. The current
+                  working directory is always searched first; after that, <span 
+class="cmtt-12">tricore-as</span> searches
+                  any <span 
+class="cmtt-12">-I</span> directories in the same order as they were specified (left to right) on
+                  the command line.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-J</span>                </dt><dd 
+class="list">
+                  <!--l. 49--><p class="noindent" ><a 
+ id="dx66-121017"></a> Don’t issue warnings about signed overflow.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-K</span>                </dt><dd 
+class="list">
+                  <!--l. 50--><p class="noindent" ><a 
+ id="dx66-121018"></a> It is permitted for compatibility with the <span 
+class="cmsl-12">GNU </span>assembler on other
+                  platforms, where it can be used to warn when the assembler alters the
+                  machine code generated for <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">word</span></span> directives in difference tables. The TriCore
+                  family does not have the addressing limitations that sometimes lead to this
+                  alteration on other platforms.  </p>
+                  <div class="center" 
+>
+<!--l. 52--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox73"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This option is accepted but has no effect for TriCore family.        </div>
+                                                                                       
+                                                                                       
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--keep-locals</span>   </dt><dd 
+class="list">
+                  <!--l. 54--><p class="noindent" ><a 
+ id="dx66-121019"></a><a 
+ id="dx66-121020"></a><a 
+ id="dx66-121021"></a> Labels beginning with <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">L</span></span> (upper case only) are called local label. Normally
+                  you do not see such labels when debugging, because they are intended
+                  for the use of programs (like compilers) that compose assembler
+                  programs, not for your notice. Normally both <span 
+class="cmtt-12">tricore-as</span> and
+                  <span 
+class="cmtt-12">tricore-ld</span> discard such labels, so you do not normally debug with
+                  them.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-L</span>                </dt><dd 
+class="list">
+                  <!--l. 55--><p class="noindent" ><a 
+ id="dx66-121022"></a> Same as <span 
+class="cmtt-12">--keep-locals</span>
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--listing-lhs-width=&#x003C;number&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 56--><p class="noindent" ><a 
+ id="dx66-121023"></a> Set the maximum width, in words, of the output data column for an
+                  assembler listing to <span 
+class="cmmi-12">&#x003C;</span>number<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--listing-lhs-width2=&#x003C;number&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 58--><p class="noindent" ><a 
+ id="dx66-121024"></a><a 
+ id="dx66-121025"></a> Set the maximum width, in words, of the output data column for
+                  continuation lines in an assembler listing to <span 
+class="cmmi-12">&#x003C;</span>number<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--listing-rhs-width=&#x003C;number&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 60--><p class="noindent" ><a 
+ id="dx66-121026"></a><a 
+ id="dx66-121027"></a> Set the maximum width of an input source line, as displayed in a listing, to
+                  <span 
+class="cmmi-12">&#x003C;</span>number<span 
+class="cmmi-12">&#x003E; </span>bytes.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--listing-cont-lines=&#x003C;number&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 62--><p class="noindent" ><a 
+ id="dx66-121028"></a><a 
+ id="dx66-121029"></a> Set the maximum number of lines printed in a listing for a single line of
+                  input to <span 
+class="cmmi-12">&#x003C;</span>number<span 
+class="cmmi-12">&#x003E; </span>+ 1.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-MD &#x003C;filename&#x003E;</span>  </dt><dd 
+class="list">
+                  <!--l. 64--><p class="noindent" ><a 
+ id="dx66-121030"></a> <span 
+class="cmtt-12">tricore-as</span> can generate a dependency file for the file it creates. This file
+                  consists of a single rule suitable for <span class="lstinline"><span 
+class="ecss-1200">make</span></span> describing the dependencies
+                  of the main source file. The rule is written to the file named in
+                  its argument. This feature is used in the automatic updating of
+                  makefiles.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--no-warn</span>        </dt><dd 
+class="list">
+                  <!--l. 66--><p class="noindent" ><a 
+ id="dx66-121031"></a> Same as <span 
+class="cmtt-12">-W</span>. Suppress warning messages.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o &#x003C;objfile&#x003E;</span>    </dt><dd 
+class="list">
+                  <!--l. 67--><p class="noindent" ><a 
+ id="dx66-121032"></a> You use this option (which takes exactly one filename) to give the object file
+                  a different name. Whatever the object file is called, <span 
+class="cmtt-12">tricore-as</span> overwrites
+                  any existing file of the same name.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-R</span>                </dt><dd 
+class="list">
+                  <!--l. 68--><p class="noindent" ><a 
+ id="dx66-121033"></a><a 
+ id="dx66-121034"></a> <span 
+class="cmtt-12">-R</span> tells <span 
+class="cmtt-12">tricore-as</span> to write the object file as if all data-section
+                  data lives in the text section. This is only done at the very last
+                  moment: your binary data are the same, but data section parts are
+                  relocated differently. The data section part of your object file is
+                  zero bytes long because all its bytes are appended to the text
+                  section.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--statistics</span>    </dt><dd 
+class="list">
+                  <!--l. 69--><p class="noindent" ><a 
+ id="dx66-121035"></a><a 
+ id="dx66-121036"></a><a 
+ id="dx66-121037"></a> Use <span 
+class="cmtt-12">--statistics</span> to display two statistics about the resources used by
+                  <span 
+class="cmtt-12">tricore-as</span>: the maximum amount of space allocated during the assembly
+                  (in bytes), and the total execution time taken for the assembly in
+                  seconds.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--strip-local-absolute</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 70--><p class="noindent" >Any symbol that is local to this assembly and has a constant value is
+                  removed from the outgoing symbol table.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--target-help</span>   </dt><dd 
+class="list">
+                  <!--l. 74--><p class="noindent" ><a 
+ id="dx66-121038"></a> Print a summary of all target specific options and exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-v</span>                </dt><dd 
+class="list">
+                  <!--l. 75--><p class="noindent" ><a 
+ id="dx66-121039"></a> Same as <span 
+class="cmtt-12">-version</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-version</span>         </dt><dd 
+class="list">
+                  <!--l. 76--><p class="noindent" ><a 
+ id="dx66-121040"></a> Same as <span 
+class="cmtt-12">--version</span>.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--version</span>        </dt><dd 
+class="list">
+                  <!--l. 77--><p class="noindent" ><a 
+ id="dx66-121041"></a> Print the <span 
+class="cmtt-12">tricore-as</span> version and exit.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-W</span>                </dt><dd 
+class="list">
+                  <!--l. 78--><p class="noindent" ><a 
+ id="dx66-121042"></a><a 
+ id="dx66-121043"></a> Suppress warning messages.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--warn</span>           </dt><dd 
+class="list">
+                  <!--l. 79--><p class="noindent" ><a 
+ id="dx66-121044"></a> Don’t suppress warning messages.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Z</span>                </dt><dd 
+class="list">
+                  <!--l. 80--><p class="noindent" ><a 
+ id="dx66-121045"></a> Generate a bad object file even after errors. After an error message,
+                  <span 
+class="cmtt-12">tricore-as</span> normally produces no output. If for some reason you are
+                  interested in object file output even after <span 
+class="cmtt-12">tricore-as</span> gives an error message
+                  on your program, use the <span 
+class="cmtt-12">-Z</span> option.
+                  </p></dd><dt class="list">
+ <span 
+class="cmtt-12">-- | &#x003C;files&#x003E; </span><span 
+class="cmtt-12">†</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 81--><p class="noindent" >Standard input, or source files to assemble.</p></dd></dl>
+<!--l. 84--><p class="noindent" >If you are invoking <span 
+class="cmtt-12">tricore-as</span> via the <span 
+class="cmsl-12">GNU </span>compiler driver program (<span 
+class="cmtt-12">tricore-gcc</span>), you may
+use the <span 
+class="cmtt-12">-Wa</span> option to pass additional arguments to the assembler. The assembler arguments
+must be separated from each other (and the <span 
+class="cmtt-12">-Wa</span>) by commas.
+</p><!--l. 86--><p class="noindent" >For example:
+</p><!--l. 88--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">-c -g -O -Wa,-alh,-L file.c</span>
+</p><!--l. 90--><p class="noindent" >This passes two options to the assembler: <span 
+class="cmtt-12">-alh</span> (emit a listing to standard output
+with high-level and assembly source) and <span 
+class="cmtt-12">-L</span> (retain local symbols in the symbol
+table).
+</p><!--l. 92--><p class="noindent" >You can call the <span 
+class="cmsl-12">GNU </span>compiler driver with the <span 
+class="cmtt-12">-v</span> option to see precisely what options it passes
+to each compilation pass, including the assembler.
+</p><!--l. 1--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">19.1.2</span>  <a 
+href="#x66-12200019.1.2" id="x66-12200019.1.2">TriCore specific Command-Line Options</a></h4>
+<a 
+ id="dx66-122001"></a>
+<!--l. 3--><p class="noindent" >The following options are available for <span 
+class="cmtt-12">tricore-as</span>:
+                                                                                       
+                                                                                       
+</p><!--l. 5--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">-mtc10</span>           </dt><dd 
+class="list">
+                  <!--l. 6--><p class="noindent" ><a 
+ id="dx66-122002"></a> Assemble for the TC1v1.0 instruction set; such modules are incompatible
+                  with modules assembled for any other version of the TriCore architecture.
+                  </p>
+                  <div class="center" 
+>
+<!--l. 7--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox74"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />This option is deprecated; support for TC1v1.0 will be dropped in a
+future version.                                                     </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-mtc12</span>           </dt><dd 
+class="list">
+                  <!--l. 8--><p class="noindent" ><a 
+ id="dx66-122003"></a> Assemble for the TC1v1.2 instruction set; such modules are compatible with
+                  modules assembled for the TC1v1.3 or TC2.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mtc13</span>           </dt><dd 
+class="list">
+                  <!--l. 9--><p class="noindent" ><a 
+ id="dx66-122004"></a> Assemble for the TC1v1.3 instruction set. Such modules are compatible with
+                  modules assembled for the TC1v1.2 or TC2.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mtc2</span>             </dt><dd 
+class="list">
+                  <!--l. 10--><p class="noindent" ><a 
+ id="dx66-122005"></a> Assemble for the TC2; such modules are compatible with modules
+                  assembled for the TC1v1.2 or TC1v1.3.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu009</span>         </dt><dd 
+class="list">
+                  <!--l. 11--><p class="noindent" ><a 
+ id="dx66-122006"></a> Automatically insert two <span class="lstinline"><span 
+class="ecss-1200">nop</span></span> instructions after each <span class="lstinline"><span 
+class="ecss-1200">dsync</span></span> instruction as a
+                  software workaround for the hardware bug documented in TriCore errata
+                  sheets as <span 
+class="cmcsc-10x-x-120">CPU.9 </span>or <span 
+class="cmcsc-10x-x-120">COR17</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu034</span>         </dt><dd 
+class="list">
+                  <!--l. 12--><p class="noindent" ><a 
+ id="dx66-122007"></a> Generate code for the CPU-Bug CPU_TC.034: Insert an <span class="lstinline"><span 
+class="ecss-1200">isnyc</span></span> after each
+                  <span class="lstinline"><span 
+class="ecss-1200">dsync</span></span>. Also note that the options <span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">mcpu009</span></span> and <span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">mcpu034</span></span> are
+                  mutually exclusive; if both are specified, the last option specified
+                  wins
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu048</span>         </dt><dd 
+class="list">
+                  <!--l. 15--><p class="noindent" ><a 
+ id="dx66-122008"></a> This option enables a workaround for the CPU bug <span class="lstinline"><span 
+class="ecss-1200">CPU_TC</span><span 
+class="ecss-1200">.048</span></span>, which
+                  requires inserting a <span class="lstinline"><span 
+class="ecss-1200">nop</span></span> after a <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.[</span><span 
+class="ecss-1200">a</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200">da</span><span 
+class="ecss-1200">]</span></span> instruction and an immediately
+                  following indirect jump or call instruction that uses the just loaded address
+                  register. If your particular TriCore chip is affected by this bug, you should
+                  use this option for both manually written and compiler-generated assembler
+                  files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu050</span>         </dt><dd 
+class="list">
+                  <!--l. 20--><p class="noindent" >Generate code for the CPU-Bug CPU_TC.050: Insert a <span class="lstinline"><span 
+class="ecss-1200">nop</span></span> instruction
+                  between a multicycle integer instruction and load instruction.
+</p>
+                  <div class="center" 
+>
+<!--l. 22--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox75"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Use  this  option  only  for  manually  written  assembler  files,  not  for
+assembler files generated by <span 
+class="cmtt-12">tricore-gcc</span>, which already implements
+its own workaround for this bug.                                   </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu060</span>         </dt><dd 
+class="list">
+                  <!--l. 23--><p class="noindent" ><a 
+ id="dx66-122009"></a> This option enables a workaround for the CPU bug <span class="lstinline"><span 
+class="ecss-1200">CPU_TC</span><span 
+class="ecss-1200">.060</span></span>, which
+                  requires inserting a <span class="lstinline"><span 
+class="ecss-1200">nop</span></span> after a <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.[</span><span 
+class="ecss-1200">a</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200">da</span><span 
+class="ecss-1200">]</span></span> instruction and an immediately
+                  following <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.[</span><span 
+class="ecss-1200">d</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200">w</span><span 
+class="ecss-1200">]</span></span> instruction that uses the just loaded address register. If
+                  your particular TriCore chip is affected by this bug, you should use this
+                  option for both manually written and compiler-generated assembler
+                  files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu069</span>         </dt><dd 
+class="list">
+                  <!--l. 29--><p class="noindent" ><a 
+ id="dx66-122010"></a> This option inserts a <span class="lstinline"><span 
+class="ecss-1200">NOP</span></span> after a <span class="lstinline"><span 
+class="ecss-1200">RSLCX</span></span> instruction.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu070</span>         </dt><dd 
+class="list">
+                  <!--l. 30--><p class="noindent" ><a 
+ id="dx66-122011"></a> This option enables a workaround for the CPU bug <span class="lstinline"><span 
+class="ecss-1200">CPU_TC</span><span 
+class="ecss-1200">.070</span></span>,
+                  which requires inserting one or two <span class="lstinline"><span 
+class="ecss-1200">nop</span></span>s after a conditional jump
+                  instruction and an immediately following <span class="lstinline"><span 
+class="ecss-1200">loop</span></span> instruction. If your
+                                                                                       
+                                                                                       
+                  particular TriCore chip is affected by this bug, you should use this
+                  option for both manually written and compiler-generated assembler
+                  files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu072</span>         </dt><dd 
+class="list">
+                  <!--l. 35--><p class="noindent" ><a 
+ id="dx66-122012"></a> This option enables a workaround for the CPU bug <span class="lstinline"><span 
+class="ecss-1200">CPU_TC</span><span 
+class="ecss-1200">.072</span></span>, which
+                  requires inserting a <span class="lstinline"><span 
+class="ecss-1200">nop</span></span> after a <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.[</span><span 
+class="ecss-1200">a</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200">da</span><span 
+class="ecss-1200">]</span></span> instruction and an immediately
+                  following <span class="lstinline"><span 
+class="ecss-1200">loop</span></span> instruction that uses the just loaded address register. If your
+                  particular TriCore chip is affected by this bug, you should use this
+                  option for both manually written and compiler-generated assembler
+                  files.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu081</span>         </dt><dd 
+class="list">
+                  <!--l. 40--><p class="noindent" ><a 
+ id="dx66-122013"></a> Forbid loading of <span class="lstinline"><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">a10</span></span> from memory.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu082</span>         </dt><dd 
+class="list">
+                  <!--l. 41--><p class="noindent" ><a 
+ id="dx66-122014"></a> Data corruption may occur when a context store operation, <span class="lstinline"><span 
+class="ecss-1200">STUCX</span></span> or
+                  <span class="lstinline"><span 
+class="ecss-1200">STLCX</span></span>, is immediately followed by a memory load operation which reads
+                  from the last double-word address written by the context store. This option
+                  inserts a <span class="lstinline"><span 
+class="ecss-1200">NOP</span></span> between these instructions.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu083</span>         </dt><dd 
+class="list">
+                  <!--l. 42--><p class="noindent" ><a 
+ id="dx66-122015"></a> This option inserts a <span class="lstinline"><span 
+class="ecss-1200">NOP</span></span> after a <span class="lstinline"><span 
+class="ecss-1200">DISABLE</span></span> instruction.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu094</span>         </dt><dd 
+class="list">
+                  <!--l. 43--><p class="noindent" ><a 
+ id="dx66-122016"></a> The assembler inserts a <span class="lstinline"><span 
+class="ecss-1200">NOP</span></span> instruction between the IP jump and the CSA
+                  list instruction. For details see Infineon’s Errata Sheet for this
+                  bug.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-mcpu095</span>         </dt><dd 
+class="list">
+                  <!--l. 46--><p class="noindent" ><a 
+ id="dx66-122017"></a> The assembler inserts a single <span class="lstinline"><span 
+class="ecss-1200">NOP</span></span> instruction between any <span class="lstinline"><span 
+class="ecss-1200">SAT</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">B</span><span 
+class="ecss-1200">/</span><span 
+class="ecss-1200">SAT</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">H</span></span>
+                  instruction and a following Load-Store instruction with a DGPR source
+                  operand <span class="lstinline"><span 
+class="ecss-1200">addsc</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">a</span></span>, <span class="lstinline"><span 
+class="ecss-1200">addsc</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">at</span></span>, <span class="lstinline"><span 
+class="ecss-1200">mov</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">a</span></span>, <span class="lstinline"><span 
+class="ecss-1200">mtcr</span></span>. For details see Infineon’s Errata Sheet
+                  for this bug.
+</p>
+                  <div class="center" 
+>
+<!--l. 49--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div 
+class="colorbox" id="colorbox76"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The compiler avoids generating that kind of loops, which are affected
+by <span class="lstinline"><span 
+class="ecss-1200">CPU_TC</span><span 
+class="ecss-1200">.096</span></span>, but this errata is not treated by the assembler. If
+you are using inline assembler or assembler files please inspect the
+relevant blocks of your source code. For details see CPU erratas for
+TriCore.                                                           </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-mdmi12</span>          </dt><dd 
+class="list">
+                  <!--l. 51--><p class="noindent" ><a 
+ id="dx66-122018"></a> Enables a software workaround for TriCore TC1130 chips that are affected
+                  by the <span class="lstinline"><span 
+class="ecss-1200">DMI_TC</span><span 
+class="ecss-1200">.012</span></span> hardware cache bug. This workaround will be
+                  enabled if the option <span 
+class="cmtt-12">-mcpu=tc1130</span> is passed to the compiler. If
+                  you are compiling C/C++ source files using the compiler driver
+                  <span 
+class="cmtt-12">tricore-gcc</span> and your TriCore chip is affected by this bug, you should
+                  add the option <span 
+class="cmtt-12">-Wa,-mdmi12</span> which tells the driver program to
+                  enable the new workaround in the assembler. When enabled, the
+                  assembler auto-inserts an additional <span class="lstinline"><span 
+class="ecss-1200">nop</span></span> instruction whenever it detects
+                  a code sequence that is potentially affected by the data cache
+                  misbehaviour as described in Infineon’s Errata Sheet for this bug.
+                  Note that code assembled with this workaround enabled will also
+                  run on non-affected TriCore derivatives, as the additional <span class="lstinline"><span 
+class="ecss-1200">nop</span></span>
+                  instructions merely have a negligible impact on the code size and
+                  execution time, but otherwise will not cause any incompatibilities
+                  whatsoever.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-V</span>                </dt><dd 
+class="list">
+                  <!--l. 54--><p class="noindent" ><a 
+ id="dx66-122019"></a> Show the version of the assembler before processing the given files (or
+                  standard input).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-Y</span>                </dt><dd 
+class="list">
+                  <!--l. 55--><p class="noindent" ><a 
+ id="dx66-122020"></a> This is useful for debugging <span 
+class="cmtt-12">tricore-as</span>, as it shows its internal state, how
+                  mnemonics and operands are parsed, and which opcode is chosen for a given
+                  mnemonic instruction.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--dont-optimize | --insn32-only | --insn32-preferred</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 56--><p class="noindent" >If none these mutually-exclusive options is specified, <span 
+class="cmtt-12">tricore-as</span> will try to
+                  find the shortest possible opcode that fits a given mnemonic instruction. If
+                  an instruction is available in both 16-bit and 32-bit formats (e.g.,
+                  <span class="lstinline"><span 
+class="ecss-1200">nop</span></span>), then the 16-bit instruction is chosen in favor of the 32-bit
+                  instruction. If a mnemonic instruction results in a 32-bit instruction,
+                                                                                       
+                                                                                       
+                  <span 
+class="cmtt-12">tricore-as</span> tries to optimize it by finding an equivalent 16-bit
+                  instruction.
+                  </p><!--l. 59--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p>
+                       <ul class="itemize1">
+                       <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">add</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">dn</span><span 
+class="ecss-1200">,%</span><span 
+class="ecss-1200">dn</span><span 
+class="ecss-1200">,%</span><span 
+class="ecss-1200">dm</span></span>  will  be  replaced  by  the  16-bit  instruction
+                       <span class="lstinline"><span 
+class="ecss-1200">add</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">dn</span><span 
+class="ecss-1200">,%</span><span 
+class="ecss-1200">dm</span></span>
+                       </li>
+                       <li class="itemize"><span class="lstinline"><span 
+class="ecss-1200">sel</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">dn</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d15</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">dn</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">const</span></span>  will  be  replaced  by  the  16-bit
+                       instruction <span class="lstinline"><span 
+class="ecss-1200">cmovn</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">dn</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">%</span><span 
+class="ecss-1200">d15</span><span 
+class="ecss-1200">,</span><span 
+class="ecss-1200"> </span><span 
+class="ecsx-1200">const</span></span>
+                       </li>
+                       <li class="itemize">Under  certain  circumstances  these  jump  equal  instruciton  <span class="lstinline"><span 
+class="ecss-1200">jeq</span></span>,
+                       <span class="lstinline"><span 
+class="ecss-1200">jne</span></span>,<span class="lstinline"><span 
+class="ecss-1200">jlt</span></span> etc. may be replaced by jump zero instruction <span class="lstinline"><span 
+class="ecss-1200">jz</span></span>, <span class="lstinline"><span 
+class="ecss-1200">jnz</span></span>, <span class="lstinline"><span 
+class="ecss-1200">jltz</span></span>
+                       etc.</li></ul>
+                  <!--l. 67--><p class="noindent" >This means that neither a compiler nor an assembler programmer needs to
+                  care about emitting or writing down the shortest possible instructions, as
+                  this is done automatically by <span 
+class="cmtt-12">tricore-as</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--dont-optimize</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 68--><p class="noindent" ><a 
+ id="dx66-122021"></a> Don’t try to find the shortest matching opcode (<span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">optim</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">code16</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">code32</span></span>
+                  are honored). Use this option to prevent the assembler from optimizing
+                  mnemonic instructions. However, you can use the <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">optim</span></span> pseudo-opcode to
+                  enable optimization for the next instruction following <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">optim</span></span>, thus
+                  temporarily overriding this option.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--insn32-only</span>   </dt><dd 
+class="list">
+                  <!--l. 69--><p class="noindent" ><a 
+ id="dx66-122022"></a> This directs the assembler to exclusively emit 32-bit opcodes. 16-bit
+                  instructions will be replaced with their 32-bit equivalent, and the
+                  pseudo-opcodes <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">code16</span></span> and <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">optim</span></span> will be ignored.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--insn32-preferred</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 70--><p class="noindent" ><a 
+ id="dx66-122023"></a> This option is similar to <span class="lstinline"><span 
+class="cmsy-10x-x-120">-</span><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">insn32</span><span 
+class="cmsy-10x-x-120">-</span><span 
+class="ecss-1200">only</span></span> in that it prevents optimizing and
+                  replaces 16-bit instructions with their 32-bit equivalent, but the
+                  pseudo-opcode <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">code16</span></span> will be honored.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--enforce-aligned-data</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 71--><p class="noindent" ><a 
+ id="dx66-122024"></a> When enabled, N-byte constants generated by <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecsx-1200">short</span></span>, <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">word</span></span>, and related
+                  pseudo-opcodes are automatically aligned to a N-byte boundary within their
+                  respective section. This is not the default, as compilers (notably
+                  <span 
+class="cmtt-12">tricore-gcc</span>) may take care of alignment themselves and omit
+                  alignment statements deliberately in order to initialize <span class="lstinline"><span 
+class="ecss-1200">packed</span></span>
+                  structures.
+</p>
+                  </dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 106--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse43.html" >next</a>] [<a 
+href="main_gcc_ugch19.html" >prev</a>] [<a 
+href="main_gcc_ugch19.html#tailmain_gcc_ugch19.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse42.html" >front</a>] [<a 
+href="main_gcc_ugch19.html#main_gcc_ugse42.html" >up</a>] </p></div>
+<!--l. 106--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse42.html"></a> </p> 
+</body></html> 

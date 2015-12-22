@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Working with the  TriCore Development Platform</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 111--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch2.html" >next</a>] [<a 
+href="main_gcc_ugse2.html" >prev</a>] [<a 
+href="main_gcc_ugse2.html#tailmain_gcc_ugse2.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse3.html">tail</a>] [<a 
+href="main_gcc_ugch1.html#main_gcc_ugse3.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">1.3</span>  <a 
+href="main_gcc_ug.html#QQ2-7-9" id="x7-60001.3">Working with the  TriCore Development Platform</a></h3>
+<!--l. 113--><p class="noindent" >The compiler driver <span 
+class="cmtt-12">tricore-gcc</span> is a program which must be started from a command line
+interface (The DOS-Prompt on Microsoft Windows systems, a shell like the bash, the ksh or the
+csh on UNIX systems or Linux). By adding options to the invocation of the control program its
+behavior may be affected.
+</p><!--l. 115--><p class="noindent" >The control program is started in the following way:
+</p><!--l. 117--><p class="noindent" ><span 
+class="cmtt-12">tricore-gcc</span> <span 
+class="cmtt-12">[options] </span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">input file</span><span 
+class="cmmi-12">&#x003E;</span>
+</p><!--l. 119--><p class="noindent" >The  TriCore Development Platform does not come with a built-in graphical user interface. All
+tools must be started via the command line. But many integrated development environments
+(IDEs), such as RedHat’s Source Navigator, Borland’s Codewright, KDevelop or Anjuta, may
+be used to add a GUI to the toolchain.
+</p><!--l. 121--><p class="noindent" >The control program accepts a huge amount of command line options. A few of them are used
+to control the compiler driver itself, most of them are passed through to the appropriate
+program of the toolchain. On the opposite, not all options available for the component programs
+are accessible from the compiler frontend. These are some of the most important options
+accepted by the compiler driver program:
+</p><!--l. 123--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">--version</span>        </dt><dd 
+class="list">
+                  <!--l. 124--><p class="noindent" ><a 
+ id="dx7-6001"></a> Prints  the  version  and  the  release  number  of  the  compiler  driver
+                  program.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-o &#x003C;output file&#x003E;</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 127--><p class="noindent" ><a 
+ id="dx7-6002"></a> The output file resulting from this compiler run is stored in <span 
+class="cmmi-12">&#x003C;</span>output
+                  file<span 
+class="cmmi-12">&#x003E;</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-c</span>                </dt><dd 
+class="list">
+                  <!--l. 130--><p class="noindent" ><a 
+ id="dx7-6003"></a> The input file is compiled to a object file. The toolchain is stopped
+                  after the assembler. Normally all object files of a project are merged
+                  in one single executable file in a final link step.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">-g</span>                </dt><dd 
+class="list">
+                  <!--l. 133--><p class="noindent" ><a 
+ id="dx7-6004"></a> <a 
+ id="dx7-6005"></a>Debug information is added to the generated executable. The debug
+                  information is generated in the default debug format.  The only debug
+                  format currently supported by the TriCore compiler tools is DWARF version
+                  2.
+</p>
+                  <div class="center" 
+>
+<!--l. 139--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox6"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />With <span 
+class="cmtt-12">-g3</span> debug info is added to defines.                           </div>
+</div>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">-Wall</span>             </dt><dd 
+class="list">
+                  <!--l. 141--><p class="noindent" ><a 
+ id="dx7-6006"></a> Nearly all warnings that occurred while compiling a program are displayed.
+                  These warnings include warnings originated by syntactically wrong code or
+                  by unused variables. These warnings are not treated as errors. The
+                  compilation of the source files will continue even if a warning was issued.
+                  Warnings are only for informational purposes.</p></dd></dl>
+<!--l. 145--><p class="noindent" >For a detailed description of the compiler driver, the component programs and their available
+options see <a 
+href="main_gcc_ugpa3.html#x54-103000III">Listing III</a>.
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch2.html" >next</a>] [<a 
+href="main_gcc_ugse2.html" >prev</a>] [<a 
+href="main_gcc_ugse2.html#tailmain_gcc_ugse2.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse3.html" >front</a>] [<a 
+href="main_gcc_ugch1.html#main_gcc_ugse3.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse3.html"></a> </p> 
+</body></html> 

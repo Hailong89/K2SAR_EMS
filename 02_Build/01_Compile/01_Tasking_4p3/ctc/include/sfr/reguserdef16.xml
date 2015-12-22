@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+
+
+<sfrfile core="userdef16" xmlns="http://www.tasking.com/schema/sfrfile/v1.0">
+	<header>
+
+Version: @(#)reguserdef16.xml	1.6 11/05/30
+
+This file contains all Core-SFR and BIT names and on-chip register definitions
+
+Copyright 2002-2014 Altium BV
+
+	</header>
+	<group name="Core Base">
+		<sfr name="core_base" address="0xF7E1" description="The base address off the memory for the CSFR's"/>
+	</group>
+	<group name="CSFR" description="Core Special Function Registers">
+		<sfr name="MMU_CON" address="0x8000" default="0x00008000" description="MMU Control Register"/>
+		<sfr name="PCXI" address="0xfe00" default="0x00000000" description="Previous Context Information Register"/>
+		<sfr name="PCX" address="0xfe00" default="0x00000000" description="Previous Context Pointer"/>
+		<sfr name="PSW" address="0xfe04" default="0x00000B80" description="Program Status Word"/>
+		<sfr name="PC" address="0xfe08" description="Program Counter"/>
+		<sfr name="SYSCON" address="0xfe14" default="0x00000000" description="System Configuration Register"/>
+		<sfr name="CPU_ID" address="0xfe18" default="0x000AC003" description="CPU Identification Register"/>
+		<sfr name="BIV" address="0xfe20" default="0x00000000" description="Base Interrupt Vector Table Pointer"/>
+		<sfr name="BTV" address="0xfe24" default="0xA0000100" description="Base Trap Vector Table Pointer"/>
+		<sfr name="ISP" address="0xfe28" default="0x00000100" description="Interrupt Stack Pointer"/>
+		<sfr name="ICR" address="0xfe2c" default="0x00000000" description="Interrupt Control Register"/>
+		<sfr name="FCX" address="0xfe38" default="0x00000000" description="Free CSA List Head Pointer"/>
+		<sfr name="LCX" address="0xfe3c" default="0x00000000" description="Free CSA List Limit Pointer"/>
+		<sfr name="PMA0" address="0x801c" default="0xC00003FF" description="Physical Memory Attributes"/>
+		<sfr name="COMPAT" address="0x9400" default="0xFFFFFFFF" description="Compatibility Control Register"/>
+	</group>
+	<group name="WDT" description="Watch Dog Timer Timer">
+		<sfrtype name="WDT_CON0_type">
+			<bitfield name="ENDINIT" start="0" end="0" access="rw" description="End-of-Initialization Control Bit."/>
+			<bitfield name="LCK" start="1" end="1" access="rw" description="Lock bit to Control Access to WDT_CON0."/>
+			<bitfield name="HPW0" start="2" end="3" access="w" description="Hardware Password 0."/>
+			<bitfield name="HPW1" start="4" end="7" access="w" description="Hardware Password 1."/>
+			<bitfield name="PW" start="8" end="15" access="rw" description="User-Definable Password Field for Access to WDT_CON0."/>
+			<bitfield name="WDTREL" start="16" end="31" access="rw" description="Reload Value for the Watchdog Timer."/>
+		</sfrtype>
+		<sfr name="WDT_CON0" address="0xf00005f0" default="0xFFFC0002" sfrtype="WDT_CON0_type" description="WDT Control Register 0"/>
+		<sfrtype name="WDT_CON1_type">
+			<bitfield name="CLRIRF" start="0" end="0" access="rw"/>
+			<bitfield name="IR" start="2" end="2" access="rw" description="WDT Input Frequency Request Control Bit."/>
+			<bitfield name="DR" start="3" end="3" access="rw" description="WDT Disable Request Control Bit."/>
+		</sfrtype>
+		<sfr name="WDT_CON1" address="0xf00005f4" default="0x00000000" sfrtype="WDT_CON1_type" description="WDT Control Register 1"/>
+		<sfrtype name="WDT_SR_type">
+			<bitfield name="AE" start="0" end="0" access="r" description="Access Error status flag."/>
+			<bitfield name="OE" start="1" end="1" access="r" description="Overflow Error status flag."/>
+			<bitfield name="IS" start="2" end="2" access="r" description="Input Clock status flag."/>
+			<bitfield name="DS" start="3" end="3" access="r" description="Enable/Disable status flag."/>
+			<bitfield name="TO" start="4" end="4" access="r" description="Time-Out mode flag."/>
+			<bitfield name="PR" start="5" end="5" access="r" description="Rewarning mode flag."/>
+			<bitfield name="TIM" start="16" end="31" access="r" description="Timer value."/>
+		</sfrtype>
+		<sfr name="WDT_SR" address="0xf00005f8" default="0xFFFC0010" sfrtype="WDT_SR_type" description="WDT Status Register"/>
+	</group>
+	<group name="STM" description="System Timer">
+		<sfrtype name="STM_TIM0_type">
+			<bitfield name="STM[31:0]" start="0" end="31" access="r"/>
+		</sfrtype>
+		<sfr name="STM_TIM0" address="0xf0000210" default="0x00000000" sfrtype="STM_TIM0_type" description="STM Timer Register 0"/>
+		<sfrtype name="STM_CAP_type">
+			<bitfield name="STM[55:32]" start="0" end="23" access="r"/>
+		</sfrtype>
+		<sfr name="STM_CAP" address="0xf000022c" default="0x00000000" sfrtype="STM_CAP_type" description="STM Timer Capture Register"/>
+		<alias name="SYSTIME_LOW" definition="STM_TIM0.U"/>
+ 		<alias name="SYSTIME_HIGH" definition="STM_CAP.U"/>
+ 	</group>
+	<group name="EBU" description="External Bus Unit">
+		<sfrtype name="EBU_BOOTCFG_type">
+			<bitfield name="PORTW" start="0" end="1" description="Port width" qualify="__sfrbit32">
+ 				<value value="1" description="16-bit multiplexed"/>
+ 				<value value="2" description="Twin, 16-bit multiplexed"/>
+ 				<value value="3" description="32-bit multiplexed"/>
+ 			</bitfield>
+			<bitfield name="WAITRDC" start="2" end="6" description="Read wait states" qualify="__sfrbit32">
+				<value value="0" description=" 0 wait states"/>
+ 				<value value="1" description=" 1 wait state"/>
+ 				<value value="2" description=" 2 wait states"/>
+ 				<value value="3" description=" 3 wait states"/>
+ 				<value value="4" description=" 4 wait states"/>
+ 				<value value="5" description=" 5 wait states"/>
+ 				<value value="6" description=" 6 wait states"/>
+ 				<value value="7" description=" 7 wait states"/>
+				<value value="8" description=" 8 wait states"/>
+ 				<value value="9" description=" 9 wait states"/>
+ 				<value value="10" description="10 wait states"/>
+ 				<value value="11" description="11 wait states"/>
+ 				<value value="12" description="12 wait states"/>
+ 				<value value="13" description="13 wait states"/>
+ 				<value value="14" description="14 wait states"/>
+ 				<value value="15" description="15 wait states"/>
+				<value value="16" description="16 wait states"/>
+ 				<value value="17" description="17 wait states"/>
+ 				<value value="18" description="18 wait states"/>
+ 				<value value="19" description="19 wait states"/>
+ 				<value value="20" description="20 wait states"/>
+ 				<value value="21" description="21 wait states"/>
+ 				<value value="22" description="22 wait states"/>
+ 				<value value="23" description="23 wait states"/>
+				<value value="24" description="24 wait states"/>
+ 				<value value="25" description="25 wait states"/>
+ 				<value value="26" description="26 wait states"/>
+ 				<value value="27" description="27 wait states"/>
+ 				<value value="28" description="28 wait states"/>
+ 				<value value="29" description="29 wait states"/>
+ 				<value value="30" description="30 wait states"/>
+ 				<value value="31" description="31 wait states"/>
+ 			</bitfield>
+			<bitfield name="ADDRC" start="7" end="10" description="Address cycles" qualify="__sfrbit32">
+				<value value="1" description="1 cycle"/>
+ 				<value value="2" description="2 cycles"/>
+ 				<value value="3" description="3 cycles"/>
+ 				<value value="4" description="4 cycles"/>
+ 				<value value="5" description="5 cycles"/>
+ 				<value value="6" description="6 cycles"/>
+ 				<value value="7" description="7 cycles"/>
+ 			</bitfield>
+			<bitfield name="WAITINV" start="11" end="11" description="WAIT Level" qualify="__sfrbit32">
+				<value value="0" description="Active low"/>
+ 				<value value="1" description="Active high"/>
+ 			</bitfield>
+			<bitfield name="WAIT" start="12" end="13" description="Variable wait-state insertion" qualify="__sfrbit32">
+				<value value="0" description="Disabled"/>
+ 				<value value="1" description="Asynchronous"/>
+ 				<value value="2" description="Synchronous"/>
+ 			</bitfield>
+			<bitfield name="BCGEN" start="14" end="15" description="Byte control signal timing" qualify="__sfrbit32">
+				<value value="0" description="Chip select mode"/>
+ 				<value value="1" description="Control mode"/>
+ 				<value value="2" description="Write enable mode"/>
+ 				<value value="3" description="DQM mode for SDRAM"/>
+ 			</bitfield>
+		</sfrtype>
+		<sfr name="EBU_BOOTCFG" address="0xA0000004" default="0x0000800C" sfrtype="EBU_BOOTCFG_type" description="External Boot Memory Configuration Word"/>
+ 	</group>
+	<group name="PCP2">
+		<sfr name="PCP_RAM_BASE" address="0xF0050000" description="PCP Parameter Memory Start Address"/>
+		<sfrtype name="PCP_GPR6_type">
+			<bitfield name="CNT1" start="0" end="11" qualify="__sfrbit32" description="Counter for BCOPY, COPY and EXIT"/>
+			<bitfield name="TOS" start="14" end="15" qualify="__sfrbit32" description="Type Of Service"/>
+			<bitfield name="SRPN" start="16" end="23" qualify="__sfrbit32" description="Service Request Priority Number"/>
+			<bitfield name="CPPN" start="24" end="31" qualify="__sfrbit32" description="PCP Interrupt Priority Number"/>
+		</sfrtype>
+		<sfrtype name="PCP_GPR7_type">
+			<bitfield name="Z" start="0" end="0" qualify="__sfrbit32" description="Zero flag"/>
+			<bitfield name="N" start="1" end="1" qualify="__sfrbit32" description="Negative flag"/>
+			<bitfield name="C" start="2" end="2" qualify="__sfrbit32" description="Carry flag"/>
+			<bitfield name="V" start="3" end="3" qualify="__sfrbit32" description="Overflow flag"/>
+			<bitfield name="CNZ" start="4" end="4" qualify="__sfrbit32" description="Outerloop counter 1 Zero flag"/>
+			<bitfield name="IEN" start="5" end="5" qualify="__sfrbit32" description="Enable Interrupt of Channel"/>
+			<bitfield name="CEN" start="6" end="6" qualify="__sfrbit32" description="Channel Enable"/>
+			<bitfield name="DPTR" start="8" end="15" qualify="__sfrbit32" description="Data Pointer"/>
+		</sfrtype>
+		<sfrtype name="PCP_CS_type">
+			<bitfield name="EN" start="0" end="0" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="RS" start="2" end="2" access="r" qualify="__sfrbit32"/>
+			<bitfield name="RCB" start="4" end="4" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="EIE" start="5" end="5" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="CS" start="6" end="7" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="PPE" start="8" end="8" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="PPS" start="9" end="15" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="CWE" start="16" end="16" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="CWT" start="17" end="23" access="rw" qualify="__sfrbit32"/>
+			<bitfield name="ESR" start="24" end="31" access="rw" qualify="__sfrbit32"/>
+		</sfrtype>
+		<sfr name="PCP_CS" address="0xf0043f10" default="0x00000000" sfrtype="PCP_CS_type" description="PCP Control/Status Register"/>
+		<sfrtype name="PCP_ES_type">
+			<bitfield name="BER" start="0" end="0" access="r" qualify="__sfrbit32"/>
+			<bitfield name="IOP" start="1" end="1" access="r" qualify="__sfrbit32"/>
+			<bitfield name="DCR" start="2" end="2" access="r" qualify="__sfrbit32"/>
+			<bitfield name="IAE" start="3" end="3" access="r" qualify="__sfrbit32"/>
+			<bitfield name="DBE" start="4" end="4" access="r" qualify="__sfrbit32"/>
+			<bitfield name="ME" start="5" end="5" access="r" qualify="__sfrbit32"/>
+			<bitfield name="CWD" start="6" end="6" access="r" qualify="__sfrbit32"/>
+			<bitfield name="PPC" start="7" end="7" access="r" qualify="__sfrbit32"/>
+			<bitfield name="EPN" start="8" end="15" access="r" qualify="__sfrbit32"/>
+			<bitfield name="EPC" start="16" end="31" access="r" qualify="__sfrbit32"/>
+		</sfrtype>
+		<sfr name="PCP_ES" address="0xf0043f14" default="0x00000000" sfrtype="PCP_ES_type" description="PCP Error/Debug Status Register"/>
+	</group>
+	<group name="CPU">
+		<sfrtype name="CPU_SRC0_type">
+			<bitfield name="SRPN" start="0" end="7" access="rw"/>
+			<bitfield name="TOS" start="10" end="10" access="rw"/>
+			<bitfield name="SRE" start="12" end="12" access="rw"/>
+			<bitfield name="SRR" start="13" end="13" access="r"/>
+			<bitfield name="CLRR" start="14" end="14" access="w"/>
+			<bitfield name="SETR" start="15" end="15" access="w"/>
+		</sfrtype>
+		<sfr name="CPU_SRC0" address="0xf7e0fffc" default="0x00000000" sfrtype="CPU_SRC0_type" description="CPU Service Request Control Register 0"/>
+	</group>
+</sfrfile>

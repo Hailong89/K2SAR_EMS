@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>20 The TriCore Linker</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse44.html" >next</a>] [<a 
+href="main_gcc_ugse43.html" >prev</a>] [<a 
+href="main_gcc_ugse43.html#tailmain_gcc_ugse43.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugch20.html">tail</a>] [<a 
+href="main_gcc_ugpa3.html#main_gcc_ugch20.html" >up</a>] </p></div>
+<h2 class="chapterHead"><span class="titlemark">20</span>  <a 
+href="main_gcc_ug.html#QQ2-68-139" id="x68-13200020">The TriCore Linker</a></h2>
+<!--l. 3--><p class="noindent" ><span 
+class="cmtt-12">tricore-ld</span> combines a number of object and archive files, relocates their data and ties up
+symbol references. Usually the last step in compiling a program is to run <span 
+class="cmtt-12">tricore-ld</span>. (see
+<a 
+href="main_gcc_ugse2.html#x6-50051">Part 1.1</a>)
+</p><!--l. 5--><p class="noindent" ><span 
+class="cmtt-12">tricore-ld</span> accepts Linker Command Language files written in a superset of AT&amp;T’s Link
+Editor Command Language syntax, to provide explicit and total control over the linking
+process.
+</p><!--l. 7--><p class="noindent" >This version of <span 
+class="cmtt-12">tricore-ld</span> uses the general purpose BFD libraries to operate on object files.
+This allows <span 
+class="cmtt-12">tricore-ld</span> to read, combine, and write object files in many different formats˜for
+example, COFF or <span 
+class="cmtt-12">a.out</span>. Different formats may be linked together to produce any available
+kind of object file.
+</p><!--l. 9--><p class="noindent" >Aside from its flexibility, the <span 
+class="cmtt-12">tricore-ld</span> is more helpful than other linkers in providing
+diagnostic information. Many linkers abandon execution immediately upon encountering an
+error; whenever possible, <span 
+class="cmtt-12">tricore-ld</span> continues executing, allowing you to identify other errors
+or, in some cases, to get an output file in spite of the error.
+</p>
+<div class="sectionTOCS">
+</div>
+
+
+
+
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse44.html" >next</a>] [<a 
+href="main_gcc_ugse43.html" >prev</a>] [<a 
+href="main_gcc_ugse43.html#tailmain_gcc_ugse43.html" >prev-tail</a>] [<a 
+href="main_gcc_ugch20.html" >front</a>] [<a 
+href="main_gcc_ugpa3.html#main_gcc_ugch20.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugch20.html"></a> </p> 
+</body></html> 

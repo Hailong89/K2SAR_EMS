@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Floating Point Support</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse76.html" >next</a>] [<a 
+href="main_gcc_ugse74.html" >prev</a>] [<a 
+href="main_gcc_ugse74.html#tailmain_gcc_ugse74.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse75.html">tail</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse75.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">26.7</span>  <a 
+href="main_gcc_ug.html#QQ2-110-275" name="x110-26600026.7">Floating Point Support</a></h3>
+<!--l. 3--><p class="noindent" >The  TriCore Development Platform supports the FPU of TriCore.
+</p><!--l. 5--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">26.7.1</span>  <a 
+href="#x110-26700026.7.1" name="x110-26700026.7.1">Treat Doubles as Floats</a></h4>
+<!--l. 7--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+</p><!--l. 9--><p class="noindent" >The  TriCore Development Platform compiler is ANSI conform, these means that a <span class="lstinline"><span 
+class="ecss-1200">1.0</span></span> is per
+default a <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> and not a <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>. In the case of the example will convert <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> to <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>. This
+code is not effective for using FPU of TriCore, therefore use the modifier <span class="lstinline"><span 
+class="ecss-1200">f</span></span> to mark the operands
+as float <span class="lstinline"><span 
+class="ecss-1200">1.0</span><span 
+class="ecss-1200">f</span></span>.
+</p><!--l. 11--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb322"><a 
+ name="x110-267002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> float</span><span 
+class="pcrr7t-x-x-144"> x_f</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1.01</span><br class="fancyvrb" /><a 
+ name="x110-267004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ name="x110-267006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><br class="fancyvrb" /><a 
+ name="x110-267008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void)</span><br class="fancyvrb" /><a 
+ name="x110-267010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ name="x110-267012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   float</span><span 
+class="pcrr7t-x-x-144"> y_f:</span>
+<br class="fancyvrb" /><a 
+ name="x110-267014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   y_f</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1.0/x_f;</span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> divide</span><span 
+class="pcrr7t-x-x-144"> double</span><span 
+class="pcrr7t-x-x-144"> by</span><span 
+class="pcrr7t-x-x-144"> float</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ name="x110-267016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   return</span><span 
+class="pcrr7t-x-x-144"> 0;</span></div>
+<!--l. 22--><p class="noindent" >With the option <span 
+class="cmtt-12">-fshort-double</span> the compiler assumes the same size for <span class="lstinline"><span 
+class="ecsx-1200">float</span></span> and <span class="lstinline"><span 
+class="ecsx-1200">double</span></span>.
+This option is not ANSI conform, because <span class="lstinline"><span 
+class="ecsx-1200">double</span></span> have better precision as <span class="lstinline"><span 
+class="ecsx-1200">float</span></span>, so the result
+has not the same precision as a double operation.
+</p><!--l. 24--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">26.7.2</span>  <a 
+href="#x110-26800026.7.2" name="x110-26800026.7.2">Floating Point Math Functions</a></h4>
+<!--l. 26--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div class="fancyvrb" id="fancyvrb323"><a 
+ name="x110-268002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #include</span><span 
+class="pcrr7t-x-x-144"> &#x003C;math.h&#x003E;</span><br class="fancyvrb" /><a 
+ name="x110-268004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ name="x110-268006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><br class="fancyvrb" /><a 
+ name="x110-268008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> main</span><span 
+class="pcrr7t-x-x-144"> (void)</span><br class="fancyvrb" /><a 
+ name="x110-268010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ name="x110-268012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   float</span><span 
+class="pcrr7t-x-x-144"> x;</span>
+<br class="fancyvrb" /><a 
+ name="x110-268014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   sinf</span><span 
+class="pcrr7t-x-x-144"> (x);</span><br class="fancyvrb" /><a 
+ name="x110-268016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   return</span><span 
+class="pcrr7t-x-x-144"> 0;</span><br class="fancyvrb" /><a 
+ name="x110-268018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span></div>
+<!--l. 38--><p class="noindent" >To access the floating point functions of libraries, add the suffix <span class="lstinline"><span 
+class="ecss-1200">f</span></span>. Please use the option
+<span 
+class="cmtt-12">-mcpu=</span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">derivative</span><span 
+class="cmmi-12">&#x003E;</span> to select the derivative specific floating point libraries. This option also
+sets all workaournds of relevant cpu erratas.
+</p>
+<div class="center" 
+>
+<!--l. 40--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox134"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Add the math library <span 
+class="cmtt-12">libm.a </span>to your linker option <span 
+class="cmtt-12">-lm</span>.            </div>
+</div>
+<!--l. 41--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse76.html" >next</a>] [<a 
+href="main_gcc_ugse74.html" >prev</a>] [<a 
+href="main_gcc_ugse74.html#tailmain_gcc_ugse74.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse75.html" >front</a>] [<a 
+href="main_gcc_ugch26.html#main_gcc_ugse75.html" >up</a>] </p></div>
+<!--l. 41--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse75.html"></a> </p> 
+</body></html> 

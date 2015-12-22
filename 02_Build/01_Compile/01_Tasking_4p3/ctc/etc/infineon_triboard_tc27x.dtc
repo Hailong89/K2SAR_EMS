@@ -1,0 +1,38 @@
+<!-- @(#)infineon_triboard_tc27x.dtc	1.11	12/10/15  -->
+<!-- Debug Target Configuration for the Infineon TriBoard TC27X -->
+
+<debugTarget
+    xmlns="http://com.tasking.dtc/dtc.xsd/1.0"
+    name="Infineon TriBoard TC27X"
+    manufacturer="Infineon">
+
+    <processor id="tc27x"/>
+
+    <!-- Define all common parts -->
+    <def id="200Mhz">
+	<initialize resourceId="init"	name="CPU1_DBGSR"	value="0x00000007" cstart="false"/>
+	<initialize resourceId="init"	name="CPU2_DBGSR"	value="0x00000007" cstart="false"/>
+	<initialize resourceId="noinit"	name="SCU_OSCCON"	value="0x00070018" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_PLLCON0"	value="0x02013a00" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_PLLCON1"	value="0x00020000" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_CCUCON0"	value="0x12120101" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_CCUCON1"	value="0x50002211" cstart="true"/>
+	<initialize resourceId="noinit"	name="FLASH0_FCON"	value="0x00a11255" cstart="true"/>
+	<initialize resourceId="noinit"	name="Initialize clocks per sec" value="1" 	  cstart="true"/>
+	<initialize resourceId="noinit"	name="Oscillator frequency Hz"	 value="20000000" cstart="true"/>
+	<flashMonitor monitor="ftc27x.sre" workspaceAddress="0x70000000" flashSectorBufferSize="2048"/>
+    </def>
+
+    <communicationMethod name="Universal Debug Access Server" debugInstrument="gdi2mcdtc" gdiMethod="tcpip">
+        <resource id="DASserver" value="UDAS"/>
+        <resource id="AccessPort" value="JTAG0"/>
+        <resource id="TerminateServer" value="1"/>
+        <resource id="DasTimeOut" value="0x4000"/>
+        <resource id="gdi2mcd.reset.class_vector" value="0x4"/>
+    </communicationMethod>
+
+    <configuration name="fCPU=200Mhz, PLL normal mode">
+        <ref id="200Mhz"/>
+    </configuration>
+
+</debugTarget>

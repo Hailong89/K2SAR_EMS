@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Your program as ROM version</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 70--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch14.html" >next</a>] [<a 
+href="main_gcc_ugse19.html" >prev</a>] [<a 
+href="main_gcc_ugse19.html#tailmain_gcc_ugse19.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse20.html">tail</a>] [<a 
+href="main_gcc_ugch13.html#main_gcc_ugse20.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">13.3</span>  <a 
+href="main_gcc_ug.html#QQ2-37-52" id="x37-4800013.3">Your program as ROM version</a></h3>
+<!--l. 72--><p class="noindent" >If you want to locate your program in the ROM of the TriCore, the following files and options
+are required:
+</p>
+      <ul class="itemize1">
+      <li class="itemize">Selection of derivative with <span 
+class="cmtt-12">-mcpu=</span><span 
+class="cmmi-12">&#x003C;</span><span 
+class="cmtt-12">derivative</span><span 
+class="cmmi-12">&#x003E;</span>
+      </li>
+      <li class="itemize">Linker script file for memory layout: <span 
+class="cmtt-12">memoryROM.x</span>
+      </li>
+      <li class="itemize">Startup Code <span 
+class="cmtt-12">crt0.S</span>
+      </li>
+      <li class="itemize">Code to initialise your board in <span 
+class="cmtt-12">initboard.S</span>
+      </li>
+      <li class="itemize">The additional linker options <span 
+class="cmtt-12">-nocrt0 memoryROM.x</span></li></ul>
+<!--l. 82--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">13.3.1</span>  <a 
+href="#x37-4900013.3.1" id="x37-4900013.3.1">Memory layout</a></h4>
+<!--l. 84--><p class="noindent" >In the ROM version, the RAM addresses for code and data are adapted to the memory layout
+of your derivative. Below you find an example for a memory layout <span 
+class="cmtt-12">memoryROM.x </span>for a TC1796.
+The derivative is specified with the compiler option <span 
+class="cmtt-12">-mcpu=tc1796</span>.
+</p><!--l. 86--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb81"><a 
+ id="x37-49002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> __TC1796__</span><span 
+class="pcrr7t-x-x-144"> __TC13__</span><span 
+class="pcrr7t-x-x-144"> with</span><span 
+class="pcrr7t-x-x-144"> Core</span><span 
+class="pcrr7t-x-x-144"> TC1.3</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x37-49004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __TRICORE_DERIVATE_MEMORY_MAP__</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0x1796;</span>
+                                                                                       
+                                                                                       
+<br class="fancyvrb" /><a 
+ id="x37-49006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> external</span><span 
+class="pcrr7t-x-x-144"> RAM</span><span 
+class="pcrr7t-x-x-144"> description</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x37-49008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __EXT_CODE_RAM_BEGIN</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0x84000000;</span><br class="fancyvrb" /><a 
+ id="x37-49010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __EXT_CODE_RAM_SIZE</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 4M</span><span 
+class="pcrr7t-x-x-144"> ;</span>
+<br class="fancyvrb" /><a 
+ id="x37-49012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __EXT_DATA_RAM_BEGIN</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xa1000000;</span><br class="fancyvrb" /><a 
+ id="x37-49014r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __EXT_DATA_RAM_SIZE</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1M;</span>
+<br class="fancyvrb" /><a 
+ id="x37-49016r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __RAM_END</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> __EXT_DATA_RAM_BEGIN</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> __EXT_DATA_RAM_SIZE;</span>
+<br class="fancyvrb" /><a 
+ id="x37-49018r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> internal</span><span 
+class="pcrr7t-x-x-144"> ram</span><span 
+class="pcrr7t-x-x-144"> description</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x37-49020r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __INT_CODE_RAM_BEGIN</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xd4000000;</span>
+<br class="fancyvrb" /><a 
+ id="x37-49022r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __INT_CODE_RAM_SIZE</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 48K;</span><br class="fancyvrb" /><a 
+ id="x37-49024r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __INT_DATA_RAM_BEGIN</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xd0000000;</span>
+<br class="fancyvrb" /><a 
+ id="x37-49026r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __INT_DATA_RAM_SIZE</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 56K;</span><br class="fancyvrb" /><a 
+ id="x37-49028r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> pcp</span><span 
+class="pcrr7t-x-x-144"> memory</span><span 
+class="pcrr7t-x-x-144"> description</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span>
+<br class="fancyvrb" /><a 
+ id="x37-49030r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __PCP_CODE_RAM_BEGIN</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xf0060000;</span><br class="fancyvrb" /><a 
+ id="x37-49032r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __PCP_CODE_RAM_SIZE</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 32K;</span>
+<br class="fancyvrb" /><a 
+ id="x37-49034r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __PCP_DATA_RAM_BEGIN</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xf0050000;</span><br class="fancyvrb" /><a 
+ id="x37-49036r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __PCP_DATA_RAM_SIZE</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 16K;</span>
+<br class="fancyvrb" /><a 
+ id="x37-49038r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-49040r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> MEMORY</span><br class="fancyvrb" /><a 
+ id="x37-49042r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x37-49044r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ext_cram</span><span 
+class="pcrr7t-x-x-144"> (rx):</span><span 
+class="pcrr7t-x-x-144"> org</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0x84000000,</span><span 
+class="pcrr7t-x-x-144"> len</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 4M</span>
+<br class="fancyvrb" /><a 
+ id="x37-49046r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> ext_dram</span><span 
+class="pcrr7t-x-x-144"> (w!x):</span><span 
+class="pcrr7t-x-x-144"> org</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xa1000000,</span><span 
+class="pcrr7t-x-x-144"> len</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 1M</span>
+<br class="fancyvrb" /><a 
+ id="x37-49048r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int_cram</span><span 
+class="pcrr7t-x-x-144"> (rx):</span><span 
+class="pcrr7t-x-x-144"> org</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xd4000000,</span><span 
+class="pcrr7t-x-x-144"> len</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 48K</span>
+<br class="fancyvrb" /><a 
+ id="x37-49050r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int_dram</span><span 
+class="pcrr7t-x-x-144"> (w!x):</span><span 
+class="pcrr7t-x-x-144"> org</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xd0000000,</span><span 
+class="pcrr7t-x-x-144"> len</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 56K</span>
+<br class="fancyvrb" /><a 
+ id="x37-49052r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> pcp_data</span><span 
+class="pcrr7t-x-x-144"> (w!x):</span><span 
+class="pcrr7t-x-x-144"> org</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xf0050000,</span><span 
+class="pcrr7t-x-x-144"> len</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 16K</span>
+<br class="fancyvrb" /><a 
+ id="x37-49054r27"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> pcp_text</span><span 
+class="pcrr7t-x-x-144"> (rx):</span><span 
+class="pcrr7t-x-x-144"> org</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 0xf0060000,</span><span 
+class="pcrr7t-x-x-144"> len</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> 32K</span><br class="fancyvrb" /><a 
+ id="x37-49056r28"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x37-49058r29"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x37-49060r30"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> symbol</span><span 
+class="pcrr7t-x-x-144"> __TRICORE_DERIVATE_NAME__</span><span 
+class="pcrr7t-x-x-144"> will</span><span 
+class="pcrr7t-x-x-144"> be</span><span 
+class="pcrr7t-x-x-144"> defined</span><span 
+class="pcrr7t-x-x-144"> in</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> crt0.S</span><span 
+class="pcrr7t-x-x-144"> and</span><span 
+class="pcrr7t-x-x-144"> is</span>
+<br class="fancyvrb" /><a 
+ id="x37-49062r31"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;</span><span 
+class="pcrr7t-x-x-144"> tested</span><span 
+class="pcrr7t-x-x-144"> here</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> confirm</span><span 
+class="pcrr7t-x-x-144"> that</span><span 
+class="pcrr7t-x-x-144"> this</span><span 
+class="pcrr7t-x-x-144"> memory</span><span 
+class="pcrr7t-x-x-144"> map</span><span 
+class="pcrr7t-x-x-144"> and</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> startup</span><span 
+class="pcrr7t-x-x-144"> file</span><span 
+class="pcrr7t-x-x-144"> will</span>
+<br class="fancyvrb" /><a 
+ id="x37-49064r32"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;</span><span 
+class="pcrr7t-x-x-144"> fit</span><span 
+class="pcrr7t-x-x-144"> together</span><br class="fancyvrb" /><a 
+ id="x37-49066r33"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x37-49068r34"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> _.</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> ASSERT</span><span 
+class="pcrr7t-x-x-144"> ((__TRICORE_DERIVATE_MEMORY_MAP__</span><span 
+class="pcrr7t-x-x-144"> ==</span>
+<br class="fancyvrb" /><a 
+ id="x37-49070r35"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __TRICORE_DERIVATE_NAME__),</span><span 
+class="pcrr7t-x-x-144"> "Using</span><span 
+class="pcrr7t-x-x-144"> wrong</span><span 
+class="pcrr7t-x-x-144"> Memory</span><span 
+class="pcrr7t-x-x-144"> Map.</span><span 
+class="pcrr7t-x-x-144"> This</span><span 
+class="pcrr7t-x-x-144"> Map</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> for</span>
+<br class="fancyvrb" /><a 
+ id="x37-49072r36"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> TC1796");</span></div>
+<!--l. 125--><p class="noindent" >This memory layout is added to the default linker script to configure your memory. Please note
+that you must not use the option <span 
+class="cmtt-12">-T</span> but only add your <span 
+class="cmtt-12">memoryROM.x </span>to the inputfiles of the
+linker. If you have your own complete linker script, including memory layout and section
+assignment, then you have to provide this file using <span 
+class="cmtt-12">-T</span>.
+</p><!--l. 128--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">13.3.2</span>  <a 
+href="#x37-5000013.3.2" id="x37-5000013.3.2">Board initialisation</a></h4>
+<!--l. 130--><p class="noindent" >The board is initialised with the files <span 
+class="cmtt-12">crt0.S </span>and <span 
+class="cmtt-12">initboard.S</span>. These files must be compiled
+and linked to your project.
+</p>
+<div class="center" 
+>
+<!--l. 132--><p class="noindent" >
+                                                                                       
+                                                                                       
+</p>
+<div 
+class="colorbox" id="colorbox35"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />If you are using your own startup code, then the function <span class="lstinline"><span 
+class="ecss-1200">_init</span></span> has
+to be called in <span 
+class="cmtt-12">crt0.S </span>before calling <span class="lstinline"><span 
+class="ecss-1200">main</span></span>.                          </div>
+</div>
+<!--l. 134--><p class="noindent" >In the compiler the builtin define <span class="lstinline"><span 
+class="ecss-1200">__TOOL_VERSION__</span></span> exists. So you can modify your own
+startup code via the following sequence.
+</p><!--l. 136--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb82"><a 
+ id="x37-50002r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #if</span><span 
+class="pcrr7t-x-x-144"> defined(__TOOL_VERSION__)</span><span 
+class="pcrr7t-x-x-144"> &amp;&amp;</span><span 
+class="pcrr7t-x-x-144"> (__TOOL_VERSION__</span><span 
+class="pcrr7t-x-x-144"> &#x003E;=</span><span 
+class="pcrr7t-x-x-144"> 20)</span><br class="fancyvrb" /><a 
+ id="x37-50004r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   /&#x22C6;</span>
+<br class="fancyvrb" /><a 
+ id="x37-50006r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   </span><span 
+class="pcrr7t-x-x-144"> &#x22C6;</span><span 
+class="pcrr7t-x-x-144"> call</span><span 
+class="pcrr7t-x-x-144"> the</span><span 
+class="pcrr7t-x-x-144"> initializer,</span><span 
+class="pcrr7t-x-x-144"> constructors</span><span 
+class="pcrr7t-x-x-144"> etc.</span><br class="fancyvrb" /><a 
+ id="x37-50008r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   &#x22C6;/</span><br class="fancyvrb" /><a 
+ id="x37-50010r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   call  _init</span>
+<br class="fancyvrb" /><a 
+ id="x37-50012r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #endif</span><span 
+class="pcrr7t-x-x-144"> /&#x22C6;</span><span 
+class="pcrr7t-x-x-144"> __TOOL_VERSION__</span><span 
+class="pcrr7t-x-x-144"> &amp;&amp;</span><span 
+class="pcrr7t-x-x-144"> __TOOL_VERSION__</span><span 
+class="pcrr7t-x-x-144"> &#x003E;=</span><span 
+class="pcrr7t-x-x-144"> 20</span><span 
+class="pcrr7t-x-x-144"> &#x22C6;/</span></div>
+<!--l. 145--><p class="noindent" >In the startup code <span 
+class="cmtt-12">crt0.S </span>the function <span class="lstinline"><span 
+class="ecss-1200">_init_board</span></span> is called from <span class="lstinline"><span 
+class="ecss-1200">initboard</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">S</span></span>. Below you find
+the code of <span 
+class="cmtt-12">initboard.S </span>for TC1796.
+</p><!--l. 147--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb83"><a 
+ id="x37-50014r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;</span><span 
+class="pcrr7t-x-x-144"> initboard.S</span><br class="fancyvrb" /><a 
+ id="x37-50016r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> .text</span><br class="fancyvrb" /><a 
+ id="x37-50018r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .global</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __board_init</span>
+<br class="fancyvrb" /><a 
+ id="x37-50020r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .type</span><span 
+class="pcrr7t-x-x-144"> __board_init,@function</span><br class="fancyvrb" /><a 
+ id="x37-50022r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __board_init:</span><br class="fancyvrb" /><a 
+ id="x37-50024r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   .code32</span><br class="fancyvrb" /><a 
+ id="x37-50026r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50028r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;</span>
+<br class="fancyvrb" /><a 
+ id="x37-50030r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;  initialize</span><span 
+class="pcrr7t-x-x-144"> target</span><span 
+class="pcrr7t-x-x-144"> environment</span><span 
+class="pcrr7t-x-x-144"> (PLLCLC,</span><span 
+class="pcrr7t-x-x-144"> BUSCONx,</span><span 
+class="pcrr7t-x-x-144"> ADDSELx)</span><br class="fancyvrb" /><a 
+ id="x37-50032r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;</span>
+<br class="fancyvrb" /><a 
+ id="x37-50034r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;  this</span><span 
+class="pcrr7t-x-x-144"> is</span><span 
+class="pcrr7t-x-x-144"> done</span><span 
+class="pcrr7t-x-x-144"> by</span><span 
+class="pcrr7t-x-x-144"> board</span><span 
+class="pcrr7t-x-x-144"> specific</span><span 
+class="pcrr7t-x-x-144"> setup</span><span 
+class="pcrr7t-x-x-144"> table</span><span 
+class="pcrr7t-x-x-144"> (address/value</span><span 
+class="pcrr7t-x-x-144"> -</span><span 
+class="pcrr7t-x-x-144"> pairs)</span>
+<br class="fancyvrb" /><a 
+ id="x37-50036r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;</span><br class="fancyvrb" /><a 
+ id="x37-50038r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50040r14"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   movh.a  %a15,hi:boardSetupTabSize</span>
+<br class="fancyvrb" /><a 
+ id="x37-50042r15"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ld.a  %a15,[%a15]lo:boardSetupTabSize  #</span><span 
+class="pcrr7t-x-x-144"> %a15</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> table</span><span 
+class="pcrr7t-x-x-144"> size</span>
+<br class="fancyvrb" /><a 
+ id="x37-50044r16"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   jz.a  %a15,no_setup</span><br class="fancyvrb" /><a 
+ id="x37-50046r17"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   add.a  %a15,-1        #</span><span 
+class="pcrr7t-x-x-144"> correction</span><span 
+class="pcrr7t-x-x-144"> for</span><span 
+class="pcrr7t-x-x-144"> loop</span>
+<br class="fancyvrb" /><a 
+ id="x37-50048r18"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   movh.a  %a14,hi:boardSetupTab</span>
+<br class="fancyvrb" /><a 
+ id="x37-50050r19"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   lea  %a14,[%a14]lo:boardSetupTab  #</span><span 
+class="pcrr7t-x-x-144"> %a14</span><span 
+class="pcrr7t-x-x-144"> points</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> setup</span><span 
+class="pcrr7t-x-x-144"> table</span><br class="fancyvrb" /><a 
+ id="x37-50052r20"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x37-50054r21"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> setup_loop:</span><br class="fancyvrb" /><a 
+ id="x37-50056r22"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ld.a  %a2,[%a14+]      #</span><span 
+class="pcrr7t-x-x-144"> %a2</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> boardSetupTab.addr</span>
+<br class="fancyvrb" /><a 
+ id="x37-50058r23"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ld.w  %d2,[%a14+]      #</span><span 
+class="pcrr7t-x-x-144"> %d2</span><span 
+class="pcrr7t-x-x-144"> =</span><span 
+class="pcrr7t-x-x-144"> boardSetupTab.val</span>
+<br class="fancyvrb" /><a 
+ id="x37-50060r24"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   st.w  [%a2],%d2</span><br class="fancyvrb" /><a 
+ id="x37-50062r25"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   loop  %a15,setup_loop</span><br class="fancyvrb" /><a 
+ id="x37-50064r26"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50066r27"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   isync</span>
+<br class="fancyvrb" /><a 
+ id="x37-50068r28"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   nop</span><br class="fancyvrb" /><a 
+ id="x37-50070r29"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   nop</span><br class="fancyvrb" /><a 
+ id="x37-50072r30"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50074r31"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;  force</span><span 
+class="pcrr7t-x-x-144"> PC</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> remapped</span><span 
+class="pcrr7t-x-x-144"> ROM</span><span 
+class="pcrr7t-x-x-144"> address</span>
+<br class="fancyvrb" /><a 
+ id="x37-50076r32"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   movh.a  %a14,hi:__remapped</span><br class="fancyvrb" /><a 
+ id="x37-50078r33"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   lea  %a14,[%a14]lo:__remapped</span><br class="fancyvrb" /><a 
+ id="x37-50080r34"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   nop</span>
+<br class="fancyvrb" /><a 
+ id="x37-50082r35"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ji  %a14</span><br class="fancyvrb" /><a 
+ id="x37-50084r36"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50086r37"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> __remapped:</span><br class="fancyvrb" /><a 
+ id="x37-50088r38"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50090r39"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #;  remap</span><span 
+class="pcrr7t-x-x-144"> RA</span><span 
+class="pcrr7t-x-x-144"> to</span><span 
+class="pcrr7t-x-x-144"> new</span><span 
+class="pcrr7t-x-x-144"> address</span><span 
+class="pcrr7t-x-x-144"> range</span>
+<br class="fancyvrb" /><a 
+ id="x37-50092r40"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   mov.d  %d15,%a11</span><br class="fancyvrb" /><a 
+ id="x37-50094r41"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   mov.d  %d14,%a14</span><br class="fancyvrb" /><a 
+ id="x37-50096r42"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   movh  %d2,hi:0xFFF00000</span>
+<br class="fancyvrb" /><a 
+ id="x37-50098r43"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   and  %d14,%d14,%d2      #</span><span 
+class="pcrr7t-x-x-144"> take</span><span 
+class="pcrr7t-x-x-144"> highest</span><span 
+class="pcrr7t-x-x-144"> bits</span><span 
+class="pcrr7t-x-x-144"> from</span><span 
+class="pcrr7t-x-x-144"> new</span><span 
+class="pcrr7t-x-x-144"> address</span>
+<br class="fancyvrb" /><a 
+ id="x37-50100r44"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   andn  %d15,%d15,%d2      #</span><span 
+class="pcrr7t-x-x-144"> and</span><span 
+class="pcrr7t-x-x-144"> lower</span><span 
+class="pcrr7t-x-x-144"> bits</span><span 
+class="pcrr7t-x-x-144"> from</span><span 
+class="pcrr7t-x-x-144"> old</span><span 
+class="pcrr7t-x-x-144"> address</span>
+<br class="fancyvrb" /><a 
+ id="x37-50102r45"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   or  %d15,%d15,%d14</span><br class="fancyvrb" /><a 
+ id="x37-50104r46"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   mov.a  %a11,%d15</span><br class="fancyvrb" /><a 
+ id="x37-50106r47"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50108r48"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   isync</span><br class="fancyvrb" /><a 
+ id="x37-50110r49"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x37-50112r50"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> no_setup:</span><br class="fancyvrb" /><a 
+ id="x37-50114r51"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x37-50116r52"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ji  %a11</span></div>
+                                                                                       
+                                                                                       
+<!--l. 202--><p class="noindent" >
+</p>
+<h4 class="subsectionHead"><span class="titlemark">13.3.3</span>  <a 
+href="#x37-5100013.3.3" id="x37-5100013.3.3">Loading to Flash</a></h4>
+<!--l. 204--><p class="noindent" >Before loading the executable to the flash, it must be converted into a binary format via
+tricore-objcopy
+</p><!--l. 206--><p class="noindent" ><span 
+class="cmtt-12">tricore-objcopy</span> <span 
+class="cmtt-12">-O binary name.elf name.bin</span>
+</p><!--l. 208--><p class="noindent" >Download the file with a flashloader.
+                                                                                       
+                                                                                       
+</p>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch14.html" >next</a>] [<a 
+href="main_gcc_ugse19.html" >prev</a>] [<a 
+href="main_gcc_ugse19.html#tailmain_gcc_ugse19.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse20.html" >front</a>] [<a 
+href="main_gcc_ugch13.html#main_gcc_ugse20.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse20.html"></a> </p> 
+</body></html> 

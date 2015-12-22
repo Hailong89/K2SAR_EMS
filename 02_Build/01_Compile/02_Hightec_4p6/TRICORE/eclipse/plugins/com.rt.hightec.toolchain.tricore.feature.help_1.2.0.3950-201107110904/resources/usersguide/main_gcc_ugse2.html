@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Introduction to the  TriCore Development Platform</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 36--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse3.html" >next</a>] [<a 
+href="main_gcc_ugse1.html" >prev</a>] [<a 
+href="main_gcc_ugse1.html#tailmain_gcc_ugse1.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse2.html">tail</a>] [<a 
+href="main_gcc_ugch1.html#main_gcc_ugse2.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">1.2</span>  <a 
+href="main_gcc_ug.html#QQ2-6-6" id="x6-50001.2">Introduction to the  TriCore Development Platform</a></h3>
+<!--l. 38--><p class="noindent" >The  TriCore Development Platform is a complete program suite to develop programs for
+microcontrollers of the Infineon TriCore <span class="cite">[<span 
+class="cmbx-12">?</span>]</span> family. The  TriCore Development Platform
+contains the programs to create an executable from high level language source code or assembler
+code. These programs are based on the development tools provided by the <span 
+class="cmsl-12">GNU </span>project
+founded in the mid-1980s. The <span 
+class="cmsl-12">GNU </span>development tools are set up in millions of installations
+worldwide and large projects like GNU/Linux are based on the reliability of the <span 
+class="cmsl-12">GNU</span>
+tools.
+</p><!--l. 40--><p class="noindent" >These development tools are adapted by HighTec to create executables for TriCore
+microcontrollers. This ensures the stability and reliability of the <span 
+class="cmsl-12">GNU </span>tools. Controlled by a
+common compiler driver program the  TriCore Development Platform consists of the following
+programs:
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The Preprocessor</span> </dt><dd 
+class="description"><a 
+ id="dx6-5001"></a>  <a 
+ id="dx6-5002"></a>The  Preprocessor  prepares  the  C-  or  C++-source  code  for  the
+      compiler. In this first state of the compiling process the preprocessor directives
+      like <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">include</span></span> or <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">define</span></span> are interpreted. The preprocessor merges files, replaces
+      macros and removes comments from the source code. Additionally the built in parser
+      checks the syntax of the source code to find errors.
+      <!--l. 48--><p class="noindent" >The Preprocessor accepts files with C, C++ or assembler source code and outputs
+      files with the preprocessed source code.
+      </p><!--l. 50--><p class="noindent" >For a detailed description of the preprocessor see <a 
+href="main_gcc_ugch17.html#x59-11000017">Listing 17</a>.
+      </p></dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The Compiler</span> </dt><dd 
+class="description">The Compiler converts the target independent high level language source
+      code to target specific assembler code. Since the assembler code is specific to the
+      target hardware the compiler is specific for the target, too.
+      <!--l. 55--><p class="noindent" >While compiling the source code to assembler code several features of the compiler
+      may be activated. These features are used to optimize the generated assembler code.
+      These optimizations contain among other things the reordering of instructions for
+      a better performance or workarounds for CPU errata. Additionally optional debug
+      information is created. This information is used to inspect the executable, which is
+      to be created by the linker, in the debugger later on.
+                                                                                       
+                                                                                       
+      </p><!--l. 57--><p class="noindent" >The input file for the compiler must contain source code, which was preprocessed
+      by the preprocessor. The compiler outputs assembler code, which conforms with the
+      TriCore architecture Manual.
+      </p><!--l. 59--><p class="noindent" >For a detailed description of the compiler see <a 
+href="main_gcc_ugch18.html#x62-11400018">Listing 18</a>.
+      </p></dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The Assembler</span> </dt><dd 
+class="description"><a 
+ id="dx6-5003"></a> The assembler generates an object file from the assembler code, which
+      is passed to it in the input file. This object file is created in the tricore-elf object
+      format. The data in the object file consists of the instructions, that will be executed
+      by the target machine, and data used by the program. After linking the content of
+      the object file will be ready to be loaded into the target. No addresses are assigned
+      to the dates in the object file, they are not located yet.
+      <!--l. 64--><p class="noindent" >For a detailed description of the assembler see <a 
+href="main_gcc_ugch19.html#x65-11900019">Listing 19</a>.
+      </p></dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The Linker</span> </dt><dd 
+class="description">After all C- or C++ source files of a project are compiled in object files these
+      object files are put together to a executable. This executable is generated by the
+      linker by merging the object files of the project with objects from libraries and
+      target specific startup code. This merge is controlled by a linker script file. By
+      using the linker script file the linker assigns addresses to the dates in the passed
+      files.
+      <div class="center" 
+>
+<!--l. 67--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox3"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The linker must be invoked only once for every build process whereas
+preprocessor, compiler and assembler must be invoked for every source
+file.                                                                </div>
+</div>
+      <!--l. 69--><p class="noindent" >For a detailed description of the linker see <a 
+href="main_gcc_ugch20.html#x68-13200020">Listing 20</a>.
+      </p></dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The BinUtils</span> </dt><dd 
+class="description">Strictly speaking the assembler and linker are parts of the binutils,
+      too. The binutils are a collection of programs to inspect the files generated
+      by the compiler tools. These programs are not invoked while executing the
+      compiler driver program but must be started separately. Creating disassembly,
+      copying output files from one file format to another or combining objects in
+      archives are just a few of the tasks that can be done using a program of the
+      binutils.
+      <!--l. 73--><p class="noindent" >For a detailed description of the binutils see <a 
+href="main_gcc_ugch21.html#x75-19700021">Listing 21</a>.</p></dd></dl>
+<!--l. 76--><p class="noindent" >While compiling high level language source files various intermediate files may be generated. By
+means of the file suffix the content of the file can be determined.
+                                                                                       
+                                                                                       
+</p><!--l. 78--><p class="noindent" >While compiling an input file the name of the file stays the same, only the suffix
+changes: If the file <span 
+class="cmtt-12">main.c </span>is compiled to an object file, the linker outputs the file
+<span 
+class="cmtt-12">main.o</span>.
+</p><!--l. 80--><p class="noindent" >It is convention to use the following file extensions:
+                                                                                       
+                                                                                       
+</p>
+<hr class="float" /><div class="float" 
+>
+                                                                                       
+                                                                                       
+<div class="pic-tabular">
+<img 
+src="main_gcc_ug2x.png" alt=""  /></div>
+ <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id"><a 
+ id="x6-50042">Table 1.2</a>:  
+File extensions</td></tr></table></div><!--tex4ht:label?: x6-50042 -->
+                                                                                       
+                                                                                       
+</div><hr class="endfloat" />
+<div class="center" 
+>
+<!--l. 84--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox4"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />The files that are used as input files are case sensitive. <span 
+class="cmtt-12">main.c</span>, <span 
+class="cmtt-12">Main.c</span>
+and <span 
+class="cmtt-12">MAIN.C </span>are not recognized to be the same file.                  </div>
+</div>
+<!--l. 86--><p class="noindent" >Since the components of the  TriCore Development Platform are interdependent it is necessary
+to invoke them correctly and in the right order. This is done by a common control
+program, sometimes called compiler driver. Besides setting some defaults for the
+invoked programs the compiler driver is responsible for passing the right in- and
+output files to the components of the toolchain. These defaults may be overwritten by
+user defined settings. This guarantees both the flexibility required by professional
+developers and the easiness of creating a program without having to think too much (see
+<a 
+href="#x6-50051">Part 1.1</a>).
+</p>
+<hr class="figure" /><div class="figure" 
+>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+<!--l. 88--><p class="noindent" ><img 
+src="toolchain_with_gccboxes.png" alt="pict"  
+ />
+<br /> </p><div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id"><a 
+ id="x6-50051">Figure 1.1</a>:  
+The  TriCore Development Platform</td></tr></table></div><!--tex4ht:label?: x6-50051 -->
+                                                                                       
+                                                                                       
+</div><hr class="endfigure" />
+<!--l. 90--><p class="noindent" >Basing on the file extension of the file the control program gets as input it starts the toolchain
+with the appropriate tool. If no other options are set the toolchain is run until the linker has
+finished and the executable is created. The generated program may be directly loaded into the
+target hardware afterwards. However the  TriCore Development Platform may be
+stopped after a defined state. This makes it possible to generate assembler code files
+from high level language files or object files to add to a library or to link together.
+</p>
+<div class="center" 
+>
+<!--l. 91--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox5"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />It  is  not  recommended  to  start  the  components  of  the  toolchain
+individually.  The  compilation  of  a  program  should  always  be
+coordinated by the control program.                                </div>
+</div>
+<!--l. 93--><p class="noindent" >The  TriCore Development Platform moreover includes programs to inspect the generated
+object code. These tools are, together with the assembler and the linker, the so called
+binutils.
+</p><!--l. 95--><p class="noindent" >Besides the programs directly involved in the creation of executables from source files the
+TriCore Development Platform comes with additional tools to manage the software build
+process or to debug the created program. Among these are:
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The GNU make</span> </dt><dd 
+class="description"><span 
+class="cmtt-12">make </span>is a tool to support the management of large projects with more
+      than just a few source files. This program coordinates the invocation of the compiler
+      driver and passes the various input files to it. Its main purpose is to provide a
+      consistent frontend to the user regardless of the size of the project.</dd></dl>
+      <dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The GNU Debugger</span> </dt><dd 
+class="description">The debugger is a program to help finding errors in programs. The
+      executable can be downloaded to the target and run. The execution of the program
+      on the target can be stopped at user defined break points and the content of memory,
+      registers and variables may be examined.
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The TriCore JTAG-Server</span> </dt><dd 
+class="description">The TriCore JTAG-Server provides a TCP/IP-Gateway to
+      the JTAG-Interface of a target to download and debug a program via the <span 
+class="cmsl-12">GNU</span>
+      debugger.
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">The TriCore Simulator</span> </dt><dd 
+class="description">By  using  the  TriCore  simulator  executables  for  the  target
+      machine  may  be  tested  without  the  physical  hardware.  The  TriCore  Simulator
+                                                                                       
+                                                                                       
+      provides the same interface for the debugger as the TriCore JTAG-Server does.
+      Thus it is transparent for the debugger whether it connects to a real hardware or a
+      simulator.</dd></dl>
+                                                                                       
+                                                                                       
+<!--l. 111--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugse3.html" >next</a>] [<a 
+href="main_gcc_ugse1.html" >prev</a>] [<a 
+href="main_gcc_ugse1.html#tailmain_gcc_ugse1.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse2.html" >front</a>] [<a 
+href="main_gcc_ugch1.html#main_gcc_ugse2.html" >up</a>] </p></div>
+<!--l. 111--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse2.html"></a> </p> 
+</body></html> 

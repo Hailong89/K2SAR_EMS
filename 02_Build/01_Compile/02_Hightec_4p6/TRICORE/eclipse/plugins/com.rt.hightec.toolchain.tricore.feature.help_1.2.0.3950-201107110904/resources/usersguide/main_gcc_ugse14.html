@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Pragma section</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch7.html" >next</a>] [<a 
+href="main_gcc_ugse13.html" >prev</a>] [<a 
+href="main_gcc_ugse13.html#tailmain_gcc_ugse13.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse14.html">tail</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse14.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">6.5</span>  <a 
+href="main_gcc_ug.html#QQ2-24-36" id="x24-320006.5">Pragma section</a></h3>
+<a 
+ id="dx24-32001"></a>
+<!--l. 3--><p class="noindent" >Another way for setting the section of an object is to use the pragma section. By using
+<span class="lstinline"><span 
+class="ecss-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">section</span></span> it is possible to easily locate more than one object into a user defined section by
+setting the pragma section for a whole group of objects. This group must be embraced by
+the pragma section directive to set the section and the attributes for the section
+properly:
+</p><!--l. 5--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb50"><a 
+ id="x24-32003r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> &#x003C;name&#x003E;</span><span 
+class="pcrr7t-x-x-144"> [&#x003C;flags&#x003E;]</span><span 
+class="pcrr7t-x-x-144"> [&#x003C;alignment&#x003E;]</span><br class="fancyvrb" /><a 
+ id="x24-32005r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x24-32007r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> &#x003C;objects&#x003E;</span><br class="fancyvrb" /><a 
+ id="x24-32009r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32011r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 13--><p class="noindent" ><span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E; </span>specifies the name of the section the objects are to be put in. For the pragma section
+these flags may be specified:
+</p><!--l. 15--><p class="noindent" >The parameter <span 
+class="cmmi-12">&#x003C;</span>name<span 
+class="cmmi-12">&#x003E; </span>specifies the name of the section in which the object (variable, type
+or function) should be located. The alignment of the section, which is set by the
+parameter a=<span 
+class="cmmi-12">&#x003C;</span>alignment<span 
+class="cmmi-12">&#x003E; </span>must be a power of 2 value (eg 2<sup><span 
+class="cmr-8">1</span></sup>, 2<sup><span 
+class="cmr-8">2</span></sup>, 2<sup><span 
+class="cmr-8">4</span></sup> †). Additional
+flags may be set by the parameter f=<span 
+class="cmmi-12">&#x003C;</span>flags<span 
+class="cmmi-12">&#x003E;</span>. These flags for pragma section are
+available:
+      </p><dl class="description"><dt class="description">
+<span 
+class="cmssbx-10x-x-120">a</span> </dt><dd 
+class="description">allocatable. This is always set
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">b</span> </dt><dd 
+class="description">section flag for bits (for details see <a 
+href="main_gcc_ugse21.html#x39-5300014.1">Listing 14.1</a>)
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">w</span> </dt><dd 
+class="description">writable
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">x</span> </dt><dd 
+class="description">executable
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">p</span> </dt><dd 
+class="description">PCP section
+                                                                                       
+                                                                                       
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">s</span> </dt><dd 
+class="description">using small addressing
+      </dd><dt class="description">
+<span 
+class="cmssbx-10x-x-120">z</span> </dt><dd 
+class="description">using absolute addressing</dd></dl>
+<!--l. 31--><p class="noindent" >The alignment of the section defined by the pragma section may be provided as a parameter. It
+must be a power of 2 value (e.g. 1, 2, 4, 8 ...). Setting flags or the alignment of a pragma section
+is optional. The default alignment depends on the defined data, the default flags are a and
+w.
+</p><!--l. 33--><p class="noindent" >To allocate code in a section defined by the pragma section directive the x-flag has to be set.
+Executable means that only code will be located in this section and all data within the pragma
+section will be located in the default data section. A pragma section without the x-flag is for
+allocating data.
+</p><!--l. 35--><p class="noindent" >If data is to be put into small or absolute addressable memory regions the name of the section
+must start with <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sdata</span><span 
+class="ecss-1200">.</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">sbss</span><span 
+class="ecss-1200">.</span></span> for small addressable memory regions or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span><span 
+class="ecss-1200">.</span></span> or <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zbss</span><span 
+class="ecss-1200">.</span></span> for
+absolute addressable memory regions. This is the only way to tell the linker to put the data in
+the appropriate memory region.
+</p>
+<div class="center" 
+>
+<!--l. 37--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox21"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Code and data pragmas may be nested.                            </div>
+</div>
+<!--l. 39--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Examples</span>
+</p><!--l. 41--><p class="noindent" >In<span class="marginpar"><span class="fbox"><span 
+class="cmr-10">v3.4</span></span></span><a 
+ id="dx24-32012"></a> the both examples all code within <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">section</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span> will be put in the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span>.
+The command <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecsx-1200">pragma</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">section</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">mysection</span></span> puts all global un-/initialized data in the
+section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">data</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">mysection</span></span>.
+</p><!--l. 43--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+<span 
+class="cmssbx-10x-x-120">1</span>
+</p><!--l. 45--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb51"><a 
+ id="x24-32014r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .text</span><br class="fancyvrb" /><a 
+ id="x24-32016r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .data.mysection</span>
+<br class="fancyvrb" /><a 
+ id="x24-32018r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> foo_data;</span><br class="fancyvrb" /><a 
+ id="x24-32020r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><br class="fancyvrb" /><a 
+ id="x24-32022r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32024r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><br class="fancyvrb" /><a 
+ id="x24-32026r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> foo(void)</span><br class="fancyvrb" /><a 
+ id="x24-32028r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x24-32030r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   int</span><span 
+class="pcrr7t-x-x-144"> i;</span>
+<br class="fancyvrb" /><a 
+ id="x24-32032r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ...</span><br class="fancyvrb" /><a 
+ id="x24-32034r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   return</span><span 
+class="pcrr7t-x-x-144"> (foo_data</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> i);</span><br class="fancyvrb" /><a 
+ id="x24-32036r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x24-32038r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+                                                                                       
+                                                                                       
+<!--l. 61--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+<span 
+class="cmssbx-10x-x-120">2</span>
+</p><!--l. 63--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb52"><a 
+ id="x24-32040r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .data.mysection</span><br class="fancyvrb" /><a 
+ id="x24-32042r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .text</span>
+<br class="fancyvrb" /><a 
+ id="x24-32044r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> foo_data;</span><br class="fancyvrb" /><a 
+ id="x24-32046r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32048r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><br class="fancyvrb" /><a 
+ id="x24-32050r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> foo(void)</span><br class="fancyvrb" /><a 
+ id="x24-32052r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x24-32054r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   int</span><span 
+class="pcrr7t-x-x-144"> i;</span><br class="fancyvrb" /><a 
+ id="x24-32056r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   ...</span>
+<br class="fancyvrb" /><a 
+ id="x24-32058r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144">   return</span><span 
+class="pcrr7t-x-x-144"> (foo_data</span><span 
+class="pcrr7t-x-x-144"> +</span><span 
+class="pcrr7t-x-x-144"> i);</span><br class="fancyvrb" /><a 
+ id="x24-32060r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><br class="fancyvrb" /><a 
+ id="x24-32062r12"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><br class="fancyvrb" /><a 
+ id="x24-32064r13"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 79--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Restriction</span>
+</p><!--l. 81--><p class="noindent" >In 1-byte aligned sections integers may reside on odd addresses. This will lead to a malfunction
+of the program since the compiler uses <span class="lstinline"><span 
+class="ecss-1200">st</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> and <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> instructions to access integers.
+However <span class="lstinline"><span 
+class="ecss-1200">st</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> and <span class="lstinline"><span 
+class="ecss-1200">ld</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">w</span></span> instructions are only valid to access 16-bit aligned memory
+locations.
+</p><!--l. 83--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Example</span>
+<span 
+class="cmssbx-10x-x-120">3</span>
+</p><!--l. 85--><p class="noindent" >If you use global variables that are also accessed within interrupts, the atomar load modify and
+store of these variables will be essential. To solve this problem the user should define these
+variables in an absolute addressable area with 4 byte alignment. In the following example a
+bitfield <span class="lstinline"><span 
+class="ecss-1200">Bits</span></span> is allocated via the <span class="lstinline"><span 
+class="ecsx-1200">#</span><span 
+class="ecss-1200">prama</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">section</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span></span>. Corresponding to the TriCore EABI the
+alignment of a bitfield depends on its size. You get a 4 byte alignment for bitfield if the size is 4
+byte.
+</p><!--l. 87--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb53"><a 
+ id="x24-32066r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> volatile</span><span 
+class="pcrr7t-x-x-144"> struct</span><span 
+class="pcrr7t-x-x-144"> {</span><br class="fancyvrb" /><a 
+ id="x24-32068r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> bit0  </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :1;</span>
+<br class="fancyvrb" /><a 
+ id="x24-32070r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> bit1</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> 1;</span><br class="fancyvrb" /><a 
+ id="x24-32072r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> bit2</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> 1;</span>
+<br class="fancyvrb" /><a 
+ id="x24-32074r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> field</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :</span><span 
+class="pcrr7t-x-x-144"> 3;</span><br class="fancyvrb" /><a 
+ id="x24-32076r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> int  </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> dummy</span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> :16;</span>
+<br class="fancyvrb" /><a 
+ id="x24-32078r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> }</span><span 
+class="pcrr7t-x-x-144"> Bits;</span><br class="fancyvrb" /><a 
+ id="x24-32080r8"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32082r9"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .zdata</span><br class="fancyvrb" /><a 
+ id="x24-32084r10"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> T_Bits  Bits;</span><br class="fancyvrb" /><a 
+ id="x24-32086r11"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 101--><p class="noindent" ><span 
+class="cmssbx-10x-x-120">Examples</span>
+</p><!--l. 103--><p class="noindent" >This example shows how to define the section of a variable with pragma section. The integer
+variable <span class="lstinline"><span 
+class="cmss-12">a</span></span> is located within a 2-byte aligned section named <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">absolute</span></span>. This section is
+allocatable, writable and absolutely addressable:
+</p><!--l. 105--><p class="noindent" >Please note the leading dot in the name of the section.
+</p><!--l. 107--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb54"><a 
+ id="x24-32088r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .zdata.absolute</span><span 
+class="pcrr7t-x-x-144"> awz</span><span 
+class="pcrr7t-x-x-144"> 2</span><span 
+class="pcrr7t-x-x-144"> //opening</span><span 
+class="pcrr7t-x-x-144"> pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><br class="fancyvrb" /><a 
+ id="x24-32090r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span>
+<br class="fancyvrb" /><a 
+ id="x24-32092r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a;</span><br class="fancyvrb" /><a 
+ id="x24-32094r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32096r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> //closing</span><span 
+class="pcrr7t-x-x-144"> pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+                                                                                       
+                                                                                       
+<!--l. 115--><p class="noindent" >In this example the pragma section is used to locate the function <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">foo</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200">)</span></span> in the user
+defined section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">fastram</span></span>.
+</p><!--l. 117--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb55"><a 
+ id="x24-32098r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .fastram</span><span 
+class="pcrr7t-x-x-144"> x</span><br class="fancyvrb" /><a 
+ id="x24-32100r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32102r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> foo</span><span 
+class="pcrr7t-x-x-144"> (void);</span><br class="fancyvrb" /><a 
+ id="x24-32104r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32106r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 125--><p class="noindent" >In this example the functions <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">foo</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200">)</span></span> and <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">bar</span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200">)</span></span> are located in the section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">code</span></span>.
+Since this pragma section has the x-flag set, it is ignored for all objects except functions. So the
+variable <span class="lstinline"><span 
+class="ecss-1200">a</span></span> is allocated as common symbol.
+</p><!--l. 127--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb56"><a 
+ id="x24-32108r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .fastram</span><span 
+class="pcrr7t-x-x-144"> x</span><br class="fancyvrb" /><a 
+ id="x24-32110r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32112r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a;</span><br class="fancyvrb" /><a 
+ id="x24-32114r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> foo</span><span 
+class="pcrr7t-x-x-144"> (void);</span>
+<br class="fancyvrb" /><a 
+ id="x24-32116r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> bar</span><span 
+class="pcrr7t-x-x-144"> (void);</span><br class="fancyvrb" /><a 
+ id="x24-32118r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32120r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 137--><p class="noindent" >In this example a function declaration is embraced by a pragma section without the x-flag set.
+This pragma section has only effect for variables. The variables <span class="lstinline"><span 
+class="ecss-1200">a</span></span> and <span class="lstinline"><span 
+class="ecss-1200">b</span></span> are located in the
+section .zdata.absolute. The pragma section is ignored for the function <span class="lstinline"><span 
+class="ecsx-1200">int</span><span 
+class="ecss-1200"> </span><span 
+class="ecss-1200">foo</span><span 
+class="ecss-1200">(</span><span 
+class="ecsx-1200">void</span><span 
+class="ecss-1200">)</span></span>, which is
+located in the default section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">text</span></span>.
+</p><!--l. 139--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb57"><a 
+ id="x24-32122r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .zdata.absolute</span><span 
+class="pcrr7t-x-x-144"> awz</span><br class="fancyvrb" /><a 
+ id="x24-32124r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32126r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> a;</span><br class="fancyvrb" /><a 
+ id="x24-32128r4"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> b;</span>
+<br class="fancyvrb" /><a 
+ id="x24-32130r5"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> int</span><span 
+class="pcrr7t-x-x-144"> foo</span><span 
+class="pcrr7t-x-x-144"> (void);</span><br class="fancyvrb" /><a 
+ id="x24-32132r6"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> </span><br class="fancyvrb" /><a 
+ id="x24-32134r7"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 149--><p class="noindent" >The compiler supports pragma for static variables.
+</p><!--l. 151--><p class="noindent" >
+</p>
+<div class="fancyvrb" id="fancyvrb58"><a 
+ id="x24-32136r1"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span><span 
+class="pcrr7t-x-x-144"> .zdata.foo</span><span 
+class="pcrr7t-x-x-144"> awz</span><br class="fancyvrb" /><a 
+ id="x24-32138r2"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> static</span><span 
+class="pcrr7t-x-x-144"> unsigned</span><span 
+class="pcrr7t-x-x-144"> short</span><span 
+class="pcrr7t-x-x-144"> s1;</span>
+<br class="fancyvrb" /><a 
+ id="x24-32140r3"></a><span 
+class="pcrr7t-x-x-144"> </span><span 
+class="pcrr7t-x-x-144"> #pragma</span><span 
+class="pcrr7t-x-x-144"> section</span></div>
+<!--l. 157--><p class="noindent" >Input section <span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">foo</span></span> will be located by the default linker script in the output section
+<span class="lstinline"><span 
+class="ecss-1200">.</span><span 
+class="ecss-1200">zdata</span></span>. To get the symbol information about <span class="lstinline"><span 
+class="ecss-1200">s1</span></span> use one of the following commands.
+<span 
+class="cmtt-12">tricore-objdump</span> displays the start address, the output section, the size and the symbol
+name.
+</p><!--l. 159--><p class="noindent" ><span 
+class="cmtt-12">tricore-objdump</span> <span 
+class="cmtt-12">--syms test.o | grep s1</span>
+</p><!--l. 161--><p class="noindent" ><span 
+class="cmtt-12">tricore-nm</span> <span 
+class="cmtt-12">-f sysv test.o | grep s1</span>
+</p><!--l. 163--><p class="noindent" >The entry <span class="lstinline"><span 
+class="ecss-1200">d</span></span> marks the variable <span class="lstinline"><span 
+class="ecss-1200">s1</span></span> as static variable. Global symbols are marked by
+<span class="lstinline"><span 
+class="ecss-1200">D</span></span>.
+                                                                                       
+                                                                                       
+</p>
+<div class="center" 
+>
+<!--l. 165--><p class="noindent" >
+</p>
+<div 
+class="colorbox" id="colorbox22"><span 
+class="cmbx-12">Note:</span><br 
+class="newline" />Keep in mind that static variables are not displayed in the Mapfile of
+the linker.                                                         </div>
+</div>
+                                                                                       
+                                                                                       
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch7.html" >next</a>] [<a 
+href="main_gcc_ugse13.html" >prev</a>] [<a 
+href="main_gcc_ugse13.html#tailmain_gcc_ugse13.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse14.html" >front</a>] [<a 
+href="main_gcc_ugch6.html#main_gcc_ugse14.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse14.html"></a> </p> 
+</body></html> 

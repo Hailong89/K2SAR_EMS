@@ -1,0 +1,65 @@
+<!-- @(#)infineon_triboard_tc1798.dtc	1.11	13/06/26 -->
+<!-- Debug Target Configuration for the Infineon TriBoard TC1798 -->
+
+<debugTarget
+    xmlns="http://com.tasking.dtc/dtc.xsd/1.0"
+    name="Infineon TriBoard TC1798"
+    manufacturer="Infineon">
+
+    <processor id="tc1798"/>
+
+    <!-- Define all common parts -->
+    <def id="300Mhz">
+	<initialize resourceId="init"	name="DBGSR"		value="0x00000017" cstart="false"/>
+	<initialize resourceId="init"	name="EBU_MODCON"	value="0x870000D0" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL0"	value="0xa3000061" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_ADDRSEL1"	value="0x84000a73" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSRAP0"	value="0x00030400" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSRAP1"	value="0x00000180" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSRCON0"	value="0x50D30040" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSRCON1"	value="0x40D30040" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSWAP0"	value="0x00030400" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSWAP1"	value="0x00000180" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSWCON0"	value="0x50D30000" cstart="true"/>
+	<initialize resourceId="init"	name="EBU_BUSWCON1"	value="0x40D30000" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_OSCCON"	value="0x00070000" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_PLLCON0"	value="0x01007600" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_PLLCON1"	value="0x00020001" cstart="true"/>
+	<initialize resourceId="noinit"	name="SCU_CCUCON0"	value="0x01010002" cstart="true"/>
+	<initialize resourceId="noinit"	name="FLASH0_FCON"	value="0x00004804" cstart="true"/>
+	<initialize resourceId="noinit"	name="FLASH1_FCON"	value="0x00004804" cstart="true"/>
+	<initialize resourceId="noinit"	name="Initialize clocks per sec" value="1" 	  cstart="true"/>
+	<initialize resourceId="noinit"	name="Oscillator frequency Hz"	 value="20000000" cstart="true"/>
+	<flashMonitor monitor="ftc1798.sre" workspaceAddress="0xd0000400" flashSectorBufferSize="2048"/>
+    </def>
+
+    <communicationMethod name="Universal Debug Access Server" debugInstrument="gdi2mcdtc" gdiMethod="tcpip">
+        <resource id="DASserver" value="UDAS"/>
+        <resource id="AccessPort" value="JTAG0"/>
+        <resource id="RegisterFile" value="regbase_f7e1.dat"/>
+        <resource id="TerminateServer" value="1"/>
+        <resource id="DasTimeOut" value="0x4000"/>
+    </communicationMethod>
+
+    <configuration name="fCPU=300Mhz, PLL normal mode">
+        <ref id="300Mhz"/>
+    </configuration>
+
+    <!-- define all external on board flash chips -->
+    <flashChips>
+        <chip vendor="STMicroelectronics" chip="M58BW16FB" width="32" chips="1" baseAddress="0xa3000000" chipSize="0x200000"/>
+    </flashChips>
+
+    <!-- non-flash chips must be defined using LSL -->
+    <lsl>
+	memory xram_8_a
+	{
+		mau = 8;
+		size = 1M;
+		type = ram;
+		map     cached (dest=bus:spe:fpi_bus, dest_offset=0x84000000,           size=1M);
+		map not_cached (dest=bus:spe:fpi_bus, dest_offset=0xa4000000, reserved, size=1M);
+	}
+    </lsl>
+
+</debugTarget>

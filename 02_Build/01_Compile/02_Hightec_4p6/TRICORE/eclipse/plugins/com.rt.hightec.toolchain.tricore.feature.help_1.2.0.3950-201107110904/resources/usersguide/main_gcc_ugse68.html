@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Options</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html,3,sections+,info,next,refcaption,fn-in,xhtml,word,charset=iso-8859-1,fn-in --> 
+<meta name="src" content="main_gcc_ug.tex" /> 
+<meta name="date" content="2011-07-07 13:15:00" /> 
+<link rel="stylesheet" type="text/css" href="main_gcc_ug.css" /> 
+</head><body 
+>
+<!--l. 23--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch25.html" >next</a>] [<a 
+href="main_gcc_ugse67.html" >prev</a>] [<a 
+href="main_gcc_ugse67.html#tailmain_gcc_ugse67.html" >prev-tail</a>] [<a 
+href="#tailmain_gcc_ugse68.html">tail</a>] [<a 
+href="main_gcc_ugch24.html#main_gcc_ugse68.html" >up</a>] </p></div>
+<h3 class="sectionHead"><span class="titlemark">24.2</span>  <a 
+href="main_gcc_ug.html#QQ2-100-265" name="x100-25600024.2">Options</a></h3>
+<!--l. 25--><p class="noindent" >
+                  </p><dl class="list1"><dt class="list">
+<span 
+class="cmtt-12">--help</span>           </dt><dd 
+class="list">
+                  <!--l. 26--><p class="noindent" >Displays the help and exit. The displayed message can be found under
+                  <span 
+class="cmtt-12">[Script’s directory]/Doc/help.txt</span>.  If  specified,  all  the  others
+                  arguments are ignored.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--version</span>        </dt><dd 
+class="list">
+                  <!--l. 29--><p class="noindent" >Displays the version of the tool, and of each module used by the tool,
+                  and exit. If specified, all the others arguments are ignored (except
+                  <span 
+class="cmtt-12">--help</span>, because it has the hightest priority).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--history</span>        </dt><dd 
+class="list">
+                  <!--l. 32--><p class="noindent" >Displays the history of the tool, and exit. If specified, all the others
+                  arguments are ignored (except <span 
+class="cmtt-12">--help</span> and <span 
+class="cmtt-12">--version</span>, because they
+                  have the hightest priority).
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--silent</span>         </dt><dd 
+class="list">
+                  <!--l. 35--><p class="noindent" >Do not display anything on the output, except error message (when
+                  the script dies, or crashes for example) it means, nothing is displayed
+                  on STDOUT this does not apply for the tool’s log file.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--verbosity=n</span>   </dt><dd 
+class="list">
+                  <!--l. 38--><p class="noindent" >(default = 2) This is only partially implemented, some modules don’t
+                  care about it Verbosity level. It applies for the output’s log file (and
+                  STDOUT, except if <span 
+class="cmtt-12">--silent</span> is turned on).
+                  </p><!--l. 40--><p class="noindent" >
+                                                                                       
+                                                                                       
+                                     </p><dl class="list2"><dt class="list">
+                  <span 
+class="cmtt-12">0</span>                 </dt><dd 
+class="list">
+                                     <!--l. 41--><p class="noindent" >Does not say anything (in this case, no output’s log
+                                     file generated).
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">1</span>                 </dt><dd 
+class="list">
+                                     <!--l. 42--><p class="noindent" >Only says what it’s supposed to do.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">2</span>                 </dt><dd 
+class="list">
+                                     <!--l. 43--><p class="noindent" >Gives some statistics when processing, and all the
+                                     name of the files generated.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">3</span>                 </dt><dd 
+class="list">
+                                     <!--l. 44--><p class="noindent" >Gives number of lines processed, and others details.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">4</span>                 </dt><dd 
+class="list">
+                                     <!--l. 45--><p class="noindent" >Gives  details  about  intern  routines,  results  of
+                                     intermediate computes.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">5</span>                 </dt><dd 
+class="list">
+                                     <!--l. 46--><p class="noindent" >Very detailed information.</p></dd></dl>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--sort=n</span>         </dt><dd 
+class="list">
+                  <!--l. 49--><p class="noindent" >(default = no sorting) Sort the categories into different ways:
+                  </p><!--l. 52--><p class="noindent" >
+                                     </p><dl class="list2"><dt class="list">
+                  <span 
+class="cmtt-12">1</span>                 </dt><dd 
+class="list">
+                                     <!--l. 53--><p class="noindent" >Sorted by number of files.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">2</span>                 </dt><dd 
+class="list">
+                                     <!--l. 54--><p class="noindent" >Sorted by warnings.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">3</span>                 </dt><dd 
+class="list">
+                                     <!--l. 55--><p class="noindent" >Sorted by occurrences.
+                                                                                       
+                                                                                       
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">4</span>                 </dt><dd 
+class="list">
+                                     <!--l. 56--><p class="noindent" >Sorted by names.
+                                     </p></dd><dt class="list">
+                  <span 
+class="cmtt-12">other</span>             </dt><dd 
+class="list">
+                                     <!--l. 57--><p class="noindent" >Sorted  by  the  internal  hash  function  of  the  perl
+                                     interpreter.</p></dd></dl>
+                  </dd><dt class="list">
+<span 
+class="cmtt-12">--input-file=File</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 60--><p class="noindent" >(no default: must be specified somewhere, here or in a Configuration’s file)
+                  Specify the input file to process, with the extention. If the directory is
+                  ommited, the current work directory is used.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--log-file=File</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 63--><p class="noindent" >(default = [Tool’s Out Directory]/Wf.log) Gives the name of the
+                  tool’s log file. If you don’t want a log file, look at this option:
+                  <span 
+class="cmtt-12">--verbosity</span>.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--config-file=File</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 66--><p class="noindent" >(default = no configuration’s file) Specifies the configuration’s file to use.
+                  If the path is omitted, or relative, the script will try to find the
+                  specified configuration’s file in the following directories, in this
+                  order:
+</p>
+                       <ul class="itemize1">
+                       <li class="itemize">/
+                       </li>
+                       <li class="itemize">/
+                       </li>
+                       <li class="itemize">/.WarnungFilter/
+                       </li>
+                       <li class="itemize">/templates/Config/</li></ul>
+                  <!--l. 76--><p class="noindent" >if the file is not found, the script dies with the message ’The configuration’s
+                  file [name of the file] was not found in the following directories [list of
+                  directories]’.
+                                                                                       
+                                                                                       
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--OS=Operating</span><span 
+class="cmtt-12">_System</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 78--><p class="noindent" >(default = autodetected from the $&#x00D4; built-in variable) Please choose in the
+                  list (case sensitive!)
+</p>
+                       <ul class="itemize1">
+                       <li class="itemize">VMS
+                       </li>
+                       <li class="itemize">MSDOS (You shouldn’t use this, because of the long names, i.e
+                       the extention <span 
+class="cmtt-12">html </span>has to many characters... Don’t report bug for
+                       this.)
+                       </li>
+                       <li class="itemize">MacOS
+                       </li>
+                       <li class="itemize">AmigaOS
+                       </li>
+                       <li class="itemize">MSWin32 (applies for all the MS Windows versions, since the
+                       Windows 95)
+                       </li>
+                       <li class="itemize">Unix
+                       </li>
+                       <li class="itemize">linux (is identical to Unix)</li></ul>
+                  <!--l. 91--><p class="noindent" >If you are giving something else, Unix is assumed (Sorry, but the module
+                  used to choice the OS belongs to standard librairies of perl. Only MSWin32
+                  and Unix (or linux) where tested. If you are interested in other operating
+                  systems, ask the authors. The script will probably work with the others
+                  system, but it’s not sure. This option might be removed soon, because at the
+                  moment the name’s gestion is problematic. This will be fixed in new
+                  versions.
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--out-dir=Directory</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                  <!--l. 95--><p class="noindent" >(default = [Work Directory]/.auto_wf/ If this is a relative path, it will be
+                  take regarding the current work directory. Do not forget the last ’/’ (or ’<span 
+class="cmsy-10x-x-120">\</span>’
+                  for MS style path)
+                  </p></dd><dt class="list">
+<span 
+class="cmtt-12">--warning-url-database</span><br 
+class="newline" />                  </dt><dd 
+class="list">
+                                                                                       
+                                                                                       
+                  <!--l. 98--><p class="noindent" >(default = [Tool’s directory]/Doc/W_url.pm) This mini perl-sript
+                  contains a hash, named %WF_Warning_Help_Link. It gives the
+                  tool the url to the html help files for the warning’s categories.
+                  This is partially implemented, but this option is not activated
+                  yet.</p></dd></dl>
+<!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="main_gcc_ugch25.html" >next</a>] [<a 
+href="main_gcc_ugse67.html" >prev</a>] [<a 
+href="main_gcc_ugse67.html#tailmain_gcc_ugse67.html" >prev-tail</a>] [<a 
+href="main_gcc_ugse68.html" >front</a>] [<a 
+href="main_gcc_ugch24.html#main_gcc_ugse68.html" >up</a>] </p></div>
+<!--l. 1--><p class="noindent" ><a 
+ id="tailmain_gcc_ugse68.html"></a> </p> 
+</body></html> 

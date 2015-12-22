@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- @(#)processors.xml 1.69 14/02/27   -->
+
+
+<!-- ===================================================================== -->
+<!-- ===================================================================== -->
+<!--                                                                       -->
+<!-- Processor families                                                    -->
+
+<processors target="ctc"  xmlns="http://www.tasking.com/schema/processor/v1.1">
+        <group name="Infineon TriCore 1 Family">
+                <processor name="User defined TriCore 1.3"   id="userdef13"  cpu="userdef13"  core="tc1.3"   has-mmu="false" has-fpu="true"/>
+                <processor name="User defined TriCore 1.3.1" id="userdef131" cpu="userdef131" core="tc1.3.1" has-mmu="false" has-fpu="true"/>
+                <processor name="User defined TriCore 1.6"   id="userdef16"  cpu="userdef16"  core="tc1.6"   has-mmu="false" has-fpu="true"/>
+                <processor name="User defined TriCore 1.6.x" id="userdef16x" cpu="userdef16x" core="tc1.6.x" has-mmu="false" has-fpu="true"/>
+                <group name="TC1130 Family">
+                        <processor name="TC1130" id="tc1130" cpu="tc1130" core="tc1.3" has-mmu="true" has-fpu="true" silicon-bug-group-ref="TC1130 Bugs"/>
+                </group>
+                <group name="TC1-M Family">
+                        <processor name="TC11IB" id="tc11ib" cpu="tc11ib" core="tc1.3" has-mmu="true" has-fpu="false" silicon-bug-group-ref="TC1-M Bugs"/>
+                </group>
+                <group name="AUDO NextGeneration Family">
+                        <processor name="TC1762"  id="tc1762"  cpu="tc1762"  core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NG and TC116X Bugs" flash="TC1762"/>
+                        <processor name="TC1764"  id="tc1764"  cpu="tc1764"  core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NG and TC116X Bugs" flash="TC1764"/>
+                        <processor name="TC1766"  id="tc1766"  cpu="tc1766"  core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NG and TC116X Bugs" flash="TC1766A"/>
+                        <processor name="TC1766B" id="tc1766b" cpu="tc1766b" core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NG and TC116X Bugs" flash="TC1766B"/>
+                        <processor name="TC1792"  id="tc1792"  cpu="tc1792"  core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NextGeneration Bugs" flash="TC1792"/>
+                        <processor name="TC1796"  id="tc1796"  cpu="tc1796"  core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NextGeneration Bugs" flash="TC1796A"/>
+                        <processor name="TC1796B" id="tc1796b" cpu="tc1796b" core="tc1.3" default="true" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NextGeneration Bugs" flash="TC1796B"/>
+                </group>
+                <group name="TC116x Family">
+                        <processor name="TC1164" id="tc1164" cpu="tc1164" core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NG and TC116X Bugs" flash="TC1164"/>
+                        <processor name="TC1166" id="tc1166" cpu="tc1166" core="tc1.3" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO NG and TC116X Bugs" flash="TC1166"/>
+                </group>
+                <group name="AUDO Future Family">
+                        <processor name="TC1167" id="tc1167" cpu="tc1167" core="tc1.3.1" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO Future Bugs" flash="TC1167"/>
+                        <processor name="TC1197" id="tc1197" cpu="tc1197" core="tc1.3.1" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO Future Bugs" flash="TC1197"/>
+                        <processor name="TC1736" id="tc1736" cpu="tc1736" core="tc1.3.1" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO Future Bugs" flash="TC1736"/>
+                        <processor name="TC1767" id="tc1767" cpu="tc1767" core="tc1.3.1" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO Future Bugs" flash="TC1767"/>
+                        <processor name="TC1797" id="tc1797" cpu="tc1797" core="tc1.3.1" has-mmu="false" has-fpu="true" silicon-bug-group-ref="AUDO Future Bugs" flash="TC1797"/>
+                </group>
+                <group name="AUDO MAX Family">
+                        <processor name="TC1184" id="tc1184" cpu="tc1184" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1184"/>
+                        <processor name="TC1724" id="tc1724" cpu="tc1724" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1724"/>
+                        <processor name="TC1728" id="tc1728" cpu="tc1728" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1728"/>
+                        <processor name="TC1746 [TC1782bd]"  id="tc1746" cpu="tc1746" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1746"/>
+                        <processor name="TC1748 [TC1798bd]"  id="tc1748" cpu="tc1748" core="tc1.6"   has-mmu="false" has-fpu="true" flash="TC1748"/>
+                        <processor name="TC1782" id="tc1782" cpu="tc1782" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1782"/>
+                        <processor name="TC1784" id="tc1784" cpu="tc1784" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1784"/>
+                        <processor name="TC1791" id="tc1791" cpu="tc1791" core="tc1.6"   has-mmu="false" has-fpu="true" flash="TC1791"/>
+                        <processor name="TC1793" id="tc1793" cpu="tc1793" core="tc1.6"   has-mmu="false" has-fpu="true" flash="TC1793"/>
+                        <processor name="TC1798" id="tc1798" cpu="tc1798" core="tc1.6"   has-mmu="false" has-fpu="true" flash="TC1798"/>
+                </group>
+                <group name="AUDO S Family">
+                        <processor name="TC1337" id="tc1337" cpu="tc1337" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1337"/>
+                        <processor name="TC1367" id="tc1367" cpu="tc1367" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1367"/>
+                        <processor name="TC1387" id="tc1387" cpu="tc1387" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1387"/>
+                        <processor name="TC1768 [TC1387bd]"  id="tc1768" cpu="tc1768" core="tc1.3.1" has-mmu="false" has-fpu="true" flash="TC1768"/>
+                </group>
+                <group name="AURIX Family">
+                        <processor name="TC2D5T" id="tc2d5t" cpu="tc2d5t" core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2D5T">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <!-- lsl_core name="Single-core 1 (tc1)" id="tc_core1" value="tc1"/ -->
+                                <!-- lsl_core name="Single-core 2 (tc2)" id="tc_core2" value="tc2"/ -->
+                                <property name="core_count" value="3"/>
+                        </processor>
+                        <processor name="TC23X"  id="tc23x"  cpu="tc23x"  core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2_2192k">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <property name="core_count" value="1"/>
+                        </processor>
+                        <processor name="TC23X_ADAS"  id="tc23x_adas"  cpu="tc23x_adas"  core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2_2192k">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <property name="core_count" value="1"/>
+                        </processor>
+                        <processor name="TC26X"  id="tc26x"  cpu="tc26x"  core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2_2672k">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <!-- lsl_core name="Single-core 1 (tc1)" id="tc_core1" value="tc1"/ -->
+                                <property name="core_count" value="2"/>
+                        </processor>
+                        <processor name="TC27X"  id="tc27x"  cpu="tc27x"  core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2_4560k">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <!-- lsl_core name="Single-core 1 (tc1)" id="tc_core1" value="tc1"/ -->
+                                <!-- lsl_core name="Single-core 2 (tc2)" id="tc_core2" value="tc2"/ -->
+                                <property name="core_count" value="3"/>
+                        </processor>
+                        <processor name="TC27XB" id="tc27xb" cpu="tc27xb" core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2_4560k">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <!-- lsl_core name="Single-core 1 (tc1)" id="tc_core1" value="tc1"/ -->
+                                <!-- lsl_core name="Single-core 2 (tc2)" id="tc_core2" value="tc2"/ -->
+                                <property name="core_count" value="3"/>
+                        </processor>
+                        <processor name="TC27XC" id="tc27xc" cpu="tc27xc" core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2_4560k">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <!-- lsl_core name="Single-core 1 (tc1)" id="tc_core1" value="tc1"/ -->
+                                <!-- lsl_core name="Single-core 2 (tc2)" id="tc_core2" value="tc2"/ -->
+                                <property name="core_count" value="3"/>
+                        </processor>
+                        <processor name="TC29X"  id="tc29x"  cpu="tc29x"  core="tc1.6.x" has-mmu="false" has-fpu="true" flash="TC2_9040k">
+                                <lsl_core name="Multi-core" id="multi" value="vtc"/>
+                                <lsl_core name="Single-core 0 (tc0)" id="tc_core0" value="tc0"/>
+                                <!-- lsl_core name="Single-core 1 (tc1)" id="tc_core1" value="tc1"/ -->
+                                <!-- lsl_core name="Single-core 2 (tc2)" id="tc_core2" value="tc2"/ -->
+                                <property name="core_count" value="3"/>
+                        </processor>
+                </group>
+        </group>
+
+
+
+
+
+<!-- end of group "Infineon TriCore 1 Family" -->
+
+<!-- ===================================================================== -->
+<!-- ===================================================================== -->
+<!--                                                                       -->
+<!-- Silicon bug groups                                                    -->
+
+        <silicon-bug-group id="TC1130 Bugs">
+                <silicon-bug-ref ref="CPU_TC.013"/>
+                <silicon-bug-ref ref="CPU_TC.048"/>
+                <silicon-bug-ref ref="CPU_TC.060"/>
+                <silicon-bug-ref ref="CPU_TC.065"/>
+                <silicon-bug-ref ref="CPU_TC.068"/>
+                <silicon-bug-ref ref="CPU_TC.069"/>
+                <silicon-bug-ref ref="CPU_TC.070"/>
+                <silicon-bug-ref ref="CPU_TC.071"/>
+                <silicon-bug-ref ref="CPU_TC.072"/>
+                <silicon-bug-ref ref="CPU_TC.074"/>
+                <silicon-bug-ref ref="CPU_TC.081"/>
+                <silicon-bug-ref ref="CPU_TC.082"/>
+                <silicon-bug-ref ref="CPU_TC.083"/>
+                <silicon-bug-ref ref="CPU_TC.094"/>
+                <silicon-bug-ref ref="CPU_TC.095"/>
+                <silicon-bug-ref ref="CPU_TC.096"/>
+                <silicon-bug-ref ref="CPU_TC.104"/>
+                <silicon-bug-ref ref="CPU_TC.116"/>
+        </silicon-bug-group>
+
+<!-- ===================================================================== -->
+
+        <silicon-bug-group id="TC1-M Bugs">
+                <silicon-bug-ref ref="CPU_TC.013"/>
+                <silicon-bug-ref ref="CPU_TC.048"/>
+                <silicon-bug-ref ref="CPU_TC.051"/>
+                <silicon-bug-ref ref="CPU_TC.060"/>
+                <silicon-bug-ref ref="CPU_TC.065"/>
+                <silicon-bug-ref ref="CPU_TC.068"/>
+                <silicon-bug-ref ref="CPU_TC.069"/>
+                <silicon-bug-ref ref="CPU_TC.070"/>
+                <silicon-bug-ref ref="CPU_TC.071"/>
+                <silicon-bug-ref ref="CPU_TC.072"/>
+                <silicon-bug-ref ref="CPU_TC.074"/>
+                <silicon-bug-ref ref="CPU_TC.081"/>
+                <silicon-bug-ref ref="CPU_TC.082"/>
+                <silicon-bug-ref ref="CPU_TC.083"/>
+                <silicon-bug-ref ref="CPU_TC.094"/>
+                <silicon-bug-ref ref="CPU_TC.095"/>
+                <silicon-bug-ref ref="CPU_TC.096"/>
+                <silicon-bug-ref ref="DMU_TC.001"/>
+                <silicon-bug-ref ref="PMI_TC.003"/>
+                <silicon-bug-ref ref="PMU_TC.004"/>
+        </silicon-bug-group>
+
+<!-- ===================================================================== -->
+
+        <silicon-bug-group id="AUDO NextGeneration Bugs">
+                <silicon-bug-ref ref="CPU_TC.013"/>
+                <silicon-bug-ref ref="CPU_TC.048"/>
+                <silicon-bug-ref ref="CPU_TC.060"/>
+                <silicon-bug-ref ref="CPU_TC.065"/>
+                <silicon-bug-ref ref="CPU_TC.068"/>
+                <silicon-bug-ref ref="CPU_TC.069"/>
+                <silicon-bug-ref ref="CPU_TC.070"/>
+                <silicon-bug-ref ref="CPU_TC.071"/>
+                <silicon-bug-ref ref="CPU_TC.072"/>
+                <silicon-bug-ref ref="CPU_TC.074"/>
+                <silicon-bug-ref ref="CPU_TC.081"/>
+                <silicon-bug-ref ref="CPU_TC.082"/>
+                <silicon-bug-ref ref="CPU_TC.083"/>
+                <silicon-bug-ref ref="CPU_TC.094"/>
+                <silicon-bug-ref ref="CPU_TC.095"/>
+                <silicon-bug-ref ref="CPU_TC.096"/>
+                <silicon-bug-ref ref="CPU_TC.104"/>
+                <silicon-bug-ref ref="CPU_TC.105"/>
+                <silicon-bug-ref ref="CPU_TC.108"/>
+                <silicon-bug-ref ref="CPU_TC.109"/>
+                <silicon-bug-ref ref="CPU_TC.116"/>
+        </silicon-bug-group>
+
+<!-- ===================================================================== -->
+
+        <silicon-bug-group id="AUDO NG and TC116X Bugs">
+                <silicon-bug-ref ref="CPU_TC.013"/>
+                <silicon-bug-ref ref="CPU_TC.048"/>
+                <silicon-bug-ref ref="CPU_TC.060"/>
+                <silicon-bug-ref ref="CPU_TC.065"/>
+                <silicon-bug-ref ref="CPU_TC.068"/>
+                <silicon-bug-ref ref="CPU_TC.069"/>
+                <silicon-bug-ref ref="CPU_TC.070"/>
+                <silicon-bug-ref ref="CPU_TC.071"/>
+                <silicon-bug-ref ref="CPU_TC.072"/>
+                <silicon-bug-ref ref="CPU_TC.074"/>
+                <silicon-bug-ref ref="CPU_TC.081"/>
+                <silicon-bug-ref ref="CPU_TC.082"/>
+                <silicon-bug-ref ref="CPU_TC.083"/>
+                <silicon-bug-ref ref="CPU_TC.094"/>
+                <silicon-bug-ref ref="CPU_TC.095"/>
+                <silicon-bug-ref ref="CPU_TC.096"/>
+                <silicon-bug-ref ref="CPU_TC.104"/>
+                <silicon-bug-ref ref="CPU_TC.105"/>
+                <silicon-bug-ref ref="CPU_TC.108"/>
+                <silicon-bug-ref ref="CPU_TC.109"/>
+        </silicon-bug-group>
+
+<!-- ===================================================================== -->
+
+        <silicon-bug-group id="AUDO Future Bugs">
+                <silicon-bug-ref ref="CPU_TC.105"/>
+                <silicon-bug-ref ref="CPU_TC.106"/>
+                <silicon-bug-ref ref="CPU_TC.108"/>
+                <silicon-bug-ref ref="CPU_TC.109"/>
+        </silicon-bug-group>
+        
+        <!-- List of all TriCore silicon bugs -->
+        <silicon-bug id="CPU_TC.013" name="CPU_TC.013 (Add cstart.c to your project)" flag="cpu-tc013" exclusive="true"/>
+        <silicon-bug id="CPU_TC.048" name="CPU_TC.048" flag="cpu-tc048" exclusive="true"/>
+        <silicon-bug id="CPU_TC.051" name="CPU_TC.051 (Add cstart.c to your project)" flag="cpu-tc051" exclusive="true"/>
+        <silicon-bug id="CPU_TC.060" name="CPU_TC.060" flag="cpu-tc060" exclusive="true"/>
+        <silicon-bug id="CPU_TC.065" name="CPU_TC.065" flag="cpu-tc065" exclusive="true"/>
+        <silicon-bug id="CPU_TC.068" name="CPU_TC.068" flag="cpu-tc068" exclusive="true"/>
+        <silicon-bug id="CPU_TC.069" name="CPU_TC.069" flag="cpu-tc069" exclusive="true"/>
+        <silicon-bug id="CPU_TC.070" name="CPU_TC.070" flag="cpu-tc070" exclusive="true"/>
+        <silicon-bug id="CPU_TC.071" name="CPU_TC.071" flag="cpu-tc071" exclusive="true"/>
+        <silicon-bug id="CPU_TC.072" name="CPU_TC.072" flag="cpu-tc072" exclusive="true"/>
+        <silicon-bug id="CPU_TC.074" name="CPU_TC.074" flag="cpu-tc074" exclusive="true"/>
+        <silicon-bug id="CPU_TC.081" name="CPU_TC.081" flag="cpu-tc081" exclusive="true"/>
+        <silicon-bug id="CPU_TC.082" name="CPU_TC.082" flag="cpu-tc082" exclusive="true"/>
+        <silicon-bug id="CPU_TC.083" name="CPU_TC.083" flag="cpu-tc083" exclusive="true"/>
+        <silicon-bug id="CPU_TC.094" name="CPU_TC.094" flag="cpu-tc094" exclusive="true"/>
+        <silicon-bug id="CPU_TC.095" name="CPU_TC.095" flag="cpu-tc095" exclusive="true"/>
+        <silicon-bug id="CPU_TC.096" name="CPU_TC.096" flag="cpu-tc096" exclusive="true"/>
+        <silicon-bug id="CPU_TC.104" name="CPU_TC.104" flag="cpu-tc104" exclusive="true"/>
+        <silicon-bug id="CPU_TC.105" name="CPU_TC.105" flag="cpu-tc105" exclusive="true"/>
+        <silicon-bug id="CPU_TC.106" name="CPU_TC.106" flag="cpu-tc106" exclusive="true"/>
+        <silicon-bug id="CPU_TC.108" name="CPU_TC.108" flag="cpu-tc108" exclusive="true"/>
+        <silicon-bug id="CPU_TC.109" name="CPU_TC.109" flag="cpu-tc109" exclusive="true"/>
+        <silicon-bug id="CPU_TC.116" name="CPU_TC.116" flag="cpu-tc116" exclusive="true"/>
+        <silicon-bug id="DMU_TC.001" name="DMU_TC.001" flag="dmu-tc001" exclusive="true"/>
+        <silicon-bug id="PMI_TC.003" name="PMI_TC.003 (Add cstart.c to your project)" flag="pmi-tc003" exclusive="true"/>
+        <silicon-bug id="PMU_TC.004" name="PMU_TC.004 (Add cstart.c to your project)" flag="pmu-tc004" exclusive="true"/>
+
+
+<!-- ===================================================================== -->
+
+</processors> 
