@@ -1,0 +1,3188 @@
+<html>
+<head>
+<title>TriCore TC1167 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="FADC_ACRm_t"><b>FADC_ACRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Channel n Analog Control Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_ACRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int GAIN:2</td>
+<td>0 - 1</td>
+<td>FADC_ACRm_GAIN_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ENP:1</td>
+<td>2 - 2</td>
+<td>FADC_ACRm_ENP_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ENN:1</td>
+<td>3 - 3</td>
+<td>FADC_ACRm_ENN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CALOFF_2_0:3</td>
+<td>8 - 10</td>
+<td>FADC_ACRm_CALOFF_2_0_MASK</td>
+<td>0x00000700</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CALOFF3:1</td>
+<td>12 - 12</td>
+<td>FADC_ACRm_CALOFF3_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CALGAIN:2</td>
+<td>13 - 14</td>
+<td>FADC_ACRm_CALGAIN_MASK</td>
+<td>0x00006000</td>
+<td align="right">13</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_ACR0">FADC_ACR0</a>,    
+<a class="url" href="../fadc.html#FADC_ACR1">FADC_ACR1</a>,    
+<a class="url" href="../fadc.html#FADC_ACR2">FADC_ACR2</a>,    
+<a class="url" href="../fadc.html#FADC_ACR3">FADC_ACR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_ALR_t"><b>FADC_ALR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Alias Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_ALR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ALIAS0:2</td>
+<td>0 - 1</td>
+<td>FADC_ALR_ALIAS0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ALIAS1:2</td>
+<td>2 - 3</td>
+<td>FADC_ALR_ALIAS1_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ALIAS2:2</td>
+<td>4 - 5</td>
+<td>FADC_ALR_ALIAS2_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ALIAS3:2</td>
+<td>6 - 7</td>
+<td>FADC_ALR_ALIAS3_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_ALR">FADC_ALR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_CFGRm_t"><b>FADC_CFGRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Channel n Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_CFGRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int GSEL:3</td>
+<td>0 - 2</td>
+<td>FADC_CFGRm_GSEL_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TSEL:3</td>
+<td>3 - 5</td>
+<td>FADC_CFGRm_TSEL_MASK</td>
+<td>0x00000038</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int GM:2</td>
+<td>6 - 7</td>
+<td>FADC_CFGRm_GM_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int TM:2</td>
+<td>8 - 9</td>
+<td>FADC_CFGRm_TM_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CTM:2</td>
+<td>10 - 11</td>
+<td>FADC_CFGRm_CTM_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CTF:3</td>
+<td>12 - 14</td>
+<td>FADC_CFGRm_CTF_MASK</td>
+<td>0x00007000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CTREL:8</td>
+<td>16 - 23</td>
+<td>FADC_CFGRm_CTREL_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int INP:2</td>
+<td>28 - 29</td>
+<td>FADC_CFGRm_INP_MASK</td>
+<td>0x30000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int IEN:1</td>
+<td>31 - 31</td>
+<td>FADC_CFGRm_IEN_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_CFGR0">FADC_CFGR0</a>,    
+<a class="url" href="../fadc.html#FADC_CFGR1">FADC_CFGR1</a>,    
+<a class="url" href="../fadc.html#FADC_CFGR2">FADC_CFGR2</a>,    
+<a class="url" href="../fadc.html#FADC_CFGR3">FADC_CFGR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_CLC_t"><b>FADC_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>FADC_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>FADC_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>FADC_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EDIS:1</td>
+<td>3 - 3</td>
+<td>FADC_CLC_EDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>FADC_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>FADC_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_CLC">FADC_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_CRRm_t"><b>FADC_CRRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter n Current Result Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_CRRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CR:19</td>
+<td>0 - 18</td>
+<td>FADC_CRRm_CR_MASK</td>
+<td>0x0007ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int AC:3</td>
+<td>24 - 26</td>
+<td>FADC_CRRm_AC_MASK</td>
+<td>0x07000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int MAVS:2</td>
+<td>28 - 29</td>
+<td>FADC_CRRm_MAVS_MASK</td>
+<td>0x30000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_CRR0">FADC_CRR0</a>,    
+<a class="url" href="../fadc.html#FADC_CRR1">FADC_CRR1</a>,    
+<a class="url" href="../fadc.html#FADC_CRR2">FADC_CRR2</a>,    
+<a class="url" href="../fadc.html#FADC_CRR3">FADC_CRR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_CRSR_t"><b>FADC_CRSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Conversion Request Status Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_CRSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CRF0:1</td>
+<td>0 - 0</td>
+<td>FADC_CRSR_CRF0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CRF1:1</td>
+<td>1 - 1</td>
+<td>FADC_CRSR_CRF1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CRF2:1</td>
+<td>2 - 2</td>
+<td>FADC_CRSR_CRF2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CRF3:1</td>
+<td>3 - 3</td>
+<td>FADC_CRSR_CRF3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int BSY0:1</td>
+<td>8 - 8</td>
+<td>FADC_CRSR_BSY0_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int BSY1:1</td>
+<td>9 - 9</td>
+<td>FADC_CRSR_BSY1_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int BSY2:1</td>
+<td>10 - 10</td>
+<td>FADC_CRSR_BSY2_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int BSY3:1</td>
+<td>11 - 11</td>
+<td>FADC_CRSR_BSY3_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int IRQ0:1</td>
+<td>16 - 16</td>
+<td>FADC_CRSR_IRQ0_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int IRQ1:1</td>
+<td>17 - 17</td>
+<td>FADC_CRSR_IRQ1_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int IRQ2:1</td>
+<td>18 - 18</td>
+<td>FADC_CRSR_IRQ2_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int IRQ3:1</td>
+<td>19 - 19</td>
+<td>FADC_CRSR_IRQ3_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int IRQF0:1</td>
+<td>20 - 20</td>
+<td>FADC_CRSR_IRQF0_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int IRQF1:1</td>
+<td>21 - 21</td>
+<td>FADC_CRSR_IRQF1_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int IRQF2:1</td>
+<td>22 - 22</td>
+<td>FADC_CRSR_IRQF2_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int IRQF3:1</td>
+<td>23 - 23</td>
+<td>FADC_CRSR_IRQF3_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_CRSR">FADC_CRSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_FCRm_t"><b>FADC_FCRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter n Control Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_FCRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDL:3</td>
+<td>0 - 2</td>
+<td>FADC_FCRm_ADDL_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MAVL:2</td>
+<td>4 - 5</td>
+<td>FADC_FCRm_MAVL_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int INSEL:3</td>
+<td>8 - 10</td>
+<td>FADC_FCRm_INSEL_MASK</td>
+<td>0x00000700</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int INP:2</td>
+<td>12 - 13</td>
+<td>FADC_FCRm_INP_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int IEN:1</td>
+<td>15 - 15</td>
+<td>FADC_FCRm_IEN_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_FCR0">FADC_FCR0</a>,    
+<a class="url" href="../fadc.html#FADC_FCR1">FADC_FCR1</a>,    
+<a class="url" href="../fadc.html#FADC_FCR2">FADC_FCR2</a>,    
+<a class="url" href="../fadc.html#FADC_FCR3">FADC_FCR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_FDR_t"><b>FADC_FDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Fractional Divider Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_FDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STEP:10</td>
+<td>0 - 9</td>
+<td>FADC_FDR_STEP_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SM:1</td>
+<td>11 - 11</td>
+<td>FADC_FDR_SM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SC:2</td>
+<td>12 - 13</td>
+<td>FADC_FDR_SC_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DM:2</td>
+<td>14 - 15</td>
+<td>FADC_FDR_DM_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RESULT:10</td>
+<td>16 - 25</td>
+<td>FADC_FDR_RESULT_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>28 - 28</td>
+<td>FADC_FDR_SUSACK_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SUSREQ:1</td>
+<td>29 - 29</td>
+<td>FADC_FDR_SUSREQ_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENHW:1</td>
+<td>30 - 30</td>
+<td>FADC_FDR_ENHW_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int DISCLK:1</td>
+<td>31 - 31</td>
+<td>FADC_FDR_DISCLK_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_FDR">FADC_FDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_FMR_t"><b>FADC_FMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flag Modification Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_FMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RCRF0:1</td>
+<td>0 - 0</td>
+<td>FADC_FMR_RCRF0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int RCRF1:1</td>
+<td>1 - 1</td>
+<td>FADC_FMR_RCRF1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RCRF2:1</td>
+<td>2 - 2</td>
+<td>FADC_FMR_RCRF2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int RCRF3:1</td>
+<td>3 - 3</td>
+<td>FADC_FMR_RCRF3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SCRF0:1</td>
+<td>8 - 8</td>
+<td>FADC_FMR_SCRF0_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SCRF1:1</td>
+<td>9 - 9</td>
+<td>FADC_FMR_SCRF1_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SCRF2:1</td>
+<td>10 - 10</td>
+<td>FADC_FMR_SCRF2_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SCRF3:1</td>
+<td>11 - 11</td>
+<td>FADC_FMR_SCRF3_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int RIRQ0:1</td>
+<td>16 - 16</td>
+<td>FADC_FMR_RIRQ0_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int RIRQ1:1</td>
+<td>17 - 17</td>
+<td>FADC_FMR_RIRQ1_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int RIRQ2:1</td>
+<td>18 - 18</td>
+<td>FADC_FMR_RIRQ2_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int RIRQ3:1</td>
+<td>19 - 19</td>
+<td>FADC_FMR_RIRQ3_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int RIRQF0:1</td>
+<td>20 - 20</td>
+<td>FADC_FMR_RIRQF0_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int RIRQF1:1</td>
+<td>21 - 21</td>
+<td>FADC_FMR_RIRQF1_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int RIRQF2:1</td>
+<td>22 - 22</td>
+<td>FADC_FMR_RIRQF2_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RIRQF3:1</td>
+<td>23 - 23</td>
+<td>FADC_FMR_RIRQF3_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int SIRQ0:1</td>
+<td>24 - 24</td>
+<td>FADC_FMR_SIRQ0_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int SIRQ1:1</td>
+<td>25 - 25</td>
+<td>FADC_FMR_SIRQ1_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int SIRQ2:1</td>
+<td>26 - 26</td>
+<td>FADC_FMR_SIRQ2_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int SIRQ3:1</td>
+<td>27 - 27</td>
+<td>FADC_FMR_SIRQ3_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int SIRQF0:1</td>
+<td>28 - 28</td>
+<td>FADC_FMR_SIRQF0_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SIRQF1:1</td>
+<td>29 - 29</td>
+<td>FADC_FMR_SIRQF1_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int SIRQF2:1</td>
+<td>30 - 30</td>
+<td>FADC_FMR_SIRQF2_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int SIRQF3:1</td>
+<td>31 - 31</td>
+<td>FADC_FMR_SIRQF3_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_FMR">FADC_FMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_FRR0_t"><b>FADC_FRR0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 0 Final Result Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_FRR0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FR:15</td>
+<td>0 - 14</td>
+<td>FADC_FRR0_FR_MASK</td>
+<td>0x00007fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_FRR0">FADC_FRR0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_FRR2_t"><b>FADC_FRR2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 2 Final Result Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_FRR2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FR:15</td>
+<td>0 - 14</td>
+<td>FADC_FRR2_FR_MASK</td>
+<td>0x00007fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_FRR2">FADC_FRR2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_FRRm_t"><b>FADC_FRRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter n Final Result Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_FRRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FR:20</td>
+<td>0 - 19</td>
+<td>FADC_FRRm_FR_MASK</td>
+<td>0x000fffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_FRR1">FADC_FRR1</a>,    
+<a class="url" href="../fadc.html#FADC_FRR3">FADC_FRR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_GCR_t"><b>FADC_GCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Global Control Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_GCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RCT0:1</td>
+<td>0 - 0</td>
+<td>FADC_GCR_RCT0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int RCT1:1</td>
+<td>1 - 1</td>
+<td>FADC_GCR_RCT1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RCT2:1</td>
+<td>2 - 2</td>
+<td>FADC_GCR_RCT2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int RCT3:1</td>
+<td>3 - 3</td>
+<td>FADC_GCR_RCT3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RCD:1</td>
+<td>8 - 8</td>
+<td>FADC_GCR_RCD_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RSTF0:1</td>
+<td>9 - 9</td>
+<td>FADC_GCR_RSTF0_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int RSTF1:1</td>
+<td>10 - 10</td>
+<td>FADC_GCR_RSTF1_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int RSTF2:1</td>
+<td>11 - 11</td>
+<td>FADC_GCR_RSTF2_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int RSTF3:1</td>
+<td>12 - 12</td>
+<td>FADC_GCR_RSTF3_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CRPRIO:2</td>
+<td>16 - 17</td>
+<td>FADC_GCR_CRPRIO_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DPAEN:1</td>
+<td>18 - 18</td>
+<td>FADC_GCR_DPAEN_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int RESWEN:1</td>
+<td>19 - 19</td>
+<td>FADC_GCR_RESWEN_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int MUXTM:1</td>
+<td>20 - 20</td>
+<td>FADC_GCR_MUXTM_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int ANON:1</td>
+<td>21 - 21</td>
+<td>FADC_GCR_ANON_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int CALMODE:2</td>
+<td>24 - 25</td>
+<td>FADC_GCR_CALMODE_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int CALCH:2</td>
+<td>26 - 27</td>
+<td>FADC_GCR_CALCH_MASK</td>
+<td>0x0c000000</td>
+<td align="right">26</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_GCR">FADC_GCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_IRR10_t"><b>FADC_IRR10_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 0 Intermediate Result Register 1</b></td></tr>
+<tr><td colspan="5"><b>FADC_IRR10_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IR:13</td>
+<td>0 - 12</td>
+<td>FADC_IRR10_IR_MASK</td>
+<td>0x00001fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_IRR10">FADC_IRR10</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_IRR12_t"><b>FADC_IRR12_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 2 Intermediate Result Register 1</b></td></tr>
+<tr><td colspan="5"><b>FADC_IRR12_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IR:13</td>
+<td>0 - 12</td>
+<td>FADC_IRR12_IR_MASK</td>
+<td>0x00001fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_IRR12">FADC_IRR12</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_IRR20_t"><b>FADC_IRR20_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 0 Intermediate Result Register 2</b></td></tr>
+<tr><td colspan="5"><b>FADC_IRR20_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IR:13</td>
+<td>0 - 12</td>
+<td>FADC_IRR20_IR_MASK</td>
+<td>0x00001fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_IRR20">FADC_IRR20</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_IRR22_t"><b>FADC_IRR22_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 2 Intermediate Result Register 2</b></td></tr>
+<tr><td colspan="5"><b>FADC_IRR22_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IR:13</td>
+<td>0 - 12</td>
+<td>FADC_IRR22_IR_MASK</td>
+<td>0x00001fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_IRR22">FADC_IRR22</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_IRR30_t"><b>FADC_IRR30_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 0 Intermediate Result Register 3</b></td></tr>
+<tr><td colspan="5"><b>FADC_IRR30_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IR:13</td>
+<td>0 - 12</td>
+<td>FADC_IRR30_IR_MASK</td>
+<td>0x00001fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_IRR30">FADC_IRR30</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_IRR32_t"><b>FADC_IRR32_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter 2 Intermediate Result Register 3</b></td></tr>
+<tr><td colspan="5"><b>FADC_IRR32_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IR:13</td>
+<td>0 - 12</td>
+<td>FADC_IRR32_IR_MASK</td>
+<td>0x00001fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_IRR32">FADC_IRR32</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_IRRm_t"><b>FADC_IRRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter n Intermediate Result Register 1</b></td></tr>
+<tr><td colspan="5"><b>FADC_IRRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IR:18</td>
+<td>0 - 17</td>
+<td>FADC_IRRm_IR_MASK</td>
+<td>0x0003ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_IRR11">FADC_IRR11</a>,    
+<a class="url" href="../fadc.html#FADC_IRR13">FADC_IRR13</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_NCTR_t"><b>FADC_NCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Neighbor Channel Trigger Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_NCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int EN01:1</td>
+<td>1 - 1</td>
+<td>FADC_NCTR_EN01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int EN02:1</td>
+<td>2 - 2</td>
+<td>FADC_NCTR_EN02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EN03:1</td>
+<td>3 - 3</td>
+<td>FADC_NCTR_EN03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int EN10:1</td>
+<td>8 - 8</td>
+<td>FADC_NCTR_EN10_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int EN12:1</td>
+<td>10 - 10</td>
+<td>FADC_NCTR_EN12_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int EN13:1</td>
+<td>11 - 11</td>
+<td>FADC_NCTR_EN13_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int EN20:1</td>
+<td>16 - 16</td>
+<td>FADC_NCTR_EN20_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int EN21:1</td>
+<td>17 - 17</td>
+<td>FADC_NCTR_EN21_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int EN23:1</td>
+<td>19 - 19</td>
+<td>FADC_NCTR_EN23_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int EN30:1</td>
+<td>24 - 24</td>
+<td>FADC_NCTR_EN30_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int EN31:1</td>
+<td>25 - 25</td>
+<td>FADC_NCTR_EN31_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int EN32:1</td>
+<td>26 - 26</td>
+<td>FADC_NCTR_EN32_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_NCTR">FADC_NCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_RCHm_t"><b>FADC_RCHm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Channel n Conversion Result Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_RCHm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADRES:10</td>
+<td>0 - 9</td>
+<td>FADC_RCHm_ADRES_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_RCH0">FADC_RCH0</a>,    
+<a class="url" href="../fadc.html#FADC_RCH1">FADC_RCH1</a>,    
+<a class="url" href="../fadc.html#FADC_RCH2">FADC_RCH2</a>,    
+<a class="url" href="../fadc.html#FADC_RCH3">FADC_RCH3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_SFRRm_t"><b>FADC_SFRRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Filter n Shifted Final Result Register</b></td></tr>
+<tr><td colspan="5"><b>FADC_SFRRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FR:15</td>
+<td>0 - 14</td>
+<td>FADC_SFRRm_FR_MASK</td>
+<td>0x00007fff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_SFRR1">FADC_SFRR1</a>,    
+<a class="url" href="../fadc.html#FADC_SFRR3">FADC_SFRR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FADC_SRCm_t"><b>FADC_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Service Request Control Register n</b></td></tr>
+<tr><td colspan="5"><b>FADC_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>FADC_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>FADC_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>FADC_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>FADC_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>FADC_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>FADC_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../fadc.html#FADC_SRC0">FADC_SRC0</a>,    
+<a class="url" href="../fadc.html#FADC_SRC1">FADC_SRC1</a>,    
+<a class="url" href="../fadc.html#FADC_SRC2">FADC_SRC2</a>,    
+<a class="url" href="../fadc.html#FADC_SRC3">FADC_SRC3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../fadc.html">FADC</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FCX_t"><b>FCX_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Free CSA List Head Pointer</b></td></tr>
+<tr><td colspan="5"><b>FCX_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FCXO:16</td>
+<td>0 - 15</td>
+<td>FCX_FCXO_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FCXS:4</td>
+<td>16 - 19</td>
+<td>FCX_FCXS_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#FCX">FCX</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_CFTEST_t"><b>FLASH0_CFTEST_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CPU Flash Test Register</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_CFTEST_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TE:1</td>
+<td>0 - 0</td>
+<td>FLASH0_CFTEST_TE_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ECENCDIS:1</td>
+<td>2 - 2</td>
+<td>FLASH0_CFTEST_ECENCDIS_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ECDECDIS:1</td>
+<td>3 - 3</td>
+<td>FLASH0_CFTEST_ECDECDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CONFSE:1</td>
+<td>4 - 4</td>
+<td>FLASH0_CFTEST_CONFSE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PREFEDIS:1</td>
+<td>5 - 5</td>
+<td>FLASH0_CFTEST_PREFEDIS_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int FSRAME:1</td>
+<td>6 - 6</td>
+<td>FLASH0_CFTEST_FSRAME_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int EEAS:1</td>
+<td>7 - 7</td>
+<td>FLASH0_CFTEST_EEAS_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int FSIINTEN:1</td>
+<td>8 - 8</td>
+<td>FLASH0_CFTEST_FSIINTEN_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int FSIINT:1</td>
+<td>9 - 9</td>
+<td>FLASH0_CFTEST_FSIINT_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_CFTEST">FLASH0_CFTEST</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_ECCR_t"><b>FLASH0_ECCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>ECC Read Register</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_ECCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ECCRCode:8</td>
+<td>0 - 7</td>
+<td>FLASH0_ECCR_ECCRCode_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_ECCR">FLASH0_ECCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_ECCW_t"><b>FLASH0_ECCW_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>ECC Write Register</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_ECCW_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ECCWCode:8</td>
+<td>0 - 7</td>
+<td>FLASH0_ECCW_ECCWCode_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_ECCW">FLASH0_ECCW</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_FCON_t"><b>FLASH0_FCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flash Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_FCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int WSPFLASH:4</td>
+<td>0 - 3</td>
+<td>FLASH0_FCON_WSPFLASH_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WSECPF:1</td>
+<td>4 - 4</td>
+<td>FLASH0_FCON_WSECPF_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WSDFLASH:4</td>
+<td>8 - 11</td>
+<td>FLASH0_FCON_WSDFLASH_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int WSECDF:1</td>
+<td>12 - 12</td>
+<td>FLASH0_FCON_WSECDF_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int IDLE:1</td>
+<td>13 - 13</td>
+<td>FLASH0_FCON_IDLE_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int ESLDIS:1</td>
+<td>14 - 14</td>
+<td>FLASH0_FCON_ESLDIS_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SLEEP_FSD:1</td>
+<td>15 - 15</td>
+<td>FLASH0_FCON_SLEEP_FSD_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int RPA:1</td>
+<td>16 - 16</td>
+<td>FLASH0_FCON_RPA_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DCF:1</td>
+<td>17 - 17</td>
+<td>FLASH0_FCON_DCF_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int DDF:1</td>
+<td>18 - 18</td>
+<td>FLASH0_FCON_DDF_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int DDFDMA:1</td>
+<td>20 - 20</td>
+<td>FLASH0_FCON_DDFDMA_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int DDFPCP:1</td>
+<td>21 - 21</td>
+<td>FLASH0_FCON_DDFPCP_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int VOPERM:1</td>
+<td>24 - 24</td>
+<td>FLASH0_FCON_VOPERM_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int SQERM:1</td>
+<td>25 - 25</td>
+<td>FLASH0_FCON_SQERM_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int PROERM:1</td>
+<td>26 - 26</td>
+<td>FLASH0_FCON_PROERM_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int PFSBERM:1</td>
+<td>27 - 27</td>
+<td>FLASH0_FCON_PFSBERM_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int DFSBERM:1</td>
+<td>28 - 28</td>
+<td>FLASH0_FCON_DFSBERM_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int PFDBERM:1</td>
+<td>29 - 29</td>
+<td>FLASH0_FCON_PFDBERM_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int DFDBERM:1</td>
+<td>30 - 30</td>
+<td>FLASH0_FCON_DFDBERM_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int EOBM:1</td>
+<td>31 - 31</td>
+<td>FLASH0_FCON_EOBM_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_FCON">FLASH0_FCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_FSCON_t"><b>FLASH0_FSCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flash Size Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_FSCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PFSIZE:8</td>
+<td>0 - 7</td>
+<td>FLASH0_FSCON_PFSIZE_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DFSIZE:5</td>
+<td>8 - 12</td>
+<td>FLASH0_FSCON_DFSIZE_MASK</td>
+<td>0x00001f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_FSCON">FLASH0_FSCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_FSR_t"><b>FLASH0_FSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flash Status Register</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_FSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PBUSY:1</td>
+<td>0 - 0</td>
+<td>FLASH0_FSR_PBUSY_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FABUSY:1</td>
+<td>1 - 1</td>
+<td>FLASH0_FSR_FABUSY_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int D0BUSY:1</td>
+<td>2 - 2</td>
+<td>FLASH0_FSR_D0BUSY_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int D1BUSY:1</td>
+<td>3 - 3</td>
+<td>FLASH0_FSR_D1BUSY_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int PROG:1</td>
+<td>4 - 4</td>
+<td>FLASH0_FSR_PROG_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ERASE:1</td>
+<td>5 - 5</td>
+<td>FLASH0_FSR_ERASE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int PFPAGE:1</td>
+<td>6 - 6</td>
+<td>FLASH0_FSR_PFPAGE_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int DFPAGE:1</td>
+<td>7 - 7</td>
+<td>FLASH0_FSR_DFPAGE_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int PFOPER:1</td>
+<td>8 - 8</td>
+<td>FLASH0_FSR_PFOPER_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DFOPER:1</td>
+<td>9 - 9</td>
+<td>FLASH0_FSR_DFOPER_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SQER:1</td>
+<td>10 - 10</td>
+<td>FLASH0_FSR_SQER_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int PROER:1</td>
+<td>11 - 11</td>
+<td>FLASH0_FSR_PROER_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int PFSBER:1</td>
+<td>12 - 12</td>
+<td>FLASH0_FSR_PFSBER_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DFSBER:1</td>
+<td>13 - 13</td>
+<td>FLASH0_FSR_DFSBER_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int PFDBER:1</td>
+<td>14 - 14</td>
+<td>FLASH0_FSR_PFDBER_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int DFDBER:1</td>
+<td>15 - 15</td>
+<td>FLASH0_FSR_DFDBER_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int PROIN:1</td>
+<td>16 - 16</td>
+<td>FLASH0_FSR_PROIN_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int RPROIN:1</td>
+<td>18 - 18</td>
+<td>FLASH0_FSR_RPROIN_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int RPRODIS:1</td>
+<td>19 - 19</td>
+<td>FLASH0_FSR_RPRODIS_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int WPROIN0:1</td>
+<td>21 - 21</td>
+<td>FLASH0_FSR_WPROIN0_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int WPROIN1:1</td>
+<td>22 - 22</td>
+<td>FLASH0_FSR_WPROIN1_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int WPROIN2:1</td>
+<td>23 - 23</td>
+<td>FLASH0_FSR_WPROIN2_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int WPRODIS0:1</td>
+<td>25 - 25</td>
+<td>FLASH0_FSR_WPRODIS0_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int WPRODIS1:1</td>
+<td>26 - 26</td>
+<td>FLASH0_FSR_WPRODIS1_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int SLM:1</td>
+<td>28 - 28</td>
+<td>FLASH0_FSR_SLM_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int VIS:1</td>
+<td>29 - 29</td>
+<td>FLASH0_FSR_VIS_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ORIER:1</td>
+<td>30 - 30</td>
+<td>FLASH0_FSR_ORIER_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int VER:1</td>
+<td>31 - 31</td>
+<td>FLASH0_FSR_VER_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_FSR">FLASH0_FSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_ID_t"><b>FLASH0_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flash Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>FLASH0_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>FLASH0_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>FLASH0_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_ID">FLASH0_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_MARD_t"><b>FLASH0_MARD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Margin Control Register DFLASH</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_MARD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MARGIN0:2</td>
+<td>0 - 1</td>
+<td>FLASH0_MARD_MARGIN0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MARGIN1:2</td>
+<td>2 - 3</td>
+<td>FLASH0_MARD_MARGIN1_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int BNKSEL:1</td>
+<td>4 - 4</td>
+<td>FLASH0_MARD_BNKSEL_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TRAPDIS:1</td>
+<td>15 - 15</td>
+<td>FLASH0_MARD_TRAPDIS_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_MARD">FLASH0_MARD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_MARP_t"><b>FLASH0_MARP_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Margin Control Register PFLASH</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_MARP_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MARGIN0:2</td>
+<td>0 - 1</td>
+<td>FLASH0_MARP_MARGIN0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MARGIN1:2</td>
+<td>2 - 3</td>
+<td>FLASH0_MARP_MARGIN1_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TRAPDIS:1</td>
+<td>15 - 15</td>
+<td>FLASH0_MARP_TRAPDIS_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_MARP">FLASH0_MARP</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_PROCON0_t"><b>FLASH0_PROCON0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flash Protection Configuration Register User 0</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_PROCON0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int S0L:1</td>
+<td>0 - 0</td>
+<td>FLASH0_PROCON0_S0L_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int S1L:1</td>
+<td>1 - 1</td>
+<td>FLASH0_PROCON0_S1L_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int S2L:1</td>
+<td>2 - 2</td>
+<td>FLASH0_PROCON0_S2L_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int S3L:1</td>
+<td>3 - 3</td>
+<td>FLASH0_PROCON0_S3L_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int S4L:1</td>
+<td>4 - 4</td>
+<td>FLASH0_PROCON0_S4L_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int S5L:1</td>
+<td>5 - 5</td>
+<td>FLASH0_PROCON0_S5L_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int S6L:1</td>
+<td>6 - 6</td>
+<td>FLASH0_PROCON0_S6L_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int S7L:1</td>
+<td>7 - 7</td>
+<td>FLASH0_PROCON0_S7L_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int S8L:1</td>
+<td>8 - 8</td>
+<td>FLASH0_PROCON0_S8L_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int S9L:1</td>
+<td>9 - 9</td>
+<td>FLASH0_PROCON0_S9L_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int S10_S11L:1</td>
+<td>10 - 10</td>
+<td>FLASH0_PROCON0_S10_S11L_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int S12_S13L:1</td>
+<td>11 - 11</td>
+<td>FLASH0_PROCON0_S12_S13L_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int S14_S15L:1</td>
+<td>12 - 12</td>
+<td>FLASH0_PROCON0_S14_S15L_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DFEXPRO:1</td>
+<td>14 - 14</td>
+<td>FLASH0_PROCON0_DFEXPRO_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RPRO:1</td>
+<td>15 - 15</td>
+<td>FLASH0_PROCON0_RPRO_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_PROCON0">FLASH0_PROCON0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_PROCON1_t"><b>FLASH0_PROCON1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flash Protection Configuration Register User 1</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_PROCON1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int S0L:1</td>
+<td>0 - 0</td>
+<td>FLASH0_PROCON1_S0L_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int S1L:1</td>
+<td>1 - 1</td>
+<td>FLASH0_PROCON1_S1L_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int S2L:1</td>
+<td>2 - 2</td>
+<td>FLASH0_PROCON1_S2L_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int S3L:1</td>
+<td>3 - 3</td>
+<td>FLASH0_PROCON1_S3L_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int S4L:1</td>
+<td>4 - 4</td>
+<td>FLASH0_PROCON1_S4L_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int S5L:1</td>
+<td>5 - 5</td>
+<td>FLASH0_PROCON1_S5L_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int S6L:1</td>
+<td>6 - 6</td>
+<td>FLASH0_PROCON1_S6L_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int S7L:1</td>
+<td>7 - 7</td>
+<td>FLASH0_PROCON1_S7L_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int S8L:1</td>
+<td>8 - 8</td>
+<td>FLASH0_PROCON1_S8L_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int S9L:1</td>
+<td>9 - 9</td>
+<td>FLASH0_PROCON1_S9L_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int S10_S11L:1</td>
+<td>10 - 10</td>
+<td>FLASH0_PROCON1_S10_S11L_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int S12_S13L:1</td>
+<td>11 - 11</td>
+<td>FLASH0_PROCON1_S12_S13L_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int S14_S15L:1</td>
+<td>12 - 12</td>
+<td>FLASH0_PROCON1_S14_S15L_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_PROCON1">FLASH0_PROCON1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FLASH0_PROCON2_t"><b>FLASH0_PROCON2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Flash Protection Configuration Register User 2</b></td></tr>
+<tr><td colspan="5"><b>FLASH0_PROCON2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int S0ROM:1</td>
+<td>0 - 0</td>
+<td>FLASH0_PROCON2_S0ROM_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int S1ROM:1</td>
+<td>1 - 1</td>
+<td>FLASH0_PROCON2_S1ROM_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int S2ROM:1</td>
+<td>2 - 2</td>
+<td>FLASH0_PROCON2_S2ROM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int S3ROM:1</td>
+<td>3 - 3</td>
+<td>FLASH0_PROCON2_S3ROM_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int S4ROM:1</td>
+<td>4 - 4</td>
+<td>FLASH0_PROCON2_S4ROM_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int S5ROM:1</td>
+<td>5 - 5</td>
+<td>FLASH0_PROCON2_S5ROM_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int S6ROM:1</td>
+<td>6 - 6</td>
+<td>FLASH0_PROCON2_S6ROM_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int S7ROM:1</td>
+<td>7 - 7</td>
+<td>FLASH0_PROCON2_S7ROM_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int S8ROM:1</td>
+<td>8 - 8</td>
+<td>FLASH0_PROCON2_S8ROM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int S9ROM:1</td>
+<td>9 - 9</td>
+<td>FLASH0_PROCON2_S9ROM_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int S10_S11ROM:1</td>
+<td>10 - 10</td>
+<td>FLASH0_PROCON2_S10_S11ROM_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int S12_S13ROM:1</td>
+<td>11 - 11</td>
+<td>FLASH0_PROCON2_S12_S13ROM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int S14_S15ROM:1</td>
+<td>12 - 12</td>
+<td>FLASH0_PROCON2_S14_S15ROM_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int TP:1</td>
+<td>15 - 15</td>
+<td>FLASH0_PROCON2_TP_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../pmu.html#FLASH0_PROCON2">FLASH0_PROCON2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../pmu.html">PMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FPU_ID_t"><b>FPU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Trapping Identification Register</b></td></tr>
+<tr><td colspan="5"><b>FPU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>FPU_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_32B:8</td>
+<td>8 - 15</td>
+<td>FPU_ID_MOD_32B_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD:16</td>
+<td>16 - 31</td>
+<td>FPU_ID_MOD_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#FPU_ID">FPU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FPU_TRAP_CON_t"><b>FPU_TRAP_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Trap Control Register</b></td></tr>
+<tr><td colspan="5"><b>FPU_TRAP_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TST:1</td>
+<td>0 - 0</td>
+<td>FPU_TRAP_CON_TST_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TCL:1</td>
+<td>1 - 1</td>
+<td>FPU_TRAP_CON_TCL_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RM:2</td>
+<td>8 - 9</td>
+<td>FPU_TRAP_CON_RM_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int FXE:1</td>
+<td>18 - 18</td>
+<td>FPU_TRAP_CON_FXE_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int FUE:1</td>
+<td>19 - 19</td>
+<td>FPU_TRAP_CON_FUE_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int FZE:1</td>
+<td>20 - 20</td>
+<td>FPU_TRAP_CON_FZE_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int FVE:1</td>
+<td>21 - 21</td>
+<td>FPU_TRAP_CON_FVE_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int FIE:1</td>
+<td>22 - 22</td>
+<td>FPU_TRAP_CON_FIE_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int FX:1</td>
+<td>26 - 26</td>
+<td>FPU_TRAP_CON_FX_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int FU:1</td>
+<td>27 - 27</td>
+<td>FPU_TRAP_CON_FU_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int FZ:1</td>
+<td>28 - 28</td>
+<td>FPU_TRAP_CON_FZ_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int FV:1</td>
+<td>29 - 29</td>
+<td>FPU_TRAP_CON_FV_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int FI:1</td>
+<td>30 - 30</td>
+<td>FPU_TRAP_CON_FI_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#FPU_TRAP_CON">FPU_TRAP_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FPU_TRAP_OPC_t"><b>FPU_TRAP_OPC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Trapping Instruction Opcode Register</b></td></tr>
+<tr><td colspan="5"><b>FPU_TRAP_OPC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int OPC:8</td>
+<td>0 - 7</td>
+<td>FPU_TRAP_OPC_OPC_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FMT:1</td>
+<td>8 - 8</td>
+<td>FPU_TRAP_OPC_FMT_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DREG:4</td>
+<td>16 - 19</td>
+<td>FPU_TRAP_OPC_DREG_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#FPU_TRAP_OPC">FPU_TRAP_OPC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FPU_TRAP_PC_t"><b>FPU_TRAP_PC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Trapping Instruction Program Counter Register</b></td></tr>
+<tr><td colspan="5"><b>FPU_TRAP_PC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PC:32</td>
+<td>0 - 31</td>
+<td>FPU_TRAP_PC_PC_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#FPU_TRAP_PC">FPU_TRAP_PC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="FPU_TRAP_SRCm_t"><b>FPU_TRAP_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Trapping Instruction Operand Register</b></td></tr>
+<tr><td colspan="5"><b>FPU_TRAP_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PC:32</td>
+<td>0 - 31</td>
+<td>FPU_TRAP_SRCm_PC_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#FPU_TRAP_SRC1">FPU_TRAP_SRC1</a>,    
+<a class="url" href="../cpu.html#FPU_TRAP_SRC2">FPU_TRAP_SRC2</a>,    
+<a class="url" href="../cpu.html#FPU_TRAP_SRC3">FPU_TRAP_SRC3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

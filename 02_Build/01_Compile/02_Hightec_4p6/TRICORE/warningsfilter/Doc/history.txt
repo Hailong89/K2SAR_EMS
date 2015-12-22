@@ -1,0 +1,258 @@
+The Glorious history of the WarnungsFilter
+
+3.017
+    Major bug fix: Warnungsfilter no longer aborts for linker warnings 
+    Minor bug fixes (output of STDOUT -> STDERR) 
+    Minor bug fixes (output of STDERR -> STDOUT) 
+    HTML_Categories.pm -> 1.007
+    HTML_Dir.pm -> 1.005
+    HTML_Ext.pm -> 1.003
+    HTML_Files.pm -> 1.007
+    HTML_Main.pm -> 1.005
+    HTML_Main_Dir.pm -> 1.005
+    Txt2Html.pm -> 1.004
+    WF_Config.pm -> 1.005
+    WF_Lists -> 1.003
+    WF_Get_Warnings.pl -> 1.004
+
+3.016
+    Generation of syntax highlighted files 
+    Links to syntax highlighted files 
+    Minor bug fixes (output of STDOUT -> STDERR) 
+    HTML_Categories.pm -> 1.006
+    HTML_Dir.pm -> 1.004
+    HTML_Ext.pm -> 1.002
+    HTML_Files.pm -> 1.006
+    HTML_Main.pm -> 1.004
+    HTML_Main_Dir.pm -> 1.004
+    WF_Lists.pm -> 1.002
+    WF_Analyse_Warnings.pl -> 1.003
+    WF_Create_Html.pl -> 1.004
+    WF_Sort_Warnings.pl -> 1.003
+
+3.015
+    Link to the corresponding file added
+    HTML_Files.pm -> 1.005
+
+3.014
+    Add a new option: --sort
+    This allow different ways of sorting the categories.
+    New workaround for the warning "deprecated".
+
+    Module change:
+    HTML_Categories.pm          -> 1.005
+    WF_Gcc_Warning_Analyser.pm  -> 1.011
+
+    Script change:
+    WF_Configuration.pl         -> 1.006
+
+3.013
+    No new feature.
+    Remove workarounds for Hightec compiler.
+
+    Module change:
+    WF_Gcc_Warning_Analyser.pm  -> 1.010
+
+3.012
+    New feature: 
+    The filter generates now lists of warnings and directories,
+    that allows the comparison of different tests.
+    Small bugfixes in HTML file generation.
+
+    Module change:
+    HTML_Categories.pm          -> 1.004
+    HTML_Dir.pm                 -> 1.003
+    HTML_Ext.pm                 -> 1.001
+    HTML_Files.pm               -> 1.004
+    HTML_Main.pm                -> 1.003
+    HTML_Main_Dir.pm            -> 1.003
+    Txt2Html.pm                 -> 1.003
+    WF_Gcc_Warning_Analyser.pm  -> 1.009
+    WF_Html_Lib.pm              -> 1.007
+    WF_List.pm                  -> 1.001
+
+    Script change:
+    WF_Create_List.pl           -> 1.001
+
+3.011
+    Correct an error in the implementation of the previous feature.
+
+    Module change:
+    WF_Statistics.pm            -> 1.005 
+
+3.010
+    Correct small bug in the file's name generator
+    All the forbidden Characters, like <>/\? are now replaced by a _ (underscore),
+    because the operating System can't support this.
+    Those errors can happen if the source file is not really a file,
+    but a built-in function.
+
+    Module change:
+    WF_Statistics.pm            -> 1.004 
+
+3.009
+    All the separators in the path are converted to the Unix format 
+    (/ instead of \)
+    Change algorithmus in the Html librairy: the time and copyright informations
+    are computed one time instead of one time per file.
+
+    Module change:
+    WF_Gcc_Warning_Analyser.pm  -> 1.008
+    WF_Html_Lib.pm              -> 1.005
+
+3.008
+    Correct bug in the command line arguments:
+    The argument was considered as undefined if it get the value 0
+    This is fixed.
+    Minor changes in the Txt2Html:
+    argument --verbosity is now supported for this modul.
+    The assembler warnings are now considered as Gcc warnings.
+    The linker warnings are now condsidered as Gcc Warnings(experimental!)
+    In the previous versions, they where considered as non Gcc Warnings.
+
+    Module change:
+    Txt2Html.pm                 -> 1.002
+    WF_Config.pm                -> 1.004
+    WF_Gcc_Warning_Analyser.pm  -> 1.007
+
+    Script change:
+    WF_Configuration.pl         -> 1.005
+    WF_GetWarnings.pl           -> 1.006
+
+
+3.007
+    After trying the tool on other programs, with more warnings,
+    I found a new one, that has an other syntax. the variable is given
+    unquoted, so the tool didn't detect the variable, 
+    and provide one category per warning.
+    (don't be afraid: the warning is always detected!)
+    The tool generates the list of files and the list of categories
+    This functionality is provided, because we need the list of categories 
+    to generate the links to the help. The generated files are available
+    in the Lists directory.
+    Now the categories of warnings can be linked to a document.
+    For further details, look at the help
+    I had informations about the license. So I change the module WF_Html_Lib.pm
+    and the script WF_configuration.pl
+
+    Module change:
+    WF_Gcc_Warning_Analyser.pm  -> 1.006
+    HTML_Categories.pm          -> 1.003
+    HTML_Files.pm               -> 1.003
+    WF_Config.pm                -> 1.003
+    WF_Html_Lib.pm              -> 1.004
+
+    New Modules 
+    WF_Help_Linker.pm           -> 1.000
+    WF_Lists.pm                 -> 1.000
+
+    Script change:
+    WF_Configuration.pl         -> 1.004
+    WarnungsFilter              -> 3.007
+
+    New Script:
+    WF_Create_Lists             -> 1.000
+
+3.006
+    Since the update to Perl 5.8.0, all the librairies seem to work.
+    So I reintoduce all the original functionalities that were already
+    available under Unix, plus a few new ones.
+    New Options:
+    --history, to get the history (this file)
+    --help, to get the help (this works now.)
+    --version is now fully functional (it returns version for the modules
+
+    New functionalities:
+    - the files are now sorted by extensions
+    - there are more HyperLinks, so the navigation is easier between 
+      the directories for example.
+
+    module change:
+    HTML_Categories.pm          -> 1.002 
+    HTML_Dir.pm                 -> 1.002 
+    HTML_Files.pm               -> 1.002 
+    HTML_Main.pm                -> 1.002 
+    HTML_Main_Dir.pm            -> 1.002 
+    WF_Config.pm                -> 1.002 
+    WF_Gcc_Warning_Analyser.pm  -> 1.005 
+    WF_Html_Lib.pm              -> 1.003 
+    WF_Statistics.pm            -> 1.003 
+
+    script change:
+    WF_Configuration.pl         -> 1.003 
+    WF_Create_Html.pl           -> 1.003 
+    WF_Sort_Warnings.pl         -> 1.002 
+
+    new module:
+    HTML_Ext.pm                 -> 1.000
+
+
+3.005
+    I found the Perl interpreter 5.8.0 on the network
+    Now all the functionalities seem to be OK,
+    the library FindBin works properly.
+    The tool is now full compatible under Unix and Windows system.
+    
+    Module change:
+    WF_Statistics.pm            -> 1.001
+    WF_Path_Utils.pm            -> 1.001
+    WF_Html_Lib.pm              -> 1.002
+    WF_Gcc_Warning_Analyser.pm  -> 1.004
+    WF_Config.pm                -> 1.001
+    WF_Txt2Html.pm              -> 1.001
+    WF_HTML_Main_Dir.pm         -> 1.001
+    WF_HTML_Dir.pm              -> 1.001
+    WF_HTML_Files.pm            -> 1.001
+    WF_HTML_Categories.pm       -> 1.001
+
+    Script change:
+    WF_Sort_Warnings.pl         -> 1.001
+    WF_Configuration.pl         -> 1.002
+    WF_Create_Html.pl           -> 1.002
+    WF_Get_Warnings.pl          -> 1.002
+    WF_Analyse_Warnings.pl      -> 1.002
+    WarnungsFilter.pm           -> 1.005
+
+3.004
+    I introduced a patch, because the FindBin library does
+    not work under Windows like under Unix.
+    This can't be fixed, except if we upgrade to Perl 5.8
+    So, this program is Windows specific.
+    With this Patch, we have access to the help,
+    if the launcher is correctly configured.
+
+    module change:
+    WF_Html_Lib.pm  -> 1.001
+
+3.003
+    In the warning analysis:
+    A Warning is now allowed to have only a path, 
+    without line or column number
+
+    module change:
+    WF_Gcc_Warning_Analyser.pm  -> 1.002
+
+
+3.002
+    remove the pauses in the HTML generator.
+
+    module change:
+    WF_Create_Html.pl           -> 1.001
+
+
+3.001
+    New option --ignore-case
+    because the tool does not consider, that "DSW" is like "dsw"
+
+
+    modules change:
+    WF_configuration.pl         -> 1.001
+    WF_Gcc_Warning_Analyser.pm  -> 1.001
+    WF_Analyse_Warnings.pl      -> 1.001
+
+
+3.000
+    First release of the HTML version of WarnungsFilter
+    This was adapted to the Windows Gcc compiler, 
+    and to the version 5.003 of perl
+    (The tool was previously designed for unix, and Perl 5.8)

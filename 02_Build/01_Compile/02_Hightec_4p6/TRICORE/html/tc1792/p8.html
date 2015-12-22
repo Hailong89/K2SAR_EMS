@@ -1,0 +1,953 @@
+<html>
+<head>
+<title>TriCore TC1792 (P8)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>P8</h2>
+
+<h2><tt>#include &lt;tc1792/p8.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#P8_OUT">P8_OUT</a></td>
+<td>Port 8 Output Register</td>
+<td>0xF0001400</td>
+<td><a class="url" href="types/p.html#Pn_OUT_t">Pn_OUT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P8_OMR">P8_OMR</a></td>
+<td>Port 8 Output Modification Register</td>
+<td>0xF0001404</td>
+<td><a class="url" href="types/p.html#P8_OMR_t">P8_OMR_t</a></td>
+<td>0x000000XX</td>
+<td>U,SV</td>
+<td>U,SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P8_IOCR0">P8_IOCR0</a></td>
+<td>Port 8 Input/Output Control Register 0</td>
+<td>0xF0001410</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P8_IOCR4">P8_IOCR4</a></td>
+<td>Port 8 Input/Output Control Register 4</td>
+<td>0xF0001414</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P8_IN">P8_IN</a></td>
+<td>Port 8 Input Register</td>
+<td>0xF0001424</td>
+<td><a class="url" href="types/p.html#Pn_IN_t">Pn_IN_t</a></td>
+<td>0x000000XX</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P8_PDR">P8_PDR</a></td>
+<td>Port 8 Pad Driver Mode Register</td>
+<td>0xF0001440</td>
+<td><a class="url" href="types/p.html#P8_PDR_t">P8_PDR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV,E</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P8_ESR">P8_ESR</a></td>
+<td>Port 8 Emergency Stop Register</td>
+<td>0xF0001450</td>
+<td><a class="url" href="types/p.html#P8_ESR_t">P8_ESR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV,E</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P8_ESR_t">P8_ESR_t</a></td>
+<td><a class="url" href="p8.html#P8_ESR">P8_ESR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P8_OMR_t">P8_OMR_t</a></td>
+<td><a class="url" href="p8.html#P8_OMR">P8_OMR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P8_PDR_t">P8_PDR_t</a></td>
+<td><a class="url" href="p8.html#P8_PDR">P8_PDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_IN_t">Pn_IN_t</a></td>
+<td><a class="url" href="p5.html#P5_IN">P5_IN</a>,       
+<a class="url" href="p7.html#P7_IN">P7_IN</a>,       
+<a class="url" href="p8.html#P8_IN">P8_IN</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td><a class="url" href="p0.html#P0_IOCR0">P0_IOCR0</a>,       
+<a class="url" href="p0.html#P0_IOCR4">P0_IOCR4</a>,       
+<a class="url" href="p0.html#P0_IOCR8">P0_IOCR8</a>,       
+<a class="url" href="p0.html#P0_IOCR12">P0_IOCR12</a>,       
+<a class="url" href="p1.html#P1_IOCR0">P1_IOCR0</a>,       
+<a class="url" href="p1.html#P1_IOCR4">P1_IOCR4</a>,       
+<a class="url" href="p1.html#P1_IOCR8">P1_IOCR8</a>,       
+<a class="url" href="p1.html#P1_IOCR12">P1_IOCR12</a>,       
+<a class="url" href="p2.html#P2_IOCR4">P2_IOCR4</a>,       
+<a class="url" href="p2.html#P2_IOCR8">P2_IOCR8</a>,       
+<a class="url" href="p2.html#P2_IOCR12">P2_IOCR12</a>,       
+<a class="url" href="p3.html#P3_IOCR0">P3_IOCR0</a>,       
+<a class="url" href="p3.html#P3_IOCR4">P3_IOCR4</a>,       
+<a class="url" href="p3.html#P3_IOCR8">P3_IOCR8</a>,       
+<a class="url" href="p3.html#P3_IOCR12">P3_IOCR12</a>,       
+<a class="url" href="p4.html#P4_IOCR0">P4_IOCR0</a>,       
+<a class="url" href="p4.html#P4_IOCR4">P4_IOCR4</a>,       
+<a class="url" href="p4.html#P4_IOCR8">P4_IOCR8</a>,       
+<a class="url" href="p4.html#P4_IOCR12">P4_IOCR12</a>,       
+<a class="url" href="p5.html#P5_IOCR0">P5_IOCR0</a>,       
+<a class="url" href="p5.html#P5_IOCR4">P5_IOCR4</a>,       
+<a class="url" href="p6.html#P6_IOCR4">P6_IOCR4</a>,       
+<a class="url" href="p6.html#P6_IOCR8">P6_IOCR8</a>,       
+<a class="url" href="p6.html#P6_IOCR12">P6_IOCR12</a>,       
+<a class="url" href="p7.html#P7_IOCR0">P7_IOCR0</a>,       
+<a class="url" href="p7.html#P7_IOCR4">P7_IOCR4</a>,       
+<a class="url" href="p8.html#P8_IOCR0">P8_IOCR0</a>,       
+<a class="url" href="p8.html#P8_IOCR4">P8_IOCR4</a>,       
+<a class="url" href="p9.html#P9_IOCR0">P9_IOCR0</a>,       
+<a class="url" href="p9.html#P9_IOCR4">P9_IOCR4</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_OUT_t">Pn_OUT_t</a></td>
+<td><a class="url" href="p5.html#P5_OUT">P5_OUT</a>,       
+<a class="url" href="p7.html#P7_OUT">P7_OUT</a>,       
+<a class="url" href="p8.html#P8_OUT">P8_OUT</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="P8_OUT">&nbsp;</a>
+<h3>P8_OUT</h3>
+<h3>"Port 8 Output Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P8_OUT_ADDR = 0xF0001400</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_OUT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_OUT_t">Pn_OUT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P8_OUT.bits</b>&nbsp;&quot;Port 8 Output Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>P0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>Pn_OUT_P0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P0_SHIFT</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>Pn_OUT_P1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P1_SHIFT</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>Pn_OUT_P2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P2_SHIFT</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>Pn_OUT_P3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P3_SHIFT</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>Pn_OUT_P4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P4_SHIFT</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>Pn_OUT_P5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P5_SHIFT</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>Pn_OUT_P6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P6_SHIFT</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>Pn_OUT_P7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rwh</td>
+<td>Pn_OUT_P7_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>Pn_OUT_MASK</td><td><tt>0x000000ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000000ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P8_OMR">&nbsp;</a>
+<h3>P8_OMR</h3>
+<h3>"Port 8 Output Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P8_OMR_ADDR = 0xF0001404</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P8_OMR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000000XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P8_OMR_t">P8_OMR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P8_OMR.bits</b>&nbsp;&quot;Port 8 Output Modification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PS0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>P8_OMR_PS0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>P8_OMR_PS0_SHIFT</td>
+</tr>
+<tr>
+<td>PS1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>P8_OMR_PS1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>P8_OMR_PS1_SHIFT</td>
+</tr>
+<tr>
+<td>PS2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>P8_OMR_PS2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>P8_OMR_PS2_SHIFT</td>
+</tr>
+<tr>
+<td>PS3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>P8_OMR_PS3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>P8_OMR_PS3_SHIFT</td>
+</tr>
+<tr>
+<td>PS4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>P8_OMR_PS4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>P8_OMR_PS4_SHIFT</td>
+</tr>
+<tr>
+<td>PS5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>P8_OMR_PS5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>P8_OMR_PS5_SHIFT</td>
+</tr>
+<tr>
+<td>PS6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>P8_OMR_PS6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>P8_OMR_PS6_SHIFT</td>
+</tr>
+<tr>
+<td>PS7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>P8_OMR_PS7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>P8_OMR_PS7_SHIFT</td>
+</tr>
+<tr>
+<td>PR0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>P8_OMR_PR0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR0_SHIFT</td>
+</tr>
+<tr>
+<td>PR1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>P8_OMR_PR1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR1_SHIFT</td>
+</tr>
+<tr>
+<td>PR2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>P8_OMR_PR2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR2_SHIFT</td>
+</tr>
+<tr>
+<td>PR3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>P8_OMR_PR3_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR3_SHIFT</td>
+</tr>
+<tr>
+<td>PR4</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>P8_OMR_PR4_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR4_SHIFT</td>
+</tr>
+<tr>
+<td>PR5</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>P8_OMR_PR5_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR5_SHIFT</td>
+</tr>
+<tr>
+<td>PR6</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>P8_OMR_PR6_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR6_SHIFT</td>
+</tr>
+<tr>
+<td>PR7</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>P8_OMR_PR7_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>P8_OMR_PR7_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>P8_OMR_MASK</td><td><tt>0x00ff00ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00ff00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P8_IOCR0">&nbsp;</a>
+<h3>P8_IOCR0</h3>
+<h3>"Port 8 Input/Output Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P8_IOCR0_ADDR = 0xF0001410</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P8_IOCR0.bits</b>&nbsp;&quot;Port 8 Input/Output Control Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>Pn_IOCRm_PC0_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC0_SHIFT</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>Pn_IOCRm_PC1_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC1_SHIFT</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>Pn_IOCRm_PC2_MASK</td>
+<td><tt>0x00f00000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC2_SHIFT</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>Pn_IOCRm_PC3_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>Pn_IOCRm_MASK</td><td><tt>0xf0f0f0f0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P8_IOCR4">&nbsp;</a>
+<h3>P8_IOCR4</h3>
+<h3>"Port 8 Input/Output Control Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P8_IOCR4_ADDR = 0xF0001414</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P8_IOCR4.bits</b>&nbsp;&quot;Port 8 Input/Output Control Register 4&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>Pn_IOCRm_PC0_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC0_SHIFT</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>Pn_IOCRm_PC1_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC1_SHIFT</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>Pn_IOCRm_PC2_MASK</td>
+<td><tt>0x00f00000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC2_SHIFT</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>Pn_IOCRm_PC3_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>Pn_IOCRm_MASK</td><td><tt>0xf0f0f0f0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P8_IN">&nbsp;</a>
+<h3>P8_IN</h3>
+<h3>"Port 8 Input Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P8_IN_ADDR = 0xF0001424</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IN_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000000XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IN_t">Pn_IN_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P8_IN.bits</b>&nbsp;&quot;Port 8 Input Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>P0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>Pn_IN_P0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>Pn_IN_P0_SHIFT</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>Pn_IN_P1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>Pn_IN_P1_SHIFT</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>Pn_IN_P2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>Pn_IN_P2_SHIFT</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>Pn_IN_P3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>Pn_IN_P3_SHIFT</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>Pn_IN_P4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>Pn_IN_P4_SHIFT</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>Pn_IN_P5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>Pn_IN_P5_SHIFT</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>Pn_IN_P6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>Pn_IN_P6_SHIFT</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>Pn_IN_P7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>Pn_IN_P7_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>Pn_IN_MASK</td><td><tt>0x000000ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000000ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P8_PDR">&nbsp;</a>
+<h3>P8_PDR</h3>
+<h3>"Port 8 Pad Driver Mode Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P8_PDR_ADDR = 0xF0001440</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P8_PDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P8_PDR_t">P8_PDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P8_PDR.bits</b>&nbsp;&quot;Port 8 Pad Driver Mode Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PD0</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>P8_PDR_PD0_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>P8_PDR_PD0_SHIFT</td>
+</tr>
+<tr>
+<td>PDMLI1</td>
+<td>3</td>
+<td>16 - 18</td>
+<td>P8_PDR_PDMLI1_MASK</td>
+<td><tt>0x00070000</tt></td>
+<td>rw</td>
+<td>P8_PDR_PDMLI1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>P8_PDR_MASK</td><td><tt>0x00070007</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00070007</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00070007</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P8_ESR">&nbsp;</a>
+<h3>P8_ESR</h3>
+<h3>"Port 8 Emergency Stop Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P8_ESR_ADDR = 0xF0001450</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P8_ESR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P8_ESR_t">P8_ESR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P8_ESR.bits</b>&nbsp;&quot;Port 8 Emergency Stop Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EN0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>P8_ESR_EN0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN0_SHIFT</td>
+</tr>
+<tr>
+<td>EN1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>P8_ESR_EN1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN1_SHIFT</td>
+</tr>
+<tr>
+<td>EN2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>P8_ESR_EN2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN2_SHIFT</td>
+</tr>
+<tr>
+<td>EN3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>P8_ESR_EN3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN3_SHIFT</td>
+</tr>
+<tr>
+<td>EN4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>P8_ESR_EN4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN4_SHIFT</td>
+</tr>
+<tr>
+<td>EN5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>P8_ESR_EN5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN5_SHIFT</td>
+</tr>
+<tr>
+<td>EN6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>P8_ESR_EN6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN6_SHIFT</td>
+</tr>
+<tr>
+<td>EN7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>P8_ESR_EN7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>P8_ESR_EN7_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>P8_ESR_MASK</td><td><tt>0x000000ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

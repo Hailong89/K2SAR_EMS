@@ -1,0 +1,609 @@
+<html>
+<head>
+<title>TriCore TC1167</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<h2>Unit <a class="url" href="cpu.html" target="main">CPU</a></h2>
+<h3>#include &lt;tc1167/cpu.h&gt;</h3>
+<table>
+<tr>
+<td><b>Register</b></td>
+<td><b>Type</b></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A0" target="main">A0</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A1" target="main">A1</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A10" target="main">A10</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A11" target="main">A11</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A12" target="main">A12</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A13" target="main">A13</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A14" target="main">A14</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A15" target="main">A15</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A2" target="main">A2</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A3" target="main">A3</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A4" target="main">A4</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A5" target="main">A5</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A6" target="main">A6</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A7" target="main">A7</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A8" target="main">A8</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#A9" target="main">A9</a></td>
+<td><a class="url" href="types/a.html#An_t" target="main">An_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#BIV" target="main">BIV</a></td>
+<td><a class="url" href="types/b.html#BIV_t" target="main">BIV_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#BMACON" target="main">BMACON</a></td>
+<td><a class="url" href="types/b.html#BMACON_t" target="main">BMACON_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#BTV" target="main">BTV</a></td>
+<td><a class="url" href="types/b.html#BTV_t" target="main">BTV_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CCDIER" target="main">CCDIER</a></td>
+<td><a class="url" href="types/c.html#CCDIER_t" target="main">CCDIER_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CCNT" target="main">CCNT</a></td>
+<td><a class="url" href="types/c.html#CCNT_t" target="main">CCNT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CCPIER" target="main">CCPIER</a></td>
+<td><a class="url" href="types/c.html#CCPIER_t" target="main">CCPIER_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CCTRL" target="main">CCTRL</a></td>
+<td><a class="url" href="types/c.html#CCTRL_t" target="main">CCTRL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#COMPAT" target="main">COMPAT</a></td>
+<td><a class="url" href="types/c.html#COMPAT_t" target="main">COMPAT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPM0" target="main">CPM0</a></td>
+<td><a class="url" href="types/c.html#CPMn_t" target="main">CPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPM1" target="main">CPM1</a></td>
+<td><a class="url" href="types/c.html#CPMn_t" target="main">CPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPM2" target="main">CPM2</a></td>
+<td><a class="url" href="types/c.html#CPMn_t" target="main">CPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPM3" target="main">CPM3</a></td>
+<td><a class="url" href="types/c.html#CPMn_t" target="main">CPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR0_0L" target="main">CPR0_0L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR0_0U" target="main">CPR0_0U</a></td>
+<td><a class="url" href="types/c.html#CPRn_mU_t" target="main">CPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR0_1L" target="main">CPR0_1L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR0_1U" target="main">CPR0_1U</a></td>
+<td><a class="url" href="types/c.html#CPRn_mU_t" target="main">CPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR1_0L" target="main">CPR1_0L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR1_0U" target="main">CPR1_0U</a></td>
+<td><a class="url" href="types/c.html#CPRn_mU_t" target="main">CPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR1_1L" target="main">CPR1_1L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR1_1U" target="main">CPR1_1U</a></td>
+<td><a class="url" href="types/c.html#CPRn_mU_t" target="main">CPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR2_0L" target="main">CPR2_0L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR2_0U" target="main">CPR2_0U</a></td>
+<td><a class="url" href="types/c.html#CPRn_mU_t" target="main">CPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR2_1L" target="main">CPR2_1L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR2_1U" target="main">CPR2_1U</a></td>
+<td><a class="url" href="types/c.html#CPRn_mU_t" target="main">CPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR3_0L" target="main">CPR3_0L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR3_0U" target="main">CPR3_0U</a></td>
+<td><a class="url" href="types/c.html#CPR3_mU_t" target="main">CPR3_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR3_1L" target="main">CPR3_1L</a></td>
+<td><a class="url" href="types/c.html#CPRn_mL_t" target="main">CPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPR3_1U" target="main">CPR3_1U</a></td>
+<td><a class="url" href="types/c.html#CPR3_mU_t" target="main">CPR3_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPS_ID" target="main">CPS_ID</a></td>
+<td><a class="url" href="types/c.html#CPS_ID_t" target="main">CPS_ID_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPU_ID" target="main">CPU_ID</a></td>
+<td><a class="url" href="types/c.html#CPU_ID_t" target="main">CPU_ID_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPU_SBSRC" target="main">CPU_SBSRC</a></td>
+<td><a class="url" href="types/c.html#CPU_SBSRC_t" target="main">CPU_SBSRC_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPU_SRC0" target="main">CPU_SRC0</a></td>
+<td><a class="url" href="types/c.html#CPU_SRCm_t" target="main">CPU_SRCm_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPU_SRC1" target="main">CPU_SRC1</a></td>
+<td><a class="url" href="types/c.html#CPU_SRCm_t" target="main">CPU_SRCm_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPU_SRC2" target="main">CPU_SRC2</a></td>
+<td><a class="url" href="types/c.html#CPU_SRCm_t" target="main">CPU_SRCm_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CPU_SRC3" target="main">CPU_SRC3</a></td>
+<td><a class="url" href="types/c.html#CPU_SRCm_t" target="main">CPU_SRCm_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#CREVT" target="main">CREVT</a></td>
+<td><a class="url" href="types/c.html#CREVT_t" target="main">CREVT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D0" target="main">D0</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D1" target="main">D1</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D10" target="main">D10</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D11" target="main">D11</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D12" target="main">D12</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D13" target="main">D13</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D14" target="main">D14</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D15" target="main">D15</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D2" target="main">D2</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D3" target="main">D3</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D4" target="main">D4</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D5" target="main">D5</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D6" target="main">D6</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D7" target="main">D7</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D8" target="main">D8</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#D9" target="main">D9</a></td>
+<td><a class="url" href="types/d.html#Dn_t" target="main">Dn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DBGSR" target="main">DBGSR</a></td>
+<td><a class="url" href="types/d.html#DBGSR_t" target="main">DBGSR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DBGTCR" target="main">DBGTCR</a></td>
+<td><a class="url" href="types/d.html#DBGTCR_t" target="main">DBGTCR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DCX" target="main">DCX</a></td>
+<td><a class="url" href="types/d.html#DCX_t" target="main">DCX_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DIEAR" target="main">DIEAR</a></td>
+<td><a class="url" href="types/d.html#DIEAR_t" target="main">DIEAR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DIETR" target="main">DIETR</a></td>
+<td><a class="url" href="types/d.html#DIETR_t" target="main">DIETR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DMI_ATR" target="main">DMI_ATR</a></td>
+<td><a class="url" href="types/d.html#DMI_ATR_t" target="main">DMI_ATR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DMI_CON" target="main">DMI_CON</a></td>
+<td><a class="url" href="types/d.html#DMI_CON_t" target="main">DMI_CON_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DMI_ID" target="main">DMI_ID</a></td>
+<td><a class="url" href="types/d.html#DMI_ID_t" target="main">DMI_ID_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DMI_STR" target="main">DMI_STR</a></td>
+<td><a class="url" href="types/d.html#DMI_STR_t" target="main">DMI_STR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DMS" target="main">DMS</a></td>
+<td><a class="url" href="types/d.html#DMS_t" target="main">DMS_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPM0" target="main">DPM0</a></td>
+<td><a class="url" href="types/d.html#DPMn_t" target="main">DPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPM1" target="main">DPM1</a></td>
+<td><a class="url" href="types/d.html#DPMn_t" target="main">DPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPM2" target="main">DPM2</a></td>
+<td><a class="url" href="types/d.html#DPMn_t" target="main">DPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPM3" target="main">DPM3</a></td>
+<td><a class="url" href="types/d.html#DPMn_t" target="main">DPMn_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_0L" target="main">DPR0_0L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_0U" target="main">DPR0_0U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_1L" target="main">DPR0_1L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_1U" target="main">DPR0_1U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_2L" target="main">DPR0_2L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_2U" target="main">DPR0_2U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_3L" target="main">DPR0_3L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR0_3U" target="main">DPR0_3U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_0L" target="main">DPR1_0L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_0U" target="main">DPR1_0U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_1L" target="main">DPR1_1L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_1U" target="main">DPR1_1U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_2L" target="main">DPR1_2L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_2U" target="main">DPR1_2U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_3L" target="main">DPR1_3L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR1_3U" target="main">DPR1_3U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_0L" target="main">DPR2_0L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_0U" target="main">DPR2_0U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_1L" target="main">DPR2_1L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_1U" target="main">DPR2_1U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_2L" target="main">DPR2_2L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_2U" target="main">DPR2_2U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_3L" target="main">DPR2_3L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR2_3U" target="main">DPR2_3U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_0L" target="main">DPR3_0L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_0U" target="main">DPR3_0U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_1L" target="main">DPR3_1L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_1U" target="main">DPR3_1U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_2L" target="main">DPR3_2L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_2U" target="main">DPR3_2U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_3L" target="main">DPR3_3L</a></td>
+<td><a class="url" href="types/d.html#DPRn_mL_t" target="main">DPRn_mL_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#DPR3_3U" target="main">DPR3_3U</a></td>
+<td><a class="url" href="types/d.html#DPRn_mU_t" target="main">DPRn_mU_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#EXEVT" target="main">EXEVT</a></td>
+<td><a class="url" href="types/e.html#EXEVT_t" target="main">EXEVT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FCX" target="main">FCX</a></td>
+<td><a class="url" href="types/f.html#FCX_t" target="main">FCX_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FPU_ID" target="main">FPU_ID</a></td>
+<td><a class="url" href="types/f.html#FPU_ID_t" target="main">FPU_ID_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FPU_TRAP_CON" target="main">FPU_TRAP_CON</a></td>
+<td><a class="url" href="types/f.html#FPU_TRAP_CON_t" target="main">FPU_TRAP_CON_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FPU_TRAP_OPC" target="main">FPU_TRAP_OPC</a></td>
+<td><a class="url" href="types/f.html#FPU_TRAP_OPC_t" target="main">FPU_TRAP_OPC_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FPU_TRAP_PC" target="main">FPU_TRAP_PC</a></td>
+<td><a class="url" href="types/f.html#FPU_TRAP_PC_t" target="main">FPU_TRAP_PC_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FPU_TRAP_SRC1" target="main">FPU_TRAP_SRC1</a></td>
+<td><a class="url" href="types/f.html#FPU_TRAP_SRCm_t" target="main">FPU_TRAP_SRCm_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FPU_TRAP_SRC2" target="main">FPU_TRAP_SRC2</a></td>
+<td><a class="url" href="types/f.html#FPU_TRAP_SRCm_t" target="main">FPU_TRAP_SRCm_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#FPU_TRAP_SRC3" target="main">FPU_TRAP_SRC3</a></td>
+<td><a class="url" href="types/f.html#FPU_TRAP_SRCm_t" target="main">FPU_TRAP_SRCm_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#ICNT" target="main">ICNT</a></td>
+<td><a class="url" href="types/i.html#ICNT_t" target="main">ICNT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#ICR" target="main">ICR</a></td>
+<td><a class="url" href="types/i.html#ICR_t" target="main">ICR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#ISP" target="main">ISP</a></td>
+<td><a class="url" href="types/i.html#ISP_t" target="main">ISP_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#LCX" target="main">LCX</a></td>
+<td><a class="url" href="types/l.html#LCX_t" target="main">LCX_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#M1CNT" target="main">M1CNT</a></td>
+<td><a class="url" href="types/m.html#MnCNT_t" target="main">MnCNT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#M2CNT" target="main">M2CNT</a></td>
+<td><a class="url" href="types/m.html#MnCNT_t" target="main">MnCNT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#M3CNT" target="main">M3CNT</a></td>
+<td><a class="url" href="types/m.html#MnCNT_t" target="main">MnCNT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#MIECON" target="main">MIECON</a></td>
+<td><a class="url" href="types/m.html#MIECON_t" target="main">MIECON_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#MMU_CON" target="main">MMU_CON</a></td>
+<td><a class="url" href="types/m.html#MMU_CON_t" target="main">MMU_CON_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PC" target="main">PC</a></td>
+<td><a class="url" href="types/p.html#PC_t" target="main">PC_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PCXI" target="main">PCXI</a></td>
+<td><a class="url" href="types/p.html#PCXI_t" target="main">PCXI_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PIEAR" target="main">PIEAR</a></td>
+<td><a class="url" href="types/p.html#PIEAR_t" target="main">PIEAR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PIETR" target="main">PIETR</a></td>
+<td><a class="url" href="types/p.html#PIETR_t" target="main">PIETR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PMI_CON0" target="main">PMI_CON0</a></td>
+<td><a class="url" href="types/p.html#PMI_CON0_t" target="main">PMI_CON0_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PMI_CON1" target="main">PMI_CON1</a></td>
+<td><a class="url" href="types/p.html#PMI_CON1_t" target="main">PMI_CON1_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PMI_CON2" target="main">PMI_CON2</a></td>
+<td><a class="url" href="types/p.html#PMI_CON2_t" target="main">PMI_CON2_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PMI_ID" target="main">PMI_ID</a></td>
+<td><a class="url" href="types/p.html#PMI_ID_t" target="main">PMI_ID_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PMI_STR" target="main">PMI_STR</a></td>
+<td><a class="url" href="types/p.html#PMI_STR_t" target="main">PMI_STR_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#PSW" target="main">PSW</a></td>
+<td><a class="url" href="types/p.html#PSW_t" target="main">PSW_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#SMACON" target="main">SMACON</a></td>
+<td><a class="url" href="types/s.html#SMACON_t" target="main">SMACON_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#SWEVT" target="main">SWEVT</a></td>
+<td><a class="url" href="types/s.html#SWEVT_t" target="main">SWEVT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#SYSCON" target="main">SYSCON</a></td>
+<td><a class="url" href="types/s.html#SYSCON_t" target="main">SYSCON_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#TR0EVT" target="main">TR0EVT</a></td>
+<td><a class="url" href="types/t.html#TRnEVT_t" target="main">TRnEVT_t</a></td>
+</tr>
+<tr>
+<td><a class="url" href="cpu.html#TR1EVT" target="main">TR1EVT</a></td>
+<td><a class="url" href="types/t.html#TRnEVT_t" target="main">TRnEVT_t</a></td>
+</tr>
+
+</table>
+
+</body>
+</html>

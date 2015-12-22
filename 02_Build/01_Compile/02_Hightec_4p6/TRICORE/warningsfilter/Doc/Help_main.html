@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+    <TITLE></TITLE>
+    <META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+    <META NAME="CREATED" CONTENT="20040109;7263200">
+    <META NAME="CHANGED" CONTENT="20040109;19120700">
+</HEAD>
+<BODY LANG="en-US">
+<H1 ALIGN=CENTER>WarnungsFilter - Help</H1>
+<HR>
+This tool is provided under the terms of the
+<A HREF="gpl.html">GNU</A> Licence</P>
+<HR>
+<P>Is this help, the following sections are available:</P>
+<UL>
+    <LI><P><A HREF="#supported_os">Supported Operating Systems</A></P>
+    <LI><P><A HREF="#cmd_line_options">Command line options</A></P>
+    <LI><P><A HREF="#config_file">Configuration file</A></P>
+</UL>
+<P>Remark:<BR><B>An argument given in the &ldquo;command line&rdquo;
+overwrites the corresponding key of the configuration file (if
+specified, of course)</B></P>
+<HR>
+<P STYLE="margin-top: 0.42cm; page-break-after: avoid"><A NAME="supported_os"></A>
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>Supported Operating
+Systems</FONT></FONT></P>
+<P>This tool work under Unix (and compatible) and Win32 systems, and
+requires the Perl interpreter v5.8.0 or greater. It should also be
+portable without problem under others OS , but that was not tested.
+If you are interested, ask the Authors.</P>
+<HR>
+<P STYLE="margin-top: 0.42cm; page-break-after: avoid"><A NAME="cmd_line_options"></A>
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>Command line options</FONT></FONT></P>
+<P>The &ldquo;WarnungsFilter&rdquo; run in console mode (Note: do you
+really think that it runs in graphic mode under Windows&reg;?)<BR>It
+accepts two types of arguments: the simple arguments (like <FONT FACE="Courier, monospace">--help</FONT>)
+and the arguments with a value (like <FONT FACE="Courier, monospace">--verbosity=3</FONT>)<BR>Without
+argument, the script will display the following
+message:<BR><FONT FACE="Courier, monospace">WarnungsFilter
+[Version.Release] - type WarnungsFilter.pl --help for help .</FONT></P>
+<P>If the same argument is specified several times, the last one
+overwrites the others.
+</P>
+<P>The followings arguments are recognized (but in the actual version,
+some are <FONT COLOR="#666666">not implemented</FONT>), and all are
+case sensitive</P>
+<UL>
+    <LI><P><A NAME="cmd_help"></A><B><FONT FACE="Courier, monospace">--help</FONT></B><BR>Displays
+    the help and exit.<BR>The displayed message can be found under
+    <A HREF="help.txt">[Script's directory]/Doc/help.txt</A>.<BR>If
+    specified, all the others arguments are ignored (Because if you need
+    help, you probably don't want to process the warnings immediately)</P>
+    <LI><P><A NAME="cmd_version"></A><B><FONT FACE="Courier, monospace">--version</FONT></B>
+    <BR>Displays
+    the version of the tool, and of each module used by the tool, and
+    exit<BR>If specified, all the others arguments are ignored (except
+    <A HREF="#cmd_help">--help</A>, because it has the highest priority)
+    </P>
+
+    <LI><P><A NAME="cmd_history"></A><B><FONT FACE="Courier, monospace">--history</FONT></B><BR>
+	Displays the history of the tool, and exit<BR>
+	If specified, all the others arguments are ignored (except <A HREF="#cmd_help">--help</A> and <A HREF="#cmd_version">--version</A>,
+	because they have the highest priority)
+    </P>
+
+    <LI><P><A NAME="cmd_silent"></A><B><FONT FACE="Courier, monospace"><FONT COLOR="#666666">--silent</FONT></FONT></B><BR>Do
+    not display anything on the output, except error message (when the
+    script dies, or crashes for example)<BR>it means, nothing is
+    displayed on STDOUT<BR>this does not apply for the tool's log file. (not
+      available. Will be done later)</P>
+    <LI><P><A NAME="cmd_verbosity"></A><FONT FACE="Courier, monospace"><B>--verbosity=n</B>
+    </FONT>(default = 2)<BR>Verbosity level. It applies for the output's log 
+    file (and STDOUT, except if &ndash;silent is turned on)
+    <BR>0 -&gt; Does not say anything (in this case, no output's log file 
+    generated)
+    <BR>1 -&gt; Only says what it's supposed to do (generating this, or that...)
+    <BR>2 -&gt; Gives some statistics when processing, and all the name of the 
+    files generated
+    <BR>3 -&gt; Gives number of lines processed, and others
+    details
+    <BR>4 -&gt; Gives details about intern routines, results of intermediate 
+    computes
+    <BR>5 -&gt; Says all. You probably don't want this (except if you are the 
+    developer himself)</P>
+
+
+
+<LI><P><A NAME="cmd_sort"></A><FONT FACE="Courier, monospace"><B>--sort=n</B>
+</FONT>(default = no sorting)<BR>Sort the categories into different ways:<BR>
+	1 -&gt; Sorted by number of files.<BR>
+	2 -&gt; Sorted by warnings.<BR>
+	3 -&gt; Sorted by occurences.<BR>
+	4 -&gt; Sorted by names.<BR>
+	other value: -&gt; Sorted by the internal hash function of the perl interpreter.</P>
+
+
+
+
+    <LI><P><A NAME="cmd_input-file"></A><B><FONT FACE="Courier, monospace">--input-file=File</FONT></B>
+    (no default: must be specified somewhere, here or in a
+    <A HREF="#config_file">Configuration file</A>)<BR>Specifies the
+    input file to process, <B>with the </B><b>extension</b>.<BR>If the
+    directory is omitted, the current work directory is used</P>
+    <LI><P><A NAME="cmd_log-file"></A><font color="#C0C0C0"><B><FONT FACE="Courier, monospace">--log-file=File</FONT></B>
+    (default = [Tool's Out Directory]/Wf.log) (not implemented yet)<BR>Gives the name of the
+    tool's log file. If you don't want a log file, look at this
+    option:</font><A HREF="#cmd_verbosity">--verbosity</A>
+    </P>
+    <LI><P><A NAME="cmd_config-file"></A><B><FONT FACE="Courier, monospace">--config-file=File</FONT></B>
+    (default = no configuration file)
+    <BR>Specifies the configuration file to use. If the path is omitted or 
+    relative, the script will try to found the specified configuration file in 
+    the following directories, in this order:
+    <BR>- [current directory]/
+    <BR><FONT COLOR="#666666">-[home directory]/
+    <BR>- [home directory]/.WarnungsFilter/
+    <BR>- [Script's directory]/templates/Config/</FONT>
+    <BR>if the file is not found, the script dies with the message 
+    &ldquo;The configuration file [name of the file] was not found in the 
+    following directories [list of directories]&rdquo;</P>
+    <LI><P><A NAME="cmd_OS"></A><B><FONT COLOR="#666666"><FONT FACE="Courier, monospace">--OS=Operating_System</FONT>
+    </FONT></B>(default = auto detected from the $^O built-in
+    variable)<BR>Please choose in the list (case sensitive!)<BR>- VMS<BR>-
+    MSDOS (You shouldn't use this, because of the long names, i.e the
+    extension &ldquo;html&rdquo; has to many characters... Don't report
+    bug for this.)<BR>- MacOS<BR>- AmigaOS<BR>- MSWin32 (applies for all
+    the MS Windows&reg; verions, since the Windows&reg; 95)<BR>- Unix<BR>- linux
+      (is identical to Unix)<BR>If you are giving something else,
+    Unix is assumed (Sorry, but the module used to choice the OS belongs
+    to standard libraries of Perl. If you don't like this, specify the
+    option correctly, don't disturb the author) <BR>Only MSWin32 and
+    Unix (or linux) where tested. If you are interested in other
+    operating systems, ask the authors. The script will probably work
+    with the others system, but it's not sure.<BR>This option might be
+    removed soon, because at the moment the path is
+    problematic. This will be fixed in new versions.</P>
+    <LI><P><A NAME="cmd_out-dir"></A><B><FONT FACE="Courier, monospace">--out-dir=Directory</FONT></B>
+    (default = [Work Directory]/.auto_wf/<BR>If this is a relative path,
+    it will be take regarding the current work directory<BR><B>Do not
+    forget the last</B> &ldquo;/&rdquo; (or &ldquo;\&rdquo; for MS style
+    path)</P>
+    <LI><P><FONT FACE="Courier, monospace"><B>--warning-url-database</B><SPAN STYLE="font-weight: medium">
+    </SPAN></FONT>(default = [Tool's directory]/Help/Url_Database.pl)<BR>This
+    mini perl-script contains two hashes, named <FONT FACE="Courier, monospace">%WF_Warning_Help_Link</FONT>
+    and <FONT FACE="Courier, monospace">%WF_Warning_Help_Text</FONT>.
+    It gives the tool the url to the html help files for the warning's
+    categories.
+    For more details, look at the explanations in the template Perl script.</P>
+</UL>
+<HR>
+<P STYLE="margin-top: 0.42cm; page-break-after: avoid"><A NAME="config_file"></A>
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>Configuration file </FONT></FONT>
+</P>
+<P><A HREF="#cfg_explanation">Explanations</A><BR><A HREF="#cfg_keyword">KeyWords</A><BR><A HREF="#cfg_example">Examples</A></P>
+<HR>
+<P><A NAME="cfg_explanation"></A><B>Explanations:</B></P>
+<P>I suppose you won't type each time all the details in the line
+command. (But you are free to do it) That's why this tool can be
+configured by a configuration file. The syntax of a configuration
+file is very simple... Just be careful with the names: they are
+case-sensitive (because the developer uses Linux, and because the
+Perl language is case-sensitive. Don't you see the difference between
+&ldquo;a&rdquo; and &ldquo;A&rdquo;? If you don't, you are MS formatted. If you see a difference, you are a Human)</P>
+<P><B>A section</B> is a single word, quoted by &ldquo;[&ldquo; and
+&ldquo;]&rdquo; <B>without spaces</B>. All the key that follows the
+section belongs to it. If there is more than one section with the
+same name, the keys will be concatenated. The tool will only read the
+keys that are in the section
+<B>[WarnungsFilter]</B><BR>Example:<BR><FONT FACE="Courier, monospace">[WarnungsFilter]<BR>[Hello_World]</FONT><BR>This
+won't work:<BR><FONT FACE="Courier, monospace">[ Hello]<BR>[Hello
+World]</FONT></P>
+<P><B>A key </B>is a single word, followed by a &ldquo;=&rdquo; . All
+that follows the = (except first spaces) is the value of the key. If
+the script find more identical keys (same section, same name) the
+last one found overwrite the others.<BR>Examples:<BR><FONT FACE="Courier, monospace">Bill=Gates<BR>Bill=
+Gates<BR>Bill = Gates</FONT><BR>The key &ldquo;Bill&rdquo; will get
+the value &ldquo;Gates&rdquo;<BR><FONT FACE="Courier, monospace">test
+= sdefds {gd)dfh{'%</FONT><BR>the key test will get the value &ldquo;sdefds
+{gd)dfh{'%&rdquo;. If you want to play with this tool, you can try
+it. But you are not paid to play!<BR><FONT FACE="Courier, monospace">test
+a = 23</FONT><BR>This returns an error.<BR>If a key doesn't belong to
+a section, it returns an error.</P>
+<P>You can add <B>a comment</B>, like this: A comment is a line,
+where the first non-spacing character is a &ldquo;#&rdquo;.
+<BR>Examples:<BR><FONT FACE="Courier, monospace">#This is a comment<BR>#
+This is a comment too <BR>Bill = Gates # this is not a comment</FONT><BR>In
+the last example, the key &ldquo;Bill&rdquo; will get the value &ldquo;
+Gates # this is not a comment&rdquo;. It' not the expected result.
+Why is it so? There are two reasons: the first is because you may
+want use the &ldquo;#&rdquo; string in a key, and the second is that
+the developer don't want to write a complicated script to detect the
+first &ldquo;#&rdquo; in the chain.</P>
+<P><B>An empty line</B>, or a line containing only spaces or tabs is
+ignored. Did you expect something else?</P>
+<P>A configuration file is a text file. It means that it shoud always
+be ended by an empty line. (like the C and H sources, hmm?) This shouldn't be a problem for the script (I hope).</P>
+<HR>
+<P><A NAME="cfg_keyword"></A><B>KeyWords</B></P>
+<P STYLE="font-weight: medium">First, you have to begin with the
+tool's specific section:<BR><FONT FACE="Courier, monospace">[WarnungsFilter]</FONT></P>
+<P>The name of the keys are the same than the command line options,
+<B>without the &ldquo;--&rdquo; at the beginning. The eventual &ldquo;-&rdquo;
+in the name of the option must be replaced by a &ldquo;_&rdquo;</B>
+(because &ldquo;-&rdquo; does not belong to a word, but &ldquo;_&rdquo;
+does). If a key is not reconized by the tool, it is ignored. Some
+command line option can not be used in the configuration file, like
+&ldquo;<A HREF="#cmd_help">help</A>&rdquo;, &ldquo;<A HREF="#cmd_version">version</A>&rdquo;, &ldquo;<A HREF="#cmd_history">history</A>&rdquo;,
+and &ldquo;<A HREF="#cmd_config-file">config_file</A>&rdquo;: they
+will be ignored (there is probably a good reason for this... Do you
+know which one?)
+</P>
+<P>The keys are the following:</P>
+<UL>
+    <LI><P><A HREF="#cmd_silent">silent</A><BR>value: 0 or 1 (if
+    something else, assume 0)</P>
+    <LI><P><A HREF="#cmd_verbosity">verbosity</A></P>
+    <LI><P><A HREF="#cmd_input-file">input_file</A><BR>(must be
+    specified somewhere!!!)</P>
+    <LI><P><A HREF="#cmd_OS">OS</A></P>
+    <LI><P><A HREF="#cmd_out-dir">out_dir</A></P>
+    <LI><P><A HREF="#cmd_log-file">log_file</A></P>
+</UL>
+<HR>
+<P><A NAME="cfg_example"></A><B>Examples</B></P>
+<P STYLE="font-weight: medium">Only one example is provided. Because
+you will be soon able to do it yourself.<BR>The script is
+susceptible: if the syntax of the configuration file is not correct,
+it stops.</P>
+<P><FONT FACE="Courier, monospace"># Syntax of the configuration
+file:<BR># The # at beginning of line mean &quot;this is a comment&quot;<BR>#
+empty lines are ignored (of course...)<BR># the form of the
+configuration file is:<BR># [section]<BR># key = value<BR># All the
+names are case sensitive!!!<BR><BR># if there is two sections with
+the same name,<BR># they are concatenated<BR># if there is two or
+more identical keys in the same section,<BR># the last one overwrite
+the others.<BR><BR>[All]<BR>author = The free
+Electron<BR><BR>[WarnungsFilter]<BR>input_log_file = Warning.log<BR>#
+Do not forget the last &quot;/&quot;<BR>out_dir =
+makeout\WF\<BR>verbosity = 2<BR>log_file = wf.log<BR># A very bad
+choice:<BR>OS = MSWin32</FONT></P>
+<HR>
+<P>
+<A HREF="Help_main.html">Help</A><BR>
+<A HREF="about_WF.html">About the tool</A><BR>
+<A HREF="Bugs.html">Bugs</A><BR>
+<A HREF="FAQ.html">F.A.Q.</A><BR>
+<A HREF="history.html">Version's History</A><BR>
+<A HREF="gpl.html">Licence</A>
+</P>
+<HR>
+</BODY>
+</HTML>
+

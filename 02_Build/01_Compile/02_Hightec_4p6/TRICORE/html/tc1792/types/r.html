@@ -1,0 +1,1233 @@
+<html>
+<head>
+<title>TriCore TC1792 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="RBCU_CON_t"><b>RBCU_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Control Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TOUT:16</td>
+<td>0 - 15</td>
+<td>RBCU_CON_TOUT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DBG:1</td>
+<td>16 - 16</td>
+<td>RBCU_CON_DBG_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PSE:1</td>
+<td>18 - 18</td>
+<td>RBCU_CON_PSE_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int SPE:1</td>
+<td>19 - 19</td>
+<td>RBCU_CON_SPE_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SPC:8</td>
+<td>24 - 31</td>
+<td>RBCU_CON_SPC_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_CON">RBCU_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_DBADRT_t"><b>RBCU_DBADRT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Debug Trapped Address Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_DBADRT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIADR:32</td>
+<td>0 - 31</td>
+<td>RBCU_DBADRT_FPIADR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_DBADRT">RBCU_DBADRT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_DBADRm_t"><b>RBCU_DBADRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Debug Address n Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_DBADRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADRn:32</td>
+<td>0 - 31</td>
+<td>RBCU_DBADRm_ADRn_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_DBADR1">RBCU_DBADR1</a>,    
+<a class="url" href="../rbcu.html#RBCU_DBADR2">RBCU_DBADR2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_DBBOS_t"><b>RBCU_DBBOS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Debug Bus Operation Signals Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_DBBOS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>0 - 3</td>
+<td>RBCU_DBBOS_OPC_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>4 - 4</td>
+<td>RBCU_DBBOS_SVM_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WR:1</td>
+<td>8 - 8</td>
+<td>RBCU_DBBOS_WR_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RD:1</td>
+<td>12 - 12</td>
+<td>RBCU_DBBOS_RD_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_DBBOS">RBCU_DBBOS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_DBBOST_t"><b>RBCU_DBBOST_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Debug Trapped Bus Operation Signals Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_DBBOST_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIOPC:4</td>
+<td>0 - 3</td>
+<td>RBCU_DBBOST_FPIOPC_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FPISVM:1</td>
+<td>4 - 4</td>
+<td>RBCU_DBBOST_FPISVM_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FPIACK:2</td>
+<td>5 - 6</td>
+<td>RBCU_DBBOST_FPIACK_MASK</td>
+<td>0x00000060</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int FPIRDY:1</td>
+<td>7 - 7</td>
+<td>RBCU_DBBOST_FPIRDY_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int FPIWR:1</td>
+<td>8 - 8</td>
+<td>RBCU_DBBOST_FPIWR_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int FPIRST:2</td>
+<td>9 - 10</td>
+<td>RBCU_DBBOST_FPIRST_MASK</td>
+<td>0x00000600</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int FPIOPS:1</td>
+<td>11 - 11</td>
+<td>RBCU_DBBOST_FPIOPS_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int FPIRD:1</td>
+<td>12 - 12</td>
+<td>RBCU_DBBOST_FPIRD_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int FPIABORT:1</td>
+<td>13 - 13</td>
+<td>RBCU_DBBOST_FPIABORT_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int FPITOUT:1</td>
+<td>14 - 14</td>
+<td>RBCU_DBBOST_FPITOUT_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int FPITAG:4</td>
+<td>16 - 19</td>
+<td>RBCU_DBBOST_FPITAG_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_DBBOST">RBCU_DBBOST</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_DBCNTL_t"><b>RBCU_DBCNTL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Debug Control Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_DBCNTL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int EO:1</td>
+<td>0 - 0</td>
+<td>RBCU_DBCNTL_EO_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OA:1</td>
+<td>1 - 1</td>
+<td>RBCU_DBCNTL_OA_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RA:1</td>
+<td>4 - 4</td>
+<td>RBCU_DBCNTL_RA_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CONCOM0:1</td>
+<td>12 - 12</td>
+<td>RBCU_DBCNTL_CONCOM0_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CONCOM1:1</td>
+<td>13 - 13</td>
+<td>RBCU_DBCNTL_CONCOM1_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CONCOM2:1</td>
+<td>14 - 14</td>
+<td>RBCU_DBCNTL_CONCOM2_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int ONG:1</td>
+<td>16 - 16</td>
+<td>RBCU_DBCNTL_ONG_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int ONA1:2</td>
+<td>20 - 21</td>
+<td>RBCU_DBCNTL_ONA1_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int ONA2:2</td>
+<td>24 - 25</td>
+<td>RBCU_DBCNTL_ONA2_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS0:1</td>
+<td>28 - 28</td>
+<td>RBCU_DBCNTL_ONBOS0_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS1:1</td>
+<td>29 - 29</td>
+<td>RBCU_DBCNTL_ONBOS1_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS2:1</td>
+<td>30 - 30</td>
+<td>RBCU_DBCNTL_ONBOS2_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS3:1</td>
+<td>31 - 31</td>
+<td>RBCU_DBCNTL_ONBOS3_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_DBCNTL">RBCU_DBCNTL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_DBGNTT_t"><b>RBCU_DBGNTT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Debug Trapped Master Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_DBGNTT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DMAH:1</td>
+<td>4 - 4</td>
+<td>RBCU_DBGNTT_DMAH_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int DMAL:1</td>
+<td>6 - 6</td>
+<td>RBCU_DBGNTT_DMAL_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CHNR00:1</td>
+<td>16 - 16</td>
+<td>RBCU_DBGNTT_CHNR00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CHNR01:1</td>
+<td>17 - 17</td>
+<td>RBCU_DBGNTT_CHNR01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int CHNR02:1</td>
+<td>18 - 18</td>
+<td>RBCU_DBGNTT_CHNR02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int CHNR03:1</td>
+<td>19 - 19</td>
+<td>RBCU_DBGNTT_CHNR03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CHNR04:1</td>
+<td>20 - 20</td>
+<td>RBCU_DBGNTT_CHNR04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int CHNR05:1</td>
+<td>21 - 21</td>
+<td>RBCU_DBGNTT_CHNR05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int CHNR06:1</td>
+<td>22 - 22</td>
+<td>RBCU_DBGNTT_CHNR06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int CHNR07:1</td>
+<td>23 - 23</td>
+<td>RBCU_DBGNTT_CHNR07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int CHNR10:1</td>
+<td>24 - 24</td>
+<td>RBCU_DBGNTT_CHNR10_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int CHNR11:1</td>
+<td>25 - 25</td>
+<td>RBCU_DBGNTT_CHNR11_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int CHNR12:1</td>
+<td>26 - 26</td>
+<td>RBCU_DBGNTT_CHNR12_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int CHNR13:1</td>
+<td>27 - 27</td>
+<td>RBCU_DBGNTT_CHNR13_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int CHNR14:1</td>
+<td>28 - 28</td>
+<td>RBCU_DBGNTT_CHNR14_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int CHNR15:1</td>
+<td>29 - 29</td>
+<td>RBCU_DBGNTT_CHNR15_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int CHNR16:1</td>
+<td>30 - 30</td>
+<td>RBCU_DBGNTT_CHNR16_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int CHNR17:1</td>
+<td>31 - 31</td>
+<td>RBCU_DBGNTT_CHNR17_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_DBGNTT">RBCU_DBGNTT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_DBGRNT_t"><b>RBCU_DBGRNT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Debug Grant Mask Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_DBGRNT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DMAH:1</td>
+<td>4 - 4</td>
+<td>RBCU_DBGRNT_DMAH_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int DMAL:1</td>
+<td>6 - 6</td>
+<td>RBCU_DBGRNT_DMAL_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_DBGRNT">RBCU_DBGRNT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_EADD_t"><b>RBCU_EADD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Error Address Capture Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_EADD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIADR:32</td>
+<td>0 - 31</td>
+<td>RBCU_EADD_FPIADR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_EADD">RBCU_EADD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_ECON_t"><b>RBCU_ECON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Error Control Capture Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_ECON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ERRCNT:16</td>
+<td>0 - 15</td>
+<td>RBCU_ECON_ERRCNT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOUT:1</td>
+<td>16 - 16</td>
+<td>RBCU_ECON_TOUT_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int RDY:1</td>
+<td>17 - 17</td>
+<td>RBCU_ECON_RDY_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int ABT:1</td>
+<td>18 - 18</td>
+<td>RBCU_ECON_ABT_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ACK:2</td>
+<td>19 - 20</td>
+<td>RBCU_ECON_ACK_MASK</td>
+<td>0x00180000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>21 - 21</td>
+<td>RBCU_ECON_SVM_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int WRN:1</td>
+<td>22 - 22</td>
+<td>RBCU_ECON_WRN_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RDN:1</td>
+<td>23 - 23</td>
+<td>RBCU_ECON_RDN_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int TAG:4</td>
+<td>24 - 27</td>
+<td>RBCU_ECON_TAG_MASK</td>
+<td>0x0f000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>28 - 31</td>
+<td>RBCU_ECON_OPC_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_ECON">RBCU_ECON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_EDAT_t"><b>RBCU_EDAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Error Data Capture Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_EDAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIDAT:32</td>
+<td>0 - 31</td>
+<td>RBCU_EDAT_FPIDAT_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_EDAT">RBCU_EDAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_ID_t"><b>RBCU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_ID">RBCU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RBCU_SRC_t"><b>RBCU_SRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>RBCU Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>RBCU_SRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>RBCU_SRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:2</td>
+<td>10 - 11</td>
+<td>RBCU_SRC_TOS_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>RBCU_SRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>RBCU_SRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>RBCU_SRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>RBCU_SRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../rbcu.html#RBCU_SRC">RBCU_SRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../rbcu.html">RBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RST_REQ_t"><b>RST_REQ_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Reset Request Register</b></td></tr>
+<tr><td colspan="5"><b>RST_REQ_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RRSTM:1</td>
+<td>0 - 0</td>
+<td>RST_REQ_RRSTM_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int RREXT:1</td>
+<td>2 - 2</td>
+<td>RST_REQ_RREXT_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SWCFG:4</td>
+<td>16 - 19</td>
+<td>RST_REQ_SWCFG_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SWBRKIN:1</td>
+<td>21 - 21</td>
+<td>RST_REQ_SWBRKIN_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int SWBOOT:1</td>
+<td>24 - 24</td>
+<td>RST_REQ_SWBOOT_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#RST_REQ">RST_REQ</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RST_SR_t"><b>RST_SR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Reset Status Register</b></td></tr>
+<tr><td colspan="5"><b>RST_SR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RSSTM:1</td>
+<td>0 - 0</td>
+<td>RST_SR_RSSTM_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int RSEXT:1</td>
+<td>2 - 2</td>
+<td>RST_SR_RSEXT_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int HWCFG:4</td>
+<td>16 - 19</td>
+<td>RST_SR_HWCFG_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int HWBRKIN:1</td>
+<td>21 - 21</td>
+<td>RST_SR_HWBRKIN_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int TMPLS:1</td>
+<td>22 - 22</td>
+<td>RST_SR_TMPLS_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int PWORST:1</td>
+<td>27 - 27</td>
+<td>RST_SR_PWORST_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int HDRST:1</td>
+<td>28 - 28</td>
+<td>RST_SR_HDRST_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SFTRST:1</td>
+<td>29 - 29</td>
+<td>RST_SR_SFTRST_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int WDTRST:1</td>
+<td>30 - 30</td>
+<td>RST_SR_WDTRST_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#RST_SR">RST_SR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="RTID_t"><b>RTID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Redesign Tracing Identification Register</b></td></tr>
+<tr><td colspan="5"><b>RTID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RT0:1</td>
+<td>0 - 0</td>
+<td>RTID_RT0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int RT1:1</td>
+<td>1 - 1</td>
+<td>RTID_RT1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RT2:1</td>
+<td>2 - 2</td>
+<td>RTID_RT2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int RT3:1</td>
+<td>3 - 3</td>
+<td>RTID_RT3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RT4:1</td>
+<td>4 - 4</td>
+<td>RTID_RT4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int RT5:1</td>
+<td>5 - 5</td>
+<td>RTID_RT5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int RT6:1</td>
+<td>6 - 6</td>
+<td>RTID_RT6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int RT7:1</td>
+<td>7 - 7</td>
+<td>RTID_RT7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int RT8:1</td>
+<td>8 - 8</td>
+<td>RTID_RT8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RT9:1</td>
+<td>9 - 9</td>
+<td>RTID_RT9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int RT10:1</td>
+<td>10 - 10</td>
+<td>RTID_RT10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int RT11:1</td>
+<td>11 - 11</td>
+<td>RTID_RT11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int RT12:1</td>
+<td>12 - 12</td>
+<td>RTID_RT12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int RT13:1</td>
+<td>13 - 13</td>
+<td>RTID_RT13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int RT14:1</td>
+<td>14 - 14</td>
+<td>RTID_RT14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RT15:1</td>
+<td>15 - 15</td>
+<td>RTID_RT15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#RTID">RTID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

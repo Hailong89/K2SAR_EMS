@@ -1,0 +1,2583 @@
+<html>
+<head>
+<title>TriCore TC1766B (MPR)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>MPR</h2>
+
+<h2><tt>#include &lt;tc1766b/mpr.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_0L">MPR_DPR0_0L</a></td>
+<td>Data Segment Protection Register Set 0, Range 0, Lower</td>
+<td>0xF7E1C000</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_0U">MPR_DPR0_0U</a></td>
+<td>Data Segment Protection Register Set 0, Range 0, Upper</td>
+<td>0xF7E1C004</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_1L">MPR_DPR0_1L</a></td>
+<td>Data Segment Protection Register Set 0, Range 1, Lower</td>
+<td>0xF7E1C008</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_1U">MPR_DPR0_1U</a></td>
+<td>Data Segment Protection Register Set 0, Range 1, Upper</td>
+<td>0xF7E1C00C</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_2L">MPR_DPR0_2L</a></td>
+<td>Data Segment Protection Register Set 0, Range 2, Lower</td>
+<td>0xF7E1C010</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_2U">MPR_DPR0_2U</a></td>
+<td>Data Segment Protection Register Set 0, Range 2, Upper</td>
+<td>0xF7E1C014</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_3L">MPR_DPR0_3L</a></td>
+<td>Data Segment Protection Register Set 0, Range 3, Lower</td>
+<td>0xF7E1C018</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR0_3U">MPR_DPR0_3U</a></td>
+<td>Data Segment Protection Register Set 0, Range 3, Upper</td>
+<td>0xF7E1C01C</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_0L">MPR_DPR1_0L</a></td>
+<td>Data Segment Protection Register Set 1, Range 0, Lower</td>
+<td>0xF7E1C400</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_0U">MPR_DPR1_0U</a></td>
+<td>Data Segment Protection Register Set 1, Range 0, Upper</td>
+<td>0xF7E1C404</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_1L">MPR_DPR1_1L</a></td>
+<td>Data Segment Protection Register Set 1, Range 1, Lower</td>
+<td>0xF7E1C408</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_1U">MPR_DPR1_1U</a></td>
+<td>Data Segment Protection Register Set 1, Range 1, Upper</td>
+<td>0xF7E1C40C</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_2L">MPR_DPR1_2L</a></td>
+<td>Data Segment Protection Register Set 1, Range 2, Lower</td>
+<td>0xF7E1C410</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_2U">MPR_DPR1_2U</a></td>
+<td>Data Segment Protection Register Set 1, Range 2, Upper</td>
+<td>0xF7E1C414</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_3L">MPR_DPR1_3L</a></td>
+<td>Data Segment Protection Register Set 1, Range 3, Lower</td>
+<td>0xF7E1C418</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPR1_3U">MPR_DPR1_3U</a></td>
+<td>Data Segment Protection Register Set 1, Range 0, Upper</td>
+<td>0xF7E1C41C</td>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR0_0L">MPR_CPR0_0L</a></td>
+<td>Code Segment Protection Register Set 0, Range 0, Lower</td>
+<td>0xF7E1D000</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR0_0U">MPR_CPR0_0U</a></td>
+<td>Code Segment Protection Register Set 0, Range 0, Upper</td>
+<td>0xF7E1D004</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR0_1L">MPR_CPR0_1L</a></td>
+<td>Code Segment Protection Register Set 0, Range 1, Lower</td>
+<td>0xF7E1D008</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR0_1U">MPR_CPR0_1U</a></td>
+<td>Code Segment Protection Register Set 0, Range 1, Upper</td>
+<td>0xF7E1D00C</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR1_0L">MPR_CPR1_0L</a></td>
+<td>Code Segment Protection Register Set 1, Range 0, Lower</td>
+<td>0xF7E1D400</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR1_0U">MPR_CPR1_0U</a></td>
+<td>Code Segment Protection Register Set 1, Range 0, Upper</td>
+<td>0xF7E1D404</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR1_1L">MPR_CPR1_1L</a></td>
+<td>Code Segment Protection Register Set 1, Range 1, Lower</td>
+<td>0xF7E1D408</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPR1_1U">MPR_CPR1_1U</a></td>
+<td>Code Segment Protection Register Set 1, Range 1, Upper</td>
+<td>0xF7E1D40C</td>
+<td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPM0">MPR_DPM0</a></td>
+<td>Data Memory Protection Mode Register 0</td>
+<td>0xF7E1E000</td>
+<td><a class="url" href="types/m.html#MPR_DPMm_t">MPR_DPMm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_DPM1">MPR_DPM1</a></td>
+<td>Data Memory Protection Mode Register 1</td>
+<td>0xF7E1E080</td>
+<td><a class="url" href="types/m.html#MPR_DPMm_t">MPR_DPMm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPM0">MPR_CPM0</a></td>
+<td>Code Memory Protection Mode Register 0</td>
+<td>0xF7E1E200</td>
+<td><a class="url" href="types/m.html#MPR_CPMm_t">MPR_CPMm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MPR_CPM1">MPR_CPM1</a></td>
+<td>Code Memory Protection Mode Register 1</td>
+<td>0xF7E1E280</td>
+<td><a class="url" href="types/m.html#MPR_CPMm_t">MPR_CPMm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MPR_CPMm_t">MPR_CPMm_t</a></td>
+<td><a class="url" href="mpr.html#MPR_CPM0">MPR_CPM0</a>,       
+<a class="url" href="mpr.html#MPR_CPM1">MPR_CPM1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td>
+<td><a class="url" href="mpr.html#MPR_CPR0_0L">MPR_CPR0_0L</a>,       
+<a class="url" href="mpr.html#MPR_CPR0_1L">MPR_CPR0_1L</a>,       
+<a class="url" href="mpr.html#MPR_CPR1_0L">MPR_CPR1_0L</a>,       
+<a class="url" href="mpr.html#MPR_CPR1_1L">MPR_CPR1_1L</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td>
+<td><a class="url" href="mpr.html#MPR_CPR0_0U">MPR_CPR0_0U</a>,       
+<a class="url" href="mpr.html#MPR_CPR0_1U">MPR_CPR0_1U</a>,       
+<a class="url" href="mpr.html#MPR_CPR1_0U">MPR_CPR1_0U</a>,       
+<a class="url" href="mpr.html#MPR_CPR1_1U">MPR_CPR1_1U</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MPR_DPMm_t">MPR_DPMm_t</a></td>
+<td><a class="url" href="mpr.html#MPR_DPM0">MPR_DPM0</a>,       
+<a class="url" href="mpr.html#MPR_DPM1">MPR_DPM1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td>
+<td><a class="url" href="mpr.html#MPR_DPR0_0L">MPR_DPR0_0L</a>,       
+<a class="url" href="mpr.html#MPR_DPR0_1L">MPR_DPR0_1L</a>,       
+<a class="url" href="mpr.html#MPR_DPR0_2L">MPR_DPR0_2L</a>,       
+<a class="url" href="mpr.html#MPR_DPR0_3L">MPR_DPR0_3L</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_0L">MPR_DPR1_0L</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_1L">MPR_DPR1_1L</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_2L">MPR_DPR1_2L</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_3L">MPR_DPR1_3L</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td>
+<td><a class="url" href="mpr.html#MPR_DPR0_0U">MPR_DPR0_0U</a>,       
+<a class="url" href="mpr.html#MPR_DPR0_1U">MPR_DPR0_1U</a>,       
+<a class="url" href="mpr.html#MPR_DPR0_2U">MPR_DPR0_2U</a>,       
+<a class="url" href="mpr.html#MPR_DPR0_3U">MPR_DPR0_3U</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_0U">MPR_DPR1_0U</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_1U">MPR_DPR1_1U</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_2U">MPR_DPR1_2U</a>,       
+<a class="url" href="mpr.html#MPR_DPR1_3U">MPR_DPR1_3U</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="MPR_DPR0_0L">&nbsp;</a>
+<h3>MPR_DPR0_0L</h3>
+<h3>"Data Segment Protection Register Set 0, Range 0, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_0L_ADDR = 0xF7E1C000</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_0L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 0, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR0_0U">&nbsp;</a>
+<h3>MPR_DPR0_0U</h3>
+<h3>"Data Segment Protection Register Set 0, Range 0, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_0U_ADDR = 0xF7E1C004</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_0U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 0, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR0_1L">&nbsp;</a>
+<h3>MPR_DPR0_1L</h3>
+<h3>"Data Segment Protection Register Set 0, Range 1, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_1L_ADDR = 0xF7E1C008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_1L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 1, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR0_1U">&nbsp;</a>
+<h3>MPR_DPR0_1U</h3>
+<h3>"Data Segment Protection Register Set 0, Range 1, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_1U_ADDR = 0xF7E1C00C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_1U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 1, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR0_2L">&nbsp;</a>
+<h3>MPR_DPR0_2L</h3>
+<h3>"Data Segment Protection Register Set 0, Range 2, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_2L_ADDR = 0xF7E1C010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_2L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 2, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR0_2U">&nbsp;</a>
+<h3>MPR_DPR0_2U</h3>
+<h3>"Data Segment Protection Register Set 0, Range 2, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_2U_ADDR = 0xF7E1C014</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_2U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 2, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR0_3L">&nbsp;</a>
+<h3>MPR_DPR0_3L</h3>
+<h3>"Data Segment Protection Register Set 0, Range 3, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_3L_ADDR = 0xF7E1C018</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_3L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 3, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR0_3U">&nbsp;</a>
+<h3>MPR_DPR0_3U</h3>
+<h3>"Data Segment Protection Register Set 0, Range 3, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR0_3U_ADDR = 0xF7E1C01C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR0_3U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 0, Range 3, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_0L">&nbsp;</a>
+<h3>MPR_DPR1_0L</h3>
+<h3>"Data Segment Protection Register Set 1, Range 0, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_0L_ADDR = 0xF7E1C400</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_0L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 0, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_0U">&nbsp;</a>
+<h3>MPR_DPR1_0U</h3>
+<h3>"Data Segment Protection Register Set 1, Range 0, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_0U_ADDR = 0xF7E1C404</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_0U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 0, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_1L">&nbsp;</a>
+<h3>MPR_DPR1_1L</h3>
+<h3>"Data Segment Protection Register Set 1, Range 1, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_1L_ADDR = 0xF7E1C408</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_1L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 1, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_1U">&nbsp;</a>
+<h3>MPR_DPR1_1U</h3>
+<h3>"Data Segment Protection Register Set 1, Range 1, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_1U_ADDR = 0xF7E1C40C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_1U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 1, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_2L">&nbsp;</a>
+<h3>MPR_DPR1_2L</h3>
+<h3>"Data Segment Protection Register Set 1, Range 2, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_2L_ADDR = 0xF7E1C410</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_2L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 2, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_2U">&nbsp;</a>
+<h3>MPR_DPR1_2U</h3>
+<h3>"Data Segment Protection Register Set 1, Range 2, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_2U_ADDR = 0xF7E1C414</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_2U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 2, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_3L">&nbsp;</a>
+<h3>MPR_DPR1_3L</h3>
+<h3>"Data Segment Protection Register Set 1, Range 3, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_3L_ADDR = 0xF7E1C418</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mL_t">MPR_DPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_3L.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 3, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPR1_3U">&nbsp;</a>
+<h3>MPR_DPR1_3U</h3>
+<h3>"Data Segment Protection Register Set 1, Range 0, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPR1_3U_ADDR = 0xF7E1C41C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPRn_mU_t">MPR_DPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPR1_3U.bits</b>&nbsp;&quot;Data Segment Protection Register Set 1, Range 0, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_DPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR0_0L">&nbsp;</a>
+<h3>MPR_CPR0_0L</h3>
+<h3>"Code Segment Protection Register Set 0, Range 0, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR0_0L_ADDR = 0xF7E1D000</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR0_0L.bits</b>&nbsp;&quot;Code Segment Protection Register Set 0, Range 0, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR0_0U">&nbsp;</a>
+<h3>MPR_CPR0_0U</h3>
+<h3>"Code Segment Protection Register Set 0, Range 0, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR0_0U_ADDR = 0xF7E1D004</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR0_0U.bits</b>&nbsp;&quot;Code Segment Protection Register Set 0, Range 0, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR0_1L">&nbsp;</a>
+<h3>MPR_CPR0_1L</h3>
+<h3>"Code Segment Protection Register Set 0, Range 1, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR0_1L_ADDR = 0xF7E1D008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR0_1L.bits</b>&nbsp;&quot;Code Segment Protection Register Set 0, Range 1, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR0_1U">&nbsp;</a>
+<h3>MPR_CPR0_1U</h3>
+<h3>"Code Segment Protection Register Set 0, Range 1, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR0_1U_ADDR = 0xF7E1D00C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR0_1U.bits</b>&nbsp;&quot;Code Segment Protection Register Set 0, Range 1, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR1_0L">&nbsp;</a>
+<h3>MPR_CPR1_0L</h3>
+<h3>"Code Segment Protection Register Set 1, Range 0, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR1_0L_ADDR = 0xF7E1D400</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR1_0L.bits</b>&nbsp;&quot;Code Segment Protection Register Set 1, Range 0, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR1_0U">&nbsp;</a>
+<h3>MPR_CPR1_0U</h3>
+<h3>"Code Segment Protection Register Set 1, Range 0, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR1_0U_ADDR = 0xF7E1D404</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR1_0U.bits</b>&nbsp;&quot;Code Segment Protection Register Set 1, Range 0, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR1_1L">&nbsp;</a>
+<h3>MPR_CPR1_1L</h3>
+<h3>"Code Segment Protection Register Set 1, Range 1, Lower"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR1_1L_ADDR = 0xF7E1D408</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mL_t">MPR_CPRn_mL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR1_1L.bits</b>&nbsp;&quot;Code Segment Protection Register Set 1, Range 1, Lower&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LOWBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mL_LOWBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mL_LOWBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPR1_1U">&nbsp;</a>
+<h3>MPR_CPR1_1U</h3>
+<h3>"Code Segment Protection Register Set 1, Range 1, Upper"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPR1_1U_ADDR = 0xF7E1D40C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPRn_mU_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPRn_mU_t">MPR_CPRn_mU_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPR1_1U.bits</b>&nbsp;&quot;Code Segment Protection Register Set 1, Range 1, Upper&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>UPPBND</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mU_UPPBND_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>MPR_CPRn_mU_UPPBND_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPRn_mU_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPM0">&nbsp;</a>
+<h3>MPR_DPM0</h3>
+<h3>"Data Memory Protection Mode Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPM0_ADDR = 0xF7E1E000</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPMm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPMm_t">MPR_DPMm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPM0.bits</b>&nbsp;&quot;Data Memory Protection Mode Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RBU0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MPR_DPMm_RBU0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU0_SHIFT</td>
+</tr>
+<tr>
+<td>WBU0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MPR_DPMm_WBU0_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU0_SHIFT</td>
+</tr>
+<tr>
+<td>RBL0</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MPR_DPMm_RBL0_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL0_SHIFT</td>
+</tr>
+<tr>
+<td>WBL0</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MPR_DPMm_WBL0_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL0_SHIFT</td>
+</tr>
+<tr>
+<td>RS0</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MPR_DPMm_RS0_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS0_SHIFT</td>
+</tr>
+<tr>
+<td>WS0</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MPR_DPMm_WS0_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS0_SHIFT</td>
+</tr>
+<tr>
+<td>RE0</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MPR_DPMm_RE0_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE0_SHIFT</td>
+</tr>
+<tr>
+<td>WE0</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MPR_DPMm_WE0_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE0_SHIFT</td>
+</tr>
+<tr>
+<td>RBU1</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MPR_DPMm_RBU1_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU1_SHIFT</td>
+</tr>
+<tr>
+<td>WBU1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MPR_DPMm_WBU1_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU1_SHIFT</td>
+</tr>
+<tr>
+<td>RBL1</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>MPR_DPMm_RBL1_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL1_SHIFT</td>
+</tr>
+<tr>
+<td>WBL1</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MPR_DPMm_WBL1_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL1_SHIFT</td>
+</tr>
+<tr>
+<td>RS1</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>MPR_DPMm_RS1_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS1_SHIFT</td>
+</tr>
+<tr>
+<td>WS1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MPR_DPMm_WS1_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS1_SHIFT</td>
+</tr>
+<tr>
+<td>RE1</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>MPR_DPMm_RE1_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE1_SHIFT</td>
+</tr>
+<tr>
+<td>WE1</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MPR_DPMm_WE1_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE1_SHIFT</td>
+</tr>
+<tr>
+<td>RBU2</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MPR_DPMm_RBU2_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU2_SHIFT</td>
+</tr>
+<tr>
+<td>WBU2</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>MPR_DPMm_WBU2_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU2_SHIFT</td>
+</tr>
+<tr>
+<td>RBL2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>MPR_DPMm_RBL2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL2_SHIFT</td>
+</tr>
+<tr>
+<td>WBL2</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>MPR_DPMm_WBL2_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL2_SHIFT</td>
+</tr>
+<tr>
+<td>RS2</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MPR_DPMm_RS2_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS2_SHIFT</td>
+</tr>
+<tr>
+<td>WS2</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>MPR_DPMm_WS2_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS2_SHIFT</td>
+</tr>
+<tr>
+<td>RE2</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>MPR_DPMm_RE2_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE2_SHIFT</td>
+</tr>
+<tr>
+<td>WE2</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>MPR_DPMm_WE2_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE2_SHIFT</td>
+</tr>
+<tr>
+<td>RBU3</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MPR_DPMm_RBU3_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU3_SHIFT</td>
+</tr>
+<tr>
+<td>WBU3</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>MPR_DPMm_WBU3_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU3_SHIFT</td>
+</tr>
+<tr>
+<td>RBL3</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>MPR_DPMm_RBL3_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL3_SHIFT</td>
+</tr>
+<tr>
+<td>WBL3</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>MPR_DPMm_WBL3_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL3_SHIFT</td>
+</tr>
+<tr>
+<td>RS3</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>MPR_DPMm_RS3_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS3_SHIFT</td>
+</tr>
+<tr>
+<td>WS3</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>MPR_DPMm_WS3_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS3_SHIFT</td>
+</tr>
+<tr>
+<td>RE3</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>MPR_DPMm_RE3_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE3_SHIFT</td>
+</tr>
+<tr>
+<td>WE3</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>MPR_DPMm_WE3_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPMm_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_DPM1">&nbsp;</a>
+<h3>MPR_DPM1</h3>
+<h3>"Data Memory Protection Mode Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_DPM1_ADDR = 0xF7E1E080</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_DPMm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_DPMm_t">MPR_DPMm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_DPM1.bits</b>&nbsp;&quot;Data Memory Protection Mode Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RBU0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MPR_DPMm_RBU0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU0_SHIFT</td>
+</tr>
+<tr>
+<td>WBU0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MPR_DPMm_WBU0_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU0_SHIFT</td>
+</tr>
+<tr>
+<td>RBL0</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MPR_DPMm_RBL0_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL0_SHIFT</td>
+</tr>
+<tr>
+<td>WBL0</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MPR_DPMm_WBL0_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL0_SHIFT</td>
+</tr>
+<tr>
+<td>RS0</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MPR_DPMm_RS0_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS0_SHIFT</td>
+</tr>
+<tr>
+<td>WS0</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MPR_DPMm_WS0_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS0_SHIFT</td>
+</tr>
+<tr>
+<td>RE0</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MPR_DPMm_RE0_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE0_SHIFT</td>
+</tr>
+<tr>
+<td>WE0</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MPR_DPMm_WE0_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE0_SHIFT</td>
+</tr>
+<tr>
+<td>RBU1</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MPR_DPMm_RBU1_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU1_SHIFT</td>
+</tr>
+<tr>
+<td>WBU1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MPR_DPMm_WBU1_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU1_SHIFT</td>
+</tr>
+<tr>
+<td>RBL1</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>MPR_DPMm_RBL1_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL1_SHIFT</td>
+</tr>
+<tr>
+<td>WBL1</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MPR_DPMm_WBL1_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL1_SHIFT</td>
+</tr>
+<tr>
+<td>RS1</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>MPR_DPMm_RS1_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS1_SHIFT</td>
+</tr>
+<tr>
+<td>WS1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MPR_DPMm_WS1_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS1_SHIFT</td>
+</tr>
+<tr>
+<td>RE1</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>MPR_DPMm_RE1_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE1_SHIFT</td>
+</tr>
+<tr>
+<td>WE1</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MPR_DPMm_WE1_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE1_SHIFT</td>
+</tr>
+<tr>
+<td>RBU2</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MPR_DPMm_RBU2_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU2_SHIFT</td>
+</tr>
+<tr>
+<td>WBU2</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>MPR_DPMm_WBU2_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU2_SHIFT</td>
+</tr>
+<tr>
+<td>RBL2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>MPR_DPMm_RBL2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL2_SHIFT</td>
+</tr>
+<tr>
+<td>WBL2</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>MPR_DPMm_WBL2_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL2_SHIFT</td>
+</tr>
+<tr>
+<td>RS2</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MPR_DPMm_RS2_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS2_SHIFT</td>
+</tr>
+<tr>
+<td>WS2</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>MPR_DPMm_WS2_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS2_SHIFT</td>
+</tr>
+<tr>
+<td>RE2</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>MPR_DPMm_RE2_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE2_SHIFT</td>
+</tr>
+<tr>
+<td>WE2</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>MPR_DPMm_WE2_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE2_SHIFT</td>
+</tr>
+<tr>
+<td>RBU3</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MPR_DPMm_RBU3_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBU3_SHIFT</td>
+</tr>
+<tr>
+<td>WBU3</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>MPR_DPMm_WBU3_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBU3_SHIFT</td>
+</tr>
+<tr>
+<td>RBL3</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>MPR_DPMm_RBL3_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RBL3_SHIFT</td>
+</tr>
+<tr>
+<td>WBL3</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>MPR_DPMm_WBL3_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WBL3_SHIFT</td>
+</tr>
+<tr>
+<td>RS3</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>MPR_DPMm_RS3_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RS3_SHIFT</td>
+</tr>
+<tr>
+<td>WS3</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>MPR_DPMm_WS3_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WS3_SHIFT</td>
+</tr>
+<tr>
+<td>RE3</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>MPR_DPMm_RE3_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_RE3_SHIFT</td>
+</tr>
+<tr>
+<td>WE3</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>MPR_DPMm_WE3_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>MPR_DPMm_WE3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_DPMm_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPM0">&nbsp;</a>
+<h3>MPR_CPM0</h3>
+<h3>"Code Memory Protection Mode Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPM0_ADDR = 0xF7E1E200</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPMm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPMm_t">MPR_CPMm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPM0.bits</b>&nbsp;&quot;Code Memory Protection Mode Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BU0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MPR_CPMm_BU0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BU0_SHIFT</td>
+</tr>
+<tr>
+<td>BL0</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MPR_CPMm_BL0_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BL0_SHIFT</td>
+</tr>
+<tr>
+<td>XS0</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MPR_CPMm_XS0_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XS0_SHIFT</td>
+</tr>
+<tr>
+<td>XE0</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MPR_CPMm_XE0_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XE0_SHIFT</td>
+</tr>
+<tr>
+<td>BU1</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MPR_CPMm_BU1_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BU1_SHIFT</td>
+</tr>
+<tr>
+<td>BL1</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MPR_CPMm_BL1_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BL1_SHIFT</td>
+</tr>
+<tr>
+<td>XS1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MPR_CPMm_XS1_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XS1_SHIFT</td>
+</tr>
+<tr>
+<td>XE1</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MPR_CPMm_XE1_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XE1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPMm_MASK</td><td><tt>0x0000a9a9</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000a9a9</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000a9a9</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MPR_CPM1">&nbsp;</a>
+<h3>MPR_CPM1</h3>
+<h3>"Code Memory Protection Mode Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MPR_CPM1_ADDR = 0xF7E1E280</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MPR_CPMm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MPR_CPMm_t">MPR_CPMm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MPR_CPM1.bits</b>&nbsp;&quot;Code Memory Protection Mode Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BU0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MPR_CPMm_BU0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BU0_SHIFT</td>
+</tr>
+<tr>
+<td>BL0</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MPR_CPMm_BL0_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BL0_SHIFT</td>
+</tr>
+<tr>
+<td>XS0</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MPR_CPMm_XS0_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XS0_SHIFT</td>
+</tr>
+<tr>
+<td>XE0</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MPR_CPMm_XE0_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XE0_SHIFT</td>
+</tr>
+<tr>
+<td>BU1</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MPR_CPMm_BU1_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BU1_SHIFT</td>
+</tr>
+<tr>
+<td>BL1</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MPR_CPMm_BL1_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_BL1_SHIFT</td>
+</tr>
+<tr>
+<td>XS1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MPR_CPMm_XS1_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XS1_SHIFT</td>
+</tr>
+<tr>
+<td>XE1</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MPR_CPMm_XE1_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>MPR_CPMm_XE1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MPR_CPMm_MASK</td><td><tt>0x0000a9a9</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000a9a9</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000a9a9</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

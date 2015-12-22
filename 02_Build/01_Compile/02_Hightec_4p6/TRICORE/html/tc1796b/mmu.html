@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>TriCore TC1796B (MMU)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>MMU</h2>
+
+<h2><tt>#include &lt;tc1796b/mmu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#MMU_CON">MMU_CON</a></td>
+<td>MMU Control Register</td>
+<td>0xF7E18000</td>
+<td><a class="url" href="types/m.html#MMU_CON_t">MMU_CON_t</a></td>
+<td>0x00008000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MMU_CON_t">MMU_CON_t</a></td>
+<td><a class="url" href="mmu.html#MMU_CON">MMU_CON</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="MMU_CON">&nbsp;</a>
+<h3>MMU_CON</h3>
+<h3>"MMU Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MMU_CON_ADDR = 0xF7E18000</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MMU_CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MMU_CON_t">MMU_CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MMU_CON.bits</b>&nbsp;&quot;MMU Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>V</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MMU_CON_V_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MMU_CON_V_SHIFT</td>
+</tr>
+<tr>
+<td>SZA</td>
+<td>2</td>
+<td>1 - 2</td>
+<td>MMU_CON_SZA_MASK</td>
+<td><tt>0x00000006</tt></td>
+<td>rw</td>
+<td>MMU_CON_SZA_SHIFT</td>
+</tr>
+<tr>
+<td>SZB</td>
+<td>2</td>
+<td>3 - 4</td>
+<td>MMU_CON_SZB_MASK</td>
+<td><tt>0x00000018</tt></td>
+<td>rw</td>
+<td>MMU_CON_SZB_SHIFT</td>
+</tr>
+<tr>
+<td>TSZ</td>
+<td>7</td>
+<td>5 - 11</td>
+<td>MMU_CON_TSZ_MASK</td>
+<td><tt>0x00000fe0</tt></td>
+<td>r</td>
+<td>MMU_CON_TSZ_SHIFT</td>
+</tr>
+<tr>
+<td>NOMMU</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MMU_CON_NOMMU_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>r</td>
+<td>MMU_CON_NOMMU_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MMU_CON_MASK</td><td><tt>0x00008fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00008fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000001f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,5844 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1724 (CCU61)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>CCU61</h2>
+
+<h2><tt>#include &lt;tc1724/ccu61.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#CCU61_MCFG">CCU61_MCFG</a></td>
+<td>Module Configuration Register</td>
+<td>0xF0003104</td>
+<td><a class="url" href="types/c.html#CCUn_MCFG_t">CCUn_MCFG_t</a></td>
+<td>0x00000007</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_ID">CCU61_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0003108</td>
+<td><a class="url" href="types/c.html#CCUn_ID_t">CCUn_ID_t</a></td>
+<td>0x000054XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_PISEL0">CCU61_PISEL0</a></td>
+<td>Port Input Select Register 0</td>
+<td>0xF0003110</td>
+<td><a class="url" href="types/c.html#CCUn_PISEL0_t">CCUn_PISEL0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_PISEL2">CCU61_PISEL2</a></td>
+<td>Port Input Select Register 2</td>
+<td>0xF0003114</td>
+<td><a class="url" href="types/c.html#CCUn_PISEL2_t">CCUn_PISEL2_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_KSCFG">CCU61_KSCFG</a></td>
+<td>Kernel State Configuration Register</td>
+<td>0xF0003118</td>
+<td><a class="url" href="types/c.html#CCUn_KSCFG_t">CCUn_KSCFG_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_KSCSR">CCU61_KSCSR</a></td>
+<td>Kernel State Control Sensitivity Register</td>
+<td>0xF000311C</td>
+<td><a class="url" href="types/c.html#CCUn_KSCSR_t">CCUn_KSCSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_T12">CCU61_T12</a></td>
+<td>Timer T12 Counter Register</td>
+<td>0xF0003120</td>
+<td><a class="url" href="types/c.html#CCUn_T12_t">CCUn_T12_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_T12PR">CCU61_T12PR</a></td>
+<td>Timer 12 Period Register</td>
+<td>0xF0003124</td>
+<td><a class="url" href="types/c.html#CCUn_T12PR_t">CCUn_T12PR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_T12DTC">CCU61_T12DTC</a></td>
+<td>Dead-Time Control Register for Timer12</td>
+<td>0xF0003128</td>
+<td><a class="url" href="types/c.html#CCUn_T12DTC_t">CCUn_T12DTC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC60R">CCU61_CC60R</a></td>
+<td>Capture/Compare Register for Channel CC60</td>
+<td>0xF0003130</td>
+<td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC61R">CCU61_CC61R</a></td>
+<td>Capture/Compare Register for Channel CC61</td>
+<td>0xF0003134</td>
+<td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC62R">CCU61_CC62R</a></td>
+<td>Capture/Compare Register for Channel CC62</td>
+<td>0xF0003138</td>
+<td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC60SR">CCU61_CC60SR</a></td>
+<td>Capture/Compare Shadow Reg. for Channel CC60</td>
+<td>0xF0003140</td>
+<td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC61SR">CCU61_CC61SR</a></td>
+<td>Capture/Compare Shadow Reg. for Channel CC61</td>
+<td>0xF0003144</td>
+<td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC62SR">CCU61_CC62SR</a></td>
+<td>Capture/Compare Shadow Reg. for Channel CC62</td>
+<td>0xF0003148</td>
+<td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_T13">CCU61_T13</a></td>
+<td>Timer T13 Counter Register</td>
+<td>0xF0003150</td>
+<td><a class="url" href="types/c.html#CCUn_T13_t">CCUn_T13_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_T13PR">CCU61_T13PR</a></td>
+<td>Timer 13 Period Register</td>
+<td>0xF0003154</td>
+<td><a class="url" href="types/c.html#CCUn_T13PR_t">CCUn_T13PR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC63R">CCU61_CC63R</a></td>
+<td>Compare Register for T13</td>
+<td>0xF0003158</td>
+<td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CC63SR">CCU61_CC63SR</a></td>
+<td>Compare Shadow Register for T13</td>
+<td>0xF000315C</td>
+<td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CMPSTAT">CCU61_CMPSTAT</a></td>
+<td>Compare State Register</td>
+<td>0xF0003160</td>
+<td><a class="url" href="types/c.html#CCUn_CMPSTAT_t">CCUn_CMPSTAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_CMPMODIF">CCU61_CMPMODIF</a></td>
+<td>Compare State Modification Register</td>
+<td>0xF0003164</td>
+<td><a class="url" href="types/c.html#CCUn_CMPMODIF_t">CCUn_CMPMODIF_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_T12MSEL">CCU61_T12MSEL</a></td>
+<td>T12 Mode Select Register</td>
+<td>0xF0003168</td>
+<td><a class="url" href="types/c.html#CCUn_T12MSEL_t">CCUn_T12MSEL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_TCTR0">CCU61_TCTR0</a></td>
+<td>Timer Control Register 0</td>
+<td>0xF0003170</td>
+<td><a class="url" href="types/c.html#CCUn_TCTR0_t">CCUn_TCTR0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_TCTR2">CCU61_TCTR2</a></td>
+<td>Timer Control Register 2</td>
+<td>0xF0003174</td>
+<td><a class="url" href="types/c.html#CCUn_TCTR2_t">CCUn_TCTR2_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_TCTR4">CCU61_TCTR4</a></td>
+<td>Timer Control Register 4</td>
+<td>0xF0003178</td>
+<td><a class="url" href="types/c.html#CCUn_TCTR4_t">CCUn_TCTR4_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_MODCTR">CCU61_MODCTR</a></td>
+<td>Modulation Control Register</td>
+<td>0xF0003180</td>
+<td><a class="url" href="types/c.html#CCUn_MODCTR_t">CCUn_MODCTR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_TRPCTR">CCU61_TRPCTR</a></td>
+<td>Trap Control Register</td>
+<td>0xF0003184</td>
+<td><a class="url" href="types/c.html#CCUn_TRPCTR_t">CCUn_TRPCTR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_PSLR">CCU61_PSLR</a></td>
+<td>Passive State Level Register</td>
+<td>0xF0003188</td>
+<td><a class="url" href="types/c.html#CCUn_PSLR_t">CCUn_PSLR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_MCMOUTS">CCU61_MCMOUTS</a></td>
+<td>Multi-Channel Mode Output Shadow Register</td>
+<td>0xF000318C</td>
+<td><a class="url" href="types/c.html#CCUn_MCMOUTS_t">CCUn_MCMOUTS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_MCMOUT">CCU61_MCMOUT</a></td>
+<td>Multi-Channel Mode Output Register</td>
+<td>0xF0003190</td>
+<td><a class="url" href="types/c.html#CCUn_MCMOUT_t">CCUn_MCMOUT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_MCMCTR">CCU61_MCMCTR</a></td>
+<td>Multi-Channel Mode Control Register</td>
+<td>0xF0003194</td>
+<td><a class="url" href="types/c.html#CCUn_MCMCTR_t">CCUn_MCMCTR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_IMON">CCU61_IMON</a></td>
+<td>Input Monitoring Register</td>
+<td>0xF0003198</td>
+<td><a class="url" href="types/c.html#CCUn_IMON_t">CCUn_IMON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_LI">CCU61_LI</a></td>
+<td>Lost Indicator Register</td>
+<td>0xF000319C</td>
+<td><a class="url" href="types/c.html#CCUn_LI_t">CCUn_LI_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_IS">CCU61_IS</a></td>
+<td>Interrupt Status Register</td>
+<td>0xF00031A0</td>
+<td><a class="url" href="types/c.html#CCUn_IS_t">CCUn_IS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_ISS">CCU61_ISS</a></td>
+<td>Interrupt Status Set Register</td>
+<td>0xF00031A4</td>
+<td><a class="url" href="types/c.html#CCUn_ISS_t">CCUn_ISS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_ISR">CCU61_ISR</a></td>
+<td>Interrupt Status Reset Register</td>
+<td>0xF00031A8</td>
+<td><a class="url" href="types/c.html#CCUn_ISR_t">CCUn_ISR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_INP">CCU61_INP</a></td>
+<td>Interrupt Node Pointer Register</td>
+<td>0xF00031AC</td>
+<td><a class="url" href="types/c.html#CCUn_INP_t">CCUn_INP_t</a></td>
+<td>0x00003940</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_IEN">CCU61_IEN</a></td>
+<td>Interrupt Enable Register</td>
+<td>0xF00031B0</td>
+<td><a class="url" href="types/c.html#CCUn_IEN_t">CCUn_IEN_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_SRC3">CCU61_SRC3</a></td>
+<td>CCU61 Service Request Control Register</td>
+<td>0xF00031F0</td>
+<td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_SRC2">CCU61_SRC2</a></td>
+<td>CCU61 Service Request Control Register</td>
+<td>0xF00031F4</td>
+<td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_SRC1">CCU61_SRC1</a></td>
+<td>CCU61 Service Request Control Register</td>
+<td>0xF00031F8</td>
+<td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CCU61_SRC0">CCU61_SRC0</a></td>
+<td>CCU61 Service Request Control Register</td>
+<td>0xF00031FC</td>
+<td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_CC60R">CCU60_CC60R</a>,       
+<a class="url" href="ccu60.html#CCU60_CC61R">CCU60_CC61R</a>,       
+<a class="url" href="ccu60.html#CCU60_CC62R">CCU60_CC62R</a>,       
+<a class="url" href="ccu60.html#CCU60_CC63R">CCU60_CC63R</a>,       
+<a class="url" href="ccu61.html#CCU61_CC60R">CCU61_CC60R</a>,       
+<a class="url" href="ccu61.html#CCU61_CC61R">CCU61_CC61R</a>,       
+<a class="url" href="ccu61.html#CCU61_CC62R">CCU61_CC62R</a>,       
+<a class="url" href="ccu61.html#CCU61_CC63R">CCU61_CC63R</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_CC60SR">CCU60_CC60SR</a>,       
+<a class="url" href="ccu60.html#CCU60_CC61SR">CCU60_CC61SR</a>,       
+<a class="url" href="ccu60.html#CCU60_CC62SR">CCU60_CC62SR</a>,       
+<a class="url" href="ccu60.html#CCU60_CC63SR">CCU60_CC63SR</a>,       
+<a class="url" href="ccu61.html#CCU61_CC60SR">CCU61_CC60SR</a>,       
+<a class="url" href="ccu61.html#CCU61_CC61SR">CCU61_CC61SR</a>,       
+<a class="url" href="ccu61.html#CCU61_CC62SR">CCU61_CC62SR</a>,       
+<a class="url" href="ccu61.html#CCU61_CC63SR">CCU61_CC63SR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_CMPMODIF_t">CCUn_CMPMODIF_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_CMPMODIF">CCU60_CMPMODIF</a>,       
+<a class="url" href="ccu61.html#CCU61_CMPMODIF">CCU61_CMPMODIF</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_CMPSTAT_t">CCUn_CMPSTAT_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_CMPSTAT">CCU60_CMPSTAT</a>,       
+<a class="url" href="ccu61.html#CCU61_CMPSTAT">CCU61_CMPSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_ID_t">CCUn_ID_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_ID">CCU60_ID</a>,       
+<a class="url" href="ccu61.html#CCU61_ID">CCU61_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_IEN_t">CCUn_IEN_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_IEN">CCU60_IEN</a>,       
+<a class="url" href="ccu61.html#CCU61_IEN">CCU61_IEN</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_IMON_t">CCUn_IMON_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_IMON">CCU60_IMON</a>,       
+<a class="url" href="ccu61.html#CCU61_IMON">CCU61_IMON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_INP_t">CCUn_INP_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_INP">CCU60_INP</a>,       
+<a class="url" href="ccu61.html#CCU61_INP">CCU61_INP</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_IS_t">CCUn_IS_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_IS">CCU60_IS</a>,       
+<a class="url" href="ccu61.html#CCU61_IS">CCU61_IS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_ISR_t">CCUn_ISR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_ISR">CCU60_ISR</a>,       
+<a class="url" href="ccu61.html#CCU61_ISR">CCU61_ISR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_ISS_t">CCUn_ISS_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_ISS">CCU60_ISS</a>,       
+<a class="url" href="ccu61.html#CCU61_ISS">CCU61_ISS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_KSCFG_t">CCUn_KSCFG_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_KSCFG">CCU60_KSCFG</a>,       
+<a class="url" href="ccu61.html#CCU61_KSCFG">CCU61_KSCFG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_KSCSR_t">CCUn_KSCSR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_KSCSR">CCU60_KSCSR</a>,       
+<a class="url" href="ccu61.html#CCU61_KSCSR">CCU61_KSCSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_LI_t">CCUn_LI_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_LI">CCU60_LI</a>,       
+<a class="url" href="ccu61.html#CCU61_LI">CCU61_LI</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_MCFG_t">CCUn_MCFG_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_MCFG">CCU60_MCFG</a>,       
+<a class="url" href="ccu61.html#CCU61_MCFG">CCU61_MCFG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_MCMCTR_t">CCUn_MCMCTR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_MCMCTR">CCU60_MCMCTR</a>,       
+<a class="url" href="ccu61.html#CCU61_MCMCTR">CCU61_MCMCTR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_MCMOUT_t">CCUn_MCMOUT_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_MCMOUT">CCU60_MCMOUT</a>,       
+<a class="url" href="ccu61.html#CCU61_MCMOUT">CCU61_MCMOUT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_MCMOUTS_t">CCUn_MCMOUTS_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_MCMOUTS">CCU60_MCMOUTS</a>,       
+<a class="url" href="ccu61.html#CCU61_MCMOUTS">CCU61_MCMOUTS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_MODCTR_t">CCUn_MODCTR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_MODCTR">CCU60_MODCTR</a>,       
+<a class="url" href="ccu61.html#CCU61_MODCTR">CCU61_MODCTR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_PISEL0_t">CCUn_PISEL0_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_PISEL0">CCU60_PISEL0</a>,       
+<a class="url" href="ccu61.html#CCU61_PISEL0">CCU61_PISEL0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_PISEL2_t">CCUn_PISEL2_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_PISEL2">CCU60_PISEL2</a>,       
+<a class="url" href="ccu61.html#CCU61_PISEL2">CCU61_PISEL2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_PSLR_t">CCUn_PSLR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_PSLR">CCU60_PSLR</a>,       
+<a class="url" href="ccu61.html#CCU61_PSLR">CCU61_PSLR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_SRC3">CCU60_SRC3</a>,       
+<a class="url" href="ccu60.html#CCU60_SRC2">CCU60_SRC2</a>,       
+<a class="url" href="ccu60.html#CCU60_SRC1">CCU60_SRC1</a>,       
+<a class="url" href="ccu60.html#CCU60_SRC0">CCU60_SRC0</a>,       
+<a class="url" href="ccu61.html#CCU61_SRC3">CCU61_SRC3</a>,       
+<a class="url" href="ccu61.html#CCU61_SRC2">CCU61_SRC2</a>,       
+<a class="url" href="ccu61.html#CCU61_SRC1">CCU61_SRC1</a>,       
+<a class="url" href="ccu61.html#CCU61_SRC0">CCU61_SRC0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_T12_t">CCUn_T12_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_T12">CCU60_T12</a>,       
+<a class="url" href="ccu61.html#CCU61_T12">CCU61_T12</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_T12DTC_t">CCUn_T12DTC_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_T12DTC">CCU60_T12DTC</a>,       
+<a class="url" href="ccu61.html#CCU61_T12DTC">CCU61_T12DTC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_T12MSEL_t">CCUn_T12MSEL_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_T12MSEL">CCU60_T12MSEL</a>,       
+<a class="url" href="ccu61.html#CCU61_T12MSEL">CCU61_T12MSEL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_T12PR_t">CCUn_T12PR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_T12PR">CCU60_T12PR</a>,       
+<a class="url" href="ccu61.html#CCU61_T12PR">CCU61_T12PR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_T13_t">CCUn_T13_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_T13">CCU60_T13</a>,       
+<a class="url" href="ccu61.html#CCU61_T13">CCU61_T13</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_T13PR_t">CCUn_T13PR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_T13PR">CCU60_T13PR</a>,       
+<a class="url" href="ccu61.html#CCU61_T13PR">CCU61_T13PR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_TCTR0_t">CCUn_TCTR0_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_TCTR0">CCU60_TCTR0</a>,       
+<a class="url" href="ccu61.html#CCU61_TCTR0">CCU61_TCTR0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_TCTR2_t">CCUn_TCTR2_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_TCTR2">CCU60_TCTR2</a>,       
+<a class="url" href="ccu61.html#CCU61_TCTR2">CCU61_TCTR2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_TCTR4_t">CCUn_TCTR4_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_TCTR4">CCU60_TCTR4</a>,       
+<a class="url" href="ccu61.html#CCU61_TCTR4">CCU61_TCTR4</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CCUn_TRPCTR_t">CCUn_TRPCTR_t</a></td>
+<td><a class="url" href="ccu60.html#CCU60_TRPCTR">CCU60_TRPCTR</a>,       
+<a class="url" href="ccu61.html#CCU61_TRPCTR">CCU61_TRPCTR</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="CCU61_MCFG">&nbsp;</a>
+<h3>CCU61_MCFG</h3>
+<h3>"Module Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_MCFG_ADDR = 0xF0003104</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_MCFG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000007</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_MCFG_t">CCUn_MCFG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_MCFG.bits</b>&nbsp;&quot;Module Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_MCFG_MASK = <tt>0x00000007</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_MCFG_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_MCFG_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T12</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>r</td>
+<td><tt>0x00000001</tt></td>
+<td>T12 Available
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The T12 block is not available. A write access to T12PR is ignored.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The T12 block is available. A write access to T12PR is executed.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>r</td>
+<td><tt>0x00000002</tt></td>
+<td>T13 Available
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The T13 block is not available. A write access to T13PR is ignored.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The T13 block is available. A write access to T13PR is executed.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>r</td>
+<td><tt>0x00000004</tt></td>
+<td>Multi-Channel Mode Available
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The multi-channel mode functionality is not available. A write access to MCMOUTS is ignored.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The multi-channel mode functionality is available. A write access to MCMOUTS is executed.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000007</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_ID">&nbsp;</a>
+<h3>CCU61_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_ID_ADDR = 0xF0003108</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000054XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_ID_t">CCUn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_ID_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MODNUM</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_PISEL0">&nbsp;</a>
+<h3>CCU61_PISEL0</h3>
+<h3>"Port Input Select Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_PISEL0_ADDR = 0xF0003110</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_PISEL0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_PISEL0_t">CCUn_PISEL0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_PISEL0.bits</b>&nbsp;&quot;Port Input Select Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_PISEL0_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_PISEL0_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_PISEL0_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ISCC60</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Input Select for CC60
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The signal CC60INA is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The signal CC60INB is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The signal CC60INC is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The signal CC60IND is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISCC61</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Input Select for CC61
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The signal CC61INA is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The signal CC61INB is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The signal CC61INC is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The signal CC61IND is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISCC62</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Input Select for CC62
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The signal CC62INA is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The signal CC62INB is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The signal CC62INC is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The signal CC62IND is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISTRP</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Input Select for CTRAP
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The signal CTRAPA is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The signal CTRAPB is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The signal CTRAPC is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The signal CTRAPD is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISPOS0</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Input Select for CCPOS0
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The signal CCPOS0A is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The signal CCPOS0B is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The signal CCPOS0C is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The signal CCPOS0D is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISPOS1</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Input Select for CCPOS1
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The signal CCPOS1A is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The signal CCPOS1B is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The signal CCPOS1C is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The signal CCPOS1D is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISPOS2</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Input Select for CCPOS2
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The signal CCPOS2A is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The signal CCPOS2B is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The signal CCPOS2C is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The signal CCPOS2D is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST12HR</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Input Select for T12HR
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Either signal T12HRA (if T12EXT=0) or T12HRE (if T12EXT=1) is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Either signal T12HRB (if T12EXT=0) or T12HRF (if T12EXT=1) is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Either signal T12HRC (if T12EXT=0) or T12HRG (if T12EXT=1) is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Either signal T12HRD (if T12EXT=0) or T12HRH (if T12EXT=1) is selected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_PISEL2">&nbsp;</a>
+<h3>CCU61_PISEL2</h3>
+<h3>"Port Input Select Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_PISEL2_ADDR = 0xF0003114</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_PISEL2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_PISEL2_t">CCUn_PISEL2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_PISEL2.bits</b>&nbsp;&quot;Port Input Select Register 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_PISEL2_MASK = <tt>0x000000ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_PISEL2_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_PISEL2_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IST13HR</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Input Select for T13HR
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Either signal T13HRA (if T13EXT=0) or T13HRE (if T13EXT=1) is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Either signal T13HRB (if T13EXT=0) or T13HRF (if T13EXT=1) is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Either signal T13HRC (if T13EXT=0) or T13HRG (if T13EXT=1) is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Either signal T13HRD (if T13EXT=0) or T13HRH (if T13EXT=1) is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISCNT12</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Input Select for T12 Counting Input
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The T12 prescaler generates the counting events. Bit TCTR4.T12CNT is not taken into account.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit TCTR4.T12CNT written with 1 is a counting event. The T12 prescaler is not taken into account.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The timer T12 is counting each rising edge detected in the selected T12HR signal.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The timer T12 is counting each falling edge detected in the selected T12HR signal.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISCNT13</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Input Select for T13 Counting Input
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The T13 prescaler generates the counting events. Bit TCTR4.T13CNT is not taken into account.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit TCTR4.T13CNT written with 1 is a counting event. The T13 prescaler is not taken into account.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The timer T13 is counting each rising edge detected in the selected T13HR signal.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The timer T13 is counting each falling edge detected in the selected T13HR signal.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12EXT</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Extension for T12HR Inputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>One of the signals T12HR[D:A] is selected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>One of the signals T12HR[H:E] is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13EXT</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Extension for T13HR Inputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>One of the signals T13HR[D:A] is selected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>One of the signals T13HR[H:E] is selected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000000ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_KSCFG">&nbsp;</a>
+<h3>CCU61_KSCFG</h3>
+<h3>"Kernel State Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_KSCFG_ADDR = 0xF0003118</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_KSCFG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_KSCFG_t">CCUn_KSCFG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_KSCFG.bits</b>&nbsp;&quot;Kernel State Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_KSCFG_MASK = <tt>0x0000bbbf</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_KSCFG_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_KSCFG_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MODEN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The module is switched off immediately (without respecting a stop condition). It does not react on mode control actions and the module clock is switched off. The module does not react on read accesses and ignores write accesses (except to KSCFG).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The module is switched on and can operate. After writing 1 to MODEN, it is recommended to read register KSCFG to avoid pipeline effects in the control block before accessing other CCU6 registers.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BPMODEN</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Bit Protection for MODEN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>MODEN is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>MODEN is updated with the written value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Module Acknowledge
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The acknowledge is not activated, because at least one of the module kernels is in a transition phase.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The acknowledge is activated, because all module kernels have reached the requested state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SUSREQ</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Suspend Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A suspend mode is not requested and bit field NOMCFG defines the CCU6 kernel mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A suspend mode is requested and bit field SUMCFG defines the CCU6 kernel mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>NOMCFG</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Normal Operation Mode Configuration
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Run mode 0 is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Run mode 1 is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Stop mode 0 is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Stop mode 1 is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BPNOM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Bit Protection for NOMCFG
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>NOMCFG is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>NOMCFG is updated with the written value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SUMCFG</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Suspend Mode Configuration
+</td>
+</tr>
+<tr>
+<td>BPSUM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Bit Protection for SUMCFG
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SUMCFG is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SUMCFG is updated with the written value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>COMCFG</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Clock Off Mode Configuration
+</td>
+</tr>
+<tr>
+<td>BPCOM</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Bit Protection for COMCFG
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>COMCFG is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>COMCFG is updated with the written value.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000333d</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000bbb3</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000000c</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_KSCSR">&nbsp;</a>
+<h3>CCU61_KSCSR</h3>
+<h3>"Kernel State Control Sensitivity Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_KSCSR_ADDR = 0xF000311C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_KSCSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_KSCSR_t">CCUn_KSCSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_KSCSR.bits</b>&nbsp;&quot;Kernel State Control Sensitivity Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_KSCSR_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_KSCSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_KSCSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SB0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Sensitivity Block x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Block x is not sensitive to stop mode 0 or stop mode 1 and behaves like in run mode 0. It continues normal operation without respecting the defined stop condition.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Block x is sensitive to stop mode 0 or stop mode 1. It is respecting the defined stop condition.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SB1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Sensitivity Block x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Block x is not sensitive to stop mode 0 or stop mode 1 and behaves like in run mode 0. It continues normal operation without respecting the defined stop condition.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Block x is sensitive to stop mode 0 or stop mode 1. It is respecting the defined stop condition.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SB2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Sensitivity Block x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Block x is not sensitive to stop mode 0 or stop mode 1 and behaves like in run mode 0. It continues normal operation without respecting the defined stop condition.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Block x is sensitive to stop mode 0 or stop mode 1. It is respecting the defined stop condition.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SB3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Sensitivity Block x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Block x is not sensitive to stop mode 0 or stop mode 1 and behaves like in run mode 0. It continues normal operation without respecting the defined stop condition.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Block x is sensitive to stop mode 0 or stop mode 1. It is respecting the defined stop condition.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_T12">&nbsp;</a>
+<h3>CCU61_T12</h3>
+<h3>"Timer T12 Counter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_T12_ADDR = 0xF0003120</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_T12_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_T12_t">CCUn_T12_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_T12.bits</b>&nbsp;&quot;Timer T12 Counter Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_T12_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_T12_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_T12_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T12CV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer 12 Counter Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_T12PR">&nbsp;</a>
+<h3>CCU61_T12PR</h3>
+<h3>"Timer 12 Period Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_T12PR_ADDR = 0xF0003124</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_T12PR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_T12PR_t">CCUn_T12PR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_T12PR.bits</b>&nbsp;&quot;Timer 12 Period Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_T12PR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_T12PR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_T12PR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T12PV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>T12 Period Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_T12DTC">&nbsp;</a>
+<h3>CCU61_T12DTC</h3>
+<h3>"Dead-Time Control Register for Timer12"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_T12DTC_ADDR = 0xF0003128</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_T12DTC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_T12DTC_t">CCUn_T12DTC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_T12DTC.bits</b>&nbsp;&quot;Dead-Time Control Register for Timer12&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_T12DTC_MASK = <tt>0x000077ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_T12DTC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_T12DTC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DTM</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Dead-Time
+</td>
+</tr>
+<tr>
+<td>DTE0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Dead Time Enable Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Dead-Time Counter x is disabled. The corresponding outputs switch from the passive state to the active state (according to the actual compare status) without any delay.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dead-Time Counter x is enabled. The corresponding outputs switch from the passive state to the active state (according to the compare status) with the delay programmed in bit field DTM.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DTE1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Dead Time Enable Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Dead-Time Counter x is disabled. The corresponding outputs switch from the passive state to the active state (according to the actual compare status) without any delay.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dead-Time Counter x is enabled. The corresponding outputs switch from the passive state to the active state (according to the compare status) with the delay programmed in bit field DTM.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DTE2</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Dead Time Enable Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Dead-Time Counter x is disabled. The corresponding outputs switch from the passive state to the active state (according to the actual compare status) without any delay.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dead-Time Counter x is enabled. The corresponding outputs switch from the passive state to the active state (according to the compare status) with the delay programmed in bit field DTM.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DTR0</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Dead Time Run Indication Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Dead-Time Counter x is currently in the passive state.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dead-Time Counter x is currently in the active state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DTR1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Dead Time Run Indication Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Dead-Time Counter x is currently in the passive state.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dead-Time Counter x is currently in the active state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DTR2</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Dead Time Run Indication Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Dead-Time Counter x is currently in the passive state.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dead-Time Counter x is currently in the active state.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000077ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000007ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00007000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC60R">&nbsp;</a>
+<h3>CCU61_CC60R</h3>
+<h3>"Capture/Compare Register for Channel CC60"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC60R_ADDR = 0xF0003130</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC60R.bits</b>&nbsp;&quot;Capture/Compare Register for Channel CC60&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC61R">&nbsp;</a>
+<h3>CCU61_CC61R</h3>
+<h3>"Capture/Compare Register for Channel CC61"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC61R_ADDR = 0xF0003134</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC61R.bits</b>&nbsp;&quot;Capture/Compare Register for Channel CC61&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC62R">&nbsp;</a>
+<h3>CCU61_CC62R</h3>
+<h3>"Capture/Compare Register for Channel CC62"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC62R_ADDR = 0xF0003138</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC62R.bits</b>&nbsp;&quot;Capture/Compare Register for Channel CC62&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC60SR">&nbsp;</a>
+<h3>CCU61_CC60SR</h3>
+<h3>"Capture/Compare Shadow Reg. for Channel CC60"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC60SR_ADDR = 0xF0003140</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC60SR.bits</b>&nbsp;&quot;Capture/Compare Shadow Reg. for Channel CC60&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmSR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCS</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Shadow Register for Channel x Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC61SR">&nbsp;</a>
+<h3>CCU61_CC61SR</h3>
+<h3>"Capture/Compare Shadow Reg. for Channel CC61"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC61SR_ADDR = 0xF0003144</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC61SR.bits</b>&nbsp;&quot;Capture/Compare Shadow Reg. for Channel CC61&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmSR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCS</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Shadow Register for Channel x Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC62SR">&nbsp;</a>
+<h3>CCU61_CC62SR</h3>
+<h3>"Capture/Compare Shadow Reg. for Channel CC62"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC62SR_ADDR = 0xF0003148</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC62SR.bits</b>&nbsp;&quot;Capture/Compare Shadow Reg. for Channel CC62&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmSR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCS</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Shadow Register for Channel x Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_T13">&nbsp;</a>
+<h3>CCU61_T13</h3>
+<h3>"Timer T13 Counter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_T13_ADDR = 0xF0003150</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_T13_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_T13_t">CCUn_T13_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_T13.bits</b>&nbsp;&quot;Timer T13 Counter Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_T13_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_T13_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_T13_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T13CV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer 13 Counter Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_T13PR">&nbsp;</a>
+<h3>CCU61_T13PR</h3>
+<h3>"Timer 13 Period Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_T13PR_ADDR = 0xF0003154</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_T13PR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_T13PR_t">CCUn_T13PR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_T13PR.bits</b>&nbsp;&quot;Timer 13 Period Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_T13PR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_T13PR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_T13PR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T13PV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>T13 Period Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC63R">&nbsp;</a>
+<h3>CCU61_CC63R</h3>
+<h3>"Compare Register for T13"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC63R_ADDR = 0xF0003158</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC63R.bits</b>&nbsp;&quot;Compare Register for T13&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCV</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CC63SR">&nbsp;</a>
+<h3>CCU61_CC63SR</h3>
+<h3>"Compare Shadow Register for T13"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CC63SR_ADDR = 0xF000315C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CCmSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CC63SR.bits</b>&nbsp;&quot;Compare Shadow Register for T13&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CCmSR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CCmSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCS</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Shadow Register for Channel x Capture/Compare Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CMPSTAT">&nbsp;</a>
+<h3>CCU61_CMPSTAT</h3>
+<h3>"Compare State Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CMPSTAT_ADDR = 0xF0003160</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CMPSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CMPSTAT_t">CCUn_CMPSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CMPSTAT.bits</b>&nbsp;&quot;Compare State Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CMPSTAT_MASK = <tt>0x0000ff7f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CMPSTAT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CMPSTAT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CC60ST</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Capture/Compare State Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>In compare mode, the timer count is less than the compare value. In capture mode, the selected edge has not yet been detected since the bit has been cleared by SW the last time.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>In compare mode, the counter value is greater than or equal to the compare value. In capture mode, the selected edge has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC61ST</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Capture/Compare State Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>In compare mode, the timer count is less than the compare value. In capture mode, the selected edge has not yet been detected since the bit has been cleared by SW the last time.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>In compare mode, the counter value is greater than or equal to the compare value. In capture mode, the selected edge has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC62ST</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Capture/Compare State Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>In compare mode, the timer count is less than the compare value. In capture mode, the selected edge has not yet been detected since the bit has been cleared by SW the last time.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>In compare mode, the counter value is greater than or equal to the compare value. In capture mode, the selected edge has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS60</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Sampled Hall Pattern Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input CCPOSx has been sampled as 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input CCPOSx has been sampled as 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS61</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Sampled Hall Pattern Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input CCPOSx has been sampled as 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input CCPOSx has been sampled as 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS62</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Sampled Hall Pattern Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input CCPOSx has been sampled as 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input CCPOSx has been sampled as 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC63ST</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Capture/Compare State Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>In compare mode, the timer count is less than the compare value. In capture mode, the selected edge has not yet been detected since the bit has been cleared by SW the last time.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>In compare mode, the counter value is greater than or equal to the compare value. In capture mode, the selected edge has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC60PS</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>Passive State Select for Compare Outputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>COUT60PS</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rwh</td>
+<td><tt>0x00000200</tt></td>
+<td>Passive State Select for Compare Outputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC61PS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Passive State Select for Compare Outputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>COUT61PS</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rwh</td>
+<td><tt>0x00000800</tt></td>
+<td>Passive State Select for Compare Outputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC62PS</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rwh</td>
+<td><tt>0x00001000</tt></td>
+<td>Passive State Select for Compare Outputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>COUT62PS</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Passive State Select for Compare Outputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>COUT63PS</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Passive State Select for Compare Outputs
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The corresponding compare signal is in passive state while CC6xST is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13IM</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rwh</td>
+<td><tt>0x00008000</tt></td>
+<td>T13 Inverted Modulation
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>T13 output CC63_O is equal to CC63ST.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>T13 output CC63_O is equal to CC63ST.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ff7f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ff00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ff7f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_CMPMODIF">&nbsp;</a>
+<h3>CCU61_CMPMODIF</h3>
+<h3>"Compare State Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_CMPMODIF_ADDR = 0xF0003164</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_CMPMODIF_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_CMPMODIF_t">CCUn_CMPMODIF_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_CMPMODIF.bits</b>&nbsp;&quot;Compare State Modification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_CMPMODIF_MASK = <tt>0x00004787</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_CMPMODIF_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_CMPMODIF_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MCC60S</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCC61S</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCC62S</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCC63S</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCC60R</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCC61R</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCC62R</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCC63R</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Capture/Compare Status Modification Bits
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Bit CC6xST is not changed.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit CC6xST is set.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit CC6xST is cleared.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00004787</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_T12MSEL">&nbsp;</a>
+<h3>CCU61_T12MSEL</h3>
+<h3>"T12 Mode Select Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_T12MSEL_ADDR = 0xF0003168</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_T12MSEL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_T12MSEL_t">CCUn_T12MSEL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_T12MSEL.bits</b>&nbsp;&quot;T12 Mode Select Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_T12MSEL_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_T12MSEL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_T12MSEL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MSEL60</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Capture/Compare Mode Selection
+</td>
+</tr>
+<tr>
+<td>MSEL61</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>rw</td>
+<td><tt>0x000000f0</tt></td>
+<td>Capture/Compare Mode Selection
+</td>
+</tr>
+<tr>
+<td>MSEL62</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>rw</td>
+<td><tt>0x00000f00</tt></td>
+<td>Capture/Compare Mode Selection
+</td>
+</tr>
+<tr>
+<td>HSYNC</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>rw</td>
+<td><tt>0x00007000</tt></td>
+<td>Hall Synchronization
+</td>
+</tr>
+<tr>
+<td>DBYP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Delay Bypass
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The bypass is not active. Dead-Time Counter0 is generating a delay after the source signal becomes active.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The bypass is active. Dead-Time Counter0 is not used for a delay.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_TCTR0">&nbsp;</a>
+<h3>CCU61_TCTR0</h3>
+<h3>"Timer Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_TCTR0_ADDR = 0xF0003170</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_TCTR0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_TCTR0_t">CCUn_TCTR0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_TCTR0.bits</b>&nbsp;&quot;Timer Control Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_TCTR0_MASK = <tt>0x00003fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_TCTR0_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_TCTR0_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T12CLK</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer T12 Input Clock Select
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>fT12 = fCC6</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>fT12 = fCC6 / 2</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>fT12 = fCC6 / 4</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>fT12 = fCC6 / 8</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>fT12 = fCC6 / 16</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>fT12 = fCC6 / 32</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>fT12 = fCC6 / 64</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>fT12 = fCC6 / 128</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12PRE</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Timer T12 Prescaler Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The additional prescaler for T12 is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The additional prescaler for T12 is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12R</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Timer T12 Run BitA concurrent set/clear action on T12R (from T12SSC, T12RR or T12RS) will have no effect. The bit T12R will remain unchanged.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer T12 is stopped.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer T12 is running.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STE12</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Timer T12 Shadow Transfer Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The shadow register transfer is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The shadow register transfer is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CDIR</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Count Direction of Timer T12
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>T12 counts up.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>T12 counts down.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>T12 Operating Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Edge-aligned Mode: T12 always counts up and continues counting from zero after reaching the period value.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Center-aligned Mode: T12 counts down after detecting a period-match and counts up after detecting a one-match.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13CLK</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Timer T13 Input Clock Select
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>fT13 = fCC6</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>fT13 = fCC6 / 2</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>fT13 = fCC6 / 4</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>fT13 = fCC6 / 8</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>fT13 = fCC6 / 16</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>fT13 = fCC6 / 32</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>fT13 = fCC6 / 64</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>fT13 = fCC6 / 128</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13PRE</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Timer T13 Prescaler Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The additional prescaler for T13 is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The additional prescaler for T13 is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13R</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Timer T13 Run BitA concurrent set/cleared action on T13R (from T13SSC, T13TEC, T13RR or T13RS) will have no effect. The bit T12R will remain unchanged.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer T13 is stopped.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer T13 is running.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STE13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer T13 Shadow Transfer Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The shadow register transfer is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The shadow register transfer is enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00003fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000f8f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00003070</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_TCTR2">&nbsp;</a>
+<h3>CCU61_TCTR2</h3>
+<h3>"Timer Control Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_TCTR2_ADDR = 0xF0003174</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_TCTR2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_TCTR2_t">CCUn_TCTR2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_TCTR2.bits</b>&nbsp;&quot;Timer Control Register 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_TCTR2_MASK = <tt>0x00000f7f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_TCTR2_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_TCTR2_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T12SSC</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Timer T12 Single Shot Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The single-shot mode is disabled, no HW action on T12R.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The single shot mode is enabled, the bit T12R is cleared by HW if - T12 reaches its period value in edge-aligned mode - T12 reaches the value 1 while down counting in center-aligned mode. In parallel to the clear action of bit T12R, the bits CC6xST (x=0, 1, 2) are cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13SSC</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Timer T13 Single Shot Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No HW action on T13R</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The single-shot mode is enabled, the bit T13R is cleared by HW if T13 reaches its period value. In parallel to the clear action of bit T13R, the bit CC63ST is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13TEC</td>
+<td>3</td>
+<td>2 - 4</td>
+<td>rw</td>
+<td><tt>0x0000001c</tt></td>
+<td>T13 Trigger Event Control
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>no action</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>set T13R on a T12 compare event on channel 0</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>set T13R on a T12 compare event on channel 1</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>set T13R on a T12 compare event on channel 2</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>set T13R on any T12 compare event (ch. 0, 1, 2)</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>set T13R upon a period-match of T12</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>set T13R upon a zero-match of T12 (while counting up)</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>set T13R on any edge of inputs CCPOSx</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13TED</td>
+<td>2</td>
+<td>5 - 6</td>
+<td>rw</td>
+<td><tt>0x00000060</tt></td>
+<td>Timer T13 Trigger Event DirectionExample: If the timer T13 is intended to start at any compare event on T12 (T13TEC=100) the trigger event direction can be programmed to - counting up >> a T12 channel 0, 1, 2 compare match triggers T13R only while T12 is counting up - counting down >> a T12 channel 0, 1, 2 compare match triggers T13R only while T12 is counting down - independent from bit CDIR >> each T12 channel 0, 1, 2 compare match triggers T13R The timer count direction is taken from the value of bit CDIR. As a result, if T12 is running in edge-aligned mode (counting up only), T13 can only be started automatically if bit field T13TED=01 or 11.
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>reserved, no action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>while T12 is counting up</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>while T12 is counting down</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>independent on the count direction of T12</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12RSEL</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Timer T12 External Run Selection
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The external setting of T12R is disabled.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit T12R is set if a rising edge of signal T12HR is detected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit T12R is set if a falling edge of signal T12HR is detected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Bit T12R is set if an edge of signal T12HR is detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13RSEL</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Timer T13 External Run Selection
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The external setting of T13R is disabled.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Bit T13R is set if a rising edge of signal T13HR is detected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Bit T13R is set if a falling edge of signal T13HR is detected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Bit T13R is set if an edge of signal T13HR is detected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000f7f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000f7f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_TCTR4">&nbsp;</a>
+<h3>CCU61_TCTR4</h3>
+<h3>"Timer Control Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_TCTR4_ADDR = 0xF0003178</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_TCTR4_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_TCTR4_t">CCUn_TCTR4_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_TCTR4.bits</b>&nbsp;&quot;Timer Control Register 4&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_TCTR4_MASK = <tt>0x0000e7ef</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_TCTR4_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_TCTR4_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T12RR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Timer T12 Run Reset
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>T12R is not influenced.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>T12R is cleared, T12 stops counting.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12RS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Timer T12 Run Set
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>T12R is not influenced.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>T12R is set, T12 starts counting.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12RES</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Timer T12 Reset
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect on T12.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The T12 counter register is cleared to zero. The switching of the output signals is according to the switching rules. Setting of T12RES has no impact on bit T12R.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DTRES</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Dead-Time Counter Reset
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect on the dead-time counters.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The three dead-time counter channels are cleared to zero.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12CNT</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Timer T12 Count Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>If enabled (PISEL2), timer T12 counts one step.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12STR</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer T12 Shadow Transfer Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>STE12 is set, enabling the shadow transfer.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12STD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer T12 Shadow Transfer Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>STE12 is cleared without triggering the shadow transfer.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13RR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T13 Run Reset
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>T13R is not influenced.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>T13R is cleared, T13 stops counting.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13RS</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer T13 Run Set
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>T13R is not influenced.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>T13R is set, T13 starts counting.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13RES</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Timer T13 Reset
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect on T13.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The T13 counter register is cleared to zero. The switching of the output signals is according to the switching rules. Setting of T13RES has no impact on bit T13R.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13CNT</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer T13 Count Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>If enabled (PISEL2), timer T13 counts one step.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13STR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer T13 Shadow Transfer Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>STE13 is set, enabling the shadow transfer.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13STD</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer T13 Shadow Transfer Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>STE13 is cleared without triggering the shadow transfer.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000e7ef</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_MODCTR">&nbsp;</a>
+<h3>CCU61_MODCTR</h3>
+<h3>"Modulation Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_MODCTR_ADDR = 0xF0003180</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_MODCTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_MODCTR_t">CCUn_MODCTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_MODCTR.bits</b>&nbsp;&quot;Modulation Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_MODCTR_MASK = <tt>0x0000bfbf</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_MODCTR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_MODCTR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T12MODEN</td>
+<td>6</td>
+<td>0 - 5</td>
+<td>rw</td>
+<td><tt>0x0000003f</tt></td>
+<td>T12 Modulation Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The modulation of the corresponding output signal by a T12 PWM pattern is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The modulation of the corresponding output signal by a T12 PWM pattern is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MCMEN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Multi-Channel Mode Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The modulation of the corresponding output signal by a multi-channel pattern according to bit field MCMOUT is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The modulation of the corresponding output signal by a multi-channel pattern according to bit field MCMOUT is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13MODEN</td>
+<td>6</td>
+<td>8 - 13</td>
+<td>rw</td>
+<td><tt>0x00003f00</tt></td>
+<td>T13 Modulation Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The modulation of the corresponding output signal by a T13 PWM pattern is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The modulation of the corresponding output signal by a T13 PWM pattern is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ECT13O</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Enable Compare Timer T13 Output
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output COUT63 is in the passive state.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output COUT63 is enabled for the PWM signal generated by T13.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000bfbf</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000bfbf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_TRPCTR">&nbsp;</a>
+<h3>CCU61_TRPCTR</h3>
+<h3>"Trap Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_TRPCTR_ADDR = 0xF0003184</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_TRPCTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_TRPCTR_t">CCUn_TRPCTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_TRPCTR.bits</b>&nbsp;&quot;Trap Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_TRPCTR_MASK = <tt>0x0000ff07</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_TRPCTR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_TRPCTR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TRPM0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Trap Mode Control Bits 1, 0
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The trap state is left (return to normal operation) after TRPF has become 0 again when a zero-match of T12 (while counting up) is detected (synchronization to T12).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The trap state is left (return to normal operation) after TRPF has become 0 again when a zero-match of T13 is detected (synchronization to T13).</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>reserved</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The trap state is left (return to normal operation) immediately after TRPF has become 0 again without any synchronization to T12 or T13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRPM1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Trap Mode Control Bits 1, 0
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The trap state is left (return to normal operation) after TRPF has become 0 again when a zero-match of T12 (while counting up) is detected (synchronization to T12).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The trap state is left (return to normal operation) after TRPF has become 0 again when a zero-match of T13 is detected (synchronization to T13).</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>reserved</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The trap state is left (return to normal operation) immediately after TRPF has become 0 again without any synchronization to T12 or T13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRPM2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Trap Mode Control Bit 2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Automatic Mode: Bit TRPF is cleared by HW if the trap input condition is no longer valid.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Manual Mode: Bit TRPF stays 0 after the trap input condition is no longer valid. It has to be cleared by SW by writing ISR.RTRPF=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRPEN</td>
+<td>6</td>
+<td>8 - 13</td>
+<td>rw</td>
+<td><tt>0x00003f00</tt></td>
+<td>Trap Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The trap functionality of the corresponding output signal is disabled. The output state is independent from bit IS.TRPS.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The trap functionality of the corresponding output signal is enabled. The output state is set to the passive while IS.TRPS=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRPEN13</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Trap Enable Control for Timer T13
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The trap functionality for output COUT63 is disabled. The output state is independent from bit IS.TRPS.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The trap functionality for output COUT63 is enabled. The output state is set to the passive while IS.TRPS=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRPPEN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Trap Pin Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The CCU6 trap functionality based on the input CTRAP is disabled. A CCU6 trap can only be generated by SW by setting bit TRPF.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The CCU6 trap functionality based on the input CTRAP is enabled. A CCU6 trap can be generated by SW by setting bit TRPF or by CTRAP=0.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ff07</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ff07</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_PSLR">&nbsp;</a>
+<h3>CCU61_PSLR</h3>
+<h3>"Passive State Level Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_PSLR_ADDR = 0xF0003188</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_PSLR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_PSLR_t">CCUn_PSLR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_PSLR.bits</b>&nbsp;&quot;Passive State Level Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_PSLR_MASK = <tt>0x000000bf</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_PSLR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_PSLR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PSL</td>
+<td>6</td>
+<td>0 - 5</td>
+<td>rwh</td>
+<td><tt>0x0000003f</tt></td>
+<td>Compare Outputs Passive State Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The passive level is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The passive level is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PSL63</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rwh</td>
+<td><tt>0x00000080</tt></td>
+<td>Passive State Level of Output COUT63
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The passive level is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The passive level is 1.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000000bf</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000000bf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000000bf</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_MCMOUTS">&nbsp;</a>
+<h3>CCU61_MCMOUTS</h3>
+<h3>"Multi-Channel Mode Output Shadow Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_MCMOUTS_ADDR = 0xF000318C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_MCMOUTS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_MCMOUTS_t">CCUn_MCMOUTS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_MCMOUTS.bits</b>&nbsp;&quot;Multi-Channel Mode Output Shadow Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_MCMOUTS_MASK = <tt>0x0000bfbf</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_MCMOUTS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_MCMOUTS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MCMPS</td>
+<td>6</td>
+<td>0 - 5</td>
+<td>rw</td>
+<td><tt>0x0000003f</tt></td>
+<td>Multi-Channel PWM Pattern Shadow
+</td>
+</tr>
+<tr>
+<td>STRMCM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Shadow Transfer Request for MCMPS
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit field MCMP is updated.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EXPHS</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Expected Hall Pattern Shadow
+</td>
+</tr>
+<tr>
+<td>CURHS</td>
+<td>3</td>
+<td>11 - 13</td>
+<td>rw</td>
+<td><tt>0x00003800</tt></td>
+<td>Current Hall Pattern Shadow
+</td>
+</tr>
+<tr>
+<td>STRHP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Shadow Transfer Request for the Hall Pattern
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit fields EXPH and CURH are updated.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00003f3f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000bfbf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_MCMOUT">&nbsp;</a>
+<h3>CCU61_MCMOUT</h3>
+<h3>"Multi-Channel Mode Output Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_MCMOUT_ADDR = 0xF0003190</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_MCMOUT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_MCMOUT_t">CCUn_MCMOUT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_MCMOUT.bits</b>&nbsp;&quot;Multi-Channel Mode Output Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_MCMOUT_MASK = <tt>0x00003f7f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_MCMOUT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_MCMOUT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MCMP</td>
+<td>6</td>
+<td>0 - 5</td>
+<td>rh</td>
+<td><tt>0x0000003f</tt></td>
+<td>Multi-Channel PWM Pattern
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output is set to the passive state. A PWM generated by T12 or T13 are not taken into account.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output can be in the active state, depending on the enabled PWM modulation signals generated by T12, T13 and the trap state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Reminder Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A shadow transfer MCM_ST is not requested.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A shadow transfer MCM_ST is requested, but has not yet been executed, because the selected synchronization condition has not yet occurred.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EXPH</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rh</td>
+<td><tt>0x00000700</tt></td>
+<td>Expected Hall Pattern
+</td>
+</tr>
+<tr>
+<td>CURH</td>
+<td>3</td>
+<td>11 - 13</td>
+<td>rh</td>
+<td><tt>0x00003800</tt></td>
+<td>Current Hall Pattern
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00003f7f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00003f7f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_MCMCTR">&nbsp;</a>
+<h3>CCU61_MCMCTR</h3>
+<h3>"Multi-Channel Mode Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_MCMCTR_ADDR = 0xF0003194</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_MCMCTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_MCMCTR_t">CCUn_MCMCTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_MCMCTR.bits</b>&nbsp;&quot;Multi-Channel Mode Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_MCMCTR_MASK = <tt>0x00000737</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_MCMCTR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_MCMCTR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SWSEL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Switching Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>No trigger request will be generated</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Correct Hall pattern detected (CM_CHE)</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>T13 period-match detected (while counting up)</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>T12 one-match (while counting down)</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>T12 channel 1 compare-match detected (phase delay function)</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>T12 period match detected (while counting up)</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>reserved, no trigger request will be generated</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>reserved, no trigger request will be generated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SWSYN</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Switching Synchronization
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Direct; the trigger event immediately leads to the shadow transfer</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>A T13 zero-match triggers the shadow transfer</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>A T12 zero-match (while counting up) triggers the shadow transfer</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved; no action</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STE12U</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Shadow Transfer Enable for T12 Upcounting
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The T12_ST shadow transfer mechanism is enabled if MCMEN=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STE12D</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Shadow Transfer Enable for T12 Downcounting
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The T12_ST shadow transfer mechanism is enabled if MCMEN=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STE13U</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Shadow Transfer Enable for T13 Upcounting
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The T13_ST shadow transfer mechanism is enabled if MCMEN=1.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000737</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000737</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_IMON">&nbsp;</a>
+<h3>CCU61_IMON</h3>
+<h3>"Input Monitoring Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_IMON_ADDR = 0xF0003198</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_IMON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_IMON_t">CCUn_IMON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_IMON.bits</b>&nbsp;&quot;Input Monitoring Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_IMON_MASK = <tt>0x000003ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_IMON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_IMON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LBE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>Lost Bit Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The lost bit event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The lost bit event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS0I</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rwh</td>
+<td><tt>0x00000002</tt></td>
+<td>Event indication for input signal CCPOSx
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A selected event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates a selected event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS1I</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Event indication for input signal CCPOSx
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A selected event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates a selected event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS2I</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rwh</td>
+<td><tt>0x00000008</tt></td>
+<td>Event indication for input signal CCPOSx
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A selected event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates a selected event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC60INI</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>Event indication for input signal CC6xIN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A selected event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates a selected event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC61INI</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rwh</td>
+<td><tt>0x00000020</tt></td>
+<td>Event indication for input signal CC6xIN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A selected event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates a selected event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC62INI</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rwh</td>
+<td><tt>0x00000040</tt></td>
+<td>Event indication for input signal CC6xIN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A selected event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates a selected event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTRAPI</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rwh</td>
+<td><tt>0x00000080</tt></td>
+<td>Event indication for input signal CTRAP
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>An event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates an event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12HRI</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>Event indication for input signal T12HR
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>An event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates an event has occured.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13HRI</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rwh</td>
+<td><tt>0x00000200</tt></td>
+<td>Event indication for input signal T13HR
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>An event has not occured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Edge detection indicates an event has occured.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000003ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_LI">&nbsp;</a>
+<h3>CCU61_LI</h3>
+<h3>"Lost Indicator Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_LI_ADDR = 0xF000319C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_LI_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_LI_t">CCUn_LI_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_LI.bits</b>&nbsp;&quot;Lost Indicator Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_LI_MASK = <tt>0x0000e3fe</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_LI_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_LI_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CCPOS0EN</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Lost Indicator Enable for input signal CCPOSx
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS1EN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Lost Indicator Enable for input signal CCPOSx
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCPOS2EN</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Lost Indicator Enable for input signal CCPOSx
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC60INEN</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Lost Indicator Enable for input signal CC6xIN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC61INEN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Lost Indicator Enable for input signal CC6xIN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CC62INEN</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Lost Indicator Enable for input signal CC6xIN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTRAPEN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Lost Indicator Enable for inputsignal CTRAP
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12HREN</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Lost Indicator Enable for input signal T12HR
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13HREN</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Lost Indicator Enable for input signal T13HR
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Input signal is disabled for a lost bit event detection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Input signal is enabled for a lost bit event detection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LBEEN</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Interrupt Enable for Lost Bit Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Lost bit event is disabled for the activation of a SRx line.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Lost bit event is enabled for the activation of a SRx line.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INPLBE</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Interrupt Node Pointer for lost bit event
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 is selected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000e3fe</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000e3fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_IS">&nbsp;</a>
+<h3>CCU61_IS</h3>
+<h3>"Interrupt Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_IS_ADDR = 0xF00031A0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_IS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_IS_t">CCUn_IS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_IS.bits</b>&nbsp;&quot;Interrupt Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_IS_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_IS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_IS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ICC60R</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ICC60F</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ICC61R</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ICC61F</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ICC62R</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ICC62F</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12OM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer T12 One-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T12PM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer T12 Period-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13CM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T13 Compare-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T13PM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer T13 Period-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRPF</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Trap Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The trap condition has not been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The trap condition is / has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRPS</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Trap StateDuring the trap state, the selected outputs are set to the passive state. The logic level driven during the passive state is defined by the corresponding bit in register PSLR. Bits TRPS=1 and TRPF=0 can occur if the trap condition is no longer active but the selected synchronization has not yet taken place.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The trap state is not active.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The trap state is active.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Correct Hall Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WHE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Wrong Hall Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IDLE</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>IDLE State
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit field MCMP is cleared, the selected outputs are set to passive state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Multi-Channel Mode Shadow Transfer Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The event has not yet been detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The event has been detected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_ISS">&nbsp;</a>
+<h3>CCU61_ISS</h3>
+<h3>"Interrupt Status Set Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_ISS_ADDR = 0xF00031A4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_ISS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_ISS_t">CCUn_ISS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_ISS.bits</b>&nbsp;&quot;Interrupt Status Set Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_ISS_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_ISS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_ISS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SCC60R</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Set Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xR will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCC60F</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Set Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xF will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCC61R</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Set Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xR will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCC61F</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Set Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xF will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCC62R</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Set Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xR will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCC62F</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Set Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xF will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ST12OM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Set Timer T12 One-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T12OM will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ST12PM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Set Timer T12 Period-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T12PM will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ST13CM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Set Timer T13 Compare-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T13CM will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ST13PM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Set Timer T13 Period-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T13PM will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STRPF</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Set Trap Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bits TRPF and TRPS will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SWHC</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Software Hall Compare
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The Hall compare action is triggered.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCHE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>w</td>
+<td><tt>0x00001000</tt></td>
+<td>Set Correct Hall Event Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CHE will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SWHE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Set Wrong Hall Event Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit WHE will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SIDLE</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Set IDLE Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit IDLE will be set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SSTR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Set STR Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STR will be set.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_ISR">&nbsp;</a>
+<h3>CCU61_ISR</h3>
+<h3>"Interrupt Status Reset Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_ISR_ADDR = 0xF00031A8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_ISR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_ISR_t">CCUn_ISR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_ISR.bits</b>&nbsp;&quot;Interrupt Status Reset Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_ISR_MASK = <tt>0x0000f7ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_ISR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_ISR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RCC60R</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Reset Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xR will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCC60F</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Reset Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xF will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCC61R</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Reset Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xR will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCC61F</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Reset Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xF will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCC62R</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Reset Capture, Compare-Match Rising Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xR will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCC62F</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Reset Capture, Compare-Match Falling Edge Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CC6xF will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RT12OM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Reset Timer T12 One-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T12OM will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RT12PM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Reset Timer T12 Period-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T12PM IS will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RT13CM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Reset Timer T13 Compare-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T13CM will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RT13PM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Reset Timer T13 Period-Match Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit T13PM will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RTRPF</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Reset Trap Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit TRPF will be cleared (not taken into account while input CTRAP=0 and TRPPEN=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCHE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>w</td>
+<td><tt>0x00001000</tt></td>
+<td>Reset Correct Hall Event Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CHE will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RWHE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Reset Wrong Hall Event Flag
+<table class="valdesc">
+<tr><td>1</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>0</td><td>&nbsp;</td><td>Bit WHE will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RIDLE</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Reset IDLE Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit IDLE will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RSTR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Reset STR Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STR will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000f7ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_INP">&nbsp;</a>
+<h3>CCU61_INP</h3>
+<h3>"Interrupt Node Pointer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_INP_ADDR = 0xF00031AC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_INP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00003940</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_INP_t">CCUn_INP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_INP.bits</b>&nbsp;&quot;Interrupt Node Pointer Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_INP_MASK = <tt>0x00003fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_INP_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_INP_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>INPCC60</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Interrupt Node Pointer for Channel CC6x Interrupts
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INPCC61</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Interrupt Node Pointer for Channel CC6x Interrupts
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INPCC62</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Interrupt Node Pointer for Channel CC6x Interrupts
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INPCHE</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Interrupt Node Pointer for the CHE Interrupt
+</td>
+</tr>
+<tr>
+<td>INPERR</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Interrupt Node Pointer for Error Interrupts
+</td>
+</tr>
+<tr>
+<td>INPT12</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Interrupt Node Pointer for Timer12 Interrupts
+</td>
+</tr>
+<tr>
+<td>INPT13</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Interrupt Node Pointer for Timer13 Interrupt
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00003fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00003fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_IEN">&nbsp;</a>
+<h3>CCU61_IEN</h3>
+<h3>"Interrupt Enable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_IEN_ADDR = 0xF00031B0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_IEN_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_IEN_t">CCUn_IEN_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_IEN.bits</b>&nbsp;&quot;Interrupt Enable Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_IEN_MASK = <tt>0x0000f7ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_IEN_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_IEN_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ENCC60R</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Capture, Compare-Match Rising Edge Interrupt Enable for Channel CC6x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit CC6xR in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit CC6xR in register IS occurs. The service request output that will be activated is selected by bit field INPCC6x.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENCC60F</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Capture, Compare-Match Falling Edge Interrupt Enable for Channel CC6x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit CC6xF in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit CC6xF in register IS occurs. The service request output that will be activated is selected by bit field INPCC6x.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENCC61R</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Capture, Compare-Match Rising Edge Interrupt Enable for Channel CC6x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit CC6xR in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit CC6xR in register IS occurs. The service request output that will be activated is selected by bit field INPCC6x.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENCC61F</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Capture, Compare-Match Falling Edge Interrupt Enable for Channel CC6x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit CC6xF in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit CC6xF in register IS occurs. The service request output that will be activated is selected by bit field INPCC6x.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENCC62R</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Capture, Compare-Match Rising Edge Interrupt Enable for Channel CC6x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit CC6xR in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit CC6xR in register IS occurs. The service request output that will be activated is selected by bit field INPCC6x.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENCC62F</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Capture, Compare-Match Falling Edge Interrupt Enable for Channel CC6x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit CC6xF in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit CC6xF in register IS occurs. The service request output that will be activated is selected by bit field INPCC6x.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENT12OM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Enable Interrupt for T12 One-Match
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit T12OM in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit T12OM in register IS occurs. The service request output that will be activated is selected by bit field INPT12.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENT12PM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Enable Interrupt for T12 Period-Match
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit T12PM in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit T12PM in register IS occurs. The service request output that will be activated is selected by bit field INPT12.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENT13CM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Enable Interrupt for T13 Compare-Match
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit T13CM in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit T13CM in register IS occurs. The service request output that will be activated is selected by bit field INPT13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENT13PM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Enable Interrupt for T13 Period-Match
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit T13PM in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit T13PM in register IS occurs. The service request output that will be activated is selected by bit field INPT13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENTRPF</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Enable Interrupt for Trap Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit TRPF in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit TRPF in register IS occurs. The service request output that will be activated is selected by bit field INPERR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENCHE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Enable Interrupt for Correct Hall Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit CHE in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit CHE in register IS occurs. The service request output that will be activated is selected by bit field INPCHE.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENWHE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Enable Interrupt for Wrong Hall Event
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit WHE in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit WHE in register IS occurs. The service request output that will be activated is selected by bit field INPERR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENIDLE</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Enable Idle
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The bit IDLE is not automatically set when a wrong hall event is detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The bit IDLE is automatically set when a wrong hall event is detected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENSTR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Enable Multi-Channel Mode Shadow Transfer Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt will be generated if the set condition for bit STR in register IS occurs.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An interrupt will be generated if the set condition for bit STR in register IS occurs. The service request output that will be activated is selected by bit field INPCHE.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000f7ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000f7ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_SRC3">&nbsp;</a>
+<h3>CCU61_SRC3</h3>
+<h3>"CCU61 Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_SRC3_ADDR = 0xF00031F0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_SRC3.bits</b>&nbsp;&quot;CCU61 Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_SRC2">&nbsp;</a>
+<h3>CCU61_SRC2</h3>
+<h3>"CCU61 Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_SRC2_ADDR = 0xF00031F4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_SRC2.bits</b>&nbsp;&quot;CCU61 Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_SRC1">&nbsp;</a>
+<h3>CCU61_SRC1</h3>
+<h3>"CCU61 Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_SRC1_ADDR = 0xF00031F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_SRC1.bits</b>&nbsp;&quot;CCU61 Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CCU61_SRC0">&nbsp;</a>
+<h3>CCU61_SRC0</h3>
+<h3>"CCU61 Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CCU61_SRC0_ADDR = 0xF00031FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CCUn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CCU61_SRC0.bits</b>&nbsp;&quot;CCU61 Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CCUn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CCUn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,837 @@
+<html>
+<head>
+<title>TriCore TC1766B (Core_Debug_Registers)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>Core_Debug_Registers</h2>
+
+<h2><tt>#include &lt;tc1766b/core_debug_registers.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#DBGSR">DBGSR</a></td>
+<td>Debug Status Register</td>
+<td>0xF7E1FD00</td>
+<td><a class="url" href="types/d.html#DBGSR_t">DBGSR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EXEVT">EXEVT</a></td>
+<td>External Break Input Event Specifier Register</td>
+<td>0xF7E1FD08</td>
+<td><a class="url" href="types/e.html#EXEVT_t">EXEVT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CREVT">CREVT</a></td>
+<td>Core SFR Access Break Event Specifier Register</td>
+<td>0xF7E1FD0C</td>
+<td><a class="url" href="types/c.html#CREVT_t">CREVT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SWEVT">SWEVT</a></td>
+<td>Debug Instruction Break Event Specifier Register</td>
+<td>0xF7E1FD10</td>
+<td><a class="url" href="types/s.html#SWEVT_t">SWEVT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#TR0EVT">TR0EVT</a></td>
+<td>Trigger Event 0 Specifier Register</td>
+<td>0xF7E1FD20</td>
+<td><a class="url" href="types/t.html#TRnEVT_t">TRnEVT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#TR1EVT">TR1EVT</a></td>
+<td>Trigger Event 1 Specifier Register</td>
+<td>0xF7E1FD24</td>
+<td><a class="url" href="types/t.html#TRnEVT_t">TRnEVT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMS">DMS</a></td>
+<td>Debug Monitor Start Address Register</td>
+<td>0xF7E1FD40</td>
+<td><a class="url" href="types/d.html#DMS_t">DMS_t</a></td>
+<td>0xDE000000</td>
+<td>U,SV,32</td>
+<td>U,SV,NC,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DCX">DCX</a></td>
+<td>Debug Context Save Area Pointer</td>
+<td>0xF7E1FD44</td>
+<td><a class="url" href="types/d.html#DCX_t">DCX_t</a></td>
+<td>0xDE800000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CREVT_t">CREVT_t</a></td>
+<td><a class="url" href="core_debug_registers.html#CREVT">CREVT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DBGSR_t">DBGSR_t</a></td>
+<td><a class="url" href="core_debug_registers.html#DBGSR">DBGSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DCX_t">DCX_t</a></td>
+<td><a class="url" href="core_debug_registers.html#DCX">DCX</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DMS_t">DMS_t</a></td>
+<td><a class="url" href="core_debug_registers.html#DMS">DMS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EXEVT_t">EXEVT_t</a></td>
+<td><a class="url" href="core_debug_registers.html#EXEVT">EXEVT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SWEVT_t">SWEVT_t</a></td>
+<td><a class="url" href="core_debug_registers.html#SWEVT">SWEVT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/t.html#TRnEVT_t">TRnEVT_t</a></td>
+<td><a class="url" href="core_debug_registers.html#TR0EVT">TR0EVT</a>,       
+<a class="url" href="core_debug_registers.html#TR1EVT">TR1EVT</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="DBGSR">&nbsp;</a>
+<h3>DBGSR</h3>
+<h3>"Debug Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DBGSR_ADDR = 0xF7E1FD00</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DBGSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DBGSR_t">DBGSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DBGSR.bits</b>&nbsp;&quot;Debug Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>DBGSR_DE_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>DBGSR_DE_SHIFT</td>
+</tr>
+<tr>
+<td>HALT</td>
+<td>2</td>
+<td>1 - 2</td>
+<td>DBGSR_HALT_MASK</td>
+<td><tt>0x00000006</tt></td>
+<td>rwh</td>
+<td>DBGSR_HALT_SHIFT</td>
+</tr>
+<tr>
+<td>SUSP</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>DBGSR_SUSP_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rwh</td>
+<td>DBGSR_SUSP_SHIFT</td>
+</tr>
+<tr>
+<td>PREVSUSP</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>DBGSR_PREVSUSP_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>DBGSR_PREVSUSP_SHIFT</td>
+</tr>
+<tr>
+<td>PEVT</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>DBGSR_PEVT_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rwh</td>
+<td>DBGSR_PEVT_SHIFT</td>
+</tr>
+<tr>
+<td>EVTSRC</td>
+<td>5</td>
+<td>8 - 12</td>
+<td>DBGSR_EVTSRC_MASK</td>
+<td><tt>0x00001f00</tt></td>
+<td>rh</td>
+<td>DBGSR_EVTSRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DBGSR_MASK</td><td><tt>0x00001fd7</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fd7</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000096</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fd7</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EXEVT">&nbsp;</a>
+<h3>EXEVT</h3>
+<h3>"External Break Input Event Specifier Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EXEVT_ADDR = 0xF7E1FD08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EXEVT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EXEVT_t">EXEVT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EXEVT.bits</b>&nbsp;&quot;External Break Input Event Specifier Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EVTA</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EXEVT_EVTA_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EXEVT_EVTA_SHIFT</td>
+</tr>
+<tr>
+<td>BBM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EXEVT_BBM_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EXEVT_BBM_SHIFT</td>
+</tr>
+<tr>
+<td>SUSP</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>EXEVT_SUSP_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>EXEVT_SUSP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EXEVT_MASK</td><td><tt>0x0000002f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000002f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000002f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CREVT">&nbsp;</a>
+<h3>CREVT</h3>
+<h3>"Core SFR Access Break Event Specifier Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CREVT_ADDR = 0xF7E1FD0C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>CREVT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CREVT_t">CREVT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CREVT.bits</b>&nbsp;&quot;Core SFR Access Break Event Specifier Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EVTA</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>CREVT_EVTA_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>CREVT_EVTA_SHIFT</td>
+</tr>
+<tr>
+<td>BBM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CREVT_BBM_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>CREVT_BBM_SHIFT</td>
+</tr>
+<tr>
+<td>SUSP</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CREVT_SUSP_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>CREVT_SUSP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CREVT_MASK</td><td><tt>0x0000002f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000002f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000002f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SWEVT">&nbsp;</a>
+<h3>SWEVT</h3>
+<h3>"Debug Instruction Break Event Specifier Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SWEVT_ADDR = 0xF7E1FD10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SWEVT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SWEVT_t">SWEVT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SWEVT.bits</b>&nbsp;&quot;Debug Instruction Break Event Specifier Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EVTA</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>SWEVT_EVTA_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>SWEVT_EVTA_SHIFT</td>
+</tr>
+<tr>
+<td>BBM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SWEVT_BBM_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>SWEVT_BBM_SHIFT</td>
+</tr>
+<tr>
+<td>SUSP</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SWEVT_SUSP_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>SWEVT_SUSP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SWEVT_MASK</td><td><tt>0x0000002f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000002f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000002f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="TR0EVT">&nbsp;</a>
+<h3>TR0EVT</h3>
+<h3>"Trigger Event 0 Specifier Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>TR0EVT_ADDR = 0xF7E1FD20</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>TRnEVT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/t.html#TRnEVT_t">TRnEVT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>TR0EVT.bits</b>&nbsp;&quot;Trigger Event 0 Specifier Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EVTA</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>TRnEVT_EVTA_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>TRnEVT_EVTA_SHIFT</td>
+</tr>
+<tr>
+<td>BBM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>TRnEVT_BBM_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>TRnEVT_BBM_SHIFT</td>
+</tr>
+<tr>
+<td>SUSP</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>TRnEVT_SUSP_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>TRnEVT_SUSP_SHIFT</td>
+</tr>
+<tr>
+<td>DLR_LR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>TRnEVT_DLR_LR_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>TRnEVT_DLR_LR_SHIFT</td>
+</tr>
+<tr>
+<td>DLR_U</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>TRnEVT_DLR_U_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>TRnEVT_DLR_U_SHIFT</td>
+</tr>
+<tr>
+<td>DU_LR</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>TRnEVT_DU_LR_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>TRnEVT_DU_LR_SHIFT</td>
+</tr>
+<tr>
+<td>DU_U</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>TRnEVT_DU_U_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>TRnEVT_DU_U_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>TRnEVT_MASK</td><td><tt>0x00000f2f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000f2f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000f2f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="TR1EVT">&nbsp;</a>
+<h3>TR1EVT</h3>
+<h3>"Trigger Event 1 Specifier Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>TR1EVT_ADDR = 0xF7E1FD24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>TRnEVT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/t.html#TRnEVT_t">TRnEVT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>TR1EVT.bits</b>&nbsp;&quot;Trigger Event 1 Specifier Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EVTA</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>TRnEVT_EVTA_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>TRnEVT_EVTA_SHIFT</td>
+</tr>
+<tr>
+<td>BBM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>TRnEVT_BBM_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>TRnEVT_BBM_SHIFT</td>
+</tr>
+<tr>
+<td>SUSP</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>TRnEVT_SUSP_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>TRnEVT_SUSP_SHIFT</td>
+</tr>
+<tr>
+<td>DLR_LR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>TRnEVT_DLR_LR_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>TRnEVT_DLR_LR_SHIFT</td>
+</tr>
+<tr>
+<td>DLR_U</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>TRnEVT_DLR_U_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>TRnEVT_DLR_U_SHIFT</td>
+</tr>
+<tr>
+<td>DU_LR</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>TRnEVT_DU_LR_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>TRnEVT_DU_LR_SHIFT</td>
+</tr>
+<tr>
+<td>DU_U</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>TRnEVT_DU_U_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>TRnEVT_DU_U_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>TRnEVT_MASK</td><td><tt>0x00000f2f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000f2f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000f2f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMS">&nbsp;</a>
+<h3>DMS</h3>
+<h3>"Debug Monitor Start Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMS_ADDR = 0xF7E1FD40</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xDE000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMS_t">DMS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMS.bits</b>&nbsp;&quot;Debug Monitor Start Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DMSADR</td>
+<td>31</td>
+<td>1 - 31</td>
+<td>DMS_DMSADR_MASK</td>
+<td><tt>0xfffffffe</tt></td>
+<td>rw</td>
+<td>DMS_DMSADR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMS_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DCX">&nbsp;</a>
+<h3>DCX</h3>
+<h3>"Debug Context Save Area Pointer"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DCX_ADDR = 0xF7E1FD44</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DCX_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xDE800000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DCX_t">DCX_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DCX.bits</b>&nbsp;&quot;Debug Context Save Area Pointer&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DCXPTR_3_0</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>DCX_DCXPTR_3_0_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>DCX_DCXPTR_3_0_SHIFT</td>
+</tr>
+<tr>
+<td>DCXPTR_9_4</td>
+<td>6</td>
+<td>4 - 9</td>
+<td>DCX_DCXPTR_9_4_MASK</td>
+<td><tt>0x000003f0</tt></td>
+<td>rw</td>
+<td>DCX_DCXPTR_9_4_SHIFT</td>
+</tr>
+<tr>
+<td>DCXPTR_15_10</td>
+<td>6</td>
+<td>10 - 15</td>
+<td>DCX_DCXPTR_15_10_MASK</td>
+<td><tt>0x0000fc00</tt></td>
+<td>rw</td>
+<td>DCX_DCXPTR_15_10_SHIFT</td>
+</tr>
+<tr>
+<td>DCXPTR_31_16</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>DCX_DCXPTR_31_16_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>rw</td>
+<td>DCX_DCXPTR_31_16_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DCX_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

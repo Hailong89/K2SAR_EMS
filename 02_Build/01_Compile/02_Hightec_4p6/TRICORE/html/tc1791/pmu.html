@@ -1,0 +1,6332 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1791 (PMU)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>PMU</h2>
+
+<h2><tt>#include &lt;tc1791/pmu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#PMU0_ID">PMU0_ID</a></td>
+<td>PMU0 Identification Register</td>
+<td>0xF8000508</td>
+<td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td>
+<td>0x0081C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PMU1_ID">PMU1_ID</a></td>
+<td>PMU1 Identification Register</td>
+<td>0xF8000608</td>
+<td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td>
+<td>0x0082C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_ID">FLASH0_ID</a></td>
+<td>Flash Module Identification Register</td>
+<td>0xF8002008</td>
+<td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td>
+<td>0x0083C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_FSR">FLASH0_FSR</a></td>
+<td>Flash Status Register</td>
+<td>0xF8002010</td>
+<td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_FCON">FLASH0_FCON</a></td>
+<td>Flash Configuration Register</td>
+<td>0xF8002014</td>
+<td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td>
+<td>0x00074F08</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_MARP">FLASH0_MARP</a></td>
+<td>Margin Control Register PFLASH</td>
+<td>0xF8002018</td>
+<td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_MARD">FLASH0_MARD</a></td>
+<td>Margin Control Register DFLASH</td>
+<td>0xF800201C</td>
+<td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_PROCON0">FLASH0_PROCON0</a></td>
+<td>Flash Protection Config. User 0</td>
+<td>0xF8002020</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_PROCON1">FLASH0_PROCON1</a></td>
+<td>Flash Protection Config. User 1</td>
+<td>0xF8002024</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_PROCON2">FLASH0_PROCON2</a></td>
+<td>Flash Protection Config. User 2</td>
+<td>0xF8002028</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_XFSR">FLASH0_XFSR</a></td>
+<td>Extended Flash Status Register</td>
+<td>0xF800202C</td>
+<td><a class="url" href="types/f.html#FLASHn_XFSR_t">FLASHn_XFSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_SEMA">FLASH0_SEMA</a></td>
+<td>Flash Access Semaphore</td>
+<td>0xF8002030</td>
+<td><a class="url" href="types/f.html#FLASHn_SEMA_t">FLASHn_SEMA_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_SHEBOOT0">FLASH0_SHEBOOT0</a></td>
+<td>SHE Secure Boot Cfg</td>
+<td>0xF8002034</td>
+<td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_SHEBOOT1">FLASH0_SHEBOOT1</a></td>
+<td>SHE Secure Boot Cfg</td>
+<td>0xF8002038</td>
+<td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_SHEBOOT2">FLASH0_SHEBOOT2</a></td>
+<td>SHE Secure Boot Cfg</td>
+<td>0xF800203C</td>
+<td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_RDBCFG0">FLASH0_RDBCFG0</a></td>
+<td>Read Buffer Cfg 0</td>
+<td>0xF8002040</td>
+<td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td>
+<td>0x00000002</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_RDBCFG1">FLASH0_RDBCFG1</a></td>
+<td>Read Buffer Cfg 1</td>
+<td>0xF8002044</td>
+<td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td>
+<td>0x00000004</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_RDBCFG2">FLASH0_RDBCFG2</a></td>
+<td>Read Buffer Cfg 2</td>
+<td>0xF8002048</td>
+<td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td>
+<td>0x0000000D</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_ECCW">FLASH0_ECCW</a></td>
+<td>ECC Write Register</td>
+<td>0xF80020E0</td>
+<td><a class="url" href="types/f.html#FLASHn_ECCW_t">FLASHn_ECCW_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_ECCR">FLASH0_ECCR</a></td>
+<td>ECC Read Register</td>
+<td>0xF80020E4</td>
+<td><a class="url" href="types/f.html#FLASHn_ECCR_t">FLASHn_ECCR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_ID">FLASH1_ID</a></td>
+<td>Flash Module Identification Register</td>
+<td>0xF8004008</td>
+<td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td>
+<td>0x0084C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_FSR">FLASH1_FSR</a></td>
+<td>Flash Status Register</td>
+<td>0xF8004010</td>
+<td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_FCON">FLASH1_FCON</a></td>
+<td>Flash Configuration Register</td>
+<td>0xF8004014</td>
+<td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td>
+<td>0x00074F08</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_MARP">FLASH1_MARP</a></td>
+<td>Margin Control Register PFLASH</td>
+<td>0xF8004018</td>
+<td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_MARD">FLASH1_MARD</a></td>
+<td>Margin Control Register DFLASH</td>
+<td>0xF800401C</td>
+<td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_PROCON0">FLASH1_PROCON0</a></td>
+<td>Flash Protection Config. User 0</td>
+<td>0xF8004020</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_PROCON1">FLASH1_PROCON1</a></td>
+<td>Flash Protection Config. User 1</td>
+<td>0xF8004024</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_PROCON2">FLASH1_PROCON2</a></td>
+<td>Flash Protection Config. User 2</td>
+<td>0xF8004028</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_XFSR">FLASH1_XFSR</a></td>
+<td>Extended Flash Status Register</td>
+<td>0xF800402C</td>
+<td><a class="url" href="types/f.html#FLASHn_XFSR_t">FLASHn_XFSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_SEMA">FLASH1_SEMA</a></td>
+<td>Flash Access Semaphore</td>
+<td>0xF8004030</td>
+<td><a class="url" href="types/f.html#FLASHn_SEMA_t">FLASHn_SEMA_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_SHEBOOT0">FLASH1_SHEBOOT0</a></td>
+<td>SHE Secure Boot Cfg</td>
+<td>0xF8004034</td>
+<td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_SHEBOOT1">FLASH1_SHEBOOT1</a></td>
+<td>SHE Secure Boot Cfg</td>
+<td>0xF8004038</td>
+<td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_SHEBOOT2">FLASH1_SHEBOOT2</a></td>
+<td>SHE Secure Boot Cfg</td>
+<td>0xF800403C</td>
+<td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_RDBCFG0">FLASH1_RDBCFG0</a></td>
+<td>Read Buffer Cfg 0</td>
+<td>0xF8004040</td>
+<td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td>
+<td>0x00000002</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_RDBCFG1">FLASH1_RDBCFG1</a></td>
+<td>Read Buffer Cfg 1</td>
+<td>0xF8004044</td>
+<td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td>
+<td>0x00000004</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_RDBCFG2">FLASH1_RDBCFG2</a></td>
+<td>Read Buffer Cfg 2</td>
+<td>0xF8004048</td>
+<td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td>
+<td>0x0000000D</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_ECCW">FLASH1_ECCW</a></td>
+<td>ECC Write Register</td>
+<td>0xF80040E0</td>
+<td><a class="url" href="types/f.html#FLASHn_ECCW_t">FLASHn_ECCW_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_ECCR">FLASH1_ECCR</a></td>
+<td>ECC Read Register</td>
+<td>0xF80040E4</td>
+<td><a class="url" href="types/f.html#FLASHn_ECCR_t">FLASHn_ECCR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_ECCR_t">FLASHn_ECCR_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_ECCR">FLASH0_ECCR</a>,       
+<a class="url" href="pmu.html#FLASH1_ECCR">FLASH1_ECCR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_ECCW_t">FLASHn_ECCW_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_ECCW">FLASH0_ECCW</a>,       
+<a class="url" href="pmu.html#FLASH1_ECCW">FLASH1_ECCW</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_FCON">FLASH0_FCON</a>,       
+<a class="url" href="pmu.html#FLASH1_FCON">FLASH1_FCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_FSR">FLASH0_FSR</a>,       
+<a class="url" href="pmu.html#FLASH1_FSR">FLASH1_FSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_ID">FLASH0_ID</a>,       
+<a class="url" href="pmu.html#FLASH1_ID">FLASH1_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_MARD">FLASH0_MARD</a>,       
+<a class="url" href="pmu.html#FLASH1_MARD">FLASH1_MARD</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_MARP">FLASH0_MARP</a>,       
+<a class="url" href="pmu.html#FLASH1_MARP">FLASH1_MARP</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_PROCON0">FLASH0_PROCON0</a>,       
+<a class="url" href="pmu.html#FLASH1_PROCON0">FLASH1_PROCON0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_PROCON1">FLASH0_PROCON1</a>,       
+<a class="url" href="pmu.html#FLASH1_PROCON1">FLASH1_PROCON1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_PROCON2">FLASH0_PROCON2</a>,       
+<a class="url" href="pmu.html#FLASH1_PROCON2">FLASH1_PROCON2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_RDBCFG0">FLASH0_RDBCFG0</a>,       
+<a class="url" href="pmu.html#FLASH0_RDBCFG1">FLASH0_RDBCFG1</a>,       
+<a class="url" href="pmu.html#FLASH0_RDBCFG2">FLASH0_RDBCFG2</a>,       
+<a class="url" href="pmu.html#FLASH1_RDBCFG0">FLASH1_RDBCFG0</a>,       
+<a class="url" href="pmu.html#FLASH1_RDBCFG1">FLASH1_RDBCFG1</a>,       
+<a class="url" href="pmu.html#FLASH1_RDBCFG2">FLASH1_RDBCFG2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_SEMA_t">FLASHn_SEMA_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_SEMA">FLASH0_SEMA</a>,       
+<a class="url" href="pmu.html#FLASH1_SEMA">FLASH1_SEMA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_SHEBOOT0">FLASH0_SHEBOOT0</a>,       
+<a class="url" href="pmu.html#FLASH0_SHEBOOT1">FLASH0_SHEBOOT1</a>,       
+<a class="url" href="pmu.html#FLASH0_SHEBOOT2">FLASH0_SHEBOOT2</a>,       
+<a class="url" href="pmu.html#FLASH1_SHEBOOT0">FLASH1_SHEBOOT0</a>,       
+<a class="url" href="pmu.html#FLASH1_SHEBOOT1">FLASH1_SHEBOOT1</a>,       
+<a class="url" href="pmu.html#FLASH1_SHEBOOT2">FLASH1_SHEBOOT2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_XFSR_t">FLASHn_XFSR_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_XFSR">FLASH0_XFSR</a>,       
+<a class="url" href="pmu.html#FLASH1_XFSR">FLASH1_XFSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td>
+<td><a class="url" href="pmu.html#PMU0_ID">PMU0_ID</a>,       
+<a class="url" href="pmu.html#PMU1_ID">PMU1_ID</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="PMU0_ID">&nbsp;</a>
+<h3>PMU0_ID</h3>
+<h3>"PMU0 Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMU0_ID_ADDR = 0xF8000508</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMUn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0081C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>PMU0_ID.bits</b>&nbsp;&quot;PMU0 Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>PMUn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>PMUn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>PMUn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PMU1_ID">&nbsp;</a>
+<h3>PMU1_ID</h3>
+<h3>"PMU1 Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMU1_ID_ADDR = 0xF8000608</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMUn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0082C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>PMU1_ID.bits</b>&nbsp;&quot;PMU1 Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>PMUn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>PMUn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>PMUn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_ID">&nbsp;</a>
+<h3>FLASH0_ID</h3>
+<h3>"Flash Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_ID_ADDR = 0xF8002008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0083C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_ID.bits</b>&nbsp;&quot;Flash Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_FSR">&nbsp;</a>
+<h3>FLASH0_FSR</h3>
+<h3>"Flash Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_FSR_ADDR = 0xF8002010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_FSR.bits</b>&nbsp;&quot;Flash Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_FSR_MASK = <tt>0xd6edffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_FSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_FSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PBUSY</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Program Flash Busy
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>PFlash ready, not busy; PFlash in read mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PFlash busy; PFlash not in read mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FABUSY</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Flash Array Busy
+</td>
+</tr>
+<tr>
+<td>D0BUSY</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Data Flash Bank0 Busy
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DFlash0 ready, not busy; DFlash0 in read mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DFlash0 busy; DFlash0 not in read mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>D1BUSY</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Data Flash Bank1 Busy
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DFlash1 ready, not busy; DFlash1 in read mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DFlash1 busy; DFlash1 not in read mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROG</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>There is no program operation requested or in progress or just finished.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Programming operation (write page) requested (from FIM) or in action or finished.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ERASE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rwh</td>
+<td><tt>0x00000020</tt></td>
+<td>
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>There is no erase operation requested or in progress or just finished</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Erase operation requested (from FIM) or in action or finished.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFPAGE</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Program Flash in Page Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Program Flash not in page mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Program Flash in page mode; assembly buffer of PFlash (256 byte) is in use (being filled up)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFPAGE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Data Flash in Page Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Data Flash not in page mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Data Flash in page mode; assembly buffer of DFlash (128 byte) is in use (being filled up)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFOPER</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>Program Flash Operation Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation error reported by Program Flash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash array operation aborted, because of a Flash array failure, e.g. an ECC error in microcode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFOPER</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rwh</td>
+<td><tt>0x00000200</tt></td>
+<td>Data Flash Operation Error
+</td>
+</tr>
+<tr>
+<td>SQER</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Command Sequence Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No sequence error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Command state machine operation unsuccessful because of improper address or command sequence.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROER</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rwh</td>
+<td><tt>0x00000800</tt></td>
+<td>Protection Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No protection error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Protection error.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFSBER</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rwh</td>
+<td><tt>0x00001000</tt></td>
+<td>PFlash Single-Bit Error and Correction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Single-Bit Error detected during read access to PFlash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Single-Bit Error detected and corrected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFCBER</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>DFlash Correctable Bit Error and Correction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Correctable Bit Error detected during read access to DFlash.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Correctable Bit Error detected and corrected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFDBER</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>PFlash Double-Bit Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Double-Bit Error or Address Error detected during read access to PFlash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Double-Bit Error or Address Error detected in PFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFMBER</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rwh</td>
+<td><tt>0x00008000</tt></td>
+<td>DFlash Multi-Bit Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No uncorrectable Multi-Bit Error detected during read access to DFlash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Uncorrectable Multi-Bit Error detected in DFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROIN</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Protection Installed
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No protection is installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read or/and write protection for one or more users is configured and correctly confirmed in the User Configuration Block(s).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPROIN</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>Read Protection Installed
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No read protection installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read protection and global write protection (with or without DataFlash) is configured and correctly confirmed in the User Configuration Block0.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPRODIS</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>Read Protection Disable State
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Read protection (if installed) is not disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read and global write protection is temporarily disabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPROIN0</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Sector Write Protection Installed for User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection installed for user0</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sector write protection for user0 is configured and correctly confirmed in the User Configuration Block 0.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPROIN1</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Sector Write Protection Installed for User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection installed for user1</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sector write protection for user1 is configured and correctly confirmed in the User Configuration Block 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPROIN2</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>Sector OTP Protection Installed for User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No OTP write protection installed for user2</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sector OTP write protection with ROM functionality is configured and correctly confirmed in the UCB2. The protection is locked for ever.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPRODIS0</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rh</td>
+<td><tt>0x02000000</tt></td>
+<td>Sector Write Protection Disabled for User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>All protected sectors of user0 are locked if write protection is installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>All write-protected sectors of user0 are temporarily unlocked, if not coincidently locked by user2 or via read protection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPRODIS1</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rh</td>
+<td><tt>0x04000000</tt></td>
+<td>Sector Write Protection Disabled for User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>All protected sectors of user1 are locked if write protection is installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>All write-protected sectors of user1 are temporarily unlocked, if not coincidently locked by user0 or user2 or via read protection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SLM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rh</td>
+<td><tt>0x10000000</tt></td>
+<td>Flash Sleep Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Flash not in sleep mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash is in sleep or shut down mode</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ORIER</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Original Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No original error detected during startup.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Original data replaced by its copy.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>VER</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rwh</td>
+<td><tt>0x80000000</tt></td>
+<td>
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The page is correctly programmed or the sector correctly erased. All programmed or erased bits have full expected quality.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A program verify error or an erase verify error has been detected. Full quality (retention time) of all programmed ("1") or erased ("0") bits cannot be guaranteed.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xd6edffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x8000ff30</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xd6edffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_FCON">&nbsp;</a>
+<h3>FLASH0_FCON</h3>
+<h3>"Flash Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_FCON_ADDR = 0xF8002014</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00074F08</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_FCON.bits</b>&nbsp;&quot;Flash Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_FCON_MASK = <tt>0xfff7ff1f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_FCON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_FCON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>WSPFLASH</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Wait States for read access to PFlash
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>PFlash access with one wait state</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>PFlash access with one wait state</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>PFlash access with two wait states</td></tr>
+<tr><td>0011</td><td>&nbsp;</td><td>PFlash access with three wait states</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>PFlash access with four wait states</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>PFlash access with five wait states</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>PFlash access with six wait states</td></tr>
+<tr><td>0111</td><td>&nbsp;</td><td>PFlash access with seven wait states.</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>PFlash access with fifteen wait states.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WSECPF</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Wait State for Error Correction of PFlash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No additional wait state for error correction</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>One additional wait state for error correction during read access to ProgramFlash. If enabled, this wait state is only used for the first transfer of a burst transfer.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WSDFLASH</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>rw</td>
+<td><tt>0x00000f00</tt></td>
+<td>Wait States for read access to DFlash
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>DFlash access with one wait state</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>DFlash access with one wait state</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>DFlash access with two wait states</td></tr>
+<tr><td>0011</td><td>&nbsp;</td><td>DFlash access with three wait states</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>DFlash access with four wait states</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>DFlash access with five wait states</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>DFlash access with six wait states</td></tr>
+<tr><td>0111</td><td>&nbsp;</td><td>DFlash access with seven wait states.</td></tr>
+<tr><td>1000</td><td>&nbsp;</td><td>DFlash access with eight wait states.</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>DFlash access with fifteen wait states.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WSECDF</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Wait State for Error Correction of DFlash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No additional wait state for error correction</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>One additional wait state for error correction during read access to DataFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IDLE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Dynamic Flash Idle
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal/standard Flash read operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dynamic idle of ProgramFlash enabled for power saving; static prefetching disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ESLDIS</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>External Sleep Request Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>External sleep request signal input is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Externally requested Flash sleep is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SLEEP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Flash SLEEP
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal state or wake-up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash sleep mode is requested,</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPA</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Read Protection Activated
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The Flash-internal read protection is not activated. Bits DCF, DDF are not taken into account. Bits DCF, DDFx can be cleared</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The Flash-internal read protection is activated. Bits DCF, DDF are enabled and evaluated.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DCF</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rwh</td>
+<td><tt>0x00020000</tt></td>
+<td>Disable Code Fetch from Flash Memory
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Code fetching from the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Code fetching from the Flash memory area is not allowed. This bit is not taken into account while RPA='0'.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDF</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rwh</td>
+<td><tt>0x00040000</tt></td>
+<td>Disable Any Data Fetch from Flash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Data read access to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Data read access to the Flash memory area is not allowed. This bit is not taken into account while RPA='0'.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDFDMA</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rw</td>
+<td><tt>0x00100000</tt></td>
+<td>Disable Data Fetch from DMA Controller
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The data read access by the DMA, SDMA controller and its peripheral interfaces to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The data read access to the Flash memory area is not allowed for the DMA, SDMA controller and its peripheral interfaces.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDFPCP</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rw</td>
+<td><tt>0x00200000</tt></td>
+<td>Disable Data Fetch from PCP Controller
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The data read access by the PCP controller to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The data read access to the Flash memory area is not allowed for the PCP controller.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDFSHE</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rw</td>
+<td><tt>0x00400000</tt></td>
+<td>Disable Data Fetch from SHE Module
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The data read access by the SHE module to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The data read access to the Flash memory area is not allowed for the SHE module.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ADDECC</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rw</td>
+<td><tt>0x00800000</tt></td>
+<td>Address ECC in PFlash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Standard ECC is used.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Address ECC is used.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>VOPERM</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rw</td>
+<td><tt>0x01000000</tt></td>
+<td>Verify and Operation Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash interrupt because of Verify Error or Operation Error in Flash array (FSI) is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SQERM</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rw</td>
+<td><tt>0x02000000</tt></td>
+<td>Command Sequence Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash interrupt because of Sequence Error is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROERM</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rw</td>
+<td><tt>0x04000000</tt></td>
+<td>Protection Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash interrupt because of Protection Error is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFSBERM</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>rw</td>
+<td><tt>0x08000000</tt></td>
+<td>PFlash Single-Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Single-Bit Error interrupt enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Single-Bit Error interrupt enabled for PFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFCBERM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rw</td>
+<td><tt>0x10000000</tt></td>
+<td>DFlash Correctable Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Correctable Bit Error interrupt enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Correctable Bit Error interrupt enabled for DFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFDBERM</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rw</td>
+<td><tt>0x20000000</tt></td>
+<td>PFlash Double-Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Double-Bit Error interrupt for PFlash not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Double-Bit Error interrupt for PFlash enabled. Especially intended for margin check</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFMBERM</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>DFlash Multi-Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Multi-Bit Error interrupt for DFlash not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Multi-Bit Error interrupt for DFlash enabled. Especially intended for margin check</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EOBM</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>End of Busy Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>EOB interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xfff7ff1f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xfff6ff1f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00070000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_MARP">&nbsp;</a>
+<h3>FLASH0_MARP</h3>
+<h3>"Margin Control Register PFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_MARP_ADDR = 0xF8002018</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_MARP.bits</b>&nbsp;&quot;Margin Control Register PFLASH&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_MARP_MASK = <tt>0x0000800f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_MARP_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_MARP_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MARGIN</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>PFLASH Margin Selection
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Standard (default) margin.</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>Tight margin for 0 (low) level. Suboptimal 0-bits are read as 1s.</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>Tight margin for 1 (high) level. Suboptimal 1-bits are read as 0s.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>PFLASH Double-Bit Error Trap Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>If a double-bit error occurs in PFLASH, a bus error trap is generatedAfter Boot ROM exit, double-bit error traps are enabled (TRAPDIS=0)..</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The double-bit error trap is disabled. Shall be used only during margin check</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000800f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000800f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_MARD">&nbsp;</a>
+<h3>FLASH0_MARD</h3>
+<h3>"Margin Control Register DFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_MARD_ADDR = 0xF800201C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_MARD.bits</b>&nbsp;&quot;Margin Control Register DFLASH&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_MARD_MASK = <tt>0x0000801f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_MARD_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_MARD_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MARGIN</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>DFLASH Margin Selection
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Standard (default) margin.</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>Tight margin for 0 (low) level. Suboptimal 0-bits are read as 1s.</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>Tight margin for 1 (high) level. Suboptimal 1-bits are read as 0s.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTRL</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Margin Control Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The active read margin for both DFLASH banks is determined by MARGIN.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Both DFlash banks are read with standard (default) margin independently of MARGIN.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>DFLASH Multiple-Bit Error Trap Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>If an uncorrectable multi-bit error occurs in DFLASH, a bus error trap is generatedAfter Boot ROM exit, multi-bit error traps are enabled (TRAPDIS=0)..</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The multi-bit error trap is disabled. Shall be used only during margin check</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000801f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000801f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_PROCON0">&nbsp;</a>
+<h3>FLASH0_PROCON0</h3>
+<h3>"Flash Protection Config. User 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_PROCON0_ADDR = 0xF8002020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_PROCON0.bits</b>&nbsp;&quot;Flash Protection Config. User 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_PROCON0_MASK = <tt>0xe001ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_PROCON0_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_PROCON0_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Sectors 10 and 11 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 10+11.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 10+11.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Sectors 12 and 13 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 12+13.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 12+13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Sectors 14 and 15 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 14+15.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 14+15.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S16_S17L</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Sectors 16 and 17 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 16+17.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 16+17.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S18_S19L</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Sectors 18 and 19 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 18+19.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 18+19.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S20_S21L</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Sectors 20 and 21 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 20+21.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 20+21.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S22_S23L</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Sectors 22 and 23 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 22+23.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 22+23.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ADDECC</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rh</td>
+<td><tt>0x20000000</tt></td>
+<td>Address ECC Configuration
+</td>
+</tr>
+<tr>
+<td>DFEXPRO</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Data Flash Excluded from Read Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DFLASH not excluded from read protection and global write protection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DFLASH is excluded from read/write protection; read protection and global write protection is configured by user0 only for the PFLASH</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPRO</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Read Protection Configuration
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No read protection configured</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read protection and global write protection is configured by user0 (master user)</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xe001ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xe001ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_PROCON1">&nbsp;</a>
+<h3>FLASH0_PROCON1</h3>
+<h3>"Flash Protection Config. User 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_PROCON1_ADDR = 0xF8002024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_PROCON1.bits</b>&nbsp;&quot;Flash Protection Config. User 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_PROCON1_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_PROCON1_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_PROCON1_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Sectors 10 and 11 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 10+11.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 10+11.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Sectors 12 and 13 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 12+13.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 12+13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Sectors 14 and 15 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 14+15.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 14+15.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S16_S17L</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Sectors 16 and 17 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 16+17.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 16+17.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S18_S19L</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Sectors 18 and 19 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 18+19.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 18+19.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S20_S21L</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Sectors 20 and 21 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 20+21.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 20+21.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S22_S23L</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Sectors 22 and 23 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 22+23.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 22+23.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES</td>
+<td>6</td>
+<td>17 - 22</td>
+<td>rh</td>
+<td><tt>0x007e0000</tt></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>SPREC</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>SPREC
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Program 1-data.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Soft Recover.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ALSEDIS</td>
+<td>8</td>
+<td>24 - 31</td>
+<td>rh</td>
+<td><tt>0xff000000</tt></td>
+<td>ALSE Disable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_PROCON2">&nbsp;</a>
+<h3>FLASH0_PROCON2</h3>
+<h3>"Flash Protection Config. User 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_PROCON2_ADDR = 0xF8002028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_PROCON2.bits</b>&nbsp;&quot;Flash Protection Config. User 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_PROCON2_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_PROCON2_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_PROCON2_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>S0ROM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S1ROM</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S2ROM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S3ROM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S4ROM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S5ROM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S6ROM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S7ROM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S8ROM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S9ROM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S10_S11ROM</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Sectors 10 and 11 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 10+11.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 10+11.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S12_S13ROM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Sectors 12 and 13 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 12+13.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 12+13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S14_S15ROM</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Sectors 14 and 15 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 14+15.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 14+15.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S16_S17ROM</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Sectors 16 and 17 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 16+17.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 16+17.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S18_S19ROM</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Sectors 18 and 19 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 18+19.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 18+19.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S20_S21ROM</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Sectors 20 and 21 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 20+21.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 20+21.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S22_S23ROM</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Sectors 22 and 23 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 22+23.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 22+23.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES</td>
+<td>13</td>
+<td>17 - 29</td>
+<td>rh</td>
+<td><tt>0x3ffe0000</tt></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>DATM</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Disable ATM
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ATM is enabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ATM is disabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_XFSR">&nbsp;</a>
+<h3>FLASH0_XFSR</h3>
+<h3>"Extended Flash Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_XFSR_ADDR = 0xF800202C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_XFSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_XFSR_t">FLASHn_XFSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_XFSR.bits</b>&nbsp;&quot;Extended Flash Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_XFSR_MASK = <tt>0x00000f7f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_XFSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_XFSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PFDBER</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>PFlash DBER
+</td>
+</tr>
+<tr>
+<td>PFADER</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rwh</td>
+<td><tt>0x00000002</tt></td>
+<td>PFlash Address ECC Error
+</td>
+</tr>
+<tr>
+<td>RES2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>RES3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rwh</td>
+<td><tt>0x00000008</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>RES4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>SRIADDERR</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rwh</td>
+<td><tt>0x00000020</tt></td>
+<td>SRI Bus Address ECC Error
+</td>
+</tr>
+<tr>
+<td>SEMVIO</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rwh</td>
+<td><tt>0x00000040</tt></td>
+<td>Semaphore Violation
+</td>
+</tr>
+<tr>
+<td>PVER</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>PFlash Verify Error
+</td>
+</tr>
+<tr>
+<td>D0VER</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rwh</td>
+<td><tt>0x00000200</tt></td>
+<td>D0Flash Verify Error
+</td>
+</tr>
+<tr>
+<td>D1VER</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>D1Flash Verify Error
+</td>
+</tr>
+<tr>
+<td>RES11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rwh</td>
+<td><tt>0x00000800</tt></td>
+<td>Reserved
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000f7f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000f7f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000f7f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_SEMA">&nbsp;</a>
+<h3>FLASH0_SEMA</h3>
+<h3>"Flash Access Semaphore"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_SEMA_ADDR = 0xF8002030</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SEMA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SEMA_t">FLASHn_SEMA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_SEMA.bits</b>&nbsp;&quot;Flash Access Semaphore&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SEMA_MASK = <tt>0x0000fffd</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SEMA_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SEMA_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>SHE Semaphore
+</td>
+</tr>
+<tr>
+<td>S1</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S1C</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S2C</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rwh</td>
+<td><tt>0x00000040</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S3C</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S4C</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S5C</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rwh</td>
+<td><tt>0x00001000</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S6C</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S7C</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00005555</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000fffc</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00005555</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_SHEBOOT0">&nbsp;</a>
+<h3>FLASH0_SHEBOOT0</h3>
+<h3>"SHE Secure Boot Cfg"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_SHEBOOT0_ADDR = 0xF8002034</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SHEBOOTm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_SHEBOOT0.bits</b>&nbsp;&quot;SHE Secure Boot Cfg&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SHEBOOTm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>30</td>
+<td>0 - 29</td>
+<td>rh</td>
+<td><tt>0x3fffffff</tt></td>
+<td>SHE Bootloader Size
+</td>
+</tr>
+<tr>
+<td>BGD</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Background Secure Boot
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Foreground secure boot.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Background secure boot.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Secure Boot Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_SHEBOOT1">&nbsp;</a>
+<h3>FLASH0_SHEBOOT1</h3>
+<h3>"SHE Secure Boot Cfg"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_SHEBOOT1_ADDR = 0xF8002038</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SHEBOOTm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_SHEBOOT1.bits</b>&nbsp;&quot;SHE Secure Boot Cfg&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SHEBOOTm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>30</td>
+<td>0 - 29</td>
+<td>rh</td>
+<td><tt>0x3fffffff</tt></td>
+<td>SHE Bootloader Size
+</td>
+</tr>
+<tr>
+<td>BGD</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Background Secure Boot
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Foreground secure boot.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Background secure boot.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Secure Boot Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_SHEBOOT2">&nbsp;</a>
+<h3>FLASH0_SHEBOOT2</h3>
+<h3>"SHE Secure Boot Cfg"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_SHEBOOT2_ADDR = 0xF800203C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SHEBOOTm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_SHEBOOT2.bits</b>&nbsp;&quot;SHE Secure Boot Cfg&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SHEBOOTm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>30</td>
+<td>0 - 29</td>
+<td>rh</td>
+<td><tt>0x3fffffff</tt></td>
+<td>SHE Bootloader Size
+</td>
+</tr>
+<tr>
+<td>BGD</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Background Secure Boot
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Foreground secure boot.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Background secure boot.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Secure Boot Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_RDBCFG0">&nbsp;</a>
+<h3>FLASH0_RDBCFG0</h3>
+<h3>"Read Buffer Cfg 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_RDBCFG0_ADDR = 0xF8002040</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_RDBCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000002</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_RDBCFG0.bits</b>&nbsp;&quot;Read Buffer Cfg 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_RDBCFGm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Master Tag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_RDBCFG1">&nbsp;</a>
+<h3>FLASH0_RDBCFG1</h3>
+<h3>"Read Buffer Cfg 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_RDBCFG1_ADDR = 0xF8002044</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_RDBCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000004</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_RDBCFG1.bits</b>&nbsp;&quot;Read Buffer Cfg 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_RDBCFGm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Master Tag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_RDBCFG2">&nbsp;</a>
+<h3>FLASH0_RDBCFG2</h3>
+<h3>"Read Buffer Cfg 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_RDBCFG2_ADDR = 0xF8002048</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_RDBCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000000D</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_RDBCFG2.bits</b>&nbsp;&quot;Read Buffer Cfg 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_RDBCFGm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Master Tag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_ECCW">&nbsp;</a>
+<h3>FLASH0_ECCW</h3>
+<h3>"ECC Write Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_ECCW_ADDR = 0xF80020E0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ECCW_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ECCW_t">FLASHn_ECCW_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_ECCW.bits</b>&nbsp;&quot;ECC Write Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_ECCW_MASK = <tt>0xc000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_ECCW_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_ECCW_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>WCODEL</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Error Correction Write Code Low
+</td>
+</tr>
+<tr>
+<td>WCODEH</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Error Correction Write Code High
+</td>
+</tr>
+<tr>
+<td>DECENCDIS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>DFlash ECC Encoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The ECC code is automatically calculated.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The ECC code is taken from WCODEH and WCODEL.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PECENCDIS</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>PFlash ECC Encoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The ECC code is automatically calculated.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The ECC code is taken from WCODEL.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xc000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xc000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_ECCR">&nbsp;</a>
+<h3>FLASH0_ECCR</h3>
+<h3>"ECC Read Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_ECCR_ADDR = 0xF80020E4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ECCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ECCR_t">FLASHn_ECCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH0_ECCR.bits</b>&nbsp;&quot;ECC Read Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_ECCR_MASK = <tt>0xc000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_ECCR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_ECCR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RCODEL</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>Error Correction Read Code Low
+</td>
+</tr>
+<tr>
+<td>RCODEH</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Error Correction Read Code High
+</td>
+</tr>
+<tr>
+<td>DECDECDIS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>DFlash ECC Decoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ECC correction for DFlash enabled. ECCR.RCODE stays unused.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ECC correction for DFlash disabled. ECCR.RCODEH and RCODEL contain the ECC value of the latest DFlash read access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PECDECDIS</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>PFlash ECC Decoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ECC correction for PFlash enabled. ECCR.RCODE stays unused.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ECC correction for PFlash disabled. ECCR.RCODEL contains the ECC value of the latest PFlash read access.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xc000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xc0000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_ID">&nbsp;</a>
+<h3>FLASH1_ID</h3>
+<h3>"Flash Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_ID_ADDR = 0xF8004008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0084C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_ID.bits</b>&nbsp;&quot;Flash Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_FSR">&nbsp;</a>
+<h3>FLASH1_FSR</h3>
+<h3>"Flash Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_FSR_ADDR = 0xF8004010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_FSR.bits</b>&nbsp;&quot;Flash Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_FSR_MASK = <tt>0xd6edffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_FSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_FSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PBUSY</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Program Flash Busy
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>PFlash ready, not busy; PFlash in read mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PFlash busy; PFlash not in read mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FABUSY</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Flash Array Busy
+</td>
+</tr>
+<tr>
+<td>D0BUSY</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Data Flash Bank0 Busy
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DFlash0 ready, not busy; DFlash0 in read mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DFlash0 busy; DFlash0 not in read mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>D1BUSY</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Data Flash Bank1 Busy
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DFlash1 ready, not busy; DFlash1 in read mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DFlash1 busy; DFlash1 not in read mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROG</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>There is no program operation requested or in progress or just finished.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Programming operation (write page) requested (from FIM) or in action or finished.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ERASE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rwh</td>
+<td><tt>0x00000020</tt></td>
+<td>
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>There is no erase operation requested or in progress or just finished</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Erase operation requested (from FIM) or in action or finished.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFPAGE</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Program Flash in Page Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Program Flash not in page mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Program Flash in page mode; assembly buffer of PFlash (256 byte) is in use (being filled up)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFPAGE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Data Flash in Page Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Data Flash not in page mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Data Flash in page mode; assembly buffer of DFlash (128 byte) is in use (being filled up)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFOPER</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>Program Flash Operation Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation error reported by Program Flash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash array operation aborted, because of a Flash array failure, e.g. an ECC error in microcode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFOPER</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rwh</td>
+<td><tt>0x00000200</tt></td>
+<td>Data Flash Operation Error
+</td>
+</tr>
+<tr>
+<td>SQER</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Command Sequence Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No sequence error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Command state machine operation unsuccessful because of improper address or command sequence.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROER</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rwh</td>
+<td><tt>0x00000800</tt></td>
+<td>Protection Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No protection error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Protection error.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFSBER</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rwh</td>
+<td><tt>0x00001000</tt></td>
+<td>PFlash Single-Bit Error and Correction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Single-Bit Error detected during read access to PFlash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Single-Bit Error detected and corrected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFCBER</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>DFlash Correctable Bit Error and Correction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Correctable Bit Error detected during read access to DFlash.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Correctable Bit Error detected and corrected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFDBER</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>PFlash Double-Bit Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Double-Bit Error or Address Error detected during read access to PFlash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Double-Bit Error or Address Error detected in PFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFMBER</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rwh</td>
+<td><tt>0x00008000</tt></td>
+<td>DFlash Multi-Bit Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No uncorrectable Multi-Bit Error detected during read access to DFlash</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Uncorrectable Multi-Bit Error detected in DFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROIN</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Protection Installed
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No protection is installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read or/and write protection for one or more users is configured and correctly confirmed in the User Configuration Block(s).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPROIN</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>Read Protection Installed
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No read protection installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read protection and global write protection (with or without DataFlash) is configured and correctly confirmed in the User Configuration Block0.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPRODIS</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>Read Protection Disable State
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Read protection (if installed) is not disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read and global write protection is temporarily disabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPROIN0</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Sector Write Protection Installed for User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection installed for user0</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sector write protection for user0 is configured and correctly confirmed in the User Configuration Block 0.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPROIN1</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Sector Write Protection Installed for User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection installed for user1</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sector write protection for user1 is configured and correctly confirmed in the User Configuration Block 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPROIN2</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>Sector OTP Protection Installed for User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No OTP write protection installed for user2</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sector OTP write protection with ROM functionality is configured and correctly confirmed in the UCB2. The protection is locked for ever.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPRODIS0</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rh</td>
+<td><tt>0x02000000</tt></td>
+<td>Sector Write Protection Disabled for User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>All protected sectors of user0 are locked if write protection is installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>All write-protected sectors of user0 are temporarily unlocked, if not coincidently locked by user2 or via read protection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WPRODIS1</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rh</td>
+<td><tt>0x04000000</tt></td>
+<td>Sector Write Protection Disabled for User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>All protected sectors of user1 are locked if write protection is installed</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>All write-protected sectors of user1 are temporarily unlocked, if not coincidently locked by user0 or user2 or via read protection.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SLM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rh</td>
+<td><tt>0x10000000</tt></td>
+<td>Flash Sleep Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Flash not in sleep mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash is in sleep or shut down mode</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ORIER</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Original Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No original error detected during startup.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Original data replaced by its copy.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>VER</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rwh</td>
+<td><tt>0x80000000</tt></td>
+<td>
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The page is correctly programmed or the sector correctly erased. All programmed or erased bits have full expected quality.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A program verify error or an erase verify error has been detected. Full quality (retention time) of all programmed ("1") or erased ("0") bits cannot be guaranteed.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xd6edffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x8000ff30</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xd6edffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_FCON">&nbsp;</a>
+<h3>FLASH1_FCON</h3>
+<h3>"Flash Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_FCON_ADDR = 0xF8004014</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00074F08</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_FCON.bits</b>&nbsp;&quot;Flash Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_FCON_MASK = <tt>0xfff7ff1f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_FCON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_FCON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>WSPFLASH</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Wait States for read access to PFlash
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>PFlash access with one wait state</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>PFlash access with one wait state</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>PFlash access with two wait states</td></tr>
+<tr><td>0011</td><td>&nbsp;</td><td>PFlash access with three wait states</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>PFlash access with four wait states</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>PFlash access with five wait states</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>PFlash access with six wait states</td></tr>
+<tr><td>0111</td><td>&nbsp;</td><td>PFlash access with seven wait states.</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>PFlash access with fifteen wait states.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WSECPF</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Wait State for Error Correction of PFlash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No additional wait state for error correction</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>One additional wait state for error correction during read access to ProgramFlash. If enabled, this wait state is only used for the first transfer of a burst transfer.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WSDFLASH</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>rw</td>
+<td><tt>0x00000f00</tt></td>
+<td>Wait States for read access to DFlash
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>DFlash access with one wait state</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>DFlash access with one wait state</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>DFlash access with two wait states</td></tr>
+<tr><td>0011</td><td>&nbsp;</td><td>DFlash access with three wait states</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>DFlash access with four wait states</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>DFlash access with five wait states</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>DFlash access with six wait states</td></tr>
+<tr><td>0111</td><td>&nbsp;</td><td>DFlash access with seven wait states.</td></tr>
+<tr><td>1000</td><td>&nbsp;</td><td>DFlash access with eight wait states.</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>DFlash access with fifteen wait states.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WSECDF</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Wait State for Error Correction of DFlash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No additional wait state for error correction</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>One additional wait state for error correction during read access to DataFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IDLE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Dynamic Flash Idle
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal/standard Flash read operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Dynamic idle of ProgramFlash enabled for power saving; static prefetching disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ESLDIS</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>External Sleep Request Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>External sleep request signal input is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Externally requested Flash sleep is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SLEEP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Flash SLEEP
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal state or wake-up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash sleep mode is requested,</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPA</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Read Protection Activated
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The Flash-internal read protection is not activated. Bits DCF, DDF are not taken into account. Bits DCF, DDFx can be cleared</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The Flash-internal read protection is activated. Bits DCF, DDF are enabled and evaluated.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DCF</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rwh</td>
+<td><tt>0x00020000</tt></td>
+<td>Disable Code Fetch from Flash Memory
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Code fetching from the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Code fetching from the Flash memory area is not allowed. This bit is not taken into account while RPA='0'.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDF</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rwh</td>
+<td><tt>0x00040000</tt></td>
+<td>Disable Any Data Fetch from Flash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Data read access to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Data read access to the Flash memory area is not allowed. This bit is not taken into account while RPA='0'.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDFDMA</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rw</td>
+<td><tt>0x00100000</tt></td>
+<td>Disable Data Fetch from DMA Controller
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The data read access by the DMA, SDMA controller and its peripheral interfaces to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The data read access to the Flash memory area is not allowed for the DMA, SDMA controller and its peripheral interfaces.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDFPCP</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rw</td>
+<td><tt>0x00200000</tt></td>
+<td>Disable Data Fetch from PCP Controller
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The data read access by the PCP controller to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The data read access to the Flash memory area is not allowed for the PCP controller.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DDFSHE</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rw</td>
+<td><tt>0x00400000</tt></td>
+<td>Disable Data Fetch from SHE Module
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The data read access by the SHE module to the Flash memory area is allowed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The data read access to the Flash memory area is not allowed for the SHE module.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ADDECC</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rw</td>
+<td><tt>0x00800000</tt></td>
+<td>Address ECC in PFlash
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Standard ECC is used.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Address ECC is used.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>VOPERM</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rw</td>
+<td><tt>0x01000000</tt></td>
+<td>Verify and Operation Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash interrupt because of Verify Error or Operation Error in Flash array (FSI) is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SQERM</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rw</td>
+<td><tt>0x02000000</tt></td>
+<td>Command Sequence Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash interrupt because of Sequence Error is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PROERM</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rw</td>
+<td><tt>0x04000000</tt></td>
+<td>Protection Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Flash interrupt because of Protection Error is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFSBERM</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>rw</td>
+<td><tt>0x08000000</tt></td>
+<td>PFlash Single-Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Single-Bit Error interrupt enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Single-Bit Error interrupt enabled for PFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFCBERM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rw</td>
+<td><tt>0x10000000</tt></td>
+<td>DFlash Correctable Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Correctable Bit Error interrupt enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Correctable Bit Error interrupt enabled for DFlash</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PFDBERM</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rw</td>
+<td><tt>0x20000000</tt></td>
+<td>PFlash Double-Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Double-Bit Error interrupt for PFlash not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Double-Bit Error interrupt for PFlash enabled. Especially intended for margin check</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFMBERM</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>DFlash Multi-Bit Error Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Multi-Bit Error interrupt for DFlash not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Multi-Bit Error interrupt for DFlash enabled. Especially intended for margin check</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EOBM</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>End of Busy Interrupt Mask
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt not enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>EOB interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xfff7ff1f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xfff6ff1f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00070000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_MARP">&nbsp;</a>
+<h3>FLASH1_MARP</h3>
+<h3>"Margin Control Register PFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_MARP_ADDR = 0xF8004018</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_MARP.bits</b>&nbsp;&quot;Margin Control Register PFLASH&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_MARP_MASK = <tt>0x0000800f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_MARP_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_MARP_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MARGIN</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>PFLASH Margin Selection
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Standard (default) margin.</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>Tight margin for 0 (low) level. Suboptimal 0-bits are read as 1s.</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>Tight margin for 1 (high) level. Suboptimal 1-bits are read as 0s.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>PFLASH Double-Bit Error Trap Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>If a double-bit error occurs in PFLASH, a bus error trap is generatedAfter Boot ROM exit, double-bit error traps are enabled (TRAPDIS=0)..</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The double-bit error trap is disabled. Shall be used only during margin check</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000800f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000800f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_MARD">&nbsp;</a>
+<h3>FLASH1_MARD</h3>
+<h3>"Margin Control Register DFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_MARD_ADDR = 0xF800401C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_MARD.bits</b>&nbsp;&quot;Margin Control Register DFLASH&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_MARD_MASK = <tt>0x0000801f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_MARD_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_MARD_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MARGIN</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>DFLASH Margin Selection
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Standard (default) margin.</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>Tight margin for 0 (low) level. Suboptimal 0-bits are read as 1s.</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>Tight margin for 1 (high) level. Suboptimal 1-bits are read as 0s.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTRL</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Margin Control Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The active read margin for both DFLASH banks is determined by MARGIN.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Both DFlash banks are read with standard (default) margin independently of MARGIN.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>DFLASH Multiple-Bit Error Trap Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>If an uncorrectable multi-bit error occurs in DFLASH, a bus error trap is generatedAfter Boot ROM exit, multi-bit error traps are enabled (TRAPDIS=0)..</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The multi-bit error trap is disabled. Shall be used only during margin check</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000801f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000801f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_PROCON0">&nbsp;</a>
+<h3>FLASH1_PROCON0</h3>
+<h3>"Flash Protection Config. User 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_PROCON0_ADDR = 0xF8004020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_PROCON0.bits</b>&nbsp;&quot;Flash Protection Config. User 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_PROCON0_MASK = <tt>0xe001ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_PROCON0_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_PROCON0_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Sector n Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Sectors 10 and 11 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 10+11.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 10+11.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Sectors 12 and 13 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 12+13.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 12+13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Sectors 14 and 15 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 14+15.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 14+15.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S16_S17L</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Sectors 16 and 17 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 16+17.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 16+17.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S18_S19L</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Sectors 18 and 19 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 18+19.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 18+19.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S20_S21L</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Sectors 20 and 21 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 20+21.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 20+21.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S22_S23L</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Sectors 22 and 23 Locked for Write Protection by User0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 22+23.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 22+23.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ADDECC</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rh</td>
+<td><tt>0x20000000</tt></td>
+<td>Address ECC Configuration
+</td>
+</tr>
+<tr>
+<td>DFEXPRO</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Data Flash Excluded from Read Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DFLASH not excluded from read protection and global write protection.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DFLASH is excluded from read/write protection; read protection and global write protection is configured by user0 only for the PFLASH</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RPRO</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Read Protection Configuration
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No read protection configured</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Read protection and global write protection is configured by user0 (master user)</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xe001ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xe001ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_PROCON1">&nbsp;</a>
+<h3>FLASH1_PROCON1</h3>
+<h3>"Flash Protection Config. User 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_PROCON1_ADDR = 0xF8004024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_PROCON1.bits</b>&nbsp;&quot;Flash Protection Config. User 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_PROCON1_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_PROCON1_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_PROCON1_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Sector n Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sector n.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Sectors 10 and 11 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 10+11.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 10+11.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Sectors 12 and 13 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 12+13.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 12+13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Sectors 14 and 15 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 14+15.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 14+15.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S16_S17L</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Sectors 16 and 17 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 16+17.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 16+17.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S18_S19L</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Sectors 18 and 19 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 18+19.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 18+19.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S20_S21L</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Sectors 20 and 21 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 20+21.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 20+21.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S22_S23L</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Sectors 22 and 23 Locked for Write Protection by User1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No write protection is configured for sectors 22+23.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write protection is configured for sectors 22+23.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES</td>
+<td>6</td>
+<td>17 - 22</td>
+<td>rh</td>
+<td><tt>0x007e0000</tt></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>SPREC</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>SPREC
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Program 1-data.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Soft Recover.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ALSEDIS</td>
+<td>8</td>
+<td>24 - 31</td>
+<td>rh</td>
+<td><tt>0xff000000</tt></td>
+<td>ALSE Disable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_PROCON2">&nbsp;</a>
+<h3>FLASH1_PROCON2</h3>
+<h3>"Flash Protection Config. User 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_PROCON2_ADDR = 0xF8004028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_PROCON2.bits</b>&nbsp;&quot;Flash Protection Config. User 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_PROCON2_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_PROCON2_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_PROCON2_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>S0ROM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S1ROM</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S2ROM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S3ROM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S4ROM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S5ROM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S6ROM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S7ROM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S8ROM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S9ROM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Sector n Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality configured for sector n.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sector n. Re-programming of this sector is no longer possible.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S10_S11ROM</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Sectors 10 and 11 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 10+11.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 10+11.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S12_S13ROM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Sectors 12 and 13 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 12+13.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 12+13.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S14_S15ROM</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Sectors 14 and 15 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 14+15.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 14+15.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S16_S17ROM</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Sectors 16 and 17 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 16+17.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 16+17.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S18_S19ROM</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Sectors 18 and 19 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 18+19.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 18+19.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S20_S21ROM</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Sectors 20 and 21 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 20+21.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 20+21.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S22_S23ROM</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Sectors 22 and 23 Locked Forever by User2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No ROM functionality is configured for sectors 22+23.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ROM functionality is configured for sectors 22+23.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES</td>
+<td>13</td>
+<td>17 - 29</td>
+<td>rh</td>
+<td><tt>0x3ffe0000</tt></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>DATM</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Disable ATM
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ATM is enabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ATM is disabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_XFSR">&nbsp;</a>
+<h3>FLASH1_XFSR</h3>
+<h3>"Extended Flash Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_XFSR_ADDR = 0xF800402C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_XFSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_XFSR_t">FLASHn_XFSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_XFSR.bits</b>&nbsp;&quot;Extended Flash Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_XFSR_MASK = <tt>0x00000f7f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_XFSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_XFSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PFDBER</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>PFlash DBER
+</td>
+</tr>
+<tr>
+<td>PFADER</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rwh</td>
+<td><tt>0x00000002</tt></td>
+<td>PFlash Address ECC Error
+</td>
+</tr>
+<tr>
+<td>RES2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>RES3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rwh</td>
+<td><tt>0x00000008</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>RES4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>SRIADDERR</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rwh</td>
+<td><tt>0x00000020</tt></td>
+<td>SRI Bus Address ECC Error
+</td>
+</tr>
+<tr>
+<td>SEMVIO</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rwh</td>
+<td><tt>0x00000040</tt></td>
+<td>Semaphore Violation
+</td>
+</tr>
+<tr>
+<td>PVER</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>PFlash Verify Error
+</td>
+</tr>
+<tr>
+<td>D0VER</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rwh</td>
+<td><tt>0x00000200</tt></td>
+<td>D0Flash Verify Error
+</td>
+</tr>
+<tr>
+<td>D1VER</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>D1Flash Verify Error
+</td>
+</tr>
+<tr>
+<td>RES11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rwh</td>
+<td><tt>0x00000800</tt></td>
+<td>Reserved
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000f7f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000f7f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000f7f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_SEMA">&nbsp;</a>
+<h3>FLASH1_SEMA</h3>
+<h3>"Flash Access Semaphore"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_SEMA_ADDR = 0xF8004030</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SEMA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SEMA_t">FLASHn_SEMA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_SEMA.bits</b>&nbsp;&quot;Flash Access Semaphore&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SEMA_MASK = <tt>0x0000fffd</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SEMA_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SEMA_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>SHE Semaphore
+</td>
+</tr>
+<tr>
+<td>S1</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S1C</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S2C</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rwh</td>
+<td><tt>0x00000040</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S3C</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S4C</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S5C</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rwh</td>
+<td><tt>0x00001000</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S6C</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Semaphore x
+</td>
+</tr>
+<tr>
+<td>S7C</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Semaphore x Clear
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00005555</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000fffc</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00005555</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_SHEBOOT0">&nbsp;</a>
+<h3>FLASH1_SHEBOOT0</h3>
+<h3>"SHE Secure Boot Cfg"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_SHEBOOT0_ADDR = 0xF8004034</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SHEBOOTm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_SHEBOOT0.bits</b>&nbsp;&quot;SHE Secure Boot Cfg&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SHEBOOTm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>30</td>
+<td>0 - 29</td>
+<td>rh</td>
+<td><tt>0x3fffffff</tt></td>
+<td>SHE Bootloader Size
+</td>
+</tr>
+<tr>
+<td>BGD</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Background Secure Boot
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Foreground secure boot.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Background secure boot.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Secure Boot Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_SHEBOOT1">&nbsp;</a>
+<h3>FLASH1_SHEBOOT1</h3>
+<h3>"SHE Secure Boot Cfg"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_SHEBOOT1_ADDR = 0xF8004038</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SHEBOOTm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_SHEBOOT1.bits</b>&nbsp;&quot;SHE Secure Boot Cfg&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SHEBOOTm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>30</td>
+<td>0 - 29</td>
+<td>rh</td>
+<td><tt>0x3fffffff</tt></td>
+<td>SHE Bootloader Size
+</td>
+</tr>
+<tr>
+<td>BGD</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Background Secure Boot
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Foreground secure boot.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Background secure boot.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Secure Boot Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_SHEBOOT2">&nbsp;</a>
+<h3>FLASH1_SHEBOOT2</h3>
+<h3>"SHE Secure Boot Cfg"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_SHEBOOT2_ADDR = 0xF800403C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_SHEBOOTm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_SHEBOOTm_t">FLASHn_SHEBOOTm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_SHEBOOT2.bits</b>&nbsp;&quot;SHE Secure Boot Cfg&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_SHEBOOTm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_SHEBOOTm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>30</td>
+<td>0 - 29</td>
+<td>rh</td>
+<td><tt>0x3fffffff</tt></td>
+<td>SHE Bootloader Size
+</td>
+</tr>
+<tr>
+<td>BGD</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Background Secure Boot
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Foreground secure boot.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Background secure boot.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SHE</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Secure Boot Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_RDBCFG0">&nbsp;</a>
+<h3>FLASH1_RDBCFG0</h3>
+<h3>"Read Buffer Cfg 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_RDBCFG0_ADDR = 0xF8004040</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_RDBCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000002</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_RDBCFG0.bits</b>&nbsp;&quot;Read Buffer Cfg 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_RDBCFGm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Master Tag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_RDBCFG1">&nbsp;</a>
+<h3>FLASH1_RDBCFG1</h3>
+<h3>"Read Buffer Cfg 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_RDBCFG1_ADDR = 0xF8004044</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_RDBCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000004</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_RDBCFG1.bits</b>&nbsp;&quot;Read Buffer Cfg 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_RDBCFGm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Master Tag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_RDBCFG2">&nbsp;</a>
+<h3>FLASH1_RDBCFG2</h3>
+<h3>"Read Buffer Cfg 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_RDBCFG2_ADDR = 0xF8004048</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_RDBCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000000D</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_RDBCFGm_t">FLASHn_RDBCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_RDBCFG2.bits</b>&nbsp;&quot;Read Buffer Cfg 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_RDBCFGm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_RDBCFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Master Tag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_ECCW">&nbsp;</a>
+<h3>FLASH1_ECCW</h3>
+<h3>"ECC Write Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_ECCW_ADDR = 0xF80040E0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ECCW_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ECCW_t">FLASHn_ECCW_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_ECCW.bits</b>&nbsp;&quot;ECC Write Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_ECCW_MASK = <tt>0xc000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_ECCW_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_ECCW_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>WCODEL</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Error Correction Write Code Low
+</td>
+</tr>
+<tr>
+<td>WCODEH</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Error Correction Write Code High
+</td>
+</tr>
+<tr>
+<td>DECENCDIS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>DFlash ECC Encoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The ECC code is automatically calculated.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The ECC code is taken from WCODEH and WCODEL.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PECENCDIS</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>PFlash ECC Encoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The ECC code is automatically calculated.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The ECC code is taken from WCODEL.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xc000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xc000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_ECCR">&nbsp;</a>
+<h3>FLASH1_ECCR</h3>
+<h3>"ECC Read Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_ECCR_ADDR = 0xF80040E4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ECCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ECCR_t">FLASHn_ECCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FLASH1_ECCR.bits</b>&nbsp;&quot;ECC Read Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FLASHn_ECCR_MASK = <tt>0xc000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FLASHn_ECCR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FLASHn_ECCR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RCODEL</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>Error Correction Read Code Low
+</td>
+</tr>
+<tr>
+<td>RCODEH</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Error Correction Read Code High
+</td>
+</tr>
+<tr>
+<td>DECDECDIS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>DFlash ECC Decoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ECC correction for DFlash enabled. ECCR.RCODE stays unused.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ECC correction for DFlash disabled. ECCR.RCODEH and RCODEL contain the ECC value of the latest DFlash read access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PECDECDIS</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>PFlash ECC Decoding Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ECC correction for PFlash enabled. ECCR.RCODE stays unused.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ECC correction for PFlash disabled. ECCR.RCODEL contains the ECC value of the latest PFlash read access.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xc000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xc0000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

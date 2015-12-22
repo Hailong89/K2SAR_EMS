@@ -1,0 +1,6694 @@
+<html>
+<head>
+<title>TriCore TC1782 (SCU)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>SCU</h2>
+
+<h2><tt>#include &lt;tc1782/scu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#SCU_ID">SCU_ID</a></td>
+<td>Identification Register</td>
+<td>0xF0000508</td>
+<td><a class="url" href="types/s.html#SCU_ID_t">SCU_ID_t</a></td>
+<td>0x0052C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_OSCCON">SCU_OSCCON</a></td>
+<td>OSC Control Register</td>
+<td>0xF0000510</td>
+<td><a class="url" href="types/s.html#SCU_OSCCON_t">SCU_OSCCON_t</a></td>
+<td>0x0000001C</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PLLSTAT">SCU_PLLSTAT</a></td>
+<td>PLL Status Register</td>
+<td>0xF0000514</td>
+<td><a class="url" href="types/s.html#SCU_PLLSTAT_t">SCU_PLLSTAT_t</a></td>
+<td>0x00000009</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PLLCON0">SCU_PLLCON0</a></td>
+<td>PLL Configuration 0 Register</td>
+<td>0xF0000518</td>
+<td><a class="url" href="types/s.html#SCU_PLLCON0_t">SCU_PLLCON0_t</a></td>
+<td>0x0001C600</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PLLCON1">SCU_PLLCON1</a></td>
+<td>PLL Configuration 1 Register</td>
+<td>0xF000051C</td>
+<td><a class="url" href="types/s.html#SCU_PLLCON1_t">SCU_PLLCON1_t</a></td>
+<td>0x0002000F</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PLLERAYSTAT">SCU_PLLERAYSTAT</a></td>
+<td>PLL_ERAY Status Register</td>
+<td>0xF0000524</td>
+<td><a class="url" href="types/s.html#SCU_PLLERAYSTAT_t">SCU_PLLERAYSTAT_t</a></td>
+<td>0x00000009</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PLLERAYCON0">SCU_PLLERAYCON0</a></td>
+<td>PLL_ERAY Configuration 0 Register</td>
+<td>0xF0000528</td>
+<td><a class="url" href="types/s.html#SCU_PLLERAYCON0_t">SCU_PLLERAYCON0_t</a></td>
+<td>0x00002E00</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PLLERAYCON1">SCU_PLLERAYCON1</a></td>
+<td>PLL_ERAY Configuration 1 Register</td>
+<td>0xF000052C</td>
+<td><a class="url" href="types/s.html#SCU_PLLERAYCON1_t">SCU_PLLERAYCON1_t</a></td>
+<td>0x000F000F</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_CCUCON0">SCU_CCUCON0</a></td>
+<td>CCU Clock Control Register 0</td>
+<td>0xF0000530</td>
+<td><a class="url" href="types/s.html#SCU_CCUCON0_t">SCU_CCUCON0_t</a></td>
+<td>0x80000001</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_CCUCON1">SCU_CCUCON1</a></td>
+<td>CCU Clock Control Register 1</td>
+<td>0xF0000534</td>
+<td><a class="url" href="types/s.html#SCU_CCUCON1_t">SCU_CCUCON1_t</a></td>
+<td>0x80000B01</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_FDR">SCU_FDR</a></td>
+<td>Fractional Divider Register</td>
+<td>0xF0000538</td>
+<td><a class="url" href="types/s.html#SCU_FDR_t">SCU_FDR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_EXTCON">SCU_EXTCON</a></td>
+<td>External Clock Control Register</td>
+<td>0xF000053C</td>
+<td><a class="url" href="types/s.html#SCU_EXTCON_t">SCU_EXTCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_SYSCON">SCU_SYSCON</a></td>
+<td>System Control Register</td>
+<td>0xF0000540</td>
+<td><a class="url" href="types/s.html#SCU_SYSCON_t">SCU_SYSCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_RSTSTAT">SCU_RSTSTAT</a></td>
+<td>Reset Status Register</td>
+<td>0xF0000550</td>
+<td><a class="url" href="types/s.html#SCU_RSTSTAT_t">SCU_RSTSTAT_t</a></td>
+<td>0x00010000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_RSTCNTCON">SCU_RSTCNTCON</a></td>
+<td>Reset Counter Control Register</td>
+<td>0xF0000554</td>
+<td><a class="url" href="types/s.html#SCU_RSTCNTCON_t">SCU_RSTCNTCON_t</a></td>
+<td>0x05BE05BE</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_RSTCON">SCU_RSTCON</a></td>
+<td>Reset Configuration Register</td>
+<td>0xF0000558</td>
+<td><a class="url" href="types/s.html#SCU_RSTCON_t">SCU_RSTCON_t</a></td>
+<td>0x000002A2</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_ARSTDIS">SCU_ARSTDIS</a></td>
+<td>Application Reset Disable Register</td>
+<td>0xF000055C</td>
+<td><a class="url" href="types/s.html#SCU_ARSTDIS_t">SCU_ARSTDIS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_SWRSTCON">SCU_SWRSTCON</a></td>
+<td>Software Reset Configuration Register</td>
+<td>0xF0000560</td>
+<td><a class="url" href="types/s.html#SCU_SWRSTCON_t">SCU_SWRSTCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_ESRCFG0">SCU_ESRCFG0</a></td>
+<td>ESR0 Configuration Register</td>
+<td>0xF0000570</td>
+<td><a class="url" href="types/s.html#SCU_ESRCFGm_t">SCU_ESRCFGm_t</a></td>
+<td>0x00000100</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_ESRCFG1">SCU_ESRCFG1</a></td>
+<td>ESR1 Configuration Register</td>
+<td>0xF0000574</td>
+<td><a class="url" href="types/s.html#SCU_ESRCFGm_t">SCU_ESRCFGm_t</a></td>
+<td>0x00000080</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_EICR0">SCU_EICR0</a></td>
+<td>External Input Channel Register 0</td>
+<td>0xF0000580</td>
+<td><a class="url" href="types/s.html#SCU_EICRm_t">SCU_EICRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_EICR1">SCU_EICR1</a></td>
+<td>External Input Channel Register 1</td>
+<td>0xF0000584</td>
+<td><a class="url" href="types/s.html#SCU_EICRm_t">SCU_EICRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_EIFR">SCU_EIFR</a></td>
+<td>External Input Flag Register</td>
+<td>0xF0000588</td>
+<td><a class="url" href="types/s.html#SCU_EIFR_t">SCU_EIFR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_FMR">SCU_FMR</a></td>
+<td>Flag Modification Register</td>
+<td>0xF000058C</td>
+<td><a class="url" href="types/s.html#SCU_FMR_t">SCU_FMR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PDRR">SCU_PDRR</a></td>
+<td>Pattern Detection Result Register</td>
+<td>0xF0000590</td>
+<td><a class="url" href="types/s.html#SCU_PDRR_t">SCU_PDRR_t</a></td>
+<td>0x0000000F</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_IGCR0">SCU_IGCR0</a></td>
+<td>Interrupt Gating Register 0</td>
+<td>0xF0000594</td>
+<td><a class="url" href="types/s.html#SCU_IGCRm_t">SCU_IGCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_IGCR1">SCU_IGCR1</a></td>
+<td>Interrupt Gating Register 1</td>
+<td>0xF0000598</td>
+<td><a class="url" href="types/s.html#SCU_IGCRm_t">SCU_IGCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_IOCR">SCU_IOCR</a></td>
+<td>Input/Output Control Register</td>
+<td>0xF00005A0</td>
+<td><a class="url" href="types/s.html#SCU_IOCR_t">SCU_IOCR_t</a></td>
+<td>0x002010E0</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_OUT">SCU_OUT</a></td>
+<td>Output Register</td>
+<td>0xF00005A4</td>
+<td><a class="url" href="types/s.html#SCU_OUT_t">SCU_OUT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_OMR">SCU_OMR</a></td>
+<td>Output Modification Register</td>
+<td>0xF00005A8</td>
+<td><a class="url" href="types/s.html#SCU_OMR_t">SCU_OMR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_IN">SCU_IN</a></td>
+<td>Input Register</td>
+<td>0xF00005AC</td>
+<td><a class="url" href="types/s.html#SCU_IN_t">SCU_IN_t</a></td>
+<td>0x0000000X</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_PMCSR">SCU_PMCSR</a></td>
+<td>Power Management Control and Status Register</td>
+<td>0xF00005B0</td>
+<td><a class="url" href="types/s.html#SCU_PMCSR_t">SCU_PMCSR_t</a></td>
+<td>0x00000100</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_STSTAT">SCU_STSTAT</a></td>
+<td>Start-up Status Register</td>
+<td>0xF00005C0</td>
+<td><a class="url" href="types/s.html#SCU_STSTAT_t">SCU_STSTAT_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_STCON">SCU_STCON</a></td>
+<td>Start-up Configuration Register</td>
+<td>0xF00005C4</td>
+<td><a class="url" href="types/s.html#SCU_STCON_t">SCU_STCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_ECCCON">SCU_ECCCON</a></td>
+<td>ECC Control Register</td>
+<td>0xF00005D0</td>
+<td><a class="url" href="types/s.html#SCU_ECCCON_t">SCU_ECCCON_t</a></td>
+<td>0x0000FFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_ECCSTAT">SCU_ECCSTAT</a></td>
+<td>ECC Status Register</td>
+<td>0xF00005D4</td>
+<td><a class="url" href="types/s.html#SCU_ECCSTAT_t">SCU_ECCSTAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_ECCCLR">SCU_ECCCLR</a></td>
+<td>ECC Clear Register</td>
+<td>0xF00005D8</td>
+<td><a class="url" href="types/s.html#SCU_ECCCLR_t">SCU_ECCCLR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_DTSSTAT">SCU_DTSSTAT</a></td>
+<td>Die Temperature Sensor Status Register</td>
+<td>0xF00005E0</td>
+<td><a class="url" href="types/s.html#SCU_DTSSTAT_t">SCU_DTSSTAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_DTSCON">SCU_DTSCON</a></td>
+<td>Die Temperature Sensor Control Register</td>
+<td>0xF00005E4</td>
+<td><a class="url" href="types/s.html#SCU_DTSCON_t">SCU_DTSCON_t</a></td>
+<td>0x00000001</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#WDT_CON0">WDT_CON0</a></td>
+<td>WDT Control Register 0</td>
+<td>0xF00005F0</td>
+<td><a class="url" href="types/w.html#WDT_CON0_t">WDT_CON0_t</a></td>
+<td>0xFFFC0002</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#WDT_CON1">WDT_CON1</a></td>
+<td>WDT Control Register 1</td>
+<td>0xF00005F4</td>
+<td><a class="url" href="types/w.html#WDT_CON1_t">WDT_CON1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#WDT_SR">WDT_SR</a></td>
+<td>WDT Status Register</td>
+<td>0xF00005F8</td>
+<td><a class="url" href="types/w.html#WDT_SR_t">WDT_SR_t</a></td>
+<td>0xFFFC0010</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_EMSR">SCU_EMSR</a></td>
+<td>Emergency Stop Register</td>
+<td>0xF0000600</td>
+<td><a class="url" href="types/s.html#SCU_EMSR_t">SCU_EMSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_INTSTAT">SCU_INTSTAT</a></td>
+<td>Interrupt Status Register</td>
+<td>0xF0000610</td>
+<td><a class="url" href="types/s.html#SCU_INTSTAT_t">SCU_INTSTAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_INTSET">SCU_INTSET</a></td>
+<td>Interrupt Set Register</td>
+<td>0xF0000614</td>
+<td><a class="url" href="types/s.html#SCU_INTSET_t">SCU_INTSET_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_INTCLR">SCU_INTCLR</a></td>
+<td>Interrupt Clear Register</td>
+<td>0xF0000618</td>
+<td><a class="url" href="types/s.html#SCU_INTCLR_t">SCU_INTCLR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_INTDIS">SCU_INTDIS</a></td>
+<td>Interrupt Disable Register</td>
+<td>0xF000061C</td>
+<td><a class="url" href="types/s.html#SCU_INTDIS_t">SCU_INTDIS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_INTNP">SCU_INTNP</a></td>
+<td>Interrupt Node Pointer Register</td>
+<td>0xF0000620</td>
+<td><a class="url" href="types/s.html#SCU_INTNP_t">SCU_INTNP_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_TRAPSTAT">SCU_TRAPSTAT</a></td>
+<td>Trap Status Register</td>
+<td>0xF0000624</td>
+<td><a class="url" href="types/s.html#SCU_TRAPSTAT_t">SCU_TRAPSTAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_TRAPSET">SCU_TRAPSET</a></td>
+<td>Trap Set Register</td>
+<td>0xF0000628</td>
+<td><a class="url" href="types/s.html#SCU_TRAPSET_t">SCU_TRAPSET_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_TRAPCLR">SCU_TRAPCLR</a></td>
+<td>Trap Clear Register</td>
+<td>0xF000062C</td>
+<td><a class="url" href="types/s.html#SCU_TRAPCLR_t">SCU_TRAPCLR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_TRAPDIS">SCU_TRAPDIS</a></td>
+<td>Trap Disable Register</td>
+<td>0xF0000630</td>
+<td><a class="url" href="types/s.html#SCU_TRAPDIS_t">SCU_TRAPDIS_t</a></td>
+<td>0x0000FFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_CHIPID">SCU_CHIPID</a></td>
+<td>Chip Identification Register</td>
+<td>0xF0000640</td>
+<td><a class="url" href="types/s.html#SCU_CHIPID_t">SCU_CHIPID_t</a></td>
+<td>0x00009701</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_MANID">SCU_MANID</a></td>
+<td>Manufacturer Identification Register</td>
+<td>0xF0000644</td>
+<td><a class="url" href="types/s.html#SCU_MANID_t">SCU_MANID_t</a></td>
+<td>0x00001820</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_RTID">SCU_RTID</a></td>
+<td>Redesign Tracing Identification Register</td>
+<td>0xF0000648</td>
+<td><a class="url" href="types/s.html#SCU_RTID_t">SCU_RTID_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_SRC3">SCU_SRC3</a></td>
+<td>Service Request Control 3 Register</td>
+<td>0xF00006F0</td>
+<td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_SRC2">SCU_SRC2</a></td>
+<td>Service Request Control 2 Register</td>
+<td>0xF00006F4</td>
+<td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_SRC1">SCU_SRC1</a></td>
+<td>Service Request Control 1 Register</td>
+<td>0xF00006F8</td>
+<td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SCU_SRC0">SCU_SRC0</a></td>
+<td>Service Request Control 0 Register</td>
+<td>0xF00006FC</td>
+<td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_ARSTDIS_t">SCU_ARSTDIS_t</a></td>
+<td><a class="url" href="scu.html#SCU_ARSTDIS">SCU_ARSTDIS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_CCUCON0_t">SCU_CCUCON0_t</a></td>
+<td><a class="url" href="scu.html#SCU_CCUCON0">SCU_CCUCON0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_CCUCON1_t">SCU_CCUCON1_t</a></td>
+<td><a class="url" href="scu.html#SCU_CCUCON1">SCU_CCUCON1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_CHIPID_t">SCU_CHIPID_t</a></td>
+<td><a class="url" href="scu.html#SCU_CHIPID">SCU_CHIPID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_DTSCON_t">SCU_DTSCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_DTSCON">SCU_DTSCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_DTSSTAT_t">SCU_DTSSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_DTSSTAT">SCU_DTSSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_ECCCLR_t">SCU_ECCCLR_t</a></td>
+<td><a class="url" href="scu.html#SCU_ECCCLR">SCU_ECCCLR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_ECCCON_t">SCU_ECCCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_ECCCON">SCU_ECCCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_ECCSTAT_t">SCU_ECCSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_ECCSTAT">SCU_ECCSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_EICRm_t">SCU_EICRm_t</a></td>
+<td><a class="url" href="scu.html#SCU_EICR0">SCU_EICR0</a>,       
+<a class="url" href="scu.html#SCU_EICR1">SCU_EICR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_EIFR_t">SCU_EIFR_t</a></td>
+<td><a class="url" href="scu.html#SCU_EIFR">SCU_EIFR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_EMSR_t">SCU_EMSR_t</a></td>
+<td><a class="url" href="scu.html#SCU_EMSR">SCU_EMSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_ESRCFGm_t">SCU_ESRCFGm_t</a></td>
+<td><a class="url" href="scu.html#SCU_ESRCFG0">SCU_ESRCFG0</a>,       
+<a class="url" href="scu.html#SCU_ESRCFG1">SCU_ESRCFG1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_EXTCON_t">SCU_EXTCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_EXTCON">SCU_EXTCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_FDR_t">SCU_FDR_t</a></td>
+<td><a class="url" href="scu.html#SCU_FDR">SCU_FDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_FMR_t">SCU_FMR_t</a></td>
+<td><a class="url" href="scu.html#SCU_FMR">SCU_FMR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_ID_t">SCU_ID_t</a></td>
+<td><a class="url" href="scu.html#SCU_ID">SCU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_IGCRm_t">SCU_IGCRm_t</a></td>
+<td><a class="url" href="scu.html#SCU_IGCR0">SCU_IGCR0</a>,       
+<a class="url" href="scu.html#SCU_IGCR1">SCU_IGCR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_IN_t">SCU_IN_t</a></td>
+<td><a class="url" href="scu.html#SCU_IN">SCU_IN</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_INTCLR_t">SCU_INTCLR_t</a></td>
+<td><a class="url" href="scu.html#SCU_INTCLR">SCU_INTCLR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_INTDIS_t">SCU_INTDIS_t</a></td>
+<td><a class="url" href="scu.html#SCU_INTDIS">SCU_INTDIS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_INTNP_t">SCU_INTNP_t</a></td>
+<td><a class="url" href="scu.html#SCU_INTNP">SCU_INTNP</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_INTSET_t">SCU_INTSET_t</a></td>
+<td><a class="url" href="scu.html#SCU_INTSET">SCU_INTSET</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_INTSTAT_t">SCU_INTSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_INTSTAT">SCU_INTSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_IOCR_t">SCU_IOCR_t</a></td>
+<td><a class="url" href="scu.html#SCU_IOCR">SCU_IOCR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_MANID_t">SCU_MANID_t</a></td>
+<td><a class="url" href="scu.html#SCU_MANID">SCU_MANID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_OMR_t">SCU_OMR_t</a></td>
+<td><a class="url" href="scu.html#SCU_OMR">SCU_OMR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_OSCCON_t">SCU_OSCCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_OSCCON">SCU_OSCCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_OUT_t">SCU_OUT_t</a></td>
+<td><a class="url" href="scu.html#SCU_OUT">SCU_OUT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PDRR_t">SCU_PDRR_t</a></td>
+<td><a class="url" href="scu.html#SCU_PDRR">SCU_PDRR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PLLCON0_t">SCU_PLLCON0_t</a></td>
+<td><a class="url" href="scu.html#SCU_PLLCON0">SCU_PLLCON0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PLLCON1_t">SCU_PLLCON1_t</a></td>
+<td><a class="url" href="scu.html#SCU_PLLCON1">SCU_PLLCON1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PLLERAYCON0_t">SCU_PLLERAYCON0_t</a></td>
+<td><a class="url" href="scu.html#SCU_PLLERAYCON0">SCU_PLLERAYCON0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PLLERAYCON1_t">SCU_PLLERAYCON1_t</a></td>
+<td><a class="url" href="scu.html#SCU_PLLERAYCON1">SCU_PLLERAYCON1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PLLERAYSTAT_t">SCU_PLLERAYSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_PLLERAYSTAT">SCU_PLLERAYSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PLLSTAT_t">SCU_PLLSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_PLLSTAT">SCU_PLLSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_PMCSR_t">SCU_PMCSR_t</a></td>
+<td><a class="url" href="scu.html#SCU_PMCSR">SCU_PMCSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_RSTCNTCON_t">SCU_RSTCNTCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_RSTCNTCON">SCU_RSTCNTCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_RSTCON_t">SCU_RSTCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_RSTCON">SCU_RSTCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_RSTSTAT_t">SCU_RSTSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_RSTSTAT">SCU_RSTSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_RTID_t">SCU_RTID_t</a></td>
+<td><a class="url" href="scu.html#SCU_RTID">SCU_RTID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td>
+<td><a class="url" href="scu.html#SCU_SRC3">SCU_SRC3</a>,       
+<a class="url" href="scu.html#SCU_SRC2">SCU_SRC2</a>,       
+<a class="url" href="scu.html#SCU_SRC1">SCU_SRC1</a>,       
+<a class="url" href="scu.html#SCU_SRC0">SCU_SRC0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_STCON_t">SCU_STCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_STCON">SCU_STCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_STSTAT_t">SCU_STSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_STSTAT">SCU_STSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_SWRSTCON_t">SCU_SWRSTCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_SWRSTCON">SCU_SWRSTCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_SYSCON_t">SCU_SYSCON_t</a></td>
+<td><a class="url" href="scu.html#SCU_SYSCON">SCU_SYSCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_TRAPCLR_t">SCU_TRAPCLR_t</a></td>
+<td><a class="url" href="scu.html#SCU_TRAPCLR">SCU_TRAPCLR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_TRAPDIS_t">SCU_TRAPDIS_t</a></td>
+<td><a class="url" href="scu.html#SCU_TRAPDIS">SCU_TRAPDIS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_TRAPSET_t">SCU_TRAPSET_t</a></td>
+<td><a class="url" href="scu.html#SCU_TRAPSET">SCU_TRAPSET</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SCU_TRAPSTAT_t">SCU_TRAPSTAT_t</a></td>
+<td><a class="url" href="scu.html#SCU_TRAPSTAT">SCU_TRAPSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/w.html#WDT_CON0_t">WDT_CON0_t</a></td>
+<td><a class="url" href="scu.html#WDT_CON0">WDT_CON0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/w.html#WDT_CON1_t">WDT_CON1_t</a></td>
+<td><a class="url" href="scu.html#WDT_CON1">WDT_CON1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/w.html#WDT_SR_t">WDT_SR_t</a></td>
+<td><a class="url" href="scu.html#WDT_SR">WDT_SR</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="SCU_ID">&nbsp;</a>
+<h3>SCU_ID</h3>
+<h3>"Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_ID_ADDR = 0xF0000508</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0052C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_ID_t">SCU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_ID.bits</b>&nbsp;&quot;Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_ID_MODREV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>SCU_ID_MODREV_SHIFT</td>
+</tr>
+<tr>
+<td>MODTYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>SCU_ID_MODTYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>SCU_ID_MODTYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MODNUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>SCU_ID_MODNUMBER_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>SCU_ID_MODNUMBER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_OSCCON">&nbsp;</a>
+<h3>SCU_OSCCON</h3>
+<h3>"OSC Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_OSCCON_ADDR = 0xF0000510</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_OSCCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000001C</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_OSCCON_t">SCU_OSCCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_OSCCON.bits</b>&nbsp;&quot;OSC Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PLLLV</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_OSCCON_PLLLV_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_OSCCON_PLLLV_SHIFT</td>
+</tr>
+<tr>
+<td>OSCRES</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_OSCCON_OSCRES_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>SCU_OSCCON_OSCRES_SHIFT</td>
+</tr>
+<tr>
+<td>GAINSEL</td>
+<td>2</td>
+<td>3 - 4</td>
+<td>SCU_OSCCON_GAINSEL_MASK</td>
+<td><tt>0x00000018</tt></td>
+<td>rh</td>
+<td>SCU_OSCCON_GAINSEL_SHIFT</td>
+</tr>
+<tr>
+<td>MODE</td>
+<td>2</td>
+<td>5 - 6</td>
+<td>SCU_OSCCON_MODE_MASK</td>
+<td><tt>0x00000060</tt></td>
+<td>rw</td>
+<td>SCU_OSCCON_MODE_SHIFT</td>
+</tr>
+<tr>
+<td>SHBY</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_OSCCON_SHBY_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>SCU_OSCCON_SHBY_SHIFT</td>
+</tr>
+<tr>
+<td>PLLHV</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_OSCCON_PLLHV_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>SCU_OSCCON_PLLHV_SHIFT</td>
+</tr>
+<tr>
+<td>PLLSP</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_OSCCON_PLLSP_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>SCU_OSCCON_PLLSP_SHIFT</td>
+</tr>
+<tr>
+<td>X1D</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_OSCCON_X1D_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>SCU_OSCCON_X1D_SHIFT</td>
+</tr>
+<tr>
+<td>X1DEN</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>SCU_OSCCON_X1DEN_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>SCU_OSCCON_X1DEN_SHIFT</td>
+</tr>
+<tr>
+<td>OSCVAL</td>
+<td>5</td>
+<td>16 - 20</td>
+<td>SCU_OSCCON_OSCVAL_MASK</td>
+<td><tt>0x001f0000</tt></td>
+<td>rw</td>
+<td>SCU_OSCCON_OSCVAL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_OSCCON_MASK</td><td><tt>0x001f0ffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x001f0ffa</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x001f08e4</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000071a</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PLLSTAT">&nbsp;</a>
+<h3>SCU_PLLSTAT</h3>
+<h3>"PLL Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PLLSTAT_ADDR = 0xF0000514</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PLLSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000009</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PLLSTAT_t">SCU_PLLSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PLLSTAT.bits</b>&nbsp;&quot;PLL Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>VCOBYST</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_PLLSTAT_VCOBYST_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_PLLSTAT_VCOBYST_SHIFT</td>
+</tr>
+<tr>
+<td>PWDSTAT</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_PLLSTAT_PWDSTAT_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_PLLSTAT_PWDSTAT_SHIFT</td>
+</tr>
+<tr>
+<td>VCOLOCK</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_PLLSTAT_VCOLOCK_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>SCU_PLLSTAT_VCOLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>FINDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_PLLSTAT_FINDIS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_PLLSTAT_FINDIS_SHIFT</td>
+</tr>
+<tr>
+<td>K1RDY</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_PLLSTAT_K1RDY_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>SCU_PLLSTAT_K1RDY_SHIFT</td>
+</tr>
+<tr>
+<td>K2RDY</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_PLLSTAT_K2RDY_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>SCU_PLLSTAT_K2RDY_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PLLSTAT_MASK</td><td><tt>0x0000003f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000003f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000003f</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PLLCON0">&nbsp;</a>
+<h3>SCU_PLLCON0</h3>
+<h3>"PLL Configuration 0 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PLLCON0_ADDR = 0xF0000518</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PLLCON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0001C600</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PLLCON0_t">SCU_PLLCON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PLLCON0.bits</b>&nbsp;&quot;PLL Configuration 0 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>VCOBYP</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_PLLCON0_VCOBYP_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON0_VCOBYP_SHIFT</td>
+</tr>
+<tr>
+<td>VCOPWD</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_PLLCON0_VCOPWD_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON0_VCOPWD_SHIFT</td>
+</tr>
+<tr>
+<td>SETFINDIS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_PLLCON0_SETFINDIS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_PLLCON0_SETFINDIS_SHIFT</td>
+</tr>
+<tr>
+<td>CLRFINDIS</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_PLLCON0_CLRFINDIS_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_PLLCON0_CLRFINDIS_SHIFT</td>
+</tr>
+<tr>
+<td>OSCDISCDIS</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_PLLCON0_OSCDISCDIS_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON0_OSCDISCDIS_SHIFT</td>
+</tr>
+<tr>
+<td>NDIV</td>
+<td>7</td>
+<td>9 - 15</td>
+<td>SCU_PLLCON0_NDIV_MASK</td>
+<td><tt>0x0000fe00</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON0_NDIV_SHIFT</td>
+</tr>
+<tr>
+<td>PLLPWD</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_PLLCON0_PLLPWD_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON0_PLLPWD_SHIFT</td>
+</tr>
+<tr>
+<td>RESLD</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>SCU_PLLCON0_RESLD_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>SCU_PLLCON0_RESLD_SHIFT</td>
+</tr>
+<tr>
+<td>PDIV</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>SCU_PLLCON0_PDIV_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON0_PDIV_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PLLCON0_MASK</td><td><tt>0x0f05fe73</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0f01fe43</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0f05fe73</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PLLCON1">&nbsp;</a>
+<h3>SCU_PLLCON1</h3>
+<h3>"PLL Configuration 1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PLLCON1_ADDR = 0xF000051C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PLLCON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0002000F</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PLLCON1_t">SCU_PLLCON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PLLCON1.bits</b>&nbsp;&quot;PLL Configuration 1 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>K2DIV</td>
+<td>7</td>
+<td>0 - 6</td>
+<td>SCU_PLLCON1_K2DIV_MASK</td>
+<td><tt>0x0000007f</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON1_K2DIV_SHIFT</td>
+</tr>
+<tr>
+<td>K1DIV</td>
+<td>7</td>
+<td>16 - 22</td>
+<td>SCU_PLLCON1_K1DIV_MASK</td>
+<td><tt>0x007f0000</tt></td>
+<td>rw</td>
+<td>SCU_PLLCON1_K1DIV_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PLLCON1_MASK</td><td><tt>0x007f007f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x007f007f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x007f007f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PLLERAYSTAT">&nbsp;</a>
+<h3>SCU_PLLERAYSTAT</h3>
+<h3>"PLL_ERAY Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PLLERAYSTAT_ADDR = 0xF0000524</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PLLERAYSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000009</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PLLERAYSTAT_t">SCU_PLLERAYSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PLLERAYSTAT.bits</b>&nbsp;&quot;PLL_ERAY Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>VCOBYST</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_PLLERAYSTAT_VCOBYST_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_PLLERAYSTAT_VCOBYST_SHIFT</td>
+</tr>
+<tr>
+<td>PWDSTAT</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_PLLERAYSTAT_PWDSTAT_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_PLLERAYSTAT_PWDSTAT_SHIFT</td>
+</tr>
+<tr>
+<td>VCOLOCK</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_PLLERAYSTAT_VCOLOCK_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>SCU_PLLERAYSTAT_VCOLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>FINDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_PLLERAYSTAT_FINDIS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_PLLERAYSTAT_FINDIS_SHIFT</td>
+</tr>
+<tr>
+<td>K1RDY</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_PLLERAYSTAT_K1RDY_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>SCU_PLLERAYSTAT_K1RDY_SHIFT</td>
+</tr>
+<tr>
+<td>K2RDY</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_PLLERAYSTAT_K2RDY_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>SCU_PLLERAYSTAT_K2RDY_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PLLERAYSTAT_MASK</td><td><tt>0x0000003f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000003f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000003f</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PLLERAYCON0">&nbsp;</a>
+<h3>SCU_PLLERAYCON0</h3>
+<h3>"PLL_ERAY Configuration 0 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PLLERAYCON0_ADDR = 0xF0000528</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PLLERAYCON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00002E00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PLLERAYCON0_t">SCU_PLLERAYCON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PLLERAYCON0.bits</b>&nbsp;&quot;PLL_ERAY Configuration 0 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>VCOBYP</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_PLLERAYCON0_VCOBYP_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_PLLERAYCON0_VCOBYP_SHIFT</td>
+</tr>
+<tr>
+<td>VCOPWD</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_PLLERAYCON0_VCOPWD_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_PLLERAYCON0_VCOPWD_SHIFT</td>
+</tr>
+<tr>
+<td>SETFINDIS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_PLLERAYCON0_SETFINDIS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_PLLERAYCON0_SETFINDIS_SHIFT</td>
+</tr>
+<tr>
+<td>CLRFINDIS</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_PLLERAYCON0_CLRFINDIS_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_PLLERAYCON0_CLRFINDIS_SHIFT</td>
+</tr>
+<tr>
+<td>OSCDISCDIS</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_PLLERAYCON0_OSCDISCDIS_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>SCU_PLLERAYCON0_OSCDISCDIS_SHIFT</td>
+</tr>
+<tr>
+<td>NDIV</td>
+<td>7</td>
+<td>9 - 15</td>
+<td>SCU_PLLERAYCON0_NDIV_MASK</td>
+<td><tt>0x0000fe00</tt></td>
+<td>rw</td>
+<td>SCU_PLLERAYCON0_NDIV_SHIFT</td>
+</tr>
+<tr>
+<td>PLLPWD</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_PLLERAYCON0_PLLPWD_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>SCU_PLLERAYCON0_PLLPWD_SHIFT</td>
+</tr>
+<tr>
+<td>RESLD</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>SCU_PLLERAYCON0_RESLD_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>SCU_PLLERAYCON0_RESLD_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PLLERAYCON0_MASK</td><td><tt>0x0005fe73</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0001fe43</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0005fe73</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PLLERAYCON1">&nbsp;</a>
+<h3>SCU_PLLERAYCON1</h3>
+<h3>"PLL_ERAY Configuration 1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PLLERAYCON1_ADDR = 0xF000052C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PLLERAYCON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000F000F</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PLLERAYCON1_t">SCU_PLLERAYCON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PLLERAYCON1.bits</b>&nbsp;&quot;PLL_ERAY Configuration 1 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>K2DIV</td>
+<td>7</td>
+<td>0 - 6</td>
+<td>SCU_PLLERAYCON1_K2DIV_MASK</td>
+<td><tt>0x0000007f</tt></td>
+<td>rw</td>
+<td>SCU_PLLERAYCON1_K2DIV_SHIFT</td>
+</tr>
+<tr>
+<td>K1DIV</td>
+<td>7</td>
+<td>16 - 22</td>
+<td>SCU_PLLERAYCON1_K1DIV_MASK</td>
+<td><tt>0x007f0000</tt></td>
+<td>rw</td>
+<td>SCU_PLLERAYCON1_K1DIV_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PLLERAYCON1_MASK</td><td><tt>0x007f007f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x007f007f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x007f007f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_CCUCON0">&nbsp;</a>
+<h3>SCU_CCUCON0</h3>
+<h3>"CCU Clock Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_CCUCON0_ADDR = 0xF0000530</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_CCUCON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x80000001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_CCUCON0_t">SCU_CCUCON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_CCUCON0.bits</b>&nbsp;&quot;CCU Clock Control Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FPIDIV</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>SCU_CCUCON0_FPIDIV_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>SCU_CCUCON0_FPIDIV_SHIFT</td>
+</tr>
+<tr>
+<td>LMBDIV</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>SCU_CCUCON0_LMBDIV_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>SCU_CCUCON0_LMBDIV_SHIFT</td>
+</tr>
+<tr>
+<td>PCPDIV</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>SCU_CCUCON0_PCPDIV_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>SCU_CCUCON0_PCPDIV_SHIFT</td>
+</tr>
+<tr>
+<td>LCK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>SCU_CCUCON0_LCK_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rh</td>
+<td>SCU_CCUCON0_LCK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_CCUCON0_MASK</td><td><tt>0x8f000f0f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x8f000f0f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0f000f0f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x80000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_CCUCON1">&nbsp;</a>
+<h3>SCU_CCUCON1</h3>
+<h3>"CCU Clock Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_CCUCON1_ADDR = 0xF0000534</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_CCUCON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x80000B01</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_CCUCON1_t">SCU_CCUCON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_CCUCON1.bits</b>&nbsp;&quot;CCU Clock Control Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MCDSDIV</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>SCU_CCUCON1_MCDSDIV_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>SCU_CCUCON1_MCDSDIV_SHIFT</td>
+</tr>
+<tr>
+<td>REFCLKDIV</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>SCU_CCUCON1_REFCLKDIV_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>r</td>
+<td>SCU_CCUCON1_REFCLKDIV_SHIFT</td>
+</tr>
+<tr>
+<td>LCK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>SCU_CCUCON1_LCK_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rh</td>
+<td>SCU_CCUCON1_LCK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_CCUCON1_MASK</td><td><tt>0x80000f0f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x80000f0f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x80000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_FDR">&nbsp;</a>
+<h3>SCU_FDR</h3>
+<h3>"Fractional Divider Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_FDR_ADDR = 0xF0000538</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_FDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_FDR_t">SCU_FDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_FDR.bits</b>&nbsp;&quot;Fractional Divider Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STEP</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>SCU_FDR_STEP_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rw</td>
+<td>SCU_FDR_STEP_SHIFT</td>
+</tr>
+<tr>
+<td>DM</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>SCU_FDR_DM_MASK</td>
+<td><tt>0x0000c000</tt></td>
+<td>rw</td>
+<td>SCU_FDR_DM_SHIFT</td>
+</tr>
+<tr>
+<td>RESULT</td>
+<td>10</td>
+<td>16 - 25</td>
+<td>SCU_FDR_RESULT_MASK</td>
+<td><tt>0x03ff0000</tt></td>
+<td>rh</td>
+<td>SCU_FDR_RESULT_SHIFT</td>
+</tr>
+<tr>
+<td>DISCLK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>SCU_FDR_DISCLK_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rwh</td>
+<td>SCU_FDR_DISCLK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_FDR_MASK</td><td><tt>0x83ffc3ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x83ffc3ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000c3ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x83ff0000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_EXTCON">&nbsp;</a>
+<h3>SCU_EXTCON</h3>
+<h3>"External Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_EXTCON_ADDR = 0xF000053C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_EXTCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_EXTCON_t">SCU_EXTCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_EXTCON.bits</b>&nbsp;&quot;External Clock Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EN0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_EXTCON_EN0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_EXTCON_EN0_SHIFT</td>
+</tr>
+<tr>
+<td>SEL0</td>
+<td>4</td>
+<td>2 - 5</td>
+<td>SCU_EXTCON_SEL0_MASK</td>
+<td><tt>0x0000003c</tt></td>
+<td>rw</td>
+<td>SCU_EXTCON_SEL0_SHIFT</td>
+</tr>
+<tr>
+<td>GPTAINSEL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_EXTCON_GPTAINSEL_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>SCU_EXTCON_GPTAINSEL_SHIFT</td>
+</tr>
+<tr>
+<td>EN1</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_EXTCON_EN1_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>SCU_EXTCON_EN1_SHIFT</td>
+</tr>
+<tr>
+<td>NSEL</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>SCU_EXTCON_NSEL_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>SCU_EXTCON_NSEL_SHIFT</td>
+</tr>
+<tr>
+<td>SEL1</td>
+<td>4</td>
+<td>18 - 21</td>
+<td>SCU_EXTCON_SEL1_MASK</td>
+<td><tt>0x003c0000</tt></td>
+<td>rw</td>
+<td>SCU_EXTCON_SEL1_SHIFT</td>
+</tr>
+<tr>
+<td>DIV1</td>
+<td>8</td>
+<td>24 - 31</td>
+<td>SCU_EXTCON_DIV1_MASK</td>
+<td><tt>0xff000000</tt></td>
+<td>rw</td>
+<td>SCU_EXTCON_DIV1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_EXTCON_MASK</td><td><tt>0xff3f007d</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff3f007d</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff3f007d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_SYSCON">&nbsp;</a>
+<h3>SCU_SYSCON</h3>
+<h3>"System Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_SYSCON_ADDR = 0xF0000540</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_SYSCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_SYSCON_t">SCU_SYSCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_SYSCON.bits</b>&nbsp;&quot;System Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GPTAIS</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>SCU_SYSCON_GPTAIS_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>SCU_SYSCON_GPTAIS_SHIFT</td>
+</tr>
+<tr>
+<td>SETLUDIS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_SYSCON_SETLUDIS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_SYSCON_SETLUDIS_SHIFT</td>
+</tr>
+<tr>
+<td>SETEXTBEN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_SYSCON_SETEXTBEN_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_SYSCON_SETEXTBEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_SYSCON_MASK</td><td><tt>0x0000003c</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000000c</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000003c</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_RSTSTAT">&nbsp;</a>
+<h3>SCU_RSTSTAT</h3>
+<h3>"Reset Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_RSTSTAT_ADDR = 0xF0000550</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_RSTSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00010000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_RSTSTAT_t">SCU_RSTSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_RSTSTAT.bits</b>&nbsp;&quot;Reset Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ESR0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_RSTSTAT_ESR0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_ESR0_SHIFT</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_RSTSTAT_ESR1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_ESR1_SHIFT</td>
+</tr>
+<tr>
+<td>WDT</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_RSTSTAT_WDT_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_WDT_SHIFT</td>
+</tr>
+<tr>
+<td>SW</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_RSTSTAT_SW_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_SW_SHIFT</td>
+</tr>
+<tr>
+<td>PORST</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_RSTSTAT_PORST_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_PORST_SHIFT</td>
+</tr>
+<tr>
+<td>OCDS</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>SCU_RSTSTAT_OCDS_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_OCDS_SHIFT</td>
+</tr>
+<tr>
+<td>CB0</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>SCU_RSTSTAT_CB0_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_CB0_SHIFT</td>
+</tr>
+<tr>
+<td>CB1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>SCU_RSTSTAT_CB1_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_CB1_SHIFT</td>
+</tr>
+<tr>
+<td>CB3</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>SCU_RSTSTAT_CB3_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_CB3_SHIFT</td>
+</tr>
+<tr>
+<td>TP</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>SCU_RSTSTAT_TP_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>SCU_RSTSTAT_TP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_RSTSTAT_MASK</td><td><tt>0x003f001b</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x003f001b</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x003f001b</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_RSTCNTCON">&nbsp;</a>
+<h3>SCU_RSTCNTCON</h3>
+<h3>"Reset Counter Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_RSTCNTCON_ADDR = 0xF0000554</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_RSTCNTCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x05BE05BE</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_RSTCNTCON_t">SCU_RSTCNTCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_RSTCNTCON.bits</b>&nbsp;&quot;Reset Counter Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RELSA</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>SCU_RSTCNTCON_RELSA_MASK</td>
+<td><tt>0x0000ffff</tt></td>
+<td>rw</td>
+<td>SCU_RSTCNTCON_RELSA_SHIFT</td>
+</tr>
+<tr>
+<td>RELD</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>SCU_RSTCNTCON_RELD_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>rw</td>
+<td>SCU_RSTCNTCON_RELD_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_RSTCNTCON_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_RSTCON">&nbsp;</a>
+<h3>SCU_RSTCON</h3>
+<h3>"Reset Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_RSTCON_ADDR = 0xF0000558</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_RSTCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000002A2</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_RSTCON_t">SCU_RSTCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_RSTCON.bits</b>&nbsp;&quot;Reset Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ESR0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>SCU_RSTCON_ESR0_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>SCU_RSTCON_ESR0_SHIFT</td>
+</tr>
+<tr>
+<td>ESR1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>SCU_RSTCON_ESR1_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>SCU_RSTCON_ESR1_SHIFT</td>
+</tr>
+<tr>
+<td>WDT</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>SCU_RSTCON_WDT_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>SCU_RSTCON_WDT_SHIFT</td>
+</tr>
+<tr>
+<td>SW</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>SCU_RSTCON_SW_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rw</td>
+<td>SCU_RSTCON_SW_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_RSTCON_MASK</td><td><tt>0x000003cf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003cf</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003cf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_ARSTDIS">&nbsp;</a>
+<h3>SCU_ARSTDIS</h3>
+<h3>"Application Reset Disable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_ARSTDIS_ADDR = 0xF000055C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_ARSTDIS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_ARSTDIS_t">SCU_ARSTDIS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_ARSTDIS.bits</b>&nbsp;&quot;Application Reset Disable Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STMDIS</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_ARSTDIS_STMDIS_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_ARSTDIS_STMDIS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_ARSTDIS_MASK</td><td><tt>0x00000001</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_SWRSTCON">&nbsp;</a>
+<h3>SCU_SWRSTCON</h3>
+<h3>"Software Reset Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_SWRSTCON_ADDR = 0xF0000560</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_SWRSTCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_SWRSTCON_t">SCU_SWRSTCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_SWRSTCON.bits</b>&nbsp;&quot;Software Reset Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SWBOOT</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_SWRSTCON_SWBOOT_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_SWRSTCON_SWBOOT_SHIFT</td>
+</tr>
+<tr>
+<td>SWRSTREQ</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_SWRSTCON_SWRSTREQ_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_SWRSTCON_SWRSTREQ_SHIFT</td>
+</tr>
+<tr>
+<td>SWCFG</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>SCU_SWRSTCON_SWCFG_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>rw</td>
+<td>SCU_SWRSTCON_SWCFG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_SWRSTCON_MASK</td><td><tt>0x0000ff03</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ff01</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000ff03</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_ESRCFG0">&nbsp;</a>
+<h3>SCU_ESRCFG0</h3>
+<h3>"ESR0 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_ESRCFG0_ADDR = 0xF0000570</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_ESRCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000100</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_ESRCFGm_t">SCU_ESRCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_ESRCFG0.bits</b>&nbsp;&quot;ESR0 Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DFEN</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_ESRCFGm_DFEN_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>SCU_ESRCFGm_DFEN_SHIFT</td>
+</tr>
+<tr>
+<td>EDCON</td>
+<td>2</td>
+<td>7 - 8</td>
+<td>SCU_ESRCFGm_EDCON_MASK</td>
+<td><tt>0x00000180</tt></td>
+<td>rw</td>
+<td>SCU_ESRCFGm_EDCON_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_ESRCFGm_MASK</td><td><tt>0x00000190</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000190</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000190</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_ESRCFG1">&nbsp;</a>
+<h3>SCU_ESRCFG1</h3>
+<h3>"ESR1 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_ESRCFG1_ADDR = 0xF0000574</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_ESRCFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000080</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_ESRCFGm_t">SCU_ESRCFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_ESRCFG1.bits</b>&nbsp;&quot;ESR1 Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DFEN</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_ESRCFGm_DFEN_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>SCU_ESRCFGm_DFEN_SHIFT</td>
+</tr>
+<tr>
+<td>EDCON</td>
+<td>2</td>
+<td>7 - 8</td>
+<td>SCU_ESRCFGm_EDCON_MASK</td>
+<td><tt>0x00000180</tt></td>
+<td>rw</td>
+<td>SCU_ESRCFGm_EDCON_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_ESRCFGm_MASK</td><td><tt>0x00000190</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000190</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000190</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_EICR0">&nbsp;</a>
+<h3>SCU_EICR0</h3>
+<h3>"External Input Channel Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_EICR0_ADDR = 0xF0000580</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_EICRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_EICRm_t">SCU_EICRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_EICR0.bits</b>&nbsp;&quot;External Input Channel Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EXIS0</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>SCU_EICRm_EXIS0_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EXIS0_SHIFT</td>
+</tr>
+<tr>
+<td>FEN0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_EICRm_FEN0_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_FEN0_SHIFT</td>
+</tr>
+<tr>
+<td>REN0</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_EICRm_REN0_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_REN0_SHIFT</td>
+</tr>
+<tr>
+<td>LDEN0</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_EICRm_LDEN0_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_LDEN0_SHIFT</td>
+</tr>
+<tr>
+<td>EIEN0</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>SCU_EICRm_EIEN0_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EIEN0_SHIFT</td>
+</tr>
+<tr>
+<td>INP0</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>SCU_EICRm_INP0_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_INP0_SHIFT</td>
+</tr>
+<tr>
+<td>EXIS1</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>SCU_EICRm_EXIS1_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EXIS1_SHIFT</td>
+</tr>
+<tr>
+<td>FEN1</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>SCU_EICRm_FEN1_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_FEN1_SHIFT</td>
+</tr>
+<tr>
+<td>REN1</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>SCU_EICRm_REN1_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_REN1_SHIFT</td>
+</tr>
+<tr>
+<td>LDEN1</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>SCU_EICRm_LDEN1_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_LDEN1_SHIFT</td>
+</tr>
+<tr>
+<td>EIEN1</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>SCU_EICRm_EIEN1_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EIEN1_SHIFT</td>
+</tr>
+<tr>
+<td>INP1</td>
+<td>3</td>
+<td>28 - 30</td>
+<td>SCU_EICRm_INP1_MASK</td>
+<td><tt>0x70000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_INP1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_EICRm_MASK</td><td><tt>0x7f307f30</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x7f307f30</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x7f307f30</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_EICR1">&nbsp;</a>
+<h3>SCU_EICR1</h3>
+<h3>"External Input Channel Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_EICR1_ADDR = 0xF0000584</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_EICRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_EICRm_t">SCU_EICRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_EICR1.bits</b>&nbsp;&quot;External Input Channel Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EXIS0</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>SCU_EICRm_EXIS0_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EXIS0_SHIFT</td>
+</tr>
+<tr>
+<td>FEN0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_EICRm_FEN0_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_FEN0_SHIFT</td>
+</tr>
+<tr>
+<td>REN0</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_EICRm_REN0_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_REN0_SHIFT</td>
+</tr>
+<tr>
+<td>LDEN0</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_EICRm_LDEN0_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_LDEN0_SHIFT</td>
+</tr>
+<tr>
+<td>EIEN0</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>SCU_EICRm_EIEN0_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EIEN0_SHIFT</td>
+</tr>
+<tr>
+<td>INP0</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>SCU_EICRm_INP0_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_INP0_SHIFT</td>
+</tr>
+<tr>
+<td>EXIS1</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>SCU_EICRm_EXIS1_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EXIS1_SHIFT</td>
+</tr>
+<tr>
+<td>FEN1</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>SCU_EICRm_FEN1_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_FEN1_SHIFT</td>
+</tr>
+<tr>
+<td>REN1</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>SCU_EICRm_REN1_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_REN1_SHIFT</td>
+</tr>
+<tr>
+<td>LDEN1</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>SCU_EICRm_LDEN1_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_LDEN1_SHIFT</td>
+</tr>
+<tr>
+<td>EIEN1</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>SCU_EICRm_EIEN1_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_EIEN1_SHIFT</td>
+</tr>
+<tr>
+<td>INP1</td>
+<td>3</td>
+<td>28 - 30</td>
+<td>SCU_EICRm_INP1_MASK</td>
+<td><tt>0x70000000</tt></td>
+<td>rw</td>
+<td>SCU_EICRm_INP1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_EICRm_MASK</td><td><tt>0x7f307f30</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x7f307f30</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x7f307f30</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_EIFR">&nbsp;</a>
+<h3>SCU_EIFR</h3>
+<h3>"External Input Flag Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_EIFR_ADDR = 0xF0000588</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_EIFR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_EIFR_t">SCU_EIFR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_EIFR.bits</b>&nbsp;&quot;External Input Flag Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>INTF0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_EIFR_INTF0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_EIFR_INTF0_SHIFT</td>
+</tr>
+<tr>
+<td>INTF1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_EIFR_INTF1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_EIFR_INTF1_SHIFT</td>
+</tr>
+<tr>
+<td>INTF2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_EIFR_INTF2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>SCU_EIFR_INTF2_SHIFT</td>
+</tr>
+<tr>
+<td>INTF3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_EIFR_INTF3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_EIFR_INTF3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_EIFR_MASK</td><td><tt>0x0000000f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000000f</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_FMR">&nbsp;</a>
+<h3>SCU_FMR</h3>
+<h3>"Flag Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_FMR_ADDR = 0xF000058C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_FMR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_FMR_t">SCU_FMR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_FMR.bits</b>&nbsp;&quot;Flag Modification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FS0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_FMR_FS0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>SCU_FMR_FS0_SHIFT</td>
+</tr>
+<tr>
+<td>FS1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_FMR_FS1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_FMR_FS1_SHIFT</td>
+</tr>
+<tr>
+<td>FS2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_FMR_FS2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>SCU_FMR_FS2_SHIFT</td>
+</tr>
+<tr>
+<td>FS3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_FMR_FS3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>SCU_FMR_FS3_SHIFT</td>
+</tr>
+<tr>
+<td>FC0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_FMR_FC0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>SCU_FMR_FC0_SHIFT</td>
+</tr>
+<tr>
+<td>FC1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>SCU_FMR_FC1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>SCU_FMR_FC1_SHIFT</td>
+</tr>
+<tr>
+<td>FC2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>SCU_FMR_FC2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>SCU_FMR_FC2_SHIFT</td>
+</tr>
+<tr>
+<td>FC3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>SCU_FMR_FC3_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>SCU_FMR_FC3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_FMR_MASK</td><td><tt>0x000f000f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000f000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PDRR">&nbsp;</a>
+<h3>SCU_PDRR</h3>
+<h3>"Pattern Detection Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PDRR_ADDR = 0xF0000590</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PDRR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000000F</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PDRR_t">SCU_PDRR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PDRR.bits</b>&nbsp;&quot;Pattern Detection Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PDR0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_PDRR_PDR0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_PDRR_PDR0_SHIFT</td>
+</tr>
+<tr>
+<td>PDR1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_PDRR_PDR1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_PDRR_PDR1_SHIFT</td>
+</tr>
+<tr>
+<td>PDR2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_PDRR_PDR2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>SCU_PDRR_PDR2_SHIFT</td>
+</tr>
+<tr>
+<td>PDR3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_PDRR_PDR3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_PDRR_PDR3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PDRR_MASK</td><td><tt>0x0000000f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000000f</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_IGCR0">&nbsp;</a>
+<h3>SCU_IGCR0</h3>
+<h3>"Interrupt Gating Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_IGCR0_ADDR = 0xF0000594</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_IGCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_IGCRm_t">SCU_IGCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_IGCR0.bits</b>&nbsp;&quot;Interrupt Gating Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IPEN00</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_IGCRm_IPEN00_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN00_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN01</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_IGCRm_IPEN01_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN01_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN02</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_IGCRm_IPEN02_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN02_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN03</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_IGCRm_IPEN03_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN03_SHIFT</td>
+</tr>
+<tr>
+<td>GEEN0</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_IGCRm_GEEN0_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_GEEN0_SHIFT</td>
+</tr>
+<tr>
+<td>IGP0</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>SCU_IGCRm_IGP0_MASK</td>
+<td><tt>0x0000c000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IGP0_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN10</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_IGCRm_IPEN10_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN10_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN11</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>SCU_IGCRm_IPEN11_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN11_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN12</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>SCU_IGCRm_IPEN12_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN12_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN13</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>SCU_IGCRm_IPEN13_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN13_SHIFT</td>
+</tr>
+<tr>
+<td>GEEN1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>SCU_IGCRm_GEEN1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_GEEN1_SHIFT</td>
+</tr>
+<tr>
+<td>IGP1</td>
+<td>2</td>
+<td>30 - 31</td>
+<td>SCU_IGCRm_IGP1_MASK</td>
+<td><tt>0xc0000000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IGP1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_IGCRm_MASK</td><td><tt>0xe00fe00f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xe00fe00f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xe00fe00f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_IGCR1">&nbsp;</a>
+<h3>SCU_IGCR1</h3>
+<h3>"Interrupt Gating Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_IGCR1_ADDR = 0xF0000598</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_IGCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_IGCRm_t">SCU_IGCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_IGCR1.bits</b>&nbsp;&quot;Interrupt Gating Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IPEN00</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_IGCRm_IPEN00_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN00_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN01</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_IGCRm_IPEN01_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN01_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN02</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_IGCRm_IPEN02_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN02_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN03</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_IGCRm_IPEN03_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN03_SHIFT</td>
+</tr>
+<tr>
+<td>GEEN0</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_IGCRm_GEEN0_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_GEEN0_SHIFT</td>
+</tr>
+<tr>
+<td>IGP0</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>SCU_IGCRm_IGP0_MASK</td>
+<td><tt>0x0000c000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IGP0_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN10</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_IGCRm_IPEN10_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN10_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN11</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>SCU_IGCRm_IPEN11_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN11_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN12</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>SCU_IGCRm_IPEN12_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN12_SHIFT</td>
+</tr>
+<tr>
+<td>IPEN13</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>SCU_IGCRm_IPEN13_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IPEN13_SHIFT</td>
+</tr>
+<tr>
+<td>GEEN1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>SCU_IGCRm_GEEN1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_GEEN1_SHIFT</td>
+</tr>
+<tr>
+<td>IGP1</td>
+<td>2</td>
+<td>30 - 31</td>
+<td>SCU_IGCRm_IGP1_MASK</td>
+<td><tt>0xc0000000</tt></td>
+<td>rw</td>
+<td>SCU_IGCRm_IGP1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_IGCRm_MASK</td><td><tt>0xe00fe00f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xe00fe00f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xe00fe00f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_IOCR">&nbsp;</a>
+<h3>SCU_IOCR</h3>
+<h3>"Input/Output Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_IOCR_ADDR = 0xF00005A0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_IOCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x002010E0</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_IOCR_t">SCU_IOCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_IOCR.bits</b>&nbsp;&quot;Input/Output Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>SCU_IOCR_PC0_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>SCU_IOCR_PC0_SHIFT</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>SCU_IOCR_PC1_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>SCU_IOCR_PC1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_IOCR_MASK</td><td><tt>0x0000f0f0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000f0f0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_OUT">&nbsp;</a>
+<h3>SCU_OUT</h3>
+<h3>"Output Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_OUT_ADDR = 0xF00005A4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_OUT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_OUT_t">SCU_OUT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_OUT.bits</b>&nbsp;&quot;Output Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>P0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_OUT_P0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rwh</td>
+<td>SCU_OUT_P0_SHIFT</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_OUT_P1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rwh</td>
+<td>SCU_OUT_P1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_OUT_MASK</td><td><tt>0x00000003</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000003</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_OMR">&nbsp;</a>
+<h3>SCU_OMR</h3>
+<h3>"Output Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_OMR_ADDR = 0xF00005A8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_OMR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_OMR_t">SCU_OMR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_OMR.bits</b>&nbsp;&quot;Output Modification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PS0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_OMR_PS0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>SCU_OMR_PS0_SHIFT</td>
+</tr>
+<tr>
+<td>PS1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_OMR_PS1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_OMR_PS1_SHIFT</td>
+</tr>
+<tr>
+<td>PR0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_OMR_PR0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>SCU_OMR_PR0_SHIFT</td>
+</tr>
+<tr>
+<td>PR1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>SCU_OMR_PR1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>SCU_OMR_PR1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_OMR_MASK</td><td><tt>0x00030003</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00030003</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_IN">&nbsp;</a>
+<h3>SCU_IN</h3>
+<h3>"Input Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_IN_ADDR = 0xF00005AC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_IN_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000000X</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_IN_t">SCU_IN_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_IN.bits</b>&nbsp;&quot;Input Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>P0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_IN_P0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_IN_P0_SHIFT</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_IN_P1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_IN_P1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_IN_MASK</td><td><tt>0x00000003</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000003</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_PMCSR">&nbsp;</a>
+<h3>SCU_PMCSR</h3>
+<h3>"Power Management Control and Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_PMCSR_ADDR = 0xF00005B0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_PMCSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000100</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_PMCSR_t">SCU_PMCSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_PMCSR.bits</b>&nbsp;&quot;Power Management Control and Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>REQSLP</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>SCU_PMCSR_REQSLP_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rwh</td>
+<td>SCU_PMCSR_REQSLP_SHIFT</td>
+</tr>
+<tr>
+<td>PMST</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>SCU_PMCSR_PMST_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rh</td>
+<td>SCU_PMCSR_PMST_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_PMCSR_MASK</td><td><tt>0x00000703</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000703</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000703</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_STSTAT">&nbsp;</a>
+<h3>SCU_STSTAT</h3>
+<h3>"Start-up Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_STSTAT_ADDR = 0xF00005C0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_STSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_STSTAT_t">SCU_STSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_STSTAT.bits</b>&nbsp;&quot;Start-up Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>HWCFG</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_STSTAT_HWCFG_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>SCU_STSTAT_HWCFG_SHIFT</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_STSTAT_Mode_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>SCU_STSTAT_Mode_SHIFT</td>
+</tr>
+<tr>
+<td>FCBAE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_STSTAT_FCBAE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>SCU_STSTAT_FCBAE_SHIFT</td>
+</tr>
+<tr>
+<td>LUDIS</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>SCU_STSTAT_LUDIS_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>SCU_STSTAT_LUDIS_SHIFT</td>
+</tr>
+<tr>
+<td>EXTBEN</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>SCU_STSTAT_EXTBEN_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>SCU_STSTAT_EXTBEN_SHIFT</td>
+</tr>
+<tr>
+<td>TRSTL</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>SCU_STSTAT_TRSTL_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>SCU_STSTAT_TRSTL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_STSTAT_MASK</td><td><tt>0x000f80ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000f80ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000f80ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_STCON">&nbsp;</a>
+<h3>SCU_STCON</h3>
+<h3>"Start-up Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_STCON_ADDR = 0xF00005C4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_STCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_STCON_t">SCU_STCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_STCON.bits</b>&nbsp;&quot;Start-up Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>HWCFG</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_STCON_HWCFG_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>w</td>
+<td>SCU_STCON_HWCFG_SHIFT</td>
+</tr>
+<tr>
+<td>SFCBAE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_STCON_SFCBAE_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>w</td>
+<td>SCU_STCON_SFCBAE_SHIFT</td>
+</tr>
+<tr>
+<td>CFCBAE</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>SCU_STCON_CFCBAE_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>SCU_STCON_CFCBAE_SHIFT</td>
+</tr>
+<tr>
+<td>STP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_STCON_STP_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>SCU_STCON_STP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_STCON_MASK</td><td><tt>0x0000e0ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000e0ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_ECCCON">&nbsp;</a>
+<h3>SCU_ECCCON</h3>
+<h3>"ECC Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_ECCCON_ADDR = 0xF00005D0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_ECCCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000FFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_ECCCON_t">SCU_ECCCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_ECCCON.bits</b>&nbsp;&quot;ECC Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ECCENLDRAM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_ECCCON_ECCENLDRAM_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENLDRAM_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENDTAG</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_ECCCON_ECCENDTAG_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENDTAG_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENSPRAM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_ECCCON_ECCENSPRAM_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENSPRAM_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENPTAG</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_ECCCON_ECCENPTAG_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENPTAG_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENPMU</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_ECCCON_ECCENPMU_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENPMU_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENPRAM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_ECCCON_ECCENPRAM_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENPRAM_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENCMEM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_ECCCON_ECCENCMEM_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENCMEM_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENCAN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_ECCCON_ECCENCAN_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENCAN_SHIFT</td>
+</tr>
+<tr>
+<td>ECCENERAY</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_ECCCON_ECCENERAY_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>SCU_ECCCON_ECCENERAY_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_ECCCON_MASK</td><td><tt>0x000001ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_ECCSTAT">&nbsp;</a>
+<h3>SCU_ECCSTAT</h3>
+<h3>"ECC Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_ECCSTAT_ADDR = 0xF00005D4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_ECCSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_ECCSTAT_t">SCU_ECCSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_ECCSTAT.bits</b>&nbsp;&quot;ECC Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LDRAM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_ECCSTAT_LDRAM_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_LDRAM_SHIFT</td>
+</tr>
+<tr>
+<td>DTAG</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_ECCSTAT_DTAG_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_DTAG_SHIFT</td>
+</tr>
+<tr>
+<td>SPRAM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_ECCSTAT_SPRAM_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_SPRAM_SHIFT</td>
+</tr>
+<tr>
+<td>PTAG</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_ECCSTAT_PTAG_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_PTAG_SHIFT</td>
+</tr>
+<tr>
+<td>PMU</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_ECCSTAT_PMU_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_PMU_SHIFT</td>
+</tr>
+<tr>
+<td>PRAM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_ECCSTAT_PRAM_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_PRAM_SHIFT</td>
+</tr>
+<tr>
+<td>CMEM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_ECCSTAT_CMEM_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_CMEM_SHIFT</td>
+</tr>
+<tr>
+<td>CAN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_ECCSTAT_CAN_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_CAN_SHIFT</td>
+</tr>
+<tr>
+<td>ERAY</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_ECCSTAT_ERAY_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>SCU_ECCSTAT_ERAY_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_ECCSTAT_MASK</td><td><tt>0x000001ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000001ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_ECCCLR">&nbsp;</a>
+<h3>SCU_ECCCLR</h3>
+<h3>"ECC Clear Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_ECCCLR_ADDR = 0xF00005D8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_ECCCLR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_ECCCLR_t">SCU_ECCCLR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_ECCCLR.bits</b>&nbsp;&quot;ECC Clear Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LDRAM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_ECCCLR_LDRAM_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_LDRAM_SHIFT</td>
+</tr>
+<tr>
+<td>DTAG</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_ECCCLR_DTAG_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_DTAG_SHIFT</td>
+</tr>
+<tr>
+<td>SPRAM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_ECCCLR_SPRAM_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_SPRAM_SHIFT</td>
+</tr>
+<tr>
+<td>PTAG</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_ECCCLR_PTAG_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_PTAG_SHIFT</td>
+</tr>
+<tr>
+<td>PMU</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_ECCCLR_PMU_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_PMU_SHIFT</td>
+</tr>
+<tr>
+<td>PRAM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_ECCCLR_PRAM_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_PRAM_SHIFT</td>
+</tr>
+<tr>
+<td>CMEM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_ECCCLR_CMEM_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_CMEM_SHIFT</td>
+</tr>
+<tr>
+<td>CAN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_ECCCLR_CAN_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_CAN_SHIFT</td>
+</tr>
+<tr>
+<td>ERAY</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_ECCCLR_ERAY_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>SCU_ECCCLR_ERAY_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_ECCCLR_MASK</td><td><tt>0x000001ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_DTSSTAT">&nbsp;</a>
+<h3>SCU_DTSSTAT</h3>
+<h3>"Die Temperature Sensor Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_DTSSTAT_ADDR = 0xF00005E0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_DTSSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_DTSSTAT_t">SCU_DTSSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_DTSSTAT.bits</b>&nbsp;&quot;Die Temperature Sensor Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RESULT</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>SCU_DTSSTAT_RESULT_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rh</td>
+<td>SCU_DTSSTAT_RESULT_SHIFT</td>
+</tr>
+<tr>
+<td>RDY</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>SCU_DTSSTAT_RDY_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>SCU_DTSSTAT_RDY_SHIFT</td>
+</tr>
+<tr>
+<td>BUSY</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_DTSSTAT_BUSY_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>SCU_DTSSTAT_BUSY_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_DTSSTAT_MASK</td><td><tt>0x0000c3ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000c3ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000c3ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_DTSCON">&nbsp;</a>
+<h3>SCU_DTSCON</h3>
+<h3>"Die Temperature Sensor Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_DTSCON_ADDR = 0xF00005E4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_DTSCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_DTSCON_t">SCU_DTSCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_DTSCON.bits</b>&nbsp;&quot;Die Temperature Sensor Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PWD</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_DTSCON_PWD_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_DTSCON_PWD_SHIFT</td>
+</tr>
+<tr>
+<td>START</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_DTSCON_START_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_DTSCON_START_SHIFT</td>
+</tr>
+<tr>
+<td>CAL</td>
+<td>20</td>
+<td>4 - 23</td>
+<td>SCU_DTSCON_CAL_MASK</td>
+<td><tt>0x00fffff0</tt></td>
+<td>rw</td>
+<td>SCU_DTSCON_CAL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_DTSCON_MASK</td><td><tt>0x00fffff3</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00fffff1</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00fffff3</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="WDT_CON0">&nbsp;</a>
+<h3>WDT_CON0</h3>
+<h3>"WDT Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>WDT_CON0_ADDR = 0xF00005F0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>WDT_CON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFC0002</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/w.html#WDT_CON0_t">WDT_CON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>WDT_CON0.bits</b>&nbsp;&quot;WDT Control Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ENDINIT</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>WDT_CON0_ENDINIT_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rwh</td>
+<td>WDT_CON0_ENDINIT_SHIFT</td>
+</tr>
+<tr>
+<td>LCK</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>WDT_CON0_LCK_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>WDT_CON0_LCK_SHIFT</td>
+</tr>
+<tr>
+<td>HPW0</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>WDT_CON0_HPW0_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>w</td>
+<td>WDT_CON0_HPW0_SHIFT</td>
+</tr>
+<tr>
+<td>HPW1</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>WDT_CON0_HPW1_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>w</td>
+<td>WDT_CON0_HPW1_SHIFT</td>
+</tr>
+<tr>
+<td>PW</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>WDT_CON0_PW_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>rw</td>
+<td>WDT_CON0_PW_SHIFT</td>
+</tr>
+<tr>
+<td>REL</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>WDT_CON0_REL_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>rw</td>
+<td>WDT_CON0_REL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>WDT_CON0_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffff03</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000001</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="WDT_CON1">&nbsp;</a>
+<h3>WDT_CON1</h3>
+<h3>"WDT Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>WDT_CON1_ADDR = 0xF00005F4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>WDT_CON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/w.html#WDT_CON1_t">WDT_CON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>WDT_CON1.bits</b>&nbsp;&quot;WDT Control Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CLRIRF</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>WDT_CON1_CLRIRF_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rwh</td>
+<td>WDT_CON1_CLRIRF_SHIFT</td>
+</tr>
+<tr>
+<td>IR</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>WDT_CON1_IR_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>WDT_CON1_IR_SHIFT</td>
+</tr>
+<tr>
+<td>DR</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>WDT_CON1_DR_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>WDT_CON1_DR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>WDT_CON1_MASK</td><td><tt>0x0000000d</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000000d</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000000d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000001</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="WDT_SR">&nbsp;</a>
+<h3>WDT_SR</h3>
+<h3>"WDT Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>WDT_SR_ADDR = 0xF00005F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>WDT_SR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFC0010</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/w.html#WDT_SR_t">WDT_SR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>WDT_SR.bits</b>&nbsp;&quot;WDT Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>AE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>WDT_SR_AE_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>WDT_SR_AE_SHIFT</td>
+</tr>
+<tr>
+<td>OE</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>WDT_SR_OE_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>WDT_SR_OE_SHIFT</td>
+</tr>
+<tr>
+<td>IS</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>WDT_SR_IS_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>WDT_SR_IS_SHIFT</td>
+</tr>
+<tr>
+<td>DS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>WDT_SR_DS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>WDT_SR_DS_SHIFT</td>
+</tr>
+<tr>
+<td>TO</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>WDT_SR_TO_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>WDT_SR_TO_SHIFT</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>WDT_SR_PR_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>WDT_SR_PR_SHIFT</td>
+</tr>
+<tr>
+<td>TIM</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>WDT_SR_TIM_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>rh</td>
+<td>WDT_SR_TIM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>WDT_SR_MASK</td><td><tt>0xffff003f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffff003f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffff003f</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_EMSR">&nbsp;</a>
+<h3>SCU_EMSR</h3>
+<h3>"Emergency Stop Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_EMSR_ADDR = 0xF0000600</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_EMSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_EMSR_t">SCU_EMSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_EMSR.bits</b>&nbsp;&quot;Emergency Stop Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>POL</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_EMSR_POL_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_EMSR_POL_SHIFT</td>
+</tr>
+<tr>
+<td>MODE</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_EMSR_MODE_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_EMSR_MODE_SHIFT</td>
+</tr>
+<tr>
+<td>ENON</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_EMSR_ENON_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>SCU_EMSR_ENON_SHIFT</td>
+</tr>
+<tr>
+<td>EMSF</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_EMSR_EMSF_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>SCU_EMSR_EMSF_SHIFT</td>
+</tr>
+<tr>
+<td>EMSFM</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>SCU_EMSR_EMSFM_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>w</td>
+<td>SCU_EMSR_EMSFM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_EMSR_MASK</td><td><tt>0x03010007</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00010007</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x03000007</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00010000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_INTSTAT">&nbsp;</a>
+<h3>SCU_INTSTAT</h3>
+<h3>"Interrupt Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_INTSTAT_ADDR = 0xF0000610</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_INTSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_INTSTAT_t">SCU_INTSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_INTSTAT.bits</b>&nbsp;&quot;Interrupt Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WDTI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_INTSTAT_WDTI_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_INTSTAT_WDTI_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_INTSTAT_ERUI0_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_INTSTAT_ERUI0_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI1</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_INTSTAT_ERUI1_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>SCU_INTSTAT_ERUI1_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI2</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_INTSTAT_ERUI2_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_INTSTAT_ERUI2_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI3</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_INTSTAT_ERUI3_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>SCU_INTSTAT_ERUI3_SHIFT</td>
+</tr>
+<tr>
+<td>FL0I</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_INTSTAT_FL0I_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>SCU_INTSTAT_FL0I_SHIFT</td>
+</tr>
+<tr>
+<td>DTSI</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_INTSTAT_DTSI_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>SCU_INTSTAT_DTSI_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_INTSTAT_MASK</td><td><tt>0x000000bf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000000bf</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000000bf</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_INTSET">&nbsp;</a>
+<h3>SCU_INTSET</h3>
+<h3>"Interrupt Set Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_INTSET_ADDR = 0xF0000614</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_INTSET_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_INTSET_t">SCU_INTSET_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_INTSET.bits</b>&nbsp;&quot;Interrupt Set Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WDTI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_INTSET_WDTI_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>SCU_INTSET_WDTI_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_INTSET_ERUI0_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_INTSET_ERUI0_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI1</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_INTSET_ERUI1_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>SCU_INTSET_ERUI1_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI2</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_INTSET_ERUI2_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>SCU_INTSET_ERUI2_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI3</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_INTSET_ERUI3_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_INTSET_ERUI3_SHIFT</td>
+</tr>
+<tr>
+<td>FL0I</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_INTSET_FL0I_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_INTSET_FL0I_SHIFT</td>
+</tr>
+<tr>
+<td>DTSI</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_INTSET_DTSI_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>SCU_INTSET_DTSI_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_INTSET_MASK</td><td><tt>0x000000bf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000bf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_INTCLR">&nbsp;</a>
+<h3>SCU_INTCLR</h3>
+<h3>"Interrupt Clear Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_INTCLR_ADDR = 0xF0000618</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_INTCLR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_INTCLR_t">SCU_INTCLR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_INTCLR.bits</b>&nbsp;&quot;Interrupt Clear Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WDTI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_INTCLR_WDTI_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>SCU_INTCLR_WDTI_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_INTCLR_ERUI0_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_INTCLR_ERUI0_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI1</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_INTCLR_ERUI1_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>SCU_INTCLR_ERUI1_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI2</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_INTCLR_ERUI2_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>SCU_INTCLR_ERUI2_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI3</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_INTCLR_ERUI3_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_INTCLR_ERUI3_SHIFT</td>
+</tr>
+<tr>
+<td>FL0I</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_INTCLR_FL0I_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_INTCLR_FL0I_SHIFT</td>
+</tr>
+<tr>
+<td>DTSI</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_INTCLR_DTSI_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>SCU_INTCLR_DTSI_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_INTCLR_MASK</td><td><tt>0x000000bf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000bf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_INTDIS">&nbsp;</a>
+<h3>SCU_INTDIS</h3>
+<h3>"Interrupt Disable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_INTDIS_ADDR = 0xF000061C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_INTDIS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_INTDIS_t">SCU_INTDIS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_INTDIS.bits</b>&nbsp;&quot;Interrupt Disable Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WDTI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_INTDIS_WDTI_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_INTDIS_WDTI_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_INTDIS_ERUI0_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_INTDIS_ERUI0_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI1</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_INTDIS_ERUI1_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>SCU_INTDIS_ERUI1_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI2</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_INTDIS_ERUI2_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>SCU_INTDIS_ERUI2_SHIFT</td>
+</tr>
+<tr>
+<td>ERUI3</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_INTDIS_ERUI3_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>SCU_INTDIS_ERUI3_SHIFT</td>
+</tr>
+<tr>
+<td>FL0I</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_INTDIS_FL0I_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>SCU_INTDIS_FL0I_SHIFT</td>
+</tr>
+<tr>
+<td>DTSI</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_INTDIS_DTSI_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>SCU_INTDIS_DTSI_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_INTDIS_MASK</td><td><tt>0x000000bf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000000bf</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000bf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_INTNP">&nbsp;</a>
+<h3>SCU_INTNP</h3>
+<h3>"Interrupt Node Pointer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_INTNP_ADDR = 0xF0000620</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_INTNP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_INTNP_t">SCU_INTNP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_INTNP.bits</b>&nbsp;&quot;Interrupt Node Pointer Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WDT</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>SCU_INTNP_WDT_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>SCU_INTNP_WDT_SHIFT</td>
+</tr>
+<tr>
+<td>ERU0</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>SCU_INTNP_ERU0_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>SCU_INTNP_ERU0_SHIFT</td>
+</tr>
+<tr>
+<td>ERU1</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>SCU_INTNP_ERU1_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>SCU_INTNP_ERU1_SHIFT</td>
+</tr>
+<tr>
+<td>ERU2</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>SCU_INTNP_ERU2_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>SCU_INTNP_ERU2_SHIFT</td>
+</tr>
+<tr>
+<td>ERU3</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>SCU_INTNP_ERU3_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rw</td>
+<td>SCU_INTNP_ERU3_SHIFT</td>
+</tr>
+<tr>
+<td>FL0</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>SCU_INTNP_FL0_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rw</td>
+<td>SCU_INTNP_FL0_SHIFT</td>
+</tr>
+<tr>
+<td>DTS</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>SCU_INTNP_DTS_MASK</td>
+<td><tt>0x0000c000</tt></td>
+<td>rw</td>
+<td>SCU_INTNP_DTS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_INTNP_MASK</td><td><tt>0x0000cfff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000cfff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000cfff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_TRAPSTAT">&nbsp;</a>
+<h3>SCU_TRAPSTAT</h3>
+<h3>"Trap Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_TRAPSTAT_ADDR = 0xF0000624</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_TRAPSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_TRAPSTAT_t">SCU_TRAPSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_TRAPSTAT.bits</b>&nbsp;&quot;Trap Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ESR0T</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_TRAPSTAT_ESR0T_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_ESR0T_SHIFT</td>
+</tr>
+<tr>
+<td>ESR1T</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_TRAPSTAT_ESR1T_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_ESR1T_SHIFT</td>
+</tr>
+<tr>
+<td>WDTT</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_TRAPSTAT_WDTT_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_WDTT_SHIFT</td>
+</tr>
+<tr>
+<td>ECCT</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_TRAPSTAT_ECCT_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_ECCT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCLWDTT</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_TRAPSTAT_OSCLWDTT_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_OSCLWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCHWDTT</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_TRAPSTAT_OSCHWDTT_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_OSCHWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCSPWDTT</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_TRAPSTAT_OSCSPWDTT_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_OSCSPWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>SYSVCOLCKT</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_TRAPSTAT_SYSVCOLCKT_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_SYSVCOLCKT_SHIFT</td>
+</tr>
+<tr>
+<td>ERAYVCOLCKT</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_TRAPSTAT_ERAYVCOLCKT_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>SCU_TRAPSTAT_ERAYVCOLCKT_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_TRAPSTAT_MASK</td><td><tt>0x000003fb</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003fb</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003fb</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_TRAPSET">&nbsp;</a>
+<h3>SCU_TRAPSET</h3>
+<h3>"Trap Set Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_TRAPSET_ADDR = 0xF0000628</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_TRAPSET_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_TRAPSET_t">SCU_TRAPSET_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_TRAPSET.bits</b>&nbsp;&quot;Trap Set Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ESR0T</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_TRAPSET_ESR0T_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_ESR0T_SHIFT</td>
+</tr>
+<tr>
+<td>ESR1T</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_TRAPSET_ESR1T_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_ESR1T_SHIFT</td>
+</tr>
+<tr>
+<td>WDTT</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_TRAPSET_WDTT_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_WDTT_SHIFT</td>
+</tr>
+<tr>
+<td>ECCT</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_TRAPSET_ECCT_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_ECCT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCLWDTT</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_TRAPSET_OSCLWDTT_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_OSCLWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCHWDTT</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_TRAPSET_OSCHWDTT_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_OSCHWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCSPWDTT</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_TRAPSET_OSCSPWDTT_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_OSCSPWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>SYSVCOLCKT</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_TRAPSET_SYSVCOLCKT_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_SYSVCOLCKT_SHIFT</td>
+</tr>
+<tr>
+<td>ERAYVCOLCKT</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_TRAPSET_ERAYVCOLCKT_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>SCU_TRAPSET_ERAYVCOLCKT_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_TRAPSET_MASK</td><td><tt>0x000003fb</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003fb</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_TRAPCLR">&nbsp;</a>
+<h3>SCU_TRAPCLR</h3>
+<h3>"Trap Clear Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_TRAPCLR_ADDR = 0xF000062C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_TRAPCLR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_TRAPCLR_t">SCU_TRAPCLR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_TRAPCLR.bits</b>&nbsp;&quot;Trap Clear Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ESR0T</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_TRAPCLR_ESR0T_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_ESR0T_SHIFT</td>
+</tr>
+<tr>
+<td>ESR1T</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_TRAPCLR_ESR1T_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_ESR1T_SHIFT</td>
+</tr>
+<tr>
+<td>WDTT</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_TRAPCLR_WDTT_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_WDTT_SHIFT</td>
+</tr>
+<tr>
+<td>ECCT</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_TRAPCLR_ECCT_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_ECCT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCLWDTT</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_TRAPCLR_OSCLWDTT_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_OSCLWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCHWDTT</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_TRAPCLR_OSCHWDTT_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_OSCHWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCSPWDTT</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_TRAPCLR_OSCSPWDTT_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_OSCSPWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>SYSVCOLCKT</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_TRAPCLR_SYSVCOLCKT_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_SYSVCOLCKT_SHIFT</td>
+</tr>
+<tr>
+<td>ERAYVCOLCKT</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_TRAPCLR_ERAYVCOLCKT_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>SCU_TRAPCLR_ERAYVCOLCKT_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_TRAPCLR_MASK</td><td><tt>0x000003fb</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003fb</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_TRAPDIS">&nbsp;</a>
+<h3>SCU_TRAPDIS</h3>
+<h3>"Trap Disable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_TRAPDIS_ADDR = 0xF0000630</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_TRAPDIS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000FFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_TRAPDIS_t">SCU_TRAPDIS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_TRAPDIS.bits</b>&nbsp;&quot;Trap Disable Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ESR0T</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_TRAPDIS_ESR0T_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_ESR0T_SHIFT</td>
+</tr>
+<tr>
+<td>ESR1T</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_TRAPDIS_ESR1T_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_ESR1T_SHIFT</td>
+</tr>
+<tr>
+<td>WDTT</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_TRAPDIS_WDTT_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_WDTT_SHIFT</td>
+</tr>
+<tr>
+<td>ECCT</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_TRAPDIS_ECCT_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_ECCT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCLWDTT</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_TRAPDIS_OSCLWDTT_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_OSCLWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCHWDTT</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_TRAPDIS_OSCHWDTT_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_OSCHWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>OSCSPWDTT</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_TRAPDIS_OSCSPWDTT_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_OSCSPWDTT_SHIFT</td>
+</tr>
+<tr>
+<td>SYSVCOLCKT</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_TRAPDIS_SYSVCOLCKT_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_SYSVCOLCKT_SHIFT</td>
+</tr>
+<tr>
+<td>ERAYVCOLCKT</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_TRAPDIS_ERAYVCOLCKT_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>SCU_TRAPDIS_ERAYVCOLCKT_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_TRAPDIS_MASK</td><td><tt>0x000003fb</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003fb</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003fb</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_CHIPID">&nbsp;</a>
+<h3>SCU_CHIPID</h3>
+<h3>"Chip Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_CHIPID_ADDR = 0xF0000640</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_CHIPID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00009701</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_CHIPID_t">SCU_CHIPID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_CHIPID.bits</b>&nbsp;&quot;Chip Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CHREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_CHIPID_CHREV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>SCU_CHIPID_CHREV_SHIFT</td>
+</tr>
+<tr>
+<td>CHID</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>SCU_CHIPID_CHID_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>rw</td>
+<td>SCU_CHIPID_CHID_SHIFT</td>
+</tr>
+<tr>
+<td>EEA</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>SCU_CHIPID_EEA_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>SCU_CHIPID_EEA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_CHIPID_MASK</td><td><tt>0x0001ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0001ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000ff00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00010000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_MANID">&nbsp;</a>
+<h3>SCU_MANID</h3>
+<h3>"Manufacturer Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_MANID_ADDR = 0xF0000644</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_MANID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001820</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_MANID_t">SCU_MANID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_MANID.bits</b>&nbsp;&quot;Manufacturer Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DEPT</td>
+<td>5</td>
+<td>0 - 4</td>
+<td>SCU_MANID_DEPT_MASK</td>
+<td><tt>0x0000001f</tt></td>
+<td>r</td>
+<td>SCU_MANID_DEPT_SHIFT</td>
+</tr>
+<tr>
+<td>MANUF</td>
+<td>11</td>
+<td>5 - 15</td>
+<td>SCU_MANID_MANUF_MASK</td>
+<td><tt>0x0000ffe0</tt></td>
+<td>r</td>
+<td>SCU_MANID_MANUF_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_MANID_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_RTID">&nbsp;</a>
+<h3>SCU_RTID</h3>
+<h3>"Redesign Tracing Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_RTID_ADDR = 0xF0000648</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_RTID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_RTID_t">SCU_RTID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_RTID.bits</b>&nbsp;&quot;Redesign Tracing Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RT0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>SCU_RTID_RT0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT0_SHIFT</td>
+</tr>
+<tr>
+<td>RT1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>SCU_RTID_RT1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT1_SHIFT</td>
+</tr>
+<tr>
+<td>RT2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>SCU_RTID_RT2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT2_SHIFT</td>
+</tr>
+<tr>
+<td>RT3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>SCU_RTID_RT3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT3_SHIFT</td>
+</tr>
+<tr>
+<td>RT4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>SCU_RTID_RT4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT4_SHIFT</td>
+</tr>
+<tr>
+<td>RT5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>SCU_RTID_RT5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT5_SHIFT</td>
+</tr>
+<tr>
+<td>RT6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>SCU_RTID_RT6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT6_SHIFT</td>
+</tr>
+<tr>
+<td>RT7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>SCU_RTID_RT7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT7_SHIFT</td>
+</tr>
+<tr>
+<td>RT8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>SCU_RTID_RT8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT8_SHIFT</td>
+</tr>
+<tr>
+<td>RT9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>SCU_RTID_RT9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT9_SHIFT</td>
+</tr>
+<tr>
+<td>RT10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_RTID_RT10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT10_SHIFT</td>
+</tr>
+<tr>
+<td>RT11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>SCU_RTID_RT11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT11_SHIFT</td>
+</tr>
+<tr>
+<td>RT12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>SCU_RTID_RT12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT12_SHIFT</td>
+</tr>
+<tr>
+<td>RT13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_RTID_RT13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT13_SHIFT</td>
+</tr>
+<tr>
+<td>RT14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>SCU_RTID_RT14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT14_SHIFT</td>
+</tr>
+<tr>
+<td>RT15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_RTID_RT15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>r</td>
+<td>SCU_RTID_RT15_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_RTID_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_SRC3">&nbsp;</a>
+<h3>SCU_SRC3</h3>
+<h3>"Service Request Control 3 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_SRC3_ADDR = 0xF00006F0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_SRC3.bits</b>&nbsp;&quot;Service Request Control 3 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>SCU_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>SCU_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>SCU_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_SRC2">&nbsp;</a>
+<h3>SCU_SRC2</h3>
+<h3>"Service Request Control 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_SRC2_ADDR = 0xF00006F4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_SRC2.bits</b>&nbsp;&quot;Service Request Control 2 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>SCU_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>SCU_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>SCU_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_SRC1">&nbsp;</a>
+<h3>SCU_SRC1</h3>
+<h3>"Service Request Control 1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_SRC1_ADDR = 0xF00006F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_SRC1.bits</b>&nbsp;&quot;Service Request Control 1 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>SCU_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>SCU_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>SCU_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SCU_SRC0">&nbsp;</a>
+<h3>SCU_SRC0</h3>
+<h3>"Service Request Control 0 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SCU_SRC0_ADDR = 0xF00006FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SCU_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SCU_SRCm_t">SCU_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SCU_SRC0.bits</b>&nbsp;&quot;Service Request Control 0 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>SCU_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>SCU_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>SCU_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>SCU_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>SCU_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>SCU_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>SCU_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>SCU_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>SCU_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SCU_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

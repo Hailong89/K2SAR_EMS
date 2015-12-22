@@ -1,0 +1,1954 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1724 (P2)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>P2</h2>
+
+<h2><tt>#include &lt;tc1724/p2.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#P2_OUT">P2_OUT</a></td>
+<td>Port 2 Output Register</td>
+<td>0xF0000E00</td>
+<td><a class="url" href="types/p.html#Pn_OUT_t">Pn_OUT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_OMR">P2_OMR</a></td>
+<td>Port 2 Output Modification Register</td>
+<td>0xF0000E04</td>
+<td><a class="url" href="types/p.html#Pn_OMR_t">Pn_OMR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_IOCR0">P2_IOCR0</a></td>
+<td>Port 2 Input/Output Control Register 0</td>
+<td>0xF0000E10</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_IOCR4">P2_IOCR4</a></td>
+<td>Port 2 Input/Output Control Register 4</td>
+<td>0xF0000E14</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_IOCR8">P2_IOCR8</a></td>
+<td>Port 2 Input/Output Control Register 8</td>
+<td>0xF0000E18</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_IOCR12">P2_IOCR12</a></td>
+<td>Port 2 Input/Output Control Register 12</td>
+<td>0xF0000E1C</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_IN">P2_IN</a></td>
+<td>Port 2 Input Register</td>
+<td>0xF0000E24</td>
+<td><a class="url" href="types/p.html#Pn_IN_t">Pn_IN_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_PDR0">P2_PDR0</a></td>
+<td>Port 2 Pad Driver Mode 0 Register</td>
+<td>0xF0000E40</td>
+<td><a class="url" href="types/p.html#P2_PDR0_t">P2_PDR0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_PDR1">P2_PDR1</a></td>
+<td>Port 2 Pad Driver Mode 1 Register</td>
+<td>0xF0000E44</td>
+<td><a class="url" href="types/p.html#P2_PDR1_t">P2_PDR1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P2_ESR">P2_ESR</a></td>
+<td>Port 2 Emergency Stop Register</td>
+<td>0xF0000E50</td>
+<td><a class="url" href="types/p.html#Pn_ESR_t">Pn_ESR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P2_PDR0_t">P2_PDR0_t</a></td>
+<td><a class="url" href="p2.html#P2_PDR0">P2_PDR0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P2_PDR1_t">P2_PDR1_t</a></td>
+<td><a class="url" href="p2.html#P2_PDR1">P2_PDR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_ESR_t">Pn_ESR_t</a></td>
+<td><a class="url" href="p0.html#P0_ESR">P0_ESR</a>,       
+<a class="url" href="p1.html#P1_ESR">P1_ESR</a>,       
+<a class="url" href="p2.html#P2_ESR">P2_ESR</a>,       
+<a class="url" href="p3.html#P3_ESR">P3_ESR</a>,       
+<a class="url" href="p4.html#P4_ESR">P4_ESR</a>,       
+<a class="url" href="p5.html#P5_ESR">P5_ESR</a>,       
+<a class="url" href="p6.html#P6_ESR">P6_ESR</a>,       
+<a class="url" href="p8.html#P8_ESR">P8_ESR</a>,       
+<a class="url" href="p9.html#P9_ESR">P9_ESR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_IN_t">Pn_IN_t</a></td>
+<td><a class="url" href="p0.html#P0_IN">P0_IN</a>,       
+<a class="url" href="p1.html#P1_IN">P1_IN</a>,       
+<a class="url" href="p2.html#P2_IN">P2_IN</a>,       
+<a class="url" href="p3.html#P3_IN">P3_IN</a>,       
+<a class="url" href="p4.html#P4_IN">P4_IN</a>,       
+<a class="url" href="p5.html#P5_IN">P5_IN</a>,       
+<a class="url" href="p6.html#P6_IN">P6_IN</a>,       
+<a class="url" href="p8.html#P8_IN">P8_IN</a>,       
+<a class="url" href="p9.html#P9_IN">P9_IN</a>,       
+<a class="url" href="p10.html#P10_IN">P10_IN</a>,       
+<a class="url" href="p11.html#P11_IN">P11_IN</a>,       
+<a class="url" href="p12.html#P12_IN">P12_IN</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td><a class="url" href="p0.html#P0_IOCR0">P0_IOCR0</a>,       
+<a class="url" href="p0.html#P0_IOCR4">P0_IOCR4</a>,       
+<a class="url" href="p0.html#P0_IOCR8">P0_IOCR8</a>,       
+<a class="url" href="p0.html#P0_IOCR12">P0_IOCR12</a>,       
+<a class="url" href="p1.html#P1_IOCR0">P1_IOCR0</a>,       
+<a class="url" href="p1.html#P1_IOCR4">P1_IOCR4</a>,       
+<a class="url" href="p1.html#P1_IOCR8">P1_IOCR8</a>,       
+<a class="url" href="p1.html#P1_IOCR12">P1_IOCR12</a>,       
+<a class="url" href="p2.html#P2_IOCR0">P2_IOCR0</a>,       
+<a class="url" href="p2.html#P2_IOCR4">P2_IOCR4</a>,       
+<a class="url" href="p2.html#P2_IOCR8">P2_IOCR8</a>,       
+<a class="url" href="p2.html#P2_IOCR12">P2_IOCR12</a>,       
+<a class="url" href="p3.html#P3_IOCR0">P3_IOCR0</a>,       
+<a class="url" href="p3.html#P3_IOCR4">P3_IOCR4</a>,       
+<a class="url" href="p3.html#P3_IOCR8">P3_IOCR8</a>,       
+<a class="url" href="p3.html#P3_IOCR12">P3_IOCR12</a>,       
+<a class="url" href="p4.html#P4_IOCR0">P4_IOCR0</a>,       
+<a class="url" href="p5.html#P5_IOCR0">P5_IOCR0</a>,       
+<a class="url" href="p5.html#P5_IOCR4">P5_IOCR4</a>,       
+<a class="url" href="p5.html#P5_IOCR8">P5_IOCR8</a>,       
+<a class="url" href="p5.html#P5_IOCR12">P5_IOCR12</a>,       
+<a class="url" href="p6.html#P6_IOCR0">P6_IOCR0</a>,       
+<a class="url" href="p8.html#P8_IOCR0">P8_IOCR0</a>,       
+<a class="url" href="p8.html#P8_IOCR4">P8_IOCR4</a>,       
+<a class="url" href="p8.html#P8_IOCR8">P8_IOCR8</a>,       
+<a class="url" href="p8.html#P8_IOCR12">P8_IOCR12</a>,       
+<a class="url" href="p9.html#P9_IOCR0">P9_IOCR0</a>,       
+<a class="url" href="p9.html#P9_IOCR4">P9_IOCR4</a>,       
+<a class="url" href="p9.html#P9_IOCR8">P9_IOCR8</a>,       
+<a class="url" href="p10.html#P10_IOCR0">P10_IOCR0</a>,       
+<a class="url" href="p11.html#P11_IOCR0">P11_IOCR0</a>,       
+<a class="url" href="p11.html#P11_IOCR4">P11_IOCR4</a>,       
+<a class="url" href="p11.html#P11_IOCR8">P11_IOCR8</a>,       
+<a class="url" href="p11.html#P11_IOCR12">P11_IOCR12</a>,       
+<a class="url" href="p12.html#P12_IOCR0">P12_IOCR0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_OMR_t">Pn_OMR_t</a></td>
+<td><a class="url" href="p0.html#P0_OMR">P0_OMR</a>,       
+<a class="url" href="p1.html#P1_OMR">P1_OMR</a>,       
+<a class="url" href="p2.html#P2_OMR">P2_OMR</a>,       
+<a class="url" href="p3.html#P3_OMR">P3_OMR</a>,       
+<a class="url" href="p4.html#P4_OMR">P4_OMR</a>,       
+<a class="url" href="p5.html#P5_OMR">P5_OMR</a>,       
+<a class="url" href="p6.html#P6_OMR">P6_OMR</a>,       
+<a class="url" href="p8.html#P8_OMR">P8_OMR</a>,       
+<a class="url" href="p9.html#P9_OMR">P9_OMR</a>,       
+<a class="url" href="p10.html#P10_OMR">P10_OMR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_OUT_t">Pn_OUT_t</a></td>
+<td><a class="url" href="p0.html#P0_OUT">P0_OUT</a>,       
+<a class="url" href="p1.html#P1_OUT">P1_OUT</a>,       
+<a class="url" href="p2.html#P2_OUT">P2_OUT</a>,       
+<a class="url" href="p3.html#P3_OUT">P3_OUT</a>,       
+<a class="url" href="p4.html#P4_OUT">P4_OUT</a>,       
+<a class="url" href="p5.html#P5_OUT">P5_OUT</a>,       
+<a class="url" href="p6.html#P6_OUT">P6_OUT</a>,       
+<a class="url" href="p8.html#P8_OUT">P8_OUT</a>,       
+<a class="url" href="p9.html#P9_OUT">P9_OUT</a>,       
+<a class="url" href="p10.html#P10_OUT">P10_OUT</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="P2_OUT">&nbsp;</a>
+<h3>P2_OUT</h3>
+<h3>"Port 2 Output Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_OUT_ADDR = 0xF0000E00</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_OUT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_OUT_t">Pn_OUT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_OUT.bits</b>&nbsp;&quot;Port 2 Output Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_OUT_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_OUT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_OUT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>P0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rwh</td>
+<td><tt>0x00000002</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rwh</td>
+<td><tt>0x00000008</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rwh</td>
+<td><tt>0x00000010</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rwh</td>
+<td><tt>0x00000020</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rwh</td>
+<td><tt>0x00000040</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rwh</td>
+<td><tt>0x00000080</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rwh</td>
+<td><tt>0x00000100</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rwh</td>
+<td><tt>0x00000200</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rwh</td>
+<td><tt>0x00000800</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rwh</td>
+<td><tt>0x00001000</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rwh</td>
+<td><tt>0x00008000</tt></td>
+<td>Port n Output Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The output level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The output level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_OMR">&nbsp;</a>
+<h3>P2_OMR</h3>
+<h3>"Port 2 Output Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_OMR_ADDR = 0xF0000E04</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_OMR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_OMR_t">Pn_OMR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_OMR.bits</b>&nbsp;&quot;Port 2 Output Modification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_OMR_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_OMR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_OMR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PS0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>w</td>
+<td><tt>0x00001000</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PS15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Port n Set Bit x
+</td>
+</tr>
+<tr>
+<td>PR0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>w</td>
+<td><tt>0x00020000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>w</td>
+<td><tt>0x00080000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR4</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>w</td>
+<td><tt>0x00100000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR5</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>w</td>
+<td><tt>0x00200000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR6</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>w</td>
+<td><tt>0x00400000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR7</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>w</td>
+<td><tt>0x00800000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR8</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>w</td>
+<td><tt>0x01000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR9</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>w</td>
+<td><tt>0x02000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR10</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>w</td>
+<td><tt>0x04000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR11</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>w</td>
+<td><tt>0x08000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR12</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>w</td>
+<td><tt>0x10000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR13</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>w</td>
+<td><tt>0x20000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR14</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>w</td>
+<td><tt>0x40000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+<tr>
+<td>PR15</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>w</td>
+<td><tt>0x80000000</tt></td>
+<td>Port n Reset Bit x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_IOCR0">&nbsp;</a>
+<h3>P2_IOCR0</h3>
+<h3>"Port 2 Input/Output Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_IOCR0_ADDR = 0xF0000E10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_IOCR0.bits</b>&nbsp;&quot;Port 2 Input/Output Control Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_IOCRm_MASK = <tt>0xf0f0f0f0</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>rw</td>
+<td><tt>0x000000f0</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>rw</td>
+<td><tt>0x0000f000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>rw</td>
+<td><tt>0x00f00000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>rw</td>
+<td><tt>0xf0000000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf0f0f0f0</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_IOCR4">&nbsp;</a>
+<h3>P2_IOCR4</h3>
+<h3>"Port 2 Input/Output Control Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_IOCR4_ADDR = 0xF0000E14</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_IOCR4.bits</b>&nbsp;&quot;Port 2 Input/Output Control Register 4&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_IOCRm_MASK = <tt>0xf0f0f0f0</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>rw</td>
+<td><tt>0x000000f0</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>rw</td>
+<td><tt>0x0000f000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>rw</td>
+<td><tt>0x00f00000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>rw</td>
+<td><tt>0xf0000000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf0f0f0f0</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_IOCR8">&nbsp;</a>
+<h3>P2_IOCR8</h3>
+<h3>"Port 2 Input/Output Control Register 8"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_IOCR8_ADDR = 0xF0000E18</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_IOCR8.bits</b>&nbsp;&quot;Port 2 Input/Output Control Register 8&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_IOCRm_MASK = <tt>0xf0f0f0f0</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>rw</td>
+<td><tt>0x000000f0</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>rw</td>
+<td><tt>0x0000f000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>rw</td>
+<td><tt>0x00f00000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>rw</td>
+<td><tt>0xf0000000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf0f0f0f0</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_IOCR12">&nbsp;</a>
+<h3>P2_IOCR12</h3>
+<h3>"Port 2 Input/Output Control Register 12"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_IOCR12_ADDR = 0xF0000E1C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_IOCR12.bits</b>&nbsp;&quot;Port 2 Input/Output Control Register 12&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_IOCRm_MASK = <tt>0xf0f0f0f0</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_IOCRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>rw</td>
+<td><tt>0x000000f0</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>rw</td>
+<td><tt>0x0000f000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>rw</td>
+<td><tt>0x00f00000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>rw</td>
+<td><tt>0xf0000000</tt></td>
+<td>Port Control for Port n Pin 0 to 3
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf0f0f0f0</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_IN">&nbsp;</a>
+<h3>P2_IN</h3>
+<h3>"Port 2 Input Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_IN_ADDR = 0xF0000E24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IN_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IN_t">Pn_IN_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_IN.bits</b>&nbsp;&quot;Port 2 Input Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_IN_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_IN_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_IN_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>P0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Port n Input Bit x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The input level of Pn.x is 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The input level of Pn.x is 1.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_PDR0">&nbsp;</a>
+<h3>P2_PDR0</h3>
+<h3>"Port 2 Pad Driver Mode 0 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_PDR0_ADDR = 0xF0000E40</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P2_PDR0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P2_PDR0_t">P2_PDR0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_PDR0.bits</b>&nbsp;&quot;Port 2 Pad Driver Mode 0 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>P2_PDR0_MASK = <tt>0x77777777</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>P2_PDR0_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>P2_PDR0_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PD0</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Pad Driver Mode for Pn.0
+</td>
+</tr>
+<tr>
+<td>PD1</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>rw</td>
+<td><tt>0x00000070</tt></td>
+<td>Pad Driver Mode for Pn.1
+</td>
+</tr>
+<tr>
+<td>PD2</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Pad Driver Mode for Pn.2
+</td>
+</tr>
+<tr>
+<td>PD3</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>rw</td>
+<td><tt>0x00007000</tt></td>
+<td>Pad Driver Mode for Pn.3
+</td>
+</tr>
+<tr>
+<td>PD4</td>
+<td>3</td>
+<td>16 - 18</td>
+<td>rw</td>
+<td><tt>0x00070000</tt></td>
+<td>Pad Driver Mode for Pn.4
+</td>
+</tr>
+<tr>
+<td>PD5</td>
+<td>3</td>
+<td>20 - 22</td>
+<td>rw</td>
+<td><tt>0x00700000</tt></td>
+<td>Pad Driver Mode for Pn.5
+</td>
+</tr>
+<tr>
+<td>PD6</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>rw</td>
+<td><tt>0x07000000</tt></td>
+<td>Pad Driver Mode for Pn.6
+</td>
+</tr>
+<tr>
+<td>PD7</td>
+<td>3</td>
+<td>28 - 30</td>
+<td>rw</td>
+<td><tt>0x70000000</tt></td>
+<td>Pad Driver Mode for Pn.7
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x77777777</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x77777777</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_PDR1">&nbsp;</a>
+<h3>P2_PDR1</h3>
+<h3>"Port 2 Pad Driver Mode 1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_PDR1_ADDR = 0xF0000E44</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P2_PDR1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P2_PDR1_t">P2_PDR1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_PDR1.bits</b>&nbsp;&quot;Port 2 Pad Driver Mode 1 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>P2_PDR1_MASK = <tt>0x77777777</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>P2_PDR1_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>P2_PDR1_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PD8</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Pad Driver Mode for Pn.8
+</td>
+</tr>
+<tr>
+<td>PD9</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>rw</td>
+<td><tt>0x00000070</tt></td>
+<td>Pad Driver Mode for Pn.9
+</td>
+</tr>
+<tr>
+<td>PD10</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Pad Driver Mode for Pn.10
+</td>
+</tr>
+<tr>
+<td>PD11</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>rw</td>
+<td><tt>0x00007000</tt></td>
+<td>Pad Driver Mode for Pn.11
+</td>
+</tr>
+<tr>
+<td>PD12</td>
+<td>3</td>
+<td>16 - 18</td>
+<td>rw</td>
+<td><tt>0x00070000</tt></td>
+<td>Pad Driver Mode for Pn.12
+</td>
+</tr>
+<tr>
+<td>PD13</td>
+<td>3</td>
+<td>20 - 22</td>
+<td>rw</td>
+<td><tt>0x00700000</tt></td>
+<td>Pad Driver Mode for Pn.13
+</td>
+</tr>
+<tr>
+<td>PD14</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>rw</td>
+<td><tt>0x07000000</tt></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>PD15</td>
+<td>3</td>
+<td>28 - 30</td>
+<td>rw</td>
+<td><tt>0x70000000</tt></td>
+<td>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x77777777</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x77777777</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P2_ESR">&nbsp;</a>
+<h3>P2_ESR</h3>
+<h3>"Port 2 Emergency Stop Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P2_ESR_ADDR = 0xF0000E50</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_ESR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_ESR_t">Pn_ESR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>P2_ESR.bits</b>&nbsp;&quot;Port 2 Emergency Stop Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>Pn_ESR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>Pn_ESR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>Pn_ESR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>EN0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Emergency Stop Enable for Port n Pin x
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Emergency stop function for Pn.x is enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

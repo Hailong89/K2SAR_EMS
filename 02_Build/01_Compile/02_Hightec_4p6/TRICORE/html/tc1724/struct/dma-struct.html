@@ -1,0 +1,410 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1724/dma-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1724_DMA_STRUCTS_H_
+#define _TC1724_DMA_STRUCTS_H_
+/*
+   TriCore TC1724
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1724/<a class="url" href="../dma.html">dma.h</a>&gt;
+#ifndef DMA_BASE
+#define DMA_BASE 0xf0003c00
+#endif /* DMA_BASE */
+</pre>
+
+<a name="DMA_CH_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_CHSRm_t">DMA_CHSRm_t</a></td>
+<td>CHSR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_CHCRm_t">DMA_CHCRm_t</a></td>
+<td>CHCR;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_CHICRm_t">DMA_CHICRm_t</a></td>
+<td>CHICR;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_ADRCRm_t">DMA_ADRCRm_t</a></td>
+<td>ADRCR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SADRm_t">DMA_SADRm_t</a></td>
+<td>SADR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_DADRm_t">DMA_DADRm_t</a></td>
+<td>DADR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SHADRm_t">DMA_SHADRm_t</a></td>
+<td>SHADR;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved7[0x1];</td>
+<td>/* 0x1c */</td>
+</tr>
+
+<tr><td colspan="4">} DMA_CH_t;</td></tr>
+</table>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_CLC_t">DMA_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved1[0x1];</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_ID_t">DMA_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved3[0x1];</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_CHRSTR_t">DMA_CHRSTR_t</a></td>
+<td>CHRSTR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_TRSR_t">DMA_TRSR_t</a></td>
+<td>TRSR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_STREQ_t">DMA_STREQ_t</a></td>
+<td>STREQ;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_HTREQ_t">DMA_HTREQ_t</a></td>
+<td>HTREQ;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_EER_t">DMA_EER_t</a></td>
+<td>EER;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_ERRSR_t">DMA_ERRSR_t</a></td>
+<td>ERRSR;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_CLRE_t">DMA_CLRE_t</a></td>
+<td>CLRE;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_GINTR_t">DMA_GINTR_t</a></td>
+<td>GINTR;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MESR_t">DMA_MESR_t</a></td>
+<td>MESR;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmR_t">DMA_MEmR_t</a></td>
+<td>ME0R;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmR_t">DMA_MEmR_t</a></td>
+<td>ME1R;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmPR_t">DMA_MEmPR_t</a></td>
+<td>ME0PR;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmPR_t">DMA_MEmPR_t</a></td>
+<td>ME1PR;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmAENR_t">DMA_MEmAENR_t</a></td>
+<td>ME0AENR;</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmARR_t">DMA_MEmARR_t</a></td>
+<td>ME0ARR;</td>
+<td>/* 0x48 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmAENR_t">DMA_MEmAENR_t</a></td>
+<td>ME1AENR;</td>
+<td>/* 0x4c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MEmARR_t">DMA_MEmARR_t</a></td>
+<td>ME1ARR;</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_INTSR_t">DMA_INTSR_t</a></td>
+<td>INTSR;</td>
+<td>/* 0x54 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_INTCR_t">DMA_INTCR_t</a></td>
+<td>INTCR;</td>
+<td>/* 0x58 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_WRPSR_t">DMA_WRPSR_t</a></td>
+<td>WRPSR;</td>
+<td>/* 0x5c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved24[0x1];</td>
+<td>/* 0x60 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_OCDSR_t">DMA_OCDSR_t</a></td>
+<td>OCDSR;</td>
+<td>/* 0x64 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SUSPMR_t">DMA_SUSPMR_t</a></td>
+<td>SUSPMR;</td>
+<td>/* 0x68 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved27[0x5];</td>
+<td>/* 0x6c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#DMA_CH_t">DMA_CH_t</a></td>
+<td>CH[0x10];</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved29[0x8];</td>
+<td>/* 0x280 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MLI0SRCm_t">DMA_MLI0SRCm_t</a></td>
+<td>MLI0SRC3;</td>
+<td>/* 0x2a0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MLI0SRCm_t">DMA_MLI0SRCm_t</a></td>
+<td>MLI0SRC2;</td>
+<td>/* 0x2a4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MLI0SRCm_t">DMA_MLI0SRCm_t</a></td>
+<td>MLI0SRC1;</td>
+<td>/* 0x2a8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_MLI0SRCm_t">DMA_MLI0SRCm_t</a></td>
+<td>MLI0SRC0;</td>
+<td>/* 0x2ac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved34[0xc];</td>
+<td>/* 0x2b0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC7;</td>
+<td>/* 0x2e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC6;</td>
+<td>/* 0x2e4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC5;</td>
+<td>/* 0x2e8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC4;</td>
+<td>/* 0x2ec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC3;</td>
+<td>/* 0x2f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC2;</td>
+<td>/* 0x2f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0x2f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/d.html#DMA_SRCm_t">DMA_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0x2fc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved43[0x420c2];</td>
+<td>/* 0x300 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_ID_t">MCHK_ID_t</a></td>
+<td>MCHK_ID;</td>
+<td>/* 0x108608 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved45[0x1];</td>
+<td>/* 0x10860c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_IRm_t">MCHK_IRm_t</a></td>
+<td>IR0;</td>
+<td>/* 0x108610 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_RRm_t">MCHK_RRm_t</a></td>
+<td>RR0;</td>
+<td>/* 0x108614 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_IRm_t">MCHK_IRm_t</a></td>
+<td>IR1;</td>
+<td>/* 0x108618 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_RRm_t">MCHK_RRm_t</a></td>
+<td>RR1;</td>
+<td>/* 0x10861c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_WR_t">MCHK_WR_t</a></td>
+<td>WR;</td>
+<td>/* 0x108620 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_CRCm_t">MCHK_CRCm_t</a></td>
+<td>CRC0;</td>
+<td>/* 0x108624 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MCHK_CRCm_t">MCHK_CRCm_t</a></td>
+<td>CRC1;</td>
+<td>/* 0x108628 */</td>
+</tr>
+
+<tr><td colspan="4">} DMA_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1724_DMA_STRUCTS_H_ */ -->
+</body>
+</html>

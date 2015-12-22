@@ -1,0 +1,2828 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1798 (SSCG2)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>SSCG2</h2>
+
+<h2><tt>#include &lt;tc1798/sscg2.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#SSCG2_CLC">SSCG2_CLC</a></td>
+<td>Clock Control Register</td>
+<td>0xF0310C00</td>
+<td><a class="url" href="types/s.html#SSCGn_CLC_t">SSCGn_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_PISEL">SSCG2_PISEL</a></td>
+<td>Port Input Select Register</td>
+<td>0xF0310C04</td>
+<td><a class="url" href="types/s.html#SSCGn_PISEL_t">SSCGn_PISEL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_ID">SSCG2_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0310C08</td>
+<td><a class="url" href="types/s.html#SSCGn_ID_t">SSCGn_ID_t</a></td>
+<td>0x0085C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_FDR">SSCG2_FDR</a></td>
+<td>Fractional Divider Register</td>
+<td>0xF0310C0C</td>
+<td><a class="url" href="types/s.html#SSCGn_FDR_t">SSCGn_FDR_t</a></td>
+<td>0x10000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_CON">SSCG2_CON</a></td>
+<td>Control Register</td>
+<td>0xF0310C10</td>
+<td><a class="url" href="types/s.html#SSCGn_CON_t">SSCGn_CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_BR">SSCG2_BR</a></td>
+<td>Baud Rate Timer Reload Register</td>
+<td>0xF0310C14</td>
+<td><a class="url" href="types/s.html#SSCGn_BR_t">SSCGn_BR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_SSOC">SSCG2_SSOC</a></td>
+<td>Slave Select Output Control Register</td>
+<td>0xF0310C18</td>
+<td><a class="url" href="types/s.html#SSCGn_SSOC_t">SSCGn_SSOC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_SSOTC">SSCG2_SSOTC</a></td>
+<td>Slave Select Output Timing Control Register</td>
+<td>0xF0310C1C</td>
+<td><a class="url" href="types/s.html#SSCGn_SSOTC_t">SSCGn_SSOTC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_TB">SSCG2_TB</a></td>
+<td>Transmit Buffer Register</td>
+<td>0xF0310C20</td>
+<td><a class="url" href="types/s.html#SSCGn_TB_t">SSCGn_TB_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_RB">SSCG2_RB</a></td>
+<td>Receive Buffer Register</td>
+<td>0xF0310C24</td>
+<td><a class="url" href="types/s.html#SSCGn_RB_t">SSCGn_RB_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_STAT">SSCG2_STAT</a></td>
+<td>Status Register</td>
+<td>0xF0310C28</td>
+<td><a class="url" href="types/s.html#SSCGn_STAT_t">SSCGn_STAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_EFM">SSCG2_EFM</a></td>
+<td>Error Flag Modification Register</td>
+<td>0xF0310C2C</td>
+<td><a class="url" href="types/s.html#SSCGn_EFM_t">SSCGn_EFM_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_TB1">SSCG2_TB1</a></td>
+<td>Transmit Buffer Compare Register</td>
+<td>0xF0310D00</td>
+<td><a class="url" href="types/s.html#SSCGn_TB1_t">SSCGn_TB1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_TB1SNAP">SSCG2_TB1SNAP</a></td>
+<td>Transmit Buffer Snapshot Register</td>
+<td>0xF0310D04</td>
+<td><a class="url" href="types/s.html#SSCGn_TB1SNAP_t">SSCGn_TB1SNAP_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_RBSNAP">SSCG2_RBSNAP</a></td>
+<td>Receive Buffer Snapshot Register</td>
+<td>0xF0310D08</td>
+<td><a class="url" href="types/s.html#SSCGn_RBSNAP_t">SSCGn_RBSNAP_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_GSTAT">SSCG2_GSTAT</a></td>
+<td>Guardian Status Register</td>
+<td>0xF0310D0C</td>
+<td><a class="url" href="types/s.html#SSCGn_GSTAT_t">SSCGn_GSTAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_GEFM">SSCG2_GEFM</a></td>
+<td>Guardian Error Flag Modification Register</td>
+<td>0xF0310D10</td>
+<td><a class="url" href="types/s.html#SSCGn_GEFM_t">SSCGn_GEFM_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_GEN">SSCG2_GEN</a></td>
+<td>Guardian Enable Register</td>
+<td>0xF0310D14</td>
+<td><a class="url" href="types/s.html#SSCGn_GEN_t">SSCGn_GEN_t</a></td>
+<td>0x00000100</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SSCG2_GSRC">SSCG2_GSRC</a></td>
+<td>Guardian Interrupt Service Request Control Register</td>
+<td>0xF0310DFC</td>
+<td><a class="url" href="types/s.html#SSCGn_GSRC_t">SSCGn_GSRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_BR_t">SSCGn_BR_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_BR">SSCG0_BR</a>,       
+<a class="url" href="sscg1.html#SSCG1_BR">SSCG1_BR</a>,       
+<a class="url" href="sscg2.html#SSCG2_BR">SSCG2_BR</a>,       
+<a class="url" href="sscg3.html#SSCG3_BR">SSCG3_BR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_CLC_t">SSCGn_CLC_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_CLC">SSCG0_CLC</a>,       
+<a class="url" href="sscg1.html#SSCG1_CLC">SSCG1_CLC</a>,       
+<a class="url" href="sscg2.html#SSCG2_CLC">SSCG2_CLC</a>,       
+<a class="url" href="sscg3.html#SSCG3_CLC">SSCG3_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_CON_t">SSCGn_CON_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_CON">SSCG0_CON</a>,       
+<a class="url" href="sscg1.html#SSCG1_CON">SSCG1_CON</a>,       
+<a class="url" href="sscg2.html#SSCG2_CON">SSCG2_CON</a>,       
+<a class="url" href="sscg3.html#SSCG3_CON">SSCG3_CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_EFM_t">SSCGn_EFM_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_EFM">SSCG0_EFM</a>,       
+<a class="url" href="sscg1.html#SSCG1_EFM">SSCG1_EFM</a>,       
+<a class="url" href="sscg2.html#SSCG2_EFM">SSCG2_EFM</a>,       
+<a class="url" href="sscg3.html#SSCG3_EFM">SSCG3_EFM</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_FDR_t">SSCGn_FDR_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_FDR">SSCG0_FDR</a>,       
+<a class="url" href="sscg1.html#SSCG1_FDR">SSCG1_FDR</a>,       
+<a class="url" href="sscg2.html#SSCG2_FDR">SSCG2_FDR</a>,       
+<a class="url" href="sscg3.html#SSCG3_FDR">SSCG3_FDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_GEFM_t">SSCGn_GEFM_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_GEFM">SSCG0_GEFM</a>,       
+<a class="url" href="sscg1.html#SSCG1_GEFM">SSCG1_GEFM</a>,       
+<a class="url" href="sscg2.html#SSCG2_GEFM">SSCG2_GEFM</a>,       
+<a class="url" href="sscg3.html#SSCG3_GEFM">SSCG3_GEFM</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_GEN_t">SSCGn_GEN_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_GEN">SSCG0_GEN</a>,       
+<a class="url" href="sscg1.html#SSCG1_GEN">SSCG1_GEN</a>,       
+<a class="url" href="sscg2.html#SSCG2_GEN">SSCG2_GEN</a>,       
+<a class="url" href="sscg3.html#SSCG3_GEN">SSCG3_GEN</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_GSRC_t">SSCGn_GSRC_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_GSRC">SSCG0_GSRC</a>,       
+<a class="url" href="sscg1.html#SSCG1_GSRC">SSCG1_GSRC</a>,       
+<a class="url" href="sscg2.html#SSCG2_GSRC">SSCG2_GSRC</a>,       
+<a class="url" href="sscg3.html#SSCG3_GSRC">SSCG3_GSRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_GSTAT_t">SSCGn_GSTAT_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_GSTAT">SSCG0_GSTAT</a>,       
+<a class="url" href="sscg1.html#SSCG1_GSTAT">SSCG1_GSTAT</a>,       
+<a class="url" href="sscg2.html#SSCG2_GSTAT">SSCG2_GSTAT</a>,       
+<a class="url" href="sscg3.html#SSCG3_GSTAT">SSCG3_GSTAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_ID_t">SSCGn_ID_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_ID">SSCG0_ID</a>,       
+<a class="url" href="sscg1.html#SSCG1_ID">SSCG1_ID</a>,       
+<a class="url" href="sscg2.html#SSCG2_ID">SSCG2_ID</a>,       
+<a class="url" href="sscg3.html#SSCG3_ID">SSCG3_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_PISEL_t">SSCGn_PISEL_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_PISEL">SSCG0_PISEL</a>,       
+<a class="url" href="sscg1.html#SSCG1_PISEL">SSCG1_PISEL</a>,       
+<a class="url" href="sscg2.html#SSCG2_PISEL">SSCG2_PISEL</a>,       
+<a class="url" href="sscg3.html#SSCG3_PISEL">SSCG3_PISEL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_RB_t">SSCGn_RB_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_RB">SSCG0_RB</a>,       
+<a class="url" href="sscg1.html#SSCG1_RB">SSCG1_RB</a>,       
+<a class="url" href="sscg2.html#SSCG2_RB">SSCG2_RB</a>,       
+<a class="url" href="sscg3.html#SSCG3_RB">SSCG3_RB</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_RBSNAP_t">SSCGn_RBSNAP_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_RBSNAP">SSCG0_RBSNAP</a>,       
+<a class="url" href="sscg1.html#SSCG1_RBSNAP">SSCG1_RBSNAP</a>,       
+<a class="url" href="sscg2.html#SSCG2_RBSNAP">SSCG2_RBSNAP</a>,       
+<a class="url" href="sscg3.html#SSCG3_RBSNAP">SSCG3_RBSNAP</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_SSOC_t">SSCGn_SSOC_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_SSOC">SSCG0_SSOC</a>,       
+<a class="url" href="sscg1.html#SSCG1_SSOC">SSCG1_SSOC</a>,       
+<a class="url" href="sscg2.html#SSCG2_SSOC">SSCG2_SSOC</a>,       
+<a class="url" href="sscg3.html#SSCG3_SSOC">SSCG3_SSOC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_SSOTC_t">SSCGn_SSOTC_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_SSOTC">SSCG0_SSOTC</a>,       
+<a class="url" href="sscg1.html#SSCG1_SSOTC">SSCG1_SSOTC</a>,       
+<a class="url" href="sscg2.html#SSCG2_SSOTC">SSCG2_SSOTC</a>,       
+<a class="url" href="sscg3.html#SSCG3_SSOTC">SSCG3_SSOTC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_STAT_t">SSCGn_STAT_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_STAT">SSCG0_STAT</a>,       
+<a class="url" href="sscg1.html#SSCG1_STAT">SSCG1_STAT</a>,       
+<a class="url" href="sscg2.html#SSCG2_STAT">SSCG2_STAT</a>,       
+<a class="url" href="sscg3.html#SSCG3_STAT">SSCG3_STAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_TB_t">SSCGn_TB_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_TB">SSCG0_TB</a>,       
+<a class="url" href="sscg1.html#SSCG1_TB">SSCG1_TB</a>,       
+<a class="url" href="sscg2.html#SSCG2_TB">SSCG2_TB</a>,       
+<a class="url" href="sscg3.html#SSCG3_TB">SSCG3_TB</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_TB1_t">SSCGn_TB1_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_TB1">SSCG0_TB1</a>,       
+<a class="url" href="sscg1.html#SSCG1_TB1">SSCG1_TB1</a>,       
+<a class="url" href="sscg2.html#SSCG2_TB1">SSCG2_TB1</a>,       
+<a class="url" href="sscg3.html#SSCG3_TB1">SSCG3_TB1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SSCGn_TB1SNAP_t">SSCGn_TB1SNAP_t</a></td>
+<td><a class="url" href="sscg0.html#SSCG0_TB1SNAP">SSCG0_TB1SNAP</a>,       
+<a class="url" href="sscg1.html#SSCG1_TB1SNAP">SSCG1_TB1SNAP</a>,       
+<a class="url" href="sscg2.html#SSCG2_TB1SNAP">SSCG2_TB1SNAP</a>,       
+<a class="url" href="sscg3.html#SSCG3_TB1SNAP">SSCG3_TB1SNAP</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="SSCG2_CLC">&nbsp;</a>
+<h3>SSCG2_CLC</h3>
+<h3>"Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_CLC_ADDR = 0xF0310C00</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_CLC_t">SSCGn_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_CLC.bits</b>&nbsp;&quot;Clock Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_CLC_MASK = <tt>0x0000003f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Disable Request Bit
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>r</td>
+<td><tt>0x00000002</tt></td>
+<td>Module Disable Status Bit
+</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Module Suspend Enable for OCDS
+</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Sleep Mode Enable Control
+</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Module Suspend Bit Write Enable for OCDS
+</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Fast Switch Off Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000002f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000003d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_PISEL">&nbsp;</a>
+<h3>SSCG2_PISEL</h3>
+<h3>"Port Input Select Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_PISEL_ADDR = 0xF0310C04</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_PISEL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_PISEL_t">SSCGn_PISEL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_PISEL.bits</b>&nbsp;&quot;Port Input Select Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_PISEL_MASK = <tt>0x0000013f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_PISEL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_PISEL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MRIS</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Master Mode Receive Input Select
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Receive input line MRSTA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Receive input line MRSTB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRIS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Slave Mode Receive Input Select
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Receive input line MTSRA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Receive input line MTSRB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCIS</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Slave Mode Clock Input Select
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Slave Mode clock input line SCLKA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Slave Mode clock input line SCLKB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SLSIS</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Slave Mode Slave Select Input Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Slave select input lines are deselected; SSC is operating without slave select input functionality.</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>SLSI input line 1 is selected for operation.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>SLSI input line 2 is selected for operation.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>SLSI input line 3 is selected for operation.</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>SLSI input line 4 is selected for operation.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>SLSI input line 5 is selected for operation.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>SLSI input line 6 is selected for operation.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>SLSI input line 7 is selected for operation.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STIP</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Slave Transmit Idle State Polarity
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>MRST=0 when SSC is deselected in Slave Mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>MRST=1 when SSC is deselected in Slave Mode.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000013f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000013f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_ID">&nbsp;</a>
+<h3>SSCG2_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_ID_ADDR = 0xF0310C08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0085C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_ID_t">SSCGn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MODTYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MODNUM</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_FDR">&nbsp;</a>
+<h3>SSCG2_FDR</h3>
+<h3>"Fractional Divider Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_FDR_ADDR = 0xF0310C0C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_FDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x10000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_FDR_t">SSCGn_FDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_FDR.bits</b>&nbsp;&quot;Fractional Divider Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_FDR_MASK = <tt>0xf3ffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_FDR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_FDR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>STEP</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>rw</td>
+<td><tt>0x000003ff</tt></td>
+<td>Step Value
+</td>
+</tr>
+<tr>
+<td>FDIS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Freeze Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module operates on corrected clock, with reduced modulation jitter.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module operates on uncorrected clock, with full modulation jitter.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Suspend Mode
+</td>
+</tr>
+<tr>
+<td>SC</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Suspend Control
+</td>
+</tr>
+<tr>
+<td>DM</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Divider Mode
+</td>
+</tr>
+<tr>
+<td>RESULT</td>
+<td>10</td>
+<td>16 - 25</td>
+<td>rh</td>
+<td><tt>0x03ff0000</tt></td>
+<td>Result Value
+</td>
+</tr>
+<tr>
+<td>SUSACK</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rh</td>
+<td><tt>0x10000000</tt></td>
+<td>Suspend Mode Acknowledge
+</td>
+</tr>
+<tr>
+<td>SUSREQ</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rh</td>
+<td><tt>0x20000000</tt></td>
+<td>Suspend Mode Request
+</td>
+</tr>
+<tr>
+<td>ENHW</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>Enable Hardware Clock Control
+</td>
+</tr>
+<tr>
+<td>DISCLK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rwh</td>
+<td><tt>0x80000000</tt></td>
+<td>Disable Clock
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf3ffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xc000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xb3ff0000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_CON">&nbsp;</a>
+<h3>SSCG2_CON</h3>
+<h3>"Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_CON_ADDR = 0xF0310C10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_CON_t">SSCGn_CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_CON.bits</b>&nbsp;&quot;Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_CON_MASK = <tt>0x000fdfff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>BM</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Frame Width Selection
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Reserved; do not use this combination.</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>Frame width is 2 bits (2 data bits).</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>Frame width is 3 bits (3 data bits).</td></tr>
+<tr><td>...</td><td>&nbsp;</td><td>...</td></tr>
+<tr><td>1110</td><td>&nbsp;</td><td>Frame width is 15 bits (15 data bits).</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>Frame width is 16 bits (16 data bits).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>HB</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Heading Bit Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Transmit/Receive LSB First</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Transmit/Receive MSB First</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PH</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Clock Phase Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Shift transmit data on the leading clock edge, latch on trailing edge</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Latch receive data on leading clock edge, shift on trailing edge</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PO</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Clock Polarity Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Idle clock line is low, the leading clock edge is low-to-high transition</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Idle clock line is high, the leading clock edge is high-to-low transition</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LB</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Loop-Back Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal output</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Receive input is connected to transmit output (Half-duplex Mode)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Transmit Error Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Ignore transmit errors</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Check transmit errors</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>REN</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Receive Error Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Ignore receive errors</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Check receive errors</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PEN</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Phase Error Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Check phase errors</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Check phase errors</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BEN</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Baud Rate Error Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Ignore baud rate errors</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Check baud rate errors</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AREN</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Automatic Reset Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No additional action upon a baud rate error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SSC is automatically reset on a baud rate error</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MS</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Master Select
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Slave Mode. Operate on shift clock received via SCLK</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Master Mode. Generate shift clock and output it via SCLK</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Transmission and reception are disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Transmission and reception are enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PARTEN</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rw</td>
+<td><tt>0x00010000</tt></td>
+<td>Parity Transmit Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Parity mode for transmit frames is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Parity mode for transmit frames is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PARREN</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rw</td>
+<td><tt>0x00020000</tt></td>
+<td>Parity Receive Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Parity mode for receive frames is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Parity mode for receive frames is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PARTYP</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rw</td>
+<td><tt>0x00040000</tt></td>
+<td>Parity Type Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Even parity is selected (parity bit=1 on odd number of 1s in data, parity bit=0 on even number of 1s in data).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Odd parity selected (parity bit=1 on even number of 1s in data, parity bit=0 on odd number of 1s in data)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PAREEN</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rw</td>
+<td><tt>0x00080000</tt></td>
+<td>Parity Error Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Ignore receive parity errors</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Check receive parity errors</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000fdfff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000fdfff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_BR">&nbsp;</a>
+<h3>SSCG2_BR</h3>
+<h3>"Baud Rate Timer Reload Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_BR_ADDR = 0xF0310C14</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_BR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_BR_t">SSCGn_BR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_BR.bits</b>&nbsp;&quot;Baud Rate Timer Reload Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_BR_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_BR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_BR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>BR_VALUE</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Baud Rate Timer/Reload Register Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_SSOC">&nbsp;</a>
+<h3>SSCG2_SSOC</h3>
+<h3>"Slave Select Output Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_SSOC_ADDR = 0xF0310C18</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_SSOC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_SSOC_t">SSCGn_SSOC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_SSOC.bits</b>&nbsp;&quot;Slave Select Output Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_SSOC_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_SSOC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_SSOC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>AOL0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AOL1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AOL2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AOL3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AOL4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AOL5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AOL6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AOL7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Active Output Level
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn is at low level during the chip select active time tSLSOACT. The high level is the inactive level of SLSOn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSO line n is at high level during the chip select active time tSLSOACT. The low level is the inactive level of SLSOn.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN2</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN3</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN4</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN5</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN6</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OEN7</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Output n Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SLSOn output is disabled; SLSOn is always at inactive level as defined by AOLn.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SLSOn output is enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_SSOTC">&nbsp;</a>
+<h3>SSCG2_SSOTC</h3>
+<h3>"Slave Select Output Timing Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_SSOTC_ADDR = 0xF0310C1C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_SSOTC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_SSOTC_t">SSCGn_SSOTC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_SSOTC.bits</b>&nbsp;&quot;Slave Select Output Timing Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_SSOTC_MASK = <tt>0x0000c13f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_SSOTC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_SSOTC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LEAD</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Slave Output Select Leading Delay
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Zero leading delay clock cycle selectedFor getting a best case timing with no timing delays, this bit field value should be set when the SLSOn outputs are disabled (SSOC.OENn bits set to 0).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>One leading delay clock cycle selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Two leading delay clock cycles selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Three leading delay clock cycles selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRAIL</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Slave Output Select Trailing Delay
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Zero trailing delay clock cycle selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>One trailing delay clock cycle selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Two trailing delay clock cycles selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Three trailing delay clock cycles selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INACT</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Slave Output Select Inactive Delay
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Zero inactive delay clock cycle selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>One inactive delay clock cycle selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Two inactive delay clock cycles selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Three inactive delay clock cycles selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SLSO7MOD</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>SLSO7 Delayed Mode Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal mode selected for SLSO7</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Delayed mode selected for SLSO7</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>QSMEN</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Queued SSC Mode Enabled
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>When QSMEN is written with 0, the state of bit SSOTC.EN is don't care. In this case, the enable/disable of the SSC is controlled by bit CON.EN only. Note that EN should only be cleared by software while no transfer is in progress (STAT.BSY = 0).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>When QSMEN is written with 1, queued SSC mode is enabled, and the state of bit SSOTC.EN is copied to CON.EN.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Transmission and reception are disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Transmission and reception are enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000813f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000c13f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_TB">&nbsp;</a>
+<h3>SSCG2_TB</h3>
+<h3>"Transmit Buffer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_TB_ADDR = 0xF0310C20</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_TB_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_TB_t">SSCGn_TB_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_TB.bits</b>&nbsp;&quot;Transmit Buffer Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_TB_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_TB_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_TB_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TB_VALUE</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Transmit Data Register Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_RB">&nbsp;</a>
+<h3>SSCG2_RB</h3>
+<h3>"Receive Buffer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_RB_ADDR = 0xF0310C24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_RB_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_RB_t">SSCGn_RB_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_RB.bits</b>&nbsp;&quot;Receive Buffer Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_RB_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_RB_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_RB_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RB_VALUE</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Receive Data Register Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_STAT">&nbsp;</a>
+<h3>SSCG2_STAT</h3>
+<h3>"Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_STAT_ADDR = 0xF0310C28</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_STAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_STAT_t">SSCGn_STAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_STAT.bits</b>&nbsp;&quot;Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_STAT_MASK = <tt>0x00001f7f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_STAT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_STAT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>BC</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rh</td>
+<td><tt>0x0000000f</tt></td>
+<td>Bit Count Status
+</td>
+</tr>
+<tr>
+<td>PARE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Parity Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Received parity bit is wrong.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PARTVAL</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Parity Transmit Value
+</td>
+</tr>
+<tr>
+<td>PARRVAL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Parity Receive Value
+</td>
+</tr>
+<tr>
+<td>TE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Transmit Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Transfer starts with the slave's transmit buffer not being updated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Receive Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Reception completed before the receive buffer was read</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PE</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Phase Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Received data changes during the sampling clock edge</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BE</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Baud Rate Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>There is more than factor 2 or less than factor 0.5 between the slave's actual and the expected baud rate.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSY</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Busy Flag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00001f7f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001f7f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_EFM">&nbsp;</a>
+<h3>SSCG2_EFM</h3>
+<h3>"Error Flag Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_EFM_ADDR = 0xF0310C2C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_EFM_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_EFM_t">SSCGn_EFM_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_EFM.bits</b>&nbsp;&quot;Error Flag Modification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_EFM_MASK = <tt>0x0000ff11</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_EFM_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_EFM_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CLRPARE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Clear Parity Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.PARE is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETPARE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Set Parity Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.PARE is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRTE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Clear Transmit Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.TE is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRRE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Clear Receive Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.RE is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRPE</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Clear Phase Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.PE is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRBE</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Clear Baud Rate Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.BE is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETTE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>w</td>
+<td><tt>0x00001000</tt></td>
+<td>Set Transmit Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.TE is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETRE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Set Receive Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.RE is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETPE</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Set Phase Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.PE is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETBE</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Set Baud Rate Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit STAT.BE is set.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ff11</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_TB1">&nbsp;</a>
+<h3>SSCG2_TB1</h3>
+<h3>"Transmit Buffer Compare Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_TB1_ADDR = 0xF0310D00</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_TB1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_TB1_t">SSCGn_TB1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_TB1.bits</b>&nbsp;&quot;Transmit Buffer Compare Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_TB1_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_TB1_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_TB1_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TB_VALUE</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Transmit Data Register Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_TB1SNAP">&nbsp;</a>
+<h3>SSCG2_TB1SNAP</h3>
+<h3>"Transmit Buffer Snapshot Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_TB1SNAP_ADDR = 0xF0310D04</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_TB1SNAP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_TB1SNAP_t">SSCGn_TB1SNAP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_TB1SNAP.bits</b>&nbsp;&quot;Transmit Buffer Snapshot Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_TB1SNAP_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_TB1SNAP_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_TB1SNAP_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TB_VALUE</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Transmit Data Snapshot Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_RBSNAP">&nbsp;</a>
+<h3>SSCG2_RBSNAP</h3>
+<h3>"Receive Buffer Snapshot Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_RBSNAP_ADDR = 0xF0310D08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_RBSNAP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_RBSNAP_t">SSCGn_RBSNAP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_RBSNAP.bits</b>&nbsp;&quot;Receive Buffer Snapshot Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_RBSNAP_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_RBSNAP_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_RBSNAP_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RB_VALUE</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Receive Snapshot Register Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_GSTAT">&nbsp;</a>
+<h3>SSCG2_GSTAT</h3>
+<h3>"Guardian Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_GSTAT_ADDR = 0xF0310D0C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_GSTAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_GSTAT_t">SSCGn_GSTAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_GSTAT.bits</b>&nbsp;&quot;Guardian Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_GSTAT_MASK = <tt>0x00ff0005</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_GSTAT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_GSTAT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Compare Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No compare error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Compare error has occurred</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCLK</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>SCLK Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the SCLK signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rh</td>
+<td><tt>0x00100000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>SLSx Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error on the corresponding SLS signal</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00ff0005</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00ff0005</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_GEFM">&nbsp;</a>
+<h3>SSCG2_GEFM</h3>
+<h3>"Guardian Error Flag Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_GEFM_ADDR = 0xF0310D10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_GEFM_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_GEFM_t">SSCGn_GEFM_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_GEFM.bits</b>&nbsp;&quot;Guardian Error Flag Modification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_GEFM_MASK = <tt>0xffff010d</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_GEFM_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_GEFM_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CLRCE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Clear Compare Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear the compare error flag GSTAT.CE</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCTC</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>w</td>
+<td><tt>0x0000000c</tt></td>
+<td>Set Clear Toggle the SCLK Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the error flag GSTAT.SCLK.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the error flag GSTAT.SCLK.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the error flag GSTAT.SCLK.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETCE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Set Compare Error Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set the compare error flag GSTAT.CE</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT0</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>w</td>
+<td><tt>0x00030000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT1</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>w</td>
+<td><tt>0x000c0000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT2</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>w</td>
+<td><tt>0x00300000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT3</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>w</td>
+<td><tt>0x00c00000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT4</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>w</td>
+<td><tt>0x03000000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT5</td>
+<td>2</td>
+<td>26 - 27</td>
+<td>w</td>
+<td><tt>0x0c000000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT6</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>w</td>
+<td><tt>0x30000000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCT7</td>
+<td>2</td>
+<td>30 - 31</td>
+<td>w</td>
+<td><tt>0xc0000000</tt></td>
+<td>Set Clear Toggle the SLSx Error Flag
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Set the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Clear the SLSx error flag GSTAT.Sx.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Toggle the SLSx error flag GSTAT.Sx.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffff010d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_GEN">&nbsp;</a>
+<h3>SSCG2_GEN</h3>
+<h3>"Guardian Enable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_GEN_ADDR = 0xF0310D14</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_GEN_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000100</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_GEN_t">SSCGn_GEN_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_GEN.bits</b>&nbsp;&quot;Guardian Enable Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_GEN_MASK = <tt>0x000001ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_GEN_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_GEN_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SEN0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SEN1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SEN2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SEN3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SEN4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SEN5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SEN6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SEN7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Slave Select x Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled (default value)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CEN</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Clock Monitoring Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enabled (default value)</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000000ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SSCG2_GSRC">&nbsp;</a>
+<h3>SSCG2_GSRC</h3>
+<h3>"Guardian Interrupt Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SSCG2_GSRC_ADDR = 0xF0310DFC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SSCGn_GSRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SSCGn_GSRC_t">SSCGn_GSRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SSCG2_GSRC.bits</b>&nbsp;&quot;Guardian Interrupt Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SSCGn_GSRC_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SSCGn_GSRC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SSCGn_GSRC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

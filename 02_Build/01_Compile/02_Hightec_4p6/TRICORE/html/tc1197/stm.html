@@ -1,0 +1,1481 @@
+<html>
+<head>
+<title>TriCore TC1197 (STM)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>STM</h2>
+
+<h2><tt>#include &lt;tc1197/stm.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#STM_CLC">STM_CLC</a></td>
+<td>STM Clock Control Register</td>
+<td>0xF0000200</td>
+<td><a class="url" href="types/s.html#STM_CLC_t">STM_CLC_t</a></td>
+<td>0x00000200</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_ID">STM_ID</a></td>
+<td>STM Module Identification Register</td>
+<td>0xF0000208</td>
+<td><a class="url" href="types/s.html#STM_ID_t">STM_ID_t</a></td>
+<td>0x0000C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_TIM0">STM_TIM0</a></td>
+<td>STM Timer Register 0</td>
+<td>0xF0000210</td>
+<td><a class="url" href="types/s.html#STM_TIM0_t">STM_TIM0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_TIM1">STM_TIM1</a></td>
+<td>STM Timer Register 1</td>
+<td>0xF0000214</td>
+<td><a class="url" href="types/s.html#STM_TIM1_t">STM_TIM1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_TIM2">STM_TIM2</a></td>
+<td>STM Timer Register 2</td>
+<td>0xF0000218</td>
+<td><a class="url" href="types/s.html#STM_TIM2_t">STM_TIM2_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_TIM3">STM_TIM3</a></td>
+<td>STM Timer Register 3</td>
+<td>0xF000021C</td>
+<td><a class="url" href="types/s.html#STM_TIM3_t">STM_TIM3_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_TIM4">STM_TIM4</a></td>
+<td>STM Timer Register 4</td>
+<td>0xF0000220</td>
+<td><a class="url" href="types/s.html#STM_TIM4_t">STM_TIM4_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_TIM5">STM_TIM5</a></td>
+<td>STM Timer Register 5</td>
+<td>0xF0000224</td>
+<td><a class="url" href="types/s.html#STM_TIM5_t">STM_TIM5_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_TIM6">STM_TIM6</a></td>
+<td>STM Timer Register 6</td>
+<td>0xF0000228</td>
+<td><a class="url" href="types/s.html#STM_TIM6_t">STM_TIM6_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_CAP">STM_CAP</a></td>
+<td>STM Timer Capture Register</td>
+<td>0xF000022C</td>
+<td><a class="url" href="types/s.html#STM_CAP_t">STM_CAP_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_CMP0">STM_CMP0</a></td>
+<td>STM Compare Register 0</td>
+<td>0xF0000230</td>
+<td><a class="url" href="types/s.html#STM_CMPm_t">STM_CMPm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_CMP1">STM_CMP1</a></td>
+<td>STM Compare Register 1</td>
+<td>0xF0000234</td>
+<td><a class="url" href="types/s.html#STM_CMPm_t">STM_CMPm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_CMCON">STM_CMCON</a></td>
+<td>STM Compare Match Control Register</td>
+<td>0xF0000238</td>
+<td><a class="url" href="types/s.html#STM_CMCON_t">STM_CMCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_ICR">STM_ICR</a></td>
+<td>STM Interrupt Control Register</td>
+<td>0xF000023C</td>
+<td><a class="url" href="types/s.html#STM_ICR_t">STM_ICR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_ISRR">STM_ISRR</a></td>
+<td>STM Interrupt Set/Reset Register</td>
+<td>0xF0000240</td>
+<td><a class="url" href="types/s.html#STM_ISRR_t">STM_ISRR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_SRC1">STM_SRC1</a></td>
+<td>STM Service Request Control Register 1</td>
+<td>0xF00002F8</td>
+<td><a class="url" href="types/s.html#STM_SRCm_t">STM_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#STM_SRC0">STM_SRC0</a></td>
+<td>STM Service Request Control Register 0</td>
+<td>0xF00002FC</td>
+<td><a class="url" href="types/s.html#STM_SRCm_t">STM_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_CAP_t">STM_CAP_t</a></td>
+<td><a class="url" href="stm.html#STM_CAP">STM_CAP</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_CLC_t">STM_CLC_t</a></td>
+<td><a class="url" href="stm.html#STM_CLC">STM_CLC</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_CMCON_t">STM_CMCON_t</a></td>
+<td><a class="url" href="stm.html#STM_CMCON">STM_CMCON</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_CMPm_t">STM_CMPm_t</a></td>
+<td><a class="url" href="stm.html#STM_CMP0">STM_CMP0</a>,
+<a class="url" href="stm.html#STM_CMP1">STM_CMP1</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_ICR_t">STM_ICR_t</a></td>
+<td><a class="url" href="stm.html#STM_ICR">STM_ICR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_ID_t">STM_ID_t</a></td>
+<td><a class="url" href="stm.html#STM_ID">STM_ID</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_ISRR_t">STM_ISRR_t</a></td>
+<td><a class="url" href="stm.html#STM_ISRR">STM_ISRR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_SRCm_t">STM_SRCm_t</a></td>
+<td><a class="url" href="stm.html#STM_SRC1">STM_SRC1</a>,
+<a class="url" href="stm.html#STM_SRC0">STM_SRC0</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_TIM0_t">STM_TIM0_t</a></td>
+<td><a class="url" href="stm.html#STM_TIM0">STM_TIM0</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_TIM1_t">STM_TIM1_t</a></td>
+<td><a class="url" href="stm.html#STM_TIM1">STM_TIM1</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_TIM2_t">STM_TIM2_t</a></td>
+<td><a class="url" href="stm.html#STM_TIM2">STM_TIM2</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_TIM3_t">STM_TIM3_t</a></td>
+<td><a class="url" href="stm.html#STM_TIM3">STM_TIM3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_TIM4_t">STM_TIM4_t</a></td>
+<td><a class="url" href="stm.html#STM_TIM4">STM_TIM4</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_TIM5_t">STM_TIM5_t</a></td>
+<td><a class="url" href="stm.html#STM_TIM5">STM_TIM5</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#STM_TIM6_t">STM_TIM6_t</a></td>
+<td><a class="url" href="stm.html#STM_TIM6">STM_TIM6</a>
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="STM_CLC">&nbsp;</a>
+<h3>STM_CLC</h3>
+<h3>"STM Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_CLC_ADDR = 0xF0000200</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000200</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_CLC_t">STM_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_CLC.bits</b>&nbsp;&quot;STM Clock Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>STM_CLC_DISR_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>STM_CLC_DISR_SHIFT</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>STM_CLC_DISS_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>r</td>
+<td>STM_CLC_DISS_SHIFT</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>STM_CLC_SPEN_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>STM_CLC_SPEN_SHIFT</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>STM_CLC_EDIS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>STM_CLC_EDIS_SHIFT</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>STM_CLC_SBWE_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>STM_CLC_SBWE_SHIFT</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>STM_CLC_FSOE_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>STM_CLC_FSOE_SHIFT</td>
+</tr>
+<tr>
+<td>RMC</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>STM_CLC_RMC_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>STM_CLC_RMC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_CLC_MASK</td><td><tt>0x0000073f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000072f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000073d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_ID">&nbsp;</a>
+<h3>STM_ID</h3>
+<h3>"STM Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_ID_ADDR = 0xF0000208</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_ID_t">STM_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_ID.bits</b>&nbsp;&quot;STM Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>STM_ID_MODREV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>STM_ID_MODREV_SHIFT</td>
+</tr>
+<tr>
+<td>MODTYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>STM_ID_MODTYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>STM_ID_MODTYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MODNUM</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>STM_ID_MODNUM_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>STM_ID_MODNUM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_TIM0">&nbsp;</a>
+<h3>STM_TIM0</h3>
+<h3>"STM Timer Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_TIM0_ADDR = 0xF0000210</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_TIM0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_TIM0_t">STM_TIM0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_TIM0.bits</b>&nbsp;&quot;STM Timer Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_31_0</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_TIM0_STM_31_0_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>r</td>
+<td>STM_TIM0_STM_31_0_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_TIM0_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_TIM1">&nbsp;</a>
+<h3>STM_TIM1</h3>
+<h3>"STM Timer Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_TIM1_ADDR = 0xF0000214</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_TIM1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_TIM1_t">STM_TIM1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_TIM1.bits</b>&nbsp;&quot;STM Timer Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_35_4</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_TIM1_STM_35_4_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>r</td>
+<td>STM_TIM1_STM_35_4_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_TIM1_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_TIM2">&nbsp;</a>
+<h3>STM_TIM2</h3>
+<h3>"STM Timer Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_TIM2_ADDR = 0xF0000218</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_TIM2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_TIM2_t">STM_TIM2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_TIM2.bits</b>&nbsp;&quot;STM Timer Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_39_8</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_TIM2_STM_39_8_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>r</td>
+<td>STM_TIM2_STM_39_8_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_TIM2_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_TIM3">&nbsp;</a>
+<h3>STM_TIM3</h3>
+<h3>"STM Timer Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_TIM3_ADDR = 0xF000021C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_TIM3_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_TIM3_t">STM_TIM3_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_TIM3.bits</b>&nbsp;&quot;STM Timer Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_43_12</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_TIM3_STM_43_12_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>r</td>
+<td>STM_TIM3_STM_43_12_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_TIM3_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_TIM4">&nbsp;</a>
+<h3>STM_TIM4</h3>
+<h3>"STM Timer Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_TIM4_ADDR = 0xF0000220</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_TIM4_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_TIM4_t">STM_TIM4_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_TIM4.bits</b>&nbsp;&quot;STM Timer Register 4&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_47_16</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_TIM4_STM_47_16_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>r</td>
+<td>STM_TIM4_STM_47_16_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_TIM4_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_TIM5">&nbsp;</a>
+<h3>STM_TIM5</h3>
+<h3>"STM Timer Register 5"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_TIM5_ADDR = 0xF0000224</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_TIM5_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_TIM5_t">STM_TIM5_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_TIM5.bits</b>&nbsp;&quot;STM Timer Register 5&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_51_20</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_TIM5_STM_51_20_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>r</td>
+<td>STM_TIM5_STM_51_20_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_TIM5_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_TIM6">&nbsp;</a>
+<h3>STM_TIM6</h3>
+<h3>"STM Timer Register 6"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_TIM6_ADDR = 0xF0000228</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_TIM6_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_TIM6_t">STM_TIM6_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_TIM6.bits</b>&nbsp;&quot;STM Timer Register 6&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_55_32</td>
+<td>24</td>
+<td>0 - 23</td>
+<td>STM_TIM6_STM_55_32_MASK</td>
+<td><tt>0x00ffffff</tt></td>
+<td>r</td>
+<td>STM_TIM6_STM_55_32_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_TIM6_MASK</td><td><tt>0x00ffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00ffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_CAP">&nbsp;</a>
+<h3>STM_CAP</h3>
+<h3>"STM Timer Capture Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_CAP_ADDR = 0xF000022C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_CAP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_CAP_t">STM_CAP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_CAP.bits</b>&nbsp;&quot;STM Timer Capture Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STM_55_32</td>
+<td>24</td>
+<td>0 - 23</td>
+<td>STM_CAP_STM_55_32_MASK</td>
+<td><tt>0x00ffffff</tt></td>
+<td>r</td>
+<td>STM_CAP_STM_55_32_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_CAP_MASK</td><td><tt>0x00ffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00ffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_CMP0">&nbsp;</a>
+<h3>STM_CMP0</h3>
+<h3>"STM Compare Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_CMP0_ADDR = 0xF0000230</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_CMPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_CMPm_t">STM_CMPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_CMP0.bits</b>&nbsp;&quot;STM Compare Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CMPVAL</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_CMPm_CMPVAL_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>STM_CMPm_CMPVAL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_CMPm_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_CMP1">&nbsp;</a>
+<h3>STM_CMP1</h3>
+<h3>"STM Compare Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_CMP1_ADDR = 0xF0000234</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_CMPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_CMPm_t">STM_CMPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_CMP1.bits</b>&nbsp;&quot;STM Compare Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CMPVAL</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>STM_CMPm_CMPVAL_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>STM_CMPm_CMPVAL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_CMPm_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_CMCON">&nbsp;</a>
+<h3>STM_CMCON</h3>
+<h3>"STM Compare Match Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_CMCON_ADDR = 0xF0000238</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_CMCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_CMCON_t">STM_CMCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_CMCON.bits</b>&nbsp;&quot;STM Compare Match Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MSIZE0</td>
+<td>5</td>
+<td>0 - 4</td>
+<td>STM_CMCON_MSIZE0_MASK</td>
+<td><tt>0x0000001f</tt></td>
+<td>rw</td>
+<td>STM_CMCON_MSIZE0_SHIFT</td>
+</tr>
+<tr>
+<td>MSTART0</td>
+<td>5</td>
+<td>8 - 12</td>
+<td>STM_CMCON_MSTART0_MASK</td>
+<td><tt>0x00001f00</tt></td>
+<td>rw</td>
+<td>STM_CMCON_MSTART0_SHIFT</td>
+</tr>
+<tr>
+<td>MSIZE1</td>
+<td>5</td>
+<td>16 - 20</td>
+<td>STM_CMCON_MSIZE1_MASK</td>
+<td><tt>0x001f0000</tt></td>
+<td>rw</td>
+<td>STM_CMCON_MSIZE1_SHIFT</td>
+</tr>
+<tr>
+<td>MSTART1</td>
+<td>5</td>
+<td>24 - 28</td>
+<td>STM_CMCON_MSTART1_MASK</td>
+<td><tt>0x1f000000</tt></td>
+<td>rw</td>
+<td>STM_CMCON_MSTART1_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_CMCON_MASK</td><td><tt>0x1f1f1f1f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x1f1f1f1f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x1f1f1f1f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_ICR">&nbsp;</a>
+<h3>STM_ICR</h3>
+<h3>"STM Interrupt Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_ICR_ADDR = 0xF000023C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_ICR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_ICR_t">STM_ICR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_ICR.bits</b>&nbsp;&quot;STM Interrupt Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CMP0EN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>STM_ICR_CMP0EN_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>STM_ICR_CMP0EN_SHIFT</td>
+</tr>
+<tr>
+<td>CMP0IR</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>STM_ICR_CMP0IR_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>STM_ICR_CMP0IR_SHIFT</td>
+</tr>
+<tr>
+<td>CMP0OS</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>STM_ICR_CMP0OS_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>STM_ICR_CMP0OS_SHIFT</td>
+</tr>
+<tr>
+<td>CMP1EN</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>STM_ICR_CMP1EN_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>STM_ICR_CMP1EN_SHIFT</td>
+</tr>
+<tr>
+<td>CMP1IR</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>STM_ICR_CMP1IR_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>STM_ICR_CMP1IR_SHIFT</td>
+</tr>
+<tr>
+<td>CMP1OS</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>STM_ICR_CMP1OS_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>STM_ICR_CMP1OS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_ICR_MASK</td><td><tt>0x00000077</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000077</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000055</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000022</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_ISRR">&nbsp;</a>
+<h3>STM_ISRR</h3>
+<h3>"STM Interrupt Set/Reset Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_ISRR_ADDR = 0xF0000240</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_ISRR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_ISRR_t">STM_ISRR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_ISRR.bits</b>&nbsp;&quot;STM Interrupt Set/Reset Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CMP0IRR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>STM_ISRR_CMP0IRR_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>STM_ISRR_CMP0IRR_SHIFT</td>
+</tr>
+<tr>
+<td>CMP0IRS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>STM_ISRR_CMP0IRS_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>STM_ISRR_CMP0IRS_SHIFT</td>
+</tr>
+<tr>
+<td>CMP1IRR</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>STM_ISRR_CMP1IRR_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>STM_ISRR_CMP1IRR_SHIFT</td>
+</tr>
+<tr>
+<td>CMP1IRS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>STM_ISRR_CMP1IRS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>STM_ISRR_CMP1IRS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_ISRR_MASK</td><td><tt>0x0000000f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_SRC1">&nbsp;</a>
+<h3>STM_SRC1</h3>
+<h3>"STM Service Request Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_SRC1_ADDR = 0xF00002F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_SRCm_t">STM_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_SRC1.bits</b>&nbsp;&quot;STM Service Request Control Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>STM_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>STM_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>STM_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>STM_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>STM_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>STM_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>STM_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>STM_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>STM_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>STM_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>STM_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>STM_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="STM_SRC0">&nbsp;</a>
+<h3>STM_SRC0</h3>
+<h3>"STM Service Request Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>STM_SRC0_ADDR = 0xF00002FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>STM_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#STM_SRCm_t">STM_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>STM_SRC0.bits</b>&nbsp;&quot;STM Service Request Control Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>STM_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>STM_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>STM_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>STM_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>STM_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>STM_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>STM_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>STM_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>STM_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>STM_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>STM_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>STM_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>STM_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

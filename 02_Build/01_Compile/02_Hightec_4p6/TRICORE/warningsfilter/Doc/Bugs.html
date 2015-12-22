@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+    <TITLE></TITLE>
+    <META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+    <META NAME="CREATED" CONTENT="20040109;11221400">
+    <META NAME="CHANGED" CONTENT="20040109;12290000">
+</HEAD>
+<BODY LANG="en-US">
+<H1 ALIGN=CENTER>WarnungsFilter - Bugs</H1>
+<HR>
+<P>Copyright &copy; 2003-2007 HighTec EDV-Systeme GmbH<BR>This tool is provided under the terms of the
+<A HREF="gpl.html">GNU</A> Licence</P>
+<HR>
+<P>In this document:</P>
+<UL>
+    <LI><P>Known bugs</P>
+    <LI><P>Bug report</P>
+    <LI><P>Disclaimer</P>
+</UL>
+<HR>
+<P><A NAME="known_bugs"></A><B>Known bugs</B></P>
+<UL>
+    <LI><P><SPAN STYLE="font-weight: medium">The same warning of the
+    same file is more than one time displayed<BR>This happens for
+    multiple included file (generally the H files)</SPAN>. That happens because the path of the
+      incriminated file is not the same; for
+    example, the Gcc work directory has change during the compilation
+    (multiple recursive makefiles do this...) ,  so the relative path to
+    a file has changed too. The tool can't detect this.
+    If you think it can, just tell me how.</P>
+
+    <LI><P STYLE="font-weight: medium">There are a lot of grammatical /
+    syntax error in the html documents<BR>The author has a very poor English language level. <BR>Send him corrections, and he will
+    integrate it immediately in the current release.</P>
+
+    <LI><P STYLE="font-weight: medium">The 2 lines warnings are considers as 2 different
+      warnings<BR>
+    This is a problem, because the tool doesn't know, which warning is a 1 line warning,
+    and which warning is a 2 lines (or more) warning.
+    In the fact, the tool doesn't know any warning, it knows only the general warning's shema.
+    The other possibility is to write in the tool a
+    list of known 2 lines warnings. But this is dangerous.
+    At the moment I prefer have a double warning instead of a big bug.</P>
+
+</UL>
+<HR>
+<P>
+<A HREF="Help_main.html">Help</A><BR>
+<A HREF="about_WF.html">About the tool</A><BR>
+<A HREF="Bugs.html">Bugs</A><BR>
+<A HREF="FAQ.html">F.A.Q.</A><BR>
+<A HREF="history.html">Version's History</A><BR>
+<A HREF="gpl.html">Licence</A>
+</P>
+<HR>
+</BODY>
+</HTML>
+

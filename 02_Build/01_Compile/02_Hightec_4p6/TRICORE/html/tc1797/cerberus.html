@@ -1,0 +1,3291 @@
+<html>
+<head>
+<title>TriCore TC1797 (Cerberus)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>Cerberus</h2>
+
+<h2><tt>#include &lt;tc1797/cerberus.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#CBS_JTAGID">CBS_JTAGID</a></td>
+<td>JTAG Device Identification Register</td>
+<td>0xF0000464</td>
+<td><a class="url" href="types/c.html#CBS_JTAGID_t">CBS_JTAGID_t</a></td>
+<td>0x1015A083</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_COMDATA">CBS_COMDATA</a></td>
+<td>Communication Mode Data Register</td>
+<td>0xF0000468</td>
+<td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_IOSR">CBS_IOSR</a></td>
+<td>IOClient Status and Control Register</td>
+<td>0xF000046C</td>
+<td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDBBS">CBS_MCDBBS</a></td>
+<td>Break Bus Switch Configuration Register</td>
+<td>0xF0000470</td>
+<td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td>
+<td>0x00600000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDSSG">CBS_MCDSSG</a></td>
+<td>Suspend Source Status and Control Register</td>
+<td>0xF0000474</td>
+<td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OEC">CBS_OEC</a></td>
+<td>OCDS Enable Control Register</td>
+<td>0xF0000478</td>
+<td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OCNTRL">CBS_OCNTRL</a></td>
+<td>OSCU Control Register</td>
+<td>0xF000047C</td>
+<td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OSTATE">CBS_OSTATE</a></td>
+<td>OSCU Status Register</td>
+<td>0xF0000480</td>
+<td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td>
+<td>0x00010000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_INTMOD">CBS_INTMOD</a></td>
+<td>Internal Mode Status and Control Register</td>
+<td>0xF0000484</td>
+<td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_ICTSA">CBS_ICTSA</a></td>
+<td>Internally Controlled Trace Source Register</td>
+<td>0xF0000488</td>
+<td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_ICTTA">CBS_ICTTA</a></td>
+<td>Internally Controlled Trace Destination Register</td>
+<td>0xF000048C</td>
+<td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td>
+<td>0x0010F068</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDBBSS">CBS_MCDBBSS</a></td>
+<td>Break Bus Switch Status Register</td>
+<td>0xF0000490</td>
+<td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDSSGC">CBS_MCDSSGC</a></td>
+<td>Suspend Signal Target Control Register</td>
+<td>0xF0000494</td>
+<td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_TRIGS">CBS_TRIGS</a></td>
+<td>Set Trigger to Host Register</td>
+<td>0xF00004A0</td>
+<td><a class="url" href="types/c.html#CBS_TRIGS_t">CBS_TRIGS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_TRIGC">CBS_TRIGC</a></td>
+<td>Clear Trigger to Host Register</td>
+<td>0xF00004A4</td>
+<td><a class="url" href="types/c.html#CBS_TRIGC_t">CBS_TRIGC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_TRIG">CBS_TRIG</a></td>
+<td>Trigger to Host Register</td>
+<td>0xF00004A8</td>
+<td><a class="url" href="types/c.html#CBS_TRIG_t">CBS_TRIG_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_SRC1">CBS_SRC1</a></td>
+<td>Service Request Node2 Control Register</td>
+<td>0xF00004F8</td>
+<td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_SRC0">CBS_SRC0</a></td>
+<td>Service Request Node1 Control Register</td>
+<td>0xF00004FC</td>
+<td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_COMDATA">CBS_COMDATA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_ICTSA">CBS_ICTSA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_ICTTA">CBS_ICTTA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_INTMOD">CBS_INTMOD</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_IOSR">CBS_IOSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_JTAGID_t">CBS_JTAGID_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_JTAGID">CBS_JTAGID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDBBS">CBS_MCDBBS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDBBSS">CBS_MCDBBSS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDSSG">CBS_MCDSSG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDSSGC">CBS_MCDSSGC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_OCNTRL">CBS_OCNTRL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_OEC">CBS_OEC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_OSTATE">CBS_OSTATE</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_SRC1">CBS_SRC1</a>,       
+<a class="url" href="cerberus.html#CBS_SRC0">CBS_SRC0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_TRIG_t">CBS_TRIG_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_TRIG">CBS_TRIG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_TRIGC_t">CBS_TRIGC_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_TRIGC">CBS_TRIGC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_TRIGS_t">CBS_TRIGS_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_TRIGS">CBS_TRIGS</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="CBS_JTAGID">&nbsp;</a>
+<h3>CBS_JTAGID</h3>
+<h3>"JTAG Device Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_JTAGID_ADDR = 0xF0000464</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_JTAGID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x1015A083</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_JTAGID_t">CBS_JTAGID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_JTAGID.bits</b>&nbsp;&quot;JTAG Device Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>JTAG_ID</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>CBS_JTAGID_JTAG_ID_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>CBS_JTAGID_JTAG_ID_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_JTAGID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_COMDATA">&nbsp;</a>
+<h3>CBS_COMDATA</h3>
+<h3>"Communication Mode Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_COMDATA_ADDR = 0xF0000468</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_COMDATA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_COMDATA.bits</b>&nbsp;&quot;Communication Mode Data Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>CBS_COMDATA_DATA_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>CBS_COMDATA_DATA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_COMDATA_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_IOSR">&nbsp;</a>
+<h3>CBS_IOSR</h3>
+<h3>"IOClient Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_IOSR_ADDR = 0xF000046C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_IOSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_IOSR.bits</b>&nbsp;&quot;IOClient Status and Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CRSYNC</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_IOSR_CRSYNC_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>CBS_IOSR_CRSYNC_SHIFT</td>
+</tr>
+<tr>
+<td>CWSYNC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_IOSR_CWSYNC_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>CBS_IOSR_CWSYNC_SHIFT</td>
+</tr>
+<tr>
+<td>CW_ACK</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_IOSR_CW_ACK_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>CBS_IOSR_CW_ACK_SHIFT</td>
+</tr>
+<tr>
+<td>COM_SYNC</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_IOSR_COM_SYNC_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>CBS_IOSR_COM_SYNC_SHIFT</td>
+</tr>
+<tr>
+<td>HOSTED</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_IOSR_HOSTED_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>CBS_IOSR_HOSTED_SHIFT</td>
+</tr>
+<tr>
+<td>CHANNEL</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>CBS_IOSR_CHANNEL_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rh</td>
+<td>CBS_IOSR_CHANNEL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_IOSR_MASK</td><td><tt>0x000071f0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000071b0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000040</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000071b0</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDBBS">&nbsp;</a>
+<h3>CBS_MCDBBS</h3>
+<h3>"Break Bus Switch Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDBBS_ADDR = 0xF0000470</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDBBS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00600000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDBBS.bits</b>&nbsp;&quot;Break Bus Switch Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BSSB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_MCDBBS_BSSB_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSSB_SHIFT</td>
+</tr>
+<tr>
+<td>BSDMA</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_MCDBBS_BSDMA_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSDMA_SHIFT</td>
+</tr>
+<tr>
+<td>BSML0</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_MCDBBS_BSML0_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSML0_SHIFT</td>
+</tr>
+<tr>
+<td>BSML1</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_MCDBBS_BSML1_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSML1_SHIFT</td>
+</tr>
+<tr>
+<td>BSPCP</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_MCDBBS_BSPCP_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSPCP_SHIFT</td>
+</tr>
+<tr>
+<td>BSTC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_MCDBBS_BSTC_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSTC_SHIFT</td>
+</tr>
+<tr>
+<td>BSPCPEN</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_MCDBBS_BSPCPEN_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSPCPEN_SHIFT</td>
+</tr>
+<tr>
+<td>BSHLTEN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_MCDBBS_BSHLTEN_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSHLTEN_SHIFT</td>
+</tr>
+<tr>
+<td>BTMCD</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_MCDBBS_BTMCD_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTMCD_SHIFT</td>
+</tr>
+<tr>
+<td>BTPCP</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_MCDBBS_BTPCP_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTPCP_SHIFT</td>
+</tr>
+<tr>
+<td>BTTC</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_MCDBBS_BTTC_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTTC_SHIFT</td>
+</tr>
+<tr>
+<td>BTPCPEN</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>CBS_MCDBBS_BTPCPEN_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTPCPEN_SHIFT</td>
+</tr>
+<tr>
+<td>BSP0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_MCDBBS_BSP0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSP0_SHIFT</td>
+</tr>
+<tr>
+<td>BSP1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_MCDBBS_BSP1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BSP1_SHIFT</td>
+</tr>
+<tr>
+<td>BTP0</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_MCDBBS_BTP0_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTP0_SHIFT</td>
+</tr>
+<tr>
+<td>BTP1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_MCDBBS_BTP1_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTP1_SHIFT</td>
+</tr>
+<tr>
+<td>BTT</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>CBS_MCDBBS_BTT_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTT_SHIFT</td>
+</tr>
+<tr>
+<td>BTPS</td>
+<td>2</td>
+<td>21 - 22</td>
+<td>CBS_MCDBBS_BTPS_MASK</td>
+<td><tt>0x00600000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTPS_SHIFT</td>
+</tr>
+<tr>
+<td>BTSS</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>CBS_MCDBBS_BTSS_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTSS_SHIFT</td>
+</tr>
+<tr>
+<td>BTTIEN</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_MCDBBS_BTTIEN_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>CBS_MCDBBS_BTTIEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDBBS_MASK</td><td><tt>0x01ff71ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x01ff71ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x01ff71ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDSSG">&nbsp;</a>
+<h3>CBS_MCDSSG</h3>
+<h3>"Suspend Source Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDSSG_ADDR = 0xF0000474</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDSSG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDSSG.bits</b>&nbsp;&quot;Suspend Source Status and Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BTSCL</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_MCDSSG_BTSCL_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>CBS_MCDSSG_BTSCL_SHIFT</td>
+</tr>
+<tr>
+<td>SUS_P</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_MCDSSG_SUS_P_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>CBS_MCDSSG_SUS_P_SHIFT</td>
+</tr>
+<tr>
+<td>SUS</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_MCDSSG_SUS_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>CBS_MCDSSG_SUS_SHIFT</td>
+</tr>
+<tr>
+<td>BTS_P</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_MCDSSG_BTS_P_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>CBS_MCDSSG_BTS_P_SHIFT</td>
+</tr>
+<tr>
+<td>BTSEN</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>CBS_MCDSSG_BTSEN_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>CBS_MCDSSG_BTSEN_SHIFT</td>
+</tr>
+<tr>
+<td>BTSM</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>CBS_MCDSSG_BTSM_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>CBS_MCDSSG_BTSM_SHIFT</td>
+</tr>
+<tr>
+<td>SSSTC</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_MCDSSG_SSSTC_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>CBS_MCDSSG_SSSTC_SHIFT</td>
+</tr>
+<tr>
+<td>SSSSCU</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_MCDSSG_SSSSCU_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>CBS_MCDSSG_SSSSCU_SHIFT</td>
+</tr>
+<tr>
+<td>SSSMCD</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_MCDSSG_SSSMCD_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>CBS_MCDSSG_SSSMCD_SHIFT</td>
+</tr>
+<tr>
+<td>SSSBRK</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>CBS_MCDSSG_SSSBRK_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>CBS_MCDSSG_SSSBRK_SHIFT</td>
+</tr>
+<tr>
+<td>SOS</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_MCDSSG_SOS_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rh</td>
+<td>CBS_MCDSSG_SOS_SHIFT</td>
+</tr>
+<tr>
+<td>SDS</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>CBS_MCDSSG_SDS_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rh</td>
+<td>CBS_MCDSSG_SDS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDSSG_MASK</td><td><tt>0x034d07c1</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x034d0680</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000007c1</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x034d0000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OEC">&nbsp;</a>
+<h3>CBS_OEC</h3>
+<h3>"OCDS Enable Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OEC_ADDR = 0xF0000478</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OEC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_OEC.bits</b>&nbsp;&quot;OCDS Enable Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PAT</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>CBS_OEC_PAT_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>w</td>
+<td>CBS_OEC_PAT_SHIFT</td>
+</tr>
+<tr>
+<td>DS</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_OEC_DS_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>CBS_OEC_DS_SHIFT</td>
+</tr>
+<tr>
+<td>IF_LCK_P</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_OEC_IF_LCK_P_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>CBS_OEC_IF_LCK_P_SHIFT</td>
+</tr>
+<tr>
+<td>IF_LCK</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_OEC_IF_LCK_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>CBS_OEC_IF_LCK_SHIFT</td>
+</tr>
+<tr>
+<td>AUT_OK_P</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_OEC_AUT_OK_P_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>CBS_OEC_AUT_OK_P_SHIFT</td>
+</tr>
+<tr>
+<td>AUT_OK</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_OEC_AUT_OK_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>CBS_OEC_AUT_OK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_OEC_MASK</td><td><tt>0x000f01ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000f01ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OCNTRL">&nbsp;</a>
+<h3>CBS_OCNTRL</h3>
+<h3>"OSCU Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OCNTRL_ADDR = 0xF000047C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OCNTRL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_OCNTRL.bits</b>&nbsp;&quot;OSCU Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OC0_P</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_OCNTRL_OC0_P_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC0_P_SHIFT</td>
+</tr>
+<tr>
+<td>OC0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_OCNTRL_OC0_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC0_SHIFT</td>
+</tr>
+<tr>
+<td>OC1_P</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_OCNTRL_OC1_P_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC1_P_SHIFT</td>
+</tr>
+<tr>
+<td>OC1</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_OCNTRL_OC1_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC1_SHIFT</td>
+</tr>
+<tr>
+<td>OC2_P</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_OCNTRL_OC2_P_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC2_P_SHIFT</td>
+</tr>
+<tr>
+<td>OC2</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_OCNTRL_OC2_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC2_SHIFT</td>
+</tr>
+<tr>
+<td>OC3_P</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_OCNTRL_OC3_P_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC3_P_SHIFT</td>
+</tr>
+<tr>
+<td>OC3</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_OCNTRL_OC3_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC3_SHIFT</td>
+</tr>
+<tr>
+<td>OC4_P</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_OCNTRL_OC4_P_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC4_P_SHIFT</td>
+</tr>
+<tr>
+<td>OC4</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>CBS_OCNTRL_OC4_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC4_SHIFT</td>
+</tr>
+<tr>
+<td>OC5_P</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>CBS_OCNTRL_OC5_P_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC5_P_SHIFT</td>
+</tr>
+<tr>
+<td>OC5</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>CBS_OCNTRL_OC5_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OC5_SHIFT</td>
+</tr>
+<tr>
+<td>WDTSUS_P</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_OCNTRL_WDTSUS_P_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_WDTSUS_P_SHIFT</td>
+</tr>
+<tr>
+<td>WDTSUS</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_OCNTRL_WDTSUS_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_WDTSUS_SHIFT</td>
+</tr>
+<tr>
+<td>STABLE_P</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>CBS_OCNTRL_STABLE_P_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_STABLE_P_SHIFT</td>
+</tr>
+<tr>
+<td>STABLE</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>CBS_OCNTRL_STABLE_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_STABLE_SHIFT</td>
+</tr>
+<tr>
+<td>OJC0_P</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_OCNTRL_OJC0_P_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC0_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC0</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_OCNTRL_OJC0_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC0_SHIFT</td>
+</tr>
+<tr>
+<td>OJC1_P</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_OCNTRL_OJC1_P_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC1_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_OCNTRL_OJC1_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC1_SHIFT</td>
+</tr>
+<tr>
+<td>OJC2_P</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>CBS_OCNTRL_OJC2_P_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC2_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC2</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>CBS_OCNTRL_OJC2_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC2_SHIFT</td>
+</tr>
+<tr>
+<td>OJC3_P</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>CBS_OCNTRL_OJC3_P_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC3_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC3</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>CBS_OCNTRL_OJC3_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC3_SHIFT</td>
+</tr>
+<tr>
+<td>OJC4_P</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_OCNTRL_OJC4_P_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC4_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC4</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>CBS_OCNTRL_OJC4_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC4_SHIFT</td>
+</tr>
+<tr>
+<td>OJC5_P</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>CBS_OCNTRL_OJC5_P_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC5_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC5</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>CBS_OCNTRL_OJC5_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC5_SHIFT</td>
+</tr>
+<tr>
+<td>OJC6_P</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>CBS_OCNTRL_OJC6_P_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC6_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC6</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>CBS_OCNTRL_OJC6_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC6_SHIFT</td>
+</tr>
+<tr>
+<td>OJC7_P</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>CBS_OCNTRL_OJC7_P_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC7_P_SHIFT</td>
+</tr>
+<tr>
+<td>OJC7</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>CBS_OCNTRL_OJC7_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>w</td>
+<td>CBS_OCNTRL_OJC7_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_OCNTRL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OSTATE">&nbsp;</a>
+<h3>CBS_OSTATE</h3>
+<h3>"OSCU Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OSTATE_ADDR = 0xF0000480</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OSTATE_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00010000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_OSTATE.bits</b>&nbsp;&quot;OSCU Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OEN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_OSTATE_OEN_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_OEN_SHIFT</td>
+</tr>
+<tr>
+<td>DJMODE</td>
+<td>2</td>
+<td>1 - 2</td>
+<td>CBS_OSTATE_DJMODE_MASK</td>
+<td><tt>0x00000006</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_DJMODE_SHIFT</td>
+</tr>
+<tr>
+<td>DAPRST</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_OSTATE_DAPRST_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_DAPRST_SHIFT</td>
+</tr>
+<tr>
+<td>ENIDIS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_OSTATE_ENIDIS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_ENIDIS_SHIFT</td>
+</tr>
+<tr>
+<td>EECTRC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_OSTATE_EECTRC_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_EECTRC_SHIFT</td>
+</tr>
+<tr>
+<td>EECDIS</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_OSTATE_EECDIS_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_EECDIS_SHIFT</td>
+</tr>
+<tr>
+<td>WDTSUS</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_OSTATE_WDTSUS_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_WDTSUS_SHIFT</td>
+</tr>
+<tr>
+<td>HARR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_OSTATE_HARR_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_HARR_SHIFT</td>
+</tr>
+<tr>
+<td>OJC1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>CBS_OSTATE_OJC1_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_OJC1_SHIFT</td>
+</tr>
+<tr>
+<td>OJC2</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>CBS_OSTATE_OJC2_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_OJC2_SHIFT</td>
+</tr>
+<tr>
+<td>OJC3</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>CBS_OSTATE_OJC3_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_OJC3_SHIFT</td>
+</tr>
+<tr>
+<td>RSTCL0</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_OSTATE_RSTCL0_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_RSTCL0_SHIFT</td>
+</tr>
+<tr>
+<td>RSTCL1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_OSTATE_RSTCL1_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_RSTCL1_SHIFT</td>
+</tr>
+<tr>
+<td>RSTCL3</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>CBS_OSTATE_RSTCL3_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_RSTCL3_SHIFT</td>
+</tr>
+<tr>
+<td>IF_LCK</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_OSTATE_IF_LCK_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_IF_LCK_SHIFT</td>
+</tr>
+<tr>
+<td>AUT_OK</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_OSTATE_AUT_OK_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_AUT_OK_SHIFT</td>
+</tr>
+<tr>
+<td>STABLE</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_OSTATE_STABLE_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>CBS_OSTATE_STABLE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_OSTATE_MASK</td><td><tt>0x0007bfff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0007bfff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0007bfff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_INTMOD">&nbsp;</a>
+<h3>CBS_INTMOD</h3>
+<h3>"Internal Mode Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_INTMOD_ADDR = 0xF0000484</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_INTMOD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_INTMOD.bits</b>&nbsp;&quot;Internal Mode Status and Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SET_CRS</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_INTMOD_SET_CRS_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_SET_CRS_SHIFT</td>
+</tr>
+<tr>
+<td>SET_CWS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_INTMOD_SET_CWS_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_SET_CWS_SHIFT</td>
+</tr>
+<tr>
+<td>SET_CS</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_INTMOD_SET_CS_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_SET_CS_SHIFT</td>
+</tr>
+<tr>
+<td>CLR_CS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_INTMOD_CLR_CS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_CLR_CS_SHIFT</td>
+</tr>
+<tr>
+<td>CHANNEL_P</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_INTMOD_CHANNEL_P_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_CHANNEL_P_SHIFT</td>
+</tr>
+<tr>
+<td>CHANNEL</td>
+<td>3</td>
+<td>5 - 7</td>
+<td>CBS_INTMOD_CHANNEL_MASK</td>
+<td><tt>0x000000e0</tt></td>
+<td>rw</td>
+<td>CBS_INTMOD_CHANNEL_SHIFT</td>
+</tr>
+<tr>
+<td>SET_INT_MOD</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_INTMOD_SET_INT_MOD_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_SET_INT_MOD_SHIFT</td>
+</tr>
+<tr>
+<td>SET_INT_TRC</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_INTMOD_SET_INT_TRC_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_SET_INT_TRC_SHIFT</td>
+</tr>
+<tr>
+<td>CLR_INT_TRC</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_INTMOD_CLR_INT_TRC_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_CLR_INT_TRC_SHIFT</td>
+</tr>
+<tr>
+<td>TRC_MOD_P</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>CBS_INTMOD_TRC_MOD_P_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>CBS_INTMOD_TRC_MOD_P_SHIFT</td>
+</tr>
+<tr>
+<td>TRC_MOD</td>
+<td>2</td>
+<td>21 - 22</td>
+<td>CBS_INTMOD_TRC_MOD_MASK</td>
+<td><tt>0x00600000</tt></td>
+<td>rw</td>
+<td>CBS_INTMOD_TRC_MOD_SHIFT</td>
+</tr>
+<tr>
+<td>INT_MOD</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_INTMOD_INT_MOD_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rh</td>
+<td>CBS_INTMOD_INT_MOD_SHIFT</td>
+</tr>
+<tr>
+<td>INT_TRC</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>CBS_INTMOD_INT_TRC_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rh</td>
+<td>CBS_INTMOD_INT_TRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_INTMOD_MASK</td><td><tt>0x037d00ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x036000e0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x007d00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x03000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_ICTSA">&nbsp;</a>
+<h3>CBS_ICTSA</h3>
+<h3>"Internally Controlled Trace Source Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_ICTSA_ADDR = 0xF0000488</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_ICTSA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_ICTSA.bits</b>&nbsp;&quot;Internally Controlled Trace Source Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>CBS_ICTSA_ADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>CBS_ICTSA_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_ICTSA_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_ICTTA">&nbsp;</a>
+<h3>CBS_ICTTA</h3>
+<h3>"Internally Controlled Trace Destination Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_ICTTA_ADDR = 0xF000048C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_ICTTA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0010F068</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_ICTTA.bits</b>&nbsp;&quot;Internally Controlled Trace Destination Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>CBS_ICTTA_ADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>CBS_ICTTA_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_ICTTA_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDBBSS">&nbsp;</a>
+<h3>CBS_MCDBBSS</h3>
+<h3>"Break Bus Switch Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDBBSS_ADDR = 0xF0000490</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDBBSS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDBBSS.bits</b>&nbsp;&quot;Break Bus Switch Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BSSSB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_MCDBBSS_BSSSB_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSSSB_SHIFT</td>
+</tr>
+<tr>
+<td>BSSDMA</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_MCDBBSS_BSSDMA_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSSDMA_SHIFT</td>
+</tr>
+<tr>
+<td>BSSML0</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_MCDBBSS_BSSML0_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSSML0_SHIFT</td>
+</tr>
+<tr>
+<td>BSSML1</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_MCDBBSS_BSSML1_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSSML1_SHIFT</td>
+</tr>
+<tr>
+<td>BSSPCP</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_MCDBBSS_BSSPCP_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSSPCP_SHIFT</td>
+</tr>
+<tr>
+<td>BSSTC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_MCDBBSS_BSSTC_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSSTC_SHIFT</td>
+</tr>
+<tr>
+<td>BSCSB</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_MCDBBSS_BSCSB_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSCSB_SHIFT</td>
+</tr>
+<tr>
+<td>BSCDMA</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>CBS_MCDBBSS_BSCDMA_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSCDMA_SHIFT</td>
+</tr>
+<tr>
+<td>BSCML0</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>CBS_MCDBBSS_BSCML0_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSCML0_SHIFT</td>
+</tr>
+<tr>
+<td>BSCML1</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>CBS_MCDBBSS_BSCML1_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSCML1_SHIFT</td>
+</tr>
+<tr>
+<td>BSCPCP</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_MCDBBSS_BSCPCP_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSCPCP_SHIFT</td>
+</tr>
+<tr>
+<td>BSCTC</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_MCDBBSS_BSCTC_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BSCTC_SHIFT</td>
+</tr>
+<tr>
+<td>BBS0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_MCDBBSS_BBS0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BBS0_SHIFT</td>
+</tr>
+<tr>
+<td>BBS1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_MCDBBSS_BBS1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BBS1_SHIFT</td>
+</tr>
+<tr>
+<td>BBC0</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_MCDBBSS_BBC0_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BBC0_SHIFT</td>
+</tr>
+<tr>
+<td>BBC1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_MCDBBSS_BBC1_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>CBS_MCDBBSS_BBC1_SHIFT</td>
+</tr>
+<tr>
+<td>CAPCLR</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_MCDBBSS_CAPCLR_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>CBS_MCDBBSS_CAPCLR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDBBSS_MASK</td><td><tt>0x010f3f3f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000f3f3f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x01000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000f3f3f</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDSSGC">&nbsp;</a>
+<h3>CBS_MCDSSGC</h3>
+<h3>"Suspend Signal Target Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDSSGC_ADDR = 0xF0000494</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDSSGC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDSSGC.bits</b>&nbsp;&quot;Suspend Signal Target Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STC_P</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_MCDSSGC_STC_P_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>CBS_MCDSSGC_STC_P_SHIFT</td>
+</tr>
+<tr>
+<td>STCM</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_MCDSSGC_STCM_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>CBS_MCDSSGC_STCM_SHIFT</td>
+</tr>
+<tr>
+<td>STCTC</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_MCDSSGC_STCTC_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>CBS_MCDSSGC_STCTC_SHIFT</td>
+</tr>
+<tr>
+<td>STCPCP</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_MCDSSGC_STCPCP_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>CBS_MCDSSGC_STCPCP_SHIFT</td>
+</tr>
+<tr>
+<td>STCDMA</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_MCDSSGC_STCDMA_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>CBS_MCDSSGC_STCDMA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDSSGC_MASK</td><td><tt>0x0000001f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000001e</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000001f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_TRIGS">&nbsp;</a>
+<h3>CBS_TRIGS</h3>
+<h3>"Set Trigger to Host Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_TRIGS_ADDR = 0xF00004A0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_TRIGS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_TRIGS_t">CBS_TRIGS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_TRIGS.bits</b>&nbsp;&quot;Set Trigger to Host Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TRG0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_TRIGS_TRG0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG0_SHIFT</td>
+</tr>
+<tr>
+<td>TRG1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_TRIGS_TRG1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG1_SHIFT</td>
+</tr>
+<tr>
+<td>TRG2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_TRIGS_TRG2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG2_SHIFT</td>
+</tr>
+<tr>
+<td>TRG3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_TRIGS_TRG3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG3_SHIFT</td>
+</tr>
+<tr>
+<td>TRG4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_TRIGS_TRG4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG4_SHIFT</td>
+</tr>
+<tr>
+<td>TRG5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_TRIGS_TRG5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG5_SHIFT</td>
+</tr>
+<tr>
+<td>TRG6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_TRIGS_TRG6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG6_SHIFT</td>
+</tr>
+<tr>
+<td>TRG7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_TRIGS_TRG7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG7_SHIFT</td>
+</tr>
+<tr>
+<td>TRG8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_TRIGS_TRG8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG8_SHIFT</td>
+</tr>
+<tr>
+<td>TRG9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>CBS_TRIGS_TRG9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG9_SHIFT</td>
+</tr>
+<tr>
+<td>TRG10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>CBS_TRIGS_TRG10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG10_SHIFT</td>
+</tr>
+<tr>
+<td>TRG11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>CBS_TRIGS_TRG11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG11_SHIFT</td>
+</tr>
+<tr>
+<td>TRG12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_TRIGS_TRG12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG12_SHIFT</td>
+</tr>
+<tr>
+<td>TRG13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_TRIGS_TRG13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG13_SHIFT</td>
+</tr>
+<tr>
+<td>TRG14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>CBS_TRIGS_TRG14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG14_SHIFT</td>
+</tr>
+<tr>
+<td>TRG15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>CBS_TRIGS_TRG15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG15_SHIFT</td>
+</tr>
+<tr>
+<td>TRG16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_TRIGS_TRG16_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG16_SHIFT</td>
+</tr>
+<tr>
+<td>TRG17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_TRIGS_TRG17_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG17_SHIFT</td>
+</tr>
+<tr>
+<td>TRG18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_TRIGS_TRG18_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG18_SHIFT</td>
+</tr>
+<tr>
+<td>TRG19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_TRIGS_TRG19_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG19_SHIFT</td>
+</tr>
+<tr>
+<td>TRG20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>CBS_TRIGS_TRG20_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG20_SHIFT</td>
+</tr>
+<tr>
+<td>TRG21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>CBS_TRIGS_TRG21_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG21_SHIFT</td>
+</tr>
+<tr>
+<td>TRG22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>CBS_TRIGS_TRG22_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG22_SHIFT</td>
+</tr>
+<tr>
+<td>TRG23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>CBS_TRIGS_TRG23_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG23_SHIFT</td>
+</tr>
+<tr>
+<td>TRG24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_TRIGS_TRG24_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG24_SHIFT</td>
+</tr>
+<tr>
+<td>TRG25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>CBS_TRIGS_TRG25_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG25_SHIFT</td>
+</tr>
+<tr>
+<td>TRG26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>CBS_TRIGS_TRG26_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG26_SHIFT</td>
+</tr>
+<tr>
+<td>TRG27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>CBS_TRIGS_TRG27_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG27_SHIFT</td>
+</tr>
+<tr>
+<td>TRG28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>CBS_TRIGS_TRG28_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG28_SHIFT</td>
+</tr>
+<tr>
+<td>TRG29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>CBS_TRIGS_TRG29_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG29_SHIFT</td>
+</tr>
+<tr>
+<td>TRG30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>CBS_TRIGS_TRG30_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG30_SHIFT</td>
+</tr>
+<tr>
+<td>TRG31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>CBS_TRIGS_TRG31_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGS_TRG31_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_TRIGS_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_TRIGC">&nbsp;</a>
+<h3>CBS_TRIGC</h3>
+<h3>"Clear Trigger to Host Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_TRIGC_ADDR = 0xF00004A4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_TRIGC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_TRIGC_t">CBS_TRIGC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_TRIGC.bits</b>&nbsp;&quot;Clear Trigger to Host Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TRG0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_TRIGC_TRG0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG0_SHIFT</td>
+</tr>
+<tr>
+<td>TRG1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_TRIGC_TRG1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG1_SHIFT</td>
+</tr>
+<tr>
+<td>TRG2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_TRIGC_TRG2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG2_SHIFT</td>
+</tr>
+<tr>
+<td>TRG3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_TRIGC_TRG3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG3_SHIFT</td>
+</tr>
+<tr>
+<td>TRG4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_TRIGC_TRG4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG4_SHIFT</td>
+</tr>
+<tr>
+<td>TRG5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_TRIGC_TRG5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG5_SHIFT</td>
+</tr>
+<tr>
+<td>TRG6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_TRIGC_TRG6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG6_SHIFT</td>
+</tr>
+<tr>
+<td>TRG7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_TRIGC_TRG7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG7_SHIFT</td>
+</tr>
+<tr>
+<td>TRG8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_TRIGC_TRG8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG8_SHIFT</td>
+</tr>
+<tr>
+<td>TRG9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>CBS_TRIGC_TRG9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG9_SHIFT</td>
+</tr>
+<tr>
+<td>TRG10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>CBS_TRIGC_TRG10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG10_SHIFT</td>
+</tr>
+<tr>
+<td>TRG11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>CBS_TRIGC_TRG11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG11_SHIFT</td>
+</tr>
+<tr>
+<td>TRG12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_TRIGC_TRG12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG12_SHIFT</td>
+</tr>
+<tr>
+<td>TRG13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_TRIGC_TRG13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG13_SHIFT</td>
+</tr>
+<tr>
+<td>TRG14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>CBS_TRIGC_TRG14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG14_SHIFT</td>
+</tr>
+<tr>
+<td>TRG15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>CBS_TRIGC_TRG15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG15_SHIFT</td>
+</tr>
+<tr>
+<td>TRG16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_TRIGC_TRG16_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG16_SHIFT</td>
+</tr>
+<tr>
+<td>TRG17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_TRIGC_TRG17_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG17_SHIFT</td>
+</tr>
+<tr>
+<td>TRG18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_TRIGC_TRG18_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG18_SHIFT</td>
+</tr>
+<tr>
+<td>TRG19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_TRIGC_TRG19_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG19_SHIFT</td>
+</tr>
+<tr>
+<td>TRG20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>CBS_TRIGC_TRG20_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG20_SHIFT</td>
+</tr>
+<tr>
+<td>TRG21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>CBS_TRIGC_TRG21_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG21_SHIFT</td>
+</tr>
+<tr>
+<td>TRG22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>CBS_TRIGC_TRG22_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG22_SHIFT</td>
+</tr>
+<tr>
+<td>TRG23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>CBS_TRIGC_TRG23_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG23_SHIFT</td>
+</tr>
+<tr>
+<td>TRG24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_TRIGC_TRG24_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG24_SHIFT</td>
+</tr>
+<tr>
+<td>TRG25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>CBS_TRIGC_TRG25_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG25_SHIFT</td>
+</tr>
+<tr>
+<td>TRG26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>CBS_TRIGC_TRG26_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG26_SHIFT</td>
+</tr>
+<tr>
+<td>TRG27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>CBS_TRIGC_TRG27_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG27_SHIFT</td>
+</tr>
+<tr>
+<td>TRG28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>CBS_TRIGC_TRG28_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG28_SHIFT</td>
+</tr>
+<tr>
+<td>TRG29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>CBS_TRIGC_TRG29_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG29_SHIFT</td>
+</tr>
+<tr>
+<td>TRG30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>CBS_TRIGC_TRG30_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG30_SHIFT</td>
+</tr>
+<tr>
+<td>TRG31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>CBS_TRIGC_TRG31_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>w</td>
+<td>CBS_TRIGC_TRG31_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_TRIGC_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_TRIG">&nbsp;</a>
+<h3>CBS_TRIG</h3>
+<h3>"Trigger to Host Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_TRIG_ADDR = 0xF00004A8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_TRIG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_TRIG_t">CBS_TRIG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_TRIG.bits</b>&nbsp;&quot;Trigger to Host Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TRG0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>CBS_TRIG_TRG0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG0_SHIFT</td>
+</tr>
+<tr>
+<td>TRG1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>CBS_TRIG_TRG1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG1_SHIFT</td>
+</tr>
+<tr>
+<td>TRG2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>CBS_TRIG_TRG2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG2_SHIFT</td>
+</tr>
+<tr>
+<td>TRG3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>CBS_TRIG_TRG3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG3_SHIFT</td>
+</tr>
+<tr>
+<td>TRG4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>CBS_TRIG_TRG4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG4_SHIFT</td>
+</tr>
+<tr>
+<td>TRG5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>CBS_TRIG_TRG5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG5_SHIFT</td>
+</tr>
+<tr>
+<td>TRG6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>CBS_TRIG_TRG6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG6_SHIFT</td>
+</tr>
+<tr>
+<td>TRG7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>CBS_TRIG_TRG7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG7_SHIFT</td>
+</tr>
+<tr>
+<td>TRG8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>CBS_TRIG_TRG8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG8_SHIFT</td>
+</tr>
+<tr>
+<td>TRG9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>CBS_TRIG_TRG9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG9_SHIFT</td>
+</tr>
+<tr>
+<td>TRG10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>CBS_TRIG_TRG10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG10_SHIFT</td>
+</tr>
+<tr>
+<td>TRG11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>CBS_TRIG_TRG11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG11_SHIFT</td>
+</tr>
+<tr>
+<td>TRG12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_TRIG_TRG12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG12_SHIFT</td>
+</tr>
+<tr>
+<td>TRG13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_TRIG_TRG13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG13_SHIFT</td>
+</tr>
+<tr>
+<td>TRG14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>CBS_TRIG_TRG14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG14_SHIFT</td>
+</tr>
+<tr>
+<td>TRG15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>CBS_TRIG_TRG15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG15_SHIFT</td>
+</tr>
+<tr>
+<td>TRG16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>CBS_TRIG_TRG16_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG16_SHIFT</td>
+</tr>
+<tr>
+<td>TRG17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>CBS_TRIG_TRG17_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG17_SHIFT</td>
+</tr>
+<tr>
+<td>TRG18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>CBS_TRIG_TRG18_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG18_SHIFT</td>
+</tr>
+<tr>
+<td>TRG19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>CBS_TRIG_TRG19_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG19_SHIFT</td>
+</tr>
+<tr>
+<td>TRG20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>CBS_TRIG_TRG20_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG20_SHIFT</td>
+</tr>
+<tr>
+<td>TRG21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>CBS_TRIG_TRG21_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG21_SHIFT</td>
+</tr>
+<tr>
+<td>TRG22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>CBS_TRIG_TRG22_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG22_SHIFT</td>
+</tr>
+<tr>
+<td>TRG23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>CBS_TRIG_TRG23_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG23_SHIFT</td>
+</tr>
+<tr>
+<td>TRG24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>CBS_TRIG_TRG24_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG24_SHIFT</td>
+</tr>
+<tr>
+<td>TRG25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>CBS_TRIG_TRG25_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG25_SHIFT</td>
+</tr>
+<tr>
+<td>TRG26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>CBS_TRIG_TRG26_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG26_SHIFT</td>
+</tr>
+<tr>
+<td>TRG27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>CBS_TRIG_TRG27_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG27_SHIFT</td>
+</tr>
+<tr>
+<td>TRG28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>CBS_TRIG_TRG28_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG28_SHIFT</td>
+</tr>
+<tr>
+<td>TRG29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>CBS_TRIG_TRG29_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG29_SHIFT</td>
+</tr>
+<tr>
+<td>TRG30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>CBS_TRIG_TRG30_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG30_SHIFT</td>
+</tr>
+<tr>
+<td>TRG31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>CBS_TRIG_TRG31_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rh</td>
+<td>CBS_TRIG_TRG31_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_TRIG_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_SRC1">&nbsp;</a>
+<h3>CBS_SRC1</h3>
+<h3>"Service Request Node2 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_SRC1_ADDR = 0xF00004F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_SRC1.bits</b>&nbsp;&quot;Service Request Node2 Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>CBS_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>CBS_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>CBS_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rw</td>
+<td>CBS_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>CBS_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>CBS_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>CBS_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>CBS_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>CBS_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>CBS_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_SRCm_MASK</td><td><tt>0x0000fcff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000dcff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_SRC0">&nbsp;</a>
+<h3>CBS_SRC0</h3>
+<h3>"Service Request Node1 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_SRC0_ADDR = 0xF00004FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_SRC0.bits</b>&nbsp;&quot;Service Request Node1 Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>CBS_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>CBS_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>CBS_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rw</td>
+<td>CBS_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>CBS_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>CBS_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>CBS_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>CBS_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>CBS_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>CBS_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>CBS_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>CBS_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_SRCm_MASK</td><td><tt>0x0000fcff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000dcff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

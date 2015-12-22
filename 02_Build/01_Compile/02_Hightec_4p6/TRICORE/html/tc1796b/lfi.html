@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>TriCore TC1796B (LFI)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>LFI</h2>
+
+<h2><tt>#include &lt;tc1796b/lfi.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#LFI_ID">LFI_ID</a></td>
+<td>LFI Module Identification Register</td>
+<td>0xF87FFF08</td>
+<td><a class="url" href="types/l.html#LFI_ID_t">LFI_ID_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LFI_CON">LFI_CON</a></td>
+<td>LFI Configuration Register</td>
+<td>0xF87FFF10</td>
+<td><a class="url" href="types/l.html#LFI_CON_t">LFI_CON_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LFI_CON_t">LFI_CON_t</a></td>
+<td><a class="url" href="lfi.html#LFI_CON">LFI_CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LFI_ID_t">LFI_ID_t</a></td>
+<td><a class="url" href="lfi.html#LFI_ID">LFI_ID</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="LFI_ID">&nbsp;</a>
+<h3>LFI_ID</h3>
+<h3>"LFI Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LFI_ID_ADDR = 0xF87FFF08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LFI_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LFI_ID_t">LFI_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>LFI_ID.bits</b>&nbsp;&quot;LFI Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>LFI_ID_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LFI_CON">&nbsp;</a>
+<h3>LFI_CON</h3>
+<h3>"LFI Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LFI_CON_ADDR = 0xF87FFF10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LFI_CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LFI_CON_t">LFI_CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>LFI_CON.bits</b>&nbsp;&quot;LFI Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LTAG</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>LFI_CON_LTAG_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rh</td>
+<td>LFI_CON_LTAG_SHIFT</td>
+</tr>
+<tr>
+<td>FTAG</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>LFI_CON_FTAG_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rh</td>
+<td>LFI_CON_FTAG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>LFI_CON_MASK</td><td><tt>0x00000f70</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000f70</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000f70</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

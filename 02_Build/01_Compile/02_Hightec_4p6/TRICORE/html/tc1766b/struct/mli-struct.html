@@ -1,0 +1,216 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1766b/mli-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1766B_MLI_STRUCTS_H_
+#define _TC1766B_MLI_STRUCTS_H_
+/*
+   TriCore TC1766B
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1766b/<a class="url" href="../mli0.html">mli0.h</a>&gt;
+#ifndef MLI0_BASE
+#define MLI0_BASE 0xf010c000
+#endif /* MLI0_BASE */
+</pre>
+<pre>
+#include &lt;tc1766b/<a class="url" href="../mli1.html">mli1.h</a>&gt;
+#ifndef MLI1_BASE
+#define MLI1_BASE 0xf010c100
+#endif /* MLI1_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved0[0x2];</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_ID_t">MLIn_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_FDR_t">MLIn_FDR_t</a></td>
+<td>FDR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TCR_t">MLIn_TCR_t</a></td>
+<td>TCR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TSTATR_t">MLIn_TSTATR_t</a></td>
+<td>TSTATR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TPmSTATR_t">MLIn_TPmSTATR_t</a></td>
+<td>TPSTATR[0x4];</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TCMDR_t">MLIn_TCMDR_t</a></td>
+<td>TCMDR;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TRSTATR_t">MLIn_TRSTATR_t</a></td>
+<td>TRSTATR;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TPmAOFR_t">MLIn_TPmAOFR_t</a></td>
+<td>TPAOFR[0x4];</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TPmDATAR_t">MLIn_TPmDATAR_t</a></td>
+<td>TPDATAR[0x4];</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TDRAR_t">MLIn_TDRAR_t</a></td>
+<td>TDRAR;</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TPmBAR_t">MLIn_TPmBAR_t</a></td>
+<td>TPBAR[0x4];</td>
+<td>/* 0x54 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TCBAR_t">MLIn_TCBAR_t</a></td>
+<td>TCBAR;</td>
+<td>/* 0x64 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RCR_t">MLIn_RCR_t</a></td>
+<td>RCR;</td>
+<td>/* 0x68 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RPmBAR_t">MLIn_RPmBAR_t</a></td>
+<td>RPBAR[0x4];</td>
+<td>/* 0x6c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RPmSTATR_t">MLIn_RPmSTATR_t</a></td>
+<td>RPSTATR[0x4];</td>
+<td>/* 0x7c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RADRR_t">MLIn_RADRR_t</a></td>
+<td>RADRR;</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RDATAR_t">MLIn_RDATAR_t</a></td>
+<td>RDATAR;</td>
+<td>/* 0x90 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_SCR_t">MLIn_SCR_t</a></td>
+<td>SCR;</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TIER_t">MLIn_TIER_t</a></td>
+<td>TIER;</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TISR_t">MLIn_TISR_t</a></td>
+<td>TISR;</td>
+<td>/* 0x9c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_TINPR_t">MLIn_TINPR_t</a></td>
+<td>TINPR;</td>
+<td>/* 0xa0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RIER_t">MLIn_RIER_t</a></td>
+<td>RIER;</td>
+<td>/* 0xa4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RISR_t">MLIn_RISR_t</a></td>
+<td>RISR;</td>
+<td>/* 0xa8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_RINPR_t">MLIn_RINPR_t</a></td>
+<td>RINPR;</td>
+<td>/* 0xac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_GINTR_t">MLIn_GINTR_t</a></td>
+<td>GINTR;</td>
+<td>/* 0xb0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_OICR_t">MLIn_OICR_t</a></td>
+<td>OICR;</td>
+<td>/* 0xb4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_AER_t">MLIn_AER_t</a></td>
+<td>AER;</td>
+<td>/* 0xb8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLIn_ARR_t">MLIn_ARR_t</a></td>
+<td>ARR;</td>
+<td>/* 0xbc */</td>
+</tr>
+
+<tr><td colspan="4">} MLI_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1766B_MLI_STRUCTS_H_ */ -->
+</body>
+</html>

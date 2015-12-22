@@ -1,0 +1,260 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1798/sent-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1798_SENT_STRUCTS_H_
+#define _TC1798_SENT_STRUCTS_H_
+/*
+   TriCore TC1798
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1798/<a class="url" href="../sent.html">sent.h</a>&gt;
+#ifndef SENT_BASE
+#define SENT_BASE 0xf0321000
+#endif /* SENT_BASE */
+</pre>
+
+<a name="SENT_CH_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_CPDRm_t">SENT_CPDRm_t</a></td>
+<td>CPDR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_CFDRm_t">SENT_CFDRm_t</a></td>
+<td>CFDR;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RCRm_t">SENT_RCRm_t</a></td>
+<td>RCR;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RSRm_t">SENT_RSRm_t</a></td>
+<td>RSR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_SDSm_t">SENT_SDSm_t</a></td>
+<td>SDS;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_IOCRm_t">SENT_IOCRm_t</a></td>
+<td>IOCR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_SCRm_t">SENT_SCRm_t</a></td>
+<td>SCR;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_VIEWm_t">SENT_VIEWm_t</a></td>
+<td>VIEW;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_INTSTATm_t">SENT_INTSTATm_t</a></td>
+<td>INTSTAT;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_INTSETm_t">SENT_INTSETm_t</a></td>
+<td>INTSET;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_INTCLRm_t">SENT_INTCLRm_t</a></td>
+<td>INTCLR;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_INTENm_t">SENT_INTENm_t</a></td>
+<td>INTEN;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_INPm_t">SENT_INPm_t</a></td>
+<td>INP;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved13[0x3];</td>
+<td>/* 0x34 */</td>
+</tr>
+
+<tr><td colspan="4">} SENT_CH_t;</td></tr>
+</table>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_CLC_t">SENT_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved1[0x1];</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_ID_t">SENT_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_FDR_t">SENT_FDR_t</a></td>
+<td>FDR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved4[0x1];</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_INTOV_t">SENT_INTOV_t</a></td>
+<td>INTOV;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved6[0x1a];</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR0;</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR1;</td>
+<td>/* 0x84 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR2;</td>
+<td>/* 0x88 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR3;</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR4;</td>
+<td>/* 0x90 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR5;</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR6;</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_RDRm_t">SENT_RDRm_t</a></td>
+<td>RDR7;</td>
+<td>/* 0x9c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved15[0x18];</td>
+<td>/* 0xa0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#SENT_CH_t">SENT_CH_t</a></td>
+<td>CH[0x8];</td>
+<td>/* 0x100 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved17[0x1bc];</td>
+<td>/* 0x300 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_SRCm_t">SENT_SRCm_t</a></td>
+<td>SRC3;</td>
+<td>/* 0x9f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_SRCm_t">SENT_SRCm_t</a></td>
+<td>SRC2;</td>
+<td>/* 0x9f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_SRCm_t">SENT_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0x9f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SENT_SRCm_t">SENT_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0x9fc */</td>
+</tr>
+
+<tr><td colspan="4">} SENT_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1798_SENT_STRUCTS_H_ */ -->
+</body>
+</html>

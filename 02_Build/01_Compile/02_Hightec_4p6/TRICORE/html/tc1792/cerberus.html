@@ -1,0 +1,895 @@
+<html>
+<head>
+<title>TriCore TC1792 (Cerberus)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>Cerberus</h2>
+
+<h2><tt>#include &lt;tc1792/cerberus.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#CBS_JDPID">CBS_JDPID</a></td>
+<td>Cerberus Module Identification Register</td>
+<td>0xF0000408</td>
+<td><a class="url" href="types/c.html#CBS_JDPID_t">CBS_JDPID_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_COMDATA">CBS_COMDATA</a></td>
+<td>Cerberus Communication Mode Data Register</td>
+<td>0xF0000468</td>
+<td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_IOSR">CBS_IOSR</a></td>
+<td>Cerberus Status Register</td>
+<td>0xF000046C</td>
+<td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDBBS">CBS_MCDBBS</a></td>
+<td>Cerberus Break Bus Switch Configuration Register</td>
+<td>0xF0000470</td>
+<td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDSSG">CBS_MCDSSG</a></td>
+<td>Cerberus Suspend Signal Generation Status and Control Register</td>
+<td>0xF0000474</td>
+<td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OEC">CBS_OEC</a></td>
+<td>Cerberus OCDS Enable Control Register</td>
+<td>0xF0000478</td>
+<td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OCNTRL">CBS_OCNTRL</a></td>
+<td>Cerberus OSCU Configuration and Control Register</td>
+<td>0xF000047C</td>
+<td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OSTATE">CBS_OSTATE</a></td>
+<td>Cerberus OSCU Status Register</td>
+<td>0xF0000480</td>
+<td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_INTMOD">CBS_INTMOD</a></td>
+<td>Cerberus Internal Mode Status and Control Register</td>
+<td>0xF0000484</td>
+<td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_ICTSA">CBS_ICTSA</a></td>
+<td>Cerberus Internal Controlled Trace Source Address Register</td>
+<td>0xF0000488</td>
+<td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_ICTTA">CBS_ICTTA</a></td>
+<td>Cerberus Internal Controlled Trace Target Address Register</td>
+<td>0xF000048C</td>
+<td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDBBSS">CBS_MCDBBSS</a></td>
+<td>Cerberus Break Bus Switch Status Register</td>
+<td>0xF0000490</td>
+<td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDSSGC">CBS_MCDSSGC</a></td>
+<td>Cerberus Suspend Signal Generation Configuration Register</td>
+<td>0xF0000494</td>
+<td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_SRC">CBS_SRC</a></td>
+<td>Cerberus Service Request Control Register</td>
+<td>0xF00004FC</td>
+<td><a class="url" href="types/c.html#CBS_SRC_t">CBS_SRC_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_COMDATA">CBS_COMDATA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_ICTSA">CBS_ICTSA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_ICTTA">CBS_ICTTA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_INTMOD">CBS_INTMOD</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_IOSR">CBS_IOSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_JDPID_t">CBS_JDPID_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_JDPID">CBS_JDPID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDBBS">CBS_MCDBBS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDBBSS">CBS_MCDBBSS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDSSG">CBS_MCDSSG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_MCDSSGC">CBS_MCDSSGC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_OCNTRL">CBS_OCNTRL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_OEC">CBS_OEC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_OSTATE">CBS_OSTATE</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_SRC_t">CBS_SRC_t</a></td>
+<td><a class="url" href="cerberus.html#CBS_SRC">CBS_SRC</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="CBS_JDPID">&nbsp;</a>
+<h3>CBS_JDPID</h3>
+<h3>"Cerberus Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_JDPID_ADDR = 0xF0000408</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_JDPID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_JDPID_t">CBS_JDPID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_JDPID.bits</b>&nbsp;&quot;Cerberus Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_JDPID_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_COMDATA">&nbsp;</a>
+<h3>CBS_COMDATA</h3>
+<h3>"Cerberus Communication Mode Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_COMDATA_ADDR = 0xF0000468</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_COMDATA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_COMDATA.bits</b>&nbsp;&quot;Cerberus Communication Mode Data Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_COMDATA_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_IOSR">&nbsp;</a>
+<h3>CBS_IOSR</h3>
+<h3>"Cerberus Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_IOSR_ADDR = 0xF000046C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_IOSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_IOSR.bits</b>&nbsp;&quot;Cerberus Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_IOSR_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDBBS">&nbsp;</a>
+<h3>CBS_MCDBBS</h3>
+<h3>"Cerberus Break Bus Switch Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDBBS_ADDR = 0xF0000470</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDBBS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDBBS.bits</b>&nbsp;&quot;Cerberus Break Bus Switch Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDBBS_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDSSG">&nbsp;</a>
+<h3>CBS_MCDSSG</h3>
+<h3>"Cerberus Suspend Signal Generation Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDSSG_ADDR = 0xF0000474</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDSSG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDSSG.bits</b>&nbsp;&quot;Cerberus Suspend Signal Generation Status and Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDSSG_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OEC">&nbsp;</a>
+<h3>CBS_OEC</h3>
+<h3>"Cerberus OCDS Enable Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OEC_ADDR = 0xF0000478</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OEC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_OEC.bits</b>&nbsp;&quot;Cerberus OCDS Enable Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_OEC_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OCNTRL">&nbsp;</a>
+<h3>CBS_OCNTRL</h3>
+<h3>"Cerberus OSCU Configuration and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OCNTRL_ADDR = 0xF000047C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OCNTRL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_OCNTRL.bits</b>&nbsp;&quot;Cerberus OSCU Configuration and Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_OCNTRL_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OSTATE">&nbsp;</a>
+<h3>CBS_OSTATE</h3>
+<h3>"Cerberus OSCU Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OSTATE_ADDR = 0xF0000480</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OSTATE_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_OSTATE.bits</b>&nbsp;&quot;Cerberus OSCU Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_OSTATE_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_INTMOD">&nbsp;</a>
+<h3>CBS_INTMOD</h3>
+<h3>"Cerberus Internal Mode Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_INTMOD_ADDR = 0xF0000484</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_INTMOD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_INTMOD.bits</b>&nbsp;&quot;Cerberus Internal Mode Status and Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_INTMOD_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_ICTSA">&nbsp;</a>
+<h3>CBS_ICTSA</h3>
+<h3>"Cerberus Internal Controlled Trace Source Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_ICTSA_ADDR = 0xF0000488</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_ICTSA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_ICTSA.bits</b>&nbsp;&quot;Cerberus Internal Controlled Trace Source Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_ICTSA_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_ICTTA">&nbsp;</a>
+<h3>CBS_ICTTA</h3>
+<h3>"Cerberus Internal Controlled Trace Target Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_ICTTA_ADDR = 0xF000048C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_ICTTA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_ICTTA.bits</b>&nbsp;&quot;Cerberus Internal Controlled Trace Target Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_ICTTA_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDBBSS">&nbsp;</a>
+<h3>CBS_MCDBBSS</h3>
+<h3>"Cerberus Break Bus Switch Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDBBSS_ADDR = 0xF0000490</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDBBSS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDBBSS.bits</b>&nbsp;&quot;Cerberus Break Bus Switch Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDBBSS_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDSSGC">&nbsp;</a>
+<h3>CBS_MCDSSGC</h3>
+<h3>"Cerberus Suspend Signal Generation Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDSSGC_ADDR = 0xF0000494</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDSSGC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_MCDSSGC.bits</b>&nbsp;&quot;Cerberus Suspend Signal Generation Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_MCDSSGC_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_SRC">&nbsp;</a>
+<h3>CBS_SRC</h3>
+<h3>"Cerberus Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_SRC_ADDR = 0xF00004FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_SRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_SRC_t">CBS_SRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CBS_SRC.bits</b>&nbsp;&quot;Cerberus Service Request Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CBS_SRC_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

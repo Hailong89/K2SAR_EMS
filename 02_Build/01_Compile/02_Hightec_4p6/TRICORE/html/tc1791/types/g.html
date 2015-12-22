@@ -1,0 +1,5589 @@
+<html>
+<head>
+<title>TriCore TC1791 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="GPTA0_CLC_t"><b>GPTA0_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTA Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTA0_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>GPTA0_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>GPTA0_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>GPTA0_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EDIS:1</td>
+<td>3 - 3</td>
+<td>GPTA0_CLC_EDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>GPTA0_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>GPTA0_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_CLC">GPTA0_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTA0_DBGCTR_t"><b>GPTA0_DBGCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTA Debug Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTA0_DBGCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CLKCNT:16</td>
+<td>0 - 15</td>
+<td>GPTA0_DBGCTR_CLKCNT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DBGCEN:1</td>
+<td>31 - 31</td>
+<td>GPTA0_DBGCTR_DBGCEN_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_DBGCTR">GPTA0_DBGCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTA0_EDCTR_t"><b>GPTA0_EDCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTA Clock Enable/Disable Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTA0_EDCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int GT00RUN:1</td>
+<td>0 - 0</td>
+<td>GPTA0_EDCTR_GT00RUN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int GT01RUN:1</td>
+<td>1 - 1</td>
+<td>GPTA0_EDCTR_GT01RUN_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int GT10RUN:1</td>
+<td>2 - 2</td>
+<td>GPTA0_EDCTR_GT10RUN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int GT11RUN:1</td>
+<td>3 - 3</td>
+<td>GPTA0_EDCTR_GT11RUN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int G0EN:1</td>
+<td>8 - 8</td>
+<td>GPTA0_EDCTR_G0EN_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int G1EN:1</td>
+<td>9 - 9</td>
+<td>GPTA0_EDCTR_G1EN_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int L2EN:1</td>
+<td>10 - 10</td>
+<td>GPTA0_EDCTR_L2EN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_EDCTR">GPTA0_EDCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTA0_FDR_t"><b>GPTA0_FDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTA Fractional Divider Register</b></td></tr>
+<tr><td colspan="5"><b>GPTA0_FDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STEP:10</td>
+<td>0 - 9</td>
+<td>GPTA0_FDR_STEP_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FDIS:1</td>
+<td>10 - 10</td>
+<td>GPTA0_FDR_FDIS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SM:1</td>
+<td>11 - 11</td>
+<td>GPTA0_FDR_SM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SC:2</td>
+<td>12 - 13</td>
+<td>GPTA0_FDR_SC_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DM:2</td>
+<td>14 - 15</td>
+<td>GPTA0_FDR_DM_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RESULT:10</td>
+<td>16 - 25</td>
+<td>GPTA0_FDR_RESULT_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>28 - 28</td>
+<td>GPTA0_FDR_SUSACK_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SUSREQ:1</td>
+<td>29 - 29</td>
+<td>GPTA0_FDR_SUSREQ_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENHW:1</td>
+<td>30 - 30</td>
+<td>GPTA0_FDR_ENHW_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int DISCLK:1</td>
+<td>31 - 31</td>
+<td>GPTA0_FDR_DISCLK_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_FDR">GPTA0_FDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTA0_MMXCTR11_t"><b>GPTA0_MMXCTR11_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTA-to-MSC Multiplexer Control Register 11</b></td></tr>
+<tr><td colspan="5"><b>GPTA0_MMXCTR11_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MUX0:2</td>
+<td>0 - 1</td>
+<td>GPTA0_MMXCTR11_MUX0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MUX1:2</td>
+<td>2 - 3</td>
+<td>GPTA0_MMXCTR11_MUX1_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int MUX2:2</td>
+<td>4 - 5</td>
+<td>GPTA0_MMXCTR11_MUX2_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MUX3:2</td>
+<td>6 - 7</td>
+<td>GPTA0_MMXCTR11_MUX3_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int MUX4:2</td>
+<td>8 - 9</td>
+<td>GPTA0_MMXCTR11_MUX4_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MUX5:2</td>
+<td>10 - 11</td>
+<td>GPTA0_MMXCTR11_MUX5_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int MUX6:2</td>
+<td>12 - 13</td>
+<td>GPTA0_MMXCTR11_MUX6_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int MUX7:2</td>
+<td>14 - 15</td>
+<td>GPTA0_MMXCTR11_MUX7_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_MMXCTR11">GPTA0_MMXCTR11</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTA0_MMXCTRm_t"><b>GPTA0_MMXCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTA-to-MSC Multiplexer Control Register n</b></td></tr>
+<tr><td colspan="5"><b>GPTA0_MMXCTRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MUX0:2</td>
+<td>0 - 1</td>
+<td>GPTA0_MMXCTRm_MUX0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MUX1:2</td>
+<td>2 - 3</td>
+<td>GPTA0_MMXCTRm_MUX1_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int MUX2:2</td>
+<td>4 - 5</td>
+<td>GPTA0_MMXCTRm_MUX2_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MUX3:2</td>
+<td>6 - 7</td>
+<td>GPTA0_MMXCTRm_MUX3_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int MUX4:2</td>
+<td>8 - 9</td>
+<td>GPTA0_MMXCTRm_MUX4_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MUX5:2</td>
+<td>10 - 11</td>
+<td>GPTA0_MMXCTRm_MUX5_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int MUX6:2</td>
+<td>12 - 13</td>
+<td>GPTA0_MMXCTRm_MUX6_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int MUX7:2</td>
+<td>14 - 15</td>
+<td>GPTA0_MMXCTRm_MUX7_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int MUX8:2</td>
+<td>16 - 17</td>
+<td>GPTA0_MMXCTRm_MUX8_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MUX9:2</td>
+<td>18 - 19</td>
+<td>GPTA0_MMXCTRm_MUX9_MASK</td>
+<td>0x000c0000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int MUX10:2</td>
+<td>20 - 21</td>
+<td>GPTA0_MMXCTRm_MUX10_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int MUX11:2</td>
+<td>22 - 23</td>
+<td>GPTA0_MMXCTRm_MUX11_MASK</td>
+<td>0x00c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int MUX12:2</td>
+<td>24 - 25</td>
+<td>GPTA0_MMXCTRm_MUX12_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int MUX13:2</td>
+<td>26 - 27</td>
+<td>GPTA0_MMXCTRm_MUX13_MASK</td>
+<td>0x0c000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int MUX14:2</td>
+<td>28 - 29</td>
+<td>GPTA0_MMXCTRm_MUX14_MASK</td>
+<td>0x30000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int MUX15:2</td>
+<td>30 - 31</td>
+<td>GPTA0_MMXCTRm_MUX15_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_MMXCTR00">GPTA0_MMXCTR00</a>,    
+<a class="url" href="../gpta0.html#GPTA0_MMXCTR01">GPTA0_MMXCTR01</a>,    
+<a class="url" href="../gpta0.html#GPTA0_MMXCTR10">GPTA0_MMXCTR10</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_CKBCTR_t"><b>GPTAn_CKBCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Clock Bus Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_CKBCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DFA02:4</td>
+<td>0 - 3</td>
+<td>GPTAn_CKBCTR_DFA02_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DFA04:4</td>
+<td>4 - 7</td>
+<td>GPTAn_CKBCTR_DFA04_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int DFA06:4</td>
+<td>8 - 11</td>
+<td>GPTAn_CKBCTR_DFA06_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DFA07:4</td>
+<td>12 - 15</td>
+<td>GPTAn_CKBCTR_DFA07_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DFA03:2</td>
+<td>16 - 17</td>
+<td>GPTAn_CKBCTR_DFA03_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DFALTC:3</td>
+<td>18 - 20</td>
+<td>GPTAn_CKBCTR_DFALTC_MASK</td>
+<td>0x001c0000</td>
+<td align="right">18</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_CKBCTR">GPTA0_CKBCTR</a>,    
+<a class="url" href="../gpta1.html#GPTA1_CKBCTR">GPTA1_CKBCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_DCMCAVm_t"><b>GPTAn_DCMCAVm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Duty Cycle Measurement Capture Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_DCMCAVm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CAV:24</td>
+<td>0 - 23</td>
+<td>GPTAn_DCMCAVm_CAV_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_DCMCAV0">GPTA0_DCMCAV0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCAV1">GPTA0_DCMCAV1</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCAV2">GPTA0_DCMCAV2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCAV3">GPTA0_DCMCAV3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCAV0">GPTA1_DCMCAV0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCAV1">GPTA1_DCMCAV1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCAV2">GPTA1_DCMCAV2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCAV3">GPTA1_DCMCAV3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_DCMCOVm_t"><b>GPTAn_DCMCOVm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Duty Cycle Measurement Capture/Compare Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_DCMCOVm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int COV:24</td>
+<td>0 - 23</td>
+<td>GPTAn_DCMCOVm_COV_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_DCMCOV0">GPTA0_DCMCOV0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCOV1">GPTA0_DCMCOV1</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCOV2">GPTA0_DCMCOV2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCOV3">GPTA0_DCMCOV3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCOV0">GPTA1_DCMCOV0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCOV1">GPTA1_DCMCOV1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCOV2">GPTA1_DCMCOV2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCOV3">GPTA1_DCMCOV3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_DCMCTRm_t"><b>GPTAn_DCMCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Duty Cycle Measurement Control Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_DCMCTRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RCA:1</td>
+<td>0 - 0</td>
+<td>GPTAn_DCMCTRm_RCA_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OCA:1</td>
+<td>1 - 1</td>
+<td>GPTAn_DCMCTRm_OCA_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RZE:1</td>
+<td>2 - 2</td>
+<td>GPTAn_DCMCTRm_RZE_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int FZE:1</td>
+<td>3 - 3</td>
+<td>GPTAn_DCMCTRm_FZE_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RCK:1</td>
+<td>4 - 4</td>
+<td>GPTAn_DCMCTRm_RCK_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FCK:1</td>
+<td>5 - 5</td>
+<td>GPTAn_DCMCTRm_FCK_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int QCK:1</td>
+<td>6 - 6</td>
+<td>GPTAn_DCMCTRm_QCK_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int RRE:1</td>
+<td>7 - 7</td>
+<td>GPTAn_DCMCTRm_RRE_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int FRE:1</td>
+<td>8 - 8</td>
+<td>GPTAn_DCMCTRm_FRE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CRE:1</td>
+<td>9 - 9</td>
+<td>GPTAn_DCMCTRm_CRE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_DCMCTR0">GPTA0_DCMCTR0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCTR1">GPTA0_DCMCTR1</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCTR2">GPTA0_DCMCTR2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMCTR3">GPTA0_DCMCTR3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCTR0">GPTA1_DCMCTR0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCTR1">GPTA1_DCMCTR1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCTR2">GPTA1_DCMCTR2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMCTR3">GPTA1_DCMCTR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_DCMTIMm_t"><b>GPTAn_DCMTIMm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Duty Cycle Measurement Timer Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_DCMTIMm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TIM:24</td>
+<td>0 - 23</td>
+<td>GPTAn_DCMTIMm_TIM_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_DCMTIM0">GPTA0_DCMTIM0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMTIM1">GPTA0_DCMTIM1</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMTIM2">GPTA0_DCMTIM2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_DCMTIM3">GPTA0_DCMTIM3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMTIM0">GPTA1_DCMTIM0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMTIM1">GPTA1_DCMTIM1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMTIM2">GPTA1_DCMTIM2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_DCMTIM3">GPTA1_DCMTIM3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_FPCCTRm_t"><b>GPTAn_FPCCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Filter and Prescaler Cell Control Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_FPCCTRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CMP:16</td>
+<td>0 - 15</td>
+<td>GPTAn_FPCCTRm_CMP_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD:3</td>
+<td>16 - 18</td>
+<td>GPTAn_FPCCTRm_MOD_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int IPS:3</td>
+<td>19 - 21</td>
+<td>GPTAn_FPCCTRm_IPS_MASK</td>
+<td>0x00380000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CLK:2</td>
+<td>22 - 23</td>
+<td>GPTAn_FPCCTRm_CLK_MASK</td>
+<td>0x00c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RTG:1</td>
+<td>24 - 24</td>
+<td>GPTAn_FPCCTRm_RTG_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_FPCCTR0">GPTA0_FPCCTR0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCCTR1">GPTA0_FPCCTR1</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCCTR2">GPTA0_FPCCTR2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCCTR3">GPTA0_FPCCTR3</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCCTR4">GPTA0_FPCCTR4</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCCTR5">GPTA0_FPCCTR5</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCCTR0">GPTA1_FPCCTR0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCCTR1">GPTA1_FPCCTR1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCCTR2">GPTA1_FPCCTR2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCCTR3">GPTA1_FPCCTR3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCCTR4">GPTA1_FPCCTR4</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCCTR5">GPTA1_FPCCTR5</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_FPCSTAT_t"><b>GPTAn_FPCSTAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Filter and Prescaler Cell Status Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_FPCSTAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int REG0:1</td>
+<td>0 - 0</td>
+<td>GPTAn_FPCSTAT_REG0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int REG1:1</td>
+<td>1 - 1</td>
+<td>GPTAn_FPCSTAT_REG1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int REG2:1</td>
+<td>2 - 2</td>
+<td>GPTAn_FPCSTAT_REG2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REG3:1</td>
+<td>3 - 3</td>
+<td>GPTAn_FPCSTAT_REG3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int REG4:1</td>
+<td>4 - 4</td>
+<td>GPTAn_FPCSTAT_REG4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int REG5:1</td>
+<td>5 - 5</td>
+<td>GPTAn_FPCSTAT_REG5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int FEG0:1</td>
+<td>8 - 8</td>
+<td>GPTAn_FPCSTAT_FEG0_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int FEG1:1</td>
+<td>9 - 9</td>
+<td>GPTAn_FPCSTAT_FEG1_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int FEG2:1</td>
+<td>10 - 10</td>
+<td>GPTAn_FPCSTAT_FEG2_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int FEG3:1</td>
+<td>11 - 11</td>
+<td>GPTAn_FPCSTAT_FEG3_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int FEG4:1</td>
+<td>12 - 12</td>
+<td>GPTAn_FPCSTAT_FEG4_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int FEG5:1</td>
+<td>13 - 13</td>
+<td>GPTAn_FPCSTAT_FEG5_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_FPCSTAT">GPTA0_FPCSTAT</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCSTAT">GPTA1_FPCSTAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_FPCTIMm_t"><b>GPTAn_FPCTIMm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Filter and Prescaler Cell Timer Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_FPCTIMm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TIM:16</td>
+<td>0 - 15</td>
+<td>GPTAn_FPCTIMm_TIM_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_FPCTIM0">GPTA0_FPCTIM0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCTIM1">GPTA0_FPCTIM1</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCTIM2">GPTA0_FPCTIM2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCTIM3">GPTA0_FPCTIM3</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCTIM4">GPTA0_FPCTIM4</a>,    
+<a class="url" href="../gpta0.html#GPTA0_FPCTIM5">GPTA0_FPCTIM5</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCTIM0">GPTA1_FPCTIM0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCTIM1">GPTA1_FPCTIM1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCTIM2">GPTA1_FPCTIM2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCTIM3">GPTA1_FPCTIM3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCTIM4">GPTA1_FPCTIM4</a>,    
+<a class="url" href="../gpta1.html#GPTA1_FPCTIM5">GPTA1_FPCTIM5</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_GTCCTRm_t"><b>GPTAn_GTCCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Global Timer Cell Control Register m [Capture Mode]</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_GTCCTRm_t.capt</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>GPTAn_GTCCTRm_CAPT_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>GPTAn_GTCCTRm_CAPT_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>GPTAn_GTCCTRm_CAPT_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RED:1</td>
+<td>4 - 4</td>
+<td>GPTAn_GTCCTRm_CAPT_RED_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FED:1</td>
+<td>5 - 5</td>
+<td>GPTAn_GTCCTRm_CAPT_FED_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int NE:1</td>
+<td>6 - 6</td>
+<td>GPTAn_GTCCTRm_CAPT_NE_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int BYP:1</td>
+<td>7 - 7</td>
+<td>GPTAn_GTCCTRm_CAPT_BYP_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int EOA:1</td>
+<td>8 - 8</td>
+<td>GPTAn_GTCCTRm_CAPT_EOA_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>GPTAn_GTCCTRm_CAPT_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>GPTAn_GTCCTRm_CAPT_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>GPTAn_GTCCTRm_CAPT_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>GPTAn_GTCCTRm_CAPT_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Global Timer Cell Control Register m [Compare Mode]</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_GTCCTRm_t.comp</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>GPTAn_GTCCTRm_COMP_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>GPTAn_GTCCTRm_COMP_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>GPTAn_GTCCTRm_COMP_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int GES:1</td>
+<td>4 - 4</td>
+<td>GPTAn_GTCCTRm_COMP_GES_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CAC:1</td>
+<td>5 - 5</td>
+<td>GPTAn_GTCCTRm_COMP_CAC_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CAT:1</td>
+<td>6 - 6</td>
+<td>GPTAn_GTCCTRm_COMP_CAT_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int BYP:1</td>
+<td>7 - 7</td>
+<td>GPTAn_GTCCTRm_COMP_BYP_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int EOA:1</td>
+<td>8 - 8</td>
+<td>GPTAn_GTCCTRm_COMP_EOA_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>GPTAn_GTCCTRm_COMP_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>GPTAn_GTCCTRm_COMP_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>GPTAn_GTCCTRm_COMP_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>GPTAn_GTCCTRm_COMP_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR00">GPTA0_GTCCTR00</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR01">GPTA0_GTCCTR01</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR02">GPTA0_GTCCTR02</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR03">GPTA0_GTCCTR03</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR04">GPTA0_GTCCTR04</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR05">GPTA0_GTCCTR05</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR06">GPTA0_GTCCTR06</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR07">GPTA0_GTCCTR07</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR08">GPTA0_GTCCTR08</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR09">GPTA0_GTCCTR09</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR10">GPTA0_GTCCTR10</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR11">GPTA0_GTCCTR11</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR12">GPTA0_GTCCTR12</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR13">GPTA0_GTCCTR13</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR14">GPTA0_GTCCTR14</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR15">GPTA0_GTCCTR15</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR16">GPTA0_GTCCTR16</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR17">GPTA0_GTCCTR17</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR18">GPTA0_GTCCTR18</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR19">GPTA0_GTCCTR19</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR20">GPTA0_GTCCTR20</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR21">GPTA0_GTCCTR21</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR22">GPTA0_GTCCTR22</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR23">GPTA0_GTCCTR23</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR24">GPTA0_GTCCTR24</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR25">GPTA0_GTCCTR25</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR26">GPTA0_GTCCTR26</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR27">GPTA0_GTCCTR27</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR28">GPTA0_GTCCTR28</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR29">GPTA0_GTCCTR29</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR30">GPTA0_GTCCTR30</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCCTR31">GPTA0_GTCCTR31</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR00">GPTA1_GTCCTR00</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR01">GPTA1_GTCCTR01</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR02">GPTA1_GTCCTR02</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR03">GPTA1_GTCCTR03</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR04">GPTA1_GTCCTR04</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR05">GPTA1_GTCCTR05</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR06">GPTA1_GTCCTR06</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR07">GPTA1_GTCCTR07</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR08">GPTA1_GTCCTR08</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR09">GPTA1_GTCCTR09</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR10">GPTA1_GTCCTR10</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR11">GPTA1_GTCCTR11</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR12">GPTA1_GTCCTR12</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR13">GPTA1_GTCCTR13</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR14">GPTA1_GTCCTR14</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR15">GPTA1_GTCCTR15</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR16">GPTA1_GTCCTR16</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR17">GPTA1_GTCCTR17</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR18">GPTA1_GTCCTR18</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR19">GPTA1_GTCCTR19</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR20">GPTA1_GTCCTR20</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR21">GPTA1_GTCCTR21</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR22">GPTA1_GTCCTR22</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR23">GPTA1_GTCCTR23</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR24">GPTA1_GTCCTR24</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR25">GPTA1_GTCCTR25</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR26">GPTA1_GTCCTR26</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR27">GPTA1_GTCCTR27</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR28">GPTA1_GTCCTR28</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR29">GPTA1_GTCCTR29</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR30">GPTA1_GTCCTR30</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCCTR31">GPTA1_GTCCTR31</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_GTCTRm_t"><b>GPTAn_GTCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Global Timer Control Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_GTCTRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SCO:4</td>
+<td>0 - 3</td>
+<td>GPTAn_GTCTRm_SCO_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MUX:3</td>
+<td>4 - 6</td>
+<td>GPTAn_GTCTRm_MUX_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>7 - 7</td>
+<td>GPTAn_GTCTRm_REN_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_GTCTR0">GPTA0_GTCTR0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCTR1">GPTA0_GTCTR1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCTR0">GPTA1_GTCTR0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCTR1">GPTA1_GTCTR1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_GTCXRm_t"><b>GPTAn_GTCXRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Global Timer Cell X Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_GTCXRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int X:24</td>
+<td>0 - 23</td>
+<td>GPTAn_GTCXRm_X_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_GTCXR00">GPTA0_GTCXR00</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR01">GPTA0_GTCXR01</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR02">GPTA0_GTCXR02</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR03">GPTA0_GTCXR03</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR04">GPTA0_GTCXR04</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR05">GPTA0_GTCXR05</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR06">GPTA0_GTCXR06</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR07">GPTA0_GTCXR07</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR08">GPTA0_GTCXR08</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR09">GPTA0_GTCXR09</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR10">GPTA0_GTCXR10</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR11">GPTA0_GTCXR11</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR12">GPTA0_GTCXR12</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR13">GPTA0_GTCXR13</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR14">GPTA0_GTCXR14</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR15">GPTA0_GTCXR15</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR16">GPTA0_GTCXR16</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR17">GPTA0_GTCXR17</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR18">GPTA0_GTCXR18</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR19">GPTA0_GTCXR19</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR20">GPTA0_GTCXR20</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR21">GPTA0_GTCXR21</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR22">GPTA0_GTCXR22</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR23">GPTA0_GTCXR23</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR24">GPTA0_GTCXR24</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR25">GPTA0_GTCXR25</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR26">GPTA0_GTCXR26</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR27">GPTA0_GTCXR27</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR28">GPTA0_GTCXR28</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR29">GPTA0_GTCXR29</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR30">GPTA0_GTCXR30</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTCXR31">GPTA0_GTCXR31</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR00">GPTA1_GTCXR00</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR01">GPTA1_GTCXR01</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR02">GPTA1_GTCXR02</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR03">GPTA1_GTCXR03</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR04">GPTA1_GTCXR04</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR05">GPTA1_GTCXR05</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR06">GPTA1_GTCXR06</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR07">GPTA1_GTCXR07</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR08">GPTA1_GTCXR08</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR09">GPTA1_GTCXR09</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR10">GPTA1_GTCXR10</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR11">GPTA1_GTCXR11</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR12">GPTA1_GTCXR12</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR13">GPTA1_GTCXR13</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR14">GPTA1_GTCXR14</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR15">GPTA1_GTCXR15</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR16">GPTA1_GTCXR16</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR17">GPTA1_GTCXR17</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR18">GPTA1_GTCXR18</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR19">GPTA1_GTCXR19</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR20">GPTA1_GTCXR20</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR21">GPTA1_GTCXR21</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR22">GPTA1_GTCXR22</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR23">GPTA1_GTCXR23</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR24">GPTA1_GTCXR24</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR25">GPTA1_GTCXR25</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR26">GPTA1_GTCXR26</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR27">GPTA1_GTCXR27</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR28">GPTA1_GTCXR28</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR29">GPTA1_GTCXR29</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR30">GPTA1_GTCXR30</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTCXR31">GPTA1_GTCXR31</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_GTREVm_t"><b>GPTAn_GTREVm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Global Timer Reload Value Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_GTREVm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int REV:24</td>
+<td>0 - 23</td>
+<td>GPTAn_GTREVm_REV_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_GTREV0">GPTA0_GTREV0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTREV1">GPTA0_GTREV1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTREV0">GPTA1_GTREV0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTREV1">GPTA1_GTREV1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_GTTIMm_t"><b>GPTAn_GTTIMm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Global Timer Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_GTTIMm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TIM:24</td>
+<td>0 - 23</td>
+<td>GPTAn_GTTIMm_TIM_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_GTTIM0">GPTA0_GTTIM0</a>,    
+<a class="url" href="../gpta0.html#GPTA0_GTTIM1">GPTA0_GTTIM1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTTIM0">GPTA1_GTTIM0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_GTTIM1">GPTA1_GTTIM1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_ID_t"><b>GPTAn_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Identification Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>GPTAn_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>GPTAn_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUM:16</td>
+<td>16 - 31</td>
+<td>GPTAn_ID_MOD_NUM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_ID">GPTA0_ID</a>,    
+<a class="url" href="../gpta1.html#GPTA1_ID">GPTA1_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_LTCCTR63_t"><b>GPTAn_LTCCTR63_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Local Timer Cell Control Register 63</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_LTCCTR63_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BRM:1</td>
+<td>0 - 0</td>
+<td>GPTAn_LTCCTR63_BRM_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>1 - 1</td>
+<td>GPTAn_LTCCTR63_OSM_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int REN:2</td>
+<td>2 - 3</td>
+<td>GPTAn_LTCCTR63_REN_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int RED:1</td>
+<td>4 - 4</td>
+<td>GPTAn_LTCCTR63_RED_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FED:1</td>
+<td>5 - 5</td>
+<td>GPTAn_LTCCTR63_FED_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>GPTAn_LTCCTR63_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>GPTAn_LTCCTR63_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>GPTAn_LTCCTR63_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR63">GPTA0_LTCCTR63</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR63">GPTA1_LTCCTR63</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_LTCCTRm_t"><b>GPTAn_LTCCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Local Timer Cell Control Register m [Capture Mode]</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_LTCCTRm_t.capt</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>GPTAn_LTCCTRm_CAPT_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>GPTAn_LTCCTRm_CAPT_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>GPTAn_LTCCTRm_CAPT_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RED:1</td>
+<td>4 - 4</td>
+<td>GPTAn_LTCCTRm_CAPT_RED_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FED:1</td>
+<td>5 - 5</td>
+<td>GPTAn_LTCCTRm_CAPT_FED_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int BYP:1</td>
+<td>6 - 6</td>
+<td>GPTAn_LTCCTRm_CAPT_BYP_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int EOA:1</td>
+<td>7 - 7</td>
+<td>GPTAn_LTCCTRm_CAPT_EOA_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>GPTAn_LTCCTRm_CAPT_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SLL:1</td>
+<td>9 - 9</td>
+<td>GPTAn_LTCCTRm_CAPT_SLL_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>GPTAn_LTCCTRm_CAPT_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>GPTAn_LTCCTRm_CAPT_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>GPTAn_LTCCTRm_CAPT_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>GPTAn_LTCCTRm_CAPT_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GBYP:1</td>
+<td>16 - 16</td>
+<td>GPTAn_LTCCTRm_CAPT_GBYP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Local Timer Cell Control Register m [Compare Mode]</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_LTCCTRm_t.comp</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>GPTAn_LTCCTRm_COMP_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>GPTAn_LTCCTRm_COMP_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>GPTAn_LTCCTRm_COMP_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SOL:1</td>
+<td>4 - 4</td>
+<td>GPTAn_LTCCTRm_COMP_SOL_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SOH:1</td>
+<td>5 - 5</td>
+<td>GPTAn_LTCCTRm_COMP_SOH_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int BYP:1</td>
+<td>6 - 6</td>
+<td>GPTAn_LTCCTRm_COMP_BYP_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int EOA:1</td>
+<td>7 - 7</td>
+<td>GPTAn_LTCCTRm_COMP_EOA_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>GPTAn_LTCCTRm_COMP_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SLL:1</td>
+<td>9 - 9</td>
+<td>GPTAn_LTCCTRm_COMP_SLL_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>GPTAn_LTCCTRm_COMP_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>GPTAn_LTCCTRm_COMP_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>GPTAn_LTCCTRm_COMP_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>GPTAn_LTCCTRm_COMP_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GBYP:1</td>
+<td>16 - 16</td>
+<td>GPTAn_LTCCTRm_COMP_GBYP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Local Timer Cell Control Register m [Timer Mode ILM=0]</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_LTCCTRm_t.timer_ilm0</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RED:1</td>
+<td>4 - 4</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_RED_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FED:1</td>
+<td>5 - 5</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_FED_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SLO:1</td>
+<td>6 - 6</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_SLO_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CUDCLR:1</td>
+<td>7 - 7</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_CUDCLR_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CUD:1</td>
+<td>9 - 9</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_CUD_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GBYP:1</td>
+<td>16 - 16</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM0_GBYP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Local Timer Cell Control Register m [Timer Mode ILM=1]</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_LTCCTRm_t.timer_ilm1</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int PEN:1</td>
+<td>4 - 4</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_PEN_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int AIL:1</td>
+<td>5 - 5</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_AIL_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SLO:1</td>
+<td>6 - 6</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_SLO_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CUDCLR:1</td>
+<td>7 - 7</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_CUDCLR_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CUD:1</td>
+<td>9 - 9</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_CUD_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GBYP:1</td>
+<td>16 - 16</td>
+<td>GPTAn_LTCCTRm_TIMER_ILM1_GBYP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR00">GPTA0_LTCCTR00</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR01">GPTA0_LTCCTR01</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR02">GPTA0_LTCCTR02</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR03">GPTA0_LTCCTR03</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR04">GPTA0_LTCCTR04</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR05">GPTA0_LTCCTR05</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR06">GPTA0_LTCCTR06</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR07">GPTA0_LTCCTR07</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR08">GPTA0_LTCCTR08</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR09">GPTA0_LTCCTR09</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR10">GPTA0_LTCCTR10</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR11">GPTA0_LTCCTR11</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR12">GPTA0_LTCCTR12</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR13">GPTA0_LTCCTR13</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR14">GPTA0_LTCCTR14</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR15">GPTA0_LTCCTR15</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR16">GPTA0_LTCCTR16</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR17">GPTA0_LTCCTR17</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR18">GPTA0_LTCCTR18</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR19">GPTA0_LTCCTR19</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR20">GPTA0_LTCCTR20</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR21">GPTA0_LTCCTR21</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR22">GPTA0_LTCCTR22</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR23">GPTA0_LTCCTR23</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR24">GPTA0_LTCCTR24</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR25">GPTA0_LTCCTR25</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR26">GPTA0_LTCCTR26</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR27">GPTA0_LTCCTR27</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR28">GPTA0_LTCCTR28</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR29">GPTA0_LTCCTR29</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR30">GPTA0_LTCCTR30</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR31">GPTA0_LTCCTR31</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR32">GPTA0_LTCCTR32</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR33">GPTA0_LTCCTR33</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR34">GPTA0_LTCCTR34</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR35">GPTA0_LTCCTR35</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR36">GPTA0_LTCCTR36</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR37">GPTA0_LTCCTR37</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR38">GPTA0_LTCCTR38</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR39">GPTA0_LTCCTR39</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR40">GPTA0_LTCCTR40</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR41">GPTA0_LTCCTR41</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR42">GPTA0_LTCCTR42</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR43">GPTA0_LTCCTR43</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR44">GPTA0_LTCCTR44</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR45">GPTA0_LTCCTR45</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR46">GPTA0_LTCCTR46</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR47">GPTA0_LTCCTR47</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR48">GPTA0_LTCCTR48</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR49">GPTA0_LTCCTR49</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR50">GPTA0_LTCCTR50</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR51">GPTA0_LTCCTR51</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR52">GPTA0_LTCCTR52</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR53">GPTA0_LTCCTR53</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR54">GPTA0_LTCCTR54</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR55">GPTA0_LTCCTR55</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR56">GPTA0_LTCCTR56</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR57">GPTA0_LTCCTR57</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR58">GPTA0_LTCCTR58</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR59">GPTA0_LTCCTR59</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR60">GPTA0_LTCCTR60</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR61">GPTA0_LTCCTR61</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCCTR62">GPTA0_LTCCTR62</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR00">GPTA1_LTCCTR00</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR01">GPTA1_LTCCTR01</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR02">GPTA1_LTCCTR02</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR03">GPTA1_LTCCTR03</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR04">GPTA1_LTCCTR04</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR05">GPTA1_LTCCTR05</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR06">GPTA1_LTCCTR06</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR07">GPTA1_LTCCTR07</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR08">GPTA1_LTCCTR08</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR09">GPTA1_LTCCTR09</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR10">GPTA1_LTCCTR10</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR11">GPTA1_LTCCTR11</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR12">GPTA1_LTCCTR12</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR13">GPTA1_LTCCTR13</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR14">GPTA1_LTCCTR14</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR15">GPTA1_LTCCTR15</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR16">GPTA1_LTCCTR16</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR17">GPTA1_LTCCTR17</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR18">GPTA1_LTCCTR18</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR19">GPTA1_LTCCTR19</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR20">GPTA1_LTCCTR20</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR21">GPTA1_LTCCTR21</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR22">GPTA1_LTCCTR22</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR23">GPTA1_LTCCTR23</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR24">GPTA1_LTCCTR24</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR25">GPTA1_LTCCTR25</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR26">GPTA1_LTCCTR26</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR27">GPTA1_LTCCTR27</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR28">GPTA1_LTCCTR28</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR29">GPTA1_LTCCTR29</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR30">GPTA1_LTCCTR30</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR31">GPTA1_LTCCTR31</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR32">GPTA1_LTCCTR32</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR33">GPTA1_LTCCTR33</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR34">GPTA1_LTCCTR34</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR35">GPTA1_LTCCTR35</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR36">GPTA1_LTCCTR36</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR37">GPTA1_LTCCTR37</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR38">GPTA1_LTCCTR38</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR39">GPTA1_LTCCTR39</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR40">GPTA1_LTCCTR40</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR41">GPTA1_LTCCTR41</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR42">GPTA1_LTCCTR42</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR43">GPTA1_LTCCTR43</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR44">GPTA1_LTCCTR44</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR45">GPTA1_LTCCTR45</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR46">GPTA1_LTCCTR46</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR47">GPTA1_LTCCTR47</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR48">GPTA1_LTCCTR48</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR49">GPTA1_LTCCTR49</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR50">GPTA1_LTCCTR50</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR51">GPTA1_LTCCTR51</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR52">GPTA1_LTCCTR52</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR53">GPTA1_LTCCTR53</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR54">GPTA1_LTCCTR54</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR55">GPTA1_LTCCTR55</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR56">GPTA1_LTCCTR56</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR57">GPTA1_LTCCTR57</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR58">GPTA1_LTCCTR58</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR59">GPTA1_LTCCTR59</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR60">GPTA1_LTCCTR60</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR61">GPTA1_LTCCTR61</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCCTR62">GPTA1_LTCCTR62</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_LTCXR63_t"><b>GPTAn_LTCXR63_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Local Timer Cell X Register 63</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_LTCXR63_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int X:16</td>
+<td>0 - 15</td>
+<td>GPTAn_LTCXR63_X_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int XS:16</td>
+<td>16 - 31</td>
+<td>GPTAn_LTCXR63_XS_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_LTCXR63">GPTA0_LTCXR63</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR63">GPTA1_LTCXR63</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_LTCXRm_t"><b>GPTAn_LTCXRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Local Timer Cell X Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_LTCXRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int X:16</td>
+<td>0 - 15</td>
+<td>GPTAn_LTCXRm_X_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_LTCXR00">GPTA0_LTCXR00</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR01">GPTA0_LTCXR01</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR02">GPTA0_LTCXR02</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR03">GPTA0_LTCXR03</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR04">GPTA0_LTCXR04</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR05">GPTA0_LTCXR05</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR06">GPTA0_LTCXR06</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR07">GPTA0_LTCXR07</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR08">GPTA0_LTCXR08</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR09">GPTA0_LTCXR09</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR10">GPTA0_LTCXR10</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR11">GPTA0_LTCXR11</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR12">GPTA0_LTCXR12</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR13">GPTA0_LTCXR13</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR14">GPTA0_LTCXR14</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR15">GPTA0_LTCXR15</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR16">GPTA0_LTCXR16</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR17">GPTA0_LTCXR17</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR18">GPTA0_LTCXR18</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR19">GPTA0_LTCXR19</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR20">GPTA0_LTCXR20</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR21">GPTA0_LTCXR21</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR22">GPTA0_LTCXR22</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR23">GPTA0_LTCXR23</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR24">GPTA0_LTCXR24</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR25">GPTA0_LTCXR25</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR26">GPTA0_LTCXR26</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR27">GPTA0_LTCXR27</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR28">GPTA0_LTCXR28</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR29">GPTA0_LTCXR29</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR30">GPTA0_LTCXR30</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR31">GPTA0_LTCXR31</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR32">GPTA0_LTCXR32</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR33">GPTA0_LTCXR33</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR34">GPTA0_LTCXR34</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR35">GPTA0_LTCXR35</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR36">GPTA0_LTCXR36</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR37">GPTA0_LTCXR37</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR38">GPTA0_LTCXR38</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR39">GPTA0_LTCXR39</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR40">GPTA0_LTCXR40</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR41">GPTA0_LTCXR41</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR42">GPTA0_LTCXR42</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR43">GPTA0_LTCXR43</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR44">GPTA0_LTCXR44</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR45">GPTA0_LTCXR45</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR46">GPTA0_LTCXR46</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR47">GPTA0_LTCXR47</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR48">GPTA0_LTCXR48</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR49">GPTA0_LTCXR49</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR50">GPTA0_LTCXR50</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR51">GPTA0_LTCXR51</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR52">GPTA0_LTCXR52</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR53">GPTA0_LTCXR53</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR54">GPTA0_LTCXR54</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR55">GPTA0_LTCXR55</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR56">GPTA0_LTCXR56</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR57">GPTA0_LTCXR57</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR58">GPTA0_LTCXR58</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR59">GPTA0_LTCXR59</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR60">GPTA0_LTCXR60</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR61">GPTA0_LTCXR61</a>,    
+<a class="url" href="../gpta0.html#GPTA0_LTCXR62">GPTA0_LTCXR62</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR00">GPTA1_LTCXR00</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR01">GPTA1_LTCXR01</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR02">GPTA1_LTCXR02</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR03">GPTA1_LTCXR03</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR04">GPTA1_LTCXR04</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR05">GPTA1_LTCXR05</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR06">GPTA1_LTCXR06</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR07">GPTA1_LTCXR07</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR08">GPTA1_LTCXR08</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR09">GPTA1_LTCXR09</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR10">GPTA1_LTCXR10</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR11">GPTA1_LTCXR11</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR12">GPTA1_LTCXR12</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR13">GPTA1_LTCXR13</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR14">GPTA1_LTCXR14</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR15">GPTA1_LTCXR15</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR16">GPTA1_LTCXR16</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR17">GPTA1_LTCXR17</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR18">GPTA1_LTCXR18</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR19">GPTA1_LTCXR19</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR20">GPTA1_LTCXR20</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR21">GPTA1_LTCXR21</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR22">GPTA1_LTCXR22</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR23">GPTA1_LTCXR23</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR24">GPTA1_LTCXR24</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR25">GPTA1_LTCXR25</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR26">GPTA1_LTCXR26</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR27">GPTA1_LTCXR27</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR28">GPTA1_LTCXR28</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR29">GPTA1_LTCXR29</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR30">GPTA1_LTCXR30</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR31">GPTA1_LTCXR31</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR32">GPTA1_LTCXR32</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR33">GPTA1_LTCXR33</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR34">GPTA1_LTCXR34</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR35">GPTA1_LTCXR35</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR36">GPTA1_LTCXR36</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR37">GPTA1_LTCXR37</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR38">GPTA1_LTCXR38</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR39">GPTA1_LTCXR39</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR40">GPTA1_LTCXR40</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR41">GPTA1_LTCXR41</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR42">GPTA1_LTCXR42</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR43">GPTA1_LTCXR43</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR44">GPTA1_LTCXR44</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR45">GPTA1_LTCXR45</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR46">GPTA1_LTCXR46</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR47">GPTA1_LTCXR47</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR48">GPTA1_LTCXR48</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR49">GPTA1_LTCXR49</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR50">GPTA1_LTCXR50</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR51">GPTA1_LTCXR51</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR52">GPTA1_LTCXR52</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR53">GPTA1_LTCXR53</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR54">GPTA1_LTCXR54</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR55">GPTA1_LTCXR55</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR56">GPTA1_LTCXR56</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR57">GPTA1_LTCXR57</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR58">GPTA1_LTCXR58</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR59">GPTA1_LTCXR59</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR60">GPTA1_LTCXR60</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR61">GPTA1_LTCXR61</a>,    
+<a class="url" href="../gpta1.html#GPTA1_LTCXR62">GPTA1_LTCXR62</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_MRACTL_t"><b>GPTAn_MRACTL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Multiplexer Register Array Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_MRACTL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MAEN:1</td>
+<td>0 - 0</td>
+<td>GPTAn_MRACTL_MAEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WCRES:1</td>
+<td>1 - 1</td>
+<td>GPTAn_MRACTL_WCRES_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int FIFOFULL:1</td>
+<td>2 - 2</td>
+<td>GPTAn_MRACTL_FIFOFULL_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int FIFOFILLCNT:6</td>
+<td>8 - 13</td>
+<td>GPTAn_MRACTL_FIFOFILLCNT_MASK</td>
+<td>0x00003f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_MRACTL">GPTA0_MRACTL</a>,    
+<a class="url" href="../gpta1.html#GPTA1_MRACTL">GPTA1_MRACTL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_MRADIN_t"><b>GPTAn_MRADIN_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Multiplexer Register Array Data In Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_MRADIN_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATAIN:32</td>
+<td>0 - 31</td>
+<td>GPTAn_MRADIN_DATAIN_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_MRADIN">GPTA0_MRADIN</a>,    
+<a class="url" href="../gpta1.html#GPTA1_MRADIN">GPTA1_MRADIN</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_MRADOUT_t"><b>GPTAn_MRADOUT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Multiplexer Register Array Data Out Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_MRADOUT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATAOUT:32</td>
+<td>0 - 31</td>
+<td>GPTAn_MRADOUT_DATAOUT_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_MRADOUT">GPTA0_MRADOUT</a>,    
+<a class="url" href="../gpta1.html#GPTA1_MRADOUT">GPTA1_MRADOUT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_PDLCTR_t"><b>GPTAn_PDLCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Phase Discrimination Logic Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_PDLCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MUX0:1</td>
+<td>0 - 0</td>
+<td>GPTAn_PDLCTR_MUX0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TSE0:1</td>
+<td>1 - 1</td>
+<td>GPTAn_PDLCTR_TSE0_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ERR0:1</td>
+<td>2 - 2</td>
+<td>GPTAn_PDLCTR_ERR0_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int MUX1:1</td>
+<td>4 - 4</td>
+<td>GPTAn_PDLCTR_MUX1_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TSE1:1</td>
+<td>5 - 5</td>
+<td>GPTAn_PDLCTR_TSE1_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ERR1:1</td>
+<td>6 - 6</td>
+<td>GPTAn_PDLCTR_ERR1_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_PDLCTR">GPTA0_PDLCTR</a>,    
+<a class="url" href="../gpta1.html#GPTA1_PDLCTR">GPTA1_PDLCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_PLLCNT_t"><b>GPTAn_PLLCNT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Phase Locked Loop Counter Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_PLLCNT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CNT:16</td>
+<td>0 - 15</td>
+<td>GPTAn_PLLCNT_CNT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_PLLCNT">GPTA0_PLLCNT</a>,    
+<a class="url" href="../gpta1.html#GPTA1_PLLCNT">GPTA1_PLLCNT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_PLLCTR_t"><b>GPTAn_PLLCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Phase Locked Loop Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_PLLCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MUX:2</td>
+<td>0 - 1</td>
+<td>GPTAn_PLLCTR_MUX_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int AEN:1</td>
+<td>2 - 2</td>
+<td>GPTAn_PLLCTR_AEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int PEN:1</td>
+<td>3 - 3</td>
+<td>GPTAn_PLLCTR_PEN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>4 - 4</td>
+<td>GPTAn_PLLCTR_REN_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_PLLCTR">GPTA0_PLLCTR</a>,    
+<a class="url" href="../gpta1.html#GPTA1_PLLCTR">GPTA1_PLLCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_PLLDTR_t"><b>GPTAn_PLLDTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Phase Locked Loop Delta Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_PLLDTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DTR:25</td>
+<td>0 - 24</td>
+<td>GPTAn_PLLDTR_DTR_MASK</td>
+<td>0x01ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_PLLDTR">GPTA0_PLLDTR</a>,    
+<a class="url" href="../gpta1.html#GPTA1_PLLDTR">GPTA1_PLLDTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_PLLMTI_t"><b>GPTAn_PLLMTI_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Phase Locked Loop Microtick Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_PLLMTI_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MTI:16</td>
+<td>0 - 15</td>
+<td>GPTAn_PLLMTI_MTI_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_PLLMTI">GPTA0_PLLMTI</a>,    
+<a class="url" href="../gpta1.html#GPTA1_PLLMTI">GPTA1_PLLMTI</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_PLLREV_t"><b>GPTAn_PLLREV_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Phase Locked Loop Reload Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_PLLREV_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int REV:24</td>
+<td>0 - 23</td>
+<td>GPTAn_PLLREV_REV_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_PLLREV">GPTA0_PLLREV</a>,    
+<a class="url" href="../gpta1.html#GPTA1_PLLREV">GPTA1_PLLREV</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_PLLSTP_t"><b>GPTAn_PLLSTP_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Phase Locked Loop Step Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_PLLSTP_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STP:16</td>
+<td>0 - 15</td>
+<td>GPTAn_PLLSTP_STP_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_PLLSTP">GPTA0_PLLSTP</a>,    
+<a class="url" href="../gpta1.html#GPTA1_PLLSTP">GPTA1_PLLSTP</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRCm_t"><b>GPTAn_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Interrupt Service Request Control Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>GPTAn_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>GPTAn_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRC00">GPTA0_SRC00</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC01">GPTA0_SRC01</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC02">GPTA0_SRC02</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC03">GPTA0_SRC03</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC04">GPTA0_SRC04</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC05">GPTA0_SRC05</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC06">GPTA0_SRC06</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC07">GPTA0_SRC07</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC08">GPTA0_SRC08</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC09">GPTA0_SRC09</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC10">GPTA0_SRC10</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC11">GPTA0_SRC11</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC12">GPTA0_SRC12</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC13">GPTA0_SRC13</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC14">GPTA0_SRC14</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC15">GPTA0_SRC15</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC16">GPTA0_SRC16</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC17">GPTA0_SRC17</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC18">GPTA0_SRC18</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC19">GPTA0_SRC19</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC20">GPTA0_SRC20</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC21">GPTA0_SRC21</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC22">GPTA0_SRC22</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC23">GPTA0_SRC23</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC24">GPTA0_SRC24</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC25">GPTA0_SRC25</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC26">GPTA0_SRC26</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC27">GPTA0_SRC27</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC28">GPTA0_SRC28</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC29">GPTA0_SRC29</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC30">GPTA0_SRC30</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC31">GPTA0_SRC31</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC32">GPTA0_SRC32</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC33">GPTA0_SRC33</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC34">GPTA0_SRC34</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC35">GPTA0_SRC35</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC36">GPTA0_SRC36</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRC37">GPTA0_SRC37</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC00">GPTA1_SRC00</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC01">GPTA1_SRC01</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC02">GPTA1_SRC02</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC03">GPTA1_SRC03</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC04">GPTA1_SRC04</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC05">GPTA1_SRC05</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC06">GPTA1_SRC06</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC07">GPTA1_SRC07</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC08">GPTA1_SRC08</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC09">GPTA1_SRC09</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC10">GPTA1_SRC10</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC11">GPTA1_SRC11</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC12">GPTA1_SRC12</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC13">GPTA1_SRC13</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC14">GPTA1_SRC14</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC15">GPTA1_SRC15</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC16">GPTA1_SRC16</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC17">GPTA1_SRC17</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC18">GPTA1_SRC18</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC19">GPTA1_SRC19</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC20">GPTA1_SRC20</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC21">GPTA1_SRC21</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC22">GPTA1_SRC22</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC23">GPTA1_SRC23</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC24">GPTA1_SRC24</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC25">GPTA1_SRC25</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC26">GPTA1_SRC26</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC27">GPTA1_SRC27</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC28">GPTA1_SRC28</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC29">GPTA1_SRC29</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC30">GPTA1_SRC30</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC31">GPTA1_SRC31</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC32">GPTA1_SRC32</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC33">GPTA1_SRC33</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC34">GPTA1_SRC34</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC35">GPTA1_SRC35</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC36">GPTA1_SRC36</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRC37">GPTA1_SRC37</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRNR_t"><b>GPTAn_SRNR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Service Request Node Redirection Register</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRNR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int GTC01R:1</td>
+<td>0 - 0</td>
+<td>GPTAn_SRNR_GTC01R_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int GTC03R:1</td>
+<td>1 - 1</td>
+<td>GPTAn_SRNR_GTC03R_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int GTC05R:1</td>
+<td>2 - 2</td>
+<td>GPTAn_SRNR_GTC05R_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int GTC07R:1</td>
+<td>3 - 3</td>
+<td>GPTAn_SRNR_GTC07R_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int GTC09R:1</td>
+<td>4 - 4</td>
+<td>GPTAn_SRNR_GTC09R_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int GTC11R:1</td>
+<td>5 - 5</td>
+<td>GPTAn_SRNR_GTC11R_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int GTC13R:1</td>
+<td>6 - 6</td>
+<td>GPTAn_SRNR_GTC13R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int GTC15R:1</td>
+<td>7 - 7</td>
+<td>GPTAn_SRNR_GTC15R_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int GTC17R:1</td>
+<td>8 - 8</td>
+<td>GPTAn_SRNR_GTC17R_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int GTC19R:1</td>
+<td>9 - 9</td>
+<td>GPTAn_SRNR_GTC19R_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int GTC21R:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRNR_GTC21R_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int GTC23R:1</td>
+<td>11 - 11</td>
+<td>GPTAn_SRNR_GTC23R_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int GTC25R:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRNR_GTC25R_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int GTC27R:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRNR_GTC27R_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int GTC29R:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRNR_GTC29R_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int GTC31R:1</td>
+<td>15 - 15</td>
+<td>GPTAn_SRNR_GTC31R_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRNR">GPTA0_SRNR</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRNR">GPTA1_SRNR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRSC0_t"><b>GPTAn_SRSC0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Service Request State Clear Register 0</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRSC0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DCM00R:1</td>
+<td>0 - 0</td>
+<td>GPTAn_SRSC0_DCM00R_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DCM00F:1</td>
+<td>1 - 1</td>
+<td>GPTAn_SRSC0_DCM00F_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int DCM00C:1</td>
+<td>2 - 2</td>
+<td>GPTAn_SRSC0_DCM00C_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int DCM01R:1</td>
+<td>3 - 3</td>
+<td>GPTAn_SRSC0_DCM01R_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int DCM01F:1</td>
+<td>4 - 4</td>
+<td>GPTAn_SRSC0_DCM01F_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int DCM01C:1</td>
+<td>5 - 5</td>
+<td>GPTAn_SRSC0_DCM01C_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int DCM02R:1</td>
+<td>6 - 6</td>
+<td>GPTAn_SRSC0_DCM02R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int DCM02F:1</td>
+<td>7 - 7</td>
+<td>GPTAn_SRSC0_DCM02F_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int DCM02C:1</td>
+<td>8 - 8</td>
+<td>GPTAn_SRSC0_DCM02C_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DCM03R:1</td>
+<td>9 - 9</td>
+<td>GPTAn_SRSC0_DCM03R_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int DCM03F:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRSC0_DCM03F_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int DCM03C:1</td>
+<td>11 - 11</td>
+<td>GPTAn_SRSC0_DCM03C_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int PLL:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRSC0_PLL_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int GT00:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRSC0_GT00_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int GT01:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRSC0_GT01_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRSC0">GPTA0_SRSC0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSC0">GPTA1_SRSC0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRSC1_t"><b>GPTAn_SRSC1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Service Request State Clear Register 1</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRSC1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int GTC0:1</td>
+<td>0 - 0</td>
+<td>GPTAn_SRSC1_GTC0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int GTC1:1</td>
+<td>1 - 1</td>
+<td>GPTAn_SRSC1_GTC1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int GTC2:1</td>
+<td>2 - 2</td>
+<td>GPTAn_SRSC1_GTC2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int GTC3:1</td>
+<td>3 - 3</td>
+<td>GPTAn_SRSC1_GTC3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int GTC4:1</td>
+<td>4 - 4</td>
+<td>GPTAn_SRSC1_GTC4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int GTC5:1</td>
+<td>5 - 5</td>
+<td>GPTAn_SRSC1_GTC5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int GTC6:1</td>
+<td>6 - 6</td>
+<td>GPTAn_SRSC1_GTC6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int GTC7:1</td>
+<td>7 - 7</td>
+<td>GPTAn_SRSC1_GTC7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int GTC8:1</td>
+<td>8 - 8</td>
+<td>GPTAn_SRSC1_GTC8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int GTC9:1</td>
+<td>9 - 9</td>
+<td>GPTAn_SRSC1_GTC9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int GTC10:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRSC1_GTC10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int GTC11:1</td>
+<td>11 - 11</td>
+<td>GPTAn_SRSC1_GTC11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int GTC12:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRSC1_GTC12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int GTC13:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRSC1_GTC13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int GTC14:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRSC1_GTC14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int GTC15:1</td>
+<td>15 - 15</td>
+<td>GPTAn_SRSC1_GTC15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GTC16:1</td>
+<td>16 - 16</td>
+<td>GPTAn_SRSC1_GTC16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int GTC17:1</td>
+<td>17 - 17</td>
+<td>GPTAn_SRSC1_GTC17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int GTC18:1</td>
+<td>18 - 18</td>
+<td>GPTAn_SRSC1_GTC18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int GTC19:1</td>
+<td>19 - 19</td>
+<td>GPTAn_SRSC1_GTC19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int GTC20:1</td>
+<td>20 - 20</td>
+<td>GPTAn_SRSC1_GTC20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int GTC21:1</td>
+<td>21 - 21</td>
+<td>GPTAn_SRSC1_GTC21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int GTC22:1</td>
+<td>22 - 22</td>
+<td>GPTAn_SRSC1_GTC22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int GTC23:1</td>
+<td>23 - 23</td>
+<td>GPTAn_SRSC1_GTC23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int GTC24:1</td>
+<td>24 - 24</td>
+<td>GPTAn_SRSC1_GTC24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int GTC25:1</td>
+<td>25 - 25</td>
+<td>GPTAn_SRSC1_GTC25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int GTC26:1</td>
+<td>26 - 26</td>
+<td>GPTAn_SRSC1_GTC26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int GTC27:1</td>
+<td>27 - 27</td>
+<td>GPTAn_SRSC1_GTC27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int GTC28:1</td>
+<td>28 - 28</td>
+<td>GPTAn_SRSC1_GTC28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int GTC29:1</td>
+<td>29 - 29</td>
+<td>GPTAn_SRSC1_GTC29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int GTC30:1</td>
+<td>30 - 30</td>
+<td>GPTAn_SRSC1_GTC30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int GTC31:1</td>
+<td>31 - 31</td>
+<td>GPTAn_SRSC1_GTC31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRSC1">GPTA0_SRSC1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSC1">GPTA1_SRSC1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRSCm_t"><b>GPTAn_SRSCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Service Request State Clear Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRSCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LTC0:1</td>
+<td>0 - 0</td>
+<td>GPTAn_SRSCm_LTC0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LTC1:1</td>
+<td>1 - 1</td>
+<td>GPTAn_SRSCm_LTC1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LTC2:1</td>
+<td>2 - 2</td>
+<td>GPTAn_SRSCm_LTC2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int LTC3:1</td>
+<td>3 - 3</td>
+<td>GPTAn_SRSCm_LTC3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int LTC4:1</td>
+<td>4 - 4</td>
+<td>GPTAn_SRSCm_LTC4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int LTC5:1</td>
+<td>5 - 5</td>
+<td>GPTAn_SRSCm_LTC5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int LTC6:1</td>
+<td>6 - 6</td>
+<td>GPTAn_SRSCm_LTC6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int LTC7:1</td>
+<td>7 - 7</td>
+<td>GPTAn_SRSCm_LTC7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int LTC8:1</td>
+<td>8 - 8</td>
+<td>GPTAn_SRSCm_LTC8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int LTC9:1</td>
+<td>9 - 9</td>
+<td>GPTAn_SRSCm_LTC9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LTC10:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRSCm_LTC10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int LTC11:1</td>
+<td>11 - 11</td>
+<td>GPTAn_SRSCm_LTC11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int LTC12:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRSCm_LTC12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int LTC13:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRSCm_LTC13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int LTC14:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRSCm_LTC14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int LTC15:1</td>
+<td>15 - 15</td>
+<td>GPTAn_SRSCm_LTC15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int LTC16:1</td>
+<td>16 - 16</td>
+<td>GPTAn_SRSCm_LTC16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int LTC17:1</td>
+<td>17 - 17</td>
+<td>GPTAn_SRSCm_LTC17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int LTC18:1</td>
+<td>18 - 18</td>
+<td>GPTAn_SRSCm_LTC18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int LTC19:1</td>
+<td>19 - 19</td>
+<td>GPTAn_SRSCm_LTC19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int LTC20:1</td>
+<td>20 - 20</td>
+<td>GPTAn_SRSCm_LTC20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int LTC21:1</td>
+<td>21 - 21</td>
+<td>GPTAn_SRSCm_LTC21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int LTC22:1</td>
+<td>22 - 22</td>
+<td>GPTAn_SRSCm_LTC22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int LTC23:1</td>
+<td>23 - 23</td>
+<td>GPTAn_SRSCm_LTC23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int LTC24:1</td>
+<td>24 - 24</td>
+<td>GPTAn_SRSCm_LTC24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int LTC25:1</td>
+<td>25 - 25</td>
+<td>GPTAn_SRSCm_LTC25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int LTC26:1</td>
+<td>26 - 26</td>
+<td>GPTAn_SRSCm_LTC26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int LTC27:1</td>
+<td>27 - 27</td>
+<td>GPTAn_SRSCm_LTC27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int LTC28:1</td>
+<td>28 - 28</td>
+<td>GPTAn_SRSCm_LTC28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int LTC29:1</td>
+<td>29 - 29</td>
+<td>GPTAn_SRSCm_LTC29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int LTC30:1</td>
+<td>30 - 30</td>
+<td>GPTAn_SRSCm_LTC30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int LTC31:1</td>
+<td>31 - 31</td>
+<td>GPTAn_SRSCm_LTC31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRSC2">GPTA0_SRSC2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRSC3">GPTA0_SRSC3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSC2">GPTA1_SRSC2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSC3">GPTA1_SRSC3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRSS0_t"><b>GPTAn_SRSS0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Service Request State Set Register 0</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRSS0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DCM00R:1</td>
+<td>0 - 0</td>
+<td>GPTAn_SRSS0_DCM00R_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DCM00F:1</td>
+<td>1 - 1</td>
+<td>GPTAn_SRSS0_DCM00F_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int DCM00C:1</td>
+<td>2 - 2</td>
+<td>GPTAn_SRSS0_DCM00C_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int DCM01R:1</td>
+<td>3 - 3</td>
+<td>GPTAn_SRSS0_DCM01R_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int DCM01F:1</td>
+<td>4 - 4</td>
+<td>GPTAn_SRSS0_DCM01F_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int DCM01C:1</td>
+<td>5 - 5</td>
+<td>GPTAn_SRSS0_DCM01C_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int DCM02R:1</td>
+<td>6 - 6</td>
+<td>GPTAn_SRSS0_DCM02R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int DCM02F:1</td>
+<td>7 - 7</td>
+<td>GPTAn_SRSS0_DCM02F_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int DCM02C:1</td>
+<td>8 - 8</td>
+<td>GPTAn_SRSS0_DCM02C_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DCM03R:1</td>
+<td>9 - 9</td>
+<td>GPTAn_SRSS0_DCM03R_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int DCM03F:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRSS0_DCM03F_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int DCM03C:1</td>
+<td>11 - 11</td>
+<td>GPTAn_SRSS0_DCM03C_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int PLL:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRSS0_PLL_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int GT00:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRSS0_GT00_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int GT01:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRSS0_GT01_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRSS0">GPTA0_SRSS0</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSS0">GPTA1_SRSS0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRSS1_t"><b>GPTAn_SRSS1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Service Request State Set Register 1</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRSS1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int GTC0:1</td>
+<td>0 - 0</td>
+<td>GPTAn_SRSS1_GTC0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int GTC1:1</td>
+<td>1 - 1</td>
+<td>GPTAn_SRSS1_GTC1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int GTC2:1</td>
+<td>2 - 2</td>
+<td>GPTAn_SRSS1_GTC2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int GTC3:1</td>
+<td>3 - 3</td>
+<td>GPTAn_SRSS1_GTC3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int GTC4:1</td>
+<td>4 - 4</td>
+<td>GPTAn_SRSS1_GTC4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int GTC5:1</td>
+<td>5 - 5</td>
+<td>GPTAn_SRSS1_GTC5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int GTC6:1</td>
+<td>6 - 6</td>
+<td>GPTAn_SRSS1_GTC6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int GTC7:1</td>
+<td>7 - 7</td>
+<td>GPTAn_SRSS1_GTC7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int GTC8:1</td>
+<td>8 - 8</td>
+<td>GPTAn_SRSS1_GTC8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int GTC9:1</td>
+<td>9 - 9</td>
+<td>GPTAn_SRSS1_GTC9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int GTC10:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRSS1_GTC10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int GTC11:1</td>
+<td>11 - 11</td>
+<td>GPTAn_SRSS1_GTC11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int GTC12:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRSS1_GTC12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int GTC13:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRSS1_GTC13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int GTC14:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRSS1_GTC14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int GTC15:1</td>
+<td>15 - 15</td>
+<td>GPTAn_SRSS1_GTC15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GTC16:1</td>
+<td>16 - 16</td>
+<td>GPTAn_SRSS1_GTC16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int GTC17:1</td>
+<td>17 - 17</td>
+<td>GPTAn_SRSS1_GTC17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int GTC18:1</td>
+<td>18 - 18</td>
+<td>GPTAn_SRSS1_GTC18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int GTC19:1</td>
+<td>19 - 19</td>
+<td>GPTAn_SRSS1_GTC19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int GTC20:1</td>
+<td>20 - 20</td>
+<td>GPTAn_SRSS1_GTC20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int GTC21:1</td>
+<td>21 - 21</td>
+<td>GPTAn_SRSS1_GTC21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int GTC22:1</td>
+<td>22 - 22</td>
+<td>GPTAn_SRSS1_GTC22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int GTC23:1</td>
+<td>23 - 23</td>
+<td>GPTAn_SRSS1_GTC23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int GTC24:1</td>
+<td>24 - 24</td>
+<td>GPTAn_SRSS1_GTC24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int GTC25:1</td>
+<td>25 - 25</td>
+<td>GPTAn_SRSS1_GTC25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int GTC26:1</td>
+<td>26 - 26</td>
+<td>GPTAn_SRSS1_GTC26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int GTC27:1</td>
+<td>27 - 27</td>
+<td>GPTAn_SRSS1_GTC27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int GTC28:1</td>
+<td>28 - 28</td>
+<td>GPTAn_SRSS1_GTC28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int GTC29:1</td>
+<td>29 - 29</td>
+<td>GPTAn_SRSS1_GTC29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int GTC30:1</td>
+<td>30 - 30</td>
+<td>GPTAn_SRSS1_GTC30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int GTC31:1</td>
+<td>31 - 31</td>
+<td>GPTAn_SRSS1_GTC31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRSS1">GPTA0_SRSS1</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSS1">GPTA1_SRSS1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTAn_SRSSm_t"><b>GPTAn_SRSSm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>GPTAn Service Request State Set Register m</b></td></tr>
+<tr><td colspan="5"><b>GPTAn_SRSSm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LTC0:1</td>
+<td>0 - 0</td>
+<td>GPTAn_SRSSm_LTC0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LTC1:1</td>
+<td>1 - 1</td>
+<td>GPTAn_SRSSm_LTC1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LTC2:1</td>
+<td>2 - 2</td>
+<td>GPTAn_SRSSm_LTC2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int LTC3:1</td>
+<td>3 - 3</td>
+<td>GPTAn_SRSSm_LTC3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int LTC4:1</td>
+<td>4 - 4</td>
+<td>GPTAn_SRSSm_LTC4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int LTC5:1</td>
+<td>5 - 5</td>
+<td>GPTAn_SRSSm_LTC5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int LTC6:1</td>
+<td>6 - 6</td>
+<td>GPTAn_SRSSm_LTC6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int LTC7:1</td>
+<td>7 - 7</td>
+<td>GPTAn_SRSSm_LTC7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int LTC8:1</td>
+<td>8 - 8</td>
+<td>GPTAn_SRSSm_LTC8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int LTC9:1</td>
+<td>9 - 9</td>
+<td>GPTAn_SRSSm_LTC9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LTC10:1</td>
+<td>10 - 10</td>
+<td>GPTAn_SRSSm_LTC10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int LTC11:1</td>
+<td>11 - 11</td>
+<td>GPTAn_SRSSm_LTC11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int LTC12:1</td>
+<td>12 - 12</td>
+<td>GPTAn_SRSSm_LTC12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int LTC13:1</td>
+<td>13 - 13</td>
+<td>GPTAn_SRSSm_LTC13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int LTC14:1</td>
+<td>14 - 14</td>
+<td>GPTAn_SRSSm_LTC14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int LTC15:1</td>
+<td>15 - 15</td>
+<td>GPTAn_SRSSm_LTC15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int LTC16:1</td>
+<td>16 - 16</td>
+<td>GPTAn_SRSSm_LTC16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int LTC17:1</td>
+<td>17 - 17</td>
+<td>GPTAn_SRSSm_LTC17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int LTC18:1</td>
+<td>18 - 18</td>
+<td>GPTAn_SRSSm_LTC18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int LTC19:1</td>
+<td>19 - 19</td>
+<td>GPTAn_SRSSm_LTC19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int LTC20:1</td>
+<td>20 - 20</td>
+<td>GPTAn_SRSSm_LTC20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int LTC21:1</td>
+<td>21 - 21</td>
+<td>GPTAn_SRSSm_LTC21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int LTC22:1</td>
+<td>22 - 22</td>
+<td>GPTAn_SRSSm_LTC22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int LTC23:1</td>
+<td>23 - 23</td>
+<td>GPTAn_SRSSm_LTC23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int LTC24:1</td>
+<td>24 - 24</td>
+<td>GPTAn_SRSSm_LTC24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int LTC25:1</td>
+<td>25 - 25</td>
+<td>GPTAn_SRSSm_LTC25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int LTC26:1</td>
+<td>26 - 26</td>
+<td>GPTAn_SRSSm_LTC26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int LTC27:1</td>
+<td>27 - 27</td>
+<td>GPTAn_SRSSm_LTC27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int LTC28:1</td>
+<td>28 - 28</td>
+<td>GPTAn_SRSSm_LTC28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int LTC29:1</td>
+<td>29 - 29</td>
+<td>GPTAn_SRSSm_LTC29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int LTC30:1</td>
+<td>30 - 30</td>
+<td>GPTAn_SRSSm_LTC30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int LTC31:1</td>
+<td>31 - 31</td>
+<td>GPTAn_SRSSm_LTC31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpta0.html#GPTA0_SRSS2">GPTA0_SRSS2</a>,    
+<a class="url" href="../gpta0.html#GPTA0_SRSS3">GPTA0_SRSS3</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSS2">GPTA1_SRSS2</a>,    
+<a class="url" href="../gpta1.html#GPTA1_SRSS3">GPTA1_SRSS3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpta0.html">GPTA0</a>, 
+<a class="url" href="../gpta1.html">GPTA1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_CAPREL_t"><b>GPTn_CAPREL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Capture and Reload Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_CAPREL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CAPREL:16</td>
+<td>0 - 15</td>
+<td>GPTn_CAPREL_CAPREL_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_CAPREL">GPT120_CAPREL</a>,    
+<a class="url" href="../gpt12.html#GPT121_CAPREL">GPT121_CAPREL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_CLC_t"><b>GPTn_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>GPTn_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>GPTn_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>GPTn_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EDIS:1</td>
+<td>3 - 3</td>
+<td>GPTn_CLC_EDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>GPTn_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>GPTn_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_CLC">GPT120_CLC</a>,    
+<a class="url" href="../gpt12.html#GPT121_CLC">GPT121_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_ID_t"><b>GPTn_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Identification Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MODREV:8</td>
+<td>0 - 7</td>
+<td>GPTn_ID_MODREV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MODTYPE:8</td>
+<td>8 - 15</td>
+<td>GPTn_ID_MODTYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MODNUMBER:16</td>
+<td>16 - 31</td>
+<td>GPTn_ID_MODNUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_ID">GPT120_ID</a>,    
+<a class="url" href="../gpt12.html#GPT121_ID">GPT121_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_PISEL_t"><b>GPTn_PISEL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Port Input Select Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_PISEL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IST2IN:1</td>
+<td>0 - 0</td>
+<td>GPTn_PISEL_IST2IN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int IST2EUD:1</td>
+<td>1 - 1</td>
+<td>GPTn_PISEL_IST2EUD_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int IST3IN:2</td>
+<td>2 - 3</td>
+<td>GPTn_PISEL_IST3IN_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int IST3EUD:2</td>
+<td>4 - 5</td>
+<td>GPTn_PISEL_IST3EUD_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int IST4IN:2</td>
+<td>6 - 7</td>
+<td>GPTn_PISEL_IST4IN_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int IST4EUD:2</td>
+<td>8 - 9</td>
+<td>GPTn_PISEL_IST4EUD_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int IST5IN:1</td>
+<td>10 - 10</td>
+<td>GPTn_PISEL_IST5IN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int IST5EUD:1</td>
+<td>11 - 11</td>
+<td>GPTn_PISEL_IST5EUD_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int IST6IN:1</td>
+<td>12 - 12</td>
+<td>GPTn_PISEL_IST6IN_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int IST6EUD:1</td>
+<td>13 - 13</td>
+<td>GPTn_PISEL_IST6EUD_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int ISCAPIN:2</td>
+<td>14 - 15</td>
+<td>GPTn_PISEL_ISCAPIN_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_PISEL">GPT120_PISEL</a>,    
+<a class="url" href="../gpt12.html#GPT121_PISEL">GPT121_PISEL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_SRCm_t"><b>GPTn_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Service Request Control nRegister</b></td></tr>
+<tr><td colspan="5"><b>GPTn_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>GPTn_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>GPTn_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>GPTn_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>GPTn_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>GPTn_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>GPTn_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_SRC0">GPT120_SRC0</a>,    
+<a class="url" href="../gpt12.html#GPT120_SRC1">GPT120_SRC1</a>,    
+<a class="url" href="../gpt12.html#GPT120_SRC2">GPT120_SRC2</a>,    
+<a class="url" href="../gpt12.html#GPT120_SRC3">GPT120_SRC3</a>,    
+<a class="url" href="../gpt12.html#GPT120_SRC4">GPT120_SRC4</a>,    
+<a class="url" href="../gpt12.html#GPT120_SRC5">GPT120_SRC5</a>,    
+<a class="url" href="../gpt12.html#GPT121_SRC0">GPT121_SRC0</a>,    
+<a class="url" href="../gpt12.html#GPT121_SRC1">GPT121_SRC1</a>,    
+<a class="url" href="../gpt12.html#GPT121_SRC2">GPT121_SRC2</a>,    
+<a class="url" href="../gpt12.html#GPT121_SRC3">GPT121_SRC3</a>,    
+<a class="url" href="../gpt12.html#GPT121_SRC4">GPT121_SRC4</a>,    
+<a class="url" href="../gpt12.html#GPT121_SRC5">GPT121_SRC5</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_T2CON_t"><b>GPTn_T2CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Timer 2 Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_T2CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int T2I:3</td>
+<td>0 - 2</td>
+<td>GPTn_T2CON_T2I_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int T2M:3</td>
+<td>3 - 5</td>
+<td>GPTn_T2CON_T2M_MASK</td>
+<td>0x00000038</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int T2R:1</td>
+<td>6 - 6</td>
+<td>GPTn_T2CON_T2R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int T2UD:1</td>
+<td>7 - 7</td>
+<td>GPTn_T2CON_T2UD_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int T2UDE:1</td>
+<td>8 - 8</td>
+<td>GPTn_T2CON_T2UDE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int T2RC:1</td>
+<td>9 - 9</td>
+<td>GPTn_T2CON_T2RC_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int T2IRDIS:1</td>
+<td>12 - 12</td>
+<td>GPTn_T2CON_T2IRDIS_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int T2EDGE:1</td>
+<td>13 - 13</td>
+<td>GPTn_T2CON_T2EDGE_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int T2CHDIR:1</td>
+<td>14 - 14</td>
+<td>GPTn_T2CON_T2CHDIR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int T2RDIR:1</td>
+<td>15 - 15</td>
+<td>GPTn_T2CON_T2RDIR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_T2CON">GPT120_T2CON</a>,    
+<a class="url" href="../gpt12.html#GPT121_T2CON">GPT121_T2CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_T3CON_t"><b>GPTn_T3CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Timer 3 Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_T3CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int T3I:3</td>
+<td>0 - 2</td>
+<td>GPTn_T3CON_T3I_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int T3M:3</td>
+<td>3 - 5</td>
+<td>GPTn_T3CON_T3M_MASK</td>
+<td>0x00000038</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int T3R:1</td>
+<td>6 - 6</td>
+<td>GPTn_T3CON_T3R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int T3UD:1</td>
+<td>7 - 7</td>
+<td>GPTn_T3CON_T3UD_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int T3UDE:1</td>
+<td>8 - 8</td>
+<td>GPTn_T3CON_T3UDE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int T3OE:1</td>
+<td>9 - 9</td>
+<td>GPTn_T3CON_T3OE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int T3OTL:1</td>
+<td>10 - 10</td>
+<td>GPTn_T3CON_T3OTL_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int BPS1:2</td>
+<td>11 - 12</td>
+<td>GPTn_T3CON_BPS1_MASK</td>
+<td>0x00001800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int T3EDGE:1</td>
+<td>13 - 13</td>
+<td>GPTn_T3CON_T3EDGE_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int T3CHDIR:1</td>
+<td>14 - 14</td>
+<td>GPTn_T3CON_T3CHDIR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int T3RDIR:1</td>
+<td>15 - 15</td>
+<td>GPTn_T3CON_T3RDIR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_T3CON">GPT120_T3CON</a>,    
+<a class="url" href="../gpt12.html#GPT121_T3CON">GPT121_T3CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_T4CON_t"><b>GPTn_T4CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Timer 4 Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_T4CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int T4I:3</td>
+<td>0 - 2</td>
+<td>GPTn_T4CON_T4I_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int T4M:3</td>
+<td>3 - 5</td>
+<td>GPTn_T4CON_T4M_MASK</td>
+<td>0x00000038</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int T4R:1</td>
+<td>6 - 6</td>
+<td>GPTn_T4CON_T4R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int T4UD:1</td>
+<td>7 - 7</td>
+<td>GPTn_T4CON_T4UD_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int T4UDE:1</td>
+<td>8 - 8</td>
+<td>GPTn_T4CON_T4UDE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int T4RC:1</td>
+<td>9 - 9</td>
+<td>GPTn_T4CON_T4RC_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CLRT2EN:1</td>
+<td>10 - 10</td>
+<td>GPTn_T4CON_CLRT2EN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CLRT3EN:1</td>
+<td>11 - 11</td>
+<td>GPTn_T4CON_CLRT3EN_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int T4IRDIS:1</td>
+<td>12 - 12</td>
+<td>GPTn_T4CON_T4IRDIS_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int T4EDGE:1</td>
+<td>13 - 13</td>
+<td>GPTn_T4CON_T4EDGE_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int T4CHDIR:1</td>
+<td>14 - 14</td>
+<td>GPTn_T4CON_T4CHDIR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int T4RDIR:1</td>
+<td>15 - 15</td>
+<td>GPTn_T4CON_T4RDIR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_T4CON">GPT120_T4CON</a>,    
+<a class="url" href="../gpt12.html#GPT121_T4CON">GPT121_T4CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_T5CON_t"><b>GPTn_T5CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Timer 5 Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_T5CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int T5I:3</td>
+<td>0 - 2</td>
+<td>GPTn_T5CON_T5I_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int T5M:2</td>
+<td>3 - 4</td>
+<td>GPTn_T5CON_T5M_MASK</td>
+<td>0x00000018</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int T5R:1</td>
+<td>6 - 6</td>
+<td>GPTn_T5CON_T5R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int T5UD:1</td>
+<td>7 - 7</td>
+<td>GPTn_T5CON_T5UD_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int T5UDE:1</td>
+<td>8 - 8</td>
+<td>GPTn_T5CON_T5UDE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int T5RC:1</td>
+<td>9 - 9</td>
+<td>GPTn_T5CON_T5RC_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CT3:1</td>
+<td>10 - 10</td>
+<td>GPTn_T5CON_CT3_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CI:2</td>
+<td>12 - 13</td>
+<td>GPTn_T5CON_CI_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int T5CLR:1</td>
+<td>14 - 14</td>
+<td>GPTn_T5CON_T5CLR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int T5SC:1</td>
+<td>15 - 15</td>
+<td>GPTn_T5CON_T5SC_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_T5CON">GPT120_T5CON</a>,    
+<a class="url" href="../gpt12.html#GPT121_T5CON">GPT121_T5CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_T6CON_t"><b>GPTn_T6CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Timer 6 Control Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_T6CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int T6I:3</td>
+<td>0 - 2</td>
+<td>GPTn_T6CON_T6I_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int T6M:3</td>
+<td>3 - 5</td>
+<td>GPTn_T6CON_T6M_MASK</td>
+<td>0x00000038</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int T6R:1</td>
+<td>6 - 6</td>
+<td>GPTn_T6CON_T6R_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int T6UD:1</td>
+<td>7 - 7</td>
+<td>GPTn_T6CON_T6UD_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int T6UDE:1</td>
+<td>8 - 8</td>
+<td>GPTn_T6CON_T6UDE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int T6OE:1</td>
+<td>9 - 9</td>
+<td>GPTn_T6CON_T6OE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int T6OTL:1</td>
+<td>10 - 10</td>
+<td>GPTn_T6CON_T6OTL_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int BPS2:2</td>
+<td>11 - 12</td>
+<td>GPTn_T6CON_BPS2_MASK</td>
+<td>0x00001800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int T6CLR:1</td>
+<td>14 - 14</td>
+<td>GPTn_T6CON_T6CLR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int T6SR:1</td>
+<td>15 - 15</td>
+<td>GPTn_T6CON_T6SR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_T6CON">GPT120_T6CON</a>,    
+<a class="url" href="../gpt12.html#GPT121_T6CON">GPT121_T6CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="GPTn_Tm_t"><b>GPTn_Tm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Timer n Register</b></td></tr>
+<tr><td colspan="5"><b>GPTn_Tm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int Tx:16</td>
+<td>0 - 15</td>
+<td>GPTn_Tm_Tx_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpt12.html#GPT120_T2">GPT120_T2</a>,    
+<a class="url" href="../gpt12.html#GPT120_T3">GPT120_T3</a>,    
+<a class="url" href="../gpt12.html#GPT120_T4">GPT120_T4</a>,    
+<a class="url" href="../gpt12.html#GPT120_T5">GPT120_T5</a>,    
+<a class="url" href="../gpt12.html#GPT120_T6">GPT120_T6</a>,    
+<a class="url" href="../gpt12.html#GPT121_T2">GPT121_T2</a>,    
+<a class="url" href="../gpt12.html#GPT121_T3">GPT121_T3</a>,    
+<a class="url" href="../gpt12.html#GPT121_T4">GPT121_T4</a>,    
+<a class="url" href="../gpt12.html#GPT121_T5">GPT121_T5</a>,    
+<a class="url" href="../gpt12.html#GPT121_T6">GPT121_T6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpt12.html">GPT12</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

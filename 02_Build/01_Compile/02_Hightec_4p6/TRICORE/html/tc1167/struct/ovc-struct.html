@@ -1,0 +1,80 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1167/ovc-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1167_OVC_STRUCTS_H_
+#define _TC1167_OVC_STRUCTS_H_
+/*
+   TriCore TC1167
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1167/<a class="url" href="../ovc.html">ovc.h</a>&gt;
+#ifndef OVC_BASE
+#define OVC_BASE 0xf87ffb00
+#endif /* OVC_BASE */
+</pre>
+
+<a name="OVC_OVL_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/o.html#OVC_RABRm_t">OVC_RABRm_t</a></td>
+<td>RABR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/o.html#OVC_OTARm_t">OVC_OTARm_t</a></td>
+<td>OTAR;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/o.html#OVC_OMASKm_t">OVC_OMASKm_t</a></td>
+<td>OMASK;</td>
+<td>/* 0x8 */</td>
+</tr>
+
+<tr><td colspan="4">} OVC_OVL_t;</td></tr>
+</table>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved0[0x8];</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#OVC_OVL_t">OVC_OVL_t</a></td>
+<td>OVL[0x10];</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/o.html#OVC_OCON_t">OVC_OCON_t</a></td>
+<td>OCON;</td>
+<td>/* 0xe0 */</td>
+</tr>
+
+<tr><td colspan="4">} OVC_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1167_OVC_STRUCTS_H_ */ -->
+</body>
+</html>

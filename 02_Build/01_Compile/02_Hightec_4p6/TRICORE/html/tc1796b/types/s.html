@@ -1,0 +1,4900 @@
+<html>
+<head>
+<title>TriCore TC1796B (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="SBCU_CON_t"><b>SBCU_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Control Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TOUT:16</td>
+<td>0 - 15</td>
+<td>SBCU_CON_TOUT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DBG:1</td>
+<td>16 - 16</td>
+<td>SBCU_CON_DBG_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PSE:1</td>
+<td>18 - 18</td>
+<td>SBCU_CON_PSE_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int SPE:1</td>
+<td>19 - 19</td>
+<td>SBCU_CON_SPE_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SPC:8</td>
+<td>24 - 31</td>
+<td>SBCU_CON_SPC_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_CON">SBCU_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_DBADRT_t"><b>SBCU_DBADRT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Debug Trapped Address Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_DBADRT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIADR:32</td>
+<td>0 - 31</td>
+<td>SBCU_DBADRT_FPIADR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_DBADRT">SBCU_DBADRT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_DBADRm_t"><b>SBCU_DBADRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Debug Address n Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_DBADRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADRn:32</td>
+<td>0 - 31</td>
+<td>SBCU_DBADRm_ADRn_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_DBADR1">SBCU_DBADR1</a>,    
+<a class="url" href="../sbcu.html#SBCU_DBADR2">SBCU_DBADR2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_DBBOS_t"><b>SBCU_DBBOS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Debug Bus Operation Signals Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_DBBOS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>0 - 3</td>
+<td>SBCU_DBBOS_OPC_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>4 - 4</td>
+<td>SBCU_DBBOS_SVM_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WR:1</td>
+<td>8 - 8</td>
+<td>SBCU_DBBOS_WR_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RD:1</td>
+<td>12 - 12</td>
+<td>SBCU_DBBOS_RD_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_DBBOS">SBCU_DBBOS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_DBBOST_t"><b>SBCU_DBBOST_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Debug Trapped Bus Operation Signals Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_DBBOST_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIOPC:4</td>
+<td>0 - 3</td>
+<td>SBCU_DBBOST_FPIOPC_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FPISVM:1</td>
+<td>4 - 4</td>
+<td>SBCU_DBBOST_FPISVM_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FPIACK:2</td>
+<td>5 - 6</td>
+<td>SBCU_DBBOST_FPIACK_MASK</td>
+<td>0x00000060</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int FPIRDY:1</td>
+<td>7 - 7</td>
+<td>SBCU_DBBOST_FPIRDY_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int FPIWR:1</td>
+<td>8 - 8</td>
+<td>SBCU_DBBOST_FPIWR_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int FPIRST:2</td>
+<td>9 - 10</td>
+<td>SBCU_DBBOST_FPIRST_MASK</td>
+<td>0x00000600</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int FPIOPS:1</td>
+<td>11 - 11</td>
+<td>SBCU_DBBOST_FPIOPS_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int FPIRD:1</td>
+<td>12 - 12</td>
+<td>SBCU_DBBOST_FPIRD_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int FPIABORT:1</td>
+<td>13 - 13</td>
+<td>SBCU_DBBOST_FPIABORT_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int FPITOUT:1</td>
+<td>14 - 14</td>
+<td>SBCU_DBBOST_FPITOUT_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int FPITAG:4</td>
+<td>16 - 19</td>
+<td>SBCU_DBBOST_FPITAG_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_DBBOST">SBCU_DBBOST</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_DBCNTL_t"><b>SBCU_DBCNTL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Debug Control Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_DBCNTL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int EO:1</td>
+<td>0 - 0</td>
+<td>SBCU_DBCNTL_EO_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OA:1</td>
+<td>1 - 1</td>
+<td>SBCU_DBCNTL_OA_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RA:1</td>
+<td>4 - 4</td>
+<td>SBCU_DBCNTL_RA_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CONCOM0:1</td>
+<td>12 - 12</td>
+<td>SBCU_DBCNTL_CONCOM0_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CONCOM1:1</td>
+<td>13 - 13</td>
+<td>SBCU_DBCNTL_CONCOM1_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CONCOM2:1</td>
+<td>14 - 14</td>
+<td>SBCU_DBCNTL_CONCOM2_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int ONG:1</td>
+<td>16 - 16</td>
+<td>SBCU_DBCNTL_ONG_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int ONA1:2</td>
+<td>20 - 21</td>
+<td>SBCU_DBCNTL_ONA1_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int ONA2:2</td>
+<td>24 - 25</td>
+<td>SBCU_DBCNTL_ONA2_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS0:1</td>
+<td>28 - 28</td>
+<td>SBCU_DBCNTL_ONBOS0_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS1:1</td>
+<td>29 - 29</td>
+<td>SBCU_DBCNTL_ONBOS1_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS2:1</td>
+<td>30 - 30</td>
+<td>SBCU_DBCNTL_ONBOS2_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int ONBOS3:1</td>
+<td>31 - 31</td>
+<td>SBCU_DBCNTL_ONBOS3_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_DBCNTL">SBCU_DBCNTL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_DBGNTT_t"><b>SBCU_DBGNTT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Debug Trapped Master Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_DBGNTT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CBH:1</td>
+<td>0 - 0</td>
+<td>SBCU_DBGNTT_CBH_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int PCP:1</td>
+<td>3 - 3</td>
+<td>SBCU_DBGNTT_PCP_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int DMAH:1</td>
+<td>4 - 4</td>
+<td>SBCU_DBGNTT_DMAH_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int LFI:1</td>
+<td>5 - 5</td>
+<td>SBCU_DBGNTT_LFI_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int DMAL:1</td>
+<td>6 - 6</td>
+<td>SBCU_DBGNTT_DMAL_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CBL:1</td>
+<td>7 - 7</td>
+<td>SBCU_DBGNTT_CBL_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int CHNR00:1</td>
+<td>16 - 16</td>
+<td>SBCU_DBGNTT_CHNR00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CHNR01:1</td>
+<td>17 - 17</td>
+<td>SBCU_DBGNTT_CHNR01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int CHNR02:1</td>
+<td>18 - 18</td>
+<td>SBCU_DBGNTT_CHNR02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int CHNR03:1</td>
+<td>19 - 19</td>
+<td>SBCU_DBGNTT_CHNR03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CHNR04:1</td>
+<td>20 - 20</td>
+<td>SBCU_DBGNTT_CHNR04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int CHNR05:1</td>
+<td>21 - 21</td>
+<td>SBCU_DBGNTT_CHNR05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int CHNR06:1</td>
+<td>22 - 22</td>
+<td>SBCU_DBGNTT_CHNR06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int CHNR07:1</td>
+<td>23 - 23</td>
+<td>SBCU_DBGNTT_CHNR07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int CHNR10:1</td>
+<td>24 - 24</td>
+<td>SBCU_DBGNTT_CHNR10_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int CHNR11:1</td>
+<td>25 - 25</td>
+<td>SBCU_DBGNTT_CHNR11_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int CHNR12:1</td>
+<td>26 - 26</td>
+<td>SBCU_DBGNTT_CHNR12_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int CHNR13:1</td>
+<td>27 - 27</td>
+<td>SBCU_DBGNTT_CHNR13_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int CHNR14:1</td>
+<td>28 - 28</td>
+<td>SBCU_DBGNTT_CHNR14_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int CHNR15:1</td>
+<td>29 - 29</td>
+<td>SBCU_DBGNTT_CHNR15_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int CHNR16:1</td>
+<td>30 - 30</td>
+<td>SBCU_DBGNTT_CHNR16_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int CHNR17:1</td>
+<td>31 - 31</td>
+<td>SBCU_DBGNTT_CHNR17_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_DBGNTT">SBCU_DBGNTT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_DBGRNT_t"><b>SBCU_DBGRNT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Debug Grant Mask Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_DBGRNT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CBH:1</td>
+<td>0 - 0</td>
+<td>SBCU_DBGRNT_CBH_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int PCP:1</td>
+<td>3 - 3</td>
+<td>SBCU_DBGRNT_PCP_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int DMAH:1</td>
+<td>4 - 4</td>
+<td>SBCU_DBGRNT_DMAH_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int LFI:1</td>
+<td>5 - 5</td>
+<td>SBCU_DBGRNT_LFI_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int DMAL:1</td>
+<td>6 - 6</td>
+<td>SBCU_DBGRNT_DMAL_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CBL:1</td>
+<td>7 - 7</td>
+<td>SBCU_DBGRNT_CBL_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_DBGRNT">SBCU_DBGRNT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_EADD_t"><b>SBCU_EADD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Error Address Capture Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_EADD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIADR:32</td>
+<td>0 - 31</td>
+<td>SBCU_EADD_FPIADR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_EADD">SBCU_EADD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_ECON_t"><b>SBCU_ECON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Error Control Capture Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_ECON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ERRCNT:16</td>
+<td>0 - 15</td>
+<td>SBCU_ECON_ERRCNT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOUT:1</td>
+<td>16 - 16</td>
+<td>SBCU_ECON_TOUT_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int RDY:1</td>
+<td>17 - 17</td>
+<td>SBCU_ECON_RDY_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int ABT:1</td>
+<td>18 - 18</td>
+<td>SBCU_ECON_ABT_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ACK:2</td>
+<td>19 - 20</td>
+<td>SBCU_ECON_ACK_MASK</td>
+<td>0x00180000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>21 - 21</td>
+<td>SBCU_ECON_SVM_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int WRN:1</td>
+<td>22 - 22</td>
+<td>SBCU_ECON_WRN_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RDN:1</td>
+<td>23 - 23</td>
+<td>SBCU_ECON_RDN_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int TAG:4</td>
+<td>24 - 27</td>
+<td>SBCU_ECON_TAG_MASK</td>
+<td>0x0f000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>28 - 31</td>
+<td>SBCU_ECON_OPC_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_ECON">SBCU_ECON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_EDAT_t"><b>SBCU_EDAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Error Data Capture Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_EDAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPIDAT:32</td>
+<td>0 - 31</td>
+<td>SBCU_EDAT_FPIDAT_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_EDAT">SBCU_EDAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_ID_t"><b>SBCU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_ID">SBCU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SBCU_SRC_t"><b>SBCU_SRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SBCU Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>SBCU_SRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>SBCU_SRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:2</td>
+<td>10 - 11</td>
+<td>SBCU_SRC_TOS_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>SBCU_SRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>SBCU_SRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>SBCU_SRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>SBCU_SRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../sbcu.html#SBCU_SRC">SBCU_SRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../sbcu.html">SBCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_CON_t"><b>SCU_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Control Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FIEN:1</td>
+<td>0 - 0</td>
+<td>SCU_CON_FIEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CSEEN:1</td>
+<td>1 - 1</td>
+<td>SCU_CON_CSEEN_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CSOEN:1</td>
+<td>2 - 2</td>
+<td>SCU_CON_CSOEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CSGEN:1</td>
+<td>3 - 3</td>
+<td>SCU_CON_CSGEN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int EPUD:1</td>
+<td>4 - 4</td>
+<td>SCU_CON_EPUD_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int NMIEN:1</td>
+<td>5 - 5</td>
+<td>SCU_CON_NMIEN_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int AN7TM:1</td>
+<td>6 - 6</td>
+<td>SCU_CON_AN7TM_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int DTSON:1</td>
+<td>9 - 9</td>
+<td>SCU_CON_DTSON_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LDEN:1</td>
+<td>10 - 10</td>
+<td>SCU_CON_LDEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int RPARAV:1</td>
+<td>11 - 11</td>
+<td>SCU_CON_RPARAV_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SLSPDR:1</td>
+<td>16 - 16</td>
+<td>SCU_CON_SLSPDR_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SSC0PDR:1</td>
+<td>17 - 17</td>
+<td>SCU_CON_SSC0PDR_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int GIN1S:2</td>
+<td>18 - 19</td>
+<td>SCU_CON_GIN1S_MASK</td>
+<td>0x000c0000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ZERO:4</td>
+<td>20 - 23</td>
+<td>SCU_CON_ZERO_MASK</td>
+<td>0x00f00000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int ONE:8</td>
+<td>24 - 31</td>
+<td>SCU_CON_ONE_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_CON">SCU_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_EMSR_t"><b>SCU_EMSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Emergency Stop Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_EMSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int POL:1</td>
+<td>0 - 0</td>
+<td>SCU_EMSR_POL_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MODE:1</td>
+<td>1 - 1</td>
+<td>SCU_EMSR_MODE_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ENON:1</td>
+<td>2 - 2</td>
+<td>SCU_EMSR_ENON_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EMSF:1</td>
+<td>16 - 16</td>
+<td>SCU_EMSR_EMSF_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int EMSFM:2</td>
+<td>24 - 25</td>
+<td>SCU_EMSR_EMSFM_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_EMSR">SCU_EMSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_ID_t"><b>SCU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_ID">SCU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_PETCR_t"><b>SCU_PETCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Parity Error Trap Control Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_PETCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PEN0:1</td>
+<td>0 - 0</td>
+<td>SCU_PETCR_PEN0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int PEN1:1</td>
+<td>1 - 1</td>
+<td>SCU_PETCR_PEN1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int PEN2:1</td>
+<td>2 - 2</td>
+<td>SCU_PETCR_PEN2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int PEN3:1</td>
+<td>3 - 3</td>
+<td>SCU_PETCR_PEN3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int PEN4:1</td>
+<td>4 - 4</td>
+<td>SCU_PETCR_PEN4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PEN5:1</td>
+<td>5 - 5</td>
+<td>SCU_PETCR_PEN5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int PEN6:1</td>
+<td>6 - 6</td>
+<td>SCU_PETCR_PEN6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_PETCR">SCU_PETCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_PETSR_t"><b>SCU_PETSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Parity Error Trap Status Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_PETSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PFL0:1</td>
+<td>0 - 0</td>
+<td>SCU_PETSR_PFL0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int PFL1:1</td>
+<td>1 - 1</td>
+<td>SCU_PETSR_PFL1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int PFL2:1</td>
+<td>2 - 2</td>
+<td>SCU_PETSR_PFL2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int PFL3:1</td>
+<td>3 - 3</td>
+<td>SCU_PETSR_PFL3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int PFL4:1</td>
+<td>4 - 4</td>
+<td>SCU_PETSR_PFL4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PFL5:1</td>
+<td>5 - 5</td>
+<td>SCU_PETSR_PFL5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int PFL6:1</td>
+<td>6 - 6</td>
+<td>SCU_PETSR_PFL6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_PETSR">SCU_PETSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_PTCON_t"><b>SCU_PTCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Pad Test Control Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_PTCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PTMLC:8</td>
+<td>0 - 7</td>
+<td>SCU_PTCON_PTMLC_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ENOUT0:1</td>
+<td>8 - 8</td>
+<td>SCU_PTCON_ENOUT0_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int ENOUT1:1</td>
+<td>9 - 9</td>
+<td>SCU_PTCON_ENOUT1_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int ENOUT2:1</td>
+<td>10 - 10</td>
+<td>SCU_PTCON_ENOUT2_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int ENOUT3:1</td>
+<td>11 - 11</td>
+<td>SCU_PTCON_ENOUT3_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int RDSS0:1</td>
+<td>12 - 12</td>
+<td>SCU_PTCON_RDSS0_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int RDSS1:1</td>
+<td>13 - 13</td>
+<td>SCU_PTCON_RDSS1_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int RDSS2:1</td>
+<td>14 - 14</td>
+<td>SCU_PTCON_RDSS2_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RDSS3:1</td>
+<td>15 - 15</td>
+<td>SCU_PTCON_RDSS3_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int PTMEN:1</td>
+<td>31 - 31</td>
+<td>SCU_PTCON_PTMEN_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_PTCON">SCU_PTCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_PTDAT0_t"><b>SCU_PTDAT0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Pad Test Data Register 0</b></td></tr>
+<tr><td colspan="5"><b>SCU_PTDAT0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int A0:1</td>
+<td>0 - 0</td>
+<td>SCU_PTDAT0_A0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int A1:1</td>
+<td>1 - 1</td>
+<td>SCU_PTDAT0_A1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int A2:1</td>
+<td>2 - 2</td>
+<td>SCU_PTDAT0_A2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int A3:1</td>
+<td>3 - 3</td>
+<td>SCU_PTDAT0_A3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int A4:1</td>
+<td>4 - 4</td>
+<td>SCU_PTDAT0_A4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int A5:1</td>
+<td>5 - 5</td>
+<td>SCU_PTDAT0_A5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int A6:1</td>
+<td>6 - 6</td>
+<td>SCU_PTDAT0_A6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int A7:1</td>
+<td>7 - 7</td>
+<td>SCU_PTDAT0_A7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int A8:1</td>
+<td>8 - 8</td>
+<td>SCU_PTDAT0_A8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int A9:1</td>
+<td>9 - 9</td>
+<td>SCU_PTDAT0_A9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int A10:1</td>
+<td>10 - 10</td>
+<td>SCU_PTDAT0_A10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int A11:1</td>
+<td>11 - 11</td>
+<td>SCU_PTDAT0_A11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int A12:1</td>
+<td>12 - 12</td>
+<td>SCU_PTDAT0_A12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int A13:1</td>
+<td>13 - 13</td>
+<td>SCU_PTDAT0_A13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int A14:1</td>
+<td>14 - 14</td>
+<td>SCU_PTDAT0_A14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int A15:1</td>
+<td>15 - 15</td>
+<td>SCU_PTDAT0_A15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int A16:1</td>
+<td>16 - 16</td>
+<td>SCU_PTDAT0_A16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int A17:1</td>
+<td>17 - 17</td>
+<td>SCU_PTDAT0_A17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int A18:1</td>
+<td>18 - 18</td>
+<td>SCU_PTDAT0_A18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int A19:1</td>
+<td>19 - 19</td>
+<td>SCU_PTDAT0_A19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int A20:1</td>
+<td>20 - 20</td>
+<td>SCU_PTDAT0_A20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int A21:1</td>
+<td>21 - 21</td>
+<td>SCU_PTDAT0_A21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int A22:1</td>
+<td>22 - 22</td>
+<td>SCU_PTDAT0_A22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int A23:1</td>
+<td>23 - 23</td>
+<td>SCU_PTDAT0_A23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int BC0:1</td>
+<td>24 - 24</td>
+<td>SCU_PTDAT0_BC0_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int BC1:1</td>
+<td>25 - 25</td>
+<td>SCU_PTDAT0_BC1_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int BC2:1</td>
+<td>26 - 26</td>
+<td>SCU_PTDAT0_BC2_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int BC3:1</td>
+<td>27 - 27</td>
+<td>SCU_PTDAT0_BC3_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int RD:1</td>
+<td>28 - 28</td>
+<td>SCU_PTDAT0_RD_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int RDWR:1</td>
+<td>29 - 29</td>
+<td>SCU_PTDAT0_RDWR_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ADV:1</td>
+<td>30 - 30</td>
+<td>SCU_PTDAT0_ADV_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int MRW:1</td>
+<td>31 - 31</td>
+<td>SCU_PTDAT0_MRW_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_PTDAT0">SCU_PTDAT0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_PTDAT1_t"><b>SCU_PTDAT1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Pad Test Data Register 1</b></td></tr>
+<tr><td colspan="5"><b>SCU_PTDAT1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TR0:1</td>
+<td>0 - 0</td>
+<td>SCU_PTDAT1_TR0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TR1:1</td>
+<td>1 - 1</td>
+<td>SCU_PTDAT1_TR1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int TR2:1</td>
+<td>2 - 2</td>
+<td>SCU_PTDAT1_TR2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TR3:1</td>
+<td>3 - 3</td>
+<td>SCU_PTDAT1_TR3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int TR4:1</td>
+<td>4 - 4</td>
+<td>SCU_PTDAT1_TR4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TR5:1</td>
+<td>5 - 5</td>
+<td>SCU_PTDAT1_TR5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int TR6:1</td>
+<td>6 - 6</td>
+<td>SCU_PTDAT1_TR6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int TR7:1</td>
+<td>7 - 7</td>
+<td>SCU_PTDAT1_TR7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TR8:1</td>
+<td>8 - 8</td>
+<td>SCU_PTDAT1_TR8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TR9:1</td>
+<td>9 - 9</td>
+<td>SCU_PTDAT1_TR9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int TR10:1</td>
+<td>10 - 10</td>
+<td>SCU_PTDAT1_TR10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int TR11:1</td>
+<td>11 - 11</td>
+<td>SCU_PTDAT1_TR11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int TR12:1</td>
+<td>12 - 12</td>
+<td>SCU_PTDAT1_TR12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int TR13:1</td>
+<td>13 - 13</td>
+<td>SCU_PTDAT1_TR13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int TR14:1</td>
+<td>14 - 14</td>
+<td>SCU_PTDAT1_TR14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int TR15:1</td>
+<td>15 - 15</td>
+<td>SCU_PTDAT1_TR15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int BRKIN:1</td>
+<td>16 - 16</td>
+<td>SCU_PTDAT1_BRKIN_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int BRKOUT:1</td>
+<td>17 - 17</td>
+<td>SCU_PTDAT1_BRKOUT_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int TRCLK:1</td>
+<td>18 - 18</td>
+<td>SCU_PTDAT1_TRCLK_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int HDRST:1</td>
+<td>19 - 19</td>
+<td>SCU_PTDAT1_HDRST_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int NMI:1</td>
+<td>20 - 20</td>
+<td>SCU_PTDAT1_NMI_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int HOLD:1</td>
+<td>21 - 21</td>
+<td>SCU_PTDAT1_HOLD_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int HLDA:1</td>
+<td>22 - 22</td>
+<td>SCU_PTDAT1_HLDA_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int BREQ:1</td>
+<td>23 - 23</td>
+<td>SCU_PTDAT1_BREQ_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int CS0:1</td>
+<td>24 - 24</td>
+<td>SCU_PTDAT1_CS0_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int CS1:1</td>
+<td>25 - 25</td>
+<td>SCU_PTDAT1_CS1_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int CS2:1</td>
+<td>26 - 26</td>
+<td>SCU_PTDAT1_CS2_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int CS3:1</td>
+<td>27 - 27</td>
+<td>SCU_PTDAT1_CS3_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int CSCOMB:1</td>
+<td>28 - 28</td>
+<td>SCU_PTDAT1_CSCOMB_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int WAIT:1</td>
+<td>29 - 29</td>
+<td>SCU_PTDAT1_WAIT_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int BAA:1</td>
+<td>30 - 30</td>
+<td>SCU_PTDAT1_BAA_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_PTDAT1">SCU_PTDAT1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_PTDAT2_t"><b>SCU_PTDAT2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Pad Test Data Register 2</b></td></tr>
+<tr><td colspan="5"><b>SCU_PTDAT2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BYPASS:1</td>
+<td>0 - 0</td>
+<td>SCU_PTDAT2_BYPASS_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int BFCLKI:1</td>
+<td>1 - 1</td>
+<td>SCU_PTDAT2_BFCLKI_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int BFCLKO:1</td>
+<td>2 - 2</td>
+<td>SCU_PTDAT2_BFCLKO_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TRST:1</td>
+<td>3 - 3</td>
+<td>SCU_PTDAT2_TRST_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int TCK:1</td>
+<td>4 - 4</td>
+<td>SCU_PTDAT2_TCK_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TDI:1</td>
+<td>5 - 5</td>
+<td>SCU_PTDAT2_TDI_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int TDO:1</td>
+<td>6 - 6</td>
+<td>SCU_PTDAT2_TDO_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int TMS:1</td>
+<td>7 - 7</td>
+<td>SCU_PTDAT2_TMS_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TESTMODE:1</td>
+<td>8 - 8</td>
+<td>SCU_PTDAT2_TESTMODE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TSTRES:1</td>
+<td>9 - 9</td>
+<td>SCU_PTDAT2_TSTRES_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SLSO0:1</td>
+<td>26 - 26</td>
+<td>SCU_PTDAT2_SLSO0_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int SLSO1:1</td>
+<td>27 - 27</td>
+<td>SCU_PTDAT2_SLSO1_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int MTSR0:1</td>
+<td>28 - 28</td>
+<td>SCU_PTDAT2_MTSR0_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int MRST0:1</td>
+<td>29 - 29</td>
+<td>SCU_PTDAT2_MRST0_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int SCLK0:1</td>
+<td>30 - 30</td>
+<td>SCU_PTDAT2_SCLK0_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int SLSI0:1</td>
+<td>31 - 31</td>
+<td>SCU_PTDAT2_SLSI0_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_PTDAT2">SCU_PTDAT2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_PTDAT3_t"><b>SCU_PTDAT3_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Pad Test Data Register 3</b></td></tr>
+<tr><td colspan="5"><b>SCU_PTDAT3_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int D0:1</td>
+<td>0 - 0</td>
+<td>SCU_PTDAT3_D0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int D1:1</td>
+<td>1 - 1</td>
+<td>SCU_PTDAT3_D1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int D2:1</td>
+<td>2 - 2</td>
+<td>SCU_PTDAT3_D2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int D3:1</td>
+<td>3 - 3</td>
+<td>SCU_PTDAT3_D3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int D4:1</td>
+<td>4 - 4</td>
+<td>SCU_PTDAT3_D4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int D5:1</td>
+<td>5 - 5</td>
+<td>SCU_PTDAT3_D5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int D6:1</td>
+<td>6 - 6</td>
+<td>SCU_PTDAT3_D6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int D7:1</td>
+<td>7 - 7</td>
+<td>SCU_PTDAT3_D7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int D8:1</td>
+<td>8 - 8</td>
+<td>SCU_PTDAT3_D8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int D9:1</td>
+<td>9 - 9</td>
+<td>SCU_PTDAT3_D9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int D10:1</td>
+<td>10 - 10</td>
+<td>SCU_PTDAT3_D10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int D11:1</td>
+<td>11 - 11</td>
+<td>SCU_PTDAT3_D11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int D12:1</td>
+<td>12 - 12</td>
+<td>SCU_PTDAT3_D12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int D13:1</td>
+<td>13 - 13</td>
+<td>SCU_PTDAT3_D13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int D14:1</td>
+<td>14 - 14</td>
+<td>SCU_PTDAT3_D14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int D15:1</td>
+<td>15 - 15</td>
+<td>SCU_PTDAT3_D15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int D16:1</td>
+<td>16 - 16</td>
+<td>SCU_PTDAT3_D16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int D17:1</td>
+<td>17 - 17</td>
+<td>SCU_PTDAT3_D17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int D18:1</td>
+<td>18 - 18</td>
+<td>SCU_PTDAT3_D18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int D19:1</td>
+<td>19 - 19</td>
+<td>SCU_PTDAT3_D19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int D20:1</td>
+<td>20 - 20</td>
+<td>SCU_PTDAT3_D20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int D21:1</td>
+<td>21 - 21</td>
+<td>SCU_PTDAT3_D21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int D22:1</td>
+<td>22 - 22</td>
+<td>SCU_PTDAT3_D22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int D23:1</td>
+<td>23 - 23</td>
+<td>SCU_PTDAT3_D23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int D24:1</td>
+<td>24 - 24</td>
+<td>SCU_PTDAT3_D24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int D25:1</td>
+<td>25 - 25</td>
+<td>SCU_PTDAT3_D25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int D26:1</td>
+<td>26 - 26</td>
+<td>SCU_PTDAT3_D26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int D27:1</td>
+<td>27 - 27</td>
+<td>SCU_PTDAT3_D27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int D28:1</td>
+<td>28 - 28</td>
+<td>SCU_PTDAT3_D28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int D29:1</td>
+<td>29 - 29</td>
+<td>SCU_PTDAT3_D29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int D30:1</td>
+<td>30 - 30</td>
+<td>SCU_PTDAT3_D30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int D31:1</td>
+<td>31 - 31</td>
+<td>SCU_PTDAT3_D31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_PTDAT3">SCU_PTDAT3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_SCLIR_t"><b>SCU_SCLIR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Software Configuration Latched Inputs Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_SCLIR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SW0PT0:1</td>
+<td>0 - 0</td>
+<td>SCU_SCLIR_SW0PT0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT1:1</td>
+<td>1 - 1</td>
+<td>SCU_SCLIR_SWOPT1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT2:1</td>
+<td>2 - 2</td>
+<td>SCU_SCLIR_SWOPT2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT3:1</td>
+<td>3 - 3</td>
+<td>SCU_SCLIR_SWOPT3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT4:1</td>
+<td>4 - 4</td>
+<td>SCU_SCLIR_SWOPT4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT5:1</td>
+<td>5 - 5</td>
+<td>SCU_SCLIR_SWOPT5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT6:1</td>
+<td>6 - 6</td>
+<td>SCU_SCLIR_SWOPT6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT7:1</td>
+<td>7 - 7</td>
+<td>SCU_SCLIR_SWOPT7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT8:1</td>
+<td>8 - 8</td>
+<td>SCU_SCLIR_SWOPT8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT9:1</td>
+<td>9 - 9</td>
+<td>SCU_SCLIR_SWOPT9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT10:1</td>
+<td>10 - 10</td>
+<td>SCU_SCLIR_SWOPT10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT11:1</td>
+<td>11 - 11</td>
+<td>SCU_SCLIR_SWOPT11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT12:1</td>
+<td>12 - 12</td>
+<td>SCU_SCLIR_SWOPT12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT13:1</td>
+<td>13 - 13</td>
+<td>SCU_SCLIR_SWOPT13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT14:1</td>
+<td>14 - 14</td>
+<td>SCU_SCLIR_SWOPT14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SWOPT15:1</td>
+<td>15 - 15</td>
+<td>SCU_SCLIR_SWOPT15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_SCLIR">SCU_SCLIR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_SCLKFDR_t"><b>SCU_SCLKFDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU System Clock Fractional Divider Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_SCLKFDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STEP:10</td>
+<td>0 - 9</td>
+<td>SCU_SCLKFDR_STEP_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SM:1</td>
+<td>11 - 11</td>
+<td>SCU_SCLKFDR_SM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SC:2</td>
+<td>12 - 13</td>
+<td>SCU_SCLKFDR_SC_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DM:2</td>
+<td>14 - 15</td>
+<td>SCU_SCLKFDR_DM_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RESULT:10</td>
+<td>16 - 25</td>
+<td>SCU_SCLKFDR_RESULT_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>28 - 28</td>
+<td>SCU_SCLKFDR_SUSACK_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SUSREQ:1</td>
+<td>29 - 29</td>
+<td>SCU_SCLKFDR_SUSREQ_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENHW:1</td>
+<td>30 - 30</td>
+<td>SCU_SCLKFDR_ENHW_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int DISCLK:1</td>
+<td>31 - 31</td>
+<td>SCU_SCLKFDR_DISCLK_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_SCLKFDR">SCU_SCLKFDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_STAT_t"><b>SCU_STAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Status Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_STAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FXI:1</td>
+<td>0 - 0</td>
+<td>SCU_STAT_FXI_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FUI:1</td>
+<td>1 - 1</td>
+<td>SCU_STAT_FUI_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int FZI:1</td>
+<td>2 - 2</td>
+<td>SCU_STAT_FZI_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int FVI:1</td>
+<td>3 - 3</td>
+<td>SCU_STAT_FVI_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int FII:1</td>
+<td>4 - 4</td>
+<td>SCU_STAT_FII_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int EEA:1</td>
+<td>8 - 8</td>
+<td>SCU_STAT_EEA_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int PARAV:1</td>
+<td>13 - 13</td>
+<td>SCU_STAT_PARAV_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_STAT">SCU_STAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_TCCON_t"><b>SCU_TCCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Temperature Compensation Control Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_TCCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TCV0:2</td>
+<td>0 - 1</td>
+<td>SCU_TCCON_TCV0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TCE0:1</td>
+<td>3 - 3</td>
+<td>SCU_TCCON_TCE0_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int TCC0:2</td>
+<td>4 - 5</td>
+<td>SCU_TCCON_TCC0_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TCS0:1</td>
+<td>7 - 7</td>
+<td>SCU_TCCON_TCS0_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TCDIV:8</td>
+<td>8 - 15</td>
+<td>SCU_TCCON_TCDIV_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TCV1:2</td>
+<td>16 - 17</td>
+<td>SCU_TCCON_TCV1_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int TCE1:1</td>
+<td>19 - 19</td>
+<td>SCU_TCCON_TCE1_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int TCC1:2</td>
+<td>20 - 21</td>
+<td>SCU_TCCON_TCC1_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int TCS1:1</td>
+<td>23 - 23</td>
+<td>SCU_TCCON_TCS1_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_TCCON">SCU_TCCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SCU_TCLRm_t"><b>SCU_TCLRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SCU Temperature Compensation n Level Register</b></td></tr>
+<tr><td colspan="5"><b>SCU_TCLRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int THMINn:8</td>
+<td>0 - 7</td>
+<td>SCU_TCLRm_THMINn_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int THMEDn:8</td>
+<td>8 - 15</td>
+<td>SCU_TCLRm_THMEDn_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int THMAXn:8</td>
+<td>16 - 23</td>
+<td>SCU_TCLRm_THMAXn_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int THCOUNT:8</td>
+<td>24 - 31</td>
+<td>SCU_TCLRm_THCOUNT_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#SCU_TCLR0">SCU_TCLR0</a>,    
+<a class="url" href="../scu.html#SCU_TCLR1">SCU_TCLR1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSC0_FSTAT_t"><b>SSC0_FSTAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSC0 FIFO Status Register</b></td></tr>
+<tr><td colspan="5"><b>SSC0_FSTAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RXFFL:4</td>
+<td>0 - 3</td>
+<td>SSC0_FSTAT_RXFFL_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TXFFL:4</td>
+<td>8 - 11</td>
+<td>SSC0_FSTAT_TXFFL_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_FSTAT">SSC0_FSTAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSC0_RXFCON_t"><b>SSC0_RXFCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSC0 Receive FIFO Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSC0_RXFCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RXFEN:1</td>
+<td>0 - 0</td>
+<td>SSC0_RXFCON_RXFEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int RXFFLU:1</td>
+<td>1 - 1</td>
+<td>SSC0_RXFCON_RXFFLU_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RXTMEN:1</td>
+<td>2 - 2</td>
+<td>SSC0_RXFCON_RXTMEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int RXFITL:4</td>
+<td>8 - 11</td>
+<td>SSC0_RXFCON_RXFITL_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_RXFCON">SSC0_RXFCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSC0_TXFCON_t"><b>SSC0_TXFCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSC0 Transmit FIFO Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSC0_TXFCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TXFEN:1</td>
+<td>0 - 0</td>
+<td>SSC0_TXFCON_TXFEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TXFFLU:1</td>
+<td>1 - 1</td>
+<td>SSC0_TXFCON_TXFFLU_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int TXTMEN:1</td>
+<td>2 - 2</td>
+<td>SSC0_TXFCON_TXTMEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TXFITL:4</td>
+<td>8 - 11</td>
+<td>SSC0_TXFCON_TXFITL_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_TXFCON">SSC0_TXFCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_BR_t"><b>SSCn_BR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Baud Rate Timer Reload Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_BR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BR_VALUE:16</td>
+<td>0 - 15</td>
+<td>SSCn_BR_BR_VALUE_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_BR">SSC0_BR</a>,    
+<a class="url" href="../ssc1.html#SSC1_BR">SSC1_BR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_CLC_t"><b>SSCn_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>SSCn_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>SSCn_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>SSCn_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EDIS:1</td>
+<td>3 - 3</td>
+<td>SSCn_CLC_EDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>SSCn_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>SSCn_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_CLC">SSC0_CLC</a>,    
+<a class="url" href="../ssc1.html#SSC1_CLC">SSC1_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_CON_t"><b>SSCn_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BM:4</td>
+<td>0 - 3</td>
+<td>SSCn_CON_BM_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int HB:1</td>
+<td>4 - 4</td>
+<td>SSCn_CON_HB_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PH:1</td>
+<td>5 - 5</td>
+<td>SSCn_CON_PH_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int PO:1</td>
+<td>6 - 6</td>
+<td>SSCn_CON_PO_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int LB:1</td>
+<td>7 - 7</td>
+<td>SSCn_CON_LB_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TEN:1</td>
+<td>8 - 8</td>
+<td>SSCn_CON_TEN_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>9 - 9</td>
+<td>SSCn_CON_REN_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int PEN:1</td>
+<td>10 - 10</td>
+<td>SSCn_CON_PEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int BEN:1</td>
+<td>11 - 11</td>
+<td>SSCn_CON_BEN_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int AREN:1</td>
+<td>12 - 12</td>
+<td>SSCn_CON_AREN_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int MS:1</td>
+<td>14 - 14</td>
+<td>SSCn_CON_MS_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int EN:1</td>
+<td>15 - 15</td>
+<td>SSCn_CON_EN_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_CON">SSC0_CON</a>,    
+<a class="url" href="../ssc1.html#SSC1_CON">SSC1_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_EFM_t"><b>SSCn_EFM_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Error Flag Modification Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_EFM_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CLRTE:1</td>
+<td>8 - 8</td>
+<td>SSCn_EFM_CLRTE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CLRRE:1</td>
+<td>9 - 9</td>
+<td>SSCn_EFM_CLRRE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CLRPE:1</td>
+<td>10 - 10</td>
+<td>SSCn_EFM_CLRPE_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CLRBE:1</td>
+<td>11 - 11</td>
+<td>SSCn_EFM_CLRBE_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SETTE:1</td>
+<td>12 - 12</td>
+<td>SSCn_EFM_SETTE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SETRE:1</td>
+<td>13 - 13</td>
+<td>SSCn_EFM_SETRE_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int SETPE:1</td>
+<td>14 - 14</td>
+<td>SSCn_EFM_SETPE_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETBE:1</td>
+<td>15 - 15</td>
+<td>SSCn_EFM_SETBE_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_EFM">SSC0_EFM</a>,    
+<a class="url" href="../ssc1.html#SSC1_EFM">SSC1_EFM</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_ESRC_t"><b>SSCn_ESRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Error Interrupt Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_ESRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>SSCn_ESRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>SSCn_ESRC_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>SSCn_ESRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>SSCn_ESRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>SSCn_ESRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>SSCn_ESRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_ESRC">SSC0_ESRC</a>,    
+<a class="url" href="../ssc1.html#SSC1_ESRC">SSC1_ESRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_FDR_t"><b>SSCn_FDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Fractional Divider Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_FDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STEP:10</td>
+<td>0 - 9</td>
+<td>SSCn_FDR_STEP_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SM:1</td>
+<td>11 - 11</td>
+<td>SSCn_FDR_SM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SC:2</td>
+<td>12 - 13</td>
+<td>SSCn_FDR_SC_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DM:2</td>
+<td>14 - 15</td>
+<td>SSCn_FDR_DM_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RESULT:10</td>
+<td>16 - 25</td>
+<td>SSCn_FDR_RESULT_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>28 - 28</td>
+<td>SSCn_FDR_SUSACK_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SUSREQ:1</td>
+<td>29 - 29</td>
+<td>SSCn_FDR_SUSREQ_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENHW:1</td>
+<td>30 - 30</td>
+<td>SSCn_FDR_ENHW_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int DISCLK:1</td>
+<td>31 - 31</td>
+<td>SSCn_FDR_DISCLK_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_FDR">SSC0_FDR</a>,    
+<a class="url" href="../ssc1.html#SSC1_FDR">SSC1_FDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_ID_t"><b>SSCn_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_ID">SSC0_ID</a>,    
+<a class="url" href="../ssc1.html#SSC1_ID">SSC1_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_PISEL_t"><b>SSCn_PISEL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Port Input Select Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_PISEL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MRIS:1</td>
+<td>0 - 0</td>
+<td>SSCn_PISEL_MRIS_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SRIS:1</td>
+<td>1 - 1</td>
+<td>SSCn_PISEL_SRIS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SCIS:1</td>
+<td>2 - 2</td>
+<td>SSCn_PISEL_SCIS_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SLSIS:3</td>
+<td>3 - 5</td>
+<td>SSCn_PISEL_SLSIS_MASK</td>
+<td>0x00000038</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int STIP:1</td>
+<td>8 - 8</td>
+<td>SSCn_PISEL_STIP_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_PISEL">SSC0_PISEL</a>,    
+<a class="url" href="../ssc1.html#SSC1_PISEL">SSC1_PISEL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_RB_t"><b>SSCn_RB_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Receive Buffer Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_RB_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RB_VALUE:16</td>
+<td>0 - 15</td>
+<td>SSCn_RB_RB_VALUE_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_RB">SSC0_RB</a>,    
+<a class="url" href="../ssc1.html#SSC1_RB">SSC1_RB</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_RSRC_t"><b>SSCn_RSRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Receive Interrupt Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_RSRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>SSCn_RSRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>SSCn_RSRC_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>SSCn_RSRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>SSCn_RSRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>SSCn_RSRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>SSCn_RSRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_RSRC">SSC0_RSRC</a>,    
+<a class="url" href="../ssc1.html#SSC1_RSRC">SSC1_RSRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_SSOC_t"><b>SSCn_SSOC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Slave Select Output Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_SSOC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int AOL0:1</td>
+<td>0 - 0</td>
+<td>SSCn_SSOC_AOL0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int AOL1:1</td>
+<td>1 - 1</td>
+<td>SSCn_SSOC_AOL1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int AOL2:1</td>
+<td>2 - 2</td>
+<td>SSCn_SSOC_AOL2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int AOL3:1</td>
+<td>3 - 3</td>
+<td>SSCn_SSOC_AOL3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int AOL4:1</td>
+<td>4 - 4</td>
+<td>SSCn_SSOC_AOL4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int AOL5:1</td>
+<td>5 - 5</td>
+<td>SSCn_SSOC_AOL5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int AOL6:1</td>
+<td>6 - 6</td>
+<td>SSCn_SSOC_AOL6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int AOL7:1</td>
+<td>7 - 7</td>
+<td>SSCn_SSOC_AOL7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int OEN0:1</td>
+<td>8 - 8</td>
+<td>SSCn_SSOC_OEN0_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int OEN1:1</td>
+<td>9 - 9</td>
+<td>SSCn_SSOC_OEN1_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int OEN2:1</td>
+<td>10 - 10</td>
+<td>SSCn_SSOC_OEN2_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OEN3:1</td>
+<td>11 - 11</td>
+<td>SSCn_SSOC_OEN3_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OEN4:1</td>
+<td>12 - 12</td>
+<td>SSCn_SSOC_OEN4_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int OEN5:1</td>
+<td>13 - 13</td>
+<td>SSCn_SSOC_OEN5_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int OEN6:1</td>
+<td>14 - 14</td>
+<td>SSCn_SSOC_OEN6_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OEN7:1</td>
+<td>15 - 15</td>
+<td>SSCn_SSOC_OEN7_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_SSOC">SSC0_SSOC</a>,    
+<a class="url" href="../ssc1.html#SSC1_SSOC">SSC1_SSOC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_SSOTC_t"><b>SSCn_SSOTC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Slave Select Output Timing Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_SSOTC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEAD:2</td>
+<td>0 - 1</td>
+<td>SSCn_SSOTC_LEAD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TRAIL:2</td>
+<td>2 - 3</td>
+<td>SSCn_SSOTC_TRAIL_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int INACT:2</td>
+<td>4 - 5</td>
+<td>SSCn_SSOTC_INACT_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SLSO7MOD:1</td>
+<td>8 - 8</td>
+<td>SSCn_SSOTC_SLSO7MOD_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_SSOTC">SSC0_SSOTC</a>,    
+<a class="url" href="../ssc1.html#SSC1_SSOTC">SSC1_SSOTC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_STAT_t"><b>SSCn_STAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Status Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_STAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BC:4</td>
+<td>0 - 3</td>
+<td>SSCn_STAT_BC_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TE:1</td>
+<td>8 - 8</td>
+<td>SSCn_STAT_TE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RE:1</td>
+<td>9 - 9</td>
+<td>SSCn_STAT_RE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int PE:1</td>
+<td>10 - 10</td>
+<td>SSCn_STAT_PE_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int BE:1</td>
+<td>11 - 11</td>
+<td>SSCn_STAT_BE_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int BSY:1</td>
+<td>12 - 12</td>
+<td>SSCn_STAT_BSY_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_STAT">SSC0_STAT</a>,    
+<a class="url" href="../ssc1.html#SSC1_STAT">SSC1_STAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_TB_t"><b>SSCn_TB_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Transmit Buffer Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_TB_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TB_VALUE:16</td>
+<td>0 - 15</td>
+<td>SSCn_TB_TB_VALUE_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_TB">SSC0_TB</a>,    
+<a class="url" href="../ssc1.html#SSC1_TB">SSC1_TB</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SSCn_TSRC_t"><b>SSCn_TSRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SSCn Transmit Interrupt Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>SSCn_TSRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>SSCn_TSRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>SSCn_TSRC_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>SSCn_TSRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>SSCn_TSRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>SSCn_TSRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>SSCn_TSRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ssc0.html#SSC0_TSRC">SSC0_TSRC</a>,    
+<a class="url" href="../ssc1.html#SSC1_TSRC">SSC1_TSRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ssc0.html">SSC0</a>, 
+<a class="url" href="../ssc1.html">SSC1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_CAP_t"><b>STM_CAP_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Capture Register</b></td></tr>
+<tr><td colspan="5"><b>STM_CAP_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_CAP_55_32:24</td>
+<td>0 - 23</td>
+<td>STM_CAP_STM_CAP_55_32_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_CAP">STM_CAP</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_CLC_t"><b>STM_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>STM_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>STM_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>STM_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>STM_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EDIS:1</td>
+<td>3 - 3</td>
+<td>STM_CLC_EDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>STM_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>STM_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int RMC:3</td>
+<td>8 - 10</td>
+<td>STM_CLC_RMC_MASK</td>
+<td>0x00000700</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_CLC">STM_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_CMCON_t"><b>STM_CMCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Compare Match Control Register</b></td></tr>
+<tr><td colspan="5"><b>STM_CMCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MSIZE0:5</td>
+<td>0 - 4</td>
+<td>STM_CMCON_MSIZE0_MASK</td>
+<td>0x0000001f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MSTART0:5</td>
+<td>8 - 12</td>
+<td>STM_CMCON_MSTART0_MASK</td>
+<td>0x00001f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MSIZE1:5</td>
+<td>16 - 20</td>
+<td>STM_CMCON_MSIZE1_MASK</td>
+<td>0x001f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MSTART1:5</td>
+<td>24 - 28</td>
+<td>STM_CMCON_MSTART1_MASK</td>
+<td>0x1f000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_CMCON">STM_CMCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_CMPm_t"><b>STM_CMPm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Compare Register 1</b></td></tr>
+<tr><td colspan="5"><b>STM_CMPm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CMPVAL:32</td>
+<td>0 - 31</td>
+<td>STM_CMPm_CMPVAL_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_CMP0">STM_CMP0</a>,    
+<a class="url" href="../stm.html#STM_CMP1">STM_CMP1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_ICR_t"><b>STM_ICR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Interrupt Control Register</b></td></tr>
+<tr><td colspan="5"><b>STM_ICR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CMP0EN:1</td>
+<td>0 - 0</td>
+<td>STM_ICR_CMP0EN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CMP0IR:1</td>
+<td>1 - 1</td>
+<td>STM_ICR_CMP0IR_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CMP0OS:1</td>
+<td>2 - 2</td>
+<td>STM_ICR_CMP0OS_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CMP1EN:1</td>
+<td>4 - 4</td>
+<td>STM_ICR_CMP1EN_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CMP1IR:1</td>
+<td>5 - 5</td>
+<td>STM_ICR_CMP1IR_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CMP1OS:1</td>
+<td>6 - 6</td>
+<td>STM_ICR_CMP1OS_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_ICR">STM_ICR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_ID_t"><b>STM_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>STM_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_ID">STM_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_ISRR_t"><b>STM_ISRR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Interrupt Set/Reset Register</b></td></tr>
+<tr><td colspan="5"><b>STM_ISRR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CMP0IRR:1</td>
+<td>0 - 0</td>
+<td>STM_ISRR_CMP0IRR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CMP0IRS:1</td>
+<td>1 - 1</td>
+<td>STM_ISRR_CMP0IRS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CMP1IRR:1</td>
+<td>2 - 2</td>
+<td>STM_ISRR_CMP1IRR_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CMP1IRS:1</td>
+<td>3 - 3</td>
+<td>STM_ISRR_CMP1IRS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_ISRR">STM_ISRR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_SRCm_t"><b>STM_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Service Request Control Register n</b></td></tr>
+<tr><td colspan="5"><b>STM_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>STM_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>STM_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>STM_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>STM_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>STM_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>STM_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_SRC0">STM_SRC0</a>,    
+<a class="url" href="../stm.html#STM_SRC1">STM_SRC1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_TIM0_t"><b>STM_TIM0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Register 0</b></td></tr>
+<tr><td colspan="5"><b>STM_TIM0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_31_0:32</td>
+<td>0 - 31</td>
+<td>STM_TIM0_STM_31_0_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_TIM0">STM_TIM0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_TIM1_t"><b>STM_TIM1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Register 1</b></td></tr>
+<tr><td colspan="5"><b>STM_TIM1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_35_4:32</td>
+<td>0 - 31</td>
+<td>STM_TIM1_STM_35_4_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_TIM1">STM_TIM1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_TIM2_t"><b>STM_TIM2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Register 2</b></td></tr>
+<tr><td colspan="5"><b>STM_TIM2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_39_8:32</td>
+<td>0 - 31</td>
+<td>STM_TIM2_STM_39_8_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_TIM2">STM_TIM2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_TIM3_t"><b>STM_TIM3_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Register 3</b></td></tr>
+<tr><td colspan="5"><b>STM_TIM3_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_43_12:32</td>
+<td>0 - 31</td>
+<td>STM_TIM3_STM_43_12_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_TIM3">STM_TIM3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_TIM4_t"><b>STM_TIM4_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Register 4</b></td></tr>
+<tr><td colspan="5"><b>STM_TIM4_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_47_16:32</td>
+<td>0 - 31</td>
+<td>STM_TIM4_STM_47_16_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_TIM4">STM_TIM4</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_TIM5_t"><b>STM_TIM5_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Register 5</b></td></tr>
+<tr><td colspan="5"><b>STM_TIM5_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_51_20:32</td>
+<td>0 - 31</td>
+<td>STM_TIM5_STM_51_20_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_TIM5">STM_TIM5</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="STM_TIM6_t"><b>STM_TIM6_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>STM Timer Register 6</b></td></tr>
+<tr><td colspan="5"><b>STM_TIM6_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STM_55_32:24</td>
+<td>0 - 23</td>
+<td>STM_TIM6_STM_55_32_MASK</td>
+<td>0x00ffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../stm.html#STM_TIM6">STM_TIM6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../stm.html">STM</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SWEVT_t"><b>SWEVT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Software Break Event Specifier Register</b></td></tr>
+<tr><td colspan="5"><b>SWEVT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../core_debug.html#SWEVT">SWEVT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../core_debug.html">Core_Debug</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="SYSCON_t"><b>SYSCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>System Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>SYSCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../csfr.html#SYSCON">SYSCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../csfr.html">CSFR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

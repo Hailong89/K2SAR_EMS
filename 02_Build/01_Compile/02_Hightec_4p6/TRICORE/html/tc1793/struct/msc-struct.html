@@ -1,0 +1,180 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1793/msc-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1793_MSC_STRUCTS_H_
+#define _TC1793_MSC_STRUCTS_H_
+/*
+   TriCore TC1793
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1793/<a class="url" href="../msc0.html">msc0.h</a>&gt;
+#ifndef MSC0_BASE
+#define MSC0_BASE 0xf0000800
+#endif /* MSC0_BASE */
+</pre>
+<pre>
+#include &lt;tc1793/<a class="url" href="../msc1.html">msc1.h</a>&gt;
+#ifndef MSC1_BASE
+#define MSC1_BASE 0xf0000900
+#endif /* MSC1_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_CLC_t">MSCn_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved1[0x1];</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_ID_t">MSCn_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_FDR_t">MSCn_FDR_t</a></td>
+<td>FDR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_USR_t">MSCn_USR_t</a></td>
+<td>USR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_DSC_t">MSCn_DSC_t</a></td>
+<td>DSC;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_DSS_t">MSCn_DSS_t</a></td>
+<td>DSS;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_DD_t">MSCn_DD_t</a></td>
+<td>DD;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_DC_t">MSCn_DC_t</a></td>
+<td>DC;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_DSDSL_t">MSCn_DSDSL_t</a></td>
+<td>DSDSL;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_DSDSH_t">MSCn_DSDSH_t</a></td>
+<td>DSDSH;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_ESR_t">MSCn_ESR_t</a></td>
+<td>ESR;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>UD0;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>UD1;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>UD2;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>UD3;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_ICR_t">MSCn_ICR_t</a></td>
+<td>ICR;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_ISR_t">MSCn_ISR_t</a></td>
+<td>ISR;</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_ISC_t">MSCn_ISC_t</a></td>
+<td>ISC;</td>
+<td>/* 0x48 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_OCR_t">MSCn_OCR_t</a></td>
+<td>OCR;</td>
+<td>/* 0x4c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved20[0x2a];</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_SRCm_t">MSCn_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0xf8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MSCn_SRCm_t">MSCn_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0xfc */</td>
+</tr>
+
+<tr><td colspan="4">} MSC_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1793_MSC_STRUCTS_H_ */ -->
+</body>
+</html>

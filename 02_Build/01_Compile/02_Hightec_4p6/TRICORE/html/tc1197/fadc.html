@@ -1,0 +1,4660 @@
+<html>
+<head>
+<title>TriCore TC1197 (FADC)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>FADC</h2>
+
+<h2><tt>#include &lt;tc1197/fadc.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#FADC_CLC">FADC_CLC</a></td>
+<td>Clock Control Register</td>
+<td>0xF0100400</td>
+<td><a class="url" href="types/f.html#FADC_CLC_t">FADC_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FDR">FADC_FDR</a></td>
+<td>Fractional Divider Register</td>
+<td>0xF010040C</td>
+<td><a class="url" href="types/f.html#FADC_FDR_t">FADC_FDR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRSR">FADC_CRSR</a></td>
+<td>Conversion Request Status Register</td>
+<td>0xF0100410</td>
+<td><a class="url" href="types/f.html#FADC_CRSR_t">FADC_CRSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FMR">FADC_FMR</a></td>
+<td>Flag Modification Register</td>
+<td>0xF0100414</td>
+<td><a class="url" href="types/f.html#FADC_FMR_t">FADC_FMR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_NCTR">FADC_NCTR</a></td>
+<td>Neighbor Channel Trigger Register</td>
+<td>0xF0100418</td>
+<td><a class="url" href="types/f.html#FADC_NCTR_t">FADC_NCTR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_GCR">FADC_GCR</a></td>
+<td>Global Control Register</td>
+<td>0xF010041C</td>
+<td><a class="url" href="types/f.html#FADC_GCR_t">FADC_GCR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CFGR0">FADC_CFGR0</a></td>
+<td>Channel 0 Configuration Register</td>
+<td>0xF0100420</td>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CFGR1">FADC_CFGR1</a></td>
+<td>Channel 1 Configuration Register</td>
+<td>0xF0100424</td>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CFGR2">FADC_CFGR2</a></td>
+<td>Channel 2 Configuration Register</td>
+<td>0xF0100428</td>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CFGR3">FADC_CFGR3</a></td>
+<td>Channel 3 Configuration Register</td>
+<td>0xF010042C</td>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ACR0">FADC_ACR0</a></td>
+<td>Channel 0 Analog Control Register</td>
+<td>0xF0100430</td>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ACR1">FADC_ACR1</a></td>
+<td>Channel 1 Analog Control Register</td>
+<td>0xF0100434</td>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ACR2">FADC_ACR2</a></td>
+<td>Channel 2 Analog Control Register</td>
+<td>0xF0100438</td>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ACR3">FADC_ACR3</a></td>
+<td>Channel 3 Analog Control Register</td>
+<td>0xF010043C</td>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_RCH0">FADC_RCH0</a></td>
+<td>Channel 0 Conversion Result Register</td>
+<td>0xF0100440</td>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_RCH1">FADC_RCH1</a></td>
+<td>Channel 1 Conversion Result Register</td>
+<td>0xF0100444</td>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_RCH2">FADC_RCH2</a></td>
+<td>Channel 2 Conversion Result Register</td>
+<td>0xF0100448</td>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_RCH3">FADC_RCH3</a></td>
+<td>Channel 3 Conversion Result Register</td>
+<td>0xF010044C</td>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ALR">FADC_ALR</a></td>
+<td>Alias Register</td>
+<td>0xF0100454</td>
+<td><a class="url" href="types/f.html#FADC_ALR_t">FADC_ALR_t</a></td>
+<td>0x000000E4</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FCR0">FADC_FCR0</a></td>
+<td>Filter 0 Control Register</td>
+<td>0xF0100460</td>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRR0">FADC_CRR0</a></td>
+<td>Filter 0 Current Result Register</td>
+<td>0xF0100464</td>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR10">FADC_IRR10</a></td>
+<td>Filter 0 Intermediate Result Register 1</td>
+<td>0xF0100468</td>
+<td><a class="url" href="types/f.html#FADC_IRR10_t">FADC_IRR10_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR20">FADC_IRR20</a></td>
+<td>Filter 0 Intermediate Result Register 2</td>
+<td>0xF010046C</td>
+<td><a class="url" href="types/f.html#FADC_IRR20_t">FADC_IRR20_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR30">FADC_IRR30</a></td>
+<td>Filter 0 Intermediate Result Register 3</td>
+<td>0xF0100470</td>
+<td><a class="url" href="types/f.html#FADC_IRR30_t">FADC_IRR30_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FRR0">FADC_FRR0</a></td>
+<td>Filter 0 Final Result Register</td>
+<td>0xF0100474</td>
+<td><a class="url" href="types/f.html#FADC_FRR0_t">FADC_FRR0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FCR1">FADC_FCR1</a></td>
+<td>Filter 1 Control Register</td>
+<td>0xF0100480</td>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRR1">FADC_CRR1</a></td>
+<td>Filter 1 Current Result Register</td>
+<td>0xF0100484</td>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR11">FADC_IRR11</a></td>
+<td>Filter 1 Intermediate Result Register 1</td>
+<td>0xF0100488</td>
+<td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FRR1">FADC_FRR1</a></td>
+<td>Filter 1 Final Result Register</td>
+<td>0xF0100494</td>
+<td><a class="url" href="types/f.html#FADC_FRRm_t">FADC_FRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SFRR1">FADC_SFRR1</a></td>
+<td>Filter 1 Shifted Final Result Register</td>
+<td>0xF0100498</td>
+<td><a class="url" href="types/f.html#FADC_SFRRm_t">FADC_SFRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FCR2">FADC_FCR2</a></td>
+<td>Filter 2 Control Register</td>
+<td>0xF01004A0</td>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRR2">FADC_CRR2</a></td>
+<td>Filter 2 Current Result Register</td>
+<td>0xF01004A4</td>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR12">FADC_IRR12</a></td>
+<td>Filter 2 Intermediate Result Register 1</td>
+<td>0xF01004A8</td>
+<td><a class="url" href="types/f.html#FADC_IRR12_t">FADC_IRR12_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR22">FADC_IRR22</a></td>
+<td>Filter 2 Intermediate Result Register 2</td>
+<td>0xF01004AC</td>
+<td><a class="url" href="types/f.html#FADC_IRR22_t">FADC_IRR22_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR32">FADC_IRR32</a></td>
+<td>Filter 2 Intermediate Result Register 3</td>
+<td>0xF01004B0</td>
+<td><a class="url" href="types/f.html#FADC_IRR32_t">FADC_IRR32_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FRR2">FADC_FRR2</a></td>
+<td>Filter 2 Final Result Register</td>
+<td>0xF01004B4</td>
+<td><a class="url" href="types/f.html#FADC_FRR2_t">FADC_FRR2_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FCR3">FADC_FCR3</a></td>
+<td>Filter 3 Control Register</td>
+<td>0xF01004C0</td>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRR3">FADC_CRR3</a></td>
+<td>Filter 3 Current Result Register</td>
+<td>0xF01004C4</td>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR13">FADC_IRR13</a></td>
+<td>Filter 3 Intermediate Result Register 1</td>
+<td>0xF01004C8</td>
+<td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FRR3">FADC_FRR3</a></td>
+<td>Filter 3 Final Result Register</td>
+<td>0xF01004D4</td>
+<td><a class="url" href="types/f.html#FADC_FRRm_t">FADC_FRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SFRR3">FADC_SFRR3</a></td>
+<td>Filter 3 Shifted Final Result Register</td>
+<td>0xF01004D8</td>
+<td><a class="url" href="types/f.html#FADC_SFRRm_t">FADC_SFRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC3">FADC_SRC3</a></td>
+<td>Service Request Control Register 3</td>
+<td>0xF01004F0</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC2">FADC_SRC2</a></td>
+<td>Service Request Control Register 2</td>
+<td>0xF01004F4</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC1">FADC_SRC1</a></td>
+<td>Service Request Control Register 1</td>
+<td>0xF01004F8</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC0">FADC_SRC0</a></td>
+<td>Service Request Control Register 0</td>
+<td>0xF01004FC</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_ACR0">FADC_ACR0</a>,
+<a class="url" href="fadc.html#FADC_ACR1">FADC_ACR1</a>,
+<a class="url" href="fadc.html#FADC_ACR2">FADC_ACR2</a>,
+<a class="url" href="fadc.html#FADC_ACR3">FADC_ACR3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_ALR_t">FADC_ALR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_ALR">FADC_ALR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CFGR0">FADC_CFGR0</a>,
+<a class="url" href="fadc.html#FADC_CFGR1">FADC_CFGR1</a>,
+<a class="url" href="fadc.html#FADC_CFGR2">FADC_CFGR2</a>,
+<a class="url" href="fadc.html#FADC_CFGR3">FADC_CFGR3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CLC_t">FADC_CLC_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CLC">FADC_CLC</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CRR0">FADC_CRR0</a>,
+<a class="url" href="fadc.html#FADC_CRR1">FADC_CRR1</a>,
+<a class="url" href="fadc.html#FADC_CRR2">FADC_CRR2</a>,
+<a class="url" href="fadc.html#FADC_CRR3">FADC_CRR3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CRSR_t">FADC_CRSR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CRSR">FADC_CRSR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FCR0">FADC_FCR0</a>,
+<a class="url" href="fadc.html#FADC_FCR1">FADC_FCR1</a>,
+<a class="url" href="fadc.html#FADC_FCR2">FADC_FCR2</a>,
+<a class="url" href="fadc.html#FADC_FCR3">FADC_FCR3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FDR_t">FADC_FDR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FDR">FADC_FDR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FMR_t">FADC_FMR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FMR">FADC_FMR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FRR0_t">FADC_FRR0_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FRR0">FADC_FRR0</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FRR2_t">FADC_FRR2_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FRR2">FADC_FRR2</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FRRm_t">FADC_FRRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FRR1">FADC_FRR1</a>,
+<a class="url" href="fadc.html#FADC_FRR3">FADC_FRR3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_GCR_t">FADC_GCR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_GCR">FADC_GCR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRR10_t">FADC_IRR10_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR10">FADC_IRR10</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRR12_t">FADC_IRR12_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR12">FADC_IRR12</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRR20_t">FADC_IRR20_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR20">FADC_IRR20</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRR22_t">FADC_IRR22_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR22">FADC_IRR22</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRR30_t">FADC_IRR30_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR30">FADC_IRR30</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRR32_t">FADC_IRR32_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR32">FADC_IRR32</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR11">FADC_IRR11</a>,
+<a class="url" href="fadc.html#FADC_IRR13">FADC_IRR13</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_NCTR_t">FADC_NCTR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_NCTR">FADC_NCTR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_RCH0">FADC_RCH0</a>,
+<a class="url" href="fadc.html#FADC_RCH1">FADC_RCH1</a>,
+<a class="url" href="fadc.html#FADC_RCH2">FADC_RCH2</a>,
+<a class="url" href="fadc.html#FADC_RCH3">FADC_RCH3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_SFRRm_t">FADC_SFRRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_SFRR1">FADC_SFRR1</a>,
+<a class="url" href="fadc.html#FADC_SFRR3">FADC_SFRR3</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_SRC3">FADC_SRC3</a>,
+<a class="url" href="fadc.html#FADC_SRC2">FADC_SRC2</a>,
+<a class="url" href="fadc.html#FADC_SRC1">FADC_SRC1</a>,
+<a class="url" href="fadc.html#FADC_SRC0">FADC_SRC0</a>
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="FADC_CLC">&nbsp;</a>
+<h3>FADC_CLC</h3>
+<h3>"Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CLC_ADDR = 0xF0100400</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CLC_t">FADC_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CLC.bits</b>&nbsp;&quot;Clock Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FADC_CLC_DISR_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>FADC_CLC_DISR_SHIFT</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FADC_CLC_DISS_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>r</td>
+<td>FADC_CLC_DISS_SHIFT</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_CLC_SPEN_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>FADC_CLC_SPEN_SHIFT</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_CLC_EDIS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>FADC_CLC_EDIS_SHIFT</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FADC_CLC_SBWE_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>FADC_CLC_SBWE_SHIFT</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FADC_CLC_FSOE_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>FADC_CLC_FSOE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CLC_MASK</td><td><tt>0x0000003f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000002f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000003d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FDR">&nbsp;</a>
+<h3>FADC_FDR</h3>
+<h3>"Fractional Divider Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FDR_ADDR = 0xF010040C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FDR_t">FADC_FDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FDR.bits</b>&nbsp;&quot;Fractional Divider Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STEP</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>FADC_FDR_STEP_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rw</td>
+<td>FADC_FDR_STEP_SHIFT</td>
+</tr>
+<tr>
+<td>SM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FADC_FDR_SM_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>FADC_FDR_SM_SHIFT</td>
+</tr>
+<tr>
+<td>SC</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>FADC_FDR_SC_MASK</td>
+<td><tt>0x00003000</tt></td>
+<td>rw</td>
+<td>FADC_FDR_SC_SHIFT</td>
+</tr>
+<tr>
+<td>DM</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>FADC_FDR_DM_MASK</td>
+<td><tt>0x0000c000</tt></td>
+<td>rw</td>
+<td>FADC_FDR_DM_SHIFT</td>
+</tr>
+<tr>
+<td>RESULT</td>
+<td>10</td>
+<td>16 - 25</td>
+<td>FADC_FDR_RESULT_MASK</td>
+<td><tt>0x03ff0000</tt></td>
+<td>rh</td>
+<td>FADC_FDR_RESULT_SHIFT</td>
+</tr>
+<tr>
+<td>SUSACK</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>FADC_FDR_SUSACK_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>FADC_FDR_SUSACK_SHIFT</td>
+</tr>
+<tr>
+<td>SUSREQ</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>FADC_FDR_SUSREQ_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rh</td>
+<td>FADC_FDR_SUSREQ_SHIFT</td>
+</tr>
+<tr>
+<td>ENHW</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>FADC_FDR_ENHW_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>FADC_FDR_ENHW_SHIFT</td>
+</tr>
+<tr>
+<td>DISCLK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FADC_FDR_DISCLK_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rwh</td>
+<td>FADC_FDR_DISCLK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FDR_MASK</td><td><tt>0xf3fffbff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf3fffbff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xc000fbff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xb3ff0000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRSR">&nbsp;</a>
+<h3>FADC_CRSR</h3>
+<h3>"Conversion Request Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRSR_ADDR = 0xF0100410</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRSR_t">FADC_CRSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CRSR.bits</b>&nbsp;&quot;Conversion Request Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CRF0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FADC_CRSR_CRF0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_CRF0_SHIFT</td>
+</tr>
+<tr>
+<td>CRF1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FADC_CRSR_CRF1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_CRF1_SHIFT</td>
+</tr>
+<tr>
+<td>CRF2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_CRSR_CRF2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_CRF2_SHIFT</td>
+</tr>
+<tr>
+<td>CRF3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_CRSR_CRF3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_CRF3_SHIFT</td>
+</tr>
+<tr>
+<td>BSY0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FADC_CRSR_BSY0_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_BSY0_SHIFT</td>
+</tr>
+<tr>
+<td>BSY1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FADC_CRSR_BSY1_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_BSY1_SHIFT</td>
+</tr>
+<tr>
+<td>BSY2</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_CRSR_BSY2_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_BSY2_SHIFT</td>
+</tr>
+<tr>
+<td>BSY3</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FADC_CRSR_BSY3_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_BSY3_SHIFT</td>
+</tr>
+<tr>
+<td>IRQ0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>FADC_CRSR_IRQ0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQ0_SHIFT</td>
+</tr>
+<tr>
+<td>IRQ1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>FADC_CRSR_IRQ1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQ1_SHIFT</td>
+</tr>
+<tr>
+<td>IRQ2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>FADC_CRSR_IRQ2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQ2_SHIFT</td>
+</tr>
+<tr>
+<td>IRQ3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>FADC_CRSR_IRQ3_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQ3_SHIFT</td>
+</tr>
+<tr>
+<td>IRQF0</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>FADC_CRSR_IRQF0_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQF0_SHIFT</td>
+</tr>
+<tr>
+<td>IRQF1</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>FADC_CRSR_IRQF1_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQF1_SHIFT</td>
+</tr>
+<tr>
+<td>IRQF2</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>FADC_CRSR_IRQF2_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQF2_SHIFT</td>
+</tr>
+<tr>
+<td>IRQF3</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>FADC_CRSR_IRQF3_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rh</td>
+<td>FADC_CRSR_IRQF3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CRSR_MASK</td><td><tt>0x00ff0f0f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00ff0f0f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00ff0f0f</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FMR">&nbsp;</a>
+<h3>FADC_FMR</h3>
+<h3>"Flag Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FMR_ADDR = 0xF0100414</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FMR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FMR_t">FADC_FMR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FMR.bits</b>&nbsp;&quot;Flag Modification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RCRF0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FADC_FMR_RCRF0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>FADC_FMR_RCRF0_SHIFT</td>
+</tr>
+<tr>
+<td>RCRF1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FADC_FMR_RCRF1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>FADC_FMR_RCRF1_SHIFT</td>
+</tr>
+<tr>
+<td>RCRF2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_FMR_RCRF2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>FADC_FMR_RCRF2_SHIFT</td>
+</tr>
+<tr>
+<td>RCRF3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_FMR_RCRF3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>FADC_FMR_RCRF3_SHIFT</td>
+</tr>
+<tr>
+<td>SCRF0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FADC_FMR_SCRF0_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>FADC_FMR_SCRF0_SHIFT</td>
+</tr>
+<tr>
+<td>SCRF1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FADC_FMR_SCRF1_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>FADC_FMR_SCRF1_SHIFT</td>
+</tr>
+<tr>
+<td>SCRF2</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_FMR_SCRF2_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>FADC_FMR_SCRF2_SHIFT</td>
+</tr>
+<tr>
+<td>SCRF3</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FADC_FMR_SCRF3_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>FADC_FMR_SCRF3_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQ0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>FADC_FMR_RIRQ0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQ0_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQ1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>FADC_FMR_RIRQ1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQ1_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQ2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>FADC_FMR_RIRQ2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQ2_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQ3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>FADC_FMR_RIRQ3_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQ3_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQF0</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>FADC_FMR_RIRQF0_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQF0_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQF1</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>FADC_FMR_RIRQF1_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQF1_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQF2</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>FADC_FMR_RIRQF2_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQF2_SHIFT</td>
+</tr>
+<tr>
+<td>RIRQF3</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>FADC_FMR_RIRQF3_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>FADC_FMR_RIRQF3_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQ0</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>FADC_FMR_SIRQ0_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQ0_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQ1</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>FADC_FMR_SIRQ1_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQ1_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQ2</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>FADC_FMR_SIRQ2_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQ2_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQ3</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>FADC_FMR_SIRQ3_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQ3_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQF0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>FADC_FMR_SIRQF0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQF0_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQF1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>FADC_FMR_SIRQF1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQF1_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQF2</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>FADC_FMR_SIRQF2_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQF2_SHIFT</td>
+</tr>
+<tr>
+<td>SIRQF3</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FADC_FMR_SIRQF3_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>w</td>
+<td>FADC_FMR_SIRQF3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FMR_MASK</td><td><tt>0xffff0f0f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffff0f0f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_NCTR">&nbsp;</a>
+<h3>FADC_NCTR</h3>
+<h3>"Neighbor Channel Trigger Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_NCTR_ADDR = 0xF0100418</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_NCTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_NCTR_t">FADC_NCTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_NCTR.bits</b>&nbsp;&quot;Neighbor Channel Trigger Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EN01</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FADC_NCTR_EN01_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN01_SHIFT</td>
+</tr>
+<tr>
+<td>EN02</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_NCTR_EN02_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN02_SHIFT</td>
+</tr>
+<tr>
+<td>EN03</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_NCTR_EN03_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN03_SHIFT</td>
+</tr>
+<tr>
+<td>EN10</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FADC_NCTR_EN10_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN10_SHIFT</td>
+</tr>
+<tr>
+<td>EN12</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_NCTR_EN12_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN12_SHIFT</td>
+</tr>
+<tr>
+<td>EN13</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FADC_NCTR_EN13_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN13_SHIFT</td>
+</tr>
+<tr>
+<td>EN20</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>FADC_NCTR_EN20_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN20_SHIFT</td>
+</tr>
+<tr>
+<td>EN21</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>FADC_NCTR_EN21_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN21_SHIFT</td>
+</tr>
+<tr>
+<td>EN23</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>FADC_NCTR_EN23_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN23_SHIFT</td>
+</tr>
+<tr>
+<td>EN30</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>FADC_NCTR_EN30_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN30_SHIFT</td>
+</tr>
+<tr>
+<td>EN31</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>FADC_NCTR_EN31_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN31_SHIFT</td>
+</tr>
+<tr>
+<td>EN32</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>FADC_NCTR_EN32_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>FADC_NCTR_EN32_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_NCTR_MASK</td><td><tt>0x070b0d0e</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x070b0d0e</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x070b0d0e</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_GCR">&nbsp;</a>
+<h3>FADC_GCR</h3>
+<h3>"Global Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_GCR_ADDR = 0xF010041C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_GCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_GCR_t">FADC_GCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_GCR.bits</b>&nbsp;&quot;Global Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RCT0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FADC_GCR_RCT0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>FADC_GCR_RCT0_SHIFT</td>
+</tr>
+<tr>
+<td>RCT1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FADC_GCR_RCT1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>FADC_GCR_RCT1_SHIFT</td>
+</tr>
+<tr>
+<td>RCT2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_GCR_RCT2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>FADC_GCR_RCT2_SHIFT</td>
+</tr>
+<tr>
+<td>RCT3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_GCR_RCT3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>FADC_GCR_RCT3_SHIFT</td>
+</tr>
+<tr>
+<td>RCD</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FADC_GCR_RCD_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>FADC_GCR_RCD_SHIFT</td>
+</tr>
+<tr>
+<td>RSTF0</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FADC_GCR_RSTF0_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>FADC_GCR_RSTF0_SHIFT</td>
+</tr>
+<tr>
+<td>RSTF1</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_GCR_RSTF1_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>FADC_GCR_RSTF1_SHIFT</td>
+</tr>
+<tr>
+<td>RSTF2</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FADC_GCR_RSTF2_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>FADC_GCR_RSTF2_SHIFT</td>
+</tr>
+<tr>
+<td>RSTF3</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_GCR_RSTF3_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>w</td>
+<td>FADC_GCR_RSTF3_SHIFT</td>
+</tr>
+<tr>
+<td>CRPRIO</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>FADC_GCR_CRPRIO_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rwh</td>
+<td>FADC_GCR_CRPRIO_SHIFT</td>
+</tr>
+<tr>
+<td>DPAEN</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>FADC_GCR_DPAEN_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>FADC_GCR_DPAEN_SHIFT</td>
+</tr>
+<tr>
+<td>RESWEN</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>FADC_GCR_RESWEN_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>FADC_GCR_RESWEN_SHIFT</td>
+</tr>
+<tr>
+<td>MUXTM</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>FADC_GCR_MUXTM_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>FADC_GCR_MUXTM_SHIFT</td>
+</tr>
+<tr>
+<td>ANON</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>FADC_GCR_ANON_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rw</td>
+<td>FADC_GCR_ANON_SHIFT</td>
+</tr>
+<tr>
+<td>CALMODE</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>FADC_GCR_CALMODE_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>FADC_GCR_CALMODE_SHIFT</td>
+</tr>
+<tr>
+<td>CALCH</td>
+<td>2</td>
+<td>26 - 27</td>
+<td>FADC_GCR_CALCH_MASK</td>
+<td><tt>0x0c000000</tt></td>
+<td>rw</td>
+<td>FADC_GCR_CALCH_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_GCR_MASK</td><td><tt>0x0f3f1f0f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0f3f0000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0f3f1f0f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00030000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CFGR0">&nbsp;</a>
+<h3>FADC_CFGR0</h3>
+<h3>"Channel 0 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CFGR0_ADDR = 0xF0100420</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CFGRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CFGR0.bits</b>&nbsp;&quot;Channel 0 Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GSEL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_CFGRm_GSEL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GSEL_SHIFT</td>
+</tr>
+<tr>
+<td>TSEL</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>FADC_CFGRm_TSEL_MASK</td>
+<td><tt>0x00000038</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TSEL_SHIFT</td>
+</tr>
+<tr>
+<td>GM</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>FADC_CFGRm_GM_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GM_SHIFT</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>FADC_CFGRm_TM_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TM_SHIFT</td>
+</tr>
+<tr>
+<td>CTM</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>FADC_CFGRm_CTM_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTM_SHIFT</td>
+</tr>
+<tr>
+<td>CTF</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>FADC_CFGRm_CTF_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTF_SHIFT</td>
+</tr>
+<tr>
+<td>CTREL</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>FADC_CFGRm_CTREL_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTREL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CFGRm_INP_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FADC_CFGRm_IEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CFGRm_MASK</td><td><tt>0xb0ff7fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CFGR1">&nbsp;</a>
+<h3>FADC_CFGR1</h3>
+<h3>"Channel 1 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CFGR1_ADDR = 0xF0100424</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CFGRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CFGR1.bits</b>&nbsp;&quot;Channel 1 Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GSEL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_CFGRm_GSEL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GSEL_SHIFT</td>
+</tr>
+<tr>
+<td>TSEL</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>FADC_CFGRm_TSEL_MASK</td>
+<td><tt>0x00000038</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TSEL_SHIFT</td>
+</tr>
+<tr>
+<td>GM</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>FADC_CFGRm_GM_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GM_SHIFT</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>FADC_CFGRm_TM_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TM_SHIFT</td>
+</tr>
+<tr>
+<td>CTM</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>FADC_CFGRm_CTM_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTM_SHIFT</td>
+</tr>
+<tr>
+<td>CTF</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>FADC_CFGRm_CTF_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTF_SHIFT</td>
+</tr>
+<tr>
+<td>CTREL</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>FADC_CFGRm_CTREL_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTREL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CFGRm_INP_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FADC_CFGRm_IEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CFGRm_MASK</td><td><tt>0xb0ff7fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CFGR2">&nbsp;</a>
+<h3>FADC_CFGR2</h3>
+<h3>"Channel 2 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CFGR2_ADDR = 0xF0100428</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CFGRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CFGR2.bits</b>&nbsp;&quot;Channel 2 Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GSEL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_CFGRm_GSEL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GSEL_SHIFT</td>
+</tr>
+<tr>
+<td>TSEL</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>FADC_CFGRm_TSEL_MASK</td>
+<td><tt>0x00000038</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TSEL_SHIFT</td>
+</tr>
+<tr>
+<td>GM</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>FADC_CFGRm_GM_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GM_SHIFT</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>FADC_CFGRm_TM_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TM_SHIFT</td>
+</tr>
+<tr>
+<td>CTM</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>FADC_CFGRm_CTM_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTM_SHIFT</td>
+</tr>
+<tr>
+<td>CTF</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>FADC_CFGRm_CTF_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTF_SHIFT</td>
+</tr>
+<tr>
+<td>CTREL</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>FADC_CFGRm_CTREL_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTREL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CFGRm_INP_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FADC_CFGRm_IEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CFGRm_MASK</td><td><tt>0xb0ff7fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CFGR3">&nbsp;</a>
+<h3>FADC_CFGR3</h3>
+<h3>"Channel 3 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CFGR3_ADDR = 0xF010042C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CFGRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CFGR3.bits</b>&nbsp;&quot;Channel 3 Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GSEL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_CFGRm_GSEL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GSEL_SHIFT</td>
+</tr>
+<tr>
+<td>TSEL</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>FADC_CFGRm_TSEL_MASK</td>
+<td><tt>0x00000038</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TSEL_SHIFT</td>
+</tr>
+<tr>
+<td>GM</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>FADC_CFGRm_GM_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_GM_SHIFT</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>FADC_CFGRm_TM_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_TM_SHIFT</td>
+</tr>
+<tr>
+<td>CTM</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>FADC_CFGRm_CTM_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTM_SHIFT</td>
+</tr>
+<tr>
+<td>CTF</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>FADC_CFGRm_CTF_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTF_SHIFT</td>
+</tr>
+<tr>
+<td>CTREL</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>FADC_CFGRm_CTREL_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_CTREL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CFGRm_INP_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FADC_CFGRm_IEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>FADC_CFGRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CFGRm_MASK</td><td><tt>0xb0ff7fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ACR0">&nbsp;</a>
+<h3>FADC_ACR0</h3>
+<h3>"Channel 0 Analog Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ACR0_ADDR = 0xF0100430</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ACRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_ACR0.bits</b>&nbsp;&quot;Channel 0 Analog Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GAIN</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FADC_ACRm_GAIN_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_GAIN_SHIFT</td>
+</tr>
+<tr>
+<td>ENP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_ACRm_ENP_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENP_SHIFT</td>
+</tr>
+<tr>
+<td>ENN</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_ACRm_ENN_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENN_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF_2_0</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_ACRm_CALOFF_2_0_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF_2_0_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF3</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_ACRm_CALOFF3_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF3_SHIFT</td>
+</tr>
+<tr>
+<td>CALGAIN</td>
+<td>2</td>
+<td>13 - 14</td>
+<td>FADC_ACRm_CALGAIN_MASK</td>
+<td><tt>0x00006000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALGAIN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_ACRm_MASK</td><td><tt>0x0000770f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ACR1">&nbsp;</a>
+<h3>FADC_ACR1</h3>
+<h3>"Channel 1 Analog Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ACR1_ADDR = 0xF0100434</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ACRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_ACR1.bits</b>&nbsp;&quot;Channel 1 Analog Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GAIN</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FADC_ACRm_GAIN_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_GAIN_SHIFT</td>
+</tr>
+<tr>
+<td>ENP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_ACRm_ENP_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENP_SHIFT</td>
+</tr>
+<tr>
+<td>ENN</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_ACRm_ENN_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENN_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF_2_0</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_ACRm_CALOFF_2_0_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF_2_0_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF3</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_ACRm_CALOFF3_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF3_SHIFT</td>
+</tr>
+<tr>
+<td>CALGAIN</td>
+<td>2</td>
+<td>13 - 14</td>
+<td>FADC_ACRm_CALGAIN_MASK</td>
+<td><tt>0x00006000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALGAIN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_ACRm_MASK</td><td><tt>0x0000770f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ACR2">&nbsp;</a>
+<h3>FADC_ACR2</h3>
+<h3>"Channel 2 Analog Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ACR2_ADDR = 0xF0100438</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ACRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_ACR2.bits</b>&nbsp;&quot;Channel 2 Analog Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GAIN</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FADC_ACRm_GAIN_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_GAIN_SHIFT</td>
+</tr>
+<tr>
+<td>ENP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_ACRm_ENP_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENP_SHIFT</td>
+</tr>
+<tr>
+<td>ENN</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_ACRm_ENN_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENN_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF_2_0</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_ACRm_CALOFF_2_0_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF_2_0_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF3</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_ACRm_CALOFF3_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF3_SHIFT</td>
+</tr>
+<tr>
+<td>CALGAIN</td>
+<td>2</td>
+<td>13 - 14</td>
+<td>FADC_ACRm_CALGAIN_MASK</td>
+<td><tt>0x00006000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALGAIN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_ACRm_MASK</td><td><tt>0x0000770f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ACR3">&nbsp;</a>
+<h3>FADC_ACR3</h3>
+<h3>"Channel 3 Analog Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ACR3_ADDR = 0xF010043C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ACRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_ACR3.bits</b>&nbsp;&quot;Channel 3 Analog Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>GAIN</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FADC_ACRm_GAIN_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_GAIN_SHIFT</td>
+</tr>
+<tr>
+<td>ENP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FADC_ACRm_ENP_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENP_SHIFT</td>
+</tr>
+<tr>
+<td>ENN</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FADC_ACRm_ENN_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_ENN_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF_2_0</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_ACRm_CALOFF_2_0_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF_2_0_SHIFT</td>
+</tr>
+<tr>
+<td>CALOFF3</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_ACRm_CALOFF3_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALOFF3_SHIFT</td>
+</tr>
+<tr>
+<td>CALGAIN</td>
+<td>2</td>
+<td>13 - 14</td>
+<td>FADC_ACRm_CALGAIN_MASK</td>
+<td><tt>0x00006000</tt></td>
+<td>rw</td>
+<td>FADC_ACRm_CALGAIN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_ACRm_MASK</td><td><tt>0x0000770f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000770f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_RCH0">&nbsp;</a>
+<h3>FADC_RCH0</h3>
+<h3>"Channel 0 Conversion Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_RCH0_ADDR = 0xF0100440</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_RCHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_RCH0.bits</b>&nbsp;&quot;Channel 0 Conversion Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADRES</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>FADC_RCHm_ADRES_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rwh</td>
+<td>FADC_RCHm_ADRES_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_RCHm_MASK</td><td><tt>0x000003ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_RCH1">&nbsp;</a>
+<h3>FADC_RCH1</h3>
+<h3>"Channel 1 Conversion Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_RCH1_ADDR = 0xF0100444</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_RCHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_RCH1.bits</b>&nbsp;&quot;Channel 1 Conversion Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADRES</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>FADC_RCHm_ADRES_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rwh</td>
+<td>FADC_RCHm_ADRES_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_RCHm_MASK</td><td><tt>0x000003ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_RCH2">&nbsp;</a>
+<h3>FADC_RCH2</h3>
+<h3>"Channel 2 Conversion Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_RCH2_ADDR = 0xF0100448</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_RCHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_RCH2.bits</b>&nbsp;&quot;Channel 2 Conversion Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADRES</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>FADC_RCHm_ADRES_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rwh</td>
+<td>FADC_RCHm_ADRES_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_RCHm_MASK</td><td><tt>0x000003ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_RCH3">&nbsp;</a>
+<h3>FADC_RCH3</h3>
+<h3>"Channel 3 Conversion Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_RCH3_ADDR = 0xF010044C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_RCHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_RCH3.bits</b>&nbsp;&quot;Channel 3 Conversion Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADRES</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>FADC_RCHm_ADRES_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rwh</td>
+<td>FADC_RCHm_ADRES_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_RCHm_MASK</td><td><tt>0x000003ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ALR">&nbsp;</a>
+<h3>FADC_ALR</h3>
+<h3>"Alias Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ALR_ADDR = 0xF0100454</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ALR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000000E4</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ALR_t">FADC_ALR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_ALR.bits</b>&nbsp;&quot;Alias Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ALIAS0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FADC_ALR_ALIAS0_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FADC_ALR_ALIAS0_SHIFT</td>
+</tr>
+<tr>
+<td>ALIAS1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>FADC_ALR_ALIAS1_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>FADC_ALR_ALIAS1_SHIFT</td>
+</tr>
+<tr>
+<td>ALIAS2</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>FADC_ALR_ALIAS2_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>FADC_ALR_ALIAS2_SHIFT</td>
+</tr>
+<tr>
+<td>ALIAS3</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>FADC_ALR_ALIAS3_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>FADC_ALR_ALIAS3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_ALR_MASK</td><td><tt>0x000000ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FCR0">&nbsp;</a>
+<h3>FADC_FCR0</h3>
+<h3>"Filter 0 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FCR0_ADDR = 0xF0100460</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FCR0.bits</b>&nbsp;&quot;Filter 0 Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_FCRm_ADDL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_ADDL_SHIFT</td>
+</tr>
+<tr>
+<td>MAVL</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>FADC_FCRm_MAVL_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_MAVL_SHIFT</td>
+</tr>
+<tr>
+<td>INSEL</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_FCRm_INSEL_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INSEL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>FADC_FCRm_INP_MASK</td>
+<td><tt>0x00003000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_FCRm_IEN_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FCRm_MASK</td><td><tt>0x0000b737</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRR0">&nbsp;</a>
+<h3>FADC_CRR0</h3>
+<h3>"Filter 0 Current Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRR0_ADDR = 0xF0100464</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CRR0.bits</b>&nbsp;&quot;Filter 0 Current Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CR</td>
+<td>19</td>
+<td>0 - 18</td>
+<td>FADC_CRRm_CR_MASK</td>
+<td><tt>0x0007ffff</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_CR_SHIFT</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>FADC_CRRm_AC_MASK</td>
+<td><tt>0x07000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_AC_SHIFT</td>
+</tr>
+<tr>
+<td>MAVS</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CRRm_MAVS_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_MAVS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CRRm_MASK</td><td><tt>0x3707ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x3707ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x3707ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR10">&nbsp;</a>
+<h3>FADC_IRR10</h3>
+<h3>"Filter 0 Intermediate Result Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR10_ADDR = 0xF0100468</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRR10_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRR10_t">FADC_IRR10_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR10.bits</b>&nbsp;&quot;Filter 0 Intermediate Result Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>FADC_IRR10_IR_MASK</td>
+<td><tt>0x00001fff</tt></td>
+<td>rh</td>
+<td>FADC_IRR10_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRR10_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR20">&nbsp;</a>
+<h3>FADC_IRR20</h3>
+<h3>"Filter 0 Intermediate Result Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR20_ADDR = 0xF010046C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRR20_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRR20_t">FADC_IRR20_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR20.bits</b>&nbsp;&quot;Filter 0 Intermediate Result Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>FADC_IRR20_IR_MASK</td>
+<td><tt>0x00001fff</tt></td>
+<td>rh</td>
+<td>FADC_IRR20_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRR20_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR30">&nbsp;</a>
+<h3>FADC_IRR30</h3>
+<h3>"Filter 0 Intermediate Result Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR30_ADDR = 0xF0100470</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRR30_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRR30_t">FADC_IRR30_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR30.bits</b>&nbsp;&quot;Filter 0 Intermediate Result Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>FADC_IRR30_IR_MASK</td>
+<td><tt>0x00001fff</tt></td>
+<td>rh</td>
+<td>FADC_IRR30_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRR30_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FRR0">&nbsp;</a>
+<h3>FADC_FRR0</h3>
+<h3>"Filter 0 Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FRR0_ADDR = 0xF0100474</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FRR0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FRR0_t">FADC_FRR0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FRR0.bits</b>&nbsp;&quot;Filter 0 Final Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>15</td>
+<td>0 - 14</td>
+<td>FADC_FRR0_FR_MASK</td>
+<td><tt>0x00007fff</tt></td>
+<td>rh</td>
+<td>FADC_FRR0_FR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FRR0_MASK</td><td><tt>0x00007fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00007fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FCR1">&nbsp;</a>
+<h3>FADC_FCR1</h3>
+<h3>"Filter 1 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FCR1_ADDR = 0xF0100480</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FCR1.bits</b>&nbsp;&quot;Filter 1 Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_FCRm_ADDL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_ADDL_SHIFT</td>
+</tr>
+<tr>
+<td>MAVL</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>FADC_FCRm_MAVL_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_MAVL_SHIFT</td>
+</tr>
+<tr>
+<td>INSEL</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_FCRm_INSEL_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INSEL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>FADC_FCRm_INP_MASK</td>
+<td><tt>0x00003000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_FCRm_IEN_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FCRm_MASK</td><td><tt>0x0000b737</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRR1">&nbsp;</a>
+<h3>FADC_CRR1</h3>
+<h3>"Filter 1 Current Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRR1_ADDR = 0xF0100484</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CRR1.bits</b>&nbsp;&quot;Filter 1 Current Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CR</td>
+<td>19</td>
+<td>0 - 18</td>
+<td>FADC_CRRm_CR_MASK</td>
+<td><tt>0x0007ffff</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_CR_SHIFT</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>FADC_CRRm_AC_MASK</td>
+<td><tt>0x07000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_AC_SHIFT</td>
+</tr>
+<tr>
+<td>MAVS</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CRRm_MAVS_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_MAVS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CRRm_MASK</td><td><tt>0x3707ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x3707ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x3707ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR11">&nbsp;</a>
+<h3>FADC_IRR11</h3>
+<h3>"Filter 1 Intermediate Result Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR11_ADDR = 0xF0100488</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR11.bits</b>&nbsp;&quot;Filter 1 Intermediate Result Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>18</td>
+<td>0 - 17</td>
+<td>FADC_IRRm_IR_MASK</td>
+<td><tt>0x0003ffff</tt></td>
+<td>rh</td>
+<td>FADC_IRRm_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRRm_MASK</td><td><tt>0x0003ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0003ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0003ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FRR1">&nbsp;</a>
+<h3>FADC_FRR1</h3>
+<h3>"Filter 1 Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FRR1_ADDR = 0xF0100494</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FRRm_t">FADC_FRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FRR1.bits</b>&nbsp;&quot;Filter 1 Final Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>20</td>
+<td>0 - 19</td>
+<td>FADC_FRRm_FR_MASK</td>
+<td><tt>0x000fffff</tt></td>
+<td>rh</td>
+<td>FADC_FRRm_FR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FRRm_MASK</td><td><tt>0x000fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000fffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SFRR1">&nbsp;</a>
+<h3>FADC_SFRR1</h3>
+<h3>"Filter 1 Shifted Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SFRR1_ADDR = 0xF0100498</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SFRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SFRRm_t">FADC_SFRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_SFRR1.bits</b>&nbsp;&quot;Filter 1 Shifted Final Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>15</td>
+<td>0 - 14</td>
+<td>FADC_SFRRm_FR_MASK</td>
+<td><tt>0x00007fff</tt></td>
+<td>rh</td>
+<td>FADC_SFRRm_FR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_SFRRm_MASK</td><td><tt>0x00007fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00007fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FCR2">&nbsp;</a>
+<h3>FADC_FCR2</h3>
+<h3>"Filter 2 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FCR2_ADDR = 0xF01004A0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FCR2.bits</b>&nbsp;&quot;Filter 2 Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_FCRm_ADDL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_ADDL_SHIFT</td>
+</tr>
+<tr>
+<td>MAVL</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>FADC_FCRm_MAVL_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_MAVL_SHIFT</td>
+</tr>
+<tr>
+<td>INSEL</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_FCRm_INSEL_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INSEL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>FADC_FCRm_INP_MASK</td>
+<td><tt>0x00003000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_FCRm_IEN_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FCRm_MASK</td><td><tt>0x0000b737</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRR2">&nbsp;</a>
+<h3>FADC_CRR2</h3>
+<h3>"Filter 2 Current Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRR2_ADDR = 0xF01004A4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CRR2.bits</b>&nbsp;&quot;Filter 2 Current Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CR</td>
+<td>19</td>
+<td>0 - 18</td>
+<td>FADC_CRRm_CR_MASK</td>
+<td><tt>0x0007ffff</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_CR_SHIFT</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>FADC_CRRm_AC_MASK</td>
+<td><tt>0x07000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_AC_SHIFT</td>
+</tr>
+<tr>
+<td>MAVS</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CRRm_MAVS_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_MAVS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CRRm_MASK</td><td><tt>0x3707ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x3707ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x3707ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR12">&nbsp;</a>
+<h3>FADC_IRR12</h3>
+<h3>"Filter 2 Intermediate Result Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR12_ADDR = 0xF01004A8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRR12_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRR12_t">FADC_IRR12_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR12.bits</b>&nbsp;&quot;Filter 2 Intermediate Result Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>FADC_IRR12_IR_MASK</td>
+<td><tt>0x00001fff</tt></td>
+<td>rh</td>
+<td>FADC_IRR12_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRR12_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR22">&nbsp;</a>
+<h3>FADC_IRR22</h3>
+<h3>"Filter 2 Intermediate Result Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR22_ADDR = 0xF01004AC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRR22_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRR22_t">FADC_IRR22_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR22.bits</b>&nbsp;&quot;Filter 2 Intermediate Result Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>FADC_IRR22_IR_MASK</td>
+<td><tt>0x00001fff</tt></td>
+<td>rh</td>
+<td>FADC_IRR22_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRR22_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR32">&nbsp;</a>
+<h3>FADC_IRR32</h3>
+<h3>"Filter 2 Intermediate Result Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR32_ADDR = 0xF01004B0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRR32_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRR32_t">FADC_IRR32_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR32.bits</b>&nbsp;&quot;Filter 2 Intermediate Result Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>FADC_IRR32_IR_MASK</td>
+<td><tt>0x00001fff</tt></td>
+<td>rh</td>
+<td>FADC_IRR32_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRR32_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FRR2">&nbsp;</a>
+<h3>FADC_FRR2</h3>
+<h3>"Filter 2 Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FRR2_ADDR = 0xF01004B4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FRR2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FRR2_t">FADC_FRR2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FRR2.bits</b>&nbsp;&quot;Filter 2 Final Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>15</td>
+<td>0 - 14</td>
+<td>FADC_FRR2_FR_MASK</td>
+<td><tt>0x00007fff</tt></td>
+<td>rh</td>
+<td>FADC_FRR2_FR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FRR2_MASK</td><td><tt>0x00007fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00007fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FCR3">&nbsp;</a>
+<h3>FADC_FCR3</h3>
+<h3>"Filter 3 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FCR3_ADDR = 0xF01004C0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FCR3.bits</b>&nbsp;&quot;Filter 3 Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>FADC_FCRm_ADDL_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_ADDL_SHIFT</td>
+</tr>
+<tr>
+<td>MAVL</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>FADC_FCRm_MAVL_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_MAVL_SHIFT</td>
+</tr>
+<tr>
+<td>INSEL</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>FADC_FCRm_INSEL_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INSEL_SHIFT</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>FADC_FCRm_INP_MASK</td>
+<td><tt>0x00003000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_INP_SHIFT</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_FCRm_IEN_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FADC_FCRm_IEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FCRm_MASK</td><td><tt>0x0000b737</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRR3">&nbsp;</a>
+<h3>FADC_CRR3</h3>
+<h3>"Filter 3 Current Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRR3_ADDR = 0xF01004C4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_CRR3.bits</b>&nbsp;&quot;Filter 3 Current Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CR</td>
+<td>19</td>
+<td>0 - 18</td>
+<td>FADC_CRRm_CR_MASK</td>
+<td><tt>0x0007ffff</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_CR_SHIFT</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>FADC_CRRm_AC_MASK</td>
+<td><tt>0x07000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_AC_SHIFT</td>
+</tr>
+<tr>
+<td>MAVS</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>FADC_CRRm_MAVS_MASK</td>
+<td><tt>0x30000000</tt></td>
+<td>rh</td>
+<td>FADC_CRRm_MAVS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_CRRm_MASK</td><td><tt>0x3707ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x3707ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x3707ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR13">&nbsp;</a>
+<h3>FADC_IRR13</h3>
+<h3>"Filter 3 Intermediate Result Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR13_ADDR = 0xF01004C8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_IRR13.bits</b>&nbsp;&quot;Filter 3 Intermediate Result Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>18</td>
+<td>0 - 17</td>
+<td>FADC_IRRm_IR_MASK</td>
+<td><tt>0x0003ffff</tt></td>
+<td>rh</td>
+<td>FADC_IRRm_IR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_IRRm_MASK</td><td><tt>0x0003ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0003ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0003ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FRR3">&nbsp;</a>
+<h3>FADC_FRR3</h3>
+<h3>"Filter 3 Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FRR3_ADDR = 0xF01004D4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FRRm_t">FADC_FRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_FRR3.bits</b>&nbsp;&quot;Filter 3 Final Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>20</td>
+<td>0 - 19</td>
+<td>FADC_FRRm_FR_MASK</td>
+<td><tt>0x000fffff</tt></td>
+<td>rh</td>
+<td>FADC_FRRm_FR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_FRRm_MASK</td><td><tt>0x000fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000fffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SFRR3">&nbsp;</a>
+<h3>FADC_SFRR3</h3>
+<h3>"Filter 3 Shifted Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SFRR3_ADDR = 0xF01004D8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SFRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SFRRm_t">FADC_SFRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_SFRR3.bits</b>&nbsp;&quot;Filter 3 Shifted Final Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>15</td>
+<td>0 - 14</td>
+<td>FADC_SFRRm_FR_MASK</td>
+<td><tt>0x00007fff</tt></td>
+<td>rh</td>
+<td>FADC_SFRRm_FR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_SFRRm_MASK</td><td><tt>0x00007fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00007fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC3">&nbsp;</a>
+<h3>FADC_SRC3</h3>
+<h3>"Service Request Control Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC3_ADDR = 0xF01004F0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_SRC3.bits</b>&nbsp;&quot;Service Request Control Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>FADC_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FADC_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>FADC_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FADC_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC2">&nbsp;</a>
+<h3>FADC_SRC2</h3>
+<h3>"Service Request Control Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC2_ADDR = 0xF01004F4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_SRC2.bits</b>&nbsp;&quot;Service Request Control Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>FADC_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FADC_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>FADC_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FADC_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC1">&nbsp;</a>
+<h3>FADC_SRC1</h3>
+<h3>"Service Request Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC1_ADDR = 0xF01004F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_SRC1.bits</b>&nbsp;&quot;Service Request Control Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>FADC_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FADC_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>FADC_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FADC_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC0">&nbsp;</a>
+<h3>FADC_SRC0</h3>
+<h3>"Service Request Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC0_ADDR = 0xF01004FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FADC_SRC0.bits</b>&nbsp;&quot;Service Request Control Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>FADC_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FADC_SRCm_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FADC_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FADC_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FADC_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>FADC_SRCm_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FADC_SRCm_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FADC_SRCm_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>FADC_SRCm_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FADC_SRCm_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

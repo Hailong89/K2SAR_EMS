@@ -1,0 +1,357 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1798/sdma-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1798_SDMA_STRUCTS_H_
+#define _TC1798_SDMA_STRUCTS_H_
+/*
+   TriCore TC1798
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1798/<a class="url" href="../sdma.html">sdma.h</a>&gt;
+#ifndef SDMA_BASE
+#define SDMA_BASE 0xf0003800
+#endif /* SDMA_BASE */
+</pre>
+
+<a name="SDMA_CH_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_CHSRm_t">SDMA_CHSRm_t</a></td>
+<td>CHSR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_CHCRm_t">SDMA_CHCRm_t</a></td>
+<td>CHCR;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_CHICRm_t">SDMA_CHICRm_t</a></td>
+<td>CHICR;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_ADRCRm_t">SDMA_ADRCRm_t</a></td>
+<td>ADRCR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SADRm_t">SDMA_SADRm_t</a></td>
+<td>SADR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_DADRm_t">SDMA_DADRm_t</a></td>
+<td>DADR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SHADRm_t">SDMA_SHADRm_t</a></td>
+<td>SHADR;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved7[0x1];</td>
+<td>/* 0x1c */</td>
+</tr>
+
+<tr><td colspan="4">} SDMA_CH_t;</td></tr>
+</table>
+<a name="SDMA_CHCRC_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SAMINm_t">SDMA_SAMINm_t</a></td>
+<td>SAMIN;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SAMAXm_t">SDMA_SAMAXm_t</a></td>
+<td>SAMAX;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_DAMINm_t">SDMA_DAMINm_t</a></td>
+<td>DAMIN;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_DAMAXm_t">SDMA_DAMAXm_t</a></td>
+<td>DAMAX;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SCRCm_t">SDMA_SCRCm_t</a></td>
+<td>SCRC;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_DCRCm_t">SDMA_DCRCm_t</a></td>
+<td>DCRC;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_RDCRCm_t">SDMA_RDCRCm_t</a></td>
+<td>RDCRC;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved7[0x1];</td>
+<td>/* 0x1c */</td>
+</tr>
+
+<tr><td colspan="4">} SDMA_CHCRC_t;</td></tr>
+</table>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_CLC_t">SDMA_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved1[0x1];</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_ID_t">SDMA_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved3[0x1];</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_CHRSTR_t">SDMA_CHRSTR_t</a></td>
+<td>CHRSTR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_TRSR_t">SDMA_TRSR_t</a></td>
+<td>TRSR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_STREQ_t">SDMA_STREQ_t</a></td>
+<td>STREQ;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_HTREQ_t">SDMA_HTREQ_t</a></td>
+<td>HTREQ;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_EER_t">SDMA_EER_t</a></td>
+<td>EER;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_ERRSR_t">SDMA_ERRSR_t</a></td>
+<td>ERRSR;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_CLRE_t">SDMA_CLRE_t</a></td>
+<td>CLRE;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_GINTR_t">SDMA_GINTR_t</a></td>
+<td>GINTR;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_MESR_t">SDMA_MESR_t</a></td>
+<td>MESR;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_ME0R_t">SDMA_ME0R_t</a></td>
+<td>ME0R;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved14[0x1];</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_ME0PR_t">SDMA_ME0PR_t</a></td>
+<td>ME0PR;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved16[0x5];</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_INTSR_t">SDMA_INTSR_t</a></td>
+<td>INTSR;</td>
+<td>/* 0x54 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_INTCR_t">SDMA_INTCR_t</a></td>
+<td>INTCR;</td>
+<td>/* 0x58 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_WRPSR_t">SDMA_WRPSR_t</a></td>
+<td>WRPSR;</td>
+<td>/* 0x5c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved20[0x1];</td>
+<td>/* 0x60 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_OCDSR_t">SDMA_OCDSR_t</a></td>
+<td>OCDSR;</td>
+<td>/* 0x64 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SUSPMR_t">SDMA_SUSPMR_t</a></td>
+<td>SUSPMR;</td>
+<td>/* 0x68 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved23[0x5];</td>
+<td>/* 0x6c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#SDMA_CH_t">SDMA_CH_t</a></td>
+<td>CH[0x8];</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#SDMA_CHCRC_t">SDMA_CHCRC_t</a></td>
+<td>CHCRC[0x8];</td>
+<td>/* 0x180 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved26[0x18];</td>
+<td>/* 0x280 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC7;</td>
+<td>/* 0x2e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC6;</td>
+<td>/* 0x2e4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC5;</td>
+<td>/* 0x2e8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC4;</td>
+<td>/* 0x2ec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC3;</td>
+<td>/* 0x2f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC2;</td>
+<td>/* 0x2f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0x2f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SDMA_SRCm_t">SDMA_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0x2fc */</td>
+</tr>
+
+<tr><td colspan="4">} SDMA_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1798_SDMA_STRUCTS_H_ */ -->
+</body>
+</html>

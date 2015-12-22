@@ -1,0 +1,808 @@
+<html>
+<head>
+<title>TriCore TC1728 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="LBCU_ID_t"><b>LBCU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>LBCU_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>LBCU_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>LBCU_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_ID">LBCU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEADDED_t"><b>LBCU_LEADDED_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Error Address Error Detection Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEADDED_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDR_ED:8</td>
+<td>0 - 7</td>
+<td>LBCU_LEADDED_ADDR_ED_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEADDED">LBCU_LEADDED</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEADDR_t"><b>LBCU_LEADDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Address Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEADDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEADDR:32</td>
+<td>0 - 31</td>
+<td>LBCU_LEADDR_LEADDR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEADDR">LBCU_LEADDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEATT_t"><b>LBCU_LEATT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Attribute Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEATT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEC:1</td>
+<td>0 - 0</td>
+<td>LBCU_LEATT_LEC_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FPITAG:4</td>
+<td>4 - 7</td>
+<td>LBCU_LEATT_FPITAG_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int NOS:1</td>
+<td>14 - 14</td>
+<td>LBCU_LEATT_NOS_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int LOC:1</td>
+<td>15 - 15</td>
+<td>LBCU_LEATT_LOC_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int ACK:3</td>
+<td>16 - 18</td>
+<td>LBCU_LEATT_ACK_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int UIS:1</td>
+<td>19 - 19</td>
+<td>LBCU_LEATT_UIS_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>21 - 21</td>
+<td>LBCU_LEATT_SVM_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int WR:1</td>
+<td>22 - 22</td>
+<td>LBCU_LEATT_WR_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RD:1</td>
+<td>23 - 23</td>
+<td>LBCU_LEATT_RD_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int TAG:3</td>
+<td>24 - 26</td>
+<td>LBCU_LEATT_TAG_MASK</td>
+<td>0x07000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>28 - 31</td>
+<td>LBCU_LEATT_OPC_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEATT">LBCU_LEATT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEDATED_t"><b>LBCU_LEDATED_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Error Data Error Detection Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEDATED_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATA_ED:8</td>
+<td>0 - 7</td>
+<td>LBCU_LEDATED_DATA_ED_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEDATED">LBCU_LEDATED</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEDATH_t"><b>LBCU_LEDATH_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Data High Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEDATH_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEDAT_63_32:32</td>
+<td>0 - 31</td>
+<td>LBCU_LEDATH_LEDAT_63_32_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEDATH">LBCU_LEDATH</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEDATL_t"><b>LBCU_LEDATL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Data Low Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEDATL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEDAT_31_0:32</td>
+<td>0 - 31</td>
+<td>LBCU_LEDATL_LEDAT_31_0_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEDATL">LBCU_LEDATL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LERESED_t"><b>LBCU_LERESED_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Error Response Error Detection Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LERESED_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RESP_ED:5</td>
+<td>0 - 4</td>
+<td>LBCU_LERESED_RESP_ED_MASK</td>
+<td>0x0000001f</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LERESED">LBCU_LERESED</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LSEABS_t"><b>LBCU_LSEABS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Soft Error Abort Source Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LSEABS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LMB_Module:16</td>
+<td>0 - 15</td>
+<td>LBCU_LSEABS_LMB_Module_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LSEABS">LBCU_LSEABS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LSEADS_t"><b>LBCU_LSEADS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Soft Error Address Source Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LSEADS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LMB_Module:16</td>
+<td>0 - 15</td>
+<td>LBCU_LSEADS_LMB_Module_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LSEADS">LBCU_LSEADS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LSERDS_t"><b>LBCU_LSERDS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Soft Error Read Source Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LSERDS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LMB_Module:16</td>
+<td>0 - 15</td>
+<td>LBCU_LSERDS_LMB_Module_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LSERDS">LBCU_LSERDS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LSERES_t"><b>LBCU_LSERES_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Soft Error Response Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LSERES_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LMB_Module:16</td>
+<td>0 - 15</td>
+<td>LBCU_LSERES_LMB_Module_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LSERES">LBCU_LSERES</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LSEWRS_t"><b>LBCU_LSEWRS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LMB Soft Error Write Source Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LSEWRS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LMB_Module:16</td>
+<td>0 - 15</td>
+<td>LBCU_LSEWRS_LMB_Module_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LSEWRS">LBCU_LSEWRS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_SRC_t"><b>LBCU_SRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_SRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>LBCU_SRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:2</td>
+<td>10 - 11</td>
+<td>LBCU_SRC_TOS_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>LBCU_SRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>LBCU_SRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>LBCU_SRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>LBCU_SRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_SRC">LBCU_SRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LCX_t"><b>LCX_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Free CSA List Limit Pointer</b></td></tr>
+<tr><td colspan="5"><b>LCX_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LCXO:16</td>
+<td>0 - 15</td>
+<td>LCX_LCXO_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LCXS:4</td>
+<td>16 - 19</td>
+<td>LCX_LCXS_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#LCX">LCX</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LFI_CON_t"><b>LFI_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LFI Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>LFI_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LTAG:3</td>
+<td>4 - 6</td>
+<td>LFI_CON_LTAG_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FTAG:4</td>
+<td>8 - 11</td>
+<td>LFI_CON_FTAG_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LFI_CON">LFI_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LFI_ID_t"><b>LFI_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>LFI_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>LFI_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>LFI_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>LFI_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LFI_ID">LFI_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

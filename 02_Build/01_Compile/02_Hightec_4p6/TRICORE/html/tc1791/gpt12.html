@@ -1,0 +1,5436 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1791 (GPT12)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>GPT12</h2>
+
+<h2><tt>#include &lt;tc1791/gpt12.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#GPT120_CLC">GPT120_CLC</a></td>
+<td>Clock Control Register</td>
+<td>0xF0003400</td>
+<td><a class="url" href="types/g.html#GPTn_CLC_t">GPTn_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_PISEL">GPT120_PISEL</a></td>
+<td>Port Input Select Register</td>
+<td>0xF0003404</td>
+<td><a class="url" href="types/g.html#GPTn_PISEL_t">GPTn_PISEL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_ID">GPT120_ID</a></td>
+<td>Identification Register</td>
+<td>0xF0003408</td>
+<td><a class="url" href="types/g.html#GPTn_ID_t">GPTn_ID_t</a></td>
+<td>0x0058C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T2CON">GPT120_T2CON</a></td>
+<td>Timer 2 Control Register</td>
+<td>0xF0003410</td>
+<td><a class="url" href="types/g.html#GPTn_T2CON_t">GPTn_T2CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T3CON">GPT120_T3CON</a></td>
+<td>Timer 3 Control Register</td>
+<td>0xF0003414</td>
+<td><a class="url" href="types/g.html#GPTn_T3CON_t">GPTn_T3CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T4CON">GPT120_T4CON</a></td>
+<td>Timer 4 Control Register</td>
+<td>0xF0003418</td>
+<td><a class="url" href="types/g.html#GPTn_T4CON_t">GPTn_T4CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T5CON">GPT120_T5CON</a></td>
+<td>Timer 5 Control Register</td>
+<td>0xF000341C</td>
+<td><a class="url" href="types/g.html#GPTn_T5CON_t">GPTn_T5CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T6CON">GPT120_T6CON</a></td>
+<td>Timer 6 Control Register</td>
+<td>0xF0003420</td>
+<td><a class="url" href="types/g.html#GPTn_T6CON_t">GPTn_T6CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_CAPREL">GPT120_CAPREL</a></td>
+<td>Capture and Reload Register</td>
+<td>0xF0003430</td>
+<td><a class="url" href="types/g.html#GPTn_CAPREL_t">GPTn_CAPREL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T2">GPT120_T2</a></td>
+<td>Timer 2 Register</td>
+<td>0xF0003434</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T3">GPT120_T3</a></td>
+<td>Timer 3 Register</td>
+<td>0xF0003438</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T4">GPT120_T4</a></td>
+<td>Timer 4 Register</td>
+<td>0xF000343C</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T5">GPT120_T5</a></td>
+<td>Timer 5 Register</td>
+<td>0xF0003440</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_T6">GPT120_T6</a></td>
+<td>Timer 6 Register</td>
+<td>0xF0003444</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_SRC5">GPT120_SRC5</a></td>
+<td>Service Request Control 5 Register</td>
+<td>0xF00034E8</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_SRC4">GPT120_SRC4</a></td>
+<td>Service Request Control 4Register</td>
+<td>0xF00034EC</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_SRC3">GPT120_SRC3</a></td>
+<td>Service Request Control 3 Register</td>
+<td>0xF00034F0</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_SRC2">GPT120_SRC2</a></td>
+<td>Service Request Control 2 Register</td>
+<td>0xF00034F4</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_SRC1">GPT120_SRC1</a></td>
+<td>Service Request Control 1 Register</td>
+<td>0xF00034F8</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT120_SRC0">GPT120_SRC0</a></td>
+<td>Service Request Control 0 Register</td>
+<td>0xF00034FC</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_CLC">GPT121_CLC</a></td>
+<td>Clock Control Register</td>
+<td>0xF0003500</td>
+<td><a class="url" href="types/g.html#GPTn_CLC_t">GPTn_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_PISEL">GPT121_PISEL</a></td>
+<td>Port Input Select Register</td>
+<td>0xF0003504</td>
+<td><a class="url" href="types/g.html#GPTn_PISEL_t">GPTn_PISEL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_ID">GPT121_ID</a></td>
+<td>Identification Register</td>
+<td>0xF0003508</td>
+<td><a class="url" href="types/g.html#GPTn_ID_t">GPTn_ID_t</a></td>
+<td>0x0058C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T2CON">GPT121_T2CON</a></td>
+<td>Timer 2 Control Register</td>
+<td>0xF0003510</td>
+<td><a class="url" href="types/g.html#GPTn_T2CON_t">GPTn_T2CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T3CON">GPT121_T3CON</a></td>
+<td>Timer 3 Control Register</td>
+<td>0xF0003514</td>
+<td><a class="url" href="types/g.html#GPTn_T3CON_t">GPTn_T3CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T4CON">GPT121_T4CON</a></td>
+<td>Timer 4 Control Register</td>
+<td>0xF0003518</td>
+<td><a class="url" href="types/g.html#GPTn_T4CON_t">GPTn_T4CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T5CON">GPT121_T5CON</a></td>
+<td>Timer 5 Control Register</td>
+<td>0xF000351C</td>
+<td><a class="url" href="types/g.html#GPTn_T5CON_t">GPTn_T5CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T6CON">GPT121_T6CON</a></td>
+<td>Timer 6 Control Register</td>
+<td>0xF0003520</td>
+<td><a class="url" href="types/g.html#GPTn_T6CON_t">GPTn_T6CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_CAPREL">GPT121_CAPREL</a></td>
+<td>Capture and Reload Register</td>
+<td>0xF0003530</td>
+<td><a class="url" href="types/g.html#GPTn_CAPREL_t">GPTn_CAPREL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T2">GPT121_T2</a></td>
+<td>Timer 2 Register</td>
+<td>0xF0003534</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T3">GPT121_T3</a></td>
+<td>Timer 3 Register</td>
+<td>0xF0003538</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T4">GPT121_T4</a></td>
+<td>Timer 4 Register</td>
+<td>0xF000353C</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T5">GPT121_T5</a></td>
+<td>Timer 5 Register</td>
+<td>0xF0003540</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_T6">GPT121_T6</a></td>
+<td>Timer 6 Register</td>
+<td>0xF0003544</td>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_SRC5">GPT121_SRC5</a></td>
+<td>Service Request Control 5 Register</td>
+<td>0xF00035E8</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_SRC4">GPT121_SRC4</a></td>
+<td>Service Request Control 4Register</td>
+<td>0xF00035EC</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_SRC3">GPT121_SRC3</a></td>
+<td>Service Request Control 3 Register</td>
+<td>0xF00035F0</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_SRC2">GPT121_SRC2</a></td>
+<td>Service Request Control 2 Register</td>
+<td>0xF00035F4</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_SRC1">GPT121_SRC1</a></td>
+<td>Service Request Control 1 Register</td>
+<td>0xF00035F8</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#GPT121_SRC0">GPT121_SRC0</a></td>
+<td>Service Request Control 0 Register</td>
+<td>0xF00035FC</td>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_CAPREL_t">GPTn_CAPREL_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_CAPREL">GPT120_CAPREL</a>,       
+<a class="url" href="gpt12.html#GPT121_CAPREL">GPT121_CAPREL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_CLC_t">GPTn_CLC_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_CLC">GPT120_CLC</a>,       
+<a class="url" href="gpt12.html#GPT121_CLC">GPT121_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_ID_t">GPTn_ID_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_ID">GPT120_ID</a>,       
+<a class="url" href="gpt12.html#GPT121_ID">GPT121_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_PISEL_t">GPTn_PISEL_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_PISEL">GPT120_PISEL</a>,       
+<a class="url" href="gpt12.html#GPT121_PISEL">GPT121_PISEL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_SRC5">GPT120_SRC5</a>,       
+<a class="url" href="gpt12.html#GPT120_SRC4">GPT120_SRC4</a>,       
+<a class="url" href="gpt12.html#GPT120_SRC3">GPT120_SRC3</a>,       
+<a class="url" href="gpt12.html#GPT120_SRC2">GPT120_SRC2</a>,       
+<a class="url" href="gpt12.html#GPT120_SRC1">GPT120_SRC1</a>,       
+<a class="url" href="gpt12.html#GPT120_SRC0">GPT120_SRC0</a>,       
+<a class="url" href="gpt12.html#GPT121_SRC5">GPT121_SRC5</a>,       
+<a class="url" href="gpt12.html#GPT121_SRC4">GPT121_SRC4</a>,       
+<a class="url" href="gpt12.html#GPT121_SRC3">GPT121_SRC3</a>,       
+<a class="url" href="gpt12.html#GPT121_SRC2">GPT121_SRC2</a>,       
+<a class="url" href="gpt12.html#GPT121_SRC1">GPT121_SRC1</a>,       
+<a class="url" href="gpt12.html#GPT121_SRC0">GPT121_SRC0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_T2CON_t">GPTn_T2CON_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_T2CON">GPT120_T2CON</a>,       
+<a class="url" href="gpt12.html#GPT121_T2CON">GPT121_T2CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_T3CON_t">GPTn_T3CON_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_T3CON">GPT120_T3CON</a>,       
+<a class="url" href="gpt12.html#GPT121_T3CON">GPT121_T3CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_T4CON_t">GPTn_T4CON_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_T4CON">GPT120_T4CON</a>,       
+<a class="url" href="gpt12.html#GPT121_T4CON">GPT121_T4CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_T5CON_t">GPTn_T5CON_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_T5CON">GPT120_T5CON</a>,       
+<a class="url" href="gpt12.html#GPT121_T5CON">GPT121_T5CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_T6CON_t">GPTn_T6CON_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_T6CON">GPT120_T6CON</a>,       
+<a class="url" href="gpt12.html#GPT121_T6CON">GPT121_T6CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td>
+<td><a class="url" href="gpt12.html#GPT120_T2">GPT120_T2</a>,       
+<a class="url" href="gpt12.html#GPT120_T3">GPT120_T3</a>,       
+<a class="url" href="gpt12.html#GPT120_T4">GPT120_T4</a>,       
+<a class="url" href="gpt12.html#GPT120_T5">GPT120_T5</a>,       
+<a class="url" href="gpt12.html#GPT120_T6">GPT120_T6</a>,       
+<a class="url" href="gpt12.html#GPT121_T2">GPT121_T2</a>,       
+<a class="url" href="gpt12.html#GPT121_T3">GPT121_T3</a>,       
+<a class="url" href="gpt12.html#GPT121_T4">GPT121_T4</a>,       
+<a class="url" href="gpt12.html#GPT121_T5">GPT121_T5</a>,       
+<a class="url" href="gpt12.html#GPT121_T6">GPT121_T6</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="GPT120_CLC">&nbsp;</a>
+<h3>GPT120_CLC</h3>
+<h3>"Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_CLC_ADDR = 0xF0003400</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_CLC_t">GPTn_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_CLC.bits</b>&nbsp;&quot;Clock Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_CLC_MASK = <tt>0x0000003f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Disable Request Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module disable is not requested</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module disable is requested</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Module Disable Status Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Module Suspend Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module cannot be suspended (suspend is disabled)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module can be suspended (suspend is enabled)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Sleep Mode Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Sleep Mode request is regarded. Module is enabled to go into Sleep Mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sleep Mode request is disregarded: Sleep Mode cannot be entered on a request.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Module Suspend Bit Write Enable for OCDS
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Bits SPEN and FSOE are write-protected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bits SPEN and FSOE are overwritten by respective value of SPEN or FSOE</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Fast Switch Off Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clock switch-off in Suspend Mode via Disable Control Feature (Secure Clock Switch Off) selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Fast clock switch off in Suspend Mode selected</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000002f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000003d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000002</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_PISEL">&nbsp;</a>
+<h3>GPT120_PISEL</h3>
+<h3>"Port Input Select Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_PISEL_ADDR = 0xF0003404</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_PISEL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_PISEL_t">GPTn_PISEL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_PISEL.bits</b>&nbsp;&quot;Port Input Select Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_PISEL_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_PISEL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_PISEL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IST2IN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Input Select for T2IN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T2INA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T2INB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST2EUD</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Input Select for T2EUD
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T2EUDA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T2EUDB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST3IN</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Input Select for T3IN
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T3INA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T3INB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T3INC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T3IND is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST3EUD</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Input Select for T3EUD
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T3EUDA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T3EUDB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T3EUDC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T3EUDD is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST4IN</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Input Select for T4IN
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T4INA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T4INB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T4INC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T4IND is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST4EUD</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Input Select for T4EUD
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T4EUDA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T4EUDB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T4EUDC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T4EUDD is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST5IN</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Input Select for T5IN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T5INA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T5INB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST5EUD</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Input Select for T5EUD
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T5EUDA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T5EUDB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST6IN</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Input Select for T6IN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T6INA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T6INB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST6EUD</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Input Select for T6EUD
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T6EUDA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T6EUDB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISCAPIN</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Input Select for CAPIN
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal CAPINA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal CAPINB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal CAPINC (Read trigger from T3) is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal CAPIND (Read trigger from T2 or T3 or T4) is selected</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_ID">&nbsp;</a>
+<h3>GPT120_ID</h3>
+<h3>"Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_ID_ADDR = 0xF0003408</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0058C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_ID_t">GPTn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_ID.bits</b>&nbsp;&quot;Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MODTYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MODNUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T2CON">&nbsp;</a>
+<h3>GPT120_T2CON</h3>
+<h3>"Timer 2 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T2CON_ADDR = 0xF0003410</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T2CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T2CON_t">GPTn_T2CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T2CON.bits</b>&nbsp;&quot;Timer 2 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T2CON_MASK = <tt>0x0000f3ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T2CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T2CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T2I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer Tx Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T2M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer 2 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Reload Mode</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Capture Mode</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Incremental Interface Mode (Rotation Detection Mode)</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Incremental Interface Mode (Edge Detection Mode)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer 2 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 2 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 2 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer 2 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting 'Up'</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting 'Down'</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer 2 External Up/Down Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting direction is internally controlled by software</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting direction is externally controlled by line TxEUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2RC</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer 2 Remote Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 2 is controlled by its own run bit T2R</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 2 is controlled by the run bit of core timer 3</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2IRDIS</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Timer 2 Interrupt Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt generation for T2CHDIR and T2EDGE interrupts in Incremental Interface Mode is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Interrupt generation for T2CHDIR and T2EDGE interrupts in Incremental Interface Mode is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2EDGE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer 2 Edge Detection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No count edge was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A count edge was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2CHDIR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer 2 Count Direction Change
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No change in count direction was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A change in count direction was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2RDIR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 2 Rotation Direction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer 2 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer 2 counts down</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000f3ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000073ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000e000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T3CON">&nbsp;</a>
+<h3>GPT120_T3CON</h3>
+<h3>"Timer 3 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T3CON_ADDR = 0xF0003414</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T3CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T3CON_t">GPTn_T3CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T3CON.bits</b>&nbsp;&quot;Timer 3 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T3CON_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T3CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T3CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T3I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer T3 Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T3M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer 3 Mode Control
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Reserved. Do not use this combination</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Reserved. Do not use this combination</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Incremental Interface Mode (Rotation Detection Mode)</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Incremental Interface Mode (Edge Detection Mode)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer 3 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer 3 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer T3 Up/Down Control
+</td>
+</tr>
+<tr>
+<td>T3UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T3 External Up/Down EnableSee for encoding of bits T3UD and T3UDE.
+</td>
+</tr>
+<tr>
+<td>T3OE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Overflow/Underflow Output Enable
+</td>
+</tr>
+<tr>
+<td>T3OTL</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Timer T3 Overflow Toggle Latch
+</td>
+</tr>
+<tr>
+<td>BPS1</td>
+<td>2</td>
+<td>11 - 12</td>
+<td>rw</td>
+<td><tt>0x00001800</tt></td>
+<td>GPT1 Block Prescaler Control
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>00fGPT/8</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>01fGPT/4</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>10fGPT/32</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>11fGPT/16</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3EDGE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer T3 Edge Detection Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 No count edge was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 A count edge was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3CHDIR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer T3 Count Direction Change Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 No change of count direction was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 A change of count direction was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3RDIR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer T3 Rotation Direction Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T3 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T3 counts down</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000e400</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T4CON">&nbsp;</a>
+<h3>GPT120_T4CON</h3>
+<h3>"Timer 4 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T4CON_ADDR = 0xF0003418</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T4CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T4CON_t">GPTn_T4CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T4CON.bits</b>&nbsp;&quot;Timer 4 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T4CON_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T4CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T4CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T4I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer Tx Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T4M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer 4 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Reload Mode</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Capture Mode</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Incremental Interface Mode (Rotation Detection Mode)</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Incremental Interface Mode (Edge Detection Mode)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer 4 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 4 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 4 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer 4 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting 'Up'</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting 'Down'</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer 4 External Up/Down Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting direction is internally controlled by software</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting direction is externally controlled by line T4EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4RC</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer 4 Remote Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 4 is controlled by its own run bit T4R</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 4 is controlled by the run bit of core timer 3</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRT2EN</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Clear Timer 2 Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect of T4EUD on T2</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A falling edge on T4EUD clears timer T2</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRT3EN</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Clear Timer 3 Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect of T4IN on T3</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A falling edge on T4IN clears timer T3</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4IRDIS</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Timer 4 Interrupt Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt generation for T4CHDIR and T4EDGE interrupts in Incremental Interface Mode is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Interrupt generation for T4CHDIR and T4EDGE interrupts in Incremental Interface Mode is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4EDGE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer 4 Edge Detection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No count edge was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A count edge was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4CHDIR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer 4 Count Direction Change
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No change in count direction was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A change in count direction was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4RDIR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 4 Rotation Direction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer 4 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer 4 counts down</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000e000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T5CON">&nbsp;</a>
+<h3>GPT120_T5CON</h3>
+<h3>"Timer 5 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T5CON_ADDR = 0xF000341C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T5CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T5CON_t">GPTn_T5CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T5CON.bits</b>&nbsp;&quot;Timer 5 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T5CON_MASK = <tt>0x0000f7df</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T5CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T5CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T5I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer T5 Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T5M</td>
+<td>2</td>
+<td>3 - 4</td>
+<td>rw</td>
+<td><tt>0x00000018</tt></td>
+<td>Timer T5 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>000 Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>001 Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>010 Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>011 Gated Timer Mode with gate active high</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer T5 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer T5 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 counts down</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T5 External Up/Down EnableSee for encoding of bits T5UD and T5UDE.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Input T5EUD is disconnected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Direction influenced by input T5EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5RC</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer T5 Remote Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 is controlled by its own run bit T5R</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 is controlled by the run bit T6R of core timer 6, not by bit T5R</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CT3</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Timer T3 Capture Trigger Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Capture trigger from input line CAPIN</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Capture trigger from T3 input lines T3IN and/or T3EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CI</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Register CAPREL Capture Trigger SelectionTo define the respective trigger source signal, also bit CT3 must be regarded (see ).
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>00 Capture disabled</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>01 Positive transition (rising edge) on CAPINRising edge must be selected if capturing is triggered by the internal GPT1 read signals (see register PISEL and ). or any transition on T3IN</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>10 Negative transition (falling edge) on CAPIN or any transition on T3EUD</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>11 Any transition (rising or falling edge) on CAPIN or any transition on T3IN or T3EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5CLR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer T5 Clear Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 is not cleared on a capture event</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 is cleared on a capture event</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5SC</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 5 Capture Mode Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Capture into register CAPREL Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Capture into register CAPREL Enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000f7df</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000f7df</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T6CON">&nbsp;</a>
+<h3>GPT120_T6CON</h3>
+<h3>"Timer 6 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T6CON_ADDR = 0xF0003420</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T6CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T6CON_t">GPTn_T6CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T6CON.bits</b>&nbsp;&quot;Timer 6 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T6CON_MASK = <tt>0x0000dfff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T6CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T6CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T6I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer T6 Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T6M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer T6 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>000 Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>001 Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>010 Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>011 Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>100 Reserved. Do not use this combination.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>101 Reserved. Do not use this combination.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>110 Reserved. Do not use this combination.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>111 Reserved. Do not use this combination.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer T6 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T6 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T6 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer 6 Up / Down ControlSee for coding of bits T6UD and T6UDE
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting 'Up'</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting 'Down'</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T6 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T6 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T6 counts down</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6OE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Overflow/Underflow Output Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Alternate Output Function Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 State of T6 toggle latch is output on pin T6OUT</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6OTL</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Timer T6 Overflow Toggle Latch
+</td>
+</tr>
+<tr>
+<td>BPS2</td>
+<td>2</td>
+<td>11 - 12</td>
+<td>rw</td>
+<td><tt>0x00001800</tt></td>
+<td>GPT2 Block Prescaler Control
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>00fGPT/4</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>01fGPT/2</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>10fGPT/16</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>11fGPT/8</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6CLR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer T6 Clear Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T6 is not cleared on a capture event</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T6 is cleared on a capture event</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6SR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 6 Reload Mode Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Reload from register CAPREL Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Reload from register CAPREL Enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000dfff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000dfff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000400</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_CAPREL">&nbsp;</a>
+<h3>GPT120_CAPREL</h3>
+<h3>"Capture and Reload Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_CAPREL_ADDR = 0xF0003430</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_CAPREL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_CAPREL_t">GPTn_CAPREL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_CAPREL.bits</b>&nbsp;&quot;Capture and Reload Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_CAPREL_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_CAPREL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_CAPREL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CAPREL</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Current reload value or Captured value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T2">&nbsp;</a>
+<h3>GPT120_T2</h3>
+<h3>"Timer 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T2_ADDR = 0xF0003434</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T2.bits</b>&nbsp;&quot;Timer 2 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T3">&nbsp;</a>
+<h3>GPT120_T3</h3>
+<h3>"Timer 3 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T3_ADDR = 0xF0003438</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T3.bits</b>&nbsp;&quot;Timer 3 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T4">&nbsp;</a>
+<h3>GPT120_T4</h3>
+<h3>"Timer 4 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T4_ADDR = 0xF000343C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T4.bits</b>&nbsp;&quot;Timer 4 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T5">&nbsp;</a>
+<h3>GPT120_T5</h3>
+<h3>"Timer 5 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T5_ADDR = 0xF0003440</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T5.bits</b>&nbsp;&quot;Timer 5 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_T6">&nbsp;</a>
+<h3>GPT120_T6</h3>
+<h3>"Timer 6 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_T6_ADDR = 0xF0003444</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_T6.bits</b>&nbsp;&quot;Timer 6 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_SRC5">&nbsp;</a>
+<h3>GPT120_SRC5</h3>
+<h3>"Service Request Control 5 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_SRC5_ADDR = 0xF00034E8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_SRC5.bits</b>&nbsp;&quot;Service Request Control 5 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_SRC4">&nbsp;</a>
+<h3>GPT120_SRC4</h3>
+<h3>"Service Request Control 4Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_SRC4_ADDR = 0xF00034EC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_SRC4.bits</b>&nbsp;&quot;Service Request Control 4Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_SRC3">&nbsp;</a>
+<h3>GPT120_SRC3</h3>
+<h3>"Service Request Control 3 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_SRC3_ADDR = 0xF00034F0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_SRC3.bits</b>&nbsp;&quot;Service Request Control 3 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_SRC2">&nbsp;</a>
+<h3>GPT120_SRC2</h3>
+<h3>"Service Request Control 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_SRC2_ADDR = 0xF00034F4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_SRC2.bits</b>&nbsp;&quot;Service Request Control 2 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_SRC1">&nbsp;</a>
+<h3>GPT120_SRC1</h3>
+<h3>"Service Request Control 1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_SRC1_ADDR = 0xF00034F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_SRC1.bits</b>&nbsp;&quot;Service Request Control 1 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT120_SRC0">&nbsp;</a>
+<h3>GPT120_SRC0</h3>
+<h3>"Service Request Control 0 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT120_SRC0_ADDR = 0xF00034FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT120_SRC0.bits</b>&nbsp;&quot;Service Request Control 0 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_CLC">&nbsp;</a>
+<h3>GPT121_CLC</h3>
+<h3>"Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_CLC_ADDR = 0xF0003500</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_CLC_t">GPTn_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_CLC.bits</b>&nbsp;&quot;Clock Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_CLC_MASK = <tt>0x0000003f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Disable Request Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module disable is not requested</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module disable is requested</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Module Disable Status Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Module Suspend Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module cannot be suspended (suspend is disabled)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module can be suspended (suspend is enabled)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Sleep Mode Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Sleep Mode request is regarded. Module is enabled to go into Sleep Mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sleep Mode request is disregarded: Sleep Mode cannot be entered on a request.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Module Suspend Bit Write Enable for OCDS
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Bits SPEN and FSOE are write-protected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bits SPEN and FSOE are overwritten by respective value of SPEN or FSOE</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Fast Switch Off Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clock switch-off in Suspend Mode via Disable Control Feature (Secure Clock Switch Off) selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Fast clock switch off in Suspend Mode selected</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000002f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000003d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000002</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_PISEL">&nbsp;</a>
+<h3>GPT121_PISEL</h3>
+<h3>"Port Input Select Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_PISEL_ADDR = 0xF0003504</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_PISEL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_PISEL_t">GPTn_PISEL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_PISEL.bits</b>&nbsp;&quot;Port Input Select Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_PISEL_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_PISEL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_PISEL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IST2IN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Input Select for T2IN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T2INA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T2INB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST2EUD</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Input Select for T2EUD
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T2EUDA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T2EUDB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST3IN</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Input Select for T3IN
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T3INA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T3INB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T3INC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T3IND is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST3EUD</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Input Select for T3EUD
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T3EUDA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T3EUDB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T3EUDC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T3EUDD is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST4IN</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Input Select for T4IN
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T4INA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T4INB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T4INC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T4IND is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST4EUD</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Input Select for T4EUD
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal T4EUDA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal T4EUDB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal T4EUDC is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal T4EUDD is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST5IN</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Input Select for T5IN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T5INA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T5INB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST5EUD</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Input Select for T5EUD
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T5EUDA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T5EUDB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST6IN</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Input Select for T6IN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T6INA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T6INB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IST6EUD</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Input Select for T6EUD
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal T6EUDA is selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal T6EUDB is selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ISCAPIN</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Input Select for CAPIN
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Signal CAPINA is selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Signal CAPINB is selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Signal CAPINC (Read trigger from T3) is selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Signal CAPIND (Read trigger from T2 or T3 or T4) is selected</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_ID">&nbsp;</a>
+<h3>GPT121_ID</h3>
+<h3>"Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_ID_ADDR = 0xF0003508</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0058C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_ID_t">GPTn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_ID.bits</b>&nbsp;&quot;Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MODTYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MODNUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T2CON">&nbsp;</a>
+<h3>GPT121_T2CON</h3>
+<h3>"Timer 2 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T2CON_ADDR = 0xF0003510</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T2CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T2CON_t">GPTn_T2CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T2CON.bits</b>&nbsp;&quot;Timer 2 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T2CON_MASK = <tt>0x0000f3ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T2CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T2CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T2I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer Tx Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T2M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer 2 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Reload Mode</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Capture Mode</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Incremental Interface Mode (Rotation Detection Mode)</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Incremental Interface Mode (Edge Detection Mode)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer 2 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 2 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 2 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer 2 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting 'Up'</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting 'Down'</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer 2 External Up/Down Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting direction is internally controlled by software</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting direction is externally controlled by line TxEUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2RC</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer 2 Remote Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 2 is controlled by its own run bit T2R</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 2 is controlled by the run bit of core timer 3</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2IRDIS</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Timer 2 Interrupt Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt generation for T2CHDIR and T2EDGE interrupts in Incremental Interface Mode is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Interrupt generation for T2CHDIR and T2EDGE interrupts in Incremental Interface Mode is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2EDGE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer 2 Edge Detection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No count edge was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A count edge was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2CHDIR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer 2 Count Direction Change
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No change in count direction was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A change in count direction was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T2RDIR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 2 Rotation Direction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer 2 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer 2 counts down</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000f3ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000073ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000e000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T3CON">&nbsp;</a>
+<h3>GPT121_T3CON</h3>
+<h3>"Timer 3 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T3CON_ADDR = 0xF0003514</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T3CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T3CON_t">GPTn_T3CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T3CON.bits</b>&nbsp;&quot;Timer 3 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T3CON_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T3CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T3CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T3I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer T3 Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T3M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer 3 Mode Control
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Reserved. Do not use this combination</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Reserved. Do not use this combination</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Incremental Interface Mode (Rotation Detection Mode)</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Incremental Interface Mode (Edge Detection Mode)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer 3 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer 3 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer T3 Up/Down Control
+</td>
+</tr>
+<tr>
+<td>T3UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T3 External Up/Down EnableSee for encoding of bits T3UD and T3UDE.
+</td>
+</tr>
+<tr>
+<td>T3OE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Overflow/Underflow Output Enable
+</td>
+</tr>
+<tr>
+<td>T3OTL</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Timer T3 Overflow Toggle Latch
+</td>
+</tr>
+<tr>
+<td>BPS1</td>
+<td>2</td>
+<td>11 - 12</td>
+<td>rw</td>
+<td><tt>0x00001800</tt></td>
+<td>GPT1 Block Prescaler Control
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>00fGPT/8</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>01fGPT/4</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>10fGPT/32</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>11fGPT/16</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3EDGE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer T3 Edge Detection Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 No count edge was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 A count edge was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3CHDIR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer T3 Count Direction Change Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 No change of count direction was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 A change of count direction was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T3RDIR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer T3 Rotation Direction Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T3 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T3 counts down</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000e400</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T4CON">&nbsp;</a>
+<h3>GPT121_T4CON</h3>
+<h3>"Timer 4 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T4CON_ADDR = 0xF0003518</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T4CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T4CON_t">GPTn_T4CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T4CON.bits</b>&nbsp;&quot;Timer 4 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T4CON_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T4CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T4CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T4I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer Tx Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T4M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer 4 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Reload Mode</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Capture Mode</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Incremental Interface Mode (Rotation Detection Mode)</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Incremental Interface Mode (Edge Detection Mode)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer 4 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 4 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 4 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer 4 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting 'Up'</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting 'Down'</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer 4 External Up/Down Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting direction is internally controlled by software</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting direction is externally controlled by line T4EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4RC</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer 4 Remote Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer / Counter 4 is controlled by its own run bit T4R</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer / Counter 4 is controlled by the run bit of core timer 3</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRT2EN</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Clear Timer 2 Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect of T4EUD on T2</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A falling edge on T4EUD clears timer T2</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRT3EN</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Clear Timer 3 Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect of T4IN on T3</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A falling edge on T4IN clears timer T3</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4IRDIS</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Timer 4 Interrupt Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt generation for T4CHDIR and T4EDGE interrupts in Incremental Interface Mode is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Interrupt generation for T4CHDIR and T4EDGE interrupts in Incremental Interface Mode is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4EDGE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Timer 4 Edge Detection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No count edge was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A count edge was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4CHDIR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rwh</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer 4 Count Direction Change
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No change in count direction was detected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A change in count direction was detected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T4RDIR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 4 Rotation Direction
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Timer 4 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Timer 4 counts down</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00007fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000e000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T5CON">&nbsp;</a>
+<h3>GPT121_T5CON</h3>
+<h3>"Timer 5 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T5CON_ADDR = 0xF000351C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T5CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T5CON_t">GPTn_T5CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T5CON.bits</b>&nbsp;&quot;Timer 5 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T5CON_MASK = <tt>0x0000f7df</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T5CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T5CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T5I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer T5 Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T5M</td>
+<td>2</td>
+<td>3 - 4</td>
+<td>rw</td>
+<td><tt>0x00000018</tt></td>
+<td>Timer T5 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>000 Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>001 Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>010 Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>011 Gated Timer Mode with gate active high</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer T5 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer T5 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 counts down</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T5 External Up/Down EnableSee for encoding of bits T5UD and T5UDE.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Input T5EUD is disconnected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Direction influenced by input T5EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5RC</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Timer T5 Remote Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 is controlled by its own run bit T5R</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 is controlled by the run bit T6R of core timer 6, not by bit T5R</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CT3</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Timer T3 Capture Trigger Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Capture trigger from input line CAPIN</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Capture trigger from T3 input lines T3IN and/or T3EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CI</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Register CAPREL Capture Trigger SelectionTo define the respective trigger source signal, also bit CT3 must be regarded (see ).
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>00 Capture disabled</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>01 Positive transition (rising edge) on CAPINRising edge must be selected if capturing is triggered by the internal GPT1 read signals (see register PISEL and ). or any transition on T3IN</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>10 Negative transition (falling edge) on CAPIN or any transition on T3EUD</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>11 Any transition (rising or falling edge) on CAPIN or any transition on T3IN or T3EUD</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5CLR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer T5 Clear Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T5 is not cleared on a capture event</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T5 is cleared on a capture event</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T5SC</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 5 Capture Mode Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Capture into register CAPREL Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Capture into register CAPREL Enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000f7df</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000f7df</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T6CON">&nbsp;</a>
+<h3>GPT121_T6CON</h3>
+<h3>"Timer 6 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T6CON_ADDR = 0xF0003520</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_T6CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_T6CON_t">GPTn_T6CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T6CON.bits</b>&nbsp;&quot;Timer 6 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_T6CON_MASK = <tt>0x0000dfff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_T6CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_T6CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>T6I</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Timer T6 Input Parameter Selection
+</td>
+</tr>
+<tr>
+<td>T6M</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Timer T6 Mode Control (Basic Operating Mode)
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>000 Timer Mode</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>001 Counter Mode</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>010 Gated Timer Mode with gate active low</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>011 Gated Timer Mode with gate active high</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>100 Reserved. Do not use this combination.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>101 Reserved. Do not use this combination.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>110 Reserved. Do not use this combination.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>111 Reserved. Do not use this combination.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6R</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Timer T6 Run Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T6 stops</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T6 runs</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6UD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Timer 6 Up / Down ControlSee for coding of bits T6UD and T6UDE
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Counting 'Up'</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Counting 'Down'</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6UDE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Timer T6 Up/Down Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T6 counts up</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T6 counts down</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6OE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Overflow/Underflow Output Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Alternate Output Function Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 State of T6 toggle latch is output on pin T6OUT</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6OTL</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rwh</td>
+<td><tt>0x00000400</tt></td>
+<td>Timer T6 Overflow Toggle Latch
+</td>
+</tr>
+<tr>
+<td>BPS2</td>
+<td>2</td>
+<td>11 - 12</td>
+<td>rw</td>
+<td><tt>0x00001800</tt></td>
+<td>GPT2 Block Prescaler Control
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>00fGPT/4</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>01fGPT/2</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>10fGPT/16</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>11fGPT/8</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6CLR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Timer T6 Clear Enable Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Timer T6 is not cleared on a capture event</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Timer T6 is cleared on a capture event</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>T6SR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Timer 6 Reload Mode Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0 Reload from register CAPREL Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>1 Reload from register CAPREL Enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000dfff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000dfff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000400</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_CAPREL">&nbsp;</a>
+<h3>GPT121_CAPREL</h3>
+<h3>"Capture and Reload Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_CAPREL_ADDR = 0xF0003530</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_CAPREL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_CAPREL_t">GPTn_CAPREL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_CAPREL.bits</b>&nbsp;&quot;Capture and Reload Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_CAPREL_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_CAPREL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_CAPREL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CAPREL</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Current reload value or Captured value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T2">&nbsp;</a>
+<h3>GPT121_T2</h3>
+<h3>"Timer 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T2_ADDR = 0xF0003534</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T2.bits</b>&nbsp;&quot;Timer 2 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T3">&nbsp;</a>
+<h3>GPT121_T3</h3>
+<h3>"Timer 3 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T3_ADDR = 0xF0003538</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T3.bits</b>&nbsp;&quot;Timer 3 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T4">&nbsp;</a>
+<h3>GPT121_T4</h3>
+<h3>"Timer 4 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T4_ADDR = 0xF000353C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T4.bits</b>&nbsp;&quot;Timer 4 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T5">&nbsp;</a>
+<h3>GPT121_T5</h3>
+<h3>"Timer 5 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T5_ADDR = 0xF0003540</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T5.bits</b>&nbsp;&quot;Timer 5 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_T6">&nbsp;</a>
+<h3>GPT121_T6</h3>
+<h3>"Timer 6 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_T6_ADDR = 0xF0003544</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_Tm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_Tm_t">GPTn_Tm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_T6.bits</b>&nbsp;&quot;Timer 6 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_Tm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_Tm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Timer x
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_SRC5">&nbsp;</a>
+<h3>GPT121_SRC5</h3>
+<h3>"Service Request Control 5 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_SRC5_ADDR = 0xF00035E8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_SRC5.bits</b>&nbsp;&quot;Service Request Control 5 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_SRC4">&nbsp;</a>
+<h3>GPT121_SRC4</h3>
+<h3>"Service Request Control 4Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_SRC4_ADDR = 0xF00035EC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_SRC4.bits</b>&nbsp;&quot;Service Request Control 4Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_SRC3">&nbsp;</a>
+<h3>GPT121_SRC3</h3>
+<h3>"Service Request Control 3 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_SRC3_ADDR = 0xF00035F0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_SRC3.bits</b>&nbsp;&quot;Service Request Control 3 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_SRC2">&nbsp;</a>
+<h3>GPT121_SRC2</h3>
+<h3>"Service Request Control 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_SRC2_ADDR = 0xF00035F4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_SRC2.bits</b>&nbsp;&quot;Service Request Control 2 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_SRC1">&nbsp;</a>
+<h3>GPT121_SRC1</h3>
+<h3>"Service Request Control 1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_SRC1_ADDR = 0xF00035F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_SRC1.bits</b>&nbsp;&quot;Service Request Control 1 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="GPT121_SRC0">&nbsp;</a>
+<h3>GPT121_SRC0</h3>
+<h3>"Service Request Control 0 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>GPT121_SRC0_ADDR = 0xF00035FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>GPTn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/g.html#GPTn_SRCm_t">GPTn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>GPT121_SRC0.bits</b>&nbsp;&quot;Service Request Control 0 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>GPTn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>GPTn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

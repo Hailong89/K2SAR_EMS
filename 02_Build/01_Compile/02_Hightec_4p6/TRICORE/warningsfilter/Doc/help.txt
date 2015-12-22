@@ -1,0 +1,84 @@
+WarnungsFilter 3.017 - Help
+
+--help
+Displays the help and exit.
+The displayed message can be found under [Script's directory]/Doc/help.txt.
+If specified, all the others arguments are ignored (Because if you need help, you probably don't want to process the warnings immediately)
+
+
+--version 
+Displays the version of the tool, and of each module used by the tool, and exit
+If specified, all the others arguments are ignored (except --help, because it has the hightest priority)
+
+
+--history 
+Displays the history of the tool, and exit
+If specified, all the others arguments are ignored (except --help and --version, because they have the hightest priority)
+
+
+--silent
+Do not display anything on the output, except error message (when the script dies, or crashes for example)
+it means, nothing is displayed on STDOUT
+this does not apply for the tool's log file.
+
+
+--verbosity=n (default = 2) This is only partially inplemented, some modules don't care about it
+Verbosity level. It applies for the output's log file (and STDOUT, except if -silent is turned on)
+0 -> Does not say anything (in this case, no output's log file generated)
+1 -> Only says what it's supposed to do (generating this, or that...)
+2 -> Gives some statistics when processing, and all the name of the files generated
+3 -> Gives number of lines processed, and others details
+4 -> Gives details about intern routines, reults of intermediate computes
+5 -> Says all. You probably don't want this (except if you are the developer himself)
+
+--sort=n (default = no sorting)
+Sort the categories into different ways:
+1 -> Sorted by number of files.
+2 -> Sorted by warnings.
+3 -> Sorted by occurences.
+4 -> Sorted by names.
+other -> Sorted by the internal hash function of the perl interpreter.
+
+
+--input-file=File (no default: must be specified somewhere, here or in a Configuration file)
+Specify the input file to process, with the extension.
+If the directory is ommited, the current work directory is used
+
+
+--log-file=File (default = [Tool's Out Directory]/Wf.log)
+Gives the name of the tool's log file. If you don't want a log file, look at this option:--verbosity 
+
+
+--config-file=File (default = no configuration file)
+Specifies the configuration file to use. If the path is omitted, or relative, the script will try to found the specified configuration file in the following directories, in this order:
+- [current directory]/
+- [home directory]/
+- [home directory]/.WarnungsFilter/
+- [Script's directory]/templates/Config/
+if the file is not found, the script dies with the message "The configuration file [name of the file] was not found in the following directories [list of directories]"
+
+
+--OS=Operating_System (default = autodetected from the $^O built-in variable)
+Please choose in the list (case sensitive!)
+- VMS
+- MSDOS (You shouldn't use this, because of the long names, i.e the extension "html" has to many characters... Don't report bug for this.)
+- MacOS
+- AmigaOS
+- MSWin32 (applies for all the MS Windows® verions, since the Windows® 95)
+- Unix
+- linux (is identical to Unix)
+If you are giving something else, Unix is assumed (Sorry, but the module used to choice the OS belongs to standard librairies of perl. If you don't like this, specify the option correctly, don't disturb the author) 
+Only MSWin32 and Unix (or linux) where tested. If you are interested in other operating systems, ask the authors. The script will probably work with the others system, but it's not sure.
+This option might be removed soon, because at the moment the name's gestion is problematic. This will be fixed in new versions.
+
+
+--out-dir=Directory (default = [Work Directory]/.auto_wf/
+If this is a relative path, it will be take regarding the current work directory
+Do not forget the last "/" (or "\" for MS style path)
+
+
+--warning-url-database (default = [Tool's directory]/Doc/W_url.pm)
+This mini perl-sript contains a hash, named %WF_Warning_Help_Link. It gives the tool the url to the html help files for the warning's categories. This is partially implemented, but not active. Will be done soon!
+
+
+ 

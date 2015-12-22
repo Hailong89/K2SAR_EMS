@@ -1,0 +1,336 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1728/ccu61-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1728_CCU61_STRUCTS_H_
+#define _TC1728_CCU61_STRUCTS_H_
+/*
+   TriCore TC1728
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1728/<a class="url" href="../ccu61.html">ccu61.h</a>&gt;
+#ifndef CCU61_BASE
+#define CCU61_BASE 0xf0003100
+#endif /* CCU61_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved0[0x1];</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_MCFG_t">CCUn_MCFG_t</a></td>
+<td>MCFG;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_ID_t">CCUn_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved3[0x1];</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_PISEL0_t">CCUn_PISEL0_t</a></td>
+<td>PISEL0;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_PISEL2_t">CCUn_PISEL2_t</a></td>
+<td>PISEL2;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_KSCFG_t">CCUn_KSCFG_t</a></td>
+<td>KSCFG;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_KSCSR_t">CCUn_KSCSR_t</a></td>
+<td>KSCSR;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_T12_t">CCUn_T12_t</a></td>
+<td>T12;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_T12PR_t">CCUn_T12PR_t</a></td>
+<td>T12PR;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_T12DTC_t">CCUn_T12DTC_t</a></td>
+<td>T12DTC;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved11[0x1];</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>CC60R;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>CC61R;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>CC62R;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved15[0x1];</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>CC60SR;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>CC61SR;</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>CC62SR;</td>
+<td>/* 0x48 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved19[0x1];</td>
+<td>/* 0x4c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_T13_t">CCUn_T13_t</a></td>
+<td>T13;</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_T13PR_t">CCUn_T13PR_t</a></td>
+<td>T13PR;</td>
+<td>/* 0x54 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmR_t">CCUn_CCmR_t</a></td>
+<td>CC63R;</td>
+<td>/* 0x58 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CCmSR_t">CCUn_CCmSR_t</a></td>
+<td>CC63SR;</td>
+<td>/* 0x5c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CMPSTAT_t">CCUn_CMPSTAT_t</a></td>
+<td>CMPSTAT;</td>
+<td>/* 0x60 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_CMPMODIF_t">CCUn_CMPMODIF_t</a></td>
+<td>CMPMODIF;</td>
+<td>/* 0x64 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_T12MSEL_t">CCUn_T12MSEL_t</a></td>
+<td>T12MSEL;</td>
+<td>/* 0x68 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved27[0x1];</td>
+<td>/* 0x6c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_TCTR0_t">CCUn_TCTR0_t</a></td>
+<td>TCTR0;</td>
+<td>/* 0x70 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_TCTR2_t">CCUn_TCTR2_t</a></td>
+<td>TCTR2;</td>
+<td>/* 0x74 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_TCTR4_t">CCUn_TCTR4_t</a></td>
+<td>TCTR4;</td>
+<td>/* 0x78 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved31[0x1];</td>
+<td>/* 0x7c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_MODCTR_t">CCUn_MODCTR_t</a></td>
+<td>MODCTR;</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_TRPCTR_t">CCUn_TRPCTR_t</a></td>
+<td>TRPCTR;</td>
+<td>/* 0x84 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_PSLR_t">CCUn_PSLR_t</a></td>
+<td>PSLR;</td>
+<td>/* 0x88 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_MCMOUTS_t">CCUn_MCMOUTS_t</a></td>
+<td>MCMOUTS;</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_MCMOUT_t">CCUn_MCMOUT_t</a></td>
+<td>MCMOUT;</td>
+<td>/* 0x90 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_MCMCTR_t">CCUn_MCMCTR_t</a></td>
+<td>MCMCTR;</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_IMON_t">CCUn_IMON_t</a></td>
+<td>IMON;</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_LI_t">CCUn_LI_t</a></td>
+<td>LI;</td>
+<td>/* 0x9c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_IS_t">CCUn_IS_t</a></td>
+<td>IS;</td>
+<td>/* 0xa0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_ISS_t">CCUn_ISS_t</a></td>
+<td>ISS;</td>
+<td>/* 0xa4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_ISR_t">CCUn_ISR_t</a></td>
+<td>ISR;</td>
+<td>/* 0xa8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_INP_t">CCUn_INP_t</a></td>
+<td>INP;</td>
+<td>/* 0xac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_IEN_t">CCUn_IEN_t</a></td>
+<td>IEN;</td>
+<td>/* 0xb0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved45[0xf];</td>
+<td>/* 0xb4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>SRC3;</td>
+<td>/* 0xf0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>SRC2;</td>
+<td>/* 0xf4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0xf8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CCUn_SRCm_t">CCUn_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0xfc */</td>
+</tr>
+
+<tr><td colspan="4">} CCU61_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1728_CCU61_STRUCTS_H_ */ -->
+</body>
+</html>

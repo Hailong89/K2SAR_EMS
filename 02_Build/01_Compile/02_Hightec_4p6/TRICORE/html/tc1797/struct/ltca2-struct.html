@@ -1,0 +1,201 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1797/ltca2-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1797_LTCA2_STRUCTS_H_
+#define _TC1797_LTCA2_STRUCTS_H_
+/*
+   TriCore TC1797
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1797/<a class="url" href="../ltca2.html">ltca2.h</a>&gt;
+#ifndef LTCA2_BASE
+#define LTCA2_BASE 0xf0002800
+#endif /* LTCA2_BASE */
+</pre>
+
+<a name="LTCA2_LTC_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_LTCCTRm_t">LTCA2_LTCCTRm_t</a></td>
+<td>CTR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_LTCXRm_t">LTCA2_LTCXRm_t</a></td>
+<td>XR;</td>
+<td>/* 0x4 */</td>
+</tr>
+
+<tr><td colspan="4">} LTCA2_LTC_t;</td></tr>
+</table>
+<a name="LTCA2_LTC31_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_LTCCTR31_t">LTCA2_LTCCTR31_t</a></td>
+<td>CTR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_LTCXR31_t">LTCA2_LTCXR31_t</a></td>
+<td>XR;</td>
+<td>/* 0x4 */</td>
+</tr>
+
+<tr><td colspan="4">} LTCA2_LTC31_t;</td></tr>
+</table>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved0[0x2];</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_ID_t">LTCA2_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved2[0x5];</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRSC2_t">LTCA2_SRSC2_t</a></td>
+<td>SRSC2;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRSS2_t">LTCA2_SRSS2_t</a></td>
+<td>SRSS2;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved5[0x4];</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_MRACTL_t">LTCA2_MRACTL_t</a></td>
+<td>MRACTL;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_MRADIN_t">LTCA2_MRADIN_t</a></td>
+<td>MRADIN;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_MRADOUT_t">LTCA2_MRADOUT_t</a></td>
+<td>MRADOUT;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved9[0x6f];</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#LTCA2_LTC_t">LTCA2_LTC_t</a></td>
+<td>LTC[0x1f];</td>
+<td>/* 0x200 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#LTCA2_LTC31_t">LTCA2_LTC31_t</a></td>
+<td>LTC31;</td>
+<td>/* 0x2f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved12[0x138];</td>
+<td>/* 0x300 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC07;</td>
+<td>/* 0x7e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC06;</td>
+<td>/* 0x7e4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC05;</td>
+<td>/* 0x7e8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC04;</td>
+<td>/* 0x7ec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC03;</td>
+<td>/* 0x7f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC02;</td>
+<td>/* 0x7f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC01;</td>
+<td>/* 0x7f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/l.html#LTCA2_SRCm_t">LTCA2_SRCm_t</a></td>
+<td>SRC00;</td>
+<td>/* 0x7fc */</td>
+</tr>
+
+<tr><td colspan="4">} LTCA2_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1797_LTCA2_STRUCTS_H_ */ -->
+</body>
+</html>

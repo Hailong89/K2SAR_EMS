@@ -1,0 +1,1704 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1791/eray-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1791_ERAY_STRUCTS_H_
+#define _TC1791_ERAY_STRUCTS_H_
+/*
+   TriCore TC1791
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1791/<a class="url" href="../eray.html">eray.h</a>&gt;
+#ifndef ERAY_BASE
+#define ERAY_BASE 0xf0010000
+#endif /* ERAY_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_CLC_t">ERAY_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_CUST1_t">ERAY_CUST1_t</a></td>
+<td>CUST1;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ID_t">ERAY_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_CUST3_t">ERAY_CUST3_t</a></td>
+<td>CUST3;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TEST1_t">ERAY_TEST1_t</a></td>
+<td>TEST1;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TEST2_t">ERAY_TEST2_t</a></td>
+<td>TEST2;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved6[0x1];</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_LCK_t">ERAY_LCK_t</a></td>
+<td>LCK;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_EIR_t">ERAY_EIR_t</a></td>
+<td>EIR;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SIR_t">ERAY_SIR_t</a></td>
+<td>SIR;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_EILS_t">ERAY_EILS_t</a></td>
+<td>EILS;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SILS_t">ERAY_SILS_t</a></td>
+<td>SILS;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_EIES_t">ERAY_EIES_t</a></td>
+<td>EIES;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_EIER_t">ERAY_EIER_t</a></td>
+<td>EIER;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SIES_t">ERAY_SIES_t</a></td>
+<td>SIES;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SIER_t">ERAY_SIER_t</a></td>
+<td>SIER;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ILE_t">ERAY_ILE_t</a></td>
+<td>ILE;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_T0C_t">ERAY_T0C_t</a></td>
+<td>T0C;</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_T1C_t">ERAY_T1C_t</a></td>
+<td>T1C;</td>
+<td>/* 0x48 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_STPW1_t">ERAY_STPW1_t</a></td>
+<td>STPW1;</td>
+<td>/* 0x4c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_STPW2_t">ERAY_STPW2_t</a></td>
+<td>STPW2;</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved21[0xb];</td>
+<td>/* 0x54 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SUCC1_t">ERAY_SUCC1_t</a></td>
+<td>SUCC1;</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SUCC2_t">ERAY_SUCC2_t</a></td>
+<td>SUCC2;</td>
+<td>/* 0x84 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SUCC3_t">ERAY_SUCC3_t</a></td>
+<td>SUCC3;</td>
+<td>/* 0x88 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NEMC_t">ERAY_NEMC_t</a></td>
+<td>NEMC;</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_PRTC1_t">ERAY_PRTC1_t</a></td>
+<td>PRTC1;</td>
+<td>/* 0x90 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_PRTC2_t">ERAY_PRTC2_t</a></td>
+<td>PRTC2;</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MHDC_t">ERAY_MHDC_t</a></td>
+<td>MHDC;</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved29[0x1];</td>
+<td>/* 0x9c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC01_t">ERAY_GTUC01_t</a></td>
+<td>GTUC01;</td>
+<td>/* 0xa0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC02_t">ERAY_GTUC02_t</a></td>
+<td>GTUC02;</td>
+<td>/* 0xa4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC03_t">ERAY_GTUC03_t</a></td>
+<td>GTUC03;</td>
+<td>/* 0xa8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC04_t">ERAY_GTUC04_t</a></td>
+<td>GTUC04;</td>
+<td>/* 0xac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC05_t">ERAY_GTUC05_t</a></td>
+<td>GTUC05;</td>
+<td>/* 0xb0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC06_t">ERAY_GTUC06_t</a></td>
+<td>GTUC06;</td>
+<td>/* 0xb4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC07_t">ERAY_GTUC07_t</a></td>
+<td>GTUC07;</td>
+<td>/* 0xb8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC08_t">ERAY_GTUC08_t</a></td>
+<td>GTUC08;</td>
+<td>/* 0xbc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC09_t">ERAY_GTUC09_t</a></td>
+<td>GTUC09;</td>
+<td>/* 0xc0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC10_t">ERAY_GTUC10_t</a></td>
+<td>GTUC10;</td>
+<td>/* 0xc4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_GTUC11_t">ERAY_GTUC11_t</a></td>
+<td>GTUC11;</td>
+<td>/* 0xc8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved41[0xd];</td>
+<td>/* 0xcc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_CCSV_t">ERAY_CCSV_t</a></td>
+<td>CCSV;</td>
+<td>/* 0x100 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_CCEV_t">ERAY_CCEV_t</a></td>
+<td>CCEV;</td>
+<td>/* 0x104 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved44[0x2];</td>
+<td>/* 0x108 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SCV_t">ERAY_SCV_t</a></td>
+<td>SCV;</td>
+<td>/* 0x110 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MTCCV_t">ERAY_MTCCV_t</a></td>
+<td>MTCCV;</td>
+<td>/* 0x114 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RCV_t">ERAY_RCV_t</a></td>
+<td>RCV;</td>
+<td>/* 0x118 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OCV_t">ERAY_OCV_t</a></td>
+<td>OCV;</td>
+<td>/* 0x11c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SFS_t">ERAY_SFS_t</a></td>
+<td>SFS;</td>
+<td>/* 0x120 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SWNIT_t">ERAY_SWNIT_t</a></td>
+<td>SWNIT;</td>
+<td>/* 0x124 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ACS_t">ERAY_ACS_t</a></td>
+<td>ACS;</td>
+<td>/* 0x128 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved52[0x1];</td>
+<td>/* 0x12c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID01;</td>
+<td>/* 0x130 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID02;</td>
+<td>/* 0x134 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID03;</td>
+<td>/* 0x138 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID04;</td>
+<td>/* 0x13c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID05;</td>
+<td>/* 0x140 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID06;</td>
+<td>/* 0x144 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID07;</td>
+<td>/* 0x148 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID08;</td>
+<td>/* 0x14c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID09;</td>
+<td>/* 0x150 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID10;</td>
+<td>/* 0x154 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID11;</td>
+<td>/* 0x158 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID12;</td>
+<td>/* 0x15c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID13;</td>
+<td>/* 0x160 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID14;</td>
+<td>/* 0x164 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ESIDm_t">ERAY_ESIDm_t</a></td>
+<td>ESID15;</td>
+<td>/* 0x168 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved68[0x1];</td>
+<td>/* 0x16c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID01;</td>
+<td>/* 0x170 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID02;</td>
+<td>/* 0x174 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID03;</td>
+<td>/* 0x178 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID04;</td>
+<td>/* 0x17c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID05;</td>
+<td>/* 0x180 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID06;</td>
+<td>/* 0x184 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID07;</td>
+<td>/* 0x188 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID08;</td>
+<td>/* 0x18c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID09;</td>
+<td>/* 0x190 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID10;</td>
+<td>/* 0x194 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID11;</td>
+<td>/* 0x198 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID12;</td>
+<td>/* 0x19c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID13;</td>
+<td>/* 0x1a0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID14;</td>
+<td>/* 0x1a4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OSIDm_t">ERAY_OSIDm_t</a></td>
+<td>OSID15;</td>
+<td>/* 0x1a8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved84[0x1];</td>
+<td>/* 0x1ac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NMVm_t">ERAY_NMVm_t</a></td>
+<td>NMV1;</td>
+<td>/* 0x1b0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NMVm_t">ERAY_NMVm_t</a></td>
+<td>NMV2;</td>
+<td>/* 0x1b4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NMVm_t">ERAY_NMVm_t</a></td>
+<td>NMV3;</td>
+<td>/* 0x1b8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved88[0x51];</td>
+<td>/* 0x1bc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MRC_t">ERAY_MRC_t</a></td>
+<td>MRC;</td>
+<td>/* 0x300 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_FRF_t">ERAY_FRF_t</a></td>
+<td>FRF;</td>
+<td>/* 0x304 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_FRFM_t">ERAY_FRFM_t</a></td>
+<td>FRFM;</td>
+<td>/* 0x308 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_FCL_t">ERAY_FCL_t</a></td>
+<td>FCL;</td>
+<td>/* 0x30c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MHDS_t">ERAY_MHDS_t</a></td>
+<td>MHDS;</td>
+<td>/* 0x310 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_LDTS_t">ERAY_LDTS_t</a></td>
+<td>LDTS;</td>
+<td>/* 0x314 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_FSR_t">ERAY_FSR_t</a></td>
+<td>FSR;</td>
+<td>/* 0x318 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MHDF_t">ERAY_MHDF_t</a></td>
+<td>MHDF;</td>
+<td>/* 0x31c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TXRQm_t">ERAY_TXRQm_t</a></td>
+<td>TXRQ1;</td>
+<td>/* 0x320 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TXRQm_t">ERAY_TXRQm_t</a></td>
+<td>TXRQ2;</td>
+<td>/* 0x324 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TXRQm_t">ERAY_TXRQm_t</a></td>
+<td>TXRQ3;</td>
+<td>/* 0x328 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TXRQm_t">ERAY_TXRQm_t</a></td>
+<td>TXRQ4;</td>
+<td>/* 0x32c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDATm_t">ERAY_NDATm_t</a></td>
+<td>NDAT1;</td>
+<td>/* 0x330 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDATm_t">ERAY_NDATm_t</a></td>
+<td>NDAT2;</td>
+<td>/* 0x334 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDATm_t">ERAY_NDATm_t</a></td>
+<td>NDAT3;</td>
+<td>/* 0x338 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDATm_t">ERAY_NDATm_t</a></td>
+<td>NDAT4;</td>
+<td>/* 0x33c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MBSCm_t">ERAY_MBSCm_t</a></td>
+<td>MBSC1;</td>
+<td>/* 0x340 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MBSCm_t">ERAY_MBSCm_t</a></td>
+<td>MBSC2;</td>
+<td>/* 0x344 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MBSCm_t">ERAY_MBSCm_t</a></td>
+<td>MBSC3;</td>
+<td>/* 0x348 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MBSCm_t">ERAY_MBSCm_t</a></td>
+<td>MBSC4;</td>
+<td>/* 0x34c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved109[0x16];</td>
+<td>/* 0x350 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDICm_t">ERAY_NDICm_t</a></td>
+<td>NDIC1;</td>
+<td>/* 0x3a8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDICm_t">ERAY_NDICm_t</a></td>
+<td>NDIC2;</td>
+<td>/* 0x3ac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDICm_t">ERAY_NDICm_t</a></td>
+<td>NDIC3;</td>
+<td>/* 0x3b0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDICm_t">ERAY_NDICm_t</a></td>
+<td>NDIC4;</td>
+<td>/* 0x3b4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MSICm_t">ERAY_MSICm_t</a></td>
+<td>MSIC1;</td>
+<td>/* 0x3b8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MSICm_t">ERAY_MSICm_t</a></td>
+<td>MSIC2;</td>
+<td>/* 0x3bc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MSICm_t">ERAY_MSICm_t</a></td>
+<td>MSIC3;</td>
+<td>/* 0x3c0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MSICm_t">ERAY_MSICm_t</a></td>
+<td>MSIC4;</td>
+<td>/* 0x3c4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_IBUSYSRC_t">ERAY_IBUSYSRC_t</a></td>
+<td>IBUSYSRC;</td>
+<td>/* 0x3c8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OBUSYSRC_t">ERAY_OBUSYSRC_t</a></td>
+<td>OBUSYSRC;</td>
+<td>/* 0x3cc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MBSCmSRC_t">ERAY_MBSCmSRC_t</a></td>
+<td>MBSC1SRC;</td>
+<td>/* 0x3d0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MBSCmSRC_t">ERAY_MBSCmSRC_t</a></td>
+<td>MBSC0SRC;</td>
+<td>/* 0x3d4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDATmSRC_t">ERAY_NDATmSRC_t</a></td>
+<td>NDAT1SRC;</td>
+<td>/* 0x3d8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_NDATmSRC_t">ERAY_NDATmSRC_t</a></td>
+<td>NDAT0SRC;</td>
+<td>/* 0x3dc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TINTmSRC_t">ERAY_TINTmSRC_t</a></td>
+<td>TINT1SRC;</td>
+<td>/* 0x3e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_TINTmSRC_t">ERAY_TINTmSRC_t</a></td>
+<td>TINT0SRC;</td>
+<td>/* 0x3e4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_INTmSRC_t">ERAY_INTmSRC_t</a></td>
+<td>INT1SRC;</td>
+<td>/* 0x3e8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_INTmSRC_t">ERAY_INTmSRC_t</a></td>
+<td>INT0SRC;</td>
+<td>/* 0x3ec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_CREL_t">ERAY_CREL_t</a></td>
+<td>CREL;</td>
+<td>/* 0x3f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ENDN_t">ERAY_ENDN_t</a></td>
+<td>ENDN;</td>
+<td>/* 0x3f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved130[0x2];</td>
+<td>/* 0x3f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS01;</td>
+<td>/* 0x400 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS02;</td>
+<td>/* 0x404 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS03;</td>
+<td>/* 0x408 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS04;</td>
+<td>/* 0x40c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS05;</td>
+<td>/* 0x410 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS06;</td>
+<td>/* 0x414 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS07;</td>
+<td>/* 0x418 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS08;</td>
+<td>/* 0x41c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS09;</td>
+<td>/* 0x420 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS10;</td>
+<td>/* 0x424 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS11;</td>
+<td>/* 0x428 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS12;</td>
+<td>/* 0x42c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS13;</td>
+<td>/* 0x430 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS14;</td>
+<td>/* 0x434 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS15;</td>
+<td>/* 0x438 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS16;</td>
+<td>/* 0x43c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS17;</td>
+<td>/* 0x440 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS18;</td>
+<td>/* 0x444 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS19;</td>
+<td>/* 0x448 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS20;</td>
+<td>/* 0x44c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS21;</td>
+<td>/* 0x450 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS22;</td>
+<td>/* 0x454 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS23;</td>
+<td>/* 0x458 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS24;</td>
+<td>/* 0x45c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS25;</td>
+<td>/* 0x460 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS26;</td>
+<td>/* 0x464 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS27;</td>
+<td>/* 0x468 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS28;</td>
+<td>/* 0x46c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS29;</td>
+<td>/* 0x470 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS30;</td>
+<td>/* 0x474 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS31;</td>
+<td>/* 0x478 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS32;</td>
+<td>/* 0x47c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS33;</td>
+<td>/* 0x480 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS34;</td>
+<td>/* 0x484 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS35;</td>
+<td>/* 0x488 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS36;</td>
+<td>/* 0x48c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS37;</td>
+<td>/* 0x490 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS38;</td>
+<td>/* 0x494 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS39;</td>
+<td>/* 0x498 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS40;</td>
+<td>/* 0x49c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS41;</td>
+<td>/* 0x4a0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS42;</td>
+<td>/* 0x4a4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS43;</td>
+<td>/* 0x4a8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS44;</td>
+<td>/* 0x4ac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS45;</td>
+<td>/* 0x4b0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS46;</td>
+<td>/* 0x4b4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS47;</td>
+<td>/* 0x4b8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS48;</td>
+<td>/* 0x4bc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS49;</td>
+<td>/* 0x4c0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS50;</td>
+<td>/* 0x4c4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS51;</td>
+<td>/* 0x4c8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS52;</td>
+<td>/* 0x4cc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS53;</td>
+<td>/* 0x4d0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS54;</td>
+<td>/* 0x4d4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS55;</td>
+<td>/* 0x4d8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS56;</td>
+<td>/* 0x4dc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS57;</td>
+<td>/* 0x4e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS58;</td>
+<td>/* 0x4e4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS59;</td>
+<td>/* 0x4e8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS60;</td>
+<td>/* 0x4ec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS61;</td>
+<td>/* 0x4f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS62;</td>
+<td>/* 0x4f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS63;</td>
+<td>/* 0x4f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRDSm_t">ERAY_WRDSm_t</a></td>
+<td>WRDS64;</td>
+<td>/* 0x4fc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRHS1_t">ERAY_WRHS1_t</a></td>
+<td>WRHS1;</td>
+<td>/* 0x500 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRHS2_t">ERAY_WRHS2_t</a></td>
+<td>WRHS2;</td>
+<td>/* 0x504 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_WRHS3_t">ERAY_WRHS3_t</a></td>
+<td>WRHS3;</td>
+<td>/* 0x508 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved198[0x1];</td>
+<td>/* 0x50c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_IBCM_t">ERAY_IBCM_t</a></td>
+<td>IBCM;</td>
+<td>/* 0x510 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_IBCR_t">ERAY_IBCR_t</a></td>
+<td>IBCR;</td>
+<td>/* 0x514 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved201[0x3a];</td>
+<td>/* 0x518 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS01;</td>
+<td>/* 0x600 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS02;</td>
+<td>/* 0x604 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS03;</td>
+<td>/* 0x608 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS04;</td>
+<td>/* 0x60c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS05;</td>
+<td>/* 0x610 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS06;</td>
+<td>/* 0x614 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS07;</td>
+<td>/* 0x618 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS08;</td>
+<td>/* 0x61c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS09;</td>
+<td>/* 0x620 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS10;</td>
+<td>/* 0x624 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS11;</td>
+<td>/* 0x628 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS12;</td>
+<td>/* 0x62c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS13;</td>
+<td>/* 0x630 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS14;</td>
+<td>/* 0x634 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS15;</td>
+<td>/* 0x638 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS16;</td>
+<td>/* 0x63c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS17;</td>
+<td>/* 0x640 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS18;</td>
+<td>/* 0x644 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS19;</td>
+<td>/* 0x648 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS20;</td>
+<td>/* 0x64c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS21;</td>
+<td>/* 0x650 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS22;</td>
+<td>/* 0x654 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS23;</td>
+<td>/* 0x658 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS24;</td>
+<td>/* 0x65c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS25;</td>
+<td>/* 0x660 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS26;</td>
+<td>/* 0x664 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS27;</td>
+<td>/* 0x668 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS28;</td>
+<td>/* 0x66c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS29;</td>
+<td>/* 0x670 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS30;</td>
+<td>/* 0x674 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS31;</td>
+<td>/* 0x678 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS32;</td>
+<td>/* 0x67c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS33;</td>
+<td>/* 0x680 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS34;</td>
+<td>/* 0x684 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS35;</td>
+<td>/* 0x688 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS36;</td>
+<td>/* 0x68c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS37;</td>
+<td>/* 0x690 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS38;</td>
+<td>/* 0x694 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS39;</td>
+<td>/* 0x698 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS40;</td>
+<td>/* 0x69c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS41;</td>
+<td>/* 0x6a0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS42;</td>
+<td>/* 0x6a4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS43;</td>
+<td>/* 0x6a8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS44;</td>
+<td>/* 0x6ac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS45;</td>
+<td>/* 0x6b0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS46;</td>
+<td>/* 0x6b4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS47;</td>
+<td>/* 0x6b8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS48;</td>
+<td>/* 0x6bc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS49;</td>
+<td>/* 0x6c0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS50;</td>
+<td>/* 0x6c4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS51;</td>
+<td>/* 0x6c8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS52;</td>
+<td>/* 0x6cc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS53;</td>
+<td>/* 0x6d0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS54;</td>
+<td>/* 0x6d4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS55;</td>
+<td>/* 0x6d8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS56;</td>
+<td>/* 0x6dc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS57;</td>
+<td>/* 0x6e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS58;</td>
+<td>/* 0x6e4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS59;</td>
+<td>/* 0x6e8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS60;</td>
+<td>/* 0x6ec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS61;</td>
+<td>/* 0x6f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS62;</td>
+<td>/* 0x6f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS63;</td>
+<td>/* 0x6f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDDSm_t">ERAY_RDDSm_t</a></td>
+<td>RDDS64;</td>
+<td>/* 0x6fc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDHS1_t">ERAY_RDHS1_t</a></td>
+<td>RDHS1;</td>
+<td>/* 0x700 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDHS2_t">ERAY_RDHS2_t</a></td>
+<td>RDHS2;</td>
+<td>/* 0x704 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_RDHS3_t">ERAY_RDHS3_t</a></td>
+<td>RDHS3;</td>
+<td>/* 0x708 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_MBS_t">ERAY_MBS_t</a></td>
+<td>MBS;</td>
+<td>/* 0x70c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OBCM_t">ERAY_OBCM_t</a></td>
+<td>OBCM;</td>
+<td>/* 0x710 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_OBCR_t">ERAY_OBCR_t</a></td>
+<td>OBCR;</td>
+<td>/* 0x714 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved272[0x3a];</td>
+<td>/* 0x718 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SECCON_t">ERAY_SECCON_t</a></td>
+<td>SECCON;</td>
+<td>/* 0x800 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_SEDCON_t">ERAY_SEDCON_t</a></td>
+<td>SEDCON;</td>
+<td>/* 0x804 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_DEDCON_t">ERAY_DEDCON_t</a></td>
+<td>DEDCON;</td>
+<td>/* 0x808 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ECCR_t">ERAY_ECCR_t</a></td>
+<td>ECCR;</td>
+<td>/* 0x80c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/e.html#ERAY_ECCW_t">ERAY_ECCW_t</a></td>
+<td>ECCW;</td>
+<td>/* 0x810 */</td>
+</tr>
+
+<tr><td colspan="4">} ERAY_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1791_ERAY_STRUCTS_H_ */ -->
+</body>
+</html>

@@ -1,0 +1,1061 @@
+<html>
+<head>
+<title>TriCore TC1792 (P6)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>P6</h2>
+
+<h2><tt>#include &lt;tc1792/p6.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#P6_OUT">P6_OUT</a></td>
+<td>Port 6 Output Register</td>
+<td>0xF0001200</td>
+<td><a class="url" href="types/p.html#P6_OUT_t">P6_OUT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P6_OMR">P6_OMR</a></td>
+<td>Port 6 Output Modification Register</td>
+<td>0xF0001204</td>
+<td><a class="url" href="types/p.html#P6_OMR_t">P6_OMR_t</a></td>
+<td>0x0000XXXX</td>
+<td>U,SV</td>
+<td>U,SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P6_IOCR4">P6_IOCR4</a></td>
+<td>Port 6 Input/Output Control Register 4</td>
+<td>0xF0001214</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P6_IOCR8">P6_IOCR8</a></td>
+<td>Port 6 Input/Output Control Register 8</td>
+<td>0xF0001218</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P6_IOCR12">P6_IOCR12</a></td>
+<td>Port 6 Input/Output Control Register 12</td>
+<td>0xF000121C</td>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td>0x20202020</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P6_IN">P6_IN</a></td>
+<td>Port 6 Input Register</td>
+<td>0xF0001224</td>
+<td><a class="url" href="types/p.html#P6_IN_t">P6_IN_t</a></td>
+<td>0x0000XXXX</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#P6_PDR">P6_PDR</a></td>
+<td>Port 6 Pad Driver Mode Register</td>
+<td>0xF0001240</td>
+<td><a class="url" href="types/p.html#P6_PDR_t">P6_PDR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV,E</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P6_IN_t">P6_IN_t</a></td>
+<td><a class="url" href="p6.html#P6_IN">P6_IN</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P6_OMR_t">P6_OMR_t</a></td>
+<td><a class="url" href="p6.html#P6_OMR">P6_OMR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P6_OUT_t">P6_OUT_t</a></td>
+<td><a class="url" href="p6.html#P6_OUT">P6_OUT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#P6_PDR_t">P6_PDR_t</a></td>
+<td><a class="url" href="p6.html#P6_PDR">P6_PDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td>
+<td><a class="url" href="p0.html#P0_IOCR0">P0_IOCR0</a>,       
+<a class="url" href="p0.html#P0_IOCR4">P0_IOCR4</a>,       
+<a class="url" href="p0.html#P0_IOCR8">P0_IOCR8</a>,       
+<a class="url" href="p0.html#P0_IOCR12">P0_IOCR12</a>,       
+<a class="url" href="p1.html#P1_IOCR0">P1_IOCR0</a>,       
+<a class="url" href="p1.html#P1_IOCR4">P1_IOCR4</a>,       
+<a class="url" href="p1.html#P1_IOCR8">P1_IOCR8</a>,       
+<a class="url" href="p1.html#P1_IOCR12">P1_IOCR12</a>,       
+<a class="url" href="p2.html#P2_IOCR4">P2_IOCR4</a>,       
+<a class="url" href="p2.html#P2_IOCR8">P2_IOCR8</a>,       
+<a class="url" href="p2.html#P2_IOCR12">P2_IOCR12</a>,       
+<a class="url" href="p3.html#P3_IOCR0">P3_IOCR0</a>,       
+<a class="url" href="p3.html#P3_IOCR4">P3_IOCR4</a>,       
+<a class="url" href="p3.html#P3_IOCR8">P3_IOCR8</a>,       
+<a class="url" href="p3.html#P3_IOCR12">P3_IOCR12</a>,       
+<a class="url" href="p4.html#P4_IOCR0">P4_IOCR0</a>,       
+<a class="url" href="p4.html#P4_IOCR4">P4_IOCR4</a>,       
+<a class="url" href="p4.html#P4_IOCR8">P4_IOCR8</a>,       
+<a class="url" href="p4.html#P4_IOCR12">P4_IOCR12</a>,       
+<a class="url" href="p5.html#P5_IOCR0">P5_IOCR0</a>,       
+<a class="url" href="p5.html#P5_IOCR4">P5_IOCR4</a>,       
+<a class="url" href="p6.html#P6_IOCR4">P6_IOCR4</a>,       
+<a class="url" href="p6.html#P6_IOCR8">P6_IOCR8</a>,       
+<a class="url" href="p6.html#P6_IOCR12">P6_IOCR12</a>,       
+<a class="url" href="p7.html#P7_IOCR0">P7_IOCR0</a>,       
+<a class="url" href="p7.html#P7_IOCR4">P7_IOCR4</a>,       
+<a class="url" href="p8.html#P8_IOCR0">P8_IOCR0</a>,       
+<a class="url" href="p8.html#P8_IOCR4">P8_IOCR4</a>,       
+<a class="url" href="p9.html#P9_IOCR0">P9_IOCR0</a>,       
+<a class="url" href="p9.html#P9_IOCR4">P9_IOCR4</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="P6_OUT">&nbsp;</a>
+<h3>P6_OUT</h3>
+<h3>"Port 6 Output Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P6_OUT_ADDR = 0xF0001200</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P6_OUT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P6_OUT_t">P6_OUT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P6_OUT.bits</b>&nbsp;&quot;Port 6 Output Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>P4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>P6_OUT_P4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P4_SHIFT</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>P6_OUT_P5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P5_SHIFT</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>P6_OUT_P6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P6_SHIFT</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>P6_OUT_P7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P7_SHIFT</td>
+</tr>
+<tr>
+<td>P8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>P6_OUT_P8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P8_SHIFT</td>
+</tr>
+<tr>
+<td>P9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>P6_OUT_P9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P9_SHIFT</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>P6_OUT_P10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P10_SHIFT</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>P6_OUT_P11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P11_SHIFT</td>
+</tr>
+<tr>
+<td>P12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>P6_OUT_P12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P12_SHIFT</td>
+</tr>
+<tr>
+<td>P13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>P6_OUT_P13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P13_SHIFT</td>
+</tr>
+<tr>
+<td>P14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>P6_OUT_P14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P14_SHIFT</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>P6_OUT_P15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rwh</td>
+<td>P6_OUT_P15_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>P6_OUT_MASK</td><td><tt>0x0000fff0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000fff0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000fff0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000fff0</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P6_OMR">&nbsp;</a>
+<h3>P6_OMR</h3>
+<h3>"Port 6 Output Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P6_OMR_ADDR = 0xF0001204</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P6_OMR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P6_OMR_t">P6_OMR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P6_OMR.bits</b>&nbsp;&quot;Port 6 Output Modification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PS4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>P6_OMR_PS4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>P6_OMR_PS4_SHIFT</td>
+</tr>
+<tr>
+<td>PS5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>P6_OMR_PS5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>P6_OMR_PS5_SHIFT</td>
+</tr>
+<tr>
+<td>PS6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>P6_OMR_PS6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>P6_OMR_PS6_SHIFT</td>
+</tr>
+<tr>
+<td>PS7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>P6_OMR_PS7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>P6_OMR_PS7_SHIFT</td>
+</tr>
+<tr>
+<td>PS8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>P6_OMR_PS8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>P6_OMR_PS8_SHIFT</td>
+</tr>
+<tr>
+<td>PS9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>P6_OMR_PS9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>P6_OMR_PS9_SHIFT</td>
+</tr>
+<tr>
+<td>PS10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>P6_OMR_PS10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>P6_OMR_PS10_SHIFT</td>
+</tr>
+<tr>
+<td>PS11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>P6_OMR_PS11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>P6_OMR_PS11_SHIFT</td>
+</tr>
+<tr>
+<td>PS12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>P6_OMR_PS12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>w</td>
+<td>P6_OMR_PS12_SHIFT</td>
+</tr>
+<tr>
+<td>PS13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>P6_OMR_PS13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>w</td>
+<td>P6_OMR_PS13_SHIFT</td>
+</tr>
+<tr>
+<td>PS14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>P6_OMR_PS14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>P6_OMR_PS14_SHIFT</td>
+</tr>
+<tr>
+<td>PS15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>P6_OMR_PS15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>P6_OMR_PS15_SHIFT</td>
+</tr>
+<tr>
+<td>PR4</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>P6_OMR_PR4_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR4_SHIFT</td>
+</tr>
+<tr>
+<td>PR5</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>P6_OMR_PR5_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR5_SHIFT</td>
+</tr>
+<tr>
+<td>PR6</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>P6_OMR_PR6_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR6_SHIFT</td>
+</tr>
+<tr>
+<td>PR7</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>P6_OMR_PR7_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR7_SHIFT</td>
+</tr>
+<tr>
+<td>PR8</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>P6_OMR_PR8_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR8_SHIFT</td>
+</tr>
+<tr>
+<td>PR9</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>P6_OMR_PR9_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR9_SHIFT</td>
+</tr>
+<tr>
+<td>PR10</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>P6_OMR_PR10_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR10_SHIFT</td>
+</tr>
+<tr>
+<td>PR11</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>P6_OMR_PR11_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR11_SHIFT</td>
+</tr>
+<tr>
+<td>PR12</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>P6_OMR_PR12_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR12_SHIFT</td>
+</tr>
+<tr>
+<td>PR13</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>P6_OMR_PR13_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR13_SHIFT</td>
+</tr>
+<tr>
+<td>PR14</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>P6_OMR_PR14_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR14_SHIFT</td>
+</tr>
+<tr>
+<td>PR15</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>P6_OMR_PR15_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>w</td>
+<td>P6_OMR_PR15_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>P6_OMR_MASK</td><td><tt>0xfff0fff0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfff0fff0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P6_IOCR4">&nbsp;</a>
+<h3>P6_IOCR4</h3>
+<h3>"Port 6 Input/Output Control Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P6_IOCR4_ADDR = 0xF0001214</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P6_IOCR4.bits</b>&nbsp;&quot;Port 6 Input/Output Control Register 4&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>Pn_IOCRm_PC0_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC0_SHIFT</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>Pn_IOCRm_PC1_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC1_SHIFT</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>Pn_IOCRm_PC2_MASK</td>
+<td><tt>0x00f00000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC2_SHIFT</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>Pn_IOCRm_PC3_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>Pn_IOCRm_MASK</td><td><tt>0xf0f0f0f0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P6_IOCR8">&nbsp;</a>
+<h3>P6_IOCR8</h3>
+<h3>"Port 6 Input/Output Control Register 8"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P6_IOCR8_ADDR = 0xF0001218</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P6_IOCR8.bits</b>&nbsp;&quot;Port 6 Input/Output Control Register 8&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>Pn_IOCRm_PC0_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC0_SHIFT</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>Pn_IOCRm_PC1_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC1_SHIFT</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>Pn_IOCRm_PC2_MASK</td>
+<td><tt>0x00f00000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC2_SHIFT</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>Pn_IOCRm_PC3_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>Pn_IOCRm_MASK</td><td><tt>0xf0f0f0f0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P6_IOCR12">&nbsp;</a>
+<h3>P6_IOCR12</h3>
+<h3>"Port 6 Input/Output Control Register 12"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P6_IOCR12_ADDR = 0xF000121C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>Pn_IOCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x20202020</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#Pn_IOCRm_t">Pn_IOCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P6_IOCR12.bits</b>&nbsp;&quot;Port 6 Input/Output Control Register 12&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>Pn_IOCRm_PC0_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC0_SHIFT</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>Pn_IOCRm_PC1_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC1_SHIFT</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>4</td>
+<td>20 - 23</td>
+<td>Pn_IOCRm_PC2_MASK</td>
+<td><tt>0x00f00000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC2_SHIFT</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>Pn_IOCRm_PC3_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>Pn_IOCRm_PC3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>Pn_IOCRm_MASK</td><td><tt>0xf0f0f0f0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf0f0f0f0</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P6_IN">&nbsp;</a>
+<h3>P6_IN</h3>
+<h3>"Port 6 Input Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P6_IN_ADDR = 0xF0001224</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P6_IN_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P6_IN_t">P6_IN_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P6_IN.bits</b>&nbsp;&quot;Port 6 Input Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>P4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>P6_IN_P4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>P6_IN_P4_SHIFT</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>P6_IN_P5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>P6_IN_P5_SHIFT</td>
+</tr>
+<tr>
+<td>P6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>P6_IN_P6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>P6_IN_P6_SHIFT</td>
+</tr>
+<tr>
+<td>P7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>P6_IN_P7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>P6_IN_P7_SHIFT</td>
+</tr>
+<tr>
+<td>P8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>P6_IN_P8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>P6_IN_P8_SHIFT</td>
+</tr>
+<tr>
+<td>P9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>P6_IN_P9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>P6_IN_P9_SHIFT</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>P6_IN_P10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>P6_IN_P10_SHIFT</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>P6_IN_P11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>P6_IN_P11_SHIFT</td>
+</tr>
+<tr>
+<td>P12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>P6_IN_P12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>P6_IN_P12_SHIFT</td>
+</tr>
+<tr>
+<td>P13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>P6_IN_P13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>P6_IN_P13_SHIFT</td>
+</tr>
+<tr>
+<td>P14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>P6_IN_P14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>P6_IN_P14_SHIFT</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>P6_IN_P15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>P6_IN_P15_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>P6_IN_MASK</td><td><tt>0x0000fff0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000fff0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000fff0</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="P6_PDR">&nbsp;</a>
+<h3>P6_PDR</h3>
+<h3>"Port 6 Pad Driver Mode Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>P6_PDR_ADDR = 0xF0001240</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>P6_PDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#P6_PDR_t">P6_PDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>P6_PDR.bits</b>&nbsp;&quot;Port 6 Pad Driver Mode Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PDSSC1</td>
+<td>3</td>
+<td>20 - 22</td>
+<td>P6_PDR_PDSSC1_MASK</td>
+<td><tt>0x00700000</tt></td>
+<td>rw</td>
+<td>P6_PDR_PDSSC1_SHIFT</td>
+</tr>
+<tr>
+<td>PDCAN01</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>P6_PDR_PDCAN01_MASK</td>
+<td><tt>0x07000000</tt></td>
+<td>rw</td>
+<td>P6_PDR_PDCAN01_SHIFT</td>
+</tr>
+<tr>
+<td>PCCAN23</td>
+<td>3</td>
+<td>28 - 30</td>
+<td>P6_PDR_PCCAN23_MASK</td>
+<td><tt>0x70000000</tt></td>
+<td>rw</td>
+<td>P6_PDR_PCCAN23_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>P6_PDR_MASK</td><td><tt>0x77700000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x77700000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x77700000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

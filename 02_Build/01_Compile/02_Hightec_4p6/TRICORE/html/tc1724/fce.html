@@ -1,0 +1,1832 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1724 (FCE)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>FCE</h2>
+
+<h2><tt>#include &lt;tc1724/fce.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#FCE_CLC">FCE_CLC</a></td>
+<td>Control Clock Register</td>
+<td>0xF0320000</td>
+<td><a class="url" href="types/f.html#FCE_CLC_t">FCE_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_ID">FCE_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0320008</td>
+<td><a class="url" href="types/f.html#FCE_ID_t">FCE_ID_t</a></td>
+<td>0x008AC001</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_IR0">FCE_IR0</a></td>
+<td>Input Register 0</td>
+<td>0xF0320020</td>
+<td><a class="url" href="types/f.html#FCE_IRm_t">FCE_IRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_RES0">FCE_RES0</a></td>
+<td>CRC Result Register 0</td>
+<td>0xF0320024</td>
+<td><a class="url" href="types/f.html#FCE_RESm_t">FCE_RESm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CFG0">FCE_CFG0</a></td>
+<td>CRC Configuration Register 0</td>
+<td>0xF0320028</td>
+<td><a class="url" href="types/f.html#FCE_CFGm_t">FCE_CFGm_t</a></td>
+<td>0x00000700</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_STS0">FCE_STS0</a></td>
+<td>CRC Status Register 0</td>
+<td>0xF032002C</td>
+<td><a class="url" href="types/f.html#FCE_STSm_t">FCE_STSm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_LENGTH0">FCE_LENGTH0</a></td>
+<td>CRC Length Register 0</td>
+<td>0xF0320030</td>
+<td><a class="url" href="types/f.html#FCE_LENGTHm_t">FCE_LENGTHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CHECK0">FCE_CHECK0</a></td>
+<td>CRC Check Register 0</td>
+<td>0xF0320034</td>
+<td><a class="url" href="types/f.html#FCE_CHECKm_t">FCE_CHECKm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CRC0">FCE_CRC0</a></td>
+<td>CRC Register 0</td>
+<td>0xF0320038</td>
+<td><a class="url" href="types/f.html#FCE_CRCm_t">FCE_CRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CTR0">FCE_CTR0</a></td>
+<td>CRC Test Register 0</td>
+<td>0xF032003C</td>
+<td><a class="url" href="types/f.html#FCE_CTRm_t">FCE_CTRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_IR1">FCE_IR1</a></td>
+<td>Input Register 1</td>
+<td>0xF0320040</td>
+<td><a class="url" href="types/f.html#FCE_IRm_t">FCE_IRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_RES1">FCE_RES1</a></td>
+<td>CRC Result Register 1</td>
+<td>0xF0320044</td>
+<td><a class="url" href="types/f.html#FCE_RESm_t">FCE_RESm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CFG1">FCE_CFG1</a></td>
+<td>CRC Configuration Register 1</td>
+<td>0xF0320048</td>
+<td><a class="url" href="types/f.html#FCE_CFGm_t">FCE_CFGm_t</a></td>
+<td>0x00000700</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_STS1">FCE_STS1</a></td>
+<td>CRC Status Register 1</td>
+<td>0xF032004C</td>
+<td><a class="url" href="types/f.html#FCE_STSm_t">FCE_STSm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_LENGTH1">FCE_LENGTH1</a></td>
+<td>CRC Length Register 1</td>
+<td>0xF0320050</td>
+<td><a class="url" href="types/f.html#FCE_LENGTHm_t">FCE_LENGTHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CHECK1">FCE_CHECK1</a></td>
+<td>CRC Check Register 1</td>
+<td>0xF0320054</td>
+<td><a class="url" href="types/f.html#FCE_CHECKm_t">FCE_CHECKm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CRC1">FCE_CRC1</a></td>
+<td>CRC Register 1</td>
+<td>0xF0320058</td>
+<td><a class="url" href="types/f.html#FCE_CRCm_t">FCE_CRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_CTR1">FCE_CTR1</a></td>
+<td>CRC Test Register 1</td>
+<td>0xF032005C</td>
+<td><a class="url" href="types/f.html#FCE_CTRm_t">FCE_CTRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCE_SRC">FCE_SRC</a></td>
+<td>Service Request Control Register</td>
+<td>0xF03200FC</td>
+<td><a class="url" href="types/f.html#FCE_SRC_t">FCE_SRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_CFGm_t">FCE_CFGm_t</a></td>
+<td><a class="url" href="fce.html#FCE_CFG0">FCE_CFG0</a>,       
+<a class="url" href="fce.html#FCE_CFG1">FCE_CFG1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_CHECKm_t">FCE_CHECKm_t</a></td>
+<td><a class="url" href="fce.html#FCE_CHECK0">FCE_CHECK0</a>,       
+<a class="url" href="fce.html#FCE_CHECK1">FCE_CHECK1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_CLC_t">FCE_CLC_t</a></td>
+<td><a class="url" href="fce.html#FCE_CLC">FCE_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_CRCm_t">FCE_CRCm_t</a></td>
+<td><a class="url" href="fce.html#FCE_CRC0">FCE_CRC0</a>,       
+<a class="url" href="fce.html#FCE_CRC1">FCE_CRC1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_CTRm_t">FCE_CTRm_t</a></td>
+<td><a class="url" href="fce.html#FCE_CTR0">FCE_CTR0</a>,       
+<a class="url" href="fce.html#FCE_CTR1">FCE_CTR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_ID_t">FCE_ID_t</a></td>
+<td><a class="url" href="fce.html#FCE_ID">FCE_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_IRm_t">FCE_IRm_t</a></td>
+<td><a class="url" href="fce.html#FCE_IR0">FCE_IR0</a>,       
+<a class="url" href="fce.html#FCE_IR1">FCE_IR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_LENGTHm_t">FCE_LENGTHm_t</a></td>
+<td><a class="url" href="fce.html#FCE_LENGTH0">FCE_LENGTH0</a>,       
+<a class="url" href="fce.html#FCE_LENGTH1">FCE_LENGTH1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_RESm_t">FCE_RESm_t</a></td>
+<td><a class="url" href="fce.html#FCE_RES0">FCE_RES0</a>,       
+<a class="url" href="fce.html#FCE_RES1">FCE_RES1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_SRC_t">FCE_SRC_t</a></td>
+<td><a class="url" href="fce.html#FCE_SRC">FCE_SRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCE_STSm_t">FCE_STSm_t</a></td>
+<td><a class="url" href="fce.html#FCE_STS0">FCE_STS0</a>,       
+<a class="url" href="fce.html#FCE_STS1">FCE_STS1</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="FCE_CLC">&nbsp;</a>
+<h3>FCE_CLC</h3>
+<h3>"Control Clock Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CLC_ADDR = 0xF0320000</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CLC_t">FCE_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CLC.bits</b>&nbsp;&quot;Control Clock Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CLC_MASK = <tt>0x0000003f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Disable Bit Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module disable is not requested</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module disable is requested</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Module Disable Bit Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module is disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Module Suspend Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module cannot be suspended (suspend is disabled)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module can be suspended (suspend is enabled)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Sleep Mode Enable Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Sleep Mode request is regarded. Module is enabled to go into Sleep Mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Sleep Mode request is disregarded: Sleep Mode cannot be entered on a request.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Module Suspend Bit Write Enable for OCDS
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Bits SPEN and FSOE are write-protected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bits SPEN and FSOE are overwritten by respective value of SPEN or FSOE</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Fast Switch Off Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clock switch-off in Suspend Mode via Disable Control Feature (Secure Clock Switch Off) selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Fast clock switch off in Suspend Mode selected</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000002f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000003d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000002</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_ID">&nbsp;</a>
+<h3>FCE_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_ID_ADDR = 0xF0320008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x008AC001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_ID_t">FCE_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_IR0">&nbsp;</a>
+<h3>FCE_IR0</h3>
+<h3>"Input Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_IR0_ADDR = 0xF0320020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_IRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_IRm_t">FCE_IRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_IR0.bits</b>&nbsp;&quot;Input Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_IRm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_IRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_IRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>Input Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_RES0">&nbsp;</a>
+<h3>FCE_RES0</h3>
+<h3>"CRC Result Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_RES0_ADDR = 0xF0320024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_RESm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_RESm_t">FCE_RESm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_RES0.bits</b>&nbsp;&quot;CRC Result Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_RESm_MASK = <tt>0x00000000</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_RESm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_RESm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CFG0">&nbsp;</a>
+<h3>FCE_CFG0</h3>
+<h3>"CRC Configuration Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CFG0_ADDR = 0xF0320028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000700</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CFGm_t">FCE_CFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CFG0.bits</b>&nbsp;&quot;CRC Configuration Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CFGm_MASK = <tt>0x0000071f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CMI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>CRC Mismatch Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CRC Mismatch Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>CRC Mismatch Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CEI</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Configuration Error Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Configuration Error Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Configuration Error Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LEI</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Length Error Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Length Error Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Length Error Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FEI</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>FPI Error Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FPI Error Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FPI Error Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>CRC Check Comparison
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CRC check comparison at the end of a message is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>CRC check comparison at the end of a message is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>REFIN</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>IR Byte Wise Reflection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>IR Byte Wise Reflection is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>IR Byte Wise Reflection is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>REFOUT</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>CRC 32-Bit Wise Reflection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CRC 32-bit wise is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>CRC 32-bit wise is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>XSEL</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Selects the value to be xored with the final CRC
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0x00000000</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>0xFFFFFFFF</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000071f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000071f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_STS0">&nbsp;</a>
+<h3>FCE_STS0</h3>
+<h3>"CRC Status Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_STS0_ADDR = 0xF032002C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_STSm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_STSm_t">FCE_STSm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_STS0.bits</b>&nbsp;&quot;CRC Status Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_STSm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_STSm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_STSm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CMF</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>CRC Mismatch Flag
+</td>
+</tr>
+<tr>
+<td>CEF</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rwh</td>
+<td><tt>0x00000002</tt></td>
+<td>Configuration Error Flag
+</td>
+</tr>
+<tr>
+<td>LEF</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Length Error Flag
+</td>
+</tr>
+<tr>
+<td>FEF</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rwh</td>
+<td><tt>0x00000008</tt></td>
+<td>FPI Error Flag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000000f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_LENGTH0">&nbsp;</a>
+<h3>FCE_LENGTH0</h3>
+<h3>"CRC Length Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_LENGTH0_ADDR = 0xF0320030</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_LENGTHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_LENGTHm_t">FCE_LENGTHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_LENGTH0.bits</b>&nbsp;&quot;CRC Length Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_LENGTHm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_LENGTHm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_LENGTHm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LENGTH</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Message Length Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CHECK0">&nbsp;</a>
+<h3>FCE_CHECK0</h3>
+<h3>"CRC Check Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CHECK0_ADDR = 0xF0320034</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CHECKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CHECKm_t">FCE_CHECKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CHECK0.bits</b>&nbsp;&quot;CRC Check Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CHECKm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CHECKm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CHECKm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CHECK</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>CHECK Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CRC0">&nbsp;</a>
+<h3>FCE_CRC0</h3>
+<h3>"CRC Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CRC0_ADDR = 0xF0320038</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CRCm_t">FCE_CRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CRC0.bits</b>&nbsp;&quot;CRC Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CRCm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CRC</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rwh</td>
+<td><tt>0xffffffff</tt></td>
+<td>CRC Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CTR0">&nbsp;</a>
+<h3>FCE_CTR0</h3>
+<h3>"CRC Test Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CTR0_ADDR = 0xF032003C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CTRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CTRm_t">FCE_CTRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CTR0.bits</b>&nbsp;&quot;CRC Test Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CTRm_MASK = <tt>0x00000007</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CTRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CTRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FCM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Force CRC Mismatch
+</td>
+</tr>
+<tr>
+<td>FRM_CFG</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Force CFG Register Mismatch
+</td>
+</tr>
+<tr>
+<td>FRM_CHECK</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Force Check Register Mismatch
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000007</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000007</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_IR1">&nbsp;</a>
+<h3>FCE_IR1</h3>
+<h3>"Input Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_IR1_ADDR = 0xF0320040</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_IRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_IRm_t">FCE_IRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_IR1.bits</b>&nbsp;&quot;Input Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_IRm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_IRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_IRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>Input Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_RES1">&nbsp;</a>
+<h3>FCE_RES1</h3>
+<h3>"CRC Result Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_RES1_ADDR = 0xF0320044</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_RESm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_RESm_t">FCE_RESm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_RES1.bits</b>&nbsp;&quot;CRC Result Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_RESm_MASK = <tt>0x00000000</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_RESm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_RESm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CFG1">&nbsp;</a>
+<h3>FCE_CFG1</h3>
+<h3>"CRC Configuration Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CFG1_ADDR = 0xF0320048</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CFGm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000700</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CFGm_t">FCE_CFGm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CFG1.bits</b>&nbsp;&quot;CRC Configuration Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CFGm_MASK = <tt>0x0000071f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CFGm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CFGm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CMI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>CRC Mismatch Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CRC Mismatch Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>CRC Mismatch Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CEI</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Configuration Error Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Configuration Error Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Configuration Error Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LEI</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Length Error Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Length Error Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Length Error Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FEI</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>FPI Error Interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FPI Error Interrupt is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FPI Error Interrupt is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>CRC Check Comparison
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CRC check comparison at the end of a message is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>CRC check comparison at the end of a message is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>REFIN</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>IR Byte Wise Reflection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>IR Byte Wise Reflection is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>IR Byte Wise Reflection is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>REFOUT</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>CRC 32-Bit Wise Reflection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CRC 32-bit wise is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>CRC 32-bit wise is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>XSEL</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Selects the value to be xored with the final CRC
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>0x00000000</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>0xFFFFFFFF</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000071f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000071f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_STS1">&nbsp;</a>
+<h3>FCE_STS1</h3>
+<h3>"CRC Status Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_STS1_ADDR = 0xF032004C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_STSm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_STSm_t">FCE_STSm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_STS1.bits</b>&nbsp;&quot;CRC Status Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_STSm_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_STSm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_STSm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CMF</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>CRC Mismatch Flag
+</td>
+</tr>
+<tr>
+<td>CEF</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rwh</td>
+<td><tt>0x00000002</tt></td>
+<td>Configuration Error Flag
+</td>
+</tr>
+<tr>
+<td>LEF</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Length Error Flag
+</td>
+</tr>
+<tr>
+<td>FEF</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rwh</td>
+<td><tt>0x00000008</tt></td>
+<td>FPI Error Flag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000000f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_LENGTH1">&nbsp;</a>
+<h3>FCE_LENGTH1</h3>
+<h3>"CRC Length Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_LENGTH1_ADDR = 0xF0320050</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_LENGTHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_LENGTHm_t">FCE_LENGTHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_LENGTH1.bits</b>&nbsp;&quot;CRC Length Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_LENGTHm_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_LENGTHm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_LENGTHm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LENGTH</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Message Length Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CHECK1">&nbsp;</a>
+<h3>FCE_CHECK1</h3>
+<h3>"CRC Check Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CHECK1_ADDR = 0xF0320054</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CHECKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CHECKm_t">FCE_CHECKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CHECK1.bits</b>&nbsp;&quot;CRC Check Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CHECKm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CHECKm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CHECKm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CHECK</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>CHECK Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CRC1">&nbsp;</a>
+<h3>FCE_CRC1</h3>
+<h3>"CRC Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CRC1_ADDR = 0xF0320058</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CRCm_t">FCE_CRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CRC1.bits</b>&nbsp;&quot;CRC Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CRCm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CRC</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rwh</td>
+<td><tt>0xffffffff</tt></td>
+<td>CRC Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_CTR1">&nbsp;</a>
+<h3>FCE_CTR1</h3>
+<h3>"CRC Test Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_CTR1_ADDR = 0xF032005C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_CTRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_CTRm_t">FCE_CTRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_CTR1.bits</b>&nbsp;&quot;CRC Test Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_CTRm_MASK = <tt>0x00000007</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_CTRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_CTRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FCM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Force CRC Mismatch
+</td>
+</tr>
+<tr>
+<td>FRM_CFG</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Force CFG Register Mismatch
+</td>
+</tr>
+<tr>
+<td>FRM_CHECK</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Force Check Register Mismatch
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000007</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000007</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCE_SRC">&nbsp;</a>
+<h3>FCE_SRC</h3>
+<h3>"Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCE_SRC_ADDR = 0xF03200FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCE_SRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCE_SRC_t">FCE_SRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FCE_SRC.bits</b>&nbsp;&quot;Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FCE_SRC_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FCE_SRC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FCE_SRC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pendingThe bit field SRR is automatically cleared by hardware at the end of an interrupt arbitration round if the node was the winner, therefore this information is not suitable for interrupt plausibility checks.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000f4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

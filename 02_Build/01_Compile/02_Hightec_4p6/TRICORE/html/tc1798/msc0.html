@@ -1,0 +1,3841 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1798 (MSC0)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>MSC0</h2>
+
+<h2><tt>#include &lt;tc1798/msc0.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#MSC0_CLC">MSC0_CLC</a></td>
+<td>MSC0 Clock Control Register</td>
+<td>0xF0000800</td>
+<td><a class="url" href="types/m.html#MSCn_CLC_t">MSCn_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_ID">MSC0_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0000808</td>
+<td><a class="url" href="types/m.html#MSCn_ID_t">MSCn_ID_t</a></td>
+<td>0x0028C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_FDR">MSC0_FDR</a></td>
+<td>MSC0 Fractional Divider Register</td>
+<td>0xF000080C</td>
+<td><a class="url" href="types/m.html#MSCn_FDR_t">MSCn_FDR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_USR">MSC0_USR</a></td>
+<td>Upstream Status Register</td>
+<td>0xF0000810</td>
+<td><a class="url" href="types/m.html#MSCn_USR_t">MSCn_USR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_DSC">MSC0_DSC</a></td>
+<td>Downstream Control Register</td>
+<td>0xF0000814</td>
+<td><a class="url" href="types/m.html#MSCn_DSC_t">MSCn_DSC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_DSS">MSC0_DSS</a></td>
+<td>Downstream Status Register</td>
+<td>0xF0000818</td>
+<td><a class="url" href="types/m.html#MSCn_DSS_t">MSCn_DSS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_DD">MSC0_DD</a></td>
+<td>Downstream Data Register</td>
+<td>0xF000081C</td>
+<td><a class="url" href="types/m.html#MSCn_DD_t">MSCn_DD_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_DC">MSC0_DC</a></td>
+<td>Downstream Command Register</td>
+<td>0xF0000820</td>
+<td><a class="url" href="types/m.html#MSCn_DC_t">MSCn_DC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_DSDSL">MSC0_DSDSL</a></td>
+<td>Downstream Select Data Source Low Register</td>
+<td>0xF0000824</td>
+<td><a class="url" href="types/m.html#MSCn_DSDSL_t">MSCn_DSDSL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_DSDSH">MSC0_DSDSH</a></td>
+<td>Downstream Select Data Source High Register</td>
+<td>0xF0000828</td>
+<td><a class="url" href="types/m.html#MSCn_DSDSH_t">MSCn_DSDSH_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_ESR">MSC0_ESR</a></td>
+<td>Emergency Stop Register</td>
+<td>0xF000082C</td>
+<td><a class="url" href="types/m.html#MSCn_ESR_t">MSCn_ESR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_UD0">MSC0_UD0</a></td>
+<td>Upstream Data Register 0</td>
+<td>0xF0000830</td>
+<td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_UD1">MSC0_UD1</a></td>
+<td>Upstream Data Register 1</td>
+<td>0xF0000834</td>
+<td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_UD2">MSC0_UD2</a></td>
+<td>Upstream Data Register 2</td>
+<td>0xF0000838</td>
+<td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_UD3">MSC0_UD3</a></td>
+<td>Upstream Data Register 3</td>
+<td>0xF000083C</td>
+<td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_ICR">MSC0_ICR</a></td>
+<td>Interrupt Control Register</td>
+<td>0xF0000840</td>
+<td><a class="url" href="types/m.html#MSCn_ICR_t">MSCn_ICR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_ISR">MSC0_ISR</a></td>
+<td>Interrupt Status Register</td>
+<td>0xF0000844</td>
+<td><a class="url" href="types/m.html#MSCn_ISR_t">MSCn_ISR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_ISC">MSC0_ISC</a></td>
+<td>Interrupt Set Clear Register</td>
+<td>0xF0000848</td>
+<td><a class="url" href="types/m.html#MSCn_ISC_t">MSCn_ISC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_OCR">MSC0_OCR</a></td>
+<td>Output Control Register</td>
+<td>0xF000084C</td>
+<td><a class="url" href="types/m.html#MSCn_OCR_t">MSCn_OCR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_SRC1">MSC0_SRC1</a></td>
+<td>Service Request Control Register 1</td>
+<td>0xF00008F8</td>
+<td><a class="url" href="types/m.html#MSCn_SRCm_t">MSCn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MSC0_SRC0">MSC0_SRC0</a></td>
+<td>Service Request Control Register 0</td>
+<td>0xF00008FC</td>
+<td><a class="url" href="types/m.html#MSCn_SRCm_t">MSCn_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_CLC_t">MSCn_CLC_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_CLC">MSC0_CLC</a>,       
+<a class="url" href="msc1.html#MSC1_CLC">MSC1_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_DC_t">MSCn_DC_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_DC">MSC0_DC</a>,       
+<a class="url" href="msc1.html#MSC1_DC">MSC1_DC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_DD_t">MSCn_DD_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_DD">MSC0_DD</a>,       
+<a class="url" href="msc1.html#MSC1_DD">MSC1_DD</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_DSC_t">MSCn_DSC_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_DSC">MSC0_DSC</a>,       
+<a class="url" href="msc1.html#MSC1_DSC">MSC1_DSC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_DSDSH_t">MSCn_DSDSH_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_DSDSH">MSC0_DSDSH</a>,       
+<a class="url" href="msc1.html#MSC1_DSDSH">MSC1_DSDSH</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_DSDSL_t">MSCn_DSDSL_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_DSDSL">MSC0_DSDSL</a>,       
+<a class="url" href="msc1.html#MSC1_DSDSL">MSC1_DSDSL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_DSS_t">MSCn_DSS_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_DSS">MSC0_DSS</a>,       
+<a class="url" href="msc1.html#MSC1_DSS">MSC1_DSS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_ESR_t">MSCn_ESR_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_ESR">MSC0_ESR</a>,       
+<a class="url" href="msc1.html#MSC1_ESR">MSC1_ESR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_FDR_t">MSCn_FDR_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_FDR">MSC0_FDR</a>,       
+<a class="url" href="msc1.html#MSC1_FDR">MSC1_FDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_ICR_t">MSCn_ICR_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_ICR">MSC0_ICR</a>,       
+<a class="url" href="msc1.html#MSC1_ICR">MSC1_ICR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_ID_t">MSCn_ID_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_ID">MSC0_ID</a>,       
+<a class="url" href="msc1.html#MSC1_ID">MSC1_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_ISC_t">MSCn_ISC_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_ISC">MSC0_ISC</a>,       
+<a class="url" href="msc1.html#MSC1_ISC">MSC1_ISC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_ISR_t">MSCn_ISR_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_ISR">MSC0_ISR</a>,       
+<a class="url" href="msc1.html#MSC1_ISR">MSC1_ISR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_OCR_t">MSCn_OCR_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_OCR">MSC0_OCR</a>,       
+<a class="url" href="msc1.html#MSC1_OCR">MSC1_OCR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_SRCm_t">MSCn_SRCm_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_SRC1">MSC0_SRC1</a>,       
+<a class="url" href="msc0.html#MSC0_SRC0">MSC0_SRC0</a>,       
+<a class="url" href="msc1.html#MSC1_SRC1">MSC1_SRC1</a>,       
+<a class="url" href="msc1.html#MSC1_SRC0">MSC1_SRC0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_UD0">MSC0_UD0</a>,       
+<a class="url" href="msc0.html#MSC0_UD1">MSC0_UD1</a>,       
+<a class="url" href="msc0.html#MSC0_UD2">MSC0_UD2</a>,       
+<a class="url" href="msc0.html#MSC0_UD3">MSC0_UD3</a>,       
+<a class="url" href="msc1.html#MSC1_UD0">MSC1_UD0</a>,       
+<a class="url" href="msc1.html#MSC1_UD1">MSC1_UD1</a>,       
+<a class="url" href="msc1.html#MSC1_UD2">MSC1_UD2</a>,       
+<a class="url" href="msc1.html#MSC1_UD3">MSC1_UD3</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MSCn_USR_t">MSCn_USR_t</a></td>
+<td><a class="url" href="msc0.html#MSC0_USR">MSC0_USR</a>,       
+<a class="url" href="msc1.html#MSC1_USR">MSC1_USR</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="MSC0_CLC">&nbsp;</a>
+<h3>MSC0_CLC</h3>
+<h3>"MSC0 Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_CLC_ADDR = 0xF0000800</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_CLC_t">MSCn_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_CLC.bits</b>&nbsp;&quot;MSC0 Clock Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_CLC_MASK = <tt>0x0000003f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Disable Request Bit
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>r</td>
+<td><tt>0x00000002</tt></td>
+<td>Module Disable Status Bit
+</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Module Suspend Enable for OCDS
+</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Sleep Mode Enable Control
+</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Module Suspend Bit Write Enable for OCDS
+</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Fast Switch Off Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000002f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000003d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_ID">&nbsp;</a>
+<h3>MSC0_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_ID_ADDR = 0xF0000808</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0028C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_ID_t">MSCn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MODTYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MODNUM</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_FDR">&nbsp;</a>
+<h3>MSC0_FDR</h3>
+<h3>"MSC0 Fractional Divider Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_FDR_ADDR = 0xF000080C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_FDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_FDR_t">MSCn_FDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_FDR.bits</b>&nbsp;&quot;MSC0 Fractional Divider Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_FDR_MASK = <tt>0xf3fffbff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_FDR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_FDR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>STEP</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>rw</td>
+<td><tt>0x000003ff</tt></td>
+<td>Step Value
+</td>
+</tr>
+<tr>
+<td>SM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Suspend Mode
+</td>
+</tr>
+<tr>
+<td>SC</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Suspend Control
+</td>
+</tr>
+<tr>
+<td>DM</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Divider Mode
+</td>
+</tr>
+<tr>
+<td>RESULT</td>
+<td>10</td>
+<td>16 - 25</td>
+<td>rh</td>
+<td><tt>0x03ff0000</tt></td>
+<td>Result Value
+</td>
+</tr>
+<tr>
+<td>SUSACK</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rh</td>
+<td><tt>0x10000000</tt></td>
+<td>Suspend Mode Acknowledge
+</td>
+</tr>
+<tr>
+<td>SUSREQ</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rh</td>
+<td><tt>0x20000000</tt></td>
+<td>Suspend Mode Request
+</td>
+</tr>
+<tr>
+<td>ENHW</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>Enable Hardware Clock Control
+</td>
+</tr>
+<tr>
+<td>DISCLK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rwh</td>
+<td><tt>0x80000000</tt></td>
+<td>Disable Clock
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf3fffbff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xc000fbff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xb3ff0000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_USR">&nbsp;</a>
+<h3>MSC0_USR</h3>
+<h3>"Upstream Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_USR_ADDR = 0xF0000810</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_USR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_USR_t">MSCn_USR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_USR.bits</b>&nbsp;&quot;Upstream Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_USR_MASK = <tt>0x001f001f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_USR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_USR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>UFT</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Upstream Channel Frame Type
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>12-bit upstream frame selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>16-bit upstream frame selected (with 4-bit address field)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>URR</td>
+<td>3</td>
+<td>1 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000e</tt></td>
+<td>Upstream Channel Receiving Rate
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Upstream channel disabled; no reception is possible</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Baud rate = fMSC/4</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Baud rate = fMSC/8</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Baud rate = fMSC/16</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Baud rate = fMSC/32</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Baud rate = fMSC/64</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Baud rate = fMSC/128</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Baud rate = fMSC/256</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PCTR</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Parity Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Even parity mode is selected. A parity bit is set on an odd number of 1s in the serial address/data stream.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Odd parity mode is selected. A parity bit is set on an even number of 1s in the serial address/data stream.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>UC</td>
+<td>5</td>
+<td>16 - 20</td>
+<td>rh</td>
+<td><tt>0x001f0000</tt></td>
+<td>Upstream Counter
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x001f001f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000001f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x001f0000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_DSC">&nbsp;</a>
+<h3>MSC0_DSC</h3>
+<h3>"Downstream Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_DSC_ADDR = 0xF0000814</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_DSC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_DSC_t">MSCn_DSC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_DSC.bits</b>&nbsp;&quot;Downstream Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_DSC_MASK = <tt>0x1f3fffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_DSC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_DSC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Transmission Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Triggered Mode selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Data Repetition Mode selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CP</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Command Pending
+</td>
+</tr>
+<tr>
+<td>DP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Data Pending
+</td>
+</tr>
+<tr>
+<td>NDBL</td>
+<td>5</td>
+<td>3 - 7</td>
+<td>rw</td>
+<td><tt>0x000000f8</tt></td>
+<td>Number of SRL Bits Shifted at Data Frames
+<table class="valdesc">
+<tr><td>00000</td><td>&nbsp;</td><td>No SRL bit shifted</td></tr>
+<tr><td>00001</td><td>&nbsp;</td><td>SRL[0] shifted</td></tr>
+<tr><td>00010</td><td>&nbsp;</td><td>SRL[1:0] shifted</td></tr>
+<tr><td>00011</td><td>&nbsp;</td><td>SRL[2:0] shifted</td></tr>
+<tr><td>00100</td><td>&nbsp;</td><td>SRL[3:0] shifted</td></tr>
+<tr><td>00101</td><td>&nbsp;</td><td>SRL[4:0] shifted</td></tr>
+<tr><td>00110</td><td>&nbsp;</td><td>SRL[5:0] shifted</td></tr>
+<tr><td>00111</td><td>&nbsp;</td><td>SRL[6:0] shifted</td></tr>
+<tr><td>01000</td><td>&nbsp;</td><td>SRL[7:0] shifted</td></tr>
+<tr><td>01001</td><td>&nbsp;</td><td>SRL[8:0] shifted</td></tr>
+<tr><td>01010</td><td>&nbsp;</td><td>SRL[9:0] shifted</td></tr>
+<tr><td>01011</td><td>&nbsp;</td><td>SRL[10:0] shifted</td></tr>
+<tr><td>01100</td><td>&nbsp;</td><td>SRL[11:0] shifted</td></tr>
+<tr><td>01101</td><td>&nbsp;</td><td>SRL[12:0] shifted</td></tr>
+<tr><td>01110</td><td>&nbsp;</td><td>SRL[13:0] shifted</td></tr>
+<tr><td>01111</td><td>&nbsp;</td><td>SRL[14:0] shifted</td></tr>
+<tr><td>10000</td><td>&nbsp;</td><td>SRL[15:0] shifted</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>NDBH</td>
+<td>5</td>
+<td>8 - 12</td>
+<td>rw</td>
+<td><tt>0x00001f00</tt></td>
+<td>Number of SRH Bits Shifted at Data Frames
+<table class="valdesc">
+<tr><td>00000</td><td>&nbsp;</td><td>No SRH bit shifted; no selection bit is generated, the SRH active phase is completely skipped.</td></tr>
+<tr><td>00001</td><td>&nbsp;</td><td>SRH[0] shifted</td></tr>
+<tr><td>00010</td><td>&nbsp;</td><td>SRL[1:0] shifted</td></tr>
+<tr><td>00011</td><td>&nbsp;</td><td>SRL[2:0] shifted</td></tr>
+<tr><td>00100</td><td>&nbsp;</td><td>SRL[3:0] shifted</td></tr>
+<tr><td>00101</td><td>&nbsp;</td><td>SRL[4:0] shifted</td></tr>
+<tr><td>00110</td><td>&nbsp;</td><td>SRL[5:0] shifted</td></tr>
+<tr><td>00111</td><td>&nbsp;</td><td>SRL[6:0] shifted</td></tr>
+<tr><td>01000</td><td>&nbsp;</td><td>SRL[7:0] shifted</td></tr>
+<tr><td>01001</td><td>&nbsp;</td><td>SRL[8:0] shifted</td></tr>
+<tr><td>01010</td><td>&nbsp;</td><td>SRL[9:0] shifted</td></tr>
+<tr><td>01011</td><td>&nbsp;</td><td>SRL[10:0] shifted</td></tr>
+<tr><td>01100</td><td>&nbsp;</td><td>SRL[11:0] shifted</td></tr>
+<tr><td>01101</td><td>&nbsp;</td><td>SRL[12:0] shifted</td></tr>
+<tr><td>01110</td><td>&nbsp;</td><td>SRL[13:0] shifted</td></tr>
+<tr><td>01111</td><td>&nbsp;</td><td>SRH[14:0] shifted</td></tr>
+<tr><td>10000</td><td>&nbsp;</td><td>SRH[15:0] shifted</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENSELL</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Enable SRL Active Phase Selection Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No selection bit inserted.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Low level selection bit inserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENSELH</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Enable SRH Active Phase Selection Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No selection bit inserted.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Low level selection bit inserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DSDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Downstream Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The downstream channel is enabled. A frame transmission can take place (Triggered Mode) or takes place (Data Repetition Mode).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Downstream Counter becomes disabled. No new frame transmission is started. A running frame transmission is always completed.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>NBC</td>
+<td>6</td>
+<td>16 - 21</td>
+<td>rw</td>
+<td><tt>0x003f0000</tt></td>
+<td>Number of Bits Shifted at Command Frames
+<table class="valdesc">
+<tr><td>000000</td><td>&nbsp;</td><td>No bit shifted</td></tr>
+<tr><td>000001</td><td>&nbsp;</td><td>SRL[0] shifted</td></tr>
+<tr><td>00010</td><td>&nbsp;</td><td>SRL[1:0] shifted</td></tr>
+<tr><td>00011</td><td>&nbsp;</td><td>SRL[2:0] shifted</td></tr>
+<tr><td>00100</td><td>&nbsp;</td><td>SRL[3:0] shifted</td></tr>
+<tr><td>00101</td><td>&nbsp;</td><td>SRL[4:0] shifted</td></tr>
+<tr><td>00110</td><td>&nbsp;</td><td>SRL[5:0] shifted</td></tr>
+<tr><td>00111</td><td>&nbsp;</td><td>SRL[6:0] shifted</td></tr>
+<tr><td>01000</td><td>&nbsp;</td><td>SRL[7:0] shifted</td></tr>
+<tr><td>01001</td><td>&nbsp;</td><td>SRL[8:0] shifted</td></tr>
+<tr><td>01010</td><td>&nbsp;</td><td>SRL[9:0] shifted</td></tr>
+<tr><td>01011</td><td>&nbsp;</td><td>SRL[10:0] shifted</td></tr>
+<tr><td>01100</td><td>&nbsp;</td><td>SRL[11:0] shifted</td></tr>
+<tr><td>01101</td><td>&nbsp;</td><td>SRL[12:0] shifted</td></tr>
+<tr><td>01110</td><td>&nbsp;</td><td>SRL[13:0] shifted</td></tr>
+<tr><td>010000</td><td>&nbsp;</td><td>SRL[15:0] shifted</td></tr>
+<tr><td>010001</td><td>&nbsp;</td><td>SRL[15:0] and SRH[0] shifted</td></tr>
+<tr><td>010010</td><td>&nbsp;</td><td>SRL[15:0] and SRH[1:0] shifted</td></tr>
+<tr><td>010011</td><td>&nbsp;</td><td>SRL[15:0] and SRH[2:0] shifted</td></tr>
+<tr><td>010100</td><td>&nbsp;</td><td>SRL[15:0] and SRH[3:0] shifted</td></tr>
+<tr><td>010101</td><td>&nbsp;</td><td>SRL[15:0] and SRH[4:0] shifted</td></tr>
+<tr><td>010110</td><td>&nbsp;</td><td>SRL[15:0] and SRH[5:0] shifted</td></tr>
+<tr><td>010111</td><td>&nbsp;</td><td>SRL[15:0] and SRH[6:0] shifted</td></tr>
+<tr><td>011000</td><td>&nbsp;</td><td>SRL[15:0] and SRH[7:0] shifted</td></tr>
+<tr><td>011001</td><td>&nbsp;</td><td>SRL[15:0] and SRH[8:0] shifted</td></tr>
+<tr><td>011010</td><td>&nbsp;</td><td>SRL[15:0] and SRH[9:0] shifted</td></tr>
+<tr><td>011011</td><td>&nbsp;</td><td>SRL[15:0] and SRH[10:0] shifted</td></tr>
+<tr><td>011100</td><td>&nbsp;</td><td>SRL[15:0] and SRH[11:0] shifted</td></tr>
+<tr><td>011101</td><td>&nbsp;</td><td>SRL[15:0] and SRH[12:0] shifted</td></tr>
+<tr><td>011110</td><td>&nbsp;</td><td>SRL[15:0] and SRH[13:0] shifted</td></tr>
+<tr><td>011111</td><td>&nbsp;</td><td>SRL[15:0] and SRH[14:0] shifted</td></tr>
+<tr><td>100000</td><td>&nbsp;</td><td>SRL[15:0] and SRH[15:0] shifted</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PPD</td>
+<td>5</td>
+<td>24 - 28</td>
+<td>rw</td>
+<td><tt>0x1f000000</tt></td>
+<td>Passive Phase Length at Data Frames
+<table class="valdesc">
+<tr><td>00000</td><td>&nbsp;</td><td>Passive phase length is 2*tFCL</td></tr>
+<tr><td>00001</td><td>&nbsp;</td><td>Passive phase length is 2*tFCL</td></tr>
+<tr><td>00010</td><td>&nbsp;</td><td>Passive phase length is 2*tFCL</td></tr>
+<tr><td>00011</td><td>&nbsp;</td><td>Passive phase length is 3</td></tr>
+<tr><td>00100</td><td>&nbsp;</td><td>Passive phase length is 4</td></tr>
+<tr><td>00101</td><td>&nbsp;</td><td>Passive phase length is 5</td></tr>
+<tr><td>00110</td><td>&nbsp;</td><td>Passive phase length is 6</td></tr>
+<tr><td>00111</td><td>&nbsp;</td><td>Passive phase length is 7</td></tr>
+<tr><td>01000</td><td>&nbsp;</td><td>Passive phase length is 8</td></tr>
+<tr><td>01001</td><td>&nbsp;</td><td>Passive phase length is 9</td></tr>
+<tr><td>01010</td><td>&nbsp;</td><td>Passive phase length is 10</td></tr>
+<tr><td>01011</td><td>&nbsp;</td><td>Passive phase length is 11</td></tr>
+<tr><td>01100</td><td>&nbsp;</td><td>Passive phase length is 12</td></tr>
+<tr><td>01101</td><td>&nbsp;</td><td>Passive phase length is 13</td></tr>
+<tr><td>01110</td><td>&nbsp;</td><td>Passive phase length is 14</td></tr>
+<tr><td>01111</td><td>&nbsp;</td><td>Passive phase length is 15</td></tr>
+<tr><td>10000</td><td>&nbsp;</td><td>Passive phase length is 16</td></tr>
+<tr><td>10001</td><td>&nbsp;</td><td>Passive phase length is 17</td></tr>
+<tr><td>10010</td><td>&nbsp;</td><td>Passive phase length is 18</td></tr>
+<tr><td>10011</td><td>&nbsp;</td><td>Passive phase length is 19</td></tr>
+<tr><td>10100</td><td>&nbsp;</td><td>Passive phase length is 20</td></tr>
+<tr><td>10101</td><td>&nbsp;</td><td>Passive phase length is 21</td></tr>
+<tr><td>10110</td><td>&nbsp;</td><td>Passive phase length is 22</td></tr>
+<tr><td>10111</td><td>&nbsp;</td><td>Passive phase length is 23</td></tr>
+<tr><td>11000</td><td>&nbsp;</td><td>Passive phase length is 24</td></tr>
+<tr><td>11001</td><td>&nbsp;</td><td>Passive phase length is 25</td></tr>
+<tr><td>11010</td><td>&nbsp;</td><td>Passive phase length is 26</td></tr>
+<tr><td>11011</td><td>&nbsp;</td><td>Passive phase length is 27</td></tr>
+<tr><td>11100</td><td>&nbsp;</td><td>Passive phase length is 28</td></tr>
+<tr><td>11101</td><td>&nbsp;</td><td>Passive phase length is 29</td></tr>
+<tr><td>11110</td><td>&nbsp;</td><td>Passive phase length is 30</td></tr>
+<tr><td>11111</td><td>&nbsp;</td><td>Passive phase length is 31*tFCL</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x1f3fffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x1f3f7ff9</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00008006</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_DSS">&nbsp;</a>
+<h3>MSC0_DSS</h3>
+<h3>"Downstream Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_DSS_ADDR = 0xF0000818</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_DSS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_DSS_t">MSCn_DSS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_DSS.bits</b>&nbsp;&quot;Downstream Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_DSS_MASK = <tt>0x037f0f0f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_DSS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_DSS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PFC</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rh</td>
+<td><tt>0x0000000f</tt></td>
+<td>Passive Time Frame Counter
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Data frame is transmitted.</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>First passive time frame is transmitted.</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>Second passive time frame is transmitted.</td></tr>
+<tr><td>0011</td><td>&nbsp;</td><td>Third passive time frame is transmitted.</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>Fourth passive time frame is transmitted.</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>Fifth passive time frame is transmitted.</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>Sixth passive time frame is transmitted.</td></tr>
+<tr><td>0111</td><td>&nbsp;</td><td>Seventh passive time frame is transmitted.</td></tr>
+<tr><td>1000</td><td>&nbsp;</td><td>Eights passive time frame is transmitted.</td></tr>
+<tr><td>1001</td><td>&nbsp;</td><td>Ninths passive time frame is transmitted.</td></tr>
+<tr><td>1010</td><td>&nbsp;</td><td>10th passive time frame is transmitted.</td></tr>
+<tr><td>1011</td><td>&nbsp;</td><td>11th passive time frame is transmitted.</td></tr>
+<tr><td>1100</td><td>&nbsp;</td><td>12th passive time frame is transmitted.</td></tr>
+<tr><td>1101</td><td>&nbsp;</td><td>13th passive time frame is transmitted.</td></tr>
+<tr><td>1110</td><td>&nbsp;</td><td>14th passive time frame is transmitted.</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>Fifteenth passive time frame is transmitted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>NPTF</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>rw</td>
+<td><tt>0x00000f00</tt></td>
+<td>Number Of Passive Time Frames
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>No passive time frame inserted.</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>1 passive time frame inserted.</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>2 passive time frames inserted.</td></tr>
+<tr><td>0011</td><td>&nbsp;</td><td>3 passive time frames inserted.</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>4 passive time frames inserted.</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>5 passive time frames inserted.</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>6 passive time frames inserted.</td></tr>
+<tr><td>0111</td><td>&nbsp;</td><td>7 passive time frames inserted.</td></tr>
+<tr><td>1000</td><td>&nbsp;</td><td>8 passive time frames inserted.</td></tr>
+<tr><td>1001</td><td>&nbsp;</td><td>9 passive time frames inserted.</td></tr>
+<tr><td>1010</td><td>&nbsp;</td><td>10 passive time frames inserted.</td></tr>
+<tr><td>1011</td><td>&nbsp;</td><td>11 passive time frames inserted.</td></tr>
+<tr><td>1100</td><td>&nbsp;</td><td>12 passive time frames inserted.</td></tr>
+<tr><td>1101</td><td>&nbsp;</td><td>13 passive time frames inserted.</td></tr>
+<tr><td>1110</td><td>&nbsp;</td><td>14 passive time frames inserted.</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>15 passive time frames inserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DC</td>
+<td>7</td>
+<td>16 - 22</td>
+<td>rh</td>
+<td><tt>0x007f0000</tt></td>
+<td>Downstream Counter
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No shift clock elapsed (after counter reset).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>1 shift clock elapsed.</td></tr>
+<tr><td>02</td><td>&nbsp;</td><td>2 shift clock elapsed.</td></tr>
+<tr><td>03</td><td>&nbsp;</td><td>3 shift clock elapsed.</td></tr>
+<tr><td>04</td><td>&nbsp;</td><td>4 shift clock elapsed.</td></tr>
+<tr><td>05</td><td>&nbsp;</td><td>5 shift clock elapsed.</td></tr>
+<tr><td>06</td><td>&nbsp;</td><td>6 shift clock elapsed.</td></tr>
+<tr><td>07</td><td>&nbsp;</td><td>7 shift clock elapsed.</td></tr>
+<tr><td>08</td><td>&nbsp;</td><td>8 shift clock elapsed.</td></tr>
+<tr><td>09</td><td>&nbsp;</td><td>9 shift clock elapsed.</td></tr>
+<tr><td>0A</td><td>&nbsp;</td><td>10 shift clock elapsed.</td></tr>
+<tr><td>0B</td><td>&nbsp;</td><td>11 shift clock elapsed.</td></tr>
+<tr><td>0C</td><td>&nbsp;</td><td>12 shift clock elapsed.</td></tr>
+<tr><td>0D</td><td>&nbsp;</td><td>13 shift clock elapsed.</td></tr>
+<tr><td>0E</td><td>&nbsp;</td><td>14 shift clock elapsed.</td></tr>
+<tr><td>0F</td><td>&nbsp;</td><td>15 shift clock elapsed.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>16 shift clock elapsed.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>17 shift clock elapsed.</td></tr>
+<tr><td>12</td><td>&nbsp;</td><td>18 shift clock elapsed.</td></tr>
+<tr><td>13</td><td>&nbsp;</td><td>19 shift clock elapsed.</td></tr>
+<tr><td>14</td><td>&nbsp;</td><td>20 shift clock elapsed.</td></tr>
+<tr><td>15</td><td>&nbsp;</td><td>21 shift clock elapsed.</td></tr>
+<tr><td>16</td><td>&nbsp;</td><td>22 shift clock elapsed.</td></tr>
+<tr><td>17</td><td>&nbsp;</td><td>23 shift clock elapsed.</td></tr>
+<tr><td>18</td><td>&nbsp;</td><td>24 shift clock elapsed.</td></tr>
+<tr><td>19</td><td>&nbsp;</td><td>25 shift clock elapsed.</td></tr>
+<tr><td>1A</td><td>&nbsp;</td><td>26 shift clock elapsed.</td></tr>
+<tr><td>1B</td><td>&nbsp;</td><td>27 shift clock elapsed.</td></tr>
+<tr><td>1C</td><td>&nbsp;</td><td>28 shift clock elapsed.</td></tr>
+<tr><td>1D</td><td>&nbsp;</td><td>29 shift clock elapsed.</td></tr>
+<tr><td>1E</td><td>&nbsp;</td><td>30 shift clock elapsed.</td></tr>
+<tr><td>1F</td><td>&nbsp;</td><td>31 shift clock elapsed.</td></tr>
+<tr><td>20</td><td>&nbsp;</td><td>32 shift clock elapsed.</td></tr>
+<tr><td>21</td><td>&nbsp;</td><td>33 shift clock elapsed.</td></tr>
+<tr><td>22</td><td>&nbsp;</td><td>34 shift clock elapsed.</td></tr>
+<tr><td>23</td><td>&nbsp;</td><td>35 shift clock elapsed.</td></tr>
+<tr><td>24</td><td>&nbsp;</td><td>36 shift clock elapsed.</td></tr>
+<tr><td>25</td><td>&nbsp;</td><td>37 shift clock elapsed.</td></tr>
+<tr><td>26</td><td>&nbsp;</td><td>38 shift clock elapsed.</td></tr>
+<tr><td>27</td><td>&nbsp;</td><td>39 shift clock elapsed.</td></tr>
+<tr><td>28</td><td>&nbsp;</td><td>40 shift clock elapsed.</td></tr>
+<tr><td>29</td><td>&nbsp;</td><td>41 shift clock elapsed.</td></tr>
+<tr><td>2A</td><td>&nbsp;</td><td>42 shift clock elapsed.</td></tr>
+<tr><td>2B</td><td>&nbsp;</td><td>43 shift clock elapsed.</td></tr>
+<tr><td>2C</td><td>&nbsp;</td><td>44 shift clock elapsed.</td></tr>
+<tr><td>2D</td><td>&nbsp;</td><td>45 shift clock elapsed.</td></tr>
+<tr><td>2E</td><td>&nbsp;</td><td>46 shift clock elapsed.</td></tr>
+<tr><td>2F</td><td>&nbsp;</td><td>47 shift clock elapsed.</td></tr>
+<tr><td>30</td><td>&nbsp;</td><td>48 shift clock elapsed.</td></tr>
+<tr><td>31</td><td>&nbsp;</td><td>49 shift clock elapsed.</td></tr>
+<tr><td>32</td><td>&nbsp;</td><td>50 shift clock elapsed.</td></tr>
+<tr><td>33</td><td>&nbsp;</td><td>51 shift clock elapsed.</td></tr>
+<tr><td>34</td><td>&nbsp;</td><td>52 shift clock elapsed.</td></tr>
+<tr><td>35</td><td>&nbsp;</td><td>53 shift clock elapsed.</td></tr>
+<tr><td>36</td><td>&nbsp;</td><td>54 shift clock elapsed.</td></tr>
+<tr><td>37</td><td>&nbsp;</td><td>55 shift clock elapsed.</td></tr>
+<tr><td>38</td><td>&nbsp;</td><td>56 shift clock elapsed.</td></tr>
+<tr><td>39</td><td>&nbsp;</td><td>57 shift clock elapsed.</td></tr>
+<tr><td>3A</td><td>&nbsp;</td><td>58 shift clock elapsed.</td></tr>
+<tr><td>3B</td><td>&nbsp;</td><td>59 shift clock elapsed.</td></tr>
+<tr><td>3C</td><td>&nbsp;</td><td>60 shift clock elapsed.</td></tr>
+<tr><td>3D</td><td>&nbsp;</td><td>61 shift clock elapsed.</td></tr>
+<tr><td>3E</td><td>&nbsp;</td><td>62 shift clock elapsed.</td></tr>
+<tr><td>3F</td><td>&nbsp;</td><td>63 shift clock elapsed.</td></tr>
+<tr><td>40</td><td>&nbsp;</td><td>64 shift clock elapsed.</td></tr>
+<tr><td>41</td><td>&nbsp;</td><td>65 shift clock elapsed.</td></tr>
+<tr><td>42</td><td>&nbsp;</td><td>66 shift clock elapsed.</td></tr>
+<tr><td>43</td><td>&nbsp;</td><td>67 shift clock elapsed.</td></tr>
+<tr><td>44</td><td>&nbsp;</td><td>68 shift clock elapsed.</td></tr>
+<tr><td>45</td><td>&nbsp;</td><td>69 shift clock elapsed.</td></tr>
+<tr><td>46</td><td>&nbsp;</td><td>70 shift clock elapsed.</td></tr>
+<tr><td>47</td><td>&nbsp;</td><td>71 shift clock elapsed.</td></tr>
+<tr><td>48</td><td>&nbsp;</td><td>72 shift clock elapsed.</td></tr>
+<tr><td>49</td><td>&nbsp;</td><td>73 shift clock elapsed.</td></tr>
+<tr><td>4A</td><td>&nbsp;</td><td>74 shift clock elapsed.</td></tr>
+<tr><td>4B</td><td>&nbsp;</td><td>75 shift clock elapsed.</td></tr>
+<tr><td>4C</td><td>&nbsp;</td><td>76 shift clock elapsed.</td></tr>
+<tr><td>4D</td><td>&nbsp;</td><td>77 shift clock elapsed.</td></tr>
+<tr><td>4E</td><td>&nbsp;</td><td>78 shift clock elapsed.</td></tr>
+<tr><td>4F</td><td>&nbsp;</td><td>79 shift clock elapsed.</td></tr>
+<tr><td>50</td><td>&nbsp;</td><td>80 shift clock elapsed.</td></tr>
+<tr><td>51</td><td>&nbsp;</td><td>81 shift clock elapsed.</td></tr>
+<tr><td>52</td><td>&nbsp;</td><td>82 shift clock elapsed.</td></tr>
+<tr><td>53</td><td>&nbsp;</td><td>83 shift clock elapsed.</td></tr>
+<tr><td>54</td><td>&nbsp;</td><td>84 shift clock elapsed.</td></tr>
+<tr><td>55</td><td>&nbsp;</td><td>85 shift clock elapsed.</td></tr>
+<tr><td>56</td><td>&nbsp;</td><td>86 shift clock elapsed.</td></tr>
+<tr><td>57</td><td>&nbsp;</td><td>87 shift clock elapsed.</td></tr>
+<tr><td>58</td><td>&nbsp;</td><td>88 shift clock elapsed.</td></tr>
+<tr><td>59</td><td>&nbsp;</td><td>89 shift clock elapsed.</td></tr>
+<tr><td>5A</td><td>&nbsp;</td><td>90 shift clock elapsed.</td></tr>
+<tr><td>5B</td><td>&nbsp;</td><td>91 shift clock elapsed.</td></tr>
+<tr><td>5C</td><td>&nbsp;</td><td>92 shift clock elapsed.</td></tr>
+<tr><td>5D</td><td>&nbsp;</td><td>93 shift clock elapsed.</td></tr>
+<tr><td>5E</td><td>&nbsp;</td><td>94 shift clock elapsed.</td></tr>
+<tr><td>5F</td><td>&nbsp;</td><td>95 shift clock elapsed.</td></tr>
+<tr><td>60</td><td>&nbsp;</td><td>96 shift clock elapsed.</td></tr>
+<tr><td>61</td><td>&nbsp;</td><td>97 shift clock elapsed.</td></tr>
+<tr><td>62</td><td>&nbsp;</td><td>98 shift clock elapsed.</td></tr>
+<tr><td>63</td><td>&nbsp;</td><td>99 shift clock elapsed.</td></tr>
+<tr><td>64</td><td>&nbsp;</td><td>100 shift clock elapsed.</td></tr>
+<tr><td>65</td><td>&nbsp;</td><td>101 shift clock elapsed.</td></tr>
+<tr><td>66</td><td>&nbsp;</td><td>102 shift clock elapsed.</td></tr>
+<tr><td>67</td><td>&nbsp;</td><td>103 shift clock elapsed.</td></tr>
+<tr><td>68</td><td>&nbsp;</td><td>104 shift clock elapsed.</td></tr>
+<tr><td>69</td><td>&nbsp;</td><td>105 shift clock elapsed.</td></tr>
+<tr><td>6A</td><td>&nbsp;</td><td>106 shift clock elapsed.</td></tr>
+<tr><td>6B</td><td>&nbsp;</td><td>107 shift clock elapsed.</td></tr>
+<tr><td>6C</td><td>&nbsp;</td><td>108 shift clock elapsed.</td></tr>
+<tr><td>6D</td><td>&nbsp;</td><td>109 shift clock elapsed.</td></tr>
+<tr><td>6E</td><td>&nbsp;</td><td>110 shift clock elapsed.</td></tr>
+<tr><td>6F</td><td>&nbsp;</td><td>111 shift clock elapsed.</td></tr>
+<tr><td>70</td><td>&nbsp;</td><td>112 shift clock elapsed.</td></tr>
+<tr><td>71</td><td>&nbsp;</td><td>113 shift clock elapsed.</td></tr>
+<tr><td>72</td><td>&nbsp;</td><td>114 shift clock elapsed.</td></tr>
+<tr><td>73</td><td>&nbsp;</td><td>115 shift clock elapsed.</td></tr>
+<tr><td>74</td><td>&nbsp;</td><td>116 shift clock elapsed.</td></tr>
+<tr><td>75</td><td>&nbsp;</td><td>117 shift clock elapsed.</td></tr>
+<tr><td>76</td><td>&nbsp;</td><td>118 shift clock elapsed.</td></tr>
+<tr><td>77</td><td>&nbsp;</td><td>119 shift clock elapsed.</td></tr>
+<tr><td>78</td><td>&nbsp;</td><td>120 shift clock elapsed.</td></tr>
+<tr><td>79</td><td>&nbsp;</td><td>121 shift clock elapsed.</td></tr>
+<tr><td>7A</td><td>&nbsp;</td><td>122 shift clock elapsed.</td></tr>
+<tr><td>7B</td><td>&nbsp;</td><td>123 shift clock elapsed.</td></tr>
+<tr><td>7C</td><td>&nbsp;</td><td>124 shift clock elapsed.</td></tr>
+<tr><td>7D</td><td>&nbsp;</td><td>125 shift clock elapsed.</td></tr>
+<tr><td>7E</td><td>&nbsp;</td><td>126 shift clock elapsed.</td></tr>
+<tr><td>7F</td><td>&nbsp;</td><td>127 shift clocks elapsed.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DFA</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rh</td>
+<td><tt>0x01000000</tt></td>
+<td>Data Frame Active
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No data frame is currently sent out.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A data frame is currently sent out.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CFA</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rh</td>
+<td><tt>0x02000000</tt></td>
+<td>Command Frame Active
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No command frame is currently sent out.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A command frame is currently sent out.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x037f0f0f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000f00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x037f000f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_DD">&nbsp;</a>
+<h3>MSC0_DD</h3>
+<h3>"Downstream Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_DD_ADDR = 0xF000081C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_DD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_DD_t">MSCn_DD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_DD.bits</b>&nbsp;&quot;Downstream Data Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_DD_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_DD_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_DD_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DDL</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Downstream Data for SRL Shift Register
+</td>
+</tr>
+<tr>
+<td>DDH</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>rw</td>
+<td><tt>0xffff0000</tt></td>
+<td>Downstream Data for SRH Shift Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_DC">&nbsp;</a>
+<h3>MSC0_DC</h3>
+<h3>"Downstream Command Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_DC_ADDR = 0xF0000820</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_DC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_DC_t">MSCn_DC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_DC.bits</b>&nbsp;&quot;Downstream Command Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_DC_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_DC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_DC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DCL</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ffff</tt></td>
+<td>Downstream Command for SRL Shift Register
+</td>
+</tr>
+<tr>
+<td>DCH</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>rw</td>
+<td><tt>0xffff0000</tt></td>
+<td>Downstream Command for SRH Shift Register
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_DSDSL">&nbsp;</a>
+<h3>MSC0_DSDSL</h3>
+<h3>"Downstream Select Data Source Low Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_DSDSL_ADDR = 0xF0000824</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_DSDSL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_DSDSL_t">MSCn_DSDSL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_DSDSL.bits</b>&nbsp;&quot;Downstream Select Data Source Low Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_DSDSL_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_DSDSL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_DSDSL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SL0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL2</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL3</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL4</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL5</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL6</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL7</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL8</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>rw</td>
+<td><tt>0x00030000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL9</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>rw</td>
+<td><tt>0x000c0000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL10</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>rw</td>
+<td><tt>0x00300000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL11</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>rw</td>
+<td><tt>0x00c00000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL12</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>rw</td>
+<td><tt>0x03000000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL13</td>
+<td>2</td>
+<td>26 - 27</td>
+<td>rw</td>
+<td><tt>0x0c000000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL14</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>rw</td>
+<td><tt>0x30000000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SL15</td>
+<td>2</td>
+<td>30 - 31</td>
+<td>rw</td>
+<td><tt>0xc0000000</tt></td>
+<td>Select Source for SRL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRL[x] is taken from data register DD.DDL[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRL[x] is taken from the ALTINL input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_DSDSH">&nbsp;</a>
+<h3>MSC0_DSDSH</h3>
+<h3>"Downstream Select Data Source High Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_DSDSH_ADDR = 0xF0000828</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_DSDSH_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_DSDSH_t">MSCn_DSDSH_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_DSDSH.bits</b>&nbsp;&quot;Downstream Select Data Source High Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_DSDSH_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_DSDSH_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_DSDSH_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SH0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH2</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH3</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH4</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH5</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH6</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH7</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH8</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>rw</td>
+<td><tt>0x00030000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH9</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>rw</td>
+<td><tt>0x000c0000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH10</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>rw</td>
+<td><tt>0x00300000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH11</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>rw</td>
+<td><tt>0x00c00000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH12</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>rw</td>
+<td><tt>0x03000000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH13</td>
+<td>2</td>
+<td>26 - 27</td>
+<td>rw</td>
+<td><tt>0x0c000000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH14</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>rw</td>
+<td><tt>0x30000000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SH15</td>
+<td>2</td>
+<td>30 - 31</td>
+<td>rw</td>
+<td><tt>0xc0000000</tt></td>
+<td>Select Source for SRH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>SRH[x] is taken from data register DD.DDH[x].</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Reserved.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>SRH[x] is taken from the ALTINH input line x in inverted state.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_ESR">&nbsp;</a>
+<h3>MSC0_ESR</h3>
+<h3>"Emergency Stop Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_ESR_ADDR = 0xF000082C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_ESR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_ESR_t">MSCn_ESR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_ESR.bits</b>&nbsp;&quot;Emergency Stop Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_ESR_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_ESR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_ESR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ENL0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENL15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRL
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRL[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRL[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rw</td>
+<td><tt>0x00010000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rw</td>
+<td><tt>0x00020000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rw</td>
+<td><tt>0x00040000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rw</td>
+<td><tt>0x00080000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH4</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rw</td>
+<td><tt>0x00100000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH5</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rw</td>
+<td><tt>0x00200000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH6</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rw</td>
+<td><tt>0x00400000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH7</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rw</td>
+<td><tt>0x00800000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH8</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rw</td>
+<td><tt>0x01000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH9</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rw</td>
+<td><tt>0x02000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH10</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rw</td>
+<td><tt>0x04000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH11</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>rw</td>
+<td><tt>0x08000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH12</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rw</td>
+<td><tt>0x10000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH13</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rw</td>
+<td><tt>0x20000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH14</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENH15</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>Emergency Stop Enable for Bit x in SRH
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Emergency stop feature for bit SRH[x] is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The emergency stop feature for bit SRH[x] is enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_UD0">&nbsp;</a>
+<h3>MSC0_UD0</h3>
+<h3>"Upstream Data Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_UD0_ADDR = 0xF0000830</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_UDm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_UD0.bits</b>&nbsp;&quot;Upstream Data Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_UDm_MASK = <tt>0x007f00ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>Received Data
+</td>
+</tr>
+<tr>
+<td>V</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Valid Bit
+</td>
+</tr>
+<tr>
+<td>P</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Parity Bit
+</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit V is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LABF</td>
+<td>2</td>
+<td>19 - 20</td>
+<td>rh</td>
+<td><tt>0x00180000</tt></td>
+<td>Lower Address Bit Field
+</td>
+</tr>
+<tr>
+<td>IPF</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Internal Parity Flag
+</td>
+</tr>
+<tr>
+<td>PERR</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Parity Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error detected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x007b00ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00040000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x007b00ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_UD1">&nbsp;</a>
+<h3>MSC0_UD1</h3>
+<h3>"Upstream Data Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_UD1_ADDR = 0xF0000834</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_UDm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_UD1.bits</b>&nbsp;&quot;Upstream Data Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_UDm_MASK = <tt>0x007f00ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>Received Data
+</td>
+</tr>
+<tr>
+<td>V</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Valid Bit
+</td>
+</tr>
+<tr>
+<td>P</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Parity Bit
+</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit V is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LABF</td>
+<td>2</td>
+<td>19 - 20</td>
+<td>rh</td>
+<td><tt>0x00180000</tt></td>
+<td>Lower Address Bit Field
+</td>
+</tr>
+<tr>
+<td>IPF</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Internal Parity Flag
+</td>
+</tr>
+<tr>
+<td>PERR</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Parity Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error detected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x007b00ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00040000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x007b00ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_UD2">&nbsp;</a>
+<h3>MSC0_UD2</h3>
+<h3>"Upstream Data Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_UD2_ADDR = 0xF0000838</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_UDm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_UD2.bits</b>&nbsp;&quot;Upstream Data Register 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_UDm_MASK = <tt>0x007f00ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>Received Data
+</td>
+</tr>
+<tr>
+<td>V</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Valid Bit
+</td>
+</tr>
+<tr>
+<td>P</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Parity Bit
+</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit V is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LABF</td>
+<td>2</td>
+<td>19 - 20</td>
+<td>rh</td>
+<td><tt>0x00180000</tt></td>
+<td>Lower Address Bit Field
+</td>
+</tr>
+<tr>
+<td>IPF</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Internal Parity Flag
+</td>
+</tr>
+<tr>
+<td>PERR</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Parity Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error detected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x007b00ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00040000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x007b00ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_UD3">&nbsp;</a>
+<h3>MSC0_UD3</h3>
+<h3>"Upstream Data Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_UD3_ADDR = 0xF000083C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_UDm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_UDm_t">MSCn_UDm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_UD3.bits</b>&nbsp;&quot;Upstream Data Register 3&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_UDm_MASK = <tt>0x007f00ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_UDm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>Received Data
+</td>
+</tr>
+<tr>
+<td>V</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Valid Bit
+</td>
+</tr>
+<tr>
+<td>P</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Parity Bit
+</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit V is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LABF</td>
+<td>2</td>
+<td>19 - 20</td>
+<td>rh</td>
+<td><tt>0x00180000</tt></td>
+<td>Lower Address Bit Field
+</td>
+</tr>
+<tr>
+<td>IPF</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Internal Parity Flag
+</td>
+</tr>
+<tr>
+<td>PERR</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Parity Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error detected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Error detected.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x007b00ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00040000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x007b00ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_ICR">&nbsp;</a>
+<h3>MSC0_ICR</h3>
+<h3>"Interrupt Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_ICR_ADDR = 0xF0000840</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_ICR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_ICR_t">MSCn_ICR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_ICR.bits</b>&nbsp;&quot;Interrupt Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_ICR_MASK = <tt>0x0000fbbf</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_ICR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_ICR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>EDIP</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Data Frame Interrupt Node Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EDIE</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000c</tt></td>
+<td>Data Frame Interrupt Enable
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Interrupt generation disabled</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>An interrupt is generated when the last data bit has been shifted out.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>An interrupt is generated when the first data bit has been shifted out, but only if DSC.NDBL is not equal 00000B. This means, at least one SRL bit must be shifted out for the first data bit shifted interrupt to become active.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Interrupt generation disabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ECIP</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Command Frame Interrupt Node Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ECIE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Command Frame Interrupt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt generation disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Interrupt generation enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TFIP</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Time Frame Interrupt Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TFIE</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Time Frame Interrupt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Interrupt generation disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Interrupt generation enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RDIP</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Receive Data Interrupt Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RDIE</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Receive Data Interrupt Enable
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Interrupt generation disabled.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>An interrupt is generated when data is received and written into the upstream data registers UDx (x=0-3).</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>An interrupt is generated as with RDIE=01B but only if the received data is not equal to 00H.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>An interrupt is generated when data is received and written into register UD3.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000fbbf</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000fbbf</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_ISR">&nbsp;</a>
+<h3>MSC0_ISR</h3>
+<h3>"Interrupt Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_ISR_ADDR = 0xF0000844</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_ISR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_ISR_t">MSCn_ISR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_ISR.bits</b>&nbsp;&quot;Interrupt Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_ISR_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_ISR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_ISR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DEDI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Data Frame Interrupt Flag
+</td>
+</tr>
+<tr>
+<td>DECI</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Command Frame Interrupt Flag
+</td>
+</tr>
+<tr>
+<td>DTFI</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Time Frame Interrupt Flag
+</td>
+</tr>
+<tr>
+<td>URDI</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Receive Data Interrupt Flag
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000000f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_ISC">&nbsp;</a>
+<h3>MSC0_ISC</h3>
+<h3>"Interrupt Set Clear Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_ISC_ADDR = 0xF0000848</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_ISC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_ISC_t">MSCn_ISC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_ISC.bits</b>&nbsp;&quot;Interrupt Set Clear Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_ISC_MASK = <tt>0x007f007f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_ISC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_ISC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CDEDI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Clear DEDI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.DEDI is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CDECI</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Clear DECI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.DECI is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CDTFI</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Clear DTFI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.DTFI is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CURDI</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Clear URDI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.URDI is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CDP</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Clear DP Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit DSC.DP is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CCP</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Clear CP Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit DSC.CP is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CDDIS</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Clear DSDIS Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit DSC.DSDIS is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SDEDI</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>Set DEDI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.DEDI is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SDECI</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>w</td>
+<td><tt>0x00020000</tt></td>
+<td>Set DECI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.DECI is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SDTFI</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Set DTFI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.DTFI is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SURDI</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>w</td>
+<td><tt>0x00080000</tt></td>
+<td>Set URDI Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit ISR.URDI is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SDP</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>w</td>
+<td><tt>0x00100000</tt></td>
+<td>Set DP Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit DSC.DP is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCP</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>w</td>
+<td><tt>0x00200000</tt></td>
+<td>Set CP Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit DSC.CP is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SDDIS</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>w</td>
+<td><tt>0x00400000</tt></td>
+<td>Set DSDIS Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit DSC.DSDIS is set.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x007f007f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_OCR">&nbsp;</a>
+<h3>MSC0_OCR</h3>
+<h3>"Output Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_OCR_ADDR = 0xF000084C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_OCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_OCR_t">MSCn_OCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_OCR.bits</b>&nbsp;&quot;Output Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_OCR_MASK = <tt>0x00077f0f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_OCR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_OCR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CLP</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>FCLP Line Polarity
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FCLP and FCL signal polarity is identical. FCLN signal has inverted FCL signal polarity.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FCLP signal has inverted FCL signal polarity. FCLN and FCL signal polarities are identical.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SLP</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>SOP Line Polarity
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SOP and SO signal polarity is identical. SON signal has inverted SO signal polarity.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SOP signal has inverted SO signal polarity. SON and SO signal polarities are identical.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CSLP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Chip Selection Lines Polarity
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>EN[3:0] and ENL, ENH, ENC signal polarities are identical (high active).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>EN[3:0] signal polarities are inverted (low active) to the ENL, ENH, ENC signal polarities.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ILP</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>SDI Line Polarity
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SDI and SI signal polarities are identical.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SDI and SI signal polarities are inverted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLKCTRL</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Clock Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FCL is activated only during the active phases of data or command frames (not during passive time frames).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FCL is always active whether or not a downstream frame is currently transmitted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CSL</td>
+<td>2</td>
+<td>9 - 10</td>
+<td>rw</td>
+<td><tt>0x00000600</tt></td>
+<td>Chip Enable Selection for ENL
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>EN0 line is selected for ENL.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>EN1 line is selected for ENL.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>EN2 line is selected for ENL.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>EN3 line is selected for ENL.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CSH</td>
+<td>2</td>
+<td>11 - 12</td>
+<td>rw</td>
+<td><tt>0x00001800</tt></td>
+<td>Chip Enable Selection for ENH
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>EN0 line is selected for ENH.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>EN1 line is selected for ENH.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>EN2 line is selected for ENH.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>EN3 line is selected for ENH.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CSC</td>
+<td>2</td>
+<td>13 - 14</td>
+<td>rw</td>
+<td><tt>0x00006000</tt></td>
+<td>Chip Enable Selection for ENC
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>EN0 line is selected for ENC.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>EN1 line is selected for ENC.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>EN2 line is selected for ENC.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>EN3 line is selected for ENC.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SDISEL</td>
+<td>3</td>
+<td>16 - 18</td>
+<td>rw</td>
+<td><tt>0x00070000</tt></td>
+<td>Serial Data Input Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>SDI0 input is selected for SDI.</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>SDI1 input is selected for SDI.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>SDI2 input is selected for SDI.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>SDI3 input is selected for SDI.</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>SDI4 input is selected for SDI.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>SDI5 input is selected for SDI.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>SDI6 input is selected for SDI.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>SDI7 input is selected for SDI.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00077f0f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00077f0f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_SRC1">&nbsp;</a>
+<h3>MSC0_SRC1</h3>
+<h3>"Service Request Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_SRC1_ADDR = 0xF00008F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_SRCm_t">MSCn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_SRC1.bits</b>&nbsp;&quot;Service Request Control Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MSC0_SRC0">&nbsp;</a>
+<h3>MSC0_SRC0</h3>
+<h3>"Service Request Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MSC0_SRC0_ADDR = 0xF00008FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>MSCn_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MSCn_SRCm_t">MSCn_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>MSC0_SRC0.bits</b>&nbsp;&quot;Service Request Control Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>MSCn_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>MSCn_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>MSCn_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

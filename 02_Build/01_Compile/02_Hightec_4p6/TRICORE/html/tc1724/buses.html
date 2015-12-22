@@ -1,0 +1,3319 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1724 (Buses)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>Buses</h2>
+
+<h2><tt>#include &lt;tc1724/buses.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#SBCU_ID">SBCU_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0000108</td>
+<td><a class="url" href="types/s.html#SBCU_ID_t">SBCU_ID_t</a></td>
+<td>0x00006AXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_CON">SBCU_CON</a></td>
+<td>SBCU Control Register</td>
+<td>0xF0000110</td>
+<td><a class="url" href="types/s.html#SBCU_CON_t">SBCU_CON_t</a></td>
+<td>0x4009FFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_ECON">SBCU_ECON</a></td>
+<td>SBCU Error Control Capture Register</td>
+<td>0xF0000120</td>
+<td><a class="url" href="types/s.html#SBCU_ECON_t">SBCU_ECON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_EADD">SBCU_EADD</a></td>
+<td>SBCU Error Address Capture Register</td>
+<td>0xF0000124</td>
+<td><a class="url" href="types/s.html#SBCU_EADD_t">SBCU_EADD_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_EDAT">SBCU_EDAT</a></td>
+<td>SBCU Error Data Capture Register</td>
+<td>0xF0000128</td>
+<td><a class="url" href="types/s.html#SBCU_EDAT_t">SBCU_EDAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBCNTL">SBCU_DBCNTL</a></td>
+<td>SBCU Debug Control Register</td>
+<td>0xF0000130</td>
+<td><a class="url" href="types/s.html#SBCU_DBCNTL_t">SBCU_DBCNTL_t</a></td>
+<td>0x00007003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBGRNT">SBCU_DBGRNT</a></td>
+<td>SBCU Debug Grant Mask Register</td>
+<td>0xF0000134</td>
+<td><a class="url" href="types/s.html#SBCU_DBGRNT_t">SBCU_DBGRNT_t</a></td>
+<td>0x0000FFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBADR1">SBCU_DBADR1</a></td>
+<td>SBCU Debug Address 1 Register</td>
+<td>0xF0000138</td>
+<td><a class="url" href="types/s.html#SBCU_DBADRm_t">SBCU_DBADRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBADR2">SBCU_DBADR2</a></td>
+<td>SBCU Debug Address 2 Register</td>
+<td>0xF000013C</td>
+<td><a class="url" href="types/s.html#SBCU_DBADRm_t">SBCU_DBADRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBBOS">SBCU_DBBOS</a></td>
+<td>SBCU Debug Bus Operation Signals Register</td>
+<td>0xF0000140</td>
+<td><a class="url" href="types/s.html#SBCU_DBBOS_t">SBCU_DBBOS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBGNTT">SBCU_DBGNTT</a></td>
+<td>SBCU Debug Trapped Master Register</td>
+<td>0xF0000144</td>
+<td><a class="url" href="types/s.html#SBCU_DBGNTT_t">SBCU_DBGNTT_t</a></td>
+<td>0x0000FFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBADRT">SBCU_DBADRT</a></td>
+<td>SBCU Debug Trapped Address Register</td>
+<td>0xF0000148</td>
+<td><a class="url" href="types/s.html#SBCU_DBADRT_t">SBCU_DBADRT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBBOST">SBCU_DBBOST</a></td>
+<td>SBCU Debug Trapped Bus Operation Signals Register</td>
+<td>0xF000014C</td>
+<td><a class="url" href="types/s.html#SBCU_DBBOST_t">SBCU_DBBOST_t</a></td>
+<td>0x00003180</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_DBDAT">SBCU_DBDAT</a></td>
+<td>SBCU Debug Data Status Register</td>
+<td>0xF0000150</td>
+<td><a class="url" href="types/s.html#SBCU_DBDAT_t">SBCU_DBDAT_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SBCU_SRC">SBCU_SRC</a></td>
+<td>SBCU Service Request Control Register</td>
+<td>0xF00001FC</td>
+<td><a class="url" href="types/s.html#SBCU_SRC_t">SBCU_SRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_ID">LBCU_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF87FFE08</td>
+<td><a class="url" href="types/l.html#LBCU_ID_t">LBCU_ID_t</a></td>
+<td>0x000FC0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LEATT">LBCU_LEATT</a></td>
+<td>LBCU LMB Error Attribute Register</td>
+<td>0xF87FFE20</td>
+<td><a class="url" href="types/l.html#LBCU_LEATT_t">LBCU_LEATT_t</a></td>
+<td>0xXXXXXXX0</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LEADDR">LBCU_LEADDR</a></td>
+<td>LBCU LMB Error Address Register</td>
+<td>0xF87FFE24</td>
+<td><a class="url" href="types/l.html#LBCU_LEADDR_t">LBCU_LEADDR_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LEDATL">LBCU_LEDATL</a></td>
+<td>LBCU LMB Error Data Low Register</td>
+<td>0xF87FFE28</td>
+<td><a class="url" href="types/l.html#LBCU_LEDATL_t">LBCU_LEDATL_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LEDATH">LBCU_LEDATH</a></td>
+<td>LBCU LMB Error Data High Register</td>
+<td>0xF87FFE2C</td>
+<td><a class="url" href="types/l.html#LBCU_LEDATH_t">LBCU_LEDATH_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LEADDED">LBCU_LEADDED</a></td>
+<td>LMB Error Address Error Detection Register</td>
+<td>0xF87FFE34</td>
+<td><a class="url" href="types/l.html#LBCU_LEADDED_t">LBCU_LEADDED_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LEDATED">LBCU_LEDATED</a></td>
+<td>LMB Error Data Error Detection Register</td>
+<td>0xF87FFE38</td>
+<td><a class="url" href="types/l.html#LBCU_LEDATED_t">LBCU_LEDATED_t</a></td>
+<td>0x000000XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LERESED">LBCU_LERESED</a></td>
+<td>LMB Error Response Error Detection Register</td>
+<td>0xF87FFE3C</td>
+<td><a class="url" href="types/l.html#LBCU_LERESED_t">LBCU_LERESED_t</a></td>
+<td>0x0000000X</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LSEADS">LBCU_LSEADS</a></td>
+<td>LMB Soft Error Address Source Register</td>
+<td>0xF87FFE40</td>
+<td><a class="url" href="types/l.html#LBCU_LSEADS_t">LBCU_LSEADS_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LSEABS">LBCU_LSEABS</a></td>
+<td>LMB Soft Error Abort Source Register</td>
+<td>0xF87FFE44</td>
+<td><a class="url" href="types/l.html#LBCU_LSEABS_t">LBCU_LSEABS_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LSERDS">LBCU_LSERDS</a></td>
+<td>LMB Soft Error Read Source Register</td>
+<td>0xF87FFE48</td>
+<td><a class="url" href="types/l.html#LBCU_LSERDS_t">LBCU_LSERDS_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LSEWRS">LBCU_LSEWRS</a></td>
+<td>LMB Soft Error Write Source Register</td>
+<td>0xF87FFE4C</td>
+<td><a class="url" href="types/l.html#LBCU_LSEWRS_t">LBCU_LSEWRS_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_LSERES">LBCU_LSERES</a></td>
+<td>LMB Soft Error Response Register</td>
+<td>0xF87FFE50</td>
+<td><a class="url" href="types/l.html#LBCU_LSERES_t">LBCU_LSERES_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LBCU_SRC">LBCU_SRC</a></td>
+<td>LBCU Service Request Control Register</td>
+<td>0xF87FFEFC</td>
+<td><a class="url" href="types/l.html#LBCU_SRC_t">LBCU_SRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LFI_ID">LFI_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF87FFF08</td>
+<td><a class="url" href="types/l.html#LFI_ID_t">LFI_ID_t</a></td>
+<td>0x000CC0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LFI_CON">LFI_CON</a></td>
+<td>LFI Configuration Register</td>
+<td>0xF87FFF10</td>
+<td><a class="url" href="types/l.html#LFI_CON_t">LFI_CON_t</a></td>
+<td>0x00000B00</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_ID_t">LBCU_ID_t</a></td>
+<td><a class="url" href="buses.html#LBCU_ID">LBCU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LEADDED_t">LBCU_LEADDED_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LEADDED">LBCU_LEADDED</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LEADDR_t">LBCU_LEADDR_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LEADDR">LBCU_LEADDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LEATT_t">LBCU_LEATT_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LEATT">LBCU_LEATT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LEDATED_t">LBCU_LEDATED_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LEDATED">LBCU_LEDATED</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LEDATH_t">LBCU_LEDATH_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LEDATH">LBCU_LEDATH</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LEDATL_t">LBCU_LEDATL_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LEDATL">LBCU_LEDATL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LERESED_t">LBCU_LERESED_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LERESED">LBCU_LERESED</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LSEABS_t">LBCU_LSEABS_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LSEABS">LBCU_LSEABS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LSEADS_t">LBCU_LSEADS_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LSEADS">LBCU_LSEADS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LSERDS_t">LBCU_LSERDS_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LSERDS">LBCU_LSERDS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LSERES_t">LBCU_LSERES_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LSERES">LBCU_LSERES</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_LSEWRS_t">LBCU_LSEWRS_t</a></td>
+<td><a class="url" href="buses.html#LBCU_LSEWRS">LBCU_LSEWRS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LBCU_SRC_t">LBCU_SRC_t</a></td>
+<td><a class="url" href="buses.html#LBCU_SRC">LBCU_SRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LFI_CON_t">LFI_CON_t</a></td>
+<td><a class="url" href="buses.html#LFI_CON">LFI_CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LFI_ID_t">LFI_ID_t</a></td>
+<td><a class="url" href="buses.html#LFI_ID">LFI_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_CON_t">SBCU_CON_t</a></td>
+<td><a class="url" href="buses.html#SBCU_CON">SBCU_CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBADRT_t">SBCU_DBADRT_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBADRT">SBCU_DBADRT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBADRm_t">SBCU_DBADRm_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBADR1">SBCU_DBADR1</a>,       
+<a class="url" href="buses.html#SBCU_DBADR2">SBCU_DBADR2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBBOS_t">SBCU_DBBOS_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBBOS">SBCU_DBBOS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBBOST_t">SBCU_DBBOST_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBBOST">SBCU_DBBOST</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBCNTL_t">SBCU_DBCNTL_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBCNTL">SBCU_DBCNTL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBDAT_t">SBCU_DBDAT_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBDAT">SBCU_DBDAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBGNTT_t">SBCU_DBGNTT_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBGNTT">SBCU_DBGNTT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_DBGRNT_t">SBCU_DBGRNT_t</a></td>
+<td><a class="url" href="buses.html#SBCU_DBGRNT">SBCU_DBGRNT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_EADD_t">SBCU_EADD_t</a></td>
+<td><a class="url" href="buses.html#SBCU_EADD">SBCU_EADD</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_ECON_t">SBCU_ECON_t</a></td>
+<td><a class="url" href="buses.html#SBCU_ECON">SBCU_ECON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_EDAT_t">SBCU_EDAT_t</a></td>
+<td><a class="url" href="buses.html#SBCU_EDAT">SBCU_EDAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_ID_t">SBCU_ID_t</a></td>
+<td><a class="url" href="buses.html#SBCU_ID">SBCU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SBCU_SRC_t">SBCU_SRC_t</a></td>
+<td><a class="url" href="buses.html#SBCU_SRC">SBCU_SRC</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="SBCU_ID">&nbsp;</a>
+<h3>SBCU_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_ID_ADDR = 0xF0000108</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00006AXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_ID_t">SBCU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_ID_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_CON">&nbsp;</a>
+<h3>SBCU_CON</h3>
+<h3>"SBCU Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_CON_ADDR = 0xF0000110</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x4009FFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_CON_t">SBCU_CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_CON.bits</b>&nbsp;&quot;SBCU Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_CON_MASK = <tt>0xff09ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TOUT</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ffff</tt></td>
+<td>SBCU Bus Time-Out Value
+</td>
+</tr>
+<tr>
+<td>DBG</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rw</td>
+<td><tt>0x00010000</tt></td>
+<td>SBCU Debug Trace Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SBCU debug trace disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SBCU debug trace enabled (default after reset)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SPE</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rw</td>
+<td><tt>0x00080000</tt></td>
+<td>SBCU Starvation Protection Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SBCU starvation protection disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SBCU starvation protection enabled (default after reset)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SPC</td>
+<td>8</td>
+<td>24 - 31</td>
+<td>rw</td>
+<td><tt>0xff000000</tt></td>
+<td>Starvation Period Control
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xff09ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xff09ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_ECON">&nbsp;</a>
+<h3>SBCU_ECON</h3>
+<h3>"SBCU Error Control Capture Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_ECON_ADDR = 0xF0000120</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_ECON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_ECON_t">SBCU_ECON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_ECON.bits</b>&nbsp;&quot;SBCU Error Control Capture Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_ECON_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_ECON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_ECON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ERRCNT</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rwh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>FPIBus Error Counter
+</td>
+</tr>
+<tr>
+<td>TOUT</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rwh</td>
+<td><tt>0x00010000</tt></td>
+<td>State of FPIBus Time-Out Signal
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No time-out occurred</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Time-out has occurred</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RDY</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rwh</td>
+<td><tt>0x00020000</tt></td>
+<td>State of FPIBus Ready Signal
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Wait state(s) have been inserted. Ready signal was active</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Ready signal was inactive</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ABT</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rwh</td>
+<td><tt>0x00040000</tt></td>
+<td>State of FPI Bus Abort Signal
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Master has aborted an FPIBus transfer. Abort signal was active</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Abort signal was inactive</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>2</td>
+<td>19 - 20</td>
+<td>rwh</td>
+<td><tt>0x00180000</tt></td>
+<td>State of FPIBus Acknowledge Signals
+</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rwh</td>
+<td><tt>0x00200000</tt></td>
+<td>State of FPIBus Supervisor Mode Signal
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Transfer was initiated in User Mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Transfer was initiated in Supervisor Mode</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WRN</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rwh</td>
+<td><tt>0x00400000</tt></td>
+<td>State of FPIBus Write Signal
+</td>
+</tr>
+<tr>
+<td>RDN</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rwh</td>
+<td><tt>0x00800000</tt></td>
+<td>State of FPIBus Read Signal
+</td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>rwh</td>
+<td><tt>0x0f000000</tt></td>
+<td>FPIBus Master Tag Number Signals
+</td>
+</tr>
+<tr>
+<td>OPC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>rwh</td>
+<td><tt>0xf0000000</tt></td>
+<td>FPIBus Operation Code Signals
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_EADD">&nbsp;</a>
+<h3>SBCU_EADD</h3>
+<h3>"SBCU Error Address Capture Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_EADD_ADDR = 0xF0000124</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_EADD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_EADD_t">SBCU_EADD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_EADD.bits</b>&nbsp;&quot;SBCU Error Address Capture Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_EADD_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_EADD_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_EADD_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FPIADR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rwh</td>
+<td><tt>0xffffffff</tt></td>
+<td>Captured FPIBus Address
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_EDAT">&nbsp;</a>
+<h3>SBCU_EDAT</h3>
+<h3>"SBCU Error Data Capture Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_EDAT_ADDR = 0xF0000128</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_EDAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_EDAT_t">SBCU_EDAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_EDAT.bits</b>&nbsp;&quot;SBCU Error Data Capture Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_EDAT_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_EDAT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_EDAT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FPIDAT</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rwh</td>
+<td><tt>0xffffffff</tt></td>
+<td>Captured FPIBus Address
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBCNTL">&nbsp;</a>
+<h3>SBCU_DBCNTL</h3>
+<h3>"SBCU Debug Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBCNTL_ADDR = 0xF0000130</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBCNTL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00007003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBCNTL_t">SBCU_DBCNTL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBCNTL.bits</b>&nbsp;&quot;SBCU Debug Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBCNTL_MASK = <tt>0xf3317013</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBCNTL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBCNTL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>EO</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>r</td>
+<td><tt>0x00000001</tt></td>
+<td>Status of SBCU Debug Support Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SBCU debug support is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SBCU debug support is enabled (default after reset)</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OA</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>r</td>
+<td><tt>0x00000002</tt></td>
+<td>Status of SBCU Breakpoint Logic
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The SBCU breakpoint logic is disarmed. Any further breakpoint activation is discarded</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The SBCU breakpoint logic is armed</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RA</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Rearm SBCU Breakpoint Logic
+</td>
+</tr>
+<tr>
+<td>CONCOM0</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Grant and Address Trigger Relation
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The grant phase trigger condition and the address trigger condition (see CONCOM1) are combined with a logical OR for further control</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The grant phase trigger condition and the address trigger condition (see CONCOM1) are combined with a logical AND for further control (see )</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CONCOM1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Address 1 and Address 2 Trigger Relation
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Address 1 trigger condition and address 2 trigger condition are combined with a logical OR to the address trigger condition for further control</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Address 1 trigger condition and address 2 trigger condition are combined with a logical AND to the address trigger condition for further control (see )</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CONCOM2</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Address and Signal Trigger Relation
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Address trigger condition (see CONCOM1) and signal status trigger conditions are combined with a logical OR for further control</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Address phase trigger condition (see CONCOM1) and the signal status trigger conditions are combined with a logical AND for further control (see )</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONG</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rw</td>
+<td><tt>0x00010000</tt></td>
+<td>Grant Trigger Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No grant debug event trigger is generated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The grant debug event trigger is enabled and generated according the settings of register SBCU_DBGRNT (see )</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONA1</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>rw</td>
+<td><tt>0x00300000</tt></td>
+<td>Address 1 Trigger Control
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No address 1 trigger is generated</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>An address 1 trigger event is generated if the FPIBus address is equal to SBCU_DBADR1</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>An address 1 trigger event is generated if FPIBus address is greater or equal to SBCU_DBADR1</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>same as 00B</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONA2</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>rw</td>
+<td><tt>0x03000000</tt></td>
+<td>Address 2 Trigger Control
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No address 2 trigger is generated</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>An address 2 trigger event is generated if the FPIBus address is equal to SBCU_DBADR2</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>An address 2 trigger event is generated if FPIBus address is greater or equal to SBCU_DBADR2</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>same as 00B</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONBOS0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rw</td>
+<td><tt>0x10000000</tt></td>
+<td>Opcode Signal Status Trigger Condition
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A signal status trigger is generated for all FPIBus opcodes except a "no operation" opcode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A signal status trigger is generated if the FPIBus opcode matches the opcode as defined in DBBOS.OPC (see )</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONBOS1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rw</td>
+<td><tt>0x20000000</tt></td>
+<td>Supervisor Mode Signal Trigger Condition
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The signal status trigger generation for the FPIBus Supervisor Mode signal is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A signal status trigger is generated if the FPIBus Supervisor Mode signal state is equal to the value of DBBOS.SVM (see )</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONBOS2</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>Write Signal Trigger Condition
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The signal status trigger generation for the FPIBus write signal is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A signal status trigger is generated if the FPIBus write signal state is equal to the value of DBBOS.WR (see )</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONBOS3</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>Read Signal Trigger Condition
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The signal status trigger generation for the FPIBus read signal is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A signal status trigger is generated if the FPIBus read signal state is equal to the value of DBBOS.RD (see )</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf3317003</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xf3317010</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBGRNT">&nbsp;</a>
+<h3>SBCU_DBGRNT</h3>
+<h3>"SBCU Debug Grant Mask Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBGRNT_ADDR = 0xF0000134</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBGRNT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000FFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBGRNT_t">SBCU_DBGRNT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBGRNT.bits</b>&nbsp;&quot;SBCU Debug Grant Mask Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBGRNT_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBGRNT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBGRNT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DMAH</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Cerberus Grant Trigger Enable, High PriorityIncluding DMA transactions from DMA channels with high priority and from Cerberus with high priority.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FPIBus transactions with high-priority DMA as bus master are enabled for grant trigger event generation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FPIBus transactions with high-priority DMA as bus master are disabled for grant trigger event generation</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONE</td>
+<td>2</td>
+<td>1 - 2</td>
+<td>rw</td>
+<td><tt>0x00000006</tt></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>PCP</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>PCP Grant Trigger Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FPIBus transactions with PCP as bus master are enabled for grant trigger event generation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FPIBus transactions with PCP as bus master are disabled for grant trigger event generation</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DMAM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>DMA Grant Trigger Enable, Medium PriorityIncluding DMA transactions from DMA channels with medium priority.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FPIBus transactions with medium-priority DMA channels as bus master are enabled for grant trigger event generation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FPIBus transactions with medium-priority DMA channels as bus master are disabled for grant trigger event generation</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LFI</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>LFI Bridge Grant Trigger Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FPIBus transactions with LFI Bridge as bus master are enabled for grant trigger event generation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FPIBus transactions with LFI Bridge as bus master are disabled for grant trigger event generation</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DMAL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>DMA Grant Trigger Enable, Low PriorityIncluding DMA transactions from DMA channels with low priority, MLI and from Cerberus with low priority.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>FPIBus transactions with low-priority DMA channels as bus master are enabled for grant trigger event generation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>FPIBus transactions with low-priority DMA channels as bus master are disabled for grant trigger event generation</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONES</td>
+<td>9</td>
+<td>7 - 15</td>
+<td>rw</td>
+<td><tt>0x0000ff80</tt></td>
+<td>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBADR1">&nbsp;</a>
+<h3>SBCU_DBADR1</h3>
+<h3>"SBCU Debug Address 1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBADR1_ADDR = 0xF0000138</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBADRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBADRm_t">SBCU_DBADRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBADR1.bits</b>&nbsp;&quot;SBCU Debug Address 1 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBADRm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBADRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBADRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADRn</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>Debug Trigger Address 1
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBADR2">&nbsp;</a>
+<h3>SBCU_DBADR2</h3>
+<h3>"SBCU Debug Address 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBADR2_ADDR = 0xF000013C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBADRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBADRm_t">SBCU_DBADRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBADR2.bits</b>&nbsp;&quot;SBCU Debug Address 2 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBADRm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBADRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBADRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADRn</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>Debug Trigger Address 1
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBBOS">&nbsp;</a>
+<h3>SBCU_DBBOS</h3>
+<h3>"SBCU Debug Bus Operation Signals Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBBOS_ADDR = 0xF0000140</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBBOS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBBOS_t">SBCU_DBBOS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBBOS.bits</b>&nbsp;&quot;SBCU Debug Bus Operation Signals Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBBOS_MASK = <tt>0x0000111f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBBOS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBBOS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>OPC</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rw</td>
+<td><tt>0x0000000f</tt></td>
+<td>Opcode for Signal Status Debug Trigger
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Trigger on single byte transfer selected</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>Trigger on single half-word transfer selected</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>Trigger on single word transfer selected</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>Trigger on 2-word block transfer selected</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>Trigger on 4-word block transfer selected</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>Trigger on 8-word block transfer selected</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>Trigger on no operation selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>SVM Signal for Status Debug Trigger
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Trigger on User Mode selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Trigger on Supervisor Mode selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Write Signal for Status Debug Trigger
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Trigger on a single write transfer or write cycle of an atomic transfer selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>No operation or read transaction selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RD</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Write Signal for Status Debug Trigger
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Trigger on a single read transfer or read cycle of an atomic transfer selected</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>No operation or write transfer selected</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000111f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000111f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBGNTT">&nbsp;</a>
+<h3>SBCU_DBGNTT</h3>
+<h3>"SBCU Debug Trapped Master Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBGNTT_ADDR = 0xF0000144</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBGNTT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000FFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBGNTT_t">SBCU_DBGNTT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBGNTT.bits</b>&nbsp;&quot;SBCU Debug Trapped Master Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBGNTT_MASK = <tt>0x00ffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBGNTT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBGNTT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DMAH</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>High-Priority DMA FPIBus Master StatusIncluding DMA transactions from DMA channels with high priority and from Cerberus with high priority.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The high-priority DMA was not the FPIbus master.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The high-priority DMA was the FPIBus master.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONES</td>
+<td>2</td>
+<td>1 - 2</td>
+<td>r</td>
+<td><tt>0x00000006</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>PCP</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>PCP FPIBus Master Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The PCP was not an FPIbus master.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The PCP was FPIbus master at the break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DMAM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>High-Priority DMA FPIBus Master StatusIncluding DMA transactions from DMA channels with medium priority.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The medium-priority DMA was not the FPIbus master.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The medium-priority DMA was the FPIBus master.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>LFI</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>LFI Bridge FPIBus Master Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The LFI Bridge was not an FPIBus master.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The LFI Bridge was FPIBus master.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DMAL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Low-Priority DMA FPIBus Master StatusIncluding DMA transactions from DMA channels with low priority, MLI and from Cerberus with low priority.
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The low-priority DMA was not the FPIBus master.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The low-priority DMA was the FPIBus master.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ONE</td>
+<td>9</td>
+<td>7 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff80</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>CHNR00</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHNR01</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHNR02</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHNR03</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHNR04</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rh</td>
+<td><tt>0x00100000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHNR05</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHNR06</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHNR07</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>DMA Channel Number Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA channel 0y was not active at a DMA break trigger event.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA channel 0y was active at a DMA break trigger event.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00ffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00ff0079</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBADRT">&nbsp;</a>
+<h3>SBCU_DBADRT</h3>
+<h3>"SBCU Debug Trapped Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBADRT_ADDR = 0xF0000148</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBADRT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBADRT_t">SBCU_DBADRT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBADRT.bits</b>&nbsp;&quot;SBCU Debug Trapped Address Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBADRT_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBADRT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBADRT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FPIADR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rh</td>
+<td><tt>0xffffffff</tt></td>
+<td>FPIBus Address Status
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBBOST">&nbsp;</a>
+<h3>SBCU_DBBOST</h3>
+<h3>"SBCU Debug Trapped Bus Operation Signals Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBBOST_ADDR = 0xF000014C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBBOST_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00003180</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBBOST_t">SBCU_DBBOST_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBBOST.bits</b>&nbsp;&quot;SBCU Debug Trapped Bus Operation Signals Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBBOST_MASK = <tt>0x000f7fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBBOST_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBBOST_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FPIOPC</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>rh</td>
+<td><tt>0x0000000f</tt></td>
+<td>FPIBus Opcode Status
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>Single byte transfer</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>Single half-word transfer</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>Single word transfer</td></tr>
+<tr><td>0100</td><td>&nbsp;</td><td>2-word block transfer</td></tr>
+<tr><td>0101</td><td>&nbsp;</td><td>4-word block transfer</td></tr>
+<tr><td>0110</td><td>&nbsp;</td><td>8-word block transfer</td></tr>
+<tr><td>1111</td><td>&nbsp;</td><td>No operation</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPISVM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>FPIBus Supervisor Mode Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>User mode</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Supervisor mode</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPIACK</td>
+<td>2</td>
+<td>5 - 6</td>
+<td>rh</td>
+<td><tt>0x00000060</tt></td>
+<td>FPIBus Acknowledge Status
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No special case</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Error</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Reserved</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Retry, slave did not respond</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPIRDY</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>FPIBus Ready Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Last cycle of transfer</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Not last cycle of transfer</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPIWR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>FPIBus Write Indication Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Single write transfer or write cycle of an atomic transfer</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>No operation or read transfer</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPIRST</td>
+<td>2</td>
+<td>9 - 10</td>
+<td>rh</td>
+<td><tt>0x00000600</tt></td>
+<td>FPIBus Reset Status
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Reset of all FPIBus components</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>No reset</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPIOPS</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>FPIBus OCDS Suspend Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No OCDS suspend request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An OCDS suspend request is pending</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPIRD</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>FPIBus Read Indication Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Single read transfer or read cycle of an atomic transfer</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>No operation or write transfer</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPIABORT</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>FPIBus Abort Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A transfer that has already started was aborted</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Normal operation</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPITOUT</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>FPIBus Time-out Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A time-out event was generated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPITAG</td>
+<td>4</td>
+<td>16 - 19</td>
+<td>rh</td>
+<td><tt>0x000f0000</tt></td>
+<td>FPIBus Master TAG Status
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000f7fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000f7fff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_DBDAT">&nbsp;</a>
+<h3>SBCU_DBDAT</h3>
+<h3>"SBCU Debug Data Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_DBDAT_ADDR = 0xF0000150</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_DBDAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_DBDAT_t">SBCU_DBDAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_DBDAT.bits</b>&nbsp;&quot;SBCU Debug Data Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_DBDAT_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_DBDAT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_DBDAT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FPIDATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rh</td>
+<td><tt>0xffffffff</tt></td>
+<td>FPIBus Data Status
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SBCU_SRC">&nbsp;</a>
+<h3>SBCU_SRC</h3>
+<h3>"SBCU Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SBCU_SRC_ADDR = 0xF00001FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>SBCU_SRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SBCU_SRC_t">SBCU_SRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>SBCU_SRC.bits</b>&nbsp;&quot;SBCU Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>SBCU_SRC_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>SBCU_SRC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>SBCU_SRC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP request is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_ID">&nbsp;</a>
+<h3>LBCU_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_ID_ADDR = 0xF87FFE08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000FC0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_ID_t">LBCU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LEATT">&nbsp;</a>
+<h3>LBCU_LEATT</h3>
+<h3>"LBCU LMB Error Attribute Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LEATT_ADDR = 0xF87FFE20</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LEATT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXX0</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LEATT_t">LBCU_LEATT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LEATT.bits</b>&nbsp;&quot;LBCU LMB Error Attribute Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LEATT_MASK = <tt>0xf7efc0f1</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LEATT_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LEATT_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LEC</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>Lock Error Capture
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The error-capture mechanism is unlocked. The next LMBBus error will be captured.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The error-capture mechanism is locked. The registers LEADDR and bits [31:4] of LEATT contain valid data. The registers LEADTL and LEDATH contain valid data if LEATT.UIS = '0'.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPITAG</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>rh</td>
+<td><tt>0x000000f0</tt></td>
+<td>FPI Bus Master TAG
+</td>
+</tr>
+<tr>
+<td>NOS</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>LMB No Split
+</td>
+</tr>
+<tr>
+<td>LOC</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>LMBBus Lock State
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>LMB bus error occurred at an atomic transfer.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>LMB bus error occurred at a single or block transfer.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>3</td>
+<td>16 - 18</td>
+<td>rh</td>
+<td><tt>0x00070000</tt></td>
+<td>LMBBus Slave Response State
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Slave is in normal operation.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Slave is busy.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Slave has an error encountered.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>UIS</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>Un-implemented Address
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>LMBslave address is valid.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Invalid LMBslave address occurred.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>LMBBus Supervisor Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Transfer was initiated in Supervisor Mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Transfer was initiated in User Mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WR</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>LMBBus Write Error Indication
+</td>
+</tr>
+<tr>
+<td>RD</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>LMBBus Read Error Indication
+</td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>rh</td>
+<td><tt>0x07000000</tt></td>
+<td>LMB Master TAGPls. note that this bit field represents bit 0-2 of the master TAG as shown in ). This as bit 3 of the On Chip Bus master TAGs is always 0 for master interfaces connected to the LMB Bus.
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>LFI</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>PMI</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>DMI</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>DMA</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OPC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>rh</td>
+<td><tt>0xf0000000</tt></td>
+<td>LMBBus Error Transaction Type
+<table class="valdesc">
+<tr><td>0000</td><td>&nbsp;</td><td>8-bit data single transfer</td></tr>
+<tr><td>0001</td><td>&nbsp;</td><td>16-bit data single transfer</td></tr>
+<tr><td>0010</td><td>&nbsp;</td><td>32-bit data single transfer</td></tr>
+<tr><td>0011</td><td>&nbsp;</td><td>64-bit data single transfer</td></tr>
+<tr><td>1000</td><td>&nbsp;</td><td>2 * 64-bit data block transfer</td></tr>
+<tr><td>1001</td><td>&nbsp;</td><td>4 * 64-bit data block transfer</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf7efc0f1</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xf7efc0f1</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LEADDR">&nbsp;</a>
+<h3>LBCU_LEADDR</h3>
+<h3>"LBCU LMB Error Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LEADDR_ADDR = 0xF87FFE24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LEADDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LEADDR_t">LBCU_LEADDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LEADDR.bits</b>&nbsp;&quot;LBCU LMB Error Address Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LEADDR_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LEADDR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LEADDR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LEADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rh</td>
+<td><tt>0xffffffff</tt></td>
+<td>LMBBus Address
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LEDATL">&nbsp;</a>
+<h3>LBCU_LEDATL</h3>
+<h3>"LBCU LMB Error Data Low Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LEDATL_ADDR = 0xF87FFE28</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LEDATL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LEDATL_t">LBCU_LEDATL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LEDATL.bits</b>&nbsp;&quot;LBCU LMB Error Data Low Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LEDATL_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LEDATL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LEDATL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LEDAT_31_0</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rh</td>
+<td><tt>0xffffffff</tt></td>
+<td>LMBBus Address Bits [31:0]
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LEDATH">&nbsp;</a>
+<h3>LBCU_LEDATH</h3>
+<h3>"LBCU LMB Error Data High Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LEDATH_ADDR = 0xF87FFE2C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LEDATH_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LEDATH_t">LBCU_LEDATH_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LEDATH.bits</b>&nbsp;&quot;LBCU LMB Error Data High Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LEDATH_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LEDATH_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LEDATH_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LEDAT_63_32</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rh</td>
+<td><tt>0xffffffff</tt></td>
+<td>LMBBus Address Bits [31:0]
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LEADDED">&nbsp;</a>
+<h3>LBCU_LEADDED</h3>
+<h3>"LMB Error Address Error Detection Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LEADDED_ADDR = 0xF87FFE34</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LEADDED_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LEADDED_t">LBCU_LEADDED_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LEADDED.bits</b>&nbsp;&quot;LMB Error Address Error Detection Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LEADDED_MASK = <tt>0x000000ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LEADDED_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LEADDED_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADDR_ED</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>LMB Error Address Error Detection
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000000ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000000ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LEDATED">&nbsp;</a>
+<h3>LBCU_LEDATED</h3>
+<h3>"LMB Error Data Error Detection Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LEDATED_ADDR = 0xF87FFE38</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LEDATED_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000000XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LEDATED_t">LBCU_LEDATED_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LEDATED.bits</b>&nbsp;&quot;LMB Error Data Error Detection Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LEDATED_MASK = <tt>0x000000ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LEDATED_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LEDATED_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DATA_ED</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rh</td>
+<td><tt>0x000000ff</tt></td>
+<td>LMB Error Data Error Detection
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000000ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000000ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LERESED">&nbsp;</a>
+<h3>LBCU_LERESED</h3>
+<h3>"LMB Error Response Error Detection Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LERESED_ADDR = 0xF87FFE3C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LERESED_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000000X</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LERESED_t">LBCU_LERESED_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LERESED.bits</b>&nbsp;&quot;LMB Error Response Error Detection Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LERESED_MASK = <tt>0x0000001f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LERESED_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LERESED_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RESP_ED</td>
+<td>5</td>
+<td>0 - 4</td>
+<td>rh</td>
+<td><tt>0x0000001f</tt></td>
+<td>LMB Error Response Error Detection
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000001f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000001f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LSEADS">&nbsp;</a>
+<h3>LBCU_LSEADS</h3>
+<h3>"LMB Soft Error Address Source Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LSEADS_ADDR = 0xF87FFE40</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LSEADS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LSEADS_t">LBCU_LSEADS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LSEADS.bits</b>&nbsp;&quot;LMB Soft Error Address Source Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LSEADS_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LSEADS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LSEADS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LMB_Module</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>LMB Soft Error Address Source
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LSEABS">&nbsp;</a>
+<h3>LBCU_LSEABS</h3>
+<h3>"LMB Soft Error Abort Source Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LSEABS_ADDR = 0xF87FFE44</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LSEABS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LSEABS_t">LBCU_LSEABS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LSEABS.bits</b>&nbsp;&quot;LMB Soft Error Abort Source Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LSEABS_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LSEABS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LSEABS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LMB_Module</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>LMB Soft Error Abort Source
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LSERDS">&nbsp;</a>
+<h3>LBCU_LSERDS</h3>
+<h3>"LMB Soft Error Read Source Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LSERDS_ADDR = 0xF87FFE48</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LSERDS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LSERDS_t">LBCU_LSERDS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LSERDS.bits</b>&nbsp;&quot;LMB Soft Error Read Source Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LSERDS_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LSERDS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LSERDS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LMB_Module</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>LMB Soft Error Read Source
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LSEWRS">&nbsp;</a>
+<h3>LBCU_LSEWRS</h3>
+<h3>"LMB Soft Error Write Source Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LSEWRS_ADDR = 0xF87FFE4C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LSEWRS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LSEWRS_t">LBCU_LSEWRS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LSEWRS.bits</b>&nbsp;&quot;LMB Soft Error Write Source Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LSEWRS_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LSEWRS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LSEWRS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LMB_Module</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>LMB Soft Error Write Source
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_LSERES">&nbsp;</a>
+<h3>LBCU_LSERES</h3>
+<h3>"LMB Soft Error Response Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_LSERES_ADDR = 0xF87FFE50</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_LSERES_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_LSERES_t">LBCU_LSERES_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_LSERES.bits</b>&nbsp;&quot;LMB Soft Error Response Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_LSERES_MASK = <tt>0x0000ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_LSERES_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_LSERES_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LMB_Module</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>rh</td>
+<td><tt>0x0000ffff</tt></td>
+<td>LMB Soft Error Abort Source
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LBCU_SRC">&nbsp;</a>
+<h3>LBCU_SRC</h3>
+<h3>"LBCU Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LBCU_SRC_ADDR = 0xF87FFEFC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LBCU_SRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LBCU_SRC_t">LBCU_SRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LBCU_SRC.bits</b>&nbsp;&quot;LBCU Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LBCU_SRC_MASK = <tt>0x0000fcff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LBCU_SRC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LBCU_SRC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>r</td>
+<td><tt>0x00000c00</tt></td>
+<td>Type-of-Service State
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Flag Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Flag Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00003cff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d0ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LFI_ID">&nbsp;</a>
+<h3>LFI_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LFI_ID_ADDR = 0xF87FFF08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LFI_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000CC0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LFI_ID_t">LFI_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LFI_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LFI_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LFI_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LFI_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LFI_CON">&nbsp;</a>
+<h3>LFI_CON</h3>
+<h3>"LFI Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LFI_CON_ADDR = 0xF87FFF10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LFI_CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000B00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LFI_CON_t">LFI_CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LFI_CON.bits</b>&nbsp;&quot;LFI Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LFI_CON_MASK = <tt>0x00000f70</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LFI_CON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LFI_CON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>LTAG</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>rh</td>
+<td><tt>0x00000070</tt></td>
+<td>LMBBus Tag ID
+</td>
+</tr>
+<tr>
+<td>FTAG</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>rh</td>
+<td><tt>0x00000f00</tt></td>
+<td>FPIBus (SPB) Tag ID
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000f70</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000f70</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

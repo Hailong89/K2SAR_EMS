@@ -1,0 +1,5191 @@
+<html>
+<head>
+<title>TriCore TC1782 (MLI)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>MLI</h2>
+
+<h2><tt>#include &lt;tc1782/mli.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#MLI0_ID">MLI0_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF010C008</td>
+<td><a class="url" href="types/m.html#MLI0_ID_t">MLI0_ID_t</a></td>
+<td>0x0025C007</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_FDR">MLI0_FDR</a></td>
+<td>Fractional Divider Register</td>
+<td>0xF010C00C</td>
+<td><a class="url" href="types/m.html#MLI0_FDR_t">MLI0_FDR_t</a></td>
+<td>0x03FF43FF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TCR">MLI0_TCR</a></td>
+<td>Transmitter Control Register</td>
+<td>0xF010C010</td>
+<td><a class="url" href="types/m.html#MLI0_TCR_t">MLI0_TCR_t</a></td>
+<td>0x00000110</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TSTATR">MLI0_TSTATR</a></td>
+<td>Transmitter Status Register</td>
+<td>0xF010C014</td>
+<td><a class="url" href="types/m.html#MLI0_TSTATR_t">MLI0_TSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP0STATR">MLI0_TP0STATR</a></td>
+<td>Transmitter Pipe 0 Status Register</td>
+<td>0xF010C018</td>
+<td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP1STATR">MLI0_TP1STATR</a></td>
+<td>Transmitter Pipe 1 Status Register</td>
+<td>0xF010C01C</td>
+<td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP2STATR">MLI0_TP2STATR</a></td>
+<td>Transmitter Pipe 2 Status Register</td>
+<td>0xF010C020</td>
+<td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP3STATR">MLI0_TP3STATR</a></td>
+<td>Transmitter Pipe 3 Status Register</td>
+<td>0xF010C024</td>
+<td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TCMDR">MLI0_TCMDR</a></td>
+<td>Transmitter Command Register</td>
+<td>0xF010C028</td>
+<td><a class="url" href="types/m.html#MLI0_TCMDR_t">MLI0_TCMDR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TRSTATR">MLI0_TRSTATR</a></td>
+<td>Transmitter Receiver Status Register</td>
+<td>0xF010C02C</td>
+<td><a class="url" href="types/m.html#MLI0_TRSTATR_t">MLI0_TRSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP0AOFR">MLI0_TP0AOFR</a></td>
+<td>Transmitter Pipe 0 Address Offset Register</td>
+<td>0xF010C030</td>
+<td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP1AOFR">MLI0_TP1AOFR</a></td>
+<td>Transmitter Pipe 1 Address Offset Register</td>
+<td>0xF010C034</td>
+<td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP2AOFR">MLI0_TP2AOFR</a></td>
+<td>Transmitter Pipe 2 Address Offset Register</td>
+<td>0xF010C038</td>
+<td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP3AOFR">MLI0_TP3AOFR</a></td>
+<td>Transmitter Pipe 3 Address Offset Register</td>
+<td>0xF010C03C</td>
+<td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP0DATAR">MLI0_TP0DATAR</a></td>
+<td>Transmitter Pipe 0 Data Register</td>
+<td>0xF010C040</td>
+<td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP1DATAR">MLI0_TP1DATAR</a></td>
+<td>Transmitter Pipe 1 Data Register</td>
+<td>0xF010C044</td>
+<td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP2DATAR">MLI0_TP2DATAR</a></td>
+<td>Transmitter Pipe 2 Data Register</td>
+<td>0xF010C048</td>
+<td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP3DATAR">MLI0_TP3DATAR</a></td>
+<td>Transmitter Pipe 3 Data Register</td>
+<td>0xF010C04C</td>
+<td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TDRAR">MLI0_TDRAR</a></td>
+<td>Transmitter Data Read Answer Register</td>
+<td>0xF010C050</td>
+<td><a class="url" href="types/m.html#MLI0_TDRAR_t">MLI0_TDRAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP0BAR">MLI0_TP0BAR</a></td>
+<td>Transmitter Pipe 0 Base Address Register</td>
+<td>0xF010C054</td>
+<td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP1BAR">MLI0_TP1BAR</a></td>
+<td>Transmitter Pipe 1 Base Address Register</td>
+<td>0xF010C058</td>
+<td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP2BAR">MLI0_TP2BAR</a></td>
+<td>Transmitter Pipe 2 Base Address Register</td>
+<td>0xF010C05C</td>
+<td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TP3BAR">MLI0_TP3BAR</a></td>
+<td>Transmitter Pipe 3 Base Address Register</td>
+<td>0xF010C060</td>
+<td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TCBAR">MLI0_TCBAR</a></td>
+<td>Transmitter Copy Base Address Register</td>
+<td>0xF010C064</td>
+<td><a class="url" href="types/m.html#MLI0_TCBAR_t">MLI0_TCBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RCR">MLI0_RCR</a></td>
+<td>Receiver Control Register</td>
+<td>0xF010C068</td>
+<td><a class="url" href="types/m.html#MLI0_RCR_t">MLI0_RCR_t</a></td>
+<td>0x01000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP0BAR">MLI0_RP0BAR</a></td>
+<td>Receiver Pipe 0 Base Address Register</td>
+<td>0xF010C06C</td>
+<td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP1BAR">MLI0_RP1BAR</a></td>
+<td>Receiver Pipe 1 Base Address Register</td>
+<td>0xF010C070</td>
+<td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP2BAR">MLI0_RP2BAR</a></td>
+<td>Receiver Pipe 2 Base Address Register</td>
+<td>0xF010C074</td>
+<td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP3BAR">MLI0_RP3BAR</a></td>
+<td>Receiver Pipe 3 Base Address Register</td>
+<td>0xF010C078</td>
+<td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP0STATR">MLI0_RP0STATR</a></td>
+<td>Receiver Pipe 0 Status Register</td>
+<td>0xF010C07C</td>
+<td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP1STATR">MLI0_RP1STATR</a></td>
+<td>Receiver Pipe 1 Status Register</td>
+<td>0xF010C080</td>
+<td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP2STATR">MLI0_RP2STATR</a></td>
+<td>Receiver Pipe 2 Status Register</td>
+<td>0xF010C084</td>
+<td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RP3STATR">MLI0_RP3STATR</a></td>
+<td>Receiver Pipe 3 Status Register</td>
+<td>0xF010C088</td>
+<td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RADRR">MLI0_RADRR</a></td>
+<td>Receiver Address Register</td>
+<td>0xF010C08C</td>
+<td><a class="url" href="types/m.html#MLI0_RADRR_t">MLI0_RADRR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RDATAR">MLI0_RDATAR</a></td>
+<td>Receiver Data Register</td>
+<td>0xF010C090</td>
+<td><a class="url" href="types/m.html#MLI0_RDATAR_t">MLI0_RDATAR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_SCR">MLI0_SCR</a></td>
+<td>Set Clear Register</td>
+<td>0xF010C094</td>
+<td><a class="url" href="types/m.html#MLI0_SCR_t">MLI0_SCR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TIER">MLI0_TIER</a></td>
+<td>Transmitter Interrupt Enable Register</td>
+<td>0xF010C098</td>
+<td><a class="url" href="types/m.html#MLI0_TIER_t">MLI0_TIER_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TISR">MLI0_TISR</a></td>
+<td>Transmitter Interrupt Status Register</td>
+<td>0xF010C09C</td>
+<td><a class="url" href="types/m.html#MLI0_TISR_t">MLI0_TISR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_TINPR">MLI0_TINPR</a></td>
+<td>Transmitter Interrupt Node Pointer Register</td>
+<td>0xF010C0A0</td>
+<td><a class="url" href="types/m.html#MLI0_TINPR_t">MLI0_TINPR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RIER">MLI0_RIER</a></td>
+<td>Receiver Interrupt Enable Register</td>
+<td>0xF010C0A4</td>
+<td><a class="url" href="types/m.html#MLI0_RIER_t">MLI0_RIER_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RISR">MLI0_RISR</a></td>
+<td>Receiver Interrupt Status Register</td>
+<td>0xF010C0A8</td>
+<td><a class="url" href="types/m.html#MLI0_RISR_t">MLI0_RISR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_RINPR">MLI0_RINPR</a></td>
+<td>Receiver Interrupt Node Pointer Register</td>
+<td>0xF010C0AC</td>
+<td><a class="url" href="types/m.html#MLI0_RINPR_t">MLI0_RINPR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_GINTR">MLI0_GINTR</a></td>
+<td>Global Interrupt Set Register</td>
+<td>0xF010C0B0</td>
+<td><a class="url" href="types/m.html#MLI0_GINTR_t">MLI0_GINTR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_OICR">MLI0_OICR</a></td>
+<td>Output Input Control Register</td>
+<td>0xF010C0B4</td>
+<td><a class="url" href="types/m.html#MLI0_OICR_t">MLI0_OICR_t</a></td>
+<td>0x10008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_AER">MLI0_AER</a></td>
+<td>Access Enable Register</td>
+<td>0xF010C0B8</td>
+<td><a class="url" href="types/m.html#MLI0_AER_t">MLI0_AER_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MLI0_ARR">MLI0_ARR</a></td>
+<td>Access Range Register</td>
+<td>0xF010C0BC</td>
+<td><a class="url" href="types/m.html#MLI0_ARR_t">MLI0_ARR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_AER_t">MLI0_AER_t</a></td>
+<td><a class="url" href="mli.html#MLI0_AER">MLI0_AER</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_ARR_t">MLI0_ARR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_ARR">MLI0_ARR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_FDR_t">MLI0_FDR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_FDR">MLI0_FDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_GINTR_t">MLI0_GINTR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_GINTR">MLI0_GINTR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_ID_t">MLI0_ID_t</a></td>
+<td><a class="url" href="mli.html#MLI0_ID">MLI0_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_OICR_t">MLI0_OICR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_OICR">MLI0_OICR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RADRR_t">MLI0_RADRR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RADRR">MLI0_RADRR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RCR_t">MLI0_RCR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RCR">MLI0_RCR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RDATAR_t">MLI0_RDATAR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RDATAR">MLI0_RDATAR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RIER_t">MLI0_RIER_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RIER">MLI0_RIER</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RINPR_t">MLI0_RINPR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RINPR">MLI0_RINPR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RISR_t">MLI0_RISR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RISR">MLI0_RISR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RP0BAR">MLI0_RP0BAR</a>,       
+<a class="url" href="mli.html#MLI0_RP1BAR">MLI0_RP1BAR</a>,       
+<a class="url" href="mli.html#MLI0_RP2BAR">MLI0_RP2BAR</a>,       
+<a class="url" href="mli.html#MLI0_RP3BAR">MLI0_RP3BAR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_RP0STATR">MLI0_RP0STATR</a>,       
+<a class="url" href="mli.html#MLI0_RP1STATR">MLI0_RP1STATR</a>,       
+<a class="url" href="mli.html#MLI0_RP2STATR">MLI0_RP2STATR</a>,       
+<a class="url" href="mli.html#MLI0_RP3STATR">MLI0_RP3STATR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_SCR_t">MLI0_SCR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_SCR">MLI0_SCR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TCBAR_t">MLI0_TCBAR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TCBAR">MLI0_TCBAR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TCMDR_t">MLI0_TCMDR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TCMDR">MLI0_TCMDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TCR_t">MLI0_TCR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TCR">MLI0_TCR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TDRAR_t">MLI0_TDRAR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TDRAR">MLI0_TDRAR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TIER_t">MLI0_TIER_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TIER">MLI0_TIER</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TINPR_t">MLI0_TINPR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TINPR">MLI0_TINPR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TISR_t">MLI0_TISR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TISR">MLI0_TISR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TP0AOFR">MLI0_TP0AOFR</a>,       
+<a class="url" href="mli.html#MLI0_TP1AOFR">MLI0_TP1AOFR</a>,       
+<a class="url" href="mli.html#MLI0_TP2AOFR">MLI0_TP2AOFR</a>,       
+<a class="url" href="mli.html#MLI0_TP3AOFR">MLI0_TP3AOFR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TP0BAR">MLI0_TP0BAR</a>,       
+<a class="url" href="mli.html#MLI0_TP1BAR">MLI0_TP1BAR</a>,       
+<a class="url" href="mli.html#MLI0_TP2BAR">MLI0_TP2BAR</a>,       
+<a class="url" href="mli.html#MLI0_TP3BAR">MLI0_TP3BAR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TP0DATAR">MLI0_TP0DATAR</a>,       
+<a class="url" href="mli.html#MLI0_TP1DATAR">MLI0_TP1DATAR</a>,       
+<a class="url" href="mli.html#MLI0_TP2DATAR">MLI0_TP2DATAR</a>,       
+<a class="url" href="mli.html#MLI0_TP3DATAR">MLI0_TP3DATAR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TP0STATR">MLI0_TP0STATR</a>,       
+<a class="url" href="mli.html#MLI0_TP1STATR">MLI0_TP1STATR</a>,       
+<a class="url" href="mli.html#MLI0_TP2STATR">MLI0_TP2STATR</a>,       
+<a class="url" href="mli.html#MLI0_TP3STATR">MLI0_TP3STATR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TRSTATR_t">MLI0_TRSTATR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TRSTATR">MLI0_TRSTATR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MLI0_TSTATR_t">MLI0_TSTATR_t</a></td>
+<td><a class="url" href="mli.html#MLI0_TSTATR">MLI0_TSTATR</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="MLI0_ID">&nbsp;</a>
+<h3>MLI0_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_ID_ADDR = 0xF010C008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0025C007</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_ID_t">MLI0_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>MLI0_ID_MODREV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>MLI0_ID_MODREV_SHIFT</td>
+</tr>
+<tr>
+<td>MODTYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>MLI0_ID_MODTYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>MLI0_ID_MODTYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MODNUM</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>MLI0_ID_MODNUM_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>MLI0_ID_MODNUM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_FDR">&nbsp;</a>
+<h3>MLI0_FDR</h3>
+<h3>"Fractional Divider Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_FDR_ADDR = 0xF010C00C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_FDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x03FF43FF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_FDR_t">MLI0_FDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_FDR.bits</b>&nbsp;&quot;Fractional Divider Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STEP</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>MLI0_FDR_STEP_MASK</td>
+<td><tt>0x000003ff</tt></td>
+<td>rw</td>
+<td>MLI0_FDR_STEP_SHIFT</td>
+</tr>
+<tr>
+<td>SM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MLI0_FDR_SM_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>MLI0_FDR_SM_SHIFT</td>
+</tr>
+<tr>
+<td>SC</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>MLI0_FDR_SC_MASK</td>
+<td><tt>0x00003000</tt></td>
+<td>rw</td>
+<td>MLI0_FDR_SC_SHIFT</td>
+</tr>
+<tr>
+<td>DM</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>MLI0_FDR_DM_MASK</td>
+<td><tt>0x0000c000</tt></td>
+<td>rw</td>
+<td>MLI0_FDR_DM_SHIFT</td>
+</tr>
+<tr>
+<td>RESULT</td>
+<td>10</td>
+<td>16 - 25</td>
+<td>MLI0_FDR_RESULT_MASK</td>
+<td><tt>0x03ff0000</tt></td>
+<td>rh</td>
+<td>MLI0_FDR_RESULT_SHIFT</td>
+</tr>
+<tr>
+<td>SUSACK</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>MLI0_FDR_SUSACK_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>MLI0_FDR_SUSACK_SHIFT</td>
+</tr>
+<tr>
+<td>SUSREQ</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>MLI0_FDR_SUSREQ_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rh</td>
+<td>MLI0_FDR_SUSREQ_SHIFT</td>
+</tr>
+<tr>
+<td>ENHW</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>MLI0_FDR_ENHW_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>MLI0_FDR_ENHW_SHIFT</td>
+</tr>
+<tr>
+<td>DISCLK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>MLI0_FDR_DISCLK_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rwh</td>
+<td>MLI0_FDR_DISCLK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_FDR_MASK</td><td><tt>0xf3fffbff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf3fffbff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xc000fbff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xb3ff0000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TCR">&nbsp;</a>
+<h3>MLI0_TCR</h3>
+<h3>"Transmitter Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TCR_ADDR = 0xF010C010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000110</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TCR_t">MLI0_TCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TCR.bits</b>&nbsp;&quot;Transmitter Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MOD</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_TCR_MOD_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MLI0_TCR_MOD_SHIFT</td>
+</tr>
+<tr>
+<td>DNT</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_TCR_DNT_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>MLI0_TCR_DNT_SHIFT</td>
+</tr>
+<tr>
+<td>MPE</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>MLI0_TCR_MPE_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rwh</td>
+<td>MLI0_TCR_MPE_SHIFT</td>
+</tr>
+<tr>
+<td>MNAE</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>MLI0_TCR_MNAE_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rwh</td>
+<td>MLI0_TCR_MNAE_SHIFT</td>
+</tr>
+<tr>
+<td>MDP</td>
+<td>4</td>
+<td>10 - 13</td>
+<td>MLI0_TCR_MDP_MASK</td>
+<td><tt>0x00003c00</tt></td>
+<td>rw</td>
+<td>MLI0_TCR_MDP_SHIFT</td>
+</tr>
+<tr>
+<td>NO</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>MLI0_TCR_NO_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>MLI0_TCR_NO_SHIFT</td>
+</tr>
+<tr>
+<td>TP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MLI0_TCR_TP_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>MLI0_TCR_TP_SHIFT</td>
+</tr>
+<tr>
+<td>TDEL</td>
+<td>4</td>
+<td>16 - 19</td>
+<td>MLI0_TCR_TDEL_MASK</td>
+<td><tt>0x000f0000</tt></td>
+<td>rw</td>
+<td>MLI0_TCR_TDEL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TCR_MASK</td><td><tt>0x000ffff3</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000ffff3</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000ffff3</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003f0</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TSTATR">&nbsp;</a>
+<h3>MLI0_TSTATR</h3>
+<h3>"Transmitter Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TSTATR_ADDR = 0xF010C014</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TSTATR_t">MLI0_TSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TSTATR.bits</b>&nbsp;&quot;Transmitter Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RDC</td>
+<td>5</td>
+<td>0 - 4</td>
+<td>MLI0_TSTATR_RDC_MASK</td>
+<td><tt>0x0000001f</tt></td>
+<td>rh</td>
+<td>MLI0_TSTATR_RDC_SHIFT</td>
+</tr>
+<tr>
+<td>APN</td>
+<td>2</td>
+<td>5 - 6</td>
+<td>MLI0_TSTATR_APN_MASK</td>
+<td><tt>0x00000060</tt></td>
+<td>rh</td>
+<td>MLI0_TSTATR_APN_SHIFT</td>
+</tr>
+<tr>
+<td>PE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_TSTATR_PE_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>MLI0_TSTATR_PE_SHIFT</td>
+</tr>
+<tr>
+<td>NAE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_TSTATR_NAE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>MLI0_TSTATR_NAE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TSTATR_MASK</td><td><tt>0x000001ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000001ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP0STATR">&nbsp;</a>
+<h3>MLI0_TP0STATR</h3>
+<h3>"Transmitter Pipe 0 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP0STATR_ADDR = 0xF010C018</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP0STATR.bits</b>&nbsp;&quot;Transmitter Pipe 0 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>DW</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>MLI0_TPmSTATR_DW_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_DW_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_TPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_AP_SHIFT</td>
+</tr>
+<tr>
+<td>OP</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_TPmSTATR_OP_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_OP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmSTATR_MASK</td><td><tt>0x0001ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0001ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0001ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP1STATR">&nbsp;</a>
+<h3>MLI0_TP1STATR</h3>
+<h3>"Transmitter Pipe 1 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP1STATR_ADDR = 0xF010C01C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP1STATR.bits</b>&nbsp;&quot;Transmitter Pipe 1 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>DW</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>MLI0_TPmSTATR_DW_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_DW_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_TPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_AP_SHIFT</td>
+</tr>
+<tr>
+<td>OP</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_TPmSTATR_OP_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_OP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmSTATR_MASK</td><td><tt>0x0001ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0001ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0001ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP2STATR">&nbsp;</a>
+<h3>MLI0_TP2STATR</h3>
+<h3>"Transmitter Pipe 2 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP2STATR_ADDR = 0xF010C020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP2STATR.bits</b>&nbsp;&quot;Transmitter Pipe 2 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>DW</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>MLI0_TPmSTATR_DW_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_DW_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_TPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_AP_SHIFT</td>
+</tr>
+<tr>
+<td>OP</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_TPmSTATR_OP_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_OP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmSTATR_MASK</td><td><tt>0x0001ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0001ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0001ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP3STATR">&nbsp;</a>
+<h3>MLI0_TP3STATR</h3>
+<h3>"Transmitter Pipe 3 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP3STATR_ADDR = 0xF010C024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP3STATR.bits</b>&nbsp;&quot;Transmitter Pipe 3 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>DW</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>MLI0_TPmSTATR_DW_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_DW_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_TPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_AP_SHIFT</td>
+</tr>
+<tr>
+<td>OP</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_TPmSTATR_OP_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>MLI0_TPmSTATR_OP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmSTATR_MASK</td><td><tt>0x0001ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0001ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0001ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TCMDR">&nbsp;</a>
+<h3>MLI0_TCMDR</h3>
+<h3>"Transmitter Command Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TCMDR_ADDR = 0xF010C028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TCMDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TCMDR_t">MLI0_TCMDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TCMDR.bits</b>&nbsp;&quot;Transmitter Command Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CMDP0</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TCMDR_CMDP0_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>MLI0_TCMDR_CMDP0_SHIFT</td>
+</tr>
+<tr>
+<td>CMDP1</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>MLI0_TCMDR_CMDP1_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>MLI0_TCMDR_CMDP1_SHIFT</td>
+</tr>
+<tr>
+<td>CMDP2</td>
+<td>4</td>
+<td>16 - 19</td>
+<td>MLI0_TCMDR_CMDP2_MASK</td>
+<td><tt>0x000f0000</tt></td>
+<td>rw</td>
+<td>MLI0_TCMDR_CMDP2_SHIFT</td>
+</tr>
+<tr>
+<td>CMDP3</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>MLI0_TCMDR_CMDP3_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>MLI0_TCMDR_CMDP3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TCMDR_MASK</td><td><tt>0x0f0f0f0f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0f0f0f0f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0f0f0f0f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TRSTATR">&nbsp;</a>
+<h3>MLI0_TRSTATR</h3>
+<h3>"Transmitter Receiver Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TRSTATR_ADDR = 0xF010C02C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TRSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TRSTATR_t">MLI0_TRSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TRSTATR.bits</b>&nbsp;&quot;Transmitter Receiver Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CIV0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_TRSTATR_CIV0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CIV0_SHIFT</td>
+</tr>
+<tr>
+<td>CIV1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_TRSTATR_CIV1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CIV1_SHIFT</td>
+</tr>
+<tr>
+<td>CIV2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_TRSTATR_CIV2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CIV2_SHIFT</td>
+</tr>
+<tr>
+<td>CIV3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_TRSTATR_CIV3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CIV3_SHIFT</td>
+</tr>
+<tr>
+<td>CV0</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_TRSTATR_CV0_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CV0_SHIFT</td>
+</tr>
+<tr>
+<td>CV1</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_TRSTATR_CV1_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CV1_SHIFT</td>
+</tr>
+<tr>
+<td>CV2</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_TRSTATR_CV2_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CV2_SHIFT</td>
+</tr>
+<tr>
+<td>CV3</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_TRSTATR_CV3_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_CV3_SHIFT</td>
+</tr>
+<tr>
+<td>AV</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_TRSTATR_AV_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_AV_SHIFT</td>
+</tr>
+<tr>
+<td>BAV</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MLI0_TRSTATR_BAV_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_BAV_SHIFT</td>
+</tr>
+<tr>
+<td>DV0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_TRSTATR_DV0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_DV0_SHIFT</td>
+</tr>
+<tr>
+<td>DV1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>MLI0_TRSTATR_DV1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_DV1_SHIFT</td>
+</tr>
+<tr>
+<td>DV2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>MLI0_TRSTATR_DV2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_DV2_SHIFT</td>
+</tr>
+<tr>
+<td>DV3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>MLI0_TRSTATR_DV3_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_DV3_SHIFT</td>
+</tr>
+<tr>
+<td>RP0</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MLI0_TRSTATR_RP0_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_RP0_SHIFT</td>
+</tr>
+<tr>
+<td>RP1</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>MLI0_TRSTATR_RP1_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_RP1_SHIFT</td>
+</tr>
+<tr>
+<td>RP2</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>MLI0_TRSTATR_RP2_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_RP2_SHIFT</td>
+</tr>
+<tr>
+<td>RP3</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>MLI0_TRSTATR_RP3_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_RP3_SHIFT</td>
+</tr>
+<tr>
+<td>PN</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>MLI0_TRSTATR_PN_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rh</td>
+<td>MLI0_TRSTATR_PN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TRSTATR_MASK</td><td><tt>0x03ff03ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x03ff03ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x03ff03ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP0AOFR">&nbsp;</a>
+<h3>MLI0_TP0AOFR</h3>
+<h3>"Transmitter Pipe 0 Address Offset Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP0AOFR_ADDR = 0xF010C030</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmAOFR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP0AOFR.bits</b>&nbsp;&quot;Transmitter Pipe 0 Address Offset Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>AOFF</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>MLI0_TPmAOFR_AOFF_MASK</td>
+<td><tt>0x0000ffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmAOFR_AOFF_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmAOFR_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP1AOFR">&nbsp;</a>
+<h3>MLI0_TP1AOFR</h3>
+<h3>"Transmitter Pipe 1 Address Offset Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP1AOFR_ADDR = 0xF010C034</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmAOFR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP1AOFR.bits</b>&nbsp;&quot;Transmitter Pipe 1 Address Offset Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>AOFF</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>MLI0_TPmAOFR_AOFF_MASK</td>
+<td><tt>0x0000ffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmAOFR_AOFF_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmAOFR_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP2AOFR">&nbsp;</a>
+<h3>MLI0_TP2AOFR</h3>
+<h3>"Transmitter Pipe 2 Address Offset Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP2AOFR_ADDR = 0xF010C038</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmAOFR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP2AOFR.bits</b>&nbsp;&quot;Transmitter Pipe 2 Address Offset Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>AOFF</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>MLI0_TPmAOFR_AOFF_MASK</td>
+<td><tt>0x0000ffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmAOFR_AOFF_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmAOFR_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP3AOFR">&nbsp;</a>
+<h3>MLI0_TP3AOFR</h3>
+<h3>"Transmitter Pipe 3 Address Offset Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP3AOFR_ADDR = 0xF010C03C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmAOFR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP3AOFR.bits</b>&nbsp;&quot;Transmitter Pipe 3 Address Offset Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>AOFF</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>MLI0_TPmAOFR_AOFF_MASK</td>
+<td><tt>0x0000ffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmAOFR_AOFF_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmAOFR_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP0DATAR">&nbsp;</a>
+<h3>MLI0_TP0DATAR</h3>
+<h3>"Transmitter Pipe 0 Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP0DATAR_ADDR = 0xF010C040</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmDATAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP0DATAR.bits</b>&nbsp;&quot;Transmitter Pipe 0 Data Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_TPmDATAR_DATA_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmDATAR_DATA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmDATAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP1DATAR">&nbsp;</a>
+<h3>MLI0_TP1DATAR</h3>
+<h3>"Transmitter Pipe 1 Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP1DATAR_ADDR = 0xF010C044</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmDATAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP1DATAR.bits</b>&nbsp;&quot;Transmitter Pipe 1 Data Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_TPmDATAR_DATA_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmDATAR_DATA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmDATAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP2DATAR">&nbsp;</a>
+<h3>MLI0_TP2DATAR</h3>
+<h3>"Transmitter Pipe 2 Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP2DATAR_ADDR = 0xF010C048</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmDATAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP2DATAR.bits</b>&nbsp;&quot;Transmitter Pipe 2 Data Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_TPmDATAR_DATA_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmDATAR_DATA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmDATAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP3DATAR">&nbsp;</a>
+<h3>MLI0_TP3DATAR</h3>
+<h3>"Transmitter Pipe 3 Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP3DATAR_ADDR = 0xF010C04C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmDATAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP3DATAR.bits</b>&nbsp;&quot;Transmitter Pipe 3 Data Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_TPmDATAR_DATA_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_TPmDATAR_DATA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmDATAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TDRAR">&nbsp;</a>
+<h3>MLI0_TDRAR</h3>
+<h3>"Transmitter Data Read Answer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TDRAR_ADDR = 0xF010C050</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TDRAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TDRAR_t">MLI0_TDRAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TDRAR.bits</b>&nbsp;&quot;Transmitter Data Read Answer Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_TDRAR_DATA_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rwh</td>
+<td>MLI0_TDRAR_DATA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TDRAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP0BAR">&nbsp;</a>
+<h3>MLI0_TP0BAR</h3>
+<h3>"Transmitter Pipe 0 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP0BAR_ADDR = 0xF010C054</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP0BAR.bits</b>&nbsp;&quot;Transmitter Pipe 0 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmBAR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>28</td>
+<td>4 - 31</td>
+<td>MLI0_TPmBAR_ADDR_MASK</td>
+<td><tt>0xfffffff0</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP1BAR">&nbsp;</a>
+<h3>MLI0_TP1BAR</h3>
+<h3>"Transmitter Pipe 1 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP1BAR_ADDR = 0xF010C058</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP1BAR.bits</b>&nbsp;&quot;Transmitter Pipe 1 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmBAR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>28</td>
+<td>4 - 31</td>
+<td>MLI0_TPmBAR_ADDR_MASK</td>
+<td><tt>0xfffffff0</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP2BAR">&nbsp;</a>
+<h3>MLI0_TP2BAR</h3>
+<h3>"Transmitter Pipe 2 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP2BAR_ADDR = 0xF010C05C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP2BAR.bits</b>&nbsp;&quot;Transmitter Pipe 2 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmBAR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>28</td>
+<td>4 - 31</td>
+<td>MLI0_TPmBAR_ADDR_MASK</td>
+<td><tt>0xfffffff0</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TP3BAR">&nbsp;</a>
+<h3>MLI0_TP3BAR</h3>
+<h3>"Transmitter Pipe 3 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TP3BAR_ADDR = 0xF010C060</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TP3BAR.bits</b>&nbsp;&quot;Transmitter Pipe 3 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_TPmBAR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>28</td>
+<td>4 - 31</td>
+<td>MLI0_TPmBAR_ADDR_MASK</td>
+<td><tt>0xfffffff0</tt></td>
+<td>w</td>
+<td>MLI0_TPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TCBAR">&nbsp;</a>
+<h3>MLI0_TCBAR</h3>
+<h3>"Transmitter Copy Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TCBAR_ADDR = 0xF010C064</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TCBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TCBAR_t">MLI0_TCBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TCBAR.bits</b>&nbsp;&quot;Transmitter Copy Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>28</td>
+<td>4 - 31</td>
+<td>MLI0_TCBAR_ADDR_MASK</td>
+<td><tt>0xfffffff0</tt></td>
+<td>rh</td>
+<td>MLI0_TCBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TCBAR_MASK</td><td><tt>0xfffffff0</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffff0</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xfffffff0</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RCR">&nbsp;</a>
+<h3>MLI0_RCR</h3>
+<h3>"Receiver Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RCR_ADDR = 0xF010C068</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x01000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RCR_t">MLI0_RCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RCR.bits</b>&nbsp;&quot;Receiver Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DPE</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_RCR_DPE_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_RCR_DPE_SHIFT</td>
+</tr>
+<tr>
+<td>CMDP3</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>MLI0_RCR_CMDP3_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rh</td>
+<td>MLI0_RCR_CMDP3_SHIFT</td>
+</tr>
+<tr>
+<td>MOD</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_RCR_MOD_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>MLI0_RCR_MOD_SHIFT</td>
+</tr>
+<tr>
+<td>DW</td>
+<td>2</td>
+<td>9 - 10</td>
+<td>MLI0_RCR_DW_MASK</td>
+<td><tt>0x00000600</tt></td>
+<td>rh</td>
+<td>MLI0_RCR_DW_SHIFT</td>
+</tr>
+<tr>
+<td>TF</td>
+<td>2</td>
+<td>11 - 12</td>
+<td>MLI0_RCR_TF_MASK</td>
+<td><tt>0x00001800</tt></td>
+<td>rh</td>
+<td>MLI0_RCR_TF_SHIFT</td>
+</tr>
+<tr>
+<td>PE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MLI0_RCR_PE_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>MLI0_RCR_PE_SHIFT</td>
+</tr>
+<tr>
+<td>RPN</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>MLI0_RCR_RPN_MASK</td>
+<td><tt>0x0000c000</tt></td>
+<td>rh</td>
+<td>MLI0_RCR_RPN_SHIFT</td>
+</tr>
+<tr>
+<td>MPE</td>
+<td>4</td>
+<td>16 - 19</td>
+<td>MLI0_RCR_MPE_MASK</td>
+<td><tt>0x000f0000</tt></td>
+<td>rwh</td>
+<td>MLI0_RCR_MPE_SHIFT</td>
+</tr>
+<tr>
+<td>BEN</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MLI0_RCR_BEN_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>MLI0_RCR_BEN_SHIFT</td>
+</tr>
+<tr>
+<td>RCVRST</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MLI0_RCR_RCVRST_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>MLI0_RCR_RCVRST_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RCR_MASK</td><td><tt>0x011fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x011fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x011f0000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000fffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP0BAR">&nbsp;</a>
+<h3>MLI0_RP0BAR</h3>
+<h3>"Receiver Pipe 0 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP0BAR_ADDR = 0xF010C06C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP0BAR.bits</b>&nbsp;&quot;Receiver Pipe 0 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_RPmBAR_ADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_RPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP1BAR">&nbsp;</a>
+<h3>MLI0_RP1BAR</h3>
+<h3>"Receiver Pipe 1 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP1BAR_ADDR = 0xF010C070</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP1BAR.bits</b>&nbsp;&quot;Receiver Pipe 1 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_RPmBAR_ADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_RPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP2BAR">&nbsp;</a>
+<h3>MLI0_RP2BAR</h3>
+<h3>"Receiver Pipe 2 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP2BAR_ADDR = 0xF010C074</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP2BAR.bits</b>&nbsp;&quot;Receiver Pipe 2 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_RPmBAR_ADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_RPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP3BAR">&nbsp;</a>
+<h3>MLI0_RP3BAR</h3>
+<h3>"Receiver Pipe 3 Base Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP3BAR_ADDR = 0xF010C078</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmBAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP3BAR.bits</b>&nbsp;&quot;Receiver Pipe 3 Base Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_RPmBAR_ADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_RPmBAR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmBAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP0STATR">&nbsp;</a>
+<h3>MLI0_RP0STATR</h3>
+<h3>"Receiver Pipe 0 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP0STATR_ADDR = 0xF010C07C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP0STATR.bits</b>&nbsp;&quot;Receiver Pipe 0 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_RPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_RPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_AP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmSTATR_MASK</td><td><tt>0x0000ffcf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffcf</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffcf</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP1STATR">&nbsp;</a>
+<h3>MLI0_RP1STATR</h3>
+<h3>"Receiver Pipe 1 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP1STATR_ADDR = 0xF010C080</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP1STATR.bits</b>&nbsp;&quot;Receiver Pipe 1 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_RPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_RPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_AP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmSTATR_MASK</td><td><tt>0x0000ffcf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffcf</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffcf</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP2STATR">&nbsp;</a>
+<h3>MLI0_RP2STATR</h3>
+<h3>"Receiver Pipe 2 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP2STATR_ADDR = 0xF010C084</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP2STATR.bits</b>&nbsp;&quot;Receiver Pipe 2 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_RPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_RPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_AP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmSTATR_MASK</td><td><tt>0x0000ffcf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffcf</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffcf</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RP3STATR">&nbsp;</a>
+<h3>MLI0_RP3STATR</h3>
+<h3>"Receiver Pipe 3 Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RP3STATR_ADDR = 0xF010C088</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RPmSTATR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RP3STATR.bits</b>&nbsp;&quot;Receiver Pipe 3 Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>MLI0_RPmSTATR_BS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_BS_SHIFT</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>10</td>
+<td>6 - 15</td>
+<td>MLI0_RPmSTATR_AP_MASK</td>
+<td><tt>0x0000ffc0</tt></td>
+<td>rh</td>
+<td>MLI0_RPmSTATR_AP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RPmSTATR_MASK</td><td><tt>0x0000ffcf</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffcf</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000ffcf</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RADRR">&nbsp;</a>
+<h3>MLI0_RADRR</h3>
+<h3>"Receiver Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RADRR_ADDR = 0xF010C08C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RADRR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RADRR_t">MLI0_RADRR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RADRR.bits</b>&nbsp;&quot;Receiver Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_RADRR_ADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_RADRR_ADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RADRR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RDATAR">&nbsp;</a>
+<h3>MLI0_RDATAR</h3>
+<h3>"Receiver Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RDATAR_ADDR = 0xF010C090</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RDATAR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RDATAR_t">MLI0_RDATAR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RDATAR.bits</b>&nbsp;&quot;Receiver Data Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MLI0_RDATAR_DATA_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>MLI0_RDATAR_DATA_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RDATAR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_SCR">&nbsp;</a>
+<h3>MLI0_SCR</h3>
+<h3>"Set Clear Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_SCR_ADDR = 0xF010C094</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_SCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_SCR_t">MLI0_SCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_SCR.bits</b>&nbsp;&quot;Set Clear Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SCV0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_SCR_SCV0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>MLI0_SCR_SCV0_SHIFT</td>
+</tr>
+<tr>
+<td>SCV1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_SCR_SCV1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>MLI0_SCR_SCV1_SHIFT</td>
+</tr>
+<tr>
+<td>SCV2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_SCR_SCV2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>MLI0_SCR_SCV2_SHIFT</td>
+</tr>
+<tr>
+<td>SCV3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_SCR_SCV3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>MLI0_SCR_SCV3_SHIFT</td>
+</tr>
+<tr>
+<td>SMOD</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_SCR_SMOD_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>MLI0_SCR_SMOD_SHIFT</td>
+</tr>
+<tr>
+<td>CDV0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_SCR_CDV0_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CDV0_SHIFT</td>
+</tr>
+<tr>
+<td>CDV1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MLI0_SCR_CDV1_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CDV1_SHIFT</td>
+</tr>
+<tr>
+<td>CDV2</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>MLI0_SCR_CDV2_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CDV2_SHIFT</td>
+</tr>
+<tr>
+<td>CDV3</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MLI0_SCR_CDV3_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CDV3_SHIFT</td>
+</tr>
+<tr>
+<td>CCV0</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>MLI0_SCR_CCV0_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCV0_SHIFT</td>
+</tr>
+<tr>
+<td>CCV1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MLI0_SCR_CCV1_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCV1_SHIFT</td>
+</tr>
+<tr>
+<td>CCV2</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>MLI0_SCR_CCV2_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCV2_SHIFT</td>
+</tr>
+<tr>
+<td>CCV3</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MLI0_SCR_CCV3_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCV3_SHIFT</td>
+</tr>
+<tr>
+<td>CMOD</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_SCR_CMOD_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CMOD_SHIFT</td>
+</tr>
+<tr>
+<td>CBAV</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>MLI0_SCR_CBAV_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CBAV_SHIFT</td>
+</tr>
+<tr>
+<td>CAV</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MLI0_SCR_CAV_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CAV_SHIFT</td>
+</tr>
+<tr>
+<td>CRPE</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>MLI0_SCR_CRPE_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CRPE_SHIFT</td>
+</tr>
+<tr>
+<td>CTPE</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>MLI0_SCR_CTPE_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CTPE_SHIFT</td>
+</tr>
+<tr>
+<td>CNAE</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>MLI0_SCR_CNAE_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CNAE_SHIFT</td>
+</tr>
+<tr>
+<td>CCIV0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>MLI0_SCR_CCIV0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCIV0_SHIFT</td>
+</tr>
+<tr>
+<td>CCIV1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>MLI0_SCR_CCIV1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCIV1_SHIFT</td>
+</tr>
+<tr>
+<td>CCIV2</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>MLI0_SCR_CCIV2_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCIV2_SHIFT</td>
+</tr>
+<tr>
+<td>CCIV3</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>MLI0_SCR_CCIV3_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>w</td>
+<td>MLI0_SCR_CCIV3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_SCR_MASK</td><td><tt>0xff03ff1f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff03ff1f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TIER">&nbsp;</a>
+<h3>MLI0_TIER</h3>
+<h3>"Transmitter Interrupt Enable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TIER_ADDR = 0xF010C098</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TIER_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TIER_t">MLI0_TIER_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TIER.bits</b>&nbsp;&quot;Transmitter Interrupt Enable Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>NFSIE0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_TIER_NFSIE0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_NFSIE0_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIE1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_TIER_NFSIE1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_NFSIE1_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIE2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_TIER_NFSIE2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_NFSIE2_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIE3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_TIER_NFSIE3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_NFSIE3_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIE0</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_TIER_CFSIE0_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_CFSIE0_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIE1</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_TIER_CFSIE1_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_CFSIE1_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIE2</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_TIER_CFSIE2_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_CFSIE2_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIE3</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_TIER_CFSIE3_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_CFSIE3_SHIFT</td>
+</tr>
+<tr>
+<td>PEIE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_TIER_PEIE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_PEIE_SHIFT</td>
+</tr>
+<tr>
+<td>TEIE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MLI0_TIER_TEIE_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>MLI0_TIER_TEIE_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIR0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_TIER_NFSIR0_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_NFSIR0_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIR1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>MLI0_TIER_NFSIR1_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_NFSIR1_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIR2</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>MLI0_TIER_NFSIR2_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_NFSIR2_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIR3</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>MLI0_TIER_NFSIR3_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_NFSIR3_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIR0</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MLI0_TIER_CFSIR0_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_CFSIR0_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIR1</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>MLI0_TIER_CFSIR1_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_CFSIR1_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIR2</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>MLI0_TIER_CFSIR2_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_CFSIR2_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIR3</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>MLI0_TIER_CFSIR3_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_CFSIR3_SHIFT</td>
+</tr>
+<tr>
+<td>PEIR</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MLI0_TIER_PEIR_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_PEIR_SHIFT</td>
+</tr>
+<tr>
+<td>TEIR</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>MLI0_TIER_TEIR_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>MLI0_TIER_TEIR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TIER_MASK</td><td><tt>0x03ff03ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x03ff03ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TISR">&nbsp;</a>
+<h3>MLI0_TISR</h3>
+<h3>"Transmitter Interrupt Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TISR_ADDR = 0xF010C09C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TISR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TISR_t">MLI0_TISR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TISR.bits</b>&nbsp;&quot;Transmitter Interrupt Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>NFSI0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_TISR_NFSI0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_NFSI0_SHIFT</td>
+</tr>
+<tr>
+<td>NFSI1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_TISR_NFSI1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_NFSI1_SHIFT</td>
+</tr>
+<tr>
+<td>NFSI2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_TISR_NFSI2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_NFSI2_SHIFT</td>
+</tr>
+<tr>
+<td>NFSI3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_TISR_NFSI3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_NFSI3_SHIFT</td>
+</tr>
+<tr>
+<td>CFSI0</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_TISR_CFSI0_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_CFSI0_SHIFT</td>
+</tr>
+<tr>
+<td>CFSI1</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_TISR_CFSI1_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_CFSI1_SHIFT</td>
+</tr>
+<tr>
+<td>CFSI2</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_TISR_CFSI2_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_CFSI2_SHIFT</td>
+</tr>
+<tr>
+<td>CFSI3</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_TISR_CFSI3_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_CFSI3_SHIFT</td>
+</tr>
+<tr>
+<td>PEI</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_TISR_PEI_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_PEI_SHIFT</td>
+</tr>
+<tr>
+<td>TEI</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MLI0_TISR_TEI_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>MLI0_TISR_TEI_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TISR_MASK</td><td><tt>0x000003ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_TINPR">&nbsp;</a>
+<h3>MLI0_TINPR</h3>
+<h3>"Transmitter Interrupt Node Pointer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_TINPR_ADDR = 0xF010C0A0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_TINPR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_TINPR_t">MLI0_TINPR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_TINPR.bits</b>&nbsp;&quot;Transmitter Interrupt Node Pointer Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>NFSIP0</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>MLI0_TINPR_NFSIP0_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>MLI0_TINPR_NFSIP0_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIP1</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>MLI0_TINPR_NFSIP1_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>MLI0_TINPR_NFSIP1_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIP2</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>MLI0_TINPR_NFSIP2_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>MLI0_TINPR_NFSIP2_SHIFT</td>
+</tr>
+<tr>
+<td>NFSIP3</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>MLI0_TINPR_NFSIP3_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>MLI0_TINPR_NFSIP3_SHIFT</td>
+</tr>
+<tr>
+<td>CFSIP</td>
+<td>3</td>
+<td>16 - 18</td>
+<td>MLI0_TINPR_CFSIP_MASK</td>
+<td><tt>0x00070000</tt></td>
+<td>rw</td>
+<td>MLI0_TINPR_CFSIP_SHIFT</td>
+</tr>
+<tr>
+<td>PTEIP</td>
+<td>3</td>
+<td>20 - 22</td>
+<td>MLI0_TINPR_PTEIP_MASK</td>
+<td><tt>0x00700000</tt></td>
+<td>rw</td>
+<td>MLI0_TINPR_PTEIP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_TINPR_MASK</td><td><tt>0x00777777</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00777777</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00777777</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RIER">&nbsp;</a>
+<h3>MLI0_RIER</h3>
+<h3>"Receiver Interrupt Enable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RIER_ADDR = 0xF010C0A4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RIER_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RIER_t">MLI0_RIER_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RIER.bits</b>&nbsp;&quot;Receiver Interrupt Enable Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>NFRIE</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>MLI0_RIER_NFRIE_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_NFRIE_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIE0</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_RIER_CFRIE0_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_CFRIE0_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIE1</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_RIER_CFRIE1_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_CFRIE1_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIE2</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_RIER_CFRIE2_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_CFRIE2_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIE3</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_RIER_CFRIE3_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_CFRIE3_SHIFT</td>
+</tr>
+<tr>
+<td>ICE</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_RIER_ICE_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_ICE_SHIFT</td>
+</tr>
+<tr>
+<td>PEIE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_RIER_PEIE_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_PEIE_SHIFT</td>
+</tr>
+<tr>
+<td>MPEIE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_RIER_MPEIE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_MPEIE_SHIFT</td>
+</tr>
+<tr>
+<td>DRAIE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MLI0_RIER_DRAIE_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>MLI0_RIER_DRAIE_SHIFT</td>
+</tr>
+<tr>
+<td>NFRIR</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_RIER_NFRIR_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_NFRIR_SHIFT</td>
+</tr>
+<tr>
+<td>MEIR</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>MLI0_RIER_MEIR_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_MEIR_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIR0</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>MLI0_RIER_CFRIR0_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_CFRIR0_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIR1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>MLI0_RIER_CFRIR1_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_CFRIR1_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIR2</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MLI0_RIER_CFRIR2_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_CFRIR2_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIR3</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>MLI0_RIER_CFRIR3_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_CFRIR3_SHIFT</td>
+</tr>
+<tr>
+<td>ICER</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>MLI0_RIER_ICER_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_ICER_SHIFT</td>
+</tr>
+<tr>
+<td>PEIR</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>MLI0_RIER_PEIR_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_PEIR_SHIFT</td>
+</tr>
+<tr>
+<td>MPEIR</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MLI0_RIER_MPEIR_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_MPEIR_SHIFT</td>
+</tr>
+<tr>
+<td>DRAIR</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>MLI0_RIER_DRAIR_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>w</td>
+<td>MLI0_RIER_DRAIR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RIER_MASK</td><td><tt>0x03ff03ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x03ff03ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RISR">&nbsp;</a>
+<h3>MLI0_RISR</h3>
+<h3>"Receiver Interrupt Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RISR_ADDR = 0xF010C0A8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RISR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RISR_t">MLI0_RISR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RISR.bits</b>&nbsp;&quot;Receiver Interrupt Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>NFRI</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_RISR_NFRI_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_NFRI_SHIFT</td>
+</tr>
+<tr>
+<td>MEI</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_RISR_MEI_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_MEI_SHIFT</td>
+</tr>
+<tr>
+<td>CFRI0</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_RISR_CFRI0_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_CFRI0_SHIFT</td>
+</tr>
+<tr>
+<td>CFRI1</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_RISR_CFRI1_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_CFRI1_SHIFT</td>
+</tr>
+<tr>
+<td>CFRI2</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_RISR_CFRI2_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_CFRI2_SHIFT</td>
+</tr>
+<tr>
+<td>CFRI3</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_RISR_CFRI3_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_CFRI3_SHIFT</td>
+</tr>
+<tr>
+<td>IC</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_RISR_IC_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_IC_SHIFT</td>
+</tr>
+<tr>
+<td>PEI</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_RISR_PEI_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_PEI_SHIFT</td>
+</tr>
+<tr>
+<td>MPEI</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_RISR_MPEI_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_MPEI_SHIFT</td>
+</tr>
+<tr>
+<td>DRAI</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MLI0_RISR_DRAI_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>MLI0_RISR_DRAI_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RISR_MASK</td><td><tt>0x000003ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_RINPR">&nbsp;</a>
+<h3>MLI0_RINPR</h3>
+<h3>"Receiver Interrupt Node Pointer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_RINPR_ADDR = 0xF010C0AC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_RINPR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_RINPR_t">MLI0_RINPR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_RINPR.bits</b>&nbsp;&quot;Receiver Interrupt Node Pointer Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>NFRIP</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>MLI0_RINPR_NFRIP_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>MLI0_RINPR_NFRIP_SHIFT</td>
+</tr>
+<tr>
+<td>CFRIP</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>MLI0_RINPR_CFRIP_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>MLI0_RINPR_CFRIP_SHIFT</td>
+</tr>
+<tr>
+<td>MPPEIP</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>MLI0_RINPR_MPPEIP_MASK</td>
+<td><tt>0x00000700</tt></td>
+<td>rw</td>
+<td>MLI0_RINPR_MPPEIP_SHIFT</td>
+</tr>
+<tr>
+<td>DRAIP</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>MLI0_RINPR_DRAIP_MASK</td>
+<td><tt>0x00007000</tt></td>
+<td>rw</td>
+<td>MLI0_RINPR_DRAIP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_RINPR_MASK</td><td><tt>0x00007777</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00007777</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00007777</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_GINTR">&nbsp;</a>
+<h3>MLI0_GINTR</h3>
+<h3>"Global Interrupt Set Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_GINTR_ADDR = 0xF010C0B0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_GINTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_GINTR_t">MLI0_GINTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_GINTR.bits</b>&nbsp;&quot;Global Interrupt Set Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SIMLI0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_GINTR_SIMLI0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI0_SHIFT</td>
+</tr>
+<tr>
+<td>SIMLI1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_GINTR_SIMLI1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI1_SHIFT</td>
+</tr>
+<tr>
+<td>SIMLI2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_GINTR_SIMLI2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI2_SHIFT</td>
+</tr>
+<tr>
+<td>SIMLI3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_GINTR_SIMLI3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI3_SHIFT</td>
+</tr>
+<tr>
+<td>SIMLI4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_GINTR_SIMLI4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI4_SHIFT</td>
+</tr>
+<tr>
+<td>SIMLI5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_GINTR_SIMLI5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI5_SHIFT</td>
+</tr>
+<tr>
+<td>SIMLI6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_GINTR_SIMLI6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI6_SHIFT</td>
+</tr>
+<tr>
+<td>SIMLI7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_GINTR_SIMLI7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>w</td>
+<td>MLI0_GINTR_SIMLI7_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_GINTR_MASK</td><td><tt>0x000000ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_OICR">&nbsp;</a>
+<h3>MLI0_OICR</h3>
+<h3>"Output Input Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_OICR_ADDR = 0xF010C0B4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_OICR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x10008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_OICR_t">MLI0_OICR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_OICR.bits</b>&nbsp;&quot;Output Input Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TVEA</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_OICR_TVEA_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVEA_SHIFT</td>
+</tr>
+<tr>
+<td>TVEB</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_OICR_TVEB_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVEB_SHIFT</td>
+</tr>
+<tr>
+<td>TVEC</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_OICR_TVEC_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVEC_SHIFT</td>
+</tr>
+<tr>
+<td>TVED</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_OICR_TVED_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVED_SHIFT</td>
+</tr>
+<tr>
+<td>TVPA</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_OICR_TVPA_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVPA_SHIFT</td>
+</tr>
+<tr>
+<td>TVPB</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_OICR_TVPB_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVPB_SHIFT</td>
+</tr>
+<tr>
+<td>TVPC</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_OICR_TVPC_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVPC_SHIFT</td>
+</tr>
+<tr>
+<td>TVPD</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_OICR_TVPD_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TVPD_SHIFT</td>
+</tr>
+<tr>
+<td>TRS</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>MLI0_OICR_TRS_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TRS_SHIFT</td>
+</tr>
+<tr>
+<td>TRP</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>MLI0_OICR_TRP_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TRP_SHIFT</td>
+</tr>
+<tr>
+<td>TRE</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MLI0_OICR_TRE_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TRE_SHIFT</td>
+</tr>
+<tr>
+<td>TCE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>MLI0_OICR_TCE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TCE_SHIFT</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MLI0_OICR_TCP_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TCP_SHIFT</td>
+</tr>
+<tr>
+<td>TDP</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>MLI0_OICR_TDP_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_TDP_SHIFT</td>
+</tr>
+<tr>
+<td>RVE</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MLI0_OICR_RVE_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RVE_SHIFT</td>
+</tr>
+<tr>
+<td>RRS</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>MLI0_OICR_RRS_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RRS_SHIFT</td>
+</tr>
+<tr>
+<td>RRPA</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>MLI0_OICR_RRPA_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RRPA_SHIFT</td>
+</tr>
+<tr>
+<td>RRPB</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>MLI0_OICR_RRPB_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RRPB_SHIFT</td>
+</tr>
+<tr>
+<td>RRPC</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MLI0_OICR_RRPC_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RRPC_SHIFT</td>
+</tr>
+<tr>
+<td>RRPD</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>MLI0_OICR_RRPD_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RRPD_SHIFT</td>
+</tr>
+<tr>
+<td>RVS</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>MLI0_OICR_RVS_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RVS_SHIFT</td>
+</tr>
+<tr>
+<td>RVP</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MLI0_OICR_RVP_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RVP_SHIFT</td>
+</tr>
+<tr>
+<td>RCS</td>
+<td>2</td>
+<td>25 - 26</td>
+<td>MLI0_OICR_RCS_MASK</td>
+<td><tt>0x06000000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RCS_SHIFT</td>
+</tr>
+<tr>
+<td>RCP</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>MLI0_OICR_RCP_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RCP_SHIFT</td>
+</tr>
+<tr>
+<td>RCE</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>MLI0_OICR_RCE_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RCE_SHIFT</td>
+</tr>
+<tr>
+<td>RDS</td>
+<td>2</td>
+<td>29 - 30</td>
+<td>MLI0_OICR_RDS_MASK</td>
+<td><tt>0x60000000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RDS_SHIFT</td>
+</tr>
+<tr>
+<td>RDP</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>MLI0_OICR_RDP_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>MLI0_OICR_RDP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_OICR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_AER">&nbsp;</a>
+<h3>MLI0_AER</h3>
+<h3>"Access Enable Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_AER_ADDR = 0xF010C0B8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_AER_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_AER_t">MLI0_AER_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_AER.bits</b>&nbsp;&quot;Access Enable Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>AEN0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>MLI0_AER_AEN0_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN0_SHIFT</td>
+</tr>
+<tr>
+<td>AEN1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>MLI0_AER_AEN1_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN1_SHIFT</td>
+</tr>
+<tr>
+<td>AEN2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>MLI0_AER_AEN2_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN2_SHIFT</td>
+</tr>
+<tr>
+<td>AEN3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>MLI0_AER_AEN3_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN3_SHIFT</td>
+</tr>
+<tr>
+<td>AEN4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>MLI0_AER_AEN4_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN4_SHIFT</td>
+</tr>
+<tr>
+<td>AEN5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>MLI0_AER_AEN5_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN5_SHIFT</td>
+</tr>
+<tr>
+<td>AEN6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>MLI0_AER_AEN6_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN6_SHIFT</td>
+</tr>
+<tr>
+<td>AEN7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>MLI0_AER_AEN7_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN7_SHIFT</td>
+</tr>
+<tr>
+<td>AEN8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>MLI0_AER_AEN8_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN8_SHIFT</td>
+</tr>
+<tr>
+<td>AEN9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>MLI0_AER_AEN9_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN9_SHIFT</td>
+</tr>
+<tr>
+<td>AEN10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>MLI0_AER_AEN10_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN10_SHIFT</td>
+</tr>
+<tr>
+<td>AEN11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>MLI0_AER_AEN11_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN11_SHIFT</td>
+</tr>
+<tr>
+<td>AEN12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>MLI0_AER_AEN12_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN12_SHIFT</td>
+</tr>
+<tr>
+<td>AEN13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>MLI0_AER_AEN13_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN13_SHIFT</td>
+</tr>
+<tr>
+<td>AEN14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>MLI0_AER_AEN14_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN14_SHIFT</td>
+</tr>
+<tr>
+<td>AEN15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>MLI0_AER_AEN15_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN15_SHIFT</td>
+</tr>
+<tr>
+<td>AEN16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>MLI0_AER_AEN16_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN16_SHIFT</td>
+</tr>
+<tr>
+<td>AEN17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>MLI0_AER_AEN17_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN17_SHIFT</td>
+</tr>
+<tr>
+<td>AEN18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>MLI0_AER_AEN18_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN18_SHIFT</td>
+</tr>
+<tr>
+<td>AEN19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>MLI0_AER_AEN19_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN19_SHIFT</td>
+</tr>
+<tr>
+<td>AEN20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>MLI0_AER_AEN20_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN20_SHIFT</td>
+</tr>
+<tr>
+<td>AEN21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>MLI0_AER_AEN21_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN21_SHIFT</td>
+</tr>
+<tr>
+<td>AEN22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>MLI0_AER_AEN22_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN22_SHIFT</td>
+</tr>
+<tr>
+<td>AEN23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>MLI0_AER_AEN23_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN23_SHIFT</td>
+</tr>
+<tr>
+<td>AEN24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>MLI0_AER_AEN24_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN24_SHIFT</td>
+</tr>
+<tr>
+<td>AEN25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>MLI0_AER_AEN25_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN25_SHIFT</td>
+</tr>
+<tr>
+<td>AEN26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>MLI0_AER_AEN26_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN26_SHIFT</td>
+</tr>
+<tr>
+<td>AEN27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>MLI0_AER_AEN27_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN27_SHIFT</td>
+</tr>
+<tr>
+<td>AEN28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>MLI0_AER_AEN28_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN28_SHIFT</td>
+</tr>
+<tr>
+<td>AEN29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>MLI0_AER_AEN29_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN29_SHIFT</td>
+</tr>
+<tr>
+<td>AEN30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>MLI0_AER_AEN30_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN30_SHIFT</td>
+</tr>
+<tr>
+<td>AEN31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>MLI0_AER_AEN31_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>MLI0_AER_AEN31_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_AER_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MLI0_ARR">&nbsp;</a>
+<h3>MLI0_ARR</h3>
+<h3>"Access Range Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MLI0_ARR_ADDR = 0xF010C0BC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MLI0_ARR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MLI0_ARR_t">MLI0_ARR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MLI0_ARR.bits</b>&nbsp;&quot;Access Range Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SLICE0</td>
+<td>5</td>
+<td>0 - 4</td>
+<td>MLI0_ARR_SLICE0_MASK</td>
+<td><tt>0x0000001f</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SLICE0_SHIFT</td>
+</tr>
+<tr>
+<td>SIZE0</td>
+<td>3</td>
+<td>5 - 7</td>
+<td>MLI0_ARR_SIZE0_MASK</td>
+<td><tt>0x000000e0</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SIZE0_SHIFT</td>
+</tr>
+<tr>
+<td>SLICE1</td>
+<td>5</td>
+<td>8 - 12</td>
+<td>MLI0_ARR_SLICE1_MASK</td>
+<td><tt>0x00001f00</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SLICE1_SHIFT</td>
+</tr>
+<tr>
+<td>SIZE1</td>
+<td>3</td>
+<td>13 - 15</td>
+<td>MLI0_ARR_SIZE1_MASK</td>
+<td><tt>0x0000e000</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SIZE1_SHIFT</td>
+</tr>
+<tr>
+<td>SLICE2</td>
+<td>5</td>
+<td>16 - 20</td>
+<td>MLI0_ARR_SLICE2_MASK</td>
+<td><tt>0x001f0000</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SLICE2_SHIFT</td>
+</tr>
+<tr>
+<td>SIZE2</td>
+<td>3</td>
+<td>21 - 23</td>
+<td>MLI0_ARR_SIZE2_MASK</td>
+<td><tt>0x00e00000</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SIZE2_SHIFT</td>
+</tr>
+<tr>
+<td>SLICE3</td>
+<td>5</td>
+<td>24 - 28</td>
+<td>MLI0_ARR_SLICE3_MASK</td>
+<td><tt>0x1f000000</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SLICE3_SHIFT</td>
+</tr>
+<tr>
+<td>SIZE3</td>
+<td>3</td>
+<td>29 - 31</td>
+<td>MLI0_ARR_SIZE3_MASK</td>
+<td><tt>0xe0000000</tt></td>
+<td>rw</td>
+<td>MLI0_ARR_SIZE3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MLI0_ARR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

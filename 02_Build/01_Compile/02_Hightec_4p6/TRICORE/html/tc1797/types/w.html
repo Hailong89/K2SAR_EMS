@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>TriCore TC1797 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="WDT_CON0_t"><b>WDT_CON0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>WDT Control Register 0</b></td></tr>
+<tr><td colspan="5"><b>WDT_CON0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ENDINIT:1</td>
+<td>0 - 0</td>
+<td>WDT_CON0_ENDINIT_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LCK:1</td>
+<td>1 - 1</td>
+<td>WDT_CON0_LCK_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int HPW0:2</td>
+<td>2 - 3</td>
+<td>WDT_CON0_HPW0_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int HPW1:4</td>
+<td>4 - 7</td>
+<td>WDT_CON0_HPW1_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PW:8</td>
+<td>8 - 15</td>
+<td>WDT_CON0_PW_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int REL:16</td>
+<td>16 - 31</td>
+<td>WDT_CON0_REL_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#WDT_CON0">WDT_CON0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="WDT_CON1_t"><b>WDT_CON1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>WDT Control Register 1</b></td></tr>
+<tr><td colspan="5"><b>WDT_CON1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CLRIRF:1</td>
+<td>0 - 0</td>
+<td>WDT_CON1_CLRIRF_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int IR:1</td>
+<td>2 - 2</td>
+<td>WDT_CON1_IR_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int DR:1</td>
+<td>3 - 3</td>
+<td>WDT_CON1_DR_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#WDT_CON1">WDT_CON1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="WDT_SR_t"><b>WDT_SR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>WDT Status Register</b></td></tr>
+<tr><td colspan="5"><b>WDT_SR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int AE:1</td>
+<td>0 - 0</td>
+<td>WDT_SR_AE_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OE:1</td>
+<td>1 - 1</td>
+<td>WDT_SR_OE_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int IS:1</td>
+<td>2 - 2</td>
+<td>WDT_SR_IS_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int DS:1</td>
+<td>3 - 3</td>
+<td>WDT_SR_DS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int TO:1</td>
+<td>4 - 4</td>
+<td>WDT_SR_TO_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PR:1</td>
+<td>5 - 5</td>
+<td>WDT_SR_PR_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int TIM:16</td>
+<td>16 - 31</td>
+<td>WDT_SR_TIM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#WDT_SR">WDT_SR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

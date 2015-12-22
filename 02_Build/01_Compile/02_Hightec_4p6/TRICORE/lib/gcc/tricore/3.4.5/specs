@@ -1,0 +1,133 @@
+*asm:
+%{mtc12:-mtc12}                        %{mall-errata:%{mtc12:-mcpu034 -mcpu050 -mcpu048} %{mtc13:-mcpu048 -mcpu060 -mcpu070 -mcpu072}}       %{mtc13:-mtc13}                         %{mtc131:-mtc131}                         %{mtc16:-mtc16}                         %{mtc161:-mtc161}                         %{mcpu034: -mcpu034}					  %{mcpu048: -mcpu048}					  %{mcpu048=all: -mcpu048}				  %{mcpu048=1: -mcpu048}				  %{mcpu050: -mcpu050}					  %{mcpu060: -mcpu060}					  %{mcpu069: -mcpu069}					  %{mcpu070: -mcpu070}					  %{mcpu072: -mcpu072}					  %{mdmi12: -mdmi12}                      %{mcpu081: -mcpu081}					  %{mcpu082: -mcpu082}					  %{mcpu083: -mcpu083}					  %{mcpu094: -mcpu094}                    %{mcpu095: -mcpu095}                    %{!mtc12:%{!mtc13:%{!mtc131:%{!mtc16:%{!mtc161:%{!mtc2:-mtc12 %{mall-errata:-mcpu034 -mcpu048 -mcpu050}}}}}}}
+
+*asm_debug:
+%{g|g2|g3|gdwarf*|ggdb*:-gdwarf2}
+
+*asm_final:
+
+
+*asm_options:
+%a %Y %{c:%W{o*}%{!o*:-o %w%b%O}}%{!c:-o %d%w%u%O}
+
+*invoke_as:
+%{!S:-o %|.s |
+ as %(asm_options) %m.s %A }
+
+*cpp:
+%(cpp_cpu_arch) %(cpp_float) %(cpp_errata)   %{relax*:}
+
+*cpp_options:
+%(cpp_unique_options) %1 %{m*} %{std*&ansi&trigraphs} %{W*&pedantic*} %{w} %{f*} %{g*:%{!g0:%{!fno-working-directory:-fworking-directory}}} %{O*} %{undef}
+
+*cpp_debug_options:
+%{d*}
+
+*cpp_unique_options:
+%{C|CC:%{!E:%eGCC does not support -C or -CC without -E}} %{!Q:-quiet} %{nostdinc*} %{C} %{CC} %{v} %{I*} %{P} %I %{MD:-MD %{!o:%b.d}%{o*:%.d%*}} %{MMD:-MMD %{!o:%b.d}%{o*:%.d%*}} %{M} %{MM} %{MF*} %{MG} %{MP} %{MQ*} %{MT*} %{!E:%{!M:%{!MM:%{MD|MMD:%{o*:-MQ %*}}}}} %{remap} %{g3:-dD} %{H} %C %{D*&U*&A*} %{i*} %Z %i %{E|M|MM:%W{o*}}
+
+*trad_capable_cpp:
+cc1 -E %{traditional|ftraditional|traditional-cpp:-traditional-cpp}
+
+*cc1:
+ %{!fno-omit-frame-pointer:-fomit-frame-pointer}	 %{!fsigned-bitfields:%{!fno-unsigned-bitfields:-funsigned-bitfields}}  %{!mlicense-dir*:%:insert-tooldir(-mlicense-dir= licenses)} 
+
+*cc1_options:
+%{pg:%{fomit-frame-pointer:%e-pg and -fomit-frame-pointer are incompatible}} %1 %{!Q:-quiet} -dumpbase %B %{d*} %{m*} %{a*} %{c|S:%{o*:-auxbase-strip %*}%{!o*:-auxbase %b}}%{!c:%{!S:-auxbase %b}} %{g*} %{O*} %{W*&pedantic*} %{w} %{std*&ansi&trigraphs} %{v:-version} %{pg:-p} %{p} %{f*} %{undef} %{Qn:-fno-ident} %{--help:--help} %{--target-help:--target-help} %{!fsyntax-only:%{S:%W{o*}%{!o*:-o %b.s}}} %{fsyntax-only:-o %j} %{-param*}
+
+*cc1plus:
+ %{!fno-omit-frame-pointer:-fomit-frame-pointer}  %{!fcallerrors:-mnocallerrors}  %{!muninit-const-in-rodata:-mno-uninit-const-in-rodata}  %{!mvolatile-const-in-rodata:-mno-volatile-const-in-rodata}  %{!mlicense-dir*:%:insert-tooldir(-mlicense-dir= licenses)} 
+
+*link_gcc_c_sequence:
+%G %L %G
+
+*endfile:
+ crtend%O%s crtn%O%s
+
+*link:
+%{relax:-relax}   %{relax-bdata:--relax-bdata}   %{relax-24rel:--relax-24rel}   %{mtc12:--mcpu=tc12}   %{mtc13:--mcpu=tc13}   %{mtc131:--mcpu=tc131}   %{mtc16:--mcpu=tc16}   %{mtc161:--mcpu=tc161}   %{mtc16p:--mcpu=tc16p}   %{mtc16e:--mcpu=tc16e}   %{maurix:--mcpu=aurix}
+
+*lib:
+%{!shared:-lc -los -lc}
+
+*libgcc:
+%{moptfp:-lgccoptfp}							  %{!moptfp:-lgcc}
+
+*startfile:
+crti%O%s crtbegin%O%s %{!shared:%{pg:gcrt0%O%s}%{!pg:%{p:%{!T*:-T %:insert-derivate(memory %{-derivative=*:%*} .x) } mcrt0%O%s}%{!p:%{!T*:-T %:insert-derivate(memory %{-derivative=*:%*} .x)} %{!nocrt0:%:insert-derivate(crt0 %{-derivative=*:%*} %O) }}}}
+
+*switches_need_spaces:
+
+
+*cross_compile:
+1
+
+*version:
+3.4.5
+
+*multilib:
+. !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 !fshort-double;tc12 mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 !fshort-double;tc13 !mcpu=tc12 mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 !fshort-double;tc13-fpu !mcpu=tc12 !mcpu=tc13 mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 !fshort-double;tc1130 !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 !fshort-double;tc131 !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 !fshort-double;tc13x-fpu !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 !fshort-double;tc16 !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu mcpu=tc16 !mcpu=tc161 !fshort-double;tc161 !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 mcpu=tc161 !fshort-double;sd !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 fshort-double;tc12/sd mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 fshort-double;tc13/sd !mcpu=tc12 mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 fshort-double;tc13-fpu/sd !mcpu=tc12 !mcpu=tc13 mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 fshort-double;tc1130/sd !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 fshort-double;tc131/sd !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 fshort-double;tc13x-fpu/sd !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 mcpu=tc13x-fpu !mcpu=tc16 !mcpu=tc161 fshort-double;tc16/sd !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu mcpu=tc16 !mcpu=tc161 fshort-double;tc161/sd !mcpu=tc12 !mcpu=tc13 !mcpu=tc13-fpu !mcpu=tc1130 !mcpu=tc131 !mcpu=tc13x-fpu !mcpu=tc16 mcpu=tc161 fshort-double;
+
+*multilib_defaults:
+mcpu=tc12
+
+*multilib_extra:
+mno-uninit-const-in-rodata mversion-info muse-round2zero ffunction-sections
+
+*multilib_matches:
+mcpu=tc12 mcpu=tc12;mcpu=tc13 mcpu=tc13;mcpu=tc13-fpu mcpu=tc13-fpu;mcpu=tc1130 mcpu=tc1130;mcpu=tc131 mcpu=tc131;mcpu=tc13x-fpu mcpu=tc13x-fpu;mcpu=tc16 mcpu=tc16;mcpu=tc161 mcpu=tc161;fshort-double fshort-double;
+
+*multilib_exclusions:
+
+
+*multilib_options:
+mcpu=tc12/mcpu=tc13/mcpu=tc13-fpu/mcpu=tc1130/mcpu=tc131/mcpu=tc13x-fpu/mcpu=tc16/mcpu=tc161 fshort-double
+
+*linker:
+tricore-ld
+
+*link_libgcc:
+%D
+
+*md_exec_prefix:
+
+
+*md_startfile_prefix:
+
+
+*md_startfile_prefix_1:
+
+
+*startfile_prefix_spec:
+
+
+*sysroot_suffix_spec:
+
+
+*sysroot_hdrs_suffix_spec:
+
+
+*cpp_cpu_arch:
+   %{!mtc161:%{!mtc16:%{!mtc131:%{!mtc13:%{!mtc12:-DRIDER_B -D__TC12__ -D__RIDER_B__}}}}}    %{mtc12:-DRIDER_B -D__TC12__ -D__RIDER_B__} 		   %{mtc13:-D__TC13__}                          	   %{mtc131:-D__TC131__}                          	   %{mtc16:-D__TC16__}                          	   %{mtc161:-D__TC161__ -D__TC16__ }                          	   %{mtc12:%{mtc13:%e conflicting options -mtc12 and -mtc13}}    %{mtc12:%{mtc131:%e conflicting options -mtc12 and -mtc131}}    %{mtc12:%{mtc16:%e conflicting options -mtc12 and -mtc16}}    %{mtc13:%{mtc16:%e conflicting options -mtc13 and -mtc16}}    %{mtc131:%{mtc16:%e conflicting options -mtc131 and -mtc16}}    %{mtc12:%{mtc161:%e conflicting options -mtc12 and -mtc161}}    %{mtc13:%{mtc161:%e conflicting options -mtc13 and -mtc161}}    %{mtc131:%{mtc161:%e conflicting options -mtc131 and -mtc161}}    %{mbit:-D_bit=__attribute__((mode(BI),bit))}    %{mcpu9:%e illegal option -mcpu9: please use -mcpu009 }    %{mcpu13:%e illegal option -mcpu13: please use -mcpu013 }    %{mcpu18:%e illegal option -mcpu18: please use -mcpu018 }    %{mcpu31:%e illegal option -mcpu31: please use -mcpu031 }    %{mcpu34:%e illegal option -mcpu34: please use -mcpu034 }    %{mcpu48:%e illegal option -mcpu48: please use -mcpu048 }    %{mcpu50:%e illegal option -mcpu50: please use -mcpu050 }    %{mcpu60:%e illegal option -mcpu60: please use -mcpu060 }    %{mcpu69:%e illegal option -mcpu69: please use -mcpu069 }    %{mcpu70:%e illegal option -mcpu70: please use -mcpu070 }    %{mcpu72:%e illegal option -mcpu72: please use -mcpu072 }    %{mcpu76:%e illegal option -mcpu76: please use -mcpu076 }    %{mcpu81:%e illegal option -mcpu81: please use -mcpu081 }    %{mcpu82:%e illegal option -mcpu82: please use -mcpu082 }    %{mcpu83:%e illegal option -mcpu83: please use -mcpu083 } 
+
+*cpp_float:
+%{mhard-float:%{!mtc131:%{!mtc13:%{!mtc16:%{!mtc161:%e -mhard-float implies -mtc13, -mtc131 -mtc16 or -mtc161}}}}} %{mhard-float:%{msoft-float:%e-msoft-float and -mhard_float may not be used together}   -D__HARD_FLOAT__ %{msoft-fdiv: -D__SOFT_FDIV__}} %{!mhard-float:%{msoft-fdiv:%e-msoft-fdiv may only be used with -mhard-float}  %{!msoft-float:%(cpp_float_default)}} %{msoft-float:-D__SOFT_FLOAT__} %{fshort-double:-D__HAVE_SHORT_DOUBLE__} 
+
+*cpp_float_default:
+-D__SOFT_FLOAT__
+
+*cpp_errata:
+   %{!mtc12:%{!mtc13: %(cpp_tc12_errata) }}   %{mtc12: %(cpp_tc12_errata) }    %{mtc13: %(cpp_tc13_errata) }    %{mcpu031:-DERRATA_CPU8 -DERRATA_CPU31}    %{mcpu009:-DERRATA_CPU9}    %{mcpu010:-DERRATA_CPU10}    %{mcpu013:-DERRATA_CPU13}    %{mcpu018:-DERRATA_CPU18}    %{mcpu034:-DERRATA_CPU34}    %{mcpu024:-DERRATA_CPU24}    %{mcpu016:-DERRATA_CPU16}    %{mcpu050:-DERRATA_CPU50}    %{mcpu060:-DERRATA_CPU60}    %{mcpu069:-DERRATA_CPU69}    %{mcpu070:-DERRATA_CPU70}    %{mcpu072:-DERRATA_CPU72}    %{mcpu076:-DERRATA_CPU76}    %{mcpu081:-DERRATA_CPU81}    %{mcpu082:-DERRATA_CPU82}    %{mcpu083:-DERRATA_CPU83}    %{mcpu094:-DERRATA_CPU94}    %{mcpu095:-DERRATA_CPU95}    %{mcpu096:-DERRATA_CPU96}    %{mcpu101:-DERRATA_CPU101}    %{mcpu114:-DERRATA_CPU114}    %{mcpu116:-DERRATA_CPU116}    %{mcpu048:-DERRATA_CPU16 -DERRATA_CPU48 -DERRATA_CPU48_1 -DERRATA_CPU48_2}    %{mcpu048=all:-DERRATA_CPU16 -DERRATA_CPU48 -DERRATA_CPU48_1 -DERRATA_CPU48_2}    %{mcpu048=1:-DERRATA_CPU48_1}    %{mcpu048=2:-DERRATA_CPU48_2}    %{mdmi12:-DERRATA_DMI12}    
+
+*cpp_tc12_errata:
+
+
+*cpp_tc13_errata:
+
+
+*subtarget_cpp_spec:
+
+
+*link_command:
+%{!fsyntax-only:%{!c:%{!M:%{!MM:%{!E:%{!S:    %(linker) %l %{pie:-pie} %X %{o*} %{A} %{d} %{e*} %{m} %{N} %{n} %{r}    %{s} %{t} %{u*} %{x} %{z} %{Z} %{!A:%{!nostdlib:%{!nostartfiles:%S}}}    %{static:} %{L*} %(link_libgcc) %o %{fprofile-arcs|fprofile-generate:%{!fprofile-non-invasive:-lgcov}}    %{!nostdlib:%{!nodefaultlibs:%(link_gcc_c_sequence)}}    %{!A:%{!nostdlib:%{!nostartfiles:%E}}} %{T*} }}}}}}
+

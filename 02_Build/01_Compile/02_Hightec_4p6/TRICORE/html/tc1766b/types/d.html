@@ -1,0 +1,3550 @@
+<html>
+<head>
+<title>TriCore TC1766B (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="DBGSR_t"><b>DBGSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Status Register</b></td></tr>
+<tr><td colspan="5"><b>DBGSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DE:1</td>
+<td>0 - 0</td>
+<td>DBGSR_DE_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int HALT:2</td>
+<td>1 - 2</td>
+<td>DBGSR_HALT_MASK</td>
+<td>0x00000006</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SUSP:1</td>
+<td>4 - 4</td>
+<td>DBGSR_SUSP_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PREVSUSP:1</td>
+<td>6 - 6</td>
+<td>DBGSR_PREVSUSP_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int PEVT:1</td>
+<td>7 - 7</td>
+<td>DBGSR_PEVT_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int EVTSRC:5</td>
+<td>8 - 12</td>
+<td>DBGSR_EVTSRC_MASK</td>
+<td>0x00001f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../core_debug_registers.html#DBGSR">DBGSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../core_debug_registers.html">Core_Debug_Registers</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DCX_t"><b>DCX_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Context Save Area Pointer</b></td></tr>
+<tr><td colspan="5"><b>DCX_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DCXPTR_3_0:4</td>
+<td>0 - 3</td>
+<td>DCX_DCXPTR_3_0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DCXPTR_9_4:6</td>
+<td>4 - 9</td>
+<td>DCX_DCXPTR_9_4_MASK</td>
+<td>0x000003f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int DCXPTR_15_10:6</td>
+<td>10 - 15</td>
+<td>DCX_DCXPTR_15_10_MASK</td>
+<td>0x0000fc00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int DCXPTR_31_16:16</td>
+<td>16 - 31</td>
+<td>DCX_DCXPTR_31_16_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../core_debug_registers.html#DCX">DCX</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../core_debug_registers.html">Core_Debug_Registers</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_ADRCRm_t"><b>DMA_ADRCRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Channel n Address Control Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_ADRCRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SMF:3</td>
+<td>0 - 2</td>
+<td>DMA_ADRCRm_SMF_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int INCS:1</td>
+<td>3 - 3</td>
+<td>DMA_ADRCRm_INCS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int DMF:3</td>
+<td>4 - 6</td>
+<td>DMA_ADRCRm_DMF_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int INCD:1</td>
+<td>7 - 7</td>
+<td>DMA_ADRCRm_INCD_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int CBLS:4</td>
+<td>8 - 11</td>
+<td>DMA_ADRCRm_CBLS_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CBLD:4</td>
+<td>12 - 15</td>
+<td>DMA_ADRCRm_CBLD_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SHCT:2</td>
+<td>16 - 17</td>
+<td>DMA_ADRCRm_SHCT_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_ADRCR00">DMA_ADRCR00</a>,    
+<a class="url" href="../dma.html#DMA_ADRCR01">DMA_ADRCR01</a>,    
+<a class="url" href="../dma.html#DMA_ADRCR02">DMA_ADRCR02</a>,    
+<a class="url" href="../dma.html#DMA_ADRCR03">DMA_ADRCR03</a>,    
+<a class="url" href="../dma.html#DMA_ADRCR04">DMA_ADRCR04</a>,    
+<a class="url" href="../dma.html#DMA_ADRCR05">DMA_ADRCR05</a>,    
+<a class="url" href="../dma.html#DMA_ADRCR06">DMA_ADRCR06</a>,    
+<a class="url" href="../dma.html#DMA_ADRCR07">DMA_ADRCR07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_CHCRm_t"><b>DMA_CHCRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Channel n Control Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_CHCRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TREL:9</td>
+<td>0 - 8</td>
+<td>DMA_CHCRm_TREL_MASK</td>
+<td>0x000001ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int PRSEL:3</td>
+<td>13 - 15</td>
+<td>DMA_CHCRm_PRSEL_MASK</td>
+<td>0x0000e000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int BLKM:3</td>
+<td>16 - 18</td>
+<td>DMA_CHCRm_BLKM_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int RROAT:1</td>
+<td>19 - 19</td>
+<td>DMA_CHCRm_RROAT_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CHMODE:1</td>
+<td>20 - 20</td>
+<td>DMA_CHCRm_CHMODE_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int CHDW:2</td>
+<td>21 - 22</td>
+<td>DMA_CHCRm_CHDW_MASK</td>
+<td>0x00600000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int PATSEL:2</td>
+<td>24 - 25</td>
+<td>DMA_CHCRm_PATSEL_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int CHPRIO:1</td>
+<td>28 - 28</td>
+<td>DMA_CHCRm_CHPRIO_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int DMAPRIO:1</td>
+<td>30 - 30</td>
+<td>DMA_CHCRm_DMAPRIO_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_CHCR00">DMA_CHCR00</a>,    
+<a class="url" href="../dma.html#DMA_CHCR01">DMA_CHCR01</a>,    
+<a class="url" href="../dma.html#DMA_CHCR02">DMA_CHCR02</a>,    
+<a class="url" href="../dma.html#DMA_CHCR03">DMA_CHCR03</a>,    
+<a class="url" href="../dma.html#DMA_CHCR04">DMA_CHCR04</a>,    
+<a class="url" href="../dma.html#DMA_CHCR05">DMA_CHCR05</a>,    
+<a class="url" href="../dma.html#DMA_CHCR06">DMA_CHCR06</a>,    
+<a class="url" href="../dma.html#DMA_CHCR07">DMA_CHCR07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_CHICRm_t"><b>DMA_CHICRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Channel n Interrupt Control Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_CHICRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int WRPSE:1</td>
+<td>0 - 0</td>
+<td>DMA_CHICRm_WRPSE_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WRPDE:1</td>
+<td>1 - 1</td>
+<td>DMA_CHICRm_WRPDE_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int INTCT:2</td>
+<td>2 - 3</td>
+<td>DMA_CHICRm_INTCT_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int WRPP:4</td>
+<td>4 - 7</td>
+<td>DMA_CHICRm_WRPP_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int INTP:4</td>
+<td>8 - 11</td>
+<td>DMA_CHICRm_INTP_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int IRDV:4</td>
+<td>12 - 15</td>
+<td>DMA_CHICRm_IRDV_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_CHICR00">DMA_CHICR00</a>,    
+<a class="url" href="../dma.html#DMA_CHICR01">DMA_CHICR01</a>,    
+<a class="url" href="../dma.html#DMA_CHICR02">DMA_CHICR02</a>,    
+<a class="url" href="../dma.html#DMA_CHICR03">DMA_CHICR03</a>,    
+<a class="url" href="../dma.html#DMA_CHICR04">DMA_CHICR04</a>,    
+<a class="url" href="../dma.html#DMA_CHICR05">DMA_CHICR05</a>,    
+<a class="url" href="../dma.html#DMA_CHICR06">DMA_CHICR06</a>,    
+<a class="url" href="../dma.html#DMA_CHICR07">DMA_CHICR07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_CHRSTR_t"><b>DMA_CHRSTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Channel Reset Request Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_CHRSTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CH00:1</td>
+<td>0 - 0</td>
+<td>DMA_CHRSTR_CH00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CH01:1</td>
+<td>1 - 1</td>
+<td>DMA_CHRSTR_CH01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CH02:1</td>
+<td>2 - 2</td>
+<td>DMA_CHRSTR_CH02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CH03:1</td>
+<td>3 - 3</td>
+<td>DMA_CHRSTR_CH03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CH04:1</td>
+<td>4 - 4</td>
+<td>DMA_CHRSTR_CH04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CH05:1</td>
+<td>5 - 5</td>
+<td>DMA_CHRSTR_CH05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CH06:1</td>
+<td>6 - 6</td>
+<td>DMA_CHRSTR_CH06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CH07:1</td>
+<td>7 - 7</td>
+<td>DMA_CHRSTR_CH07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_CHRSTR">DMA_CHRSTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_CHSRm_t"><b>DMA_CHSRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>DMA_CHSRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TCOUNT:9</td>
+<td>0 - 8</td>
+<td>DMA_CHSRm_TCOUNT_MASK</td>
+<td>0x000001ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LXO:1</td>
+<td>15 - 15</td>
+<td>DMA_CHSRm_LXO_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_CHSR00">DMA_CHSR00</a>,    
+<a class="url" href="../dma.html#DMA_CHSR01">DMA_CHSR01</a>,    
+<a class="url" href="../dma.html#DMA_CHSR02">DMA_CHSR02</a>,    
+<a class="url" href="../dma.html#DMA_CHSR03">DMA_CHSR03</a>,    
+<a class="url" href="../dma.html#DMA_CHSR04">DMA_CHSR04</a>,    
+<a class="url" href="../dma.html#DMA_CHSR05">DMA_CHSR05</a>,    
+<a class="url" href="../dma.html#DMA_CHSR06">DMA_CHSR06</a>,    
+<a class="url" href="../dma.html#DMA_CHSR07">DMA_CHSR07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_CLC_t"><b>DMA_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>DMA_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>DMA_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>DMA_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>DMA_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>DMA_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_CLC">DMA_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_CLRE_t"><b>DMA_CLRE_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Clear Error Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_CLRE_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CTRL00:1</td>
+<td>0 - 0</td>
+<td>DMA_CLRE_CTRL00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CTRL01:1</td>
+<td>1 - 1</td>
+<td>DMA_CLRE_CTRL01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CTRL02:1</td>
+<td>2 - 2</td>
+<td>DMA_CLRE_CTRL02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CTRL03:1</td>
+<td>3 - 3</td>
+<td>DMA_CLRE_CTRL03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CTRL04:1</td>
+<td>4 - 4</td>
+<td>DMA_CLRE_CTRL04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CTRL05:1</td>
+<td>5 - 5</td>
+<td>DMA_CLRE_CTRL05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CTRL06:1</td>
+<td>6 - 6</td>
+<td>DMA_CLRE_CTRL06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CTRL07:1</td>
+<td>7 - 7</td>
+<td>DMA_CLRE_CTRL07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int CME0SER:1</td>
+<td>16 - 16</td>
+<td>DMA_CLRE_CME0SER_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CME0DER:1</td>
+<td>17 - 17</td>
+<td>DMA_CLRE_CME0DER_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int CFPI0ER:1</td>
+<td>20 - 20</td>
+<td>DMA_CLRE_CFPI0ER_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int CFPI1ER:1</td>
+<td>21 - 21</td>
+<td>DMA_CLRE_CFPI1ER_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int CLRMLI0:1</td>
+<td>27 - 27</td>
+<td>DMA_CLRE_CLRMLI0_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int CLRMLI1:1</td>
+<td>31 - 31</td>
+<td>DMA_CLRE_CLRMLI1_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_CLRE">DMA_CLRE</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_DADRm_t"><b>DMA_DADRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Channel n Destination Address Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_DADRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DADR:32</td>
+<td>0 - 31</td>
+<td>DMA_DADRm_DADR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_DADR00">DMA_DADR00</a>,    
+<a class="url" href="../dma.html#DMA_DADR01">DMA_DADR01</a>,    
+<a class="url" href="../dma.html#DMA_DADR02">DMA_DADR02</a>,    
+<a class="url" href="../dma.html#DMA_DADR03">DMA_DADR03</a>,    
+<a class="url" href="../dma.html#DMA_DADR04">DMA_DADR04</a>,    
+<a class="url" href="../dma.html#DMA_DADR05">DMA_DADR05</a>,    
+<a class="url" href="../dma.html#DMA_DADR06">DMA_DADR06</a>,    
+<a class="url" href="../dma.html#DMA_DADR07">DMA_DADR07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_EER_t"><b>DMA_EER_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Enable Error Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_EER_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ETRL00:1</td>
+<td>0 - 0</td>
+<td>DMA_EER_ETRL00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ETRL01:1</td>
+<td>1 - 1</td>
+<td>DMA_EER_ETRL01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ETRL02:1</td>
+<td>2 - 2</td>
+<td>DMA_EER_ETRL02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ETRL03:1</td>
+<td>3 - 3</td>
+<td>DMA_EER_ETRL03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int ETRL04:1</td>
+<td>4 - 4</td>
+<td>DMA_EER_ETRL04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ETRL05:1</td>
+<td>5 - 5</td>
+<td>DMA_EER_ETRL05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ETRL06:1</td>
+<td>6 - 6</td>
+<td>DMA_EER_ETRL06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int ETRL07:1</td>
+<td>7 - 7</td>
+<td>DMA_EER_ETRL07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int EME0SER:1</td>
+<td>16 - 16</td>
+<td>DMA_EER_EME0SER_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int EME0DER:1</td>
+<td>17 - 17</td>
+<td>DMA_EER_EME0DER_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int ME0INP:4</td>
+<td>20 - 23</td>
+<td>DMA_EER_ME0INP_MASK</td>
+<td>0x00f00000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int TRLINP:4</td>
+<td>28 - 31</td>
+<td>DMA_EER_TRLINP_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_EER">DMA_EER</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_ERRSR_t"><b>DMA_ERRSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Error Status Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_ERRSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TRL00:1</td>
+<td>0 - 0</td>
+<td>DMA_ERRSR_TRL00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TRL01:1</td>
+<td>1 - 1</td>
+<td>DMA_ERRSR_TRL01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int TRL02:1</td>
+<td>2 - 2</td>
+<td>DMA_ERRSR_TRL02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TRL03:1</td>
+<td>3 - 3</td>
+<td>DMA_ERRSR_TRL03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int TRL04:1</td>
+<td>4 - 4</td>
+<td>DMA_ERRSR_TRL04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TRL05:1</td>
+<td>5 - 5</td>
+<td>DMA_ERRSR_TRL05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int TRL06:1</td>
+<td>6 - 6</td>
+<td>DMA_ERRSR_TRL06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int TRL07:1</td>
+<td>7 - 7</td>
+<td>DMA_ERRSR_TRL07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ME0SER:1</td>
+<td>16 - 16</td>
+<td>DMA_ERRSR_ME0SER_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int ME0DER:1</td>
+<td>17 - 17</td>
+<td>DMA_ERRSR_ME0DER_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int FPI0ER:1</td>
+<td>20 - 20</td>
+<td>DMA_ERRSR_FPI0ER_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int FPI1ER:1</td>
+<td>21 - 21</td>
+<td>DMA_ERRSR_FPI1ER_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int LECME0:3</td>
+<td>24 - 26</td>
+<td>DMA_ERRSR_LECME0_MASK</td>
+<td>0x07000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int MLI0:1</td>
+<td>27 - 27</td>
+<td>DMA_ERRSR_MLI0_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int MLI1:1</td>
+<td>31 - 31</td>
+<td>DMA_ERRSR_MLI1_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_ERRSR">DMA_ERRSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_GINTR_t"><b>DMA_GINTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Global Interrupt Set Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_GINTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SIDMA0:1</td>
+<td>0 - 0</td>
+<td>DMA_GINTR_SIDMA0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA1:1</td>
+<td>1 - 1</td>
+<td>DMA_GINTR_SIDMA1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA2:1</td>
+<td>2 - 2</td>
+<td>DMA_GINTR_SIDMA2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA3:1</td>
+<td>3 - 3</td>
+<td>DMA_GINTR_SIDMA3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA4:1</td>
+<td>4 - 4</td>
+<td>DMA_GINTR_SIDMA4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA5:1</td>
+<td>5 - 5</td>
+<td>DMA_GINTR_SIDMA5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA6:1</td>
+<td>6 - 6</td>
+<td>DMA_GINTR_SIDMA6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA7:1</td>
+<td>7 - 7</td>
+<td>DMA_GINTR_SIDMA7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA8:1</td>
+<td>8 - 8</td>
+<td>DMA_GINTR_SIDMA8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA9:1</td>
+<td>9 - 9</td>
+<td>DMA_GINTR_SIDMA9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA10:1</td>
+<td>10 - 10</td>
+<td>DMA_GINTR_SIDMA10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA11:1</td>
+<td>11 - 11</td>
+<td>DMA_GINTR_SIDMA11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA12:1</td>
+<td>12 - 12</td>
+<td>DMA_GINTR_SIDMA12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA13:1</td>
+<td>13 - 13</td>
+<td>DMA_GINTR_SIDMA13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA14:1</td>
+<td>14 - 14</td>
+<td>DMA_GINTR_SIDMA14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SIDMA15:1</td>
+<td>15 - 15</td>
+<td>DMA_GINTR_SIDMA15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_GINTR">DMA_GINTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_HTREQ_t"><b>DMA_HTREQ_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Hardware Transaction Request Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_HTREQ_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ECH00:1</td>
+<td>0 - 0</td>
+<td>DMA_HTREQ_ECH00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ECH01:1</td>
+<td>1 - 1</td>
+<td>DMA_HTREQ_ECH01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ECH02:1</td>
+<td>2 - 2</td>
+<td>DMA_HTREQ_ECH02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ECH03:1</td>
+<td>3 - 3</td>
+<td>DMA_HTREQ_ECH03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int ECH04:1</td>
+<td>4 - 4</td>
+<td>DMA_HTREQ_ECH04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ECH05:1</td>
+<td>5 - 5</td>
+<td>DMA_HTREQ_ECH05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ECH06:1</td>
+<td>6 - 6</td>
+<td>DMA_HTREQ_ECH06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int ECH07:1</td>
+<td>7 - 7</td>
+<td>DMA_HTREQ_ECH07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int DCH00:1</td>
+<td>16 - 16</td>
+<td>DMA_HTREQ_DCH00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DCH01:1</td>
+<td>17 - 17</td>
+<td>DMA_HTREQ_DCH01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int DCH02:1</td>
+<td>18 - 18</td>
+<td>DMA_HTREQ_DCH02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int DCH03:1</td>
+<td>19 - 19</td>
+<td>DMA_HTREQ_DCH03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int DCH04:1</td>
+<td>20 - 20</td>
+<td>DMA_HTREQ_DCH04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int DCH05:1</td>
+<td>21 - 21</td>
+<td>DMA_HTREQ_DCH05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int DCH06:1</td>
+<td>22 - 22</td>
+<td>DMA_HTREQ_DCH06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int DCH07:1</td>
+<td>23 - 23</td>
+<td>DMA_HTREQ_DCH07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_HTREQ">DMA_HTREQ</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_ID_t"><b>DMA_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>DMA_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>DMA_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>DMA_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_ID">DMA_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_INTCR_t"><b>DMA_INTCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Interrupt Clear Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_INTCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CICH00:1</td>
+<td>0 - 0</td>
+<td>DMA_INTCR_CICH00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CICH01:1</td>
+<td>1 - 1</td>
+<td>DMA_INTCR_CICH01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CICH02:1</td>
+<td>2 - 2</td>
+<td>DMA_INTCR_CICH02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CICH03:1</td>
+<td>3 - 3</td>
+<td>DMA_INTCR_CICH03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CICH04:1</td>
+<td>4 - 4</td>
+<td>DMA_INTCR_CICH04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CICH05:1</td>
+<td>5 - 5</td>
+<td>DMA_INTCR_CICH05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CICH06:1</td>
+<td>6 - 6</td>
+<td>DMA_INTCR_CICH06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CICH07:1</td>
+<td>7 - 7</td>
+<td>DMA_INTCR_CICH07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int CWRP00:1</td>
+<td>16 - 16</td>
+<td>DMA_INTCR_CWRP00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CWRP01:1</td>
+<td>17 - 17</td>
+<td>DMA_INTCR_CWRP01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int CWRP02:1</td>
+<td>18 - 18</td>
+<td>DMA_INTCR_CWRP02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int CWRP03:1</td>
+<td>19 - 19</td>
+<td>DMA_INTCR_CWRP03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CWRP04:1</td>
+<td>20 - 20</td>
+<td>DMA_INTCR_CWRP04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int CWRP05:1</td>
+<td>21 - 21</td>
+<td>DMA_INTCR_CWRP05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int CWRP06:1</td>
+<td>22 - 22</td>
+<td>DMA_INTCR_CWRP06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int CWRP07:1</td>
+<td>23 - 23</td>
+<td>DMA_INTCR_CWRP07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_INTCR">DMA_INTCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_INTSR_t"><b>DMA_INTSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Interrupt Status Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_INTSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ICH00:1</td>
+<td>0 - 0</td>
+<td>DMA_INTSR_ICH00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ICH01:1</td>
+<td>1 - 1</td>
+<td>DMA_INTSR_ICH01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ICH02:1</td>
+<td>2 - 2</td>
+<td>DMA_INTSR_ICH02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ICH03:1</td>
+<td>3 - 3</td>
+<td>DMA_INTSR_ICH03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int ICH04:1</td>
+<td>4 - 4</td>
+<td>DMA_INTSR_ICH04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ICH05:1</td>
+<td>5 - 5</td>
+<td>DMA_INTSR_ICH05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ICH06:1</td>
+<td>6 - 6</td>
+<td>DMA_INTSR_ICH06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int ICH07:1</td>
+<td>7 - 7</td>
+<td>DMA_INTSR_ICH07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int IPM00:1</td>
+<td>16 - 16</td>
+<td>DMA_INTSR_IPM00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int IPM01:1</td>
+<td>17 - 17</td>
+<td>DMA_INTSR_IPM01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int IPM02:1</td>
+<td>18 - 18</td>
+<td>DMA_INTSR_IPM02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int IPM03:1</td>
+<td>19 - 19</td>
+<td>DMA_INTSR_IPM03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int IPM04:1</td>
+<td>20 - 20</td>
+<td>DMA_INTSR_IPM04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int IPM05:1</td>
+<td>21 - 21</td>
+<td>DMA_INTSR_IPM05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int IPM06:1</td>
+<td>22 - 22</td>
+<td>DMA_INTSR_IPM06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int IPM07:1</td>
+<td>23 - 23</td>
+<td>DMA_INTSR_IPM07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_INTSR">DMA_INTSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_ME0AENR_t"><b>DMA_ME0AENR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Move Engine 0 Access Enable Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_ME0AENR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int AEN0:1</td>
+<td>0 - 0</td>
+<td>DMA_ME0AENR_AEN0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int AEN1:1</td>
+<td>1 - 1</td>
+<td>DMA_ME0AENR_AEN1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int AEN2:1</td>
+<td>2 - 2</td>
+<td>DMA_ME0AENR_AEN2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int AEN3:1</td>
+<td>3 - 3</td>
+<td>DMA_ME0AENR_AEN3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int AEN4:1</td>
+<td>4 - 4</td>
+<td>DMA_ME0AENR_AEN4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int AEN5:1</td>
+<td>5 - 5</td>
+<td>DMA_ME0AENR_AEN5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int AEN6:1</td>
+<td>6 - 6</td>
+<td>DMA_ME0AENR_AEN6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int AEN7:1</td>
+<td>7 - 7</td>
+<td>DMA_ME0AENR_AEN7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int AEN8:1</td>
+<td>8 - 8</td>
+<td>DMA_ME0AENR_AEN8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int AEN9:1</td>
+<td>9 - 9</td>
+<td>DMA_ME0AENR_AEN9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int AEN10:1</td>
+<td>10 - 10</td>
+<td>DMA_ME0AENR_AEN10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int AEN11:1</td>
+<td>11 - 11</td>
+<td>DMA_ME0AENR_AEN11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int AEN12:1</td>
+<td>12 - 12</td>
+<td>DMA_ME0AENR_AEN12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int AEN13:1</td>
+<td>13 - 13</td>
+<td>DMA_ME0AENR_AEN13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int AEN14:1</td>
+<td>14 - 14</td>
+<td>DMA_ME0AENR_AEN14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int AEN15:1</td>
+<td>15 - 15</td>
+<td>DMA_ME0AENR_AEN15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int AEN16:1</td>
+<td>16 - 16</td>
+<td>DMA_ME0AENR_AEN16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int AEN17:1</td>
+<td>17 - 17</td>
+<td>DMA_ME0AENR_AEN17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int AEN18:1</td>
+<td>18 - 18</td>
+<td>DMA_ME0AENR_AEN18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int AEN19:1</td>
+<td>19 - 19</td>
+<td>DMA_ME0AENR_AEN19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int AEN20:1</td>
+<td>20 - 20</td>
+<td>DMA_ME0AENR_AEN20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int AEN21:1</td>
+<td>21 - 21</td>
+<td>DMA_ME0AENR_AEN21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int AEN22:1</td>
+<td>22 - 22</td>
+<td>DMA_ME0AENR_AEN22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int AEN23:1</td>
+<td>23 - 23</td>
+<td>DMA_ME0AENR_AEN23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int AEN24:1</td>
+<td>24 - 24</td>
+<td>DMA_ME0AENR_AEN24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int AEN25:1</td>
+<td>25 - 25</td>
+<td>DMA_ME0AENR_AEN25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int AEN26:1</td>
+<td>26 - 26</td>
+<td>DMA_ME0AENR_AEN26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int AEN27:1</td>
+<td>27 - 27</td>
+<td>DMA_ME0AENR_AEN27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int AEN28:1</td>
+<td>28 - 28</td>
+<td>DMA_ME0AENR_AEN28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int AEN29:1</td>
+<td>29 - 29</td>
+<td>DMA_ME0AENR_AEN29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int AEN30:1</td>
+<td>30 - 30</td>
+<td>DMA_ME0AENR_AEN30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int AEN31:1</td>
+<td>31 - 31</td>
+<td>DMA_ME0AENR_AEN31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_ME0AENR">DMA_ME0AENR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_ME0ARR_t"><b>DMA_ME0ARR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Move Engine 0 Access Range Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_ME0ARR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SLICE0:5</td>
+<td>0 - 4</td>
+<td>DMA_ME0ARR_SLICE0_MASK</td>
+<td>0x0000001f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SIZE0:3</td>
+<td>5 - 7</td>
+<td>DMA_ME0ARR_SIZE0_MASK</td>
+<td>0x000000e0</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SLICE1:5</td>
+<td>8 - 12</td>
+<td>DMA_ME0ARR_SLICE1_MASK</td>
+<td>0x00001f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SIZE1:3</td>
+<td>13 - 15</td>
+<td>DMA_ME0ARR_SIZE1_MASK</td>
+<td>0x0000e000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int SLICE2:5</td>
+<td>16 - 20</td>
+<td>DMA_ME0ARR_SLICE2_MASK</td>
+<td>0x001f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SIZE2:3</td>
+<td>21 - 23</td>
+<td>DMA_ME0ARR_SIZE2_MASK</td>
+<td>0x00e00000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int SLICE3:5</td>
+<td>24 - 28</td>
+<td>DMA_ME0ARR_SLICE3_MASK</td>
+<td>0x1f000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int SIZE3:3</td>
+<td>29 - 31</td>
+<td>DMA_ME0ARR_SIZE3_MASK</td>
+<td>0xe0000000</td>
+<td align="right">29</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_ME0ARR">DMA_ME0ARR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_ME0PR_t"><b>DMA_ME0PR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Move Engine 0 Pattern Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_ME0PR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PAT00:8</td>
+<td>0 - 7</td>
+<td>DMA_ME0PR_PAT00_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int PAT01:8</td>
+<td>8 - 15</td>
+<td>DMA_ME0PR_PAT01_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int PAT02:8</td>
+<td>16 - 23</td>
+<td>DMA_ME0PR_PAT02_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PAT03:8</td>
+<td>24 - 31</td>
+<td>DMA_ME0PR_PAT03_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_ME0PR">DMA_ME0PR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_ME0R_t"><b>DMA_ME0R_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Move Engine 0 Read Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_ME0R_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ME0R:32</td>
+<td>0 - 31</td>
+<td>DMA_ME0R_ME0R_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_ME0R">DMA_ME0R</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_MESR_t"><b>DMA_MESR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Move Engine Status Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_MESR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ME0RS:1</td>
+<td>0 - 0</td>
+<td>DMA_MESR_ME0RS_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CH0:3</td>
+<td>1 - 3</td>
+<td>DMA_MESR_CH0_MASK</td>
+<td>0x0000000e</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ME0WS:1</td>
+<td>4 - 4</td>
+<td>DMA_MESR_ME0WS_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int RBT0:3</td>
+<td>5 - 7</td>
+<td>DMA_MESR_RBT0_MASK</td>
+<td>0x000000e0</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int RBT1:3</td>
+<td>13 - 15</td>
+<td>DMA_MESR_RBT1_MASK</td>
+<td>0x0000e000</td>
+<td align="right">13</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_MESR">DMA_MESR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_MLInSRCm_t"><b>DMA_MLInSRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MLI n Service Request Control Register m</b></td></tr>
+<tr><td colspan="5"><b>DMA_MLInSRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>DMA_MLInSRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>DMA_MLInSRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>DMA_MLInSRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>DMA_MLInSRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>DMA_MLInSRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>DMA_MLInSRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_MLI0SRC0">DMA_MLI0SRC0</a>,    
+<a class="url" href="../dma.html#DMA_MLI0SRC1">DMA_MLI0SRC1</a>,    
+<a class="url" href="../dma.html#DMA_MLI0SRC2">DMA_MLI0SRC2</a>,    
+<a class="url" href="../dma.html#DMA_MLI0SRC3">DMA_MLI0SRC3</a>,    
+<a class="url" href="../dma.html#DMA_MLI1SRC0">DMA_MLI1SRC0</a>,    
+<a class="url" href="../dma.html#DMA_MLI1SRC1">DMA_MLI1SRC1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_OCDSR_t"><b>DMA_OCDSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>OCDS Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_OCDSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BTRC0:2</td>
+<td>0 - 1</td>
+<td>DMA_OCDSR_BTRC0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int BCHS0:3</td>
+<td>2 - 4</td>
+<td>DMA_OCDSR_BCHS0_MASK</td>
+<td>0x0000001c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int BRL0:1</td>
+<td>5 - 5</td>
+<td>DMA_OCDSR_BRL0_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_OCDSR">DMA_OCDSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_SADRm_t"><b>DMA_SADRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Channel n Source Address Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_SADRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SADR:32</td>
+<td>0 - 31</td>
+<td>DMA_SADRm_SADR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_SADR00">DMA_SADR00</a>,    
+<a class="url" href="../dma.html#DMA_SADR01">DMA_SADR01</a>,    
+<a class="url" href="../dma.html#DMA_SADR02">DMA_SADR02</a>,    
+<a class="url" href="../dma.html#DMA_SADR03">DMA_SADR03</a>,    
+<a class="url" href="../dma.html#DMA_SADR04">DMA_SADR04</a>,    
+<a class="url" href="../dma.html#DMA_SADR05">DMA_SADR05</a>,    
+<a class="url" href="../dma.html#DMA_SADR06">DMA_SADR06</a>,    
+<a class="url" href="../dma.html#DMA_SADR07">DMA_SADR07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_SHADRm_t"><b>DMA_SHADRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>DMA_SHADRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SHADR:32</td>
+<td>0 - 31</td>
+<td>DMA_SHADRm_SHADR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_SHADR00">DMA_SHADR00</a>,    
+<a class="url" href="../dma.html#DMA_SHADR01">DMA_SHADR01</a>,    
+<a class="url" href="../dma.html#DMA_SHADR02">DMA_SHADR02</a>,    
+<a class="url" href="../dma.html#DMA_SHADR03">DMA_SHADR03</a>,    
+<a class="url" href="../dma.html#DMA_SHADR04">DMA_SHADR04</a>,    
+<a class="url" href="../dma.html#DMA_SHADR05">DMA_SHADR05</a>,    
+<a class="url" href="../dma.html#DMA_SHADR06">DMA_SHADR06</a>,    
+<a class="url" href="../dma.html#DMA_SHADR07">DMA_SHADR07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_SRCm_t"><b>DMA_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Service Request Control Register n</b></td></tr>
+<tr><td colspan="5"><b>DMA_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>DMA_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>DMA_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>DMA_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>DMA_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>DMA_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>DMA_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_SRC0">DMA_SRC0</a>,    
+<a class="url" href="../dma.html#DMA_SRC1">DMA_SRC1</a>,    
+<a class="url" href="../dma.html#DMA_SRC2">DMA_SRC2</a>,    
+<a class="url" href="../dma.html#DMA_SRC3">DMA_SRC3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_STREQ_t"><b>DMA_STREQ_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Software Transaction Request Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_STREQ_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SCH00:1</td>
+<td>0 - 0</td>
+<td>DMA_STREQ_SCH00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SCH01:1</td>
+<td>1 - 1</td>
+<td>DMA_STREQ_SCH01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SCH02:1</td>
+<td>2 - 2</td>
+<td>DMA_STREQ_SCH02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SCH03:1</td>
+<td>3 - 3</td>
+<td>DMA_STREQ_SCH03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SCH04:1</td>
+<td>4 - 4</td>
+<td>DMA_STREQ_SCH04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SCH05:1</td>
+<td>5 - 5</td>
+<td>DMA_STREQ_SCH05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SCH06:1</td>
+<td>6 - 6</td>
+<td>DMA_STREQ_SCH06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SCH07:1</td>
+<td>7 - 7</td>
+<td>DMA_STREQ_SCH07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_STREQ">DMA_STREQ</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_SUSPMR_t"><b>DMA_SUSPMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Suspend Mode Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_SUSPMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SUSEN00:1</td>
+<td>0 - 0</td>
+<td>DMA_SUSPMR_SUSEN00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN01:1</td>
+<td>1 - 1</td>
+<td>DMA_SUSPMR_SUSEN01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN02:1</td>
+<td>2 - 2</td>
+<td>DMA_SUSPMR_SUSEN02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN03:1</td>
+<td>3 - 3</td>
+<td>DMA_SUSPMR_SUSEN03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN04:1</td>
+<td>4 - 4</td>
+<td>DMA_SUSPMR_SUSEN04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN05:1</td>
+<td>5 - 5</td>
+<td>DMA_SUSPMR_SUSEN05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN06:1</td>
+<td>6 - 6</td>
+<td>DMA_SUSPMR_SUSEN06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN07:1</td>
+<td>7 - 7</td>
+<td>DMA_SUSPMR_SUSEN07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC00:1</td>
+<td>16 - 16</td>
+<td>DMA_SUSPMR_SUSAC00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC01:1</td>
+<td>17 - 17</td>
+<td>DMA_SUSPMR_SUSAC01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC02:1</td>
+<td>18 - 18</td>
+<td>DMA_SUSPMR_SUSAC02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC03:1</td>
+<td>19 - 19</td>
+<td>DMA_SUSPMR_SUSAC03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC04:1</td>
+<td>20 - 20</td>
+<td>DMA_SUSPMR_SUSAC04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC05:1</td>
+<td>21 - 21</td>
+<td>DMA_SUSPMR_SUSAC05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC06:1</td>
+<td>22 - 22</td>
+<td>DMA_SUSPMR_SUSAC06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int SUSAC07:1</td>
+<td>23 - 23</td>
+<td>DMA_SUSPMR_SUSAC07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_SUSPMR">DMA_SUSPMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_SYSSRCm_t"><b>DMA_SYSSRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>System Interrupt Service Request Control Register n</b></td></tr>
+<tr><td colspan="5"><b>DMA_SYSSRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>DMA_SYSSRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>DMA_SYSSRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>DMA_SYSSRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>DMA_SYSSRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>DMA_SYSSRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>DMA_SYSSRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_SYSSRC0">DMA_SYSSRC0</a>,    
+<a class="url" href="../dma.html#DMA_SYSSRC1">DMA_SYSSRC1</a>,    
+<a class="url" href="../dma.html#DMA_SYSSRC2">DMA_SYSSRC2</a>,    
+<a class="url" href="../dma.html#DMA_SYSSRC3">DMA_SYSSRC3</a>,    
+<a class="url" href="../dma.html#DMA_SYSSRC4">DMA_SYSSRC4</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_TOCTR_t"><b>DMA_TOCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMA Bus Time-Out Control Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_TOCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TOUT:16</td>
+<td>0 - 15</td>
+<td>DMA_TOCTR_TOUT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_TOCTR">DMA_TOCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_TRSR_t"><b>DMA_TRSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transaction Request State Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_TRSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CH00:1</td>
+<td>0 - 0</td>
+<td>DMA_TRSR_CH00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CH01:1</td>
+<td>1 - 1</td>
+<td>DMA_TRSR_CH01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CH02:1</td>
+<td>2 - 2</td>
+<td>DMA_TRSR_CH02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CH03:1</td>
+<td>3 - 3</td>
+<td>DMA_TRSR_CH03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CH04:1</td>
+<td>4 - 4</td>
+<td>DMA_TRSR_CH04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CH05:1</td>
+<td>5 - 5</td>
+<td>DMA_TRSR_CH05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CH06:1</td>
+<td>6 - 6</td>
+<td>DMA_TRSR_CH06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CH07:1</td>
+<td>7 - 7</td>
+<td>DMA_TRSR_CH07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int HTRE00:1</td>
+<td>16 - 16</td>
+<td>DMA_TRSR_HTRE00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int HTRE01:1</td>
+<td>17 - 17</td>
+<td>DMA_TRSR_HTRE01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int HTRE02:1</td>
+<td>18 - 18</td>
+<td>DMA_TRSR_HTRE02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int HTRE03:1</td>
+<td>19 - 19</td>
+<td>DMA_TRSR_HTRE03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int HTRE04:1</td>
+<td>20 - 20</td>
+<td>DMA_TRSR_HTRE04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int HTRE05:1</td>
+<td>21 - 21</td>
+<td>DMA_TRSR_HTRE05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int HTRE06:1</td>
+<td>22 - 22</td>
+<td>DMA_TRSR_HTRE06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int HTRE07:1</td>
+<td>23 - 23</td>
+<td>DMA_TRSR_HTRE07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_TRSR">DMA_TRSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMA_WRPSR_t"><b>DMA_WRPSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Wrap Status Register</b></td></tr>
+<tr><td colspan="5"><b>DMA_WRPSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int WRPS00:1</td>
+<td>0 - 0</td>
+<td>DMA_WRPSR_WRPS00_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WRPS01:1</td>
+<td>1 - 1</td>
+<td>DMA_WRPSR_WRPS01_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int WRPS02:1</td>
+<td>2 - 2</td>
+<td>DMA_WRPSR_WRPS02_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int WRPS03:1</td>
+<td>3 - 3</td>
+<td>DMA_WRPSR_WRPS03_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int WRPS04:1</td>
+<td>4 - 4</td>
+<td>DMA_WRPSR_WRPS04_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WRPS05:1</td>
+<td>5 - 5</td>
+<td>DMA_WRPSR_WRPS05_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int WRPS06:1</td>
+<td>6 - 6</td>
+<td>DMA_WRPSR_WRPS06_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int WRPS07:1</td>
+<td>7 - 7</td>
+<td>DMA_WRPSR_WRPS07_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int WRPD00:1</td>
+<td>16 - 16</td>
+<td>DMA_WRPSR_WRPD00_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int WRPD01:1</td>
+<td>17 - 17</td>
+<td>DMA_WRPSR_WRPD01_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int WRPD02:1</td>
+<td>18 - 18</td>
+<td>DMA_WRPSR_WRPD02_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int WRPD03:1</td>
+<td>19 - 19</td>
+<td>DMA_WRPSR_WRPD03_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int WRPD04:1</td>
+<td>20 - 20</td>
+<td>DMA_WRPSR_WRPD04_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int WRPD05:1</td>
+<td>21 - 21</td>
+<td>DMA_WRPSR_WRPD05_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int WRPD06:1</td>
+<td>22 - 22</td>
+<td>DMA_WRPSR_WRPD06_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int WRPD07:1</td>
+<td>23 - 23</td>
+<td>DMA_WRPSR_WRPD07_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dma.html#DMA_WRPSR">DMA_WRPSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dma.html">DMA</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMI_ATR_t"><b>DMI_ATR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMI Asynchronous Trap Register</b></td></tr>
+<tr><td colspan="5"><b>DMI_ATR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LREATF:1</td>
+<td>0 - 0</td>
+<td>DMI_ATR_LREATF_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SREATF:1</td>
+<td>1 - 1</td>
+<td>DMI_ATR_SREATF_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LFEATF:1</td>
+<td>2 - 2</td>
+<td>DMI_ATR_LFEATF_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SFEATF:1</td>
+<td>3 - 3</td>
+<td>DMI_ATR_SFEATF_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int LCEATF:1</td>
+<td>4 - 4</td>
+<td>DMI_ATR_LCEATF_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SCEATF:1</td>
+<td>5 - 5</td>
+<td>DMI_ATR_SCEATF_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CRLEATF:1</td>
+<td>6 - 6</td>
+<td>DMI_ATR_CRLEATF_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CRSEATF:1</td>
+<td>7 - 7</td>
+<td>DMI_ATR_CRSEATF_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int CWLEATF:1</td>
+<td>8 - 8</td>
+<td>DMI_ATR_CWLEATF_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CWSEATF:1</td>
+<td>9 - 9</td>
+<td>DMI_ATR_CWSEATF_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CFEATF:1</td>
+<td>10 - 10</td>
+<td>DMI_ATR_CFEATF_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CMEATF:1</td>
+<td>11 - 11</td>
+<td>DMI_ATR_CMEATF_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dmi.html#DMI_ATR">DMI_ATR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dmi.html">DMI</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMI_CON_t"><b>DMI_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMI Control Register</b></td></tr>
+<tr><td colspan="5"><b>DMI_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DCSZ:2</td>
+<td>0 - 1</td>
+<td>DMI_CON_DCSZ_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DMEMSZ:3</td>
+<td>4 - 6</td>
+<td>DMI_CON_DMEMSZ_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dmi.html#DMI_CON">DMI_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dmi.html">DMI</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMI_CON1_t"><b>DMI_CON1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMI Control Register 1</b></td></tr>
+<tr><td colspan="5"><b>DMI_CON1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DC2SPR:1</td>
+<td>0 - 0</td>
+<td>DMI_CON1_DC2SPR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dmi.html#DMI_CON1">DMI_CON1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dmi.html">DMI</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMI_ID_t"><b>DMI_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMI Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>DMI_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>DMI_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>DMI_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>DMI_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dmi.html#DMI_ID">DMI_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dmi.html">DMI</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMI_STR_t"><b>DMI_STR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>DMI Synchronous Trap Register</b></td></tr>
+<tr><td colspan="5"><b>DMI_STR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LRESTF:1</td>
+<td>0 - 0</td>
+<td>DMI_STR_LRESTF_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SRESTF:1</td>
+<td>1 - 1</td>
+<td>DMI_STR_SRESTF_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LFESTF:1</td>
+<td>2 - 2</td>
+<td>DMI_STR_LFESTF_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SFESTF:1</td>
+<td>3 - 3</td>
+<td>DMI_STR_SFESTF_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int LCESTF:1</td>
+<td>4 - 4</td>
+<td>DMI_STR_LCESTF_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SCESTF:1</td>
+<td>5 - 5</td>
+<td>DMI_STR_SCESTF_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CRLESTF:1</td>
+<td>6 - 6</td>
+<td>DMI_STR_CRLESTF_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CRSESTF:1</td>
+<td>7 - 7</td>
+<td>DMI_STR_CRSESTF_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int CWLESTF:1</td>
+<td>8 - 8</td>
+<td>DMI_STR_CWLESTF_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CWSESTF:1</td>
+<td>9 - 9</td>
+<td>DMI_STR_CWSESTF_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CFESTF:1</td>
+<td>10 - 10</td>
+<td>DMI_STR_CFESTF_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CMESTF:1</td>
+<td>11 - 11</td>
+<td>DMI_STR_CMESTF_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../dmi.html#DMI_STR">DMI_STR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../dmi.html">DMI</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="DMS_t"><b>DMS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Monitor Start Address Register</b></td></tr>
+<tr><td colspan="5"><b>DMS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DMSADR:31</td>
+<td>1 - 31</td>
+<td>DMS_DMSADR_MASK</td>
+<td>0xfffffffe</td>
+<td align="right">1</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../core_debug_registers.html#DMS">DMS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../core_debug_registers.html">Core_Debug_Registers</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="Dn_t"><b>Dn_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Data Register Dn (DGPR)</b></td></tr>
+<tr><td colspan="5"><b>Dn_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../gpr.html#D0">D0</a>,    
+<a class="url" href="../gpr.html#D1">D1</a>,    
+<a class="url" href="../gpr.html#D10">D10</a>,    
+<a class="url" href="../gpr.html#D11">D11</a>,    
+<a class="url" href="../gpr.html#D12">D12</a>,    
+<a class="url" href="../gpr.html#D13">D13</a>,    
+<a class="url" href="../gpr.html#D14">D14</a>,    
+<a class="url" href="../gpr.html#D15">D15</a>,    
+<a class="url" href="../gpr.html#D2">D2</a>,    
+<a class="url" href="../gpr.html#D3">D3</a>,    
+<a class="url" href="../gpr.html#D4">D4</a>,    
+<a class="url" href="../gpr.html#D5">D5</a>,    
+<a class="url" href="../gpr.html#D6">D6</a>,    
+<a class="url" href="../gpr.html#D7">D7</a>,    
+<a class="url" href="../gpr.html#D8">D8</a>,    
+<a class="url" href="../gpr.html#D9">D9</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../gpr.html">GPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

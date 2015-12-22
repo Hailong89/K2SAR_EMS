@@ -1,0 +1,606 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1797/adc1-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1797_ADC1_STRUCTS_H_
+#define _TC1797_ADC1_STRUCTS_H_
+/*
+   TriCore TC1797
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1797/<a class="url" href="../adc1.html">adc1.h</a>&gt;
+#ifndef ADC1_BASE
+#define ADC1_BASE 0xf0101400
+#endif /* ADC1_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved0[0x4];</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RSIRm_t">ADCn_RSIRm_t</a></td>
+<td>RSIR0;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RSIRm_t">ADCn_RSIRm_t</a></td>
+<td>RSIR1;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RSIRm_t">ADCn_RSIRm_t</a></td>
+<td>RSIR2;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RSIRm_t">ADCn_RSIRm_t</a></td>
+<td>RSIR3;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RSIRm_t">ADCn_RSIRm_t</a></td>
+<td>RSIR4;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved6[0x3];</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_GLOBCTR_t">ADCn_GLOBCTR_t</a></td>
+<td>GLOBCTR;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_GLOBCFG_t">ADCn_GLOBCFG_t</a></td>
+<td>GLOBCFG;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_GLOBSTR_t">ADCn_GLOBSTR_t</a></td>
+<td>GLOBSTR;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_ASENR_t">ADCn_ASENR_t</a></td>
+<td>ASENR;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RSPR0_t">ADCn_RSPR0_t</a></td>
+<td>RSPR0;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RSPR4_t">ADCn_RSPR4_t</a></td>
+<td>RSPR4;</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SYNCTR_t">ADCn_SYNCTR_t</a></td>
+<td>SYNCTR;</td>
+<td>/* 0x48 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved14[0x1];</td>
+<td>/* 0x4c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_INPCRm_t">ADCn_INPCRm_t</a></td>
+<td>INPCR0;</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_INPCRm_t">ADCn_INPCRm_t</a></td>
+<td>INPCR1;</td>
+<td>/* 0x54 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_INPCRm_t">ADCn_INPCRm_t</a></td>
+<td>INPCR2;</td>
+<td>/* 0x58 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_INPCRm_t">ADCn_INPCRm_t</a></td>
+<td>INPCR3;</td>
+<td>/* 0x5c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHFR_t">ADCn_CHFR_t</a></td>
+<td>CHFR;</td>
+<td>/* 0x60 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHFCR_t">ADCn_CHFCR_t</a></td>
+<td>CHFCR;</td>
+<td>/* 0x64 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHENPRm_t">ADCn_CHENPRm_t</a></td>
+<td>CHENPR0;</td>
+<td>/* 0x68 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHENPRm_t">ADCn_CHENPRm_t</a></td>
+<td>CHENPR8;</td>
+<td>/* 0x6c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_EVFR_t">ADCn_EVFR_t</a></td>
+<td>EVFR;</td>
+<td>/* 0x70 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_EVFCR_t">ADCn_EVFCR_t</a></td>
+<td>EVFCR;</td>
+<td>/* 0x74 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_EVNPR_t">ADCn_EVNPR_t</a></td>
+<td>EVNPR;</td>
+<td>/* 0x78 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved26[0x1];</td>
+<td>/* 0x7c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QMRm_t">ADCn_QMRm_t</a></td>
+<td>QMR0;</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QSRm_t">ADCn_QSRm_t</a></td>
+<td>QSR0;</td>
+<td>/* 0x84 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADC1_Q0R0_t">ADC1_Q0R0_t</a></td>
+<td>Q0R0;</td>
+<td>/* 0x88 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QBURm_t">ADCn_QBURm_t</a></td>
+<td>QBUR0;</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CRCRm_t">ADCn_CRCRm_t</a></td>
+<td>CRCR1;</td>
+<td>/* 0x90 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CRPRm_t">ADCn_CRPRm_t</a></td>
+<td>CRPR1;</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CRMRm_t">ADCn_CRMRm_t</a></td>
+<td>CRMR1;</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved34[0x1];</td>
+<td>/* 0x9c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QMRm_t">ADCn_QMRm_t</a></td>
+<td>QMR2;</td>
+<td>/* 0xa0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QSRm_t">ADCn_QSRm_t</a></td>
+<td>QSR2;</td>
+<td>/* 0xa4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADC1_Q0R2_t">ADC1_Q0R2_t</a></td>
+<td>Q0R2;</td>
+<td>/* 0xa8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QBURm_t">ADCn_QBURm_t</a></td>
+<td>QBUR2;</td>
+<td>/* 0xac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CRCRm_t">ADCn_CRCRm_t</a></td>
+<td>CRCR3;</td>
+<td>/* 0xb0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CRPRm_t">ADCn_CRPRm_t</a></td>
+<td>CRPR3;</td>
+<td>/* 0xb4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CRMRm_t">ADCn_CRMRm_t</a></td>
+<td>CRMR3;</td>
+<td>/* 0xb8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved42[0x1];</td>
+<td>/* 0xbc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QMRm_t">ADCn_QMRm_t</a></td>
+<td>QMR4;</td>
+<td>/* 0xc0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QSRm_t">ADCn_QSRm_t</a></td>
+<td>QSR4;</td>
+<td>/* 0xc4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADC1_Q0R4_t">ADC1_Q0R4_t</a></td>
+<td>Q0R4;</td>
+<td>/* 0xc8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QBURm_t">ADCn_QBURm_t</a></td>
+<td>QBUR4;</td>
+<td>/* 0xcc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved47[0x8];</td>
+<td>/* 0xd0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCBRm_t">ADCn_LCBRm_t</a></td>
+<td>LCBR0;</td>
+<td>/* 0xf0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCBRm_t">ADCn_LCBRm_t</a></td>
+<td>LCBR1;</td>
+<td>/* 0xf4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCBRm_t">ADCn_LCBRm_t</a></td>
+<td>LCBR2;</td>
+<td>/* 0xf8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCBRm_t">ADCn_LCBRm_t</a></td>
+<td>LCBR3;</td>
+<td>/* 0xfc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHCTRm_t">ADCn_CHCTRm_t</a></td>
+<td>CHCTR[0x10];</td>
+<td>/* 0x100 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RCRm_t">ADCn_RCRm_t</a></td>
+<td>RCR[0x10];</td>
+<td>/* 0x140 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESR0_t">ADCn_RESR0_t</a></td>
+<td>RESR0;</td>
+<td>/* 0x180 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR1;</td>
+<td>/* 0x184 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR2;</td>
+<td>/* 0x188 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR3;</td>
+<td>/* 0x18c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR4;</td>
+<td>/* 0x190 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR5;</td>
+<td>/* 0x194 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR6;</td>
+<td>/* 0x198 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR7;</td>
+<td>/* 0x19c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR8;</td>
+<td>/* 0x1a0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR9;</td>
+<td>/* 0x1a4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR10;</td>
+<td>/* 0x1a8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR11;</td>
+<td>/* 0x1ac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR12;</td>
+<td>/* 0x1b0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR13;</td>
+<td>/* 0x1b4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR14;</td>
+<td>/* 0x1b8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRm_t">ADCn_RESRm_t</a></td>
+<td>RESR15;</td>
+<td>/* 0x1bc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRD0_t">ADCn_RESRD0_t</a></td>
+<td>RESRD0;</td>
+<td>/* 0x1c0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD1;</td>
+<td>/* 0x1c4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD2;</td>
+<td>/* 0x1c8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD3;</td>
+<td>/* 0x1cc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD4;</td>
+<td>/* 0x1d0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD5;</td>
+<td>/* 0x1d4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD6;</td>
+<td>/* 0x1d8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD7;</td>
+<td>/* 0x1dc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD8;</td>
+<td>/* 0x1e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD9;</td>
+<td>/* 0x1e4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD10;</td>
+<td>/* 0x1e8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD11;</td>
+<td>/* 0x1ec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD12;</td>
+<td>/* 0x1f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD13;</td>
+<td>/* 0x1f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD14;</td>
+<td>/* 0x1f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RESRDm_t">ADCn_RESRDm_t</a></td>
+<td>RESRD15;</td>
+<td>/* 0x1fc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_VFR_t">ADCn_VFR_t</a></td>
+<td>VFR;</td>
+<td>/* 0x200 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_INTR_t">ADCn_INTR_t</a></td>
+<td>INTR;</td>
+<td>/* 0x204 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RNPRm_t">ADCn_RNPRm_t</a></td>
+<td>RNPR0;</td>
+<td>/* 0x208 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_RNPRm_t">ADCn_RNPRm_t</a></td>
+<td>RNPR8;</td>
+<td>/* 0x20c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_ALR0_t">ADCn_ALR0_t</a></td>
+<td>ALR0;</td>
+<td>/* 0x210 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved91[0x1];</td>
+<td>/* 0x214 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_APR_t">ADCn_APR_t</a></td>
+<td>APR;</td>
+<td>/* 0x218 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved93[0x1];</td>
+<td>/* 0x21c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_EMCTR_t">ADCn_EMCTR_t</a></td>
+<td>EMCTR;</td>
+<td>/* 0x220 */</td>
+</tr>
+
+<tr><td colspan="4">} ADC1_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1797_ADC1_STRUCTS_H_ */ -->
+</body>
+</html>

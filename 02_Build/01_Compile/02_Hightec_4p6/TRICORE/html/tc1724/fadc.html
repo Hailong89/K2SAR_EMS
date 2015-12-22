@@ -1,0 +1,3430 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1724 (FADC)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>FADC</h2>
+
+<h2><tt>#include &lt;tc1724/fadc.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#FADC_CLC">FADC_CLC</a></td>
+<td>Clock Control Register</td>
+<td>0xF0100400</td>
+<td><a class="url" href="types/f.html#FADC_CLC_t">FADC_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ID">FADC_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0100408</td>
+<td><a class="url" href="types/f.html#FADC_ID_t">FADC_ID_t</a></td>
+<td>0x0027C000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FDR">FADC_FDR</a></td>
+<td>Fractional Divider Register</td>
+<td>0xF010040C</td>
+<td><a class="url" href="types/f.html#FADC_FDR_t">FADC_FDR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRSR">FADC_CRSR</a></td>
+<td>Conversion Request Status Register</td>
+<td>0xF0100410</td>
+<td><a class="url" href="types/f.html#FADC_CRSR_t">FADC_CRSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FMR">FADC_FMR</a></td>
+<td>Flag Modification Register</td>
+<td>0xF0100414</td>
+<td><a class="url" href="types/f.html#FADC_FMR_t">FADC_FMR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_NCTR">FADC_NCTR</a></td>
+<td>Neighbor Channel Trigger Register</td>
+<td>0xF0100418</td>
+<td><a class="url" href="types/f.html#FADC_NCTR_t">FADC_NCTR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_GCR">FADC_GCR</a></td>
+<td>Global Control Register</td>
+<td>0xF010041C</td>
+<td><a class="url" href="types/f.html#FADC_GCR_t">FADC_GCR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CFGR0">FADC_CFGR0</a></td>
+<td>Channel 0 Configuration Register</td>
+<td>0xF0100420</td>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CFGR1">FADC_CFGR1</a></td>
+<td>Channel 1 Configuration Register</td>
+<td>0xF0100424</td>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ACR0">FADC_ACR0</a></td>
+<td>Channel 0 Analog Control Register</td>
+<td>0xF0100430</td>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ACR1">FADC_ACR1</a></td>
+<td>Channel 1 Analog Control Register</td>
+<td>0xF0100434</td>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_RCH0">FADC_RCH0</a></td>
+<td>Channel 0 Conversion Result Register</td>
+<td>0xF0100440</td>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_RCH1">FADC_RCH1</a></td>
+<td>Channel 1 Conversion Result Register</td>
+<td>0xF0100444</td>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_ALR">FADC_ALR</a></td>
+<td>Alias Register</td>
+<td>0xF0100454</td>
+<td><a class="url" href="types/f.html#FADC_ALR_t">FADC_ALR_t</a></td>
+<td>0x000000E4</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FCR0">FADC_FCR0</a></td>
+<td>Filter 0 Control Register</td>
+<td>0xF0100460</td>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRR0">FADC_CRR0</a></td>
+<td>Filter 0 Current Result Register</td>
+<td>0xF0100464</td>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR10">FADC_IRR10</a></td>
+<td>Filter 0 Intermediate Result Register 1</td>
+<td>0xF0100468</td>
+<td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR20">FADC_IRR20</a></td>
+<td>Filter 0 Intermediate Result Register 2</td>
+<td>0xF010046C</td>
+<td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR30">FADC_IRR30</a></td>
+<td>Filter 0 Intermediate Result Register 3</td>
+<td>0xF0100470</td>
+<td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FRR0">FADC_FRR0</a></td>
+<td>Filter 0 Final Result Register</td>
+<td>0xF0100474</td>
+<td><a class="url" href="types/f.html#FADC_FRR0_t">FADC_FRR0_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FCR1">FADC_FCR1</a></td>
+<td>Filter 1 Control Register</td>
+<td>0xF0100480</td>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_CRR1">FADC_CRR1</a></td>
+<td>Filter 1 Current Result Register</td>
+<td>0xF0100484</td>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_IRR11">FADC_IRR11</a></td>
+<td>Filter 1 Intermediate Result Register 1</td>
+<td>0xF0100488</td>
+<td><a class="url" href="types/f.html#FADC_IRR11_t">FADC_IRR11_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_FRR1">FADC_FRR1</a></td>
+<td>Filter 1 Final Result Register</td>
+<td>0xF0100494</td>
+<td><a class="url" href="types/f.html#FADC_FRR1_t">FADC_FRR1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SFRR1">FADC_SFRR1</a></td>
+<td>Filter 1 Shifted Final Result Register</td>
+<td>0xF0100498</td>
+<td><a class="url" href="types/f.html#FADC_SFRR1_t">FADC_SFRR1_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC3">FADC_SRC3</a></td>
+<td>Service Request Control Register 3</td>
+<td>0xF01004F0</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC2">FADC_SRC2</a></td>
+<td>Service Request Control Register 2</td>
+<td>0xF01004F4</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC1">FADC_SRC1</a></td>
+<td>Service Request Control Register 1</td>
+<td>0xF01004F8</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FADC_SRC0">FADC_SRC0</a></td>
+<td>Service Request Control Register 0</td>
+<td>0xF01004FC</td>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_ACR0">FADC_ACR0</a>,       
+<a class="url" href="fadc.html#FADC_ACR1">FADC_ACR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_ALR_t">FADC_ALR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_ALR">FADC_ALR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CFGR0">FADC_CFGR0</a>,       
+<a class="url" href="fadc.html#FADC_CFGR1">FADC_CFGR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CLC_t">FADC_CLC_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CLC">FADC_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CRR0">FADC_CRR0</a>,       
+<a class="url" href="fadc.html#FADC_CRR1">FADC_CRR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_CRSR_t">FADC_CRSR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_CRSR">FADC_CRSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FCR0">FADC_FCR0</a>,       
+<a class="url" href="fadc.html#FADC_FCR1">FADC_FCR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FDR_t">FADC_FDR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FDR">FADC_FDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FMR_t">FADC_FMR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FMR">FADC_FMR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FRR0_t">FADC_FRR0_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FRR0">FADC_FRR0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_FRR1_t">FADC_FRR1_t</a></td>
+<td><a class="url" href="fadc.html#FADC_FRR1">FADC_FRR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_GCR_t">FADC_GCR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_GCR">FADC_GCR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_ID_t">FADC_ID_t</a></td>
+<td><a class="url" href="fadc.html#FADC_ID">FADC_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRR11_t">FADC_IRR11_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR11">FADC_IRR11</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_IRR10">FADC_IRR10</a>,       
+<a class="url" href="fadc.html#FADC_IRR20">FADC_IRR20</a>,       
+<a class="url" href="fadc.html#FADC_IRR30">FADC_IRR30</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_NCTR_t">FADC_NCTR_t</a></td>
+<td><a class="url" href="fadc.html#FADC_NCTR">FADC_NCTR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_RCH0">FADC_RCH0</a>,       
+<a class="url" href="fadc.html#FADC_RCH1">FADC_RCH1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_SFRR1_t">FADC_SFRR1_t</a></td>
+<td><a class="url" href="fadc.html#FADC_SFRR1">FADC_SFRR1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td><a class="url" href="fadc.html#FADC_SRC3">FADC_SRC3</a>,       
+<a class="url" href="fadc.html#FADC_SRC2">FADC_SRC2</a>,       
+<a class="url" href="fadc.html#FADC_SRC1">FADC_SRC1</a>,       
+<a class="url" href="fadc.html#FADC_SRC0">FADC_SRC0</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="FADC_CLC">&nbsp;</a>
+<h3>FADC_CLC</h3>
+<h3>"Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CLC_ADDR = 0xF0100400</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CLC_t">FADC_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_CLC.bits</b>&nbsp;&quot;Clock Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_CLC_MASK = <tt>0x0000003f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Disable Request Bit
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>r</td>
+<td><tt>0x00000002</tt></td>
+<td>Module Disable Status Bit
+</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Module Suspend Enable for OCDS
+</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Sleep Mode Enable Control
+</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Module Suspend Bit Write Enable for OCDS
+</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Fast Switch Off Enable
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000002f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000003d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ID">&nbsp;</a>
+<h3>FADC_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ID_ADDR = 0xF0100408</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0027C000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ID_t">FADC_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FDR">&nbsp;</a>
+<h3>FADC_FDR</h3>
+<h3>"Fractional Divider Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FDR_ADDR = 0xF010040C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FDR_t">FADC_FDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_FDR.bits</b>&nbsp;&quot;Fractional Divider Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_FDR_MASK = <tt>0xf3ffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_FDR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_FDR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>STEP</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>rw</td>
+<td><tt>0x000003ff</tt></td>
+<td>Step Value
+</td>
+</tr>
+<tr>
+<td>FDIS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Freeze Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Module operates on corrected clock, with reduced modulation jitter</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Module operates on uncorrected clock with full modulation jitter</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Suspend Mode
+</td>
+</tr>
+<tr>
+<td>SC</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Suspend Control
+</td>
+</tr>
+<tr>
+<td>DM</td>
+<td>2</td>
+<td>14 - 15</td>
+<td>rw</td>
+<td><tt>0x0000c000</tt></td>
+<td>Divider Mode
+</td>
+</tr>
+<tr>
+<td>RESULT</td>
+<td>10</td>
+<td>16 - 25</td>
+<td>rh</td>
+<td><tt>0x03ff0000</tt></td>
+<td>Result Value
+</td>
+</tr>
+<tr>
+<td>SUSACK</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rh</td>
+<td><tt>0x10000000</tt></td>
+<td>Suspend Mode Acknowledge
+</td>
+</tr>
+<tr>
+<td>SUSREQ</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rh</td>
+<td><tt>0x20000000</tt></td>
+<td>Suspend Mode Request
+</td>
+</tr>
+<tr>
+<td>ENHW</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>Enable Hardware Clock Control
+</td>
+</tr>
+<tr>
+<td>DISCLK</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rwh</td>
+<td><tt>0x80000000</tt></td>
+<td>Disable Clock
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xf3ffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xc000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xb3ff0000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRSR">&nbsp;</a>
+<h3>FADC_CRSR</h3>
+<h3>"Conversion Request Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRSR_ADDR = 0xF0100410</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRSR_t">FADC_CRSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_CRSR.bits</b>&nbsp;&quot;Conversion Request Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_CRSR_MASK = <tt>0x00330303</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_CRSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_CRSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CRF0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Conversion Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A conversion of channel x has not been requested.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A conversion of channel x has been requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CRF1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Conversion Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A conversion of channel x has not been requested.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A conversion of channel x has been requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSY0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Busy Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A conversion is not running.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A conversion is running.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSY1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Busy Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A conversion is not running.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A conversion is running.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IRQ0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Interrupt Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A conversion has not been finished.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A conversion has been finished.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IRQ1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Interrupt Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A conversion has not been finished.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A conversion has been finished.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IRQF0</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rh</td>
+<td><tt>0x00100000</tt></td>
+<td>Interrupt Request Flag for Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A filter sequence has not been finished.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A filter sequence has been finished.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IRQF1</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Interrupt Request Flag for Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>A filter sequence has not been finished.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A filter sequence has been finished.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00330303</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00330303</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FMR">&nbsp;</a>
+<h3>FADC_FMR</h3>
+<h3>"Flag Modification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FMR_ADDR = 0xF0100414</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FMR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FMR_t">FADC_FMR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_FMR.bits</b>&nbsp;&quot;Flag Modification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_FMR_MASK = <tt>0x33330303</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_FMR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_FMR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RCRF0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Clear Conversion Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.CRFx is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCRF1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Clear Conversion Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.CRFx is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCRF0</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Set Conversion Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.CRFx is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SCRF1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Set Conversion Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.CRFx is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RIRQ0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>Clear Interrupt Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQx is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RIRQ1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>w</td>
+<td><tt>0x00020000</tt></td>
+<td>Clear Interrupt Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQx is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RIRQF0</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>w</td>
+<td><tt>0x00100000</tt></td>
+<td>Clear Interrupt Request Flag for Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQFn is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RIRQF1</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>w</td>
+<td><tt>0x00200000</tt></td>
+<td>Clear Interrupt Request Flag for Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQFn is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SIRQ0</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>w</td>
+<td><tt>0x01000000</tt></td>
+<td>Set Interrupt Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQx is set and an interrupt is generated if CFGRx.IEN=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SIRQ1</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>w</td>
+<td><tt>0x02000000</tt></td>
+<td>Set Interrupt Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQx is set and an interrupt is generated if CFGRx.IEN=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SIRQF0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>w</td>
+<td><tt>0x10000000</tt></td>
+<td>Set Interrupt Request Flag for Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQFn is set and an interrupt is generated if FCRn.IEN=1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SIRQF1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>w</td>
+<td><tt>0x20000000</tt></td>
+<td>Set Interrupt Request Flag for Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No operation</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bit CRSR.IRQFn is set and an interrupt is generated if FCRn.IEN=1.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x33330303</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_NCTR">&nbsp;</a>
+<h3>FADC_NCTR</h3>
+<h3>"Neighbor Channel Trigger Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_NCTR_ADDR = 0xF0100418</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_NCTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_NCTR_t">FADC_NCTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_NCTR.bits</b>&nbsp;&quot;Neighbor Channel Trigger Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_NCTR_MASK = <tt>0x00000102</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_NCTR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_NCTR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>EN01</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Enable Neighbor Channel Trigger 01
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A trigger will be generated.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EN10</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Enable Neighbor Channel Trigger 10
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A trigger will be generated.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000102</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000102</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_GCR">&nbsp;</a>
+<h3>FADC_GCR</h3>
+<h3>"Global Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_GCR_ADDR = 0xF010041C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_GCR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_GCR_t">FADC_GCR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_GCR.bits</b>&nbsp;&quot;Global Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_GCR_MASK = <tt>0x073f0703</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_GCR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_GCR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RCT0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Reload Channel Timer
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Channel x Timer will not be changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Channel x Timer will be loaded with its reload value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCT1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Reload Channel Timer
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Channel x Timer will not be changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Channel x Timer will be loaded with its reload value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RCD</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Reset Common Divider
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The common divider will not be changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The common divider will be cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RSTF0</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Reset Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The contents of filter n will not be changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The contents of filter n will be cleared. The values of the bits in the filter registers will be cleared, except bit field CRRn.AC that is loaded with the value of FCRn.ADDL.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RSTF1</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Reset Filter n
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The contents of filter n will not be changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The contents of filter n will be cleared. The values of the bits in the filter registers will be cleared, except bit field CRRn.AC that is loaded with the value of FCRn.ADDL.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CRPRIO</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>rwh</td>
+<td><tt>0x00030000</tt></td>
+<td>Conversion Request Priority
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Channel 0 before channel 1</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Channel 1 before channel 0</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Channel 0 before channel 1</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Channel 0 before channel 1</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DPAEN</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rw</td>
+<td><tt>0x00040000</tt></td>
+<td>Dynamic Priority Assignment Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The dynamic priority assignment is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The dynamic priority assignment is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RESWEN</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rw</td>
+<td><tt>0x00080000</tt></td>
+<td>Result Write Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Write accesses to the result registers are not taken into account. The written data is discarded.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Write accesses to the result registers are taken into account. The former value of the written result register is overwritten by the write data. If a filter is sensitive to the written result register, the written value is taken as new filter input value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MUXTM</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rw</td>
+<td><tt>0x00100000</tt></td>
+<td>Multiplexer Test Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The multiplexer test mode is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The multiplexer test mode is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ANON</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rw</td>
+<td><tt>0x00200000</tt></td>
+<td>Analog Part ON
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The complete analog part is in power-down mode, the amplifiers and comparators are switched off. Conversions are not possible.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The analog part is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CALMODE</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>rw</td>
+<td><tt>0x03000000</tt></td>
+<td>Calibration Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No calibration process is running. All channels are in normal mode (default after reset).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The analog channel selected by CALCH is in offset calibration mode. The other channels are in normal mode.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Reserved</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CALCH</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rw</td>
+<td><tt>0x04000000</tt></td>
+<td>Calibration Channel
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The analog input channel 0 is selected for a calibration process.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The analog input channel 1 is selected for a calibration process.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x073f0000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x073f0703</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00030000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CFGR0">&nbsp;</a>
+<h3>FADC_CFGR0</h3>
+<h3>"Channel 0 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CFGR0_ADDR = 0xF0100420</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CFGRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_CFGR0.bits</b>&nbsp;&quot;Channel 0 Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_CFGRm_MASK = <tt>0xb0ff7fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_CFGRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_CFGRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>GSEL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Gating Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Gating source input signal GSA selected</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Gating source input signal GSB selected</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gating source input signal GSC selected</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gating source input signal GSD selected</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Gating source input signal GSE selected</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Gating source input signal GSF selected</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Gating source input signal GSG selected</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Gating source input signal GSH selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TSEL</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Trigger Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Trigger source input signal TSA selected</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Trigger source input signal TSB selected</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Trigger source input signal TSC selected</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Trigger source input signal TSD selected</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Trigger source input signal TSE selected</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Trigger source input signal TSF selected</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Trigger source input signal TSG selected</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Trigger source input signal TSH selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>GM</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Gating Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Conversion requests are disabled and the Channel Timer is stopped. CRFx never becomes set (by hardware).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Conversion requests and the Channel Timer are always enabled. CRFx becomes set by hardware with each active trigger signal.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Conversion requests and the Channel Timer are enabled only if the gating source input (as selected by CFGRx.GSEL) is at high level.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Conversion requests and the Channel Timer are enabled only if the gating source input (as selected by CFGRx.GSEL) is at low level.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Trigger Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No conversion trigger signals are generated. Edge detection unit is switched off.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>A conversion request is generated (if gating enabled) on a rising edge of a trigger source input (as selected by CFGRx.TSEL).</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>A conversion request is generated (if gating enabled) on a falling edge of a trigger source input (as selected by CFGRx.TSEL).</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>A conversion request is generated (if gating enabled) on both, rising and falling, edges of a trigger source input (as selected by CFGRx.TSEL).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTM</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Channel Timer Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Channel x timer is switched off.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Channel timer is permanently running.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Channel timer is running only if ECHTIMx=1.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTF</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>rw</td>
+<td><tt>0x00007000</tt></td>
+<td>Channel Timer Frequency
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>fCTx is disabled.</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 4.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 16.</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 64.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 256.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 1024.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Reserved; do not use this combination.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTREL</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>rw</td>
+<td><tt>0x00ff0000</tt></td>
+<td>Channel Timer Reload Value
+</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>rw</td>
+<td><tt>0x30000000</tt></td>
+<td>Interrupt Node Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>Interrupt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Channel x conversion service request generation is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Channel x conversion service request generation is enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xb0ff7fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CFGR1">&nbsp;</a>
+<h3>FADC_CFGR1</h3>
+<h3>"Channel 1 Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CFGR1_ADDR = 0xF0100424</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CFGRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_CFGR1.bits</b>&nbsp;&quot;Channel 1 Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_CFGRm_MASK = <tt>0xb0ff7fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_CFGRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_CFGRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>GSEL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Gating Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Gating source input signal GSA selected</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Gating source input signal GSB selected</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Gating source input signal GSC selected</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Gating source input signal GSD selected</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Gating source input signal GSE selected</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Gating source input signal GSF selected</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Gating source input signal GSG selected</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Gating source input signal GSH selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TSEL</td>
+<td>3</td>
+<td>3 - 5</td>
+<td>rw</td>
+<td><tt>0x00000038</tt></td>
+<td>Trigger Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Trigger source input signal TSA selected</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Trigger source input signal TSB selected</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Trigger source input signal TSC selected</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Trigger source input signal TSD selected</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Trigger source input signal TSE selected</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Trigger source input signal TSF selected</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Trigger source input signal TSG selected</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Trigger source input signal TSH selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>GM</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>rw</td>
+<td><tt>0x000000c0</tt></td>
+<td>Gating Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Conversion requests are disabled and the Channel Timer is stopped. CRFx never becomes set (by hardware).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Conversion requests and the Channel Timer are always enabled. CRFx becomes set by hardware with each active trigger signal.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Conversion requests and the Channel Timer are enabled only if the gating source input (as selected by CFGRx.GSEL) is at high level.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Conversion requests and the Channel Timer are enabled only if the gating source input (as selected by CFGRx.GSEL) is at low level.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>rw</td>
+<td><tt>0x00000300</tt></td>
+<td>Trigger Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No conversion trigger signals are generated. Edge detection unit is switched off.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>A conversion request is generated (if gating enabled) on a rising edge of a trigger source input (as selected by CFGRx.TSEL).</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>A conversion request is generated (if gating enabled) on a falling edge of a trigger source input (as selected by CFGRx.TSEL).</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>A conversion request is generated (if gating enabled) on both, rising and falling, edges of a trigger source input (as selected by CFGRx.TSEL).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTM</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Channel Timer Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Channel x timer is switched off.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Channel timer is permanently running.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Channel timer is running only if ECHTIMx=1.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTF</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>rw</td>
+<td><tt>0x00007000</tt></td>
+<td>Channel Timer Frequency
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>fCTx is disabled.</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 4.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 16.</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 64.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 256.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>fCTx is enabled with frequency fFADC / 1024.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Reserved; do not use this combination.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CTREL</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>rw</td>
+<td><tt>0x00ff0000</tt></td>
+<td>Channel Timer Reload Value
+</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>rw</td>
+<td><tt>0x30000000</tt></td>
+<td>Interrupt Node Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 is selected.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 is selected.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 is selected.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 is selected.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>Interrupt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Channel x conversion service request generation is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Channel x conversion service request generation is enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xb0ff7fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xb0ff7fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ACR0">&nbsp;</a>
+<h3>FADC_ACR0</h3>
+<h3>"Channel 0 Analog Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ACR0_ADDR = 0xF0100430</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ACRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_ACR0.bits</b>&nbsp;&quot;Channel 0 Analog Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_ACRm_MASK = <tt>0x0000170f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_ACRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_ACRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>GAIN</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Amplifier Gain
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The selected amplifier gain is 1.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The selected amplifier gain is 2.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The selected amplifier gain is 4.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The selected amplifier gain is 8.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Enable Positive Input
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Analog input FAINxP is high-impedance. The upper half of the measuring range is not available.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Analog input FAINxP line is connected to the channel amplifier. The upper half of the measuring range is available.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENN</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Enable Negative Input
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Analog input FAINxN is high-impedance. The lower half of the measuring range is not available.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Analog input FAINxN line is connected to the channel amplifier. The lower half of the measuring range is available.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CALOFF_2_0</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Calibrate Offset
+</td>
+</tr>
+<tr>
+<td>CALOFF3</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000170f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000170f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ACR1">&nbsp;</a>
+<h3>FADC_ACR1</h3>
+<h3>"Channel 1 Analog Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ACR1_ADDR = 0xF0100434</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ACRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_ACR1.bits</b>&nbsp;&quot;Channel 1 Analog Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_ACRm_MASK = <tt>0x0000170f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_ACRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_ACRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>GAIN</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>Amplifier Gain
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>The selected amplifier gain is 1.</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>The selected amplifier gain is 2.</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>The selected amplifier gain is 4.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>The selected amplifier gain is 8.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENP</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Enable Positive Input
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Analog input FAINxP is high-impedance. The upper half of the measuring range is not available.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Analog input FAINxP line is connected to the channel amplifier. The upper half of the measuring range is available.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENN</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Enable Negative Input
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Analog input FAINxN is high-impedance. The lower half of the measuring range is not available.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Analog input FAINxN line is connected to the channel amplifier. The lower half of the measuring range is available.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CALOFF_2_0</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Calibrate Offset
+</td>
+</tr>
+<tr>
+<td>CALOFF3</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000170f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000170f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_RCH0">&nbsp;</a>
+<h3>FADC_RCH0</h3>
+<h3>"Channel 0 Conversion Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_RCH0_ADDR = 0xF0100440</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_RCHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_RCH0.bits</b>&nbsp;&quot;Channel 0 Conversion Result Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_RCHm_MASK = <tt>0x000003ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_RCHm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_RCHm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADRES</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>rwh</td>
+<td><tt>0x000003ff</tt></td>
+<td>AD Conversion Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000003ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_RCH1">&nbsp;</a>
+<h3>FADC_RCH1</h3>
+<h3>"Channel 1 Conversion Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_RCH1_ADDR = 0xF0100444</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_RCHm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_RCH1.bits</b>&nbsp;&quot;Channel 1 Conversion Result Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_RCHm_MASK = <tt>0x000003ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_RCHm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_RCHm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADRES</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>rwh</td>
+<td><tt>0x000003ff</tt></td>
+<td>AD Conversion Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000003ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000003ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_ALR">&nbsp;</a>
+<h3>FADC_ALR</h3>
+<h3>"Alias Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_ALR_ADDR = 0xF0100454</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_ALR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000000E4</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_ALR_t">FADC_ALR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_ALR.bits</b>&nbsp;&quot;Alias Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_ALR_MASK = <tt>0x00000005</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_ALR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_ALR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ALIAS0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Alias of Channel 0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Channel 0 will be converted (default).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Channel 1 will be converted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ALIAS1</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Alias of Channel 1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Channel 0 will be converted.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Channel 1 will be converted (default).</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000005</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000005</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FCR0">&nbsp;</a>
+<h3>FADC_FCR0</h3>
+<h3>"Filter 0 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FCR0_ADDR = 0xF0100460</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_FCR0.bits</b>&nbsp;&quot;Filter 0 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_FCRm_MASK = <tt>0x0000b737</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_FCRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_FCRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADDL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Addition Length
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Each filter input value is considered as intermediate result.</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>2 filter input values are added up.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>3 filter input values are added up.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>4 filter input values are added up.</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>5 filter input values are added up.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>6 filter input values are added up.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>7 filter input values are added up.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>8 filter input values are added up.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MAVL</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Moving Average Length
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No moving average is selected. Each intermediate result is considered as final result value: FRRn.FR=CRRn.CR</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>A moving average of 2 values is selected. The final result is calculated by 2 values: FRRn.FR = CRRn.CR + IRR1n.IR</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>A moving average of 3 values is selected. The final result is calculated by 3 values: FRRn.FR = CRRn.CR+IRR1n.IR+ IRR2n.IR</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>A moving average of 4 values is selected. The final result is calculated by 4 values: FRRn.FR = CRRn.CR+IRR1n.IR+ IRR2n.IR + IRR3n.IR</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INSEL</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Input Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>The filter block is disabled. Intermediate and final sum calculations are not executed. The filter register values are not changed (except by a filter block reset).</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Any conversion result of any channel is taken as new filter input value.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Filter block 0: filter is stopped (as 000B). Filter block 1: filter input value is the output value (final result) of filter block 0. Filter block 2: filter is stopped (as 000B). Filter block 3: filter input value is the output value (final result) of filter block 2.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Reserved</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Channel 0 conversion result is taken as filter input value.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Channel 1 conversion result is taken as filter input value.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Channel 2 conversion result is taken as filter input value.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Channel 3 conversion result is taken as filter input value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Interrupt Node Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Interrupt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request generation disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request generation enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000b737</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRR0">&nbsp;</a>
+<h3>FADC_CRR0</h3>
+<h3>"Filter 0 Current Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRR0_ADDR = 0xF0100464</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_CRR0.bits</b>&nbsp;&quot;Filter 0 Current Result Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_CRRm_MASK = <tt>0x3703ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_CRRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_CRRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CR</td>
+<td>18</td>
+<td>0 - 17</td>
+<td>rh</td>
+<td><tt>0x0003ffff</tt></td>
+<td>Current Result
+</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>rh</td>
+<td><tt>0x07000000</tt></td>
+<td>Addition Count
+</td>
+</tr>
+<tr>
+<td>MAVS</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>rh</td>
+<td><tt>0x30000000</tt></td>
+<td>Moving Average State
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x3703ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x3703ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR10">&nbsp;</a>
+<h3>FADC_IRR10</h3>
+<h3>"Filter 0 Intermediate Result Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR10_ADDR = 0xF0100468</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_IRR10.bits</b>&nbsp;&quot;Filter 0 Intermediate Result Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_IRRm_MASK = <tt>0x00001fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_IRRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_IRRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>rh</td>
+<td><tt>0x00001fff</tt></td>
+<td>Intermediate Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00001fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR20">&nbsp;</a>
+<h3>FADC_IRR20</h3>
+<h3>"Filter 0 Intermediate Result Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR20_ADDR = 0xF010046C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_IRR20.bits</b>&nbsp;&quot;Filter 0 Intermediate Result Register 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_IRRm_MASK = <tt>0x00001fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_IRRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_IRRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>rh</td>
+<td><tt>0x00001fff</tt></td>
+<td>Intermediate Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00001fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR30">&nbsp;</a>
+<h3>FADC_IRR30</h3>
+<h3>"Filter 0 Intermediate Result Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR30_ADDR = 0xF0100470</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_IRR30.bits</b>&nbsp;&quot;Filter 0 Intermediate Result Register 3&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_IRRm_MASK = <tt>0x00001fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_IRRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_IRRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>rh</td>
+<td><tt>0x00001fff</tt></td>
+<td>Intermediate Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00001fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FRR0">&nbsp;</a>
+<h3>FADC_FRR0</h3>
+<h3>"Filter 0 Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FRR0_ADDR = 0xF0100474</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FRR0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FRR0_t">FADC_FRR0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_FRR0.bits</b>&nbsp;&quot;Filter 0 Final Result Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_FRR0_MASK = <tt>0x00007fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_FRR0_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_FRR0_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>15</td>
+<td>0 - 14</td>
+<td>rh</td>
+<td><tt>0x00007fff</tt></td>
+<td>Final Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00007fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00007fff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FCR1">&nbsp;</a>
+<h3>FADC_FCR1</h3>
+<h3>"Filter 1 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FCR1_ADDR = 0xF0100480</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FCRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_FCR1.bits</b>&nbsp;&quot;Filter 1 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_FCRm_MASK = <tt>0x0000b737</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_FCRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_FCRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADDL</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>rw</td>
+<td><tt>0x00000007</tt></td>
+<td>Addition Length
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>Each filter input value is considered as intermediate result.</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>2 filter input values are added up.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>3 filter input values are added up.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>4 filter input values are added up.</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>5 filter input values are added up.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>6 filter input values are added up.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>7 filter input values are added up.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>8 filter input values are added up.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>MAVL</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>rw</td>
+<td><tt>0x00000030</tt></td>
+<td>Moving Average Length
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>No moving average is selected. Each intermediate result is considered as final result value: FRRn.FR=CRRn.CR</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>A moving average of 2 values is selected. The final result is calculated by 2 values: FRRn.FR = CRRn.CR + IRR1n.IR</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>A moving average of 3 values is selected. The final result is calculated by 3 values: FRRn.FR = CRRn.CR+IRR1n.IR+ IRR2n.IR</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>A moving average of 4 values is selected. The final result is calculated by 4 values: FRRn.FR = CRRn.CR+IRR1n.IR+ IRR2n.IR + IRR3n.IR</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INSEL</td>
+<td>3</td>
+<td>8 - 10</td>
+<td>rw</td>
+<td><tt>0x00000700</tt></td>
+<td>Input Selection
+<table class="valdesc">
+<tr><td>000</td><td>&nbsp;</td><td>The filter block is disabled. Intermediate and final sum calculations are not executed. The filter register values are not changed (except by a filter block reset).</td></tr>
+<tr><td>001</td><td>&nbsp;</td><td>Any conversion result of any channel is taken as new filter input value.</td></tr>
+<tr><td>010</td><td>&nbsp;</td><td>Filter block 0: filter is stopped (as 000B). Filter block 1: filter input value is the output value (final result) of filter block 0. Filter block 2: filter is stopped (as 000B). Filter block 3: filter input value is the output value (final result) of filter block 2.</td></tr>
+<tr><td>011</td><td>&nbsp;</td><td>Reserved</td></tr>
+<tr><td>100</td><td>&nbsp;</td><td>Channel 0 conversion result is taken as filter input value.</td></tr>
+<tr><td>101</td><td>&nbsp;</td><td>Channel 1 conversion result is taken as filter input value.</td></tr>
+<tr><td>110</td><td>&nbsp;</td><td>Channel 2 conversion result is taken as filter input value.</td></tr>
+<tr><td>111</td><td>&nbsp;</td><td>Channel 3 conversion result is taken as filter input value.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>rw</td>
+<td><tt>0x00003000</tt></td>
+<td>Interrupt Node Pointer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request output SR0 selected</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request output SR1 selected</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Service request output SR2 selected</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Service request output SR3 selected</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IEN</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Interrupt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request generation disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request generation enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000b737</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000b737</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_CRR1">&nbsp;</a>
+<h3>FADC_CRR1</h3>
+<h3>"Filter 1 Current Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_CRR1_ADDR = 0xF0100484</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_CRRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_CRRm_t">FADC_CRRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_CRR1.bits</b>&nbsp;&quot;Filter 1 Current Result Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_CRRm_MASK = <tt>0x3703ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_CRRm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_CRRm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CR</td>
+<td>18</td>
+<td>0 - 17</td>
+<td>rh</td>
+<td><tt>0x0003ffff</tt></td>
+<td>Current Result
+</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>rh</td>
+<td><tt>0x07000000</tt></td>
+<td>Addition Count
+</td>
+</tr>
+<tr>
+<td>MAVS</td>
+<td>2</td>
+<td>28 - 29</td>
+<td>rh</td>
+<td><tt>0x30000000</tt></td>
+<td>Moving Average State
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x3703ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x3703ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_IRR11">&nbsp;</a>
+<h3>FADC_IRR11</h3>
+<h3>"Filter 1 Intermediate Result Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_IRR11_ADDR = 0xF0100488</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_IRR11_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_IRR11_t">FADC_IRR11_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_IRR11.bits</b>&nbsp;&quot;Filter 1 Intermediate Result Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_IRR11_MASK = <tt>0x0003ffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_IRR11_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_IRR11_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>IR</td>
+<td>18</td>
+<td>0 - 17</td>
+<td>rh</td>
+<td><tt>0x0003ffff</tt></td>
+<td>Intermediate Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0003ffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0003ffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_FRR1">&nbsp;</a>
+<h3>FADC_FRR1</h3>
+<h3>"Filter 1 Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_FRR1_ADDR = 0xF0100494</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_FRR1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_FRR1_t">FADC_FRR1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_FRR1.bits</b>&nbsp;&quot;Filter 1 Final Result Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_FRR1_MASK = <tt>0x000fffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_FRR1_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_FRR1_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>20</td>
+<td>0 - 19</td>
+<td>rh</td>
+<td><tt>0x000fffff</tt></td>
+<td>Final Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000fffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000fffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SFRR1">&nbsp;</a>
+<h3>FADC_SFRR1</h3>
+<h3>"Filter 1 Shifted Final Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SFRR1_ADDR = 0xF0100498</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SFRR1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SFRR1_t">FADC_SFRR1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_SFRR1.bits</b>&nbsp;&quot;Filter 1 Shifted Final Result Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_SFRR1_MASK = <tt>0x00007fff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_SFRR1_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_SFRR1_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FR</td>
+<td>15</td>
+<td>0 - 14</td>
+<td>rh</td>
+<td><tt>0x00007fff</tt></td>
+<td>Final Result
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00007fff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00007fff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC3">&nbsp;</a>
+<h3>FADC_SRC3</h3>
+<h3>"Service Request Control Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC3_ADDR = 0xF01004F0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_SRC3.bits</b>&nbsp;&quot;Service Request Control Register 3&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC2">&nbsp;</a>
+<h3>FADC_SRC2</h3>
+<h3>"Service Request Control Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC2_ADDR = 0xF01004F4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_SRC2.bits</b>&nbsp;&quot;Service Request Control Register 2&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC1">&nbsp;</a>
+<h3>FADC_SRC1</h3>
+<h3>"Service Request Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC1_ADDR = 0xF01004F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_SRC1.bits</b>&nbsp;&quot;Service Request Control Register 1&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FADC_SRC0">&nbsp;</a>
+<h3>FADC_SRC0</h3>
+<h3>"Service Request Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FADC_SRC0_ADDR = 0xF01004FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FADC_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>FADC_SRC0.bits</b>&nbsp;&quot;Service Request Control Register 0&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>FADC_SRCm_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>FADC_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

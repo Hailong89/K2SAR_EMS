@@ -1,0 +1,54 @@
+/* (c) 2000-2008 HighTec EDV-Systeme GmbH */
+#ifndef _TRICORE_TC1796A_H_ /* (2797 SFRs in 49 blocks) */
+#define _TRICORE_TC1796A_H_
+#include <tc1796a/adc0.h>
+#include <tc1796a/adc1.h>
+#include <tc1796a/asc0.h>
+#include <tc1796a/asc1.h>
+#include <tc1796a/can.h>
+#include <tc1796a/cerberus.h>
+#include <tc1796a/core_debug_registers.h>
+#include <tc1796a/cps.h>
+#include <tc1796a/csfr.h>
+#include <tc1796a/dbcu.h>
+#include <tc1796a/dma.h>
+#include <tc1796a/dmi.h>
+#include <tc1796a/dmu.h>
+#include <tc1796a/ebu.h>
+#include <tc1796a/fadc.h>
+#include <tc1796a/flash.h>
+#include <tc1796a/gpr.h>
+#include <tc1796a/gpta0.h>
+#include <tc1796a/gpta1.h>
+#include <tc1796a/lfi.h>
+#include <tc1796a/ltca2.h>
+#include <tc1796a/mchk.h>
+#include <tc1796a/mli0.h>
+#include <tc1796a/mli1.h>
+#include <tc1796a/mmu_empty.h>
+#include <tc1796a/mpr.h>
+#include <tc1796a/msc0.h>
+#include <tc1796a/msc1.h>
+#include <tc1796a/p0.h>
+#include <tc1796a/p1.h>
+#include <tc1796a/p10.h>
+#include <tc1796a/p2.h>
+#include <tc1796a/p3.h>
+#include <tc1796a/p4.h>
+#include <tc1796a/p5.h>
+#include <tc1796a/p6.h>
+#include <tc1796a/p7.h>
+#include <tc1796a/p8.h>
+#include <tc1796a/p9.h>
+#include <tc1796a/pbcu.h>
+#include <tc1796a/pcp2.h>
+#include <tc1796a/pmi.h>
+#include <tc1796a/pmu.h>
+#include <tc1796a/rbcu.h>
+#include <tc1796a/sbcu.h>
+#include <tc1796a/scu.h>
+#include <tc1796a/ssc0.h>
+#include <tc1796a/ssc1.h>
+#include <tc1796a/stm.h>
+
+#endif /* _TRICORE_TC1796A_H_ */

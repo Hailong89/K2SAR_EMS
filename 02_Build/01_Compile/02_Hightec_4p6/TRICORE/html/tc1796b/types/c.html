@@ -1,0 +1,5025 @@
+<html>
+<head>
+<title>TriCore TC1796B (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="CAN_AWDR_t"><b>CAN_AWDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Application Watchdog Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_AWDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int AWDV:8</td>
+<td>0 - 7</td>
+<td>CAN_AWDR_AWDV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_AWDR">CAN_AWDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_CLC_t"><b>CAN_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>CAN_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>CAN_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>CAN_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EDIS:1</td>
+<td>3 - 3</td>
+<td>CAN_CLC_EDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>CAN_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>CAN_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_CLC">CAN_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_CYCTMR_t"><b>CAN_CYCTMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Cycle Time Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_CYCTMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CYCTM:16</td>
+<td>0 - 15</td>
+<td>CAN_CYCTMR_CYCTM_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int BCC:6</td>
+<td>16 - 21</td>
+<td>CAN_CYCTMR_BCC_MASK</td>
+<td>0x003f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CSM:6</td>
+<td>24 - 29</td>
+<td>CAN_CYCTMR_CSM_MASK</td>
+<td>0x3f000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_CYCTMR">CAN_CYCTMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_FDR_t"><b>CAN_FDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Fractional Divider Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_FDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STEP:10</td>
+<td>0 - 9</td>
+<td>CAN_FDR_STEP_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SM:1</td>
+<td>11 - 11</td>
+<td>CAN_FDR_SM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SC:2</td>
+<td>12 - 13</td>
+<td>CAN_FDR_SC_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DM:2</td>
+<td>14 - 15</td>
+<td>CAN_FDR_DM_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RESULT:10</td>
+<td>16 - 25</td>
+<td>CAN_FDR_RESULT_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>28 - 28</td>
+<td>CAN_FDR_SUSACK_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SUSREQ:1</td>
+<td>29 - 29</td>
+<td>CAN_FDR_SUSREQ_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENHW:1</td>
+<td>30 - 30</td>
+<td>CAN_FDR_ENHW_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int DISCLK:1</td>
+<td>31 - 31</td>
+<td>CAN_FDR_DISCLK_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_FDR">CAN_FDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_GMR_t"><b>CAN_GMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Global Mark Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_GMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int GMFR:7</td>
+<td>9 - 15</td>
+<td>CAN_GMR_GMFR_MASK</td>
+<td>0x0000fe00</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int GM:16</td>
+<td>16 - 31</td>
+<td>CAN_GMR_GM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_GMR">CAN_GMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_ID_t"><b>CAN_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_ID">CAN_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_LGMR_t"><b>CAN_LGMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Last Global Mark Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_LGMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LGMFR:7</td>
+<td>9 - 15</td>
+<td>CAN_LGMR_LGMFR_MASK</td>
+<td>0x0000fe00</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LGM:16</td>
+<td>16 - 31</td>
+<td>CAN_LGMR_LGM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_LGMR">CAN_LGMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_LISTm_t"><b>CAN_LISTm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN List Register n</b></td></tr>
+<tr><td colspan="5"><b>CAN_LISTm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BEGIN:8</td>
+<td>0 - 7</td>
+<td>CAN_LISTm_BEGIN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int END:8</td>
+<td>8 - 15</td>
+<td>CAN_LISTm_END_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SIZE:8</td>
+<td>16 - 23</td>
+<td>CAN_LISTm_SIZE_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int EMPTY:1</td>
+<td>24 - 24</td>
+<td>CAN_LISTm_EMPTY_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_LIST0">CAN_LIST0</a>,    
+<a class="url" href="../can.html#CAN_LIST1">CAN_LIST1</a>,    
+<a class="url" href="../can.html#CAN_LIST2">CAN_LIST2</a>,    
+<a class="url" href="../can.html#CAN_LIST3">CAN_LIST3</a>,    
+<a class="url" href="../can.html#CAN_LIST4">CAN_LIST4</a>,    
+<a class="url" href="../can.html#CAN_LIST5">CAN_LIST5</a>,    
+<a class="url" href="../can.html#CAN_LIST6">CAN_LIST6</a>,    
+<a class="url" href="../can.html#CAN_LIST7">CAN_LIST7</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_LOR_t"><b>CAN_LOR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Local Offset Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_LOR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NEWDISC:1</td>
+<td>0 - 0</td>
+<td>CAN_LOR_NEWDISC_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISC:1</td>
+<td>1 - 1</td>
+<td>CAN_LOR_DISC_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LOFFR:7</td>
+<td>9 - 15</td>
+<td>CAN_LOR_LOFFR_MASK</td>
+<td>0x0000fe00</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LOF:16</td>
+<td>16 - 31</td>
+<td>CAN_LOR_LOF_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_LOR">CAN_LOR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_LREFMR_t"><b>CAN_LREFMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Last Reference Mark Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_LREFMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LREFMFR:7</td>
+<td>9 - 15</td>
+<td>CAN_LREFMR_LREFMFR_MASK</td>
+<td>0x0000fe00</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LREFM:16</td>
+<td>16 - 31</td>
+<td>CAN_LREFMR_LREFM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_LREFMR">CAN_LREFMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_LTR_t"><b>CAN_LTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Local Time Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_LTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LTFR:10</td>
+<td>6 - 15</td>
+<td>CAN_LTR_LTFR_MASK</td>
+<td>0x0000ffc0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int LT:16</td>
+<td>16 - 31</td>
+<td>CAN_LTR_LT_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_LTR">CAN_LTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MCR_t"><b>CAN_MCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Module Control Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_MCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MPSEL:4</td>
+<td>12 - 15</td>
+<td>CAN_MCR_MPSEL_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MCR">CAN_MCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MITR_t"><b>CAN_MITR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Module Interrupt Trigger Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_MITR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IT:16</td>
+<td>0 - 15</td>
+<td>CAN_MITR_IT_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MITR">CAN_MITR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MOAMRm_t"><b>CAN_MOAMRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MOAMRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int AM:29</td>
+<td>0 - 28</td>
+<td>CAN_MOAMRm_AM_MASK</td>
+<td>0x1fffffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MIDE:1</td>
+<td>29 - 29</td>
+<td>CAN_MOAMRm_MIDE_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MOAMR0">CAN_MOAMR0</a>,    
+<a class="url" href="../can.html#CAN_MOAMR1">CAN_MOAMR1</a>,    
+<a class="url" href="../can.html#CAN_MOAMR10">CAN_MOAMR10</a>,    
+<a class="url" href="../can.html#CAN_MOAMR100">CAN_MOAMR100</a>,    
+<a class="url" href="../can.html#CAN_MOAMR101">CAN_MOAMR101</a>,    
+<a class="url" href="../can.html#CAN_MOAMR102">CAN_MOAMR102</a>,    
+<a class="url" href="../can.html#CAN_MOAMR103">CAN_MOAMR103</a>,    
+<a class="url" href="../can.html#CAN_MOAMR104">CAN_MOAMR104</a>,    
+<a class="url" href="../can.html#CAN_MOAMR105">CAN_MOAMR105</a>,    
+<a class="url" href="../can.html#CAN_MOAMR106">CAN_MOAMR106</a>,    
+<a class="url" href="../can.html#CAN_MOAMR107">CAN_MOAMR107</a>,    
+<a class="url" href="../can.html#CAN_MOAMR108">CAN_MOAMR108</a>,    
+<a class="url" href="../can.html#CAN_MOAMR109">CAN_MOAMR109</a>,    
+<a class="url" href="../can.html#CAN_MOAMR11">CAN_MOAMR11</a>,    
+<a class="url" href="../can.html#CAN_MOAMR110">CAN_MOAMR110</a>,    
+<a class="url" href="../can.html#CAN_MOAMR111">CAN_MOAMR111</a>,    
+<a class="url" href="../can.html#CAN_MOAMR112">CAN_MOAMR112</a>,    
+<a class="url" href="../can.html#CAN_MOAMR113">CAN_MOAMR113</a>,    
+<a class="url" href="../can.html#CAN_MOAMR114">CAN_MOAMR114</a>,    
+<a class="url" href="../can.html#CAN_MOAMR115">CAN_MOAMR115</a>,    
+<a class="url" href="../can.html#CAN_MOAMR116">CAN_MOAMR116</a>,    
+<a class="url" href="../can.html#CAN_MOAMR117">CAN_MOAMR117</a>,    
+<a class="url" href="../can.html#CAN_MOAMR118">CAN_MOAMR118</a>,    
+<a class="url" href="../can.html#CAN_MOAMR119">CAN_MOAMR119</a>,    
+<a class="url" href="../can.html#CAN_MOAMR12">CAN_MOAMR12</a>,    
+<a class="url" href="../can.html#CAN_MOAMR120">CAN_MOAMR120</a>,    
+<a class="url" href="../can.html#CAN_MOAMR121">CAN_MOAMR121</a>,    
+<a class="url" href="../can.html#CAN_MOAMR122">CAN_MOAMR122</a>,    
+<a class="url" href="../can.html#CAN_MOAMR123">CAN_MOAMR123</a>,    
+<a class="url" href="../can.html#CAN_MOAMR124">CAN_MOAMR124</a>,    
+<a class="url" href="../can.html#CAN_MOAMR125">CAN_MOAMR125</a>,    
+<a class="url" href="../can.html#CAN_MOAMR126">CAN_MOAMR126</a>,    
+<a class="url" href="../can.html#CAN_MOAMR127">CAN_MOAMR127</a>,    
+<a class="url" href="../can.html#CAN_MOAMR13">CAN_MOAMR13</a>,    
+<a class="url" href="../can.html#CAN_MOAMR14">CAN_MOAMR14</a>,    
+<a class="url" href="../can.html#CAN_MOAMR15">CAN_MOAMR15</a>,    
+<a class="url" href="../can.html#CAN_MOAMR16">CAN_MOAMR16</a>,    
+<a class="url" href="../can.html#CAN_MOAMR17">CAN_MOAMR17</a>,    
+<a class="url" href="../can.html#CAN_MOAMR18">CAN_MOAMR18</a>,    
+<a class="url" href="../can.html#CAN_MOAMR19">CAN_MOAMR19</a>,    
+<a class="url" href="../can.html#CAN_MOAMR2">CAN_MOAMR2</a>,    
+<a class="url" href="../can.html#CAN_MOAMR20">CAN_MOAMR20</a>,    
+<a class="url" href="../can.html#CAN_MOAMR21">CAN_MOAMR21</a>,    
+<a class="url" href="../can.html#CAN_MOAMR22">CAN_MOAMR22</a>,    
+<a class="url" href="../can.html#CAN_MOAMR23">CAN_MOAMR23</a>,    
+<a class="url" href="../can.html#CAN_MOAMR24">CAN_MOAMR24</a>,    
+<a class="url" href="../can.html#CAN_MOAMR25">CAN_MOAMR25</a>,    
+<a class="url" href="../can.html#CAN_MOAMR26">CAN_MOAMR26</a>,    
+<a class="url" href="../can.html#CAN_MOAMR27">CAN_MOAMR27</a>,    
+<a class="url" href="../can.html#CAN_MOAMR28">CAN_MOAMR28</a>,    
+<a class="url" href="../can.html#CAN_MOAMR29">CAN_MOAMR29</a>,    
+<a class="url" href="../can.html#CAN_MOAMR3">CAN_MOAMR3</a>,    
+<a class="url" href="../can.html#CAN_MOAMR30">CAN_MOAMR30</a>,    
+<a class="url" href="../can.html#CAN_MOAMR31">CAN_MOAMR31</a>,    
+<a class="url" href="../can.html#CAN_MOAMR32">CAN_MOAMR32</a>,    
+<a class="url" href="../can.html#CAN_MOAMR33">CAN_MOAMR33</a>,    
+<a class="url" href="../can.html#CAN_MOAMR34">CAN_MOAMR34</a>,    
+<a class="url" href="../can.html#CAN_MOAMR35">CAN_MOAMR35</a>,    
+<a class="url" href="../can.html#CAN_MOAMR36">CAN_MOAMR36</a>,    
+<a class="url" href="../can.html#CAN_MOAMR37">CAN_MOAMR37</a>,    
+<a class="url" href="../can.html#CAN_MOAMR38">CAN_MOAMR38</a>,    
+<a class="url" href="../can.html#CAN_MOAMR39">CAN_MOAMR39</a>,    
+<a class="url" href="../can.html#CAN_MOAMR4">CAN_MOAMR4</a>,    
+<a class="url" href="../can.html#CAN_MOAMR40">CAN_MOAMR40</a>,    
+<a class="url" href="../can.html#CAN_MOAMR41">CAN_MOAMR41</a>,    
+<a class="url" href="../can.html#CAN_MOAMR42">CAN_MOAMR42</a>,    
+<a class="url" href="../can.html#CAN_MOAMR43">CAN_MOAMR43</a>,    
+<a class="url" href="../can.html#CAN_MOAMR44">CAN_MOAMR44</a>,    
+<a class="url" href="../can.html#CAN_MOAMR45">CAN_MOAMR45</a>,    
+<a class="url" href="../can.html#CAN_MOAMR46">CAN_MOAMR46</a>,    
+<a class="url" href="../can.html#CAN_MOAMR47">CAN_MOAMR47</a>,    
+<a class="url" href="../can.html#CAN_MOAMR48">CAN_MOAMR48</a>,    
+<a class="url" href="../can.html#CAN_MOAMR49">CAN_MOAMR49</a>,    
+<a class="url" href="../can.html#CAN_MOAMR5">CAN_MOAMR5</a>,    
+<a class="url" href="../can.html#CAN_MOAMR50">CAN_MOAMR50</a>,    
+<a class="url" href="../can.html#CAN_MOAMR51">CAN_MOAMR51</a>,    
+<a class="url" href="../can.html#CAN_MOAMR52">CAN_MOAMR52</a>,    
+<a class="url" href="../can.html#CAN_MOAMR53">CAN_MOAMR53</a>,    
+<a class="url" href="../can.html#CAN_MOAMR54">CAN_MOAMR54</a>,    
+<a class="url" href="../can.html#CAN_MOAMR55">CAN_MOAMR55</a>,    
+<a class="url" href="../can.html#CAN_MOAMR56">CAN_MOAMR56</a>,    
+<a class="url" href="../can.html#CAN_MOAMR57">CAN_MOAMR57</a>,    
+<a class="url" href="../can.html#CAN_MOAMR58">CAN_MOAMR58</a>,    
+<a class="url" href="../can.html#CAN_MOAMR59">CAN_MOAMR59</a>,    
+<a class="url" href="../can.html#CAN_MOAMR6">CAN_MOAMR6</a>,    
+<a class="url" href="../can.html#CAN_MOAMR60">CAN_MOAMR60</a>,    
+<a class="url" href="../can.html#CAN_MOAMR61">CAN_MOAMR61</a>,    
+<a class="url" href="../can.html#CAN_MOAMR62">CAN_MOAMR62</a>,    
+<a class="url" href="../can.html#CAN_MOAMR63">CAN_MOAMR63</a>,    
+<a class="url" href="../can.html#CAN_MOAMR64">CAN_MOAMR64</a>,    
+<a class="url" href="../can.html#CAN_MOAMR65">CAN_MOAMR65</a>,    
+<a class="url" href="../can.html#CAN_MOAMR66">CAN_MOAMR66</a>,    
+<a class="url" href="../can.html#CAN_MOAMR67">CAN_MOAMR67</a>,    
+<a class="url" href="../can.html#CAN_MOAMR68">CAN_MOAMR68</a>,    
+<a class="url" href="../can.html#CAN_MOAMR69">CAN_MOAMR69</a>,    
+<a class="url" href="../can.html#CAN_MOAMR7">CAN_MOAMR7</a>,    
+<a class="url" href="../can.html#CAN_MOAMR70">CAN_MOAMR70</a>,    
+<a class="url" href="../can.html#CAN_MOAMR71">CAN_MOAMR71</a>,    
+<a class="url" href="../can.html#CAN_MOAMR72">CAN_MOAMR72</a>,    
+<a class="url" href="../can.html#CAN_MOAMR73">CAN_MOAMR73</a>,    
+<a class="url" href="../can.html#CAN_MOAMR74">CAN_MOAMR74</a>,    
+<a class="url" href="../can.html#CAN_MOAMR75">CAN_MOAMR75</a>,    
+<a class="url" href="../can.html#CAN_MOAMR76">CAN_MOAMR76</a>,    
+<a class="url" href="../can.html#CAN_MOAMR77">CAN_MOAMR77</a>,    
+<a class="url" href="../can.html#CAN_MOAMR78">CAN_MOAMR78</a>,    
+<a class="url" href="../can.html#CAN_MOAMR79">CAN_MOAMR79</a>,    
+<a class="url" href="../can.html#CAN_MOAMR8">CAN_MOAMR8</a>,    
+<a class="url" href="../can.html#CAN_MOAMR80">CAN_MOAMR80</a>,    
+<a class="url" href="../can.html#CAN_MOAMR81">CAN_MOAMR81</a>,    
+<a class="url" href="../can.html#CAN_MOAMR82">CAN_MOAMR82</a>,    
+<a class="url" href="../can.html#CAN_MOAMR83">CAN_MOAMR83</a>,    
+<a class="url" href="../can.html#CAN_MOAMR84">CAN_MOAMR84</a>,    
+<a class="url" href="../can.html#CAN_MOAMR85">CAN_MOAMR85</a>,    
+<a class="url" href="../can.html#CAN_MOAMR86">CAN_MOAMR86</a>,    
+<a class="url" href="../can.html#CAN_MOAMR87">CAN_MOAMR87</a>,    
+<a class="url" href="../can.html#CAN_MOAMR88">CAN_MOAMR88</a>,    
+<a class="url" href="../can.html#CAN_MOAMR89">CAN_MOAMR89</a>,    
+<a class="url" href="../can.html#CAN_MOAMR9">CAN_MOAMR9</a>,    
+<a class="url" href="../can.html#CAN_MOAMR90">CAN_MOAMR90</a>,    
+<a class="url" href="../can.html#CAN_MOAMR91">CAN_MOAMR91</a>,    
+<a class="url" href="../can.html#CAN_MOAMR92">CAN_MOAMR92</a>,    
+<a class="url" href="../can.html#CAN_MOAMR93">CAN_MOAMR93</a>,    
+<a class="url" href="../can.html#CAN_MOAMR94">CAN_MOAMR94</a>,    
+<a class="url" href="../can.html#CAN_MOAMR95">CAN_MOAMR95</a>,    
+<a class="url" href="../can.html#CAN_MOAMR96">CAN_MOAMR96</a>,    
+<a class="url" href="../can.html#CAN_MOAMR97">CAN_MOAMR97</a>,    
+<a class="url" href="../can.html#CAN_MOAMR98">CAN_MOAMR98</a>,    
+<a class="url" href="../can.html#CAN_MOAMR99">CAN_MOAMR99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MOARm_t"><b>CAN_MOARm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MOARm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ID:29</td>
+<td>0 - 28</td>
+<td>CAN_MOARm_ID_MASK</td>
+<td>0x1fffffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int IDE:1</td>
+<td>29 - 29</td>
+<td>CAN_MOARm_IDE_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int PRI:2</td>
+<td>30 - 31</td>
+<td>CAN_MOARm_PRI_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MOAR0">CAN_MOAR0</a>,    
+<a class="url" href="../can.html#CAN_MOAR1">CAN_MOAR1</a>,    
+<a class="url" href="../can.html#CAN_MOAR10">CAN_MOAR10</a>,    
+<a class="url" href="../can.html#CAN_MOAR100">CAN_MOAR100</a>,    
+<a class="url" href="../can.html#CAN_MOAR101">CAN_MOAR101</a>,    
+<a class="url" href="../can.html#CAN_MOAR102">CAN_MOAR102</a>,    
+<a class="url" href="../can.html#CAN_MOAR103">CAN_MOAR103</a>,    
+<a class="url" href="../can.html#CAN_MOAR104">CAN_MOAR104</a>,    
+<a class="url" href="../can.html#CAN_MOAR105">CAN_MOAR105</a>,    
+<a class="url" href="../can.html#CAN_MOAR106">CAN_MOAR106</a>,    
+<a class="url" href="../can.html#CAN_MOAR107">CAN_MOAR107</a>,    
+<a class="url" href="../can.html#CAN_MOAR108">CAN_MOAR108</a>,    
+<a class="url" href="../can.html#CAN_MOAR109">CAN_MOAR109</a>,    
+<a class="url" href="../can.html#CAN_MOAR11">CAN_MOAR11</a>,    
+<a class="url" href="../can.html#CAN_MOAR110">CAN_MOAR110</a>,    
+<a class="url" href="../can.html#CAN_MOAR111">CAN_MOAR111</a>,    
+<a class="url" href="../can.html#CAN_MOAR112">CAN_MOAR112</a>,    
+<a class="url" href="../can.html#CAN_MOAR113">CAN_MOAR113</a>,    
+<a class="url" href="../can.html#CAN_MOAR114">CAN_MOAR114</a>,    
+<a class="url" href="../can.html#CAN_MOAR115">CAN_MOAR115</a>,    
+<a class="url" href="../can.html#CAN_MOAR116">CAN_MOAR116</a>,    
+<a class="url" href="../can.html#CAN_MOAR117">CAN_MOAR117</a>,    
+<a class="url" href="../can.html#CAN_MOAR118">CAN_MOAR118</a>,    
+<a class="url" href="../can.html#CAN_MOAR119">CAN_MOAR119</a>,    
+<a class="url" href="../can.html#CAN_MOAR12">CAN_MOAR12</a>,    
+<a class="url" href="../can.html#CAN_MOAR120">CAN_MOAR120</a>,    
+<a class="url" href="../can.html#CAN_MOAR121">CAN_MOAR121</a>,    
+<a class="url" href="../can.html#CAN_MOAR122">CAN_MOAR122</a>,    
+<a class="url" href="../can.html#CAN_MOAR123">CAN_MOAR123</a>,    
+<a class="url" href="../can.html#CAN_MOAR124">CAN_MOAR124</a>,    
+<a class="url" href="../can.html#CAN_MOAR125">CAN_MOAR125</a>,    
+<a class="url" href="../can.html#CAN_MOAR126">CAN_MOAR126</a>,    
+<a class="url" href="../can.html#CAN_MOAR127">CAN_MOAR127</a>,    
+<a class="url" href="../can.html#CAN_MOAR13">CAN_MOAR13</a>,    
+<a class="url" href="../can.html#CAN_MOAR14">CAN_MOAR14</a>,    
+<a class="url" href="../can.html#CAN_MOAR15">CAN_MOAR15</a>,    
+<a class="url" href="../can.html#CAN_MOAR16">CAN_MOAR16</a>,    
+<a class="url" href="../can.html#CAN_MOAR17">CAN_MOAR17</a>,    
+<a class="url" href="../can.html#CAN_MOAR18">CAN_MOAR18</a>,    
+<a class="url" href="../can.html#CAN_MOAR19">CAN_MOAR19</a>,    
+<a class="url" href="../can.html#CAN_MOAR2">CAN_MOAR2</a>,    
+<a class="url" href="../can.html#CAN_MOAR20">CAN_MOAR20</a>,    
+<a class="url" href="../can.html#CAN_MOAR21">CAN_MOAR21</a>,    
+<a class="url" href="../can.html#CAN_MOAR22">CAN_MOAR22</a>,    
+<a class="url" href="../can.html#CAN_MOAR23">CAN_MOAR23</a>,    
+<a class="url" href="../can.html#CAN_MOAR24">CAN_MOAR24</a>,    
+<a class="url" href="../can.html#CAN_MOAR25">CAN_MOAR25</a>,    
+<a class="url" href="../can.html#CAN_MOAR26">CAN_MOAR26</a>,    
+<a class="url" href="../can.html#CAN_MOAR27">CAN_MOAR27</a>,    
+<a class="url" href="../can.html#CAN_MOAR28">CAN_MOAR28</a>,    
+<a class="url" href="../can.html#CAN_MOAR29">CAN_MOAR29</a>,    
+<a class="url" href="../can.html#CAN_MOAR3">CAN_MOAR3</a>,    
+<a class="url" href="../can.html#CAN_MOAR30">CAN_MOAR30</a>,    
+<a class="url" href="../can.html#CAN_MOAR31">CAN_MOAR31</a>,    
+<a class="url" href="../can.html#CAN_MOAR32">CAN_MOAR32</a>,    
+<a class="url" href="../can.html#CAN_MOAR33">CAN_MOAR33</a>,    
+<a class="url" href="../can.html#CAN_MOAR34">CAN_MOAR34</a>,    
+<a class="url" href="../can.html#CAN_MOAR35">CAN_MOAR35</a>,    
+<a class="url" href="../can.html#CAN_MOAR36">CAN_MOAR36</a>,    
+<a class="url" href="../can.html#CAN_MOAR37">CAN_MOAR37</a>,    
+<a class="url" href="../can.html#CAN_MOAR38">CAN_MOAR38</a>,    
+<a class="url" href="../can.html#CAN_MOAR39">CAN_MOAR39</a>,    
+<a class="url" href="../can.html#CAN_MOAR4">CAN_MOAR4</a>,    
+<a class="url" href="../can.html#CAN_MOAR40">CAN_MOAR40</a>,    
+<a class="url" href="../can.html#CAN_MOAR41">CAN_MOAR41</a>,    
+<a class="url" href="../can.html#CAN_MOAR42">CAN_MOAR42</a>,    
+<a class="url" href="../can.html#CAN_MOAR43">CAN_MOAR43</a>,    
+<a class="url" href="../can.html#CAN_MOAR44">CAN_MOAR44</a>,    
+<a class="url" href="../can.html#CAN_MOAR45">CAN_MOAR45</a>,    
+<a class="url" href="../can.html#CAN_MOAR46">CAN_MOAR46</a>,    
+<a class="url" href="../can.html#CAN_MOAR47">CAN_MOAR47</a>,    
+<a class="url" href="../can.html#CAN_MOAR48">CAN_MOAR48</a>,    
+<a class="url" href="../can.html#CAN_MOAR49">CAN_MOAR49</a>,    
+<a class="url" href="../can.html#CAN_MOAR5">CAN_MOAR5</a>,    
+<a class="url" href="../can.html#CAN_MOAR50">CAN_MOAR50</a>,    
+<a class="url" href="../can.html#CAN_MOAR51">CAN_MOAR51</a>,    
+<a class="url" href="../can.html#CAN_MOAR52">CAN_MOAR52</a>,    
+<a class="url" href="../can.html#CAN_MOAR53">CAN_MOAR53</a>,    
+<a class="url" href="../can.html#CAN_MOAR54">CAN_MOAR54</a>,    
+<a class="url" href="../can.html#CAN_MOAR55">CAN_MOAR55</a>,    
+<a class="url" href="../can.html#CAN_MOAR56">CAN_MOAR56</a>,    
+<a class="url" href="../can.html#CAN_MOAR57">CAN_MOAR57</a>,    
+<a class="url" href="../can.html#CAN_MOAR58">CAN_MOAR58</a>,    
+<a class="url" href="../can.html#CAN_MOAR59">CAN_MOAR59</a>,    
+<a class="url" href="../can.html#CAN_MOAR6">CAN_MOAR6</a>,    
+<a class="url" href="../can.html#CAN_MOAR60">CAN_MOAR60</a>,    
+<a class="url" href="../can.html#CAN_MOAR61">CAN_MOAR61</a>,    
+<a class="url" href="../can.html#CAN_MOAR62">CAN_MOAR62</a>,    
+<a class="url" href="../can.html#CAN_MOAR63">CAN_MOAR63</a>,    
+<a class="url" href="../can.html#CAN_MOAR64">CAN_MOAR64</a>,    
+<a class="url" href="../can.html#CAN_MOAR65">CAN_MOAR65</a>,    
+<a class="url" href="../can.html#CAN_MOAR66">CAN_MOAR66</a>,    
+<a class="url" href="../can.html#CAN_MOAR67">CAN_MOAR67</a>,    
+<a class="url" href="../can.html#CAN_MOAR68">CAN_MOAR68</a>,    
+<a class="url" href="../can.html#CAN_MOAR69">CAN_MOAR69</a>,    
+<a class="url" href="../can.html#CAN_MOAR7">CAN_MOAR7</a>,    
+<a class="url" href="../can.html#CAN_MOAR70">CAN_MOAR70</a>,    
+<a class="url" href="../can.html#CAN_MOAR71">CAN_MOAR71</a>,    
+<a class="url" href="../can.html#CAN_MOAR72">CAN_MOAR72</a>,    
+<a class="url" href="../can.html#CAN_MOAR73">CAN_MOAR73</a>,    
+<a class="url" href="../can.html#CAN_MOAR74">CAN_MOAR74</a>,    
+<a class="url" href="../can.html#CAN_MOAR75">CAN_MOAR75</a>,    
+<a class="url" href="../can.html#CAN_MOAR76">CAN_MOAR76</a>,    
+<a class="url" href="../can.html#CAN_MOAR77">CAN_MOAR77</a>,    
+<a class="url" href="../can.html#CAN_MOAR78">CAN_MOAR78</a>,    
+<a class="url" href="../can.html#CAN_MOAR79">CAN_MOAR79</a>,    
+<a class="url" href="../can.html#CAN_MOAR8">CAN_MOAR8</a>,    
+<a class="url" href="../can.html#CAN_MOAR80">CAN_MOAR80</a>,    
+<a class="url" href="../can.html#CAN_MOAR81">CAN_MOAR81</a>,    
+<a class="url" href="../can.html#CAN_MOAR82">CAN_MOAR82</a>,    
+<a class="url" href="../can.html#CAN_MOAR83">CAN_MOAR83</a>,    
+<a class="url" href="../can.html#CAN_MOAR84">CAN_MOAR84</a>,    
+<a class="url" href="../can.html#CAN_MOAR85">CAN_MOAR85</a>,    
+<a class="url" href="../can.html#CAN_MOAR86">CAN_MOAR86</a>,    
+<a class="url" href="../can.html#CAN_MOAR87">CAN_MOAR87</a>,    
+<a class="url" href="../can.html#CAN_MOAR88">CAN_MOAR88</a>,    
+<a class="url" href="../can.html#CAN_MOAR89">CAN_MOAR89</a>,    
+<a class="url" href="../can.html#CAN_MOAR9">CAN_MOAR9</a>,    
+<a class="url" href="../can.html#CAN_MOAR90">CAN_MOAR90</a>,    
+<a class="url" href="../can.html#CAN_MOAR91">CAN_MOAR91</a>,    
+<a class="url" href="../can.html#CAN_MOAR92">CAN_MOAR92</a>,    
+<a class="url" href="../can.html#CAN_MOAR93">CAN_MOAR93</a>,    
+<a class="url" href="../can.html#CAN_MOAR94">CAN_MOAR94</a>,    
+<a class="url" href="../can.html#CAN_MOAR95">CAN_MOAR95</a>,    
+<a class="url" href="../can.html#CAN_MOAR96">CAN_MOAR96</a>,    
+<a class="url" href="../can.html#CAN_MOAR97">CAN_MOAR97</a>,    
+<a class="url" href="../can.html#CAN_MOAR98">CAN_MOAR98</a>,    
+<a class="url" href="../can.html#CAN_MOAR99">CAN_MOAR99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MOCTRm_t"><b>CAN_MOCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Message Object n Control Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_MOCTRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RXPND:1</td>
+<td>0 - 0</td>
+<td>CAN_MOCTRm_RXPND_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TXPND:1</td>
+<td>1 - 1</td>
+<td>CAN_MOCTRm_TXPND_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RXUPD:1</td>
+<td>2 - 2</td>
+<td>CAN_MOCTRm_RXUPD_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int NEWDAT:1</td>
+<td>3 - 3</td>
+<td>CAN_MOCTRm_NEWDAT_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int MSGLST:1</td>
+<td>4 - 4</td>
+<td>CAN_MOCTRm_MSGLST_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MSGVAL:1</td>
+<td>5 - 5</td>
+<td>CAN_MOCTRm_MSGVAL_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int RTSEL:1</td>
+<td>6 - 6</td>
+<td>CAN_MOCTRm_RTSEL_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int RXEN:1</td>
+<td>7 - 7</td>
+<td>CAN_MOCTRm_RXEN_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TXRQ:1</td>
+<td>8 - 8</td>
+<td>CAN_MOCTRm_TXRQ_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TXEN0:1</td>
+<td>9 - 9</td>
+<td>CAN_MOCTRm_TXEN0_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int TXEN1:1</td>
+<td>10 - 10</td>
+<td>CAN_MOCTRm_TXEN1_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int DIR:1</td>
+<td>11 - 11</td>
+<td>CAN_MOCTRm_DIR_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int LIST:4</td>
+<td>12 - 15</td>
+<td>CAN_MOCTRm_LIST_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CTRL:16</td>
+<td>16 - 31</td>
+<td>CAN_MOCTRm_CTRL_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MOCTR0">CAN_MOCTR0</a>,    
+<a class="url" href="../can.html#CAN_MOCTR1">CAN_MOCTR1</a>,    
+<a class="url" href="../can.html#CAN_MOCTR10">CAN_MOCTR10</a>,    
+<a class="url" href="../can.html#CAN_MOCTR100">CAN_MOCTR100</a>,    
+<a class="url" href="../can.html#CAN_MOCTR101">CAN_MOCTR101</a>,    
+<a class="url" href="../can.html#CAN_MOCTR102">CAN_MOCTR102</a>,    
+<a class="url" href="../can.html#CAN_MOCTR103">CAN_MOCTR103</a>,    
+<a class="url" href="../can.html#CAN_MOCTR104">CAN_MOCTR104</a>,    
+<a class="url" href="../can.html#CAN_MOCTR105">CAN_MOCTR105</a>,    
+<a class="url" href="../can.html#CAN_MOCTR106">CAN_MOCTR106</a>,    
+<a class="url" href="../can.html#CAN_MOCTR107">CAN_MOCTR107</a>,    
+<a class="url" href="../can.html#CAN_MOCTR108">CAN_MOCTR108</a>,    
+<a class="url" href="../can.html#CAN_MOCTR109">CAN_MOCTR109</a>,    
+<a class="url" href="../can.html#CAN_MOCTR11">CAN_MOCTR11</a>,    
+<a class="url" href="../can.html#CAN_MOCTR110">CAN_MOCTR110</a>,    
+<a class="url" href="../can.html#CAN_MOCTR111">CAN_MOCTR111</a>,    
+<a class="url" href="../can.html#CAN_MOCTR112">CAN_MOCTR112</a>,    
+<a class="url" href="../can.html#CAN_MOCTR113">CAN_MOCTR113</a>,    
+<a class="url" href="../can.html#CAN_MOCTR114">CAN_MOCTR114</a>,    
+<a class="url" href="../can.html#CAN_MOCTR115">CAN_MOCTR115</a>,    
+<a class="url" href="../can.html#CAN_MOCTR116">CAN_MOCTR116</a>,    
+<a class="url" href="../can.html#CAN_MOCTR117">CAN_MOCTR117</a>,    
+<a class="url" href="../can.html#CAN_MOCTR118">CAN_MOCTR118</a>,    
+<a class="url" href="../can.html#CAN_MOCTR119">CAN_MOCTR119</a>,    
+<a class="url" href="../can.html#CAN_MOCTR12">CAN_MOCTR12</a>,    
+<a class="url" href="../can.html#CAN_MOCTR120">CAN_MOCTR120</a>,    
+<a class="url" href="../can.html#CAN_MOCTR121">CAN_MOCTR121</a>,    
+<a class="url" href="../can.html#CAN_MOCTR122">CAN_MOCTR122</a>,    
+<a class="url" href="../can.html#CAN_MOCTR123">CAN_MOCTR123</a>,    
+<a class="url" href="../can.html#CAN_MOCTR124">CAN_MOCTR124</a>,    
+<a class="url" href="../can.html#CAN_MOCTR125">CAN_MOCTR125</a>,    
+<a class="url" href="../can.html#CAN_MOCTR126">CAN_MOCTR126</a>,    
+<a class="url" href="../can.html#CAN_MOCTR127">CAN_MOCTR127</a>,    
+<a class="url" href="../can.html#CAN_MOCTR13">CAN_MOCTR13</a>,    
+<a class="url" href="../can.html#CAN_MOCTR14">CAN_MOCTR14</a>,    
+<a class="url" href="../can.html#CAN_MOCTR15">CAN_MOCTR15</a>,    
+<a class="url" href="../can.html#CAN_MOCTR16">CAN_MOCTR16</a>,    
+<a class="url" href="../can.html#CAN_MOCTR17">CAN_MOCTR17</a>,    
+<a class="url" href="../can.html#CAN_MOCTR18">CAN_MOCTR18</a>,    
+<a class="url" href="../can.html#CAN_MOCTR19">CAN_MOCTR19</a>,    
+<a class="url" href="../can.html#CAN_MOCTR2">CAN_MOCTR2</a>,    
+<a class="url" href="../can.html#CAN_MOCTR20">CAN_MOCTR20</a>,    
+<a class="url" href="../can.html#CAN_MOCTR21">CAN_MOCTR21</a>,    
+<a class="url" href="../can.html#CAN_MOCTR22">CAN_MOCTR22</a>,    
+<a class="url" href="../can.html#CAN_MOCTR23">CAN_MOCTR23</a>,    
+<a class="url" href="../can.html#CAN_MOCTR24">CAN_MOCTR24</a>,    
+<a class="url" href="../can.html#CAN_MOCTR25">CAN_MOCTR25</a>,    
+<a class="url" href="../can.html#CAN_MOCTR26">CAN_MOCTR26</a>,    
+<a class="url" href="../can.html#CAN_MOCTR27">CAN_MOCTR27</a>,    
+<a class="url" href="../can.html#CAN_MOCTR28">CAN_MOCTR28</a>,    
+<a class="url" href="../can.html#CAN_MOCTR29">CAN_MOCTR29</a>,    
+<a class="url" href="../can.html#CAN_MOCTR3">CAN_MOCTR3</a>,    
+<a class="url" href="../can.html#CAN_MOCTR30">CAN_MOCTR30</a>,    
+<a class="url" href="../can.html#CAN_MOCTR31">CAN_MOCTR31</a>,    
+<a class="url" href="../can.html#CAN_MOCTR32">CAN_MOCTR32</a>,    
+<a class="url" href="../can.html#CAN_MOCTR33">CAN_MOCTR33</a>,    
+<a class="url" href="../can.html#CAN_MOCTR34">CAN_MOCTR34</a>,    
+<a class="url" href="../can.html#CAN_MOCTR35">CAN_MOCTR35</a>,    
+<a class="url" href="../can.html#CAN_MOCTR36">CAN_MOCTR36</a>,    
+<a class="url" href="../can.html#CAN_MOCTR37">CAN_MOCTR37</a>,    
+<a class="url" href="../can.html#CAN_MOCTR38">CAN_MOCTR38</a>,    
+<a class="url" href="../can.html#CAN_MOCTR39">CAN_MOCTR39</a>,    
+<a class="url" href="../can.html#CAN_MOCTR4">CAN_MOCTR4</a>,    
+<a class="url" href="../can.html#CAN_MOCTR40">CAN_MOCTR40</a>,    
+<a class="url" href="../can.html#CAN_MOCTR41">CAN_MOCTR41</a>,    
+<a class="url" href="../can.html#CAN_MOCTR42">CAN_MOCTR42</a>,    
+<a class="url" href="../can.html#CAN_MOCTR43">CAN_MOCTR43</a>,    
+<a class="url" href="../can.html#CAN_MOCTR44">CAN_MOCTR44</a>,    
+<a class="url" href="../can.html#CAN_MOCTR45">CAN_MOCTR45</a>,    
+<a class="url" href="../can.html#CAN_MOCTR46">CAN_MOCTR46</a>,    
+<a class="url" href="../can.html#CAN_MOCTR47">CAN_MOCTR47</a>,    
+<a class="url" href="../can.html#CAN_MOCTR48">CAN_MOCTR48</a>,    
+<a class="url" href="../can.html#CAN_MOCTR49">CAN_MOCTR49</a>,    
+<a class="url" href="../can.html#CAN_MOCTR5">CAN_MOCTR5</a>,    
+<a class="url" href="../can.html#CAN_MOCTR50">CAN_MOCTR50</a>,    
+<a class="url" href="../can.html#CAN_MOCTR51">CAN_MOCTR51</a>,    
+<a class="url" href="../can.html#CAN_MOCTR52">CAN_MOCTR52</a>,    
+<a class="url" href="../can.html#CAN_MOCTR53">CAN_MOCTR53</a>,    
+<a class="url" href="../can.html#CAN_MOCTR54">CAN_MOCTR54</a>,    
+<a class="url" href="../can.html#CAN_MOCTR55">CAN_MOCTR55</a>,    
+<a class="url" href="../can.html#CAN_MOCTR56">CAN_MOCTR56</a>,    
+<a class="url" href="../can.html#CAN_MOCTR57">CAN_MOCTR57</a>,    
+<a class="url" href="../can.html#CAN_MOCTR58">CAN_MOCTR58</a>,    
+<a class="url" href="../can.html#CAN_MOCTR59">CAN_MOCTR59</a>,    
+<a class="url" href="../can.html#CAN_MOCTR6">CAN_MOCTR6</a>,    
+<a class="url" href="../can.html#CAN_MOCTR60">CAN_MOCTR60</a>,    
+<a class="url" href="../can.html#CAN_MOCTR61">CAN_MOCTR61</a>,    
+<a class="url" href="../can.html#CAN_MOCTR62">CAN_MOCTR62</a>,    
+<a class="url" href="../can.html#CAN_MOCTR63">CAN_MOCTR63</a>,    
+<a class="url" href="../can.html#CAN_MOCTR64">CAN_MOCTR64</a>,    
+<a class="url" href="../can.html#CAN_MOCTR65">CAN_MOCTR65</a>,    
+<a class="url" href="../can.html#CAN_MOCTR66">CAN_MOCTR66</a>,    
+<a class="url" href="../can.html#CAN_MOCTR67">CAN_MOCTR67</a>,    
+<a class="url" href="../can.html#CAN_MOCTR68">CAN_MOCTR68</a>,    
+<a class="url" href="../can.html#CAN_MOCTR69">CAN_MOCTR69</a>,    
+<a class="url" href="../can.html#CAN_MOCTR7">CAN_MOCTR7</a>,    
+<a class="url" href="../can.html#CAN_MOCTR70">CAN_MOCTR70</a>,    
+<a class="url" href="../can.html#CAN_MOCTR71">CAN_MOCTR71</a>,    
+<a class="url" href="../can.html#CAN_MOCTR72">CAN_MOCTR72</a>,    
+<a class="url" href="../can.html#CAN_MOCTR73">CAN_MOCTR73</a>,    
+<a class="url" href="../can.html#CAN_MOCTR74">CAN_MOCTR74</a>,    
+<a class="url" href="../can.html#CAN_MOCTR75">CAN_MOCTR75</a>,    
+<a class="url" href="../can.html#CAN_MOCTR76">CAN_MOCTR76</a>,    
+<a class="url" href="../can.html#CAN_MOCTR77">CAN_MOCTR77</a>,    
+<a class="url" href="../can.html#CAN_MOCTR78">CAN_MOCTR78</a>,    
+<a class="url" href="../can.html#CAN_MOCTR79">CAN_MOCTR79</a>,    
+<a class="url" href="../can.html#CAN_MOCTR8">CAN_MOCTR8</a>,    
+<a class="url" href="../can.html#CAN_MOCTR80">CAN_MOCTR80</a>,    
+<a class="url" href="../can.html#CAN_MOCTR81">CAN_MOCTR81</a>,    
+<a class="url" href="../can.html#CAN_MOCTR82">CAN_MOCTR82</a>,    
+<a class="url" href="../can.html#CAN_MOCTR83">CAN_MOCTR83</a>,    
+<a class="url" href="../can.html#CAN_MOCTR84">CAN_MOCTR84</a>,    
+<a class="url" href="../can.html#CAN_MOCTR85">CAN_MOCTR85</a>,    
+<a class="url" href="../can.html#CAN_MOCTR86">CAN_MOCTR86</a>,    
+<a class="url" href="../can.html#CAN_MOCTR87">CAN_MOCTR87</a>,    
+<a class="url" href="../can.html#CAN_MOCTR88">CAN_MOCTR88</a>,    
+<a class="url" href="../can.html#CAN_MOCTR89">CAN_MOCTR89</a>,    
+<a class="url" href="../can.html#CAN_MOCTR9">CAN_MOCTR9</a>,    
+<a class="url" href="../can.html#CAN_MOCTR90">CAN_MOCTR90</a>,    
+<a class="url" href="../can.html#CAN_MOCTR91">CAN_MOCTR91</a>,    
+<a class="url" href="../can.html#CAN_MOCTR92">CAN_MOCTR92</a>,    
+<a class="url" href="../can.html#CAN_MOCTR93">CAN_MOCTR93</a>,    
+<a class="url" href="../can.html#CAN_MOCTR94">CAN_MOCTR94</a>,    
+<a class="url" href="../can.html#CAN_MOCTR95">CAN_MOCTR95</a>,    
+<a class="url" href="../can.html#CAN_MOCTR96">CAN_MOCTR96</a>,    
+<a class="url" href="../can.html#CAN_MOCTR97">CAN_MOCTR97</a>,    
+<a class="url" href="../can.html#CAN_MOCTR98">CAN_MOCTR98</a>,    
+<a class="url" href="../can.html#CAN_MOCTR99">CAN_MOCTR99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MODATAHm_t"><b>CAN_MODATAHm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MODATAHm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DB4:8</td>
+<td>0 - 7</td>
+<td>CAN_MODATAHm_DB4_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DB5:8</td>
+<td>8 - 15</td>
+<td>CAN_MODATAHm_DB5_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DB6:8</td>
+<td>16 - 23</td>
+<td>CAN_MODATAHm_DB6_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DB7:8</td>
+<td>24 - 31</td>
+<td>CAN_MODATAHm_DB7_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MODATAH0">CAN_MODATAH0</a>,    
+<a class="url" href="../can.html#CAN_MODATAH1">CAN_MODATAH1</a>,    
+<a class="url" href="../can.html#CAN_MODATAH10">CAN_MODATAH10</a>,    
+<a class="url" href="../can.html#CAN_MODATAH100">CAN_MODATAH100</a>,    
+<a class="url" href="../can.html#CAN_MODATAH101">CAN_MODATAH101</a>,    
+<a class="url" href="../can.html#CAN_MODATAH102">CAN_MODATAH102</a>,    
+<a class="url" href="../can.html#CAN_MODATAH103">CAN_MODATAH103</a>,    
+<a class="url" href="../can.html#CAN_MODATAH104">CAN_MODATAH104</a>,    
+<a class="url" href="../can.html#CAN_MODATAH105">CAN_MODATAH105</a>,    
+<a class="url" href="../can.html#CAN_MODATAH106">CAN_MODATAH106</a>,    
+<a class="url" href="../can.html#CAN_MODATAH107">CAN_MODATAH107</a>,    
+<a class="url" href="../can.html#CAN_MODATAH108">CAN_MODATAH108</a>,    
+<a class="url" href="../can.html#CAN_MODATAH109">CAN_MODATAH109</a>,    
+<a class="url" href="../can.html#CAN_MODATAH11">CAN_MODATAH11</a>,    
+<a class="url" href="../can.html#CAN_MODATAH110">CAN_MODATAH110</a>,    
+<a class="url" href="../can.html#CAN_MODATAH111">CAN_MODATAH111</a>,    
+<a class="url" href="../can.html#CAN_MODATAH112">CAN_MODATAH112</a>,    
+<a class="url" href="../can.html#CAN_MODATAH113">CAN_MODATAH113</a>,    
+<a class="url" href="../can.html#CAN_MODATAH114">CAN_MODATAH114</a>,    
+<a class="url" href="../can.html#CAN_MODATAH115">CAN_MODATAH115</a>,    
+<a class="url" href="../can.html#CAN_MODATAH116">CAN_MODATAH116</a>,    
+<a class="url" href="../can.html#CAN_MODATAH117">CAN_MODATAH117</a>,    
+<a class="url" href="../can.html#CAN_MODATAH118">CAN_MODATAH118</a>,    
+<a class="url" href="../can.html#CAN_MODATAH119">CAN_MODATAH119</a>,    
+<a class="url" href="../can.html#CAN_MODATAH12">CAN_MODATAH12</a>,    
+<a class="url" href="../can.html#CAN_MODATAH120">CAN_MODATAH120</a>,    
+<a class="url" href="../can.html#CAN_MODATAH121">CAN_MODATAH121</a>,    
+<a class="url" href="../can.html#CAN_MODATAH122">CAN_MODATAH122</a>,    
+<a class="url" href="../can.html#CAN_MODATAH123">CAN_MODATAH123</a>,    
+<a class="url" href="../can.html#CAN_MODATAH124">CAN_MODATAH124</a>,    
+<a class="url" href="../can.html#CAN_MODATAH125">CAN_MODATAH125</a>,    
+<a class="url" href="../can.html#CAN_MODATAH126">CAN_MODATAH126</a>,    
+<a class="url" href="../can.html#CAN_MODATAH127">CAN_MODATAH127</a>,    
+<a class="url" href="../can.html#CAN_MODATAH13">CAN_MODATAH13</a>,    
+<a class="url" href="../can.html#CAN_MODATAH14">CAN_MODATAH14</a>,    
+<a class="url" href="../can.html#CAN_MODATAH15">CAN_MODATAH15</a>,    
+<a class="url" href="../can.html#CAN_MODATAH16">CAN_MODATAH16</a>,    
+<a class="url" href="../can.html#CAN_MODATAH17">CAN_MODATAH17</a>,    
+<a class="url" href="../can.html#CAN_MODATAH18">CAN_MODATAH18</a>,    
+<a class="url" href="../can.html#CAN_MODATAH19">CAN_MODATAH19</a>,    
+<a class="url" href="../can.html#CAN_MODATAH2">CAN_MODATAH2</a>,    
+<a class="url" href="../can.html#CAN_MODATAH20">CAN_MODATAH20</a>,    
+<a class="url" href="../can.html#CAN_MODATAH21">CAN_MODATAH21</a>,    
+<a class="url" href="../can.html#CAN_MODATAH22">CAN_MODATAH22</a>,    
+<a class="url" href="../can.html#CAN_MODATAH23">CAN_MODATAH23</a>,    
+<a class="url" href="../can.html#CAN_MODATAH24">CAN_MODATAH24</a>,    
+<a class="url" href="../can.html#CAN_MODATAH25">CAN_MODATAH25</a>,    
+<a class="url" href="../can.html#CAN_MODATAH26">CAN_MODATAH26</a>,    
+<a class="url" href="../can.html#CAN_MODATAH27">CAN_MODATAH27</a>,    
+<a class="url" href="../can.html#CAN_MODATAH28">CAN_MODATAH28</a>,    
+<a class="url" href="../can.html#CAN_MODATAH29">CAN_MODATAH29</a>,    
+<a class="url" href="../can.html#CAN_MODATAH3">CAN_MODATAH3</a>,    
+<a class="url" href="../can.html#CAN_MODATAH30">CAN_MODATAH30</a>,    
+<a class="url" href="../can.html#CAN_MODATAH31">CAN_MODATAH31</a>,    
+<a class="url" href="../can.html#CAN_MODATAH32">CAN_MODATAH32</a>,    
+<a class="url" href="../can.html#CAN_MODATAH33">CAN_MODATAH33</a>,    
+<a class="url" href="../can.html#CAN_MODATAH34">CAN_MODATAH34</a>,    
+<a class="url" href="../can.html#CAN_MODATAH35">CAN_MODATAH35</a>,    
+<a class="url" href="../can.html#CAN_MODATAH36">CAN_MODATAH36</a>,    
+<a class="url" href="../can.html#CAN_MODATAH37">CAN_MODATAH37</a>,    
+<a class="url" href="../can.html#CAN_MODATAH38">CAN_MODATAH38</a>,    
+<a class="url" href="../can.html#CAN_MODATAH39">CAN_MODATAH39</a>,    
+<a class="url" href="../can.html#CAN_MODATAH4">CAN_MODATAH4</a>,    
+<a class="url" href="../can.html#CAN_MODATAH40">CAN_MODATAH40</a>,    
+<a class="url" href="../can.html#CAN_MODATAH41">CAN_MODATAH41</a>,    
+<a class="url" href="../can.html#CAN_MODATAH42">CAN_MODATAH42</a>,    
+<a class="url" href="../can.html#CAN_MODATAH43">CAN_MODATAH43</a>,    
+<a class="url" href="../can.html#CAN_MODATAH44">CAN_MODATAH44</a>,    
+<a class="url" href="../can.html#CAN_MODATAH45">CAN_MODATAH45</a>,    
+<a class="url" href="../can.html#CAN_MODATAH46">CAN_MODATAH46</a>,    
+<a class="url" href="../can.html#CAN_MODATAH47">CAN_MODATAH47</a>,    
+<a class="url" href="../can.html#CAN_MODATAH48">CAN_MODATAH48</a>,    
+<a class="url" href="../can.html#CAN_MODATAH49">CAN_MODATAH49</a>,    
+<a class="url" href="../can.html#CAN_MODATAH5">CAN_MODATAH5</a>,    
+<a class="url" href="../can.html#CAN_MODATAH50">CAN_MODATAH50</a>,    
+<a class="url" href="../can.html#CAN_MODATAH51">CAN_MODATAH51</a>,    
+<a class="url" href="../can.html#CAN_MODATAH52">CAN_MODATAH52</a>,    
+<a class="url" href="../can.html#CAN_MODATAH53">CAN_MODATAH53</a>,    
+<a class="url" href="../can.html#CAN_MODATAH54">CAN_MODATAH54</a>,    
+<a class="url" href="../can.html#CAN_MODATAH55">CAN_MODATAH55</a>,    
+<a class="url" href="../can.html#CAN_MODATAH56">CAN_MODATAH56</a>,    
+<a class="url" href="../can.html#CAN_MODATAH57">CAN_MODATAH57</a>,    
+<a class="url" href="../can.html#CAN_MODATAH58">CAN_MODATAH58</a>,    
+<a class="url" href="../can.html#CAN_MODATAH59">CAN_MODATAH59</a>,    
+<a class="url" href="../can.html#CAN_MODATAH6">CAN_MODATAH6</a>,    
+<a class="url" href="../can.html#CAN_MODATAH60">CAN_MODATAH60</a>,    
+<a class="url" href="../can.html#CAN_MODATAH61">CAN_MODATAH61</a>,    
+<a class="url" href="../can.html#CAN_MODATAH62">CAN_MODATAH62</a>,    
+<a class="url" href="../can.html#CAN_MODATAH63">CAN_MODATAH63</a>,    
+<a class="url" href="../can.html#CAN_MODATAH64">CAN_MODATAH64</a>,    
+<a class="url" href="../can.html#CAN_MODATAH65">CAN_MODATAH65</a>,    
+<a class="url" href="../can.html#CAN_MODATAH66">CAN_MODATAH66</a>,    
+<a class="url" href="../can.html#CAN_MODATAH67">CAN_MODATAH67</a>,    
+<a class="url" href="../can.html#CAN_MODATAH68">CAN_MODATAH68</a>,    
+<a class="url" href="../can.html#CAN_MODATAH69">CAN_MODATAH69</a>,    
+<a class="url" href="../can.html#CAN_MODATAH7">CAN_MODATAH7</a>,    
+<a class="url" href="../can.html#CAN_MODATAH70">CAN_MODATAH70</a>,    
+<a class="url" href="../can.html#CAN_MODATAH71">CAN_MODATAH71</a>,    
+<a class="url" href="../can.html#CAN_MODATAH72">CAN_MODATAH72</a>,    
+<a class="url" href="../can.html#CAN_MODATAH73">CAN_MODATAH73</a>,    
+<a class="url" href="../can.html#CAN_MODATAH74">CAN_MODATAH74</a>,    
+<a class="url" href="../can.html#CAN_MODATAH75">CAN_MODATAH75</a>,    
+<a class="url" href="../can.html#CAN_MODATAH76">CAN_MODATAH76</a>,    
+<a class="url" href="../can.html#CAN_MODATAH77">CAN_MODATAH77</a>,    
+<a class="url" href="../can.html#CAN_MODATAH78">CAN_MODATAH78</a>,    
+<a class="url" href="../can.html#CAN_MODATAH79">CAN_MODATAH79</a>,    
+<a class="url" href="../can.html#CAN_MODATAH8">CAN_MODATAH8</a>,    
+<a class="url" href="../can.html#CAN_MODATAH80">CAN_MODATAH80</a>,    
+<a class="url" href="../can.html#CAN_MODATAH81">CAN_MODATAH81</a>,    
+<a class="url" href="../can.html#CAN_MODATAH82">CAN_MODATAH82</a>,    
+<a class="url" href="../can.html#CAN_MODATAH83">CAN_MODATAH83</a>,    
+<a class="url" href="../can.html#CAN_MODATAH84">CAN_MODATAH84</a>,    
+<a class="url" href="../can.html#CAN_MODATAH85">CAN_MODATAH85</a>,    
+<a class="url" href="../can.html#CAN_MODATAH86">CAN_MODATAH86</a>,    
+<a class="url" href="../can.html#CAN_MODATAH87">CAN_MODATAH87</a>,    
+<a class="url" href="../can.html#CAN_MODATAH88">CAN_MODATAH88</a>,    
+<a class="url" href="../can.html#CAN_MODATAH89">CAN_MODATAH89</a>,    
+<a class="url" href="../can.html#CAN_MODATAH9">CAN_MODATAH9</a>,    
+<a class="url" href="../can.html#CAN_MODATAH90">CAN_MODATAH90</a>,    
+<a class="url" href="../can.html#CAN_MODATAH91">CAN_MODATAH91</a>,    
+<a class="url" href="../can.html#CAN_MODATAH92">CAN_MODATAH92</a>,    
+<a class="url" href="../can.html#CAN_MODATAH93">CAN_MODATAH93</a>,    
+<a class="url" href="../can.html#CAN_MODATAH94">CAN_MODATAH94</a>,    
+<a class="url" href="../can.html#CAN_MODATAH95">CAN_MODATAH95</a>,    
+<a class="url" href="../can.html#CAN_MODATAH96">CAN_MODATAH96</a>,    
+<a class="url" href="../can.html#CAN_MODATAH97">CAN_MODATAH97</a>,    
+<a class="url" href="../can.html#CAN_MODATAH98">CAN_MODATAH98</a>,    
+<a class="url" href="../can.html#CAN_MODATAH99">CAN_MODATAH99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MODATALm_t"><b>CAN_MODATALm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MODATALm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DB0:8</td>
+<td>0 - 7</td>
+<td>CAN_MODATALm_DB0_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DB1:8</td>
+<td>8 - 15</td>
+<td>CAN_MODATALm_DB1_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DB2:8</td>
+<td>16 - 23</td>
+<td>CAN_MODATALm_DB2_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DB3:8</td>
+<td>24 - 31</td>
+<td>CAN_MODATALm_DB3_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MODATAL0">CAN_MODATAL0</a>,    
+<a class="url" href="../can.html#CAN_MODATAL1">CAN_MODATAL1</a>,    
+<a class="url" href="../can.html#CAN_MODATAL10">CAN_MODATAL10</a>,    
+<a class="url" href="../can.html#CAN_MODATAL100">CAN_MODATAL100</a>,    
+<a class="url" href="../can.html#CAN_MODATAL101">CAN_MODATAL101</a>,    
+<a class="url" href="../can.html#CAN_MODATAL102">CAN_MODATAL102</a>,    
+<a class="url" href="../can.html#CAN_MODATAL103">CAN_MODATAL103</a>,    
+<a class="url" href="../can.html#CAN_MODATAL104">CAN_MODATAL104</a>,    
+<a class="url" href="../can.html#CAN_MODATAL105">CAN_MODATAL105</a>,    
+<a class="url" href="../can.html#CAN_MODATAL106">CAN_MODATAL106</a>,    
+<a class="url" href="../can.html#CAN_MODATAL107">CAN_MODATAL107</a>,    
+<a class="url" href="../can.html#CAN_MODATAL108">CAN_MODATAL108</a>,    
+<a class="url" href="../can.html#CAN_MODATAL109">CAN_MODATAL109</a>,    
+<a class="url" href="../can.html#CAN_MODATAL11">CAN_MODATAL11</a>,    
+<a class="url" href="../can.html#CAN_MODATAL110">CAN_MODATAL110</a>,    
+<a class="url" href="../can.html#CAN_MODATAL111">CAN_MODATAL111</a>,    
+<a class="url" href="../can.html#CAN_MODATAL112">CAN_MODATAL112</a>,    
+<a class="url" href="../can.html#CAN_MODATAL113">CAN_MODATAL113</a>,    
+<a class="url" href="../can.html#CAN_MODATAL114">CAN_MODATAL114</a>,    
+<a class="url" href="../can.html#CAN_MODATAL115">CAN_MODATAL115</a>,    
+<a class="url" href="../can.html#CAN_MODATAL116">CAN_MODATAL116</a>,    
+<a class="url" href="../can.html#CAN_MODATAL117">CAN_MODATAL117</a>,    
+<a class="url" href="../can.html#CAN_MODATAL118">CAN_MODATAL118</a>,    
+<a class="url" href="../can.html#CAN_MODATAL119">CAN_MODATAL119</a>,    
+<a class="url" href="../can.html#CAN_MODATAL12">CAN_MODATAL12</a>,    
+<a class="url" href="../can.html#CAN_MODATAL120">CAN_MODATAL120</a>,    
+<a class="url" href="../can.html#CAN_MODATAL121">CAN_MODATAL121</a>,    
+<a class="url" href="../can.html#CAN_MODATAL122">CAN_MODATAL122</a>,    
+<a class="url" href="../can.html#CAN_MODATAL123">CAN_MODATAL123</a>,    
+<a class="url" href="../can.html#CAN_MODATAL124">CAN_MODATAL124</a>,    
+<a class="url" href="../can.html#CAN_MODATAL125">CAN_MODATAL125</a>,    
+<a class="url" href="../can.html#CAN_MODATAL126">CAN_MODATAL126</a>,    
+<a class="url" href="../can.html#CAN_MODATAL127">CAN_MODATAL127</a>,    
+<a class="url" href="../can.html#CAN_MODATAL13">CAN_MODATAL13</a>,    
+<a class="url" href="../can.html#CAN_MODATAL14">CAN_MODATAL14</a>,    
+<a class="url" href="../can.html#CAN_MODATAL15">CAN_MODATAL15</a>,    
+<a class="url" href="../can.html#CAN_MODATAL16">CAN_MODATAL16</a>,    
+<a class="url" href="../can.html#CAN_MODATAL17">CAN_MODATAL17</a>,    
+<a class="url" href="../can.html#CAN_MODATAL18">CAN_MODATAL18</a>,    
+<a class="url" href="../can.html#CAN_MODATAL19">CAN_MODATAL19</a>,    
+<a class="url" href="../can.html#CAN_MODATAL2">CAN_MODATAL2</a>,    
+<a class="url" href="../can.html#CAN_MODATAL20">CAN_MODATAL20</a>,    
+<a class="url" href="../can.html#CAN_MODATAL21">CAN_MODATAL21</a>,    
+<a class="url" href="../can.html#CAN_MODATAL22">CAN_MODATAL22</a>,    
+<a class="url" href="../can.html#CAN_MODATAL23">CAN_MODATAL23</a>,    
+<a class="url" href="../can.html#CAN_MODATAL24">CAN_MODATAL24</a>,    
+<a class="url" href="../can.html#CAN_MODATAL25">CAN_MODATAL25</a>,    
+<a class="url" href="../can.html#CAN_MODATAL26">CAN_MODATAL26</a>,    
+<a class="url" href="../can.html#CAN_MODATAL27">CAN_MODATAL27</a>,    
+<a class="url" href="../can.html#CAN_MODATAL28">CAN_MODATAL28</a>,    
+<a class="url" href="../can.html#CAN_MODATAL29">CAN_MODATAL29</a>,    
+<a class="url" href="../can.html#CAN_MODATAL3">CAN_MODATAL3</a>,    
+<a class="url" href="../can.html#CAN_MODATAL30">CAN_MODATAL30</a>,    
+<a class="url" href="../can.html#CAN_MODATAL31">CAN_MODATAL31</a>,    
+<a class="url" href="../can.html#CAN_MODATAL32">CAN_MODATAL32</a>,    
+<a class="url" href="../can.html#CAN_MODATAL33">CAN_MODATAL33</a>,    
+<a class="url" href="../can.html#CAN_MODATAL34">CAN_MODATAL34</a>,    
+<a class="url" href="../can.html#CAN_MODATAL35">CAN_MODATAL35</a>,    
+<a class="url" href="../can.html#CAN_MODATAL36">CAN_MODATAL36</a>,    
+<a class="url" href="../can.html#CAN_MODATAL37">CAN_MODATAL37</a>,    
+<a class="url" href="../can.html#CAN_MODATAL38">CAN_MODATAL38</a>,    
+<a class="url" href="../can.html#CAN_MODATAL39">CAN_MODATAL39</a>,    
+<a class="url" href="../can.html#CAN_MODATAL4">CAN_MODATAL4</a>,    
+<a class="url" href="../can.html#CAN_MODATAL40">CAN_MODATAL40</a>,    
+<a class="url" href="../can.html#CAN_MODATAL41">CAN_MODATAL41</a>,    
+<a class="url" href="../can.html#CAN_MODATAL42">CAN_MODATAL42</a>,    
+<a class="url" href="../can.html#CAN_MODATAL43">CAN_MODATAL43</a>,    
+<a class="url" href="../can.html#CAN_MODATAL44">CAN_MODATAL44</a>,    
+<a class="url" href="../can.html#CAN_MODATAL45">CAN_MODATAL45</a>,    
+<a class="url" href="../can.html#CAN_MODATAL46">CAN_MODATAL46</a>,    
+<a class="url" href="../can.html#CAN_MODATAL47">CAN_MODATAL47</a>,    
+<a class="url" href="../can.html#CAN_MODATAL48">CAN_MODATAL48</a>,    
+<a class="url" href="../can.html#CAN_MODATAL49">CAN_MODATAL49</a>,    
+<a class="url" href="../can.html#CAN_MODATAL5">CAN_MODATAL5</a>,    
+<a class="url" href="../can.html#CAN_MODATAL50">CAN_MODATAL50</a>,    
+<a class="url" href="../can.html#CAN_MODATAL51">CAN_MODATAL51</a>,    
+<a class="url" href="../can.html#CAN_MODATAL52">CAN_MODATAL52</a>,    
+<a class="url" href="../can.html#CAN_MODATAL53">CAN_MODATAL53</a>,    
+<a class="url" href="../can.html#CAN_MODATAL54">CAN_MODATAL54</a>,    
+<a class="url" href="../can.html#CAN_MODATAL55">CAN_MODATAL55</a>,    
+<a class="url" href="../can.html#CAN_MODATAL56">CAN_MODATAL56</a>,    
+<a class="url" href="../can.html#CAN_MODATAL57">CAN_MODATAL57</a>,    
+<a class="url" href="../can.html#CAN_MODATAL58">CAN_MODATAL58</a>,    
+<a class="url" href="../can.html#CAN_MODATAL59">CAN_MODATAL59</a>,    
+<a class="url" href="../can.html#CAN_MODATAL6">CAN_MODATAL6</a>,    
+<a class="url" href="../can.html#CAN_MODATAL60">CAN_MODATAL60</a>,    
+<a class="url" href="../can.html#CAN_MODATAL61">CAN_MODATAL61</a>,    
+<a class="url" href="../can.html#CAN_MODATAL62">CAN_MODATAL62</a>,    
+<a class="url" href="../can.html#CAN_MODATAL63">CAN_MODATAL63</a>,    
+<a class="url" href="../can.html#CAN_MODATAL64">CAN_MODATAL64</a>,    
+<a class="url" href="../can.html#CAN_MODATAL65">CAN_MODATAL65</a>,    
+<a class="url" href="../can.html#CAN_MODATAL66">CAN_MODATAL66</a>,    
+<a class="url" href="../can.html#CAN_MODATAL67">CAN_MODATAL67</a>,    
+<a class="url" href="../can.html#CAN_MODATAL68">CAN_MODATAL68</a>,    
+<a class="url" href="../can.html#CAN_MODATAL69">CAN_MODATAL69</a>,    
+<a class="url" href="../can.html#CAN_MODATAL7">CAN_MODATAL7</a>,    
+<a class="url" href="../can.html#CAN_MODATAL70">CAN_MODATAL70</a>,    
+<a class="url" href="../can.html#CAN_MODATAL71">CAN_MODATAL71</a>,    
+<a class="url" href="../can.html#CAN_MODATAL72">CAN_MODATAL72</a>,    
+<a class="url" href="../can.html#CAN_MODATAL73">CAN_MODATAL73</a>,    
+<a class="url" href="../can.html#CAN_MODATAL74">CAN_MODATAL74</a>,    
+<a class="url" href="../can.html#CAN_MODATAL75">CAN_MODATAL75</a>,    
+<a class="url" href="../can.html#CAN_MODATAL76">CAN_MODATAL76</a>,    
+<a class="url" href="../can.html#CAN_MODATAL77">CAN_MODATAL77</a>,    
+<a class="url" href="../can.html#CAN_MODATAL78">CAN_MODATAL78</a>,    
+<a class="url" href="../can.html#CAN_MODATAL79">CAN_MODATAL79</a>,    
+<a class="url" href="../can.html#CAN_MODATAL8">CAN_MODATAL8</a>,    
+<a class="url" href="../can.html#CAN_MODATAL80">CAN_MODATAL80</a>,    
+<a class="url" href="../can.html#CAN_MODATAL81">CAN_MODATAL81</a>,    
+<a class="url" href="../can.html#CAN_MODATAL82">CAN_MODATAL82</a>,    
+<a class="url" href="../can.html#CAN_MODATAL83">CAN_MODATAL83</a>,    
+<a class="url" href="../can.html#CAN_MODATAL84">CAN_MODATAL84</a>,    
+<a class="url" href="../can.html#CAN_MODATAL85">CAN_MODATAL85</a>,    
+<a class="url" href="../can.html#CAN_MODATAL86">CAN_MODATAL86</a>,    
+<a class="url" href="../can.html#CAN_MODATAL87">CAN_MODATAL87</a>,    
+<a class="url" href="../can.html#CAN_MODATAL88">CAN_MODATAL88</a>,    
+<a class="url" href="../can.html#CAN_MODATAL89">CAN_MODATAL89</a>,    
+<a class="url" href="../can.html#CAN_MODATAL9">CAN_MODATAL9</a>,    
+<a class="url" href="../can.html#CAN_MODATAL90">CAN_MODATAL90</a>,    
+<a class="url" href="../can.html#CAN_MODATAL91">CAN_MODATAL91</a>,    
+<a class="url" href="../can.html#CAN_MODATAL92">CAN_MODATAL92</a>,    
+<a class="url" href="../can.html#CAN_MODATAL93">CAN_MODATAL93</a>,    
+<a class="url" href="../can.html#CAN_MODATAL94">CAN_MODATAL94</a>,    
+<a class="url" href="../can.html#CAN_MODATAL95">CAN_MODATAL95</a>,    
+<a class="url" href="../can.html#CAN_MODATAL96">CAN_MODATAL96</a>,    
+<a class="url" href="../can.html#CAN_MODATAL97">CAN_MODATAL97</a>,    
+<a class="url" href="../can.html#CAN_MODATAL98">CAN_MODATAL98</a>,    
+<a class="url" href="../can.html#CAN_MODATAL99">CAN_MODATAL99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MOFCRm_t"><b>CAN_MOFCRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MOFCRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MMC:4</td>
+<td>0 - 3</td>
+<td>CAN_MOFCRm_MMC_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int GDFS:1</td>
+<td>8 - 8</td>
+<td>CAN_MOFCRm_GDFS_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int IDC:1</td>
+<td>9 - 9</td>
+<td>CAN_MOFCRm_IDC_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int DLCC:1</td>
+<td>10 - 10</td>
+<td>CAN_MOFCRm_DLCC_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int DATC:1</td>
+<td>11 - 11</td>
+<td>CAN_MOFCRm_DATC_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int RXIE:1</td>
+<td>16 - 16</td>
+<td>CAN_MOFCRm_RXIE_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int TXIE:1</td>
+<td>17 - 17</td>
+<td>CAN_MOFCRm_TXIE_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int OVIE:1</td>
+<td>18 - 18</td>
+<td>CAN_MOFCRm_OVIE_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int FRREN:1</td>
+<td>20 - 20</td>
+<td>CAN_MOFCRm_FRREN_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int RMM:1</td>
+<td>21 - 21</td>
+<td>CAN_MOFCRm_RMM_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int SDT:1</td>
+<td>22 - 22</td>
+<td>CAN_MOFCRm_SDT_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int STT:1</td>
+<td>23 - 23</td>
+<td>CAN_MOFCRm_STT_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int DLC:4</td>
+<td>24 - 27</td>
+<td>CAN_MOFCRm_DLC_MASK</td>
+<td>0x0f000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int MSC:4</td>
+<td>28 - 31</td>
+<td>CAN_MOFCRm_MSC_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MOFCR0">CAN_MOFCR0</a>,    
+<a class="url" href="../can.html#CAN_MOFCR1">CAN_MOFCR1</a>,    
+<a class="url" href="../can.html#CAN_MOFCR10">CAN_MOFCR10</a>,    
+<a class="url" href="../can.html#CAN_MOFCR100">CAN_MOFCR100</a>,    
+<a class="url" href="../can.html#CAN_MOFCR101">CAN_MOFCR101</a>,    
+<a class="url" href="../can.html#CAN_MOFCR102">CAN_MOFCR102</a>,    
+<a class="url" href="../can.html#CAN_MOFCR103">CAN_MOFCR103</a>,    
+<a class="url" href="../can.html#CAN_MOFCR104">CAN_MOFCR104</a>,    
+<a class="url" href="../can.html#CAN_MOFCR105">CAN_MOFCR105</a>,    
+<a class="url" href="../can.html#CAN_MOFCR106">CAN_MOFCR106</a>,    
+<a class="url" href="../can.html#CAN_MOFCR107">CAN_MOFCR107</a>,    
+<a class="url" href="../can.html#CAN_MOFCR108">CAN_MOFCR108</a>,    
+<a class="url" href="../can.html#CAN_MOFCR109">CAN_MOFCR109</a>,    
+<a class="url" href="../can.html#CAN_MOFCR11">CAN_MOFCR11</a>,    
+<a class="url" href="../can.html#CAN_MOFCR110">CAN_MOFCR110</a>,    
+<a class="url" href="../can.html#CAN_MOFCR111">CAN_MOFCR111</a>,    
+<a class="url" href="../can.html#CAN_MOFCR112">CAN_MOFCR112</a>,    
+<a class="url" href="../can.html#CAN_MOFCR113">CAN_MOFCR113</a>,    
+<a class="url" href="../can.html#CAN_MOFCR114">CAN_MOFCR114</a>,    
+<a class="url" href="../can.html#CAN_MOFCR115">CAN_MOFCR115</a>,    
+<a class="url" href="../can.html#CAN_MOFCR116">CAN_MOFCR116</a>,    
+<a class="url" href="../can.html#CAN_MOFCR117">CAN_MOFCR117</a>,    
+<a class="url" href="../can.html#CAN_MOFCR118">CAN_MOFCR118</a>,    
+<a class="url" href="../can.html#CAN_MOFCR119">CAN_MOFCR119</a>,    
+<a class="url" href="../can.html#CAN_MOFCR12">CAN_MOFCR12</a>,    
+<a class="url" href="../can.html#CAN_MOFCR120">CAN_MOFCR120</a>,    
+<a class="url" href="../can.html#CAN_MOFCR121">CAN_MOFCR121</a>,    
+<a class="url" href="../can.html#CAN_MOFCR122">CAN_MOFCR122</a>,    
+<a class="url" href="../can.html#CAN_MOFCR123">CAN_MOFCR123</a>,    
+<a class="url" href="../can.html#CAN_MOFCR124">CAN_MOFCR124</a>,    
+<a class="url" href="../can.html#CAN_MOFCR125">CAN_MOFCR125</a>,    
+<a class="url" href="../can.html#CAN_MOFCR126">CAN_MOFCR126</a>,    
+<a class="url" href="../can.html#CAN_MOFCR127">CAN_MOFCR127</a>,    
+<a class="url" href="../can.html#CAN_MOFCR13">CAN_MOFCR13</a>,    
+<a class="url" href="../can.html#CAN_MOFCR14">CAN_MOFCR14</a>,    
+<a class="url" href="../can.html#CAN_MOFCR15">CAN_MOFCR15</a>,    
+<a class="url" href="../can.html#CAN_MOFCR16">CAN_MOFCR16</a>,    
+<a class="url" href="../can.html#CAN_MOFCR17">CAN_MOFCR17</a>,    
+<a class="url" href="../can.html#CAN_MOFCR18">CAN_MOFCR18</a>,    
+<a class="url" href="../can.html#CAN_MOFCR19">CAN_MOFCR19</a>,    
+<a class="url" href="../can.html#CAN_MOFCR2">CAN_MOFCR2</a>,    
+<a class="url" href="../can.html#CAN_MOFCR20">CAN_MOFCR20</a>,    
+<a class="url" href="../can.html#CAN_MOFCR21">CAN_MOFCR21</a>,    
+<a class="url" href="../can.html#CAN_MOFCR22">CAN_MOFCR22</a>,    
+<a class="url" href="../can.html#CAN_MOFCR23">CAN_MOFCR23</a>,    
+<a class="url" href="../can.html#CAN_MOFCR24">CAN_MOFCR24</a>,    
+<a class="url" href="../can.html#CAN_MOFCR25">CAN_MOFCR25</a>,    
+<a class="url" href="../can.html#CAN_MOFCR26">CAN_MOFCR26</a>,    
+<a class="url" href="../can.html#CAN_MOFCR27">CAN_MOFCR27</a>,    
+<a class="url" href="../can.html#CAN_MOFCR28">CAN_MOFCR28</a>,    
+<a class="url" href="../can.html#CAN_MOFCR29">CAN_MOFCR29</a>,    
+<a class="url" href="../can.html#CAN_MOFCR3">CAN_MOFCR3</a>,    
+<a class="url" href="../can.html#CAN_MOFCR30">CAN_MOFCR30</a>,    
+<a class="url" href="../can.html#CAN_MOFCR31">CAN_MOFCR31</a>,    
+<a class="url" href="../can.html#CAN_MOFCR32">CAN_MOFCR32</a>,    
+<a class="url" href="../can.html#CAN_MOFCR33">CAN_MOFCR33</a>,    
+<a class="url" href="../can.html#CAN_MOFCR34">CAN_MOFCR34</a>,    
+<a class="url" href="../can.html#CAN_MOFCR35">CAN_MOFCR35</a>,    
+<a class="url" href="../can.html#CAN_MOFCR36">CAN_MOFCR36</a>,    
+<a class="url" href="../can.html#CAN_MOFCR37">CAN_MOFCR37</a>,    
+<a class="url" href="../can.html#CAN_MOFCR38">CAN_MOFCR38</a>,    
+<a class="url" href="../can.html#CAN_MOFCR39">CAN_MOFCR39</a>,    
+<a class="url" href="../can.html#CAN_MOFCR4">CAN_MOFCR4</a>,    
+<a class="url" href="../can.html#CAN_MOFCR40">CAN_MOFCR40</a>,    
+<a class="url" href="../can.html#CAN_MOFCR41">CAN_MOFCR41</a>,    
+<a class="url" href="../can.html#CAN_MOFCR42">CAN_MOFCR42</a>,    
+<a class="url" href="../can.html#CAN_MOFCR43">CAN_MOFCR43</a>,    
+<a class="url" href="../can.html#CAN_MOFCR44">CAN_MOFCR44</a>,    
+<a class="url" href="../can.html#CAN_MOFCR45">CAN_MOFCR45</a>,    
+<a class="url" href="../can.html#CAN_MOFCR46">CAN_MOFCR46</a>,    
+<a class="url" href="../can.html#CAN_MOFCR47">CAN_MOFCR47</a>,    
+<a class="url" href="../can.html#CAN_MOFCR48">CAN_MOFCR48</a>,    
+<a class="url" href="../can.html#CAN_MOFCR49">CAN_MOFCR49</a>,    
+<a class="url" href="../can.html#CAN_MOFCR5">CAN_MOFCR5</a>,    
+<a class="url" href="../can.html#CAN_MOFCR50">CAN_MOFCR50</a>,    
+<a class="url" href="../can.html#CAN_MOFCR51">CAN_MOFCR51</a>,    
+<a class="url" href="../can.html#CAN_MOFCR52">CAN_MOFCR52</a>,    
+<a class="url" href="../can.html#CAN_MOFCR53">CAN_MOFCR53</a>,    
+<a class="url" href="../can.html#CAN_MOFCR54">CAN_MOFCR54</a>,    
+<a class="url" href="../can.html#CAN_MOFCR55">CAN_MOFCR55</a>,    
+<a class="url" href="../can.html#CAN_MOFCR56">CAN_MOFCR56</a>,    
+<a class="url" href="../can.html#CAN_MOFCR57">CAN_MOFCR57</a>,    
+<a class="url" href="../can.html#CAN_MOFCR58">CAN_MOFCR58</a>,    
+<a class="url" href="../can.html#CAN_MOFCR59">CAN_MOFCR59</a>,    
+<a class="url" href="../can.html#CAN_MOFCR6">CAN_MOFCR6</a>,    
+<a class="url" href="../can.html#CAN_MOFCR60">CAN_MOFCR60</a>,    
+<a class="url" href="../can.html#CAN_MOFCR61">CAN_MOFCR61</a>,    
+<a class="url" href="../can.html#CAN_MOFCR62">CAN_MOFCR62</a>,    
+<a class="url" href="../can.html#CAN_MOFCR63">CAN_MOFCR63</a>,    
+<a class="url" href="../can.html#CAN_MOFCR64">CAN_MOFCR64</a>,    
+<a class="url" href="../can.html#CAN_MOFCR65">CAN_MOFCR65</a>,    
+<a class="url" href="../can.html#CAN_MOFCR66">CAN_MOFCR66</a>,    
+<a class="url" href="../can.html#CAN_MOFCR67">CAN_MOFCR67</a>,    
+<a class="url" href="../can.html#CAN_MOFCR68">CAN_MOFCR68</a>,    
+<a class="url" href="../can.html#CAN_MOFCR69">CAN_MOFCR69</a>,    
+<a class="url" href="../can.html#CAN_MOFCR7">CAN_MOFCR7</a>,    
+<a class="url" href="../can.html#CAN_MOFCR70">CAN_MOFCR70</a>,    
+<a class="url" href="../can.html#CAN_MOFCR71">CAN_MOFCR71</a>,    
+<a class="url" href="../can.html#CAN_MOFCR72">CAN_MOFCR72</a>,    
+<a class="url" href="../can.html#CAN_MOFCR73">CAN_MOFCR73</a>,    
+<a class="url" href="../can.html#CAN_MOFCR74">CAN_MOFCR74</a>,    
+<a class="url" href="../can.html#CAN_MOFCR75">CAN_MOFCR75</a>,    
+<a class="url" href="../can.html#CAN_MOFCR76">CAN_MOFCR76</a>,    
+<a class="url" href="../can.html#CAN_MOFCR77">CAN_MOFCR77</a>,    
+<a class="url" href="../can.html#CAN_MOFCR78">CAN_MOFCR78</a>,    
+<a class="url" href="../can.html#CAN_MOFCR79">CAN_MOFCR79</a>,    
+<a class="url" href="../can.html#CAN_MOFCR8">CAN_MOFCR8</a>,    
+<a class="url" href="../can.html#CAN_MOFCR80">CAN_MOFCR80</a>,    
+<a class="url" href="../can.html#CAN_MOFCR81">CAN_MOFCR81</a>,    
+<a class="url" href="../can.html#CAN_MOFCR82">CAN_MOFCR82</a>,    
+<a class="url" href="../can.html#CAN_MOFCR83">CAN_MOFCR83</a>,    
+<a class="url" href="../can.html#CAN_MOFCR84">CAN_MOFCR84</a>,    
+<a class="url" href="../can.html#CAN_MOFCR85">CAN_MOFCR85</a>,    
+<a class="url" href="../can.html#CAN_MOFCR86">CAN_MOFCR86</a>,    
+<a class="url" href="../can.html#CAN_MOFCR87">CAN_MOFCR87</a>,    
+<a class="url" href="../can.html#CAN_MOFCR88">CAN_MOFCR88</a>,    
+<a class="url" href="../can.html#CAN_MOFCR89">CAN_MOFCR89</a>,    
+<a class="url" href="../can.html#CAN_MOFCR9">CAN_MOFCR9</a>,    
+<a class="url" href="../can.html#CAN_MOFCR90">CAN_MOFCR90</a>,    
+<a class="url" href="../can.html#CAN_MOFCR91">CAN_MOFCR91</a>,    
+<a class="url" href="../can.html#CAN_MOFCR92">CAN_MOFCR92</a>,    
+<a class="url" href="../can.html#CAN_MOFCR93">CAN_MOFCR93</a>,    
+<a class="url" href="../can.html#CAN_MOFCR94">CAN_MOFCR94</a>,    
+<a class="url" href="../can.html#CAN_MOFCR95">CAN_MOFCR95</a>,    
+<a class="url" href="../can.html#CAN_MOFCR96">CAN_MOFCR96</a>,    
+<a class="url" href="../can.html#CAN_MOFCR97">CAN_MOFCR97</a>,    
+<a class="url" href="../can.html#CAN_MOFCR98">CAN_MOFCR98</a>,    
+<a class="url" href="../can.html#CAN_MOFCR99">CAN_MOFCR99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MOFGPRm_t"><b>CAN_MOFGPRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MOFGPRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BOT:8</td>
+<td>0 - 7</td>
+<td>CAN_MOFGPRm_BOT_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOP:8</td>
+<td>8 - 15</td>
+<td>CAN_MOFGPRm_TOP_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CUR:8</td>
+<td>16 - 23</td>
+<td>CAN_MOFGPRm_CUR_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SEL:8</td>
+<td>24 - 31</td>
+<td>CAN_MOFGPRm_SEL_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MOFGPR0">CAN_MOFGPR0</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR1">CAN_MOFGPR1</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR10">CAN_MOFGPR10</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR100">CAN_MOFGPR100</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR101">CAN_MOFGPR101</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR102">CAN_MOFGPR102</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR103">CAN_MOFGPR103</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR104">CAN_MOFGPR104</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR105">CAN_MOFGPR105</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR106">CAN_MOFGPR106</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR107">CAN_MOFGPR107</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR108">CAN_MOFGPR108</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR109">CAN_MOFGPR109</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR11">CAN_MOFGPR11</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR110">CAN_MOFGPR110</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR111">CAN_MOFGPR111</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR112">CAN_MOFGPR112</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR113">CAN_MOFGPR113</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR114">CAN_MOFGPR114</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR115">CAN_MOFGPR115</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR116">CAN_MOFGPR116</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR117">CAN_MOFGPR117</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR118">CAN_MOFGPR118</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR119">CAN_MOFGPR119</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR12">CAN_MOFGPR12</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR120">CAN_MOFGPR120</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR121">CAN_MOFGPR121</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR122">CAN_MOFGPR122</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR123">CAN_MOFGPR123</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR124">CAN_MOFGPR124</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR125">CAN_MOFGPR125</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR126">CAN_MOFGPR126</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR127">CAN_MOFGPR127</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR13">CAN_MOFGPR13</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR14">CAN_MOFGPR14</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR15">CAN_MOFGPR15</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR16">CAN_MOFGPR16</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR17">CAN_MOFGPR17</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR18">CAN_MOFGPR18</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR19">CAN_MOFGPR19</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR2">CAN_MOFGPR2</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR20">CAN_MOFGPR20</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR21">CAN_MOFGPR21</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR22">CAN_MOFGPR22</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR23">CAN_MOFGPR23</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR24">CAN_MOFGPR24</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR25">CAN_MOFGPR25</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR26">CAN_MOFGPR26</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR27">CAN_MOFGPR27</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR28">CAN_MOFGPR28</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR29">CAN_MOFGPR29</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR3">CAN_MOFGPR3</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR30">CAN_MOFGPR30</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR31">CAN_MOFGPR31</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR32">CAN_MOFGPR32</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR33">CAN_MOFGPR33</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR34">CAN_MOFGPR34</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR35">CAN_MOFGPR35</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR36">CAN_MOFGPR36</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR37">CAN_MOFGPR37</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR38">CAN_MOFGPR38</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR39">CAN_MOFGPR39</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR4">CAN_MOFGPR4</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR40">CAN_MOFGPR40</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR41">CAN_MOFGPR41</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR42">CAN_MOFGPR42</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR43">CAN_MOFGPR43</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR44">CAN_MOFGPR44</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR45">CAN_MOFGPR45</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR46">CAN_MOFGPR46</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR47">CAN_MOFGPR47</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR48">CAN_MOFGPR48</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR49">CAN_MOFGPR49</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR5">CAN_MOFGPR5</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR50">CAN_MOFGPR50</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR51">CAN_MOFGPR51</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR52">CAN_MOFGPR52</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR53">CAN_MOFGPR53</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR54">CAN_MOFGPR54</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR55">CAN_MOFGPR55</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR56">CAN_MOFGPR56</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR57">CAN_MOFGPR57</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR58">CAN_MOFGPR58</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR59">CAN_MOFGPR59</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR6">CAN_MOFGPR6</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR60">CAN_MOFGPR60</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR61">CAN_MOFGPR61</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR62">CAN_MOFGPR62</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR63">CAN_MOFGPR63</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR64">CAN_MOFGPR64</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR65">CAN_MOFGPR65</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR66">CAN_MOFGPR66</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR67">CAN_MOFGPR67</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR68">CAN_MOFGPR68</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR69">CAN_MOFGPR69</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR7">CAN_MOFGPR7</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR70">CAN_MOFGPR70</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR71">CAN_MOFGPR71</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR72">CAN_MOFGPR72</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR73">CAN_MOFGPR73</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR74">CAN_MOFGPR74</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR75">CAN_MOFGPR75</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR76">CAN_MOFGPR76</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR77">CAN_MOFGPR77</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR78">CAN_MOFGPR78</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR79">CAN_MOFGPR79</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR8">CAN_MOFGPR8</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR80">CAN_MOFGPR80</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR81">CAN_MOFGPR81</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR82">CAN_MOFGPR82</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR83">CAN_MOFGPR83</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR84">CAN_MOFGPR84</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR85">CAN_MOFGPR85</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR86">CAN_MOFGPR86</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR87">CAN_MOFGPR87</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR88">CAN_MOFGPR88</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR89">CAN_MOFGPR89</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR9">CAN_MOFGPR9</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR90">CAN_MOFGPR90</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR91">CAN_MOFGPR91</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR92">CAN_MOFGPR92</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR93">CAN_MOFGPR93</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR94">CAN_MOFGPR94</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR95">CAN_MOFGPR95</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR96">CAN_MOFGPR96</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR97">CAN_MOFGPR97</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR98">CAN_MOFGPR98</a>,    
+<a class="url" href="../can.html#CAN_MOFGPR99">CAN_MOFGPR99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MOIPRm_t"><b>CAN_MOIPRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b> n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MOIPRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RXINP:4</td>
+<td>0 - 3</td>
+<td>CAN_MOIPRm_RXINP_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TXINP:4</td>
+<td>4 - 7</td>
+<td>CAN_MOIPRm_TXINP_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MPN:8</td>
+<td>8 - 15</td>
+<td>CAN_MOIPRm_MPN_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CFCVAL:16</td>
+<td>16 - 31</td>
+<td>CAN_MOIPRm_CFCVAL_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MOIPR0">CAN_MOIPR0</a>,    
+<a class="url" href="../can.html#CAN_MOIPR1">CAN_MOIPR1</a>,    
+<a class="url" href="../can.html#CAN_MOIPR10">CAN_MOIPR10</a>,    
+<a class="url" href="../can.html#CAN_MOIPR100">CAN_MOIPR100</a>,    
+<a class="url" href="../can.html#CAN_MOIPR101">CAN_MOIPR101</a>,    
+<a class="url" href="../can.html#CAN_MOIPR102">CAN_MOIPR102</a>,    
+<a class="url" href="../can.html#CAN_MOIPR103">CAN_MOIPR103</a>,    
+<a class="url" href="../can.html#CAN_MOIPR104">CAN_MOIPR104</a>,    
+<a class="url" href="../can.html#CAN_MOIPR105">CAN_MOIPR105</a>,    
+<a class="url" href="../can.html#CAN_MOIPR106">CAN_MOIPR106</a>,    
+<a class="url" href="../can.html#CAN_MOIPR107">CAN_MOIPR107</a>,    
+<a class="url" href="../can.html#CAN_MOIPR108">CAN_MOIPR108</a>,    
+<a class="url" href="../can.html#CAN_MOIPR109">CAN_MOIPR109</a>,    
+<a class="url" href="../can.html#CAN_MOIPR11">CAN_MOIPR11</a>,    
+<a class="url" href="../can.html#CAN_MOIPR110">CAN_MOIPR110</a>,    
+<a class="url" href="../can.html#CAN_MOIPR111">CAN_MOIPR111</a>,    
+<a class="url" href="../can.html#CAN_MOIPR112">CAN_MOIPR112</a>,    
+<a class="url" href="../can.html#CAN_MOIPR113">CAN_MOIPR113</a>,    
+<a class="url" href="../can.html#CAN_MOIPR114">CAN_MOIPR114</a>,    
+<a class="url" href="../can.html#CAN_MOIPR115">CAN_MOIPR115</a>,    
+<a class="url" href="../can.html#CAN_MOIPR116">CAN_MOIPR116</a>,    
+<a class="url" href="../can.html#CAN_MOIPR117">CAN_MOIPR117</a>,    
+<a class="url" href="../can.html#CAN_MOIPR118">CAN_MOIPR118</a>,    
+<a class="url" href="../can.html#CAN_MOIPR119">CAN_MOIPR119</a>,    
+<a class="url" href="../can.html#CAN_MOIPR12">CAN_MOIPR12</a>,    
+<a class="url" href="../can.html#CAN_MOIPR120">CAN_MOIPR120</a>,    
+<a class="url" href="../can.html#CAN_MOIPR121">CAN_MOIPR121</a>,    
+<a class="url" href="../can.html#CAN_MOIPR122">CAN_MOIPR122</a>,    
+<a class="url" href="../can.html#CAN_MOIPR123">CAN_MOIPR123</a>,    
+<a class="url" href="../can.html#CAN_MOIPR124">CAN_MOIPR124</a>,    
+<a class="url" href="../can.html#CAN_MOIPR125">CAN_MOIPR125</a>,    
+<a class="url" href="../can.html#CAN_MOIPR126">CAN_MOIPR126</a>,    
+<a class="url" href="../can.html#CAN_MOIPR127">CAN_MOIPR127</a>,    
+<a class="url" href="../can.html#CAN_MOIPR13">CAN_MOIPR13</a>,    
+<a class="url" href="../can.html#CAN_MOIPR14">CAN_MOIPR14</a>,    
+<a class="url" href="../can.html#CAN_MOIPR15">CAN_MOIPR15</a>,    
+<a class="url" href="../can.html#CAN_MOIPR16">CAN_MOIPR16</a>,    
+<a class="url" href="../can.html#CAN_MOIPR17">CAN_MOIPR17</a>,    
+<a class="url" href="../can.html#CAN_MOIPR18">CAN_MOIPR18</a>,    
+<a class="url" href="../can.html#CAN_MOIPR19">CAN_MOIPR19</a>,    
+<a class="url" href="../can.html#CAN_MOIPR2">CAN_MOIPR2</a>,    
+<a class="url" href="../can.html#CAN_MOIPR20">CAN_MOIPR20</a>,    
+<a class="url" href="../can.html#CAN_MOIPR21">CAN_MOIPR21</a>,    
+<a class="url" href="../can.html#CAN_MOIPR22">CAN_MOIPR22</a>,    
+<a class="url" href="../can.html#CAN_MOIPR23">CAN_MOIPR23</a>,    
+<a class="url" href="../can.html#CAN_MOIPR24">CAN_MOIPR24</a>,    
+<a class="url" href="../can.html#CAN_MOIPR25">CAN_MOIPR25</a>,    
+<a class="url" href="../can.html#CAN_MOIPR26">CAN_MOIPR26</a>,    
+<a class="url" href="../can.html#CAN_MOIPR27">CAN_MOIPR27</a>,    
+<a class="url" href="../can.html#CAN_MOIPR28">CAN_MOIPR28</a>,    
+<a class="url" href="../can.html#CAN_MOIPR29">CAN_MOIPR29</a>,    
+<a class="url" href="../can.html#CAN_MOIPR3">CAN_MOIPR3</a>,    
+<a class="url" href="../can.html#CAN_MOIPR30">CAN_MOIPR30</a>,    
+<a class="url" href="../can.html#CAN_MOIPR31">CAN_MOIPR31</a>,    
+<a class="url" href="../can.html#CAN_MOIPR32">CAN_MOIPR32</a>,    
+<a class="url" href="../can.html#CAN_MOIPR33">CAN_MOIPR33</a>,    
+<a class="url" href="../can.html#CAN_MOIPR34">CAN_MOIPR34</a>,    
+<a class="url" href="../can.html#CAN_MOIPR35">CAN_MOIPR35</a>,    
+<a class="url" href="../can.html#CAN_MOIPR36">CAN_MOIPR36</a>,    
+<a class="url" href="../can.html#CAN_MOIPR37">CAN_MOIPR37</a>,    
+<a class="url" href="../can.html#CAN_MOIPR38">CAN_MOIPR38</a>,    
+<a class="url" href="../can.html#CAN_MOIPR39">CAN_MOIPR39</a>,    
+<a class="url" href="../can.html#CAN_MOIPR4">CAN_MOIPR4</a>,    
+<a class="url" href="../can.html#CAN_MOIPR40">CAN_MOIPR40</a>,    
+<a class="url" href="../can.html#CAN_MOIPR41">CAN_MOIPR41</a>,    
+<a class="url" href="../can.html#CAN_MOIPR42">CAN_MOIPR42</a>,    
+<a class="url" href="../can.html#CAN_MOIPR43">CAN_MOIPR43</a>,    
+<a class="url" href="../can.html#CAN_MOIPR44">CAN_MOIPR44</a>,    
+<a class="url" href="../can.html#CAN_MOIPR45">CAN_MOIPR45</a>,    
+<a class="url" href="../can.html#CAN_MOIPR46">CAN_MOIPR46</a>,    
+<a class="url" href="../can.html#CAN_MOIPR47">CAN_MOIPR47</a>,    
+<a class="url" href="../can.html#CAN_MOIPR48">CAN_MOIPR48</a>,    
+<a class="url" href="../can.html#CAN_MOIPR49">CAN_MOIPR49</a>,    
+<a class="url" href="../can.html#CAN_MOIPR5">CAN_MOIPR5</a>,    
+<a class="url" href="../can.html#CAN_MOIPR50">CAN_MOIPR50</a>,    
+<a class="url" href="../can.html#CAN_MOIPR51">CAN_MOIPR51</a>,    
+<a class="url" href="../can.html#CAN_MOIPR52">CAN_MOIPR52</a>,    
+<a class="url" href="../can.html#CAN_MOIPR53">CAN_MOIPR53</a>,    
+<a class="url" href="../can.html#CAN_MOIPR54">CAN_MOIPR54</a>,    
+<a class="url" href="../can.html#CAN_MOIPR55">CAN_MOIPR55</a>,    
+<a class="url" href="../can.html#CAN_MOIPR56">CAN_MOIPR56</a>,    
+<a class="url" href="../can.html#CAN_MOIPR57">CAN_MOIPR57</a>,    
+<a class="url" href="../can.html#CAN_MOIPR58">CAN_MOIPR58</a>,    
+<a class="url" href="../can.html#CAN_MOIPR59">CAN_MOIPR59</a>,    
+<a class="url" href="../can.html#CAN_MOIPR6">CAN_MOIPR6</a>,    
+<a class="url" href="../can.html#CAN_MOIPR60">CAN_MOIPR60</a>,    
+<a class="url" href="../can.html#CAN_MOIPR61">CAN_MOIPR61</a>,    
+<a class="url" href="../can.html#CAN_MOIPR62">CAN_MOIPR62</a>,    
+<a class="url" href="../can.html#CAN_MOIPR63">CAN_MOIPR63</a>,    
+<a class="url" href="../can.html#CAN_MOIPR64">CAN_MOIPR64</a>,    
+<a class="url" href="../can.html#CAN_MOIPR65">CAN_MOIPR65</a>,    
+<a class="url" href="../can.html#CAN_MOIPR66">CAN_MOIPR66</a>,    
+<a class="url" href="../can.html#CAN_MOIPR67">CAN_MOIPR67</a>,    
+<a class="url" href="../can.html#CAN_MOIPR68">CAN_MOIPR68</a>,    
+<a class="url" href="../can.html#CAN_MOIPR69">CAN_MOIPR69</a>,    
+<a class="url" href="../can.html#CAN_MOIPR7">CAN_MOIPR7</a>,    
+<a class="url" href="../can.html#CAN_MOIPR70">CAN_MOIPR70</a>,    
+<a class="url" href="../can.html#CAN_MOIPR71">CAN_MOIPR71</a>,    
+<a class="url" href="../can.html#CAN_MOIPR72">CAN_MOIPR72</a>,    
+<a class="url" href="../can.html#CAN_MOIPR73">CAN_MOIPR73</a>,    
+<a class="url" href="../can.html#CAN_MOIPR74">CAN_MOIPR74</a>,    
+<a class="url" href="../can.html#CAN_MOIPR75">CAN_MOIPR75</a>,    
+<a class="url" href="../can.html#CAN_MOIPR76">CAN_MOIPR76</a>,    
+<a class="url" href="../can.html#CAN_MOIPR77">CAN_MOIPR77</a>,    
+<a class="url" href="../can.html#CAN_MOIPR78">CAN_MOIPR78</a>,    
+<a class="url" href="../can.html#CAN_MOIPR79">CAN_MOIPR79</a>,    
+<a class="url" href="../can.html#CAN_MOIPR8">CAN_MOIPR8</a>,    
+<a class="url" href="../can.html#CAN_MOIPR80">CAN_MOIPR80</a>,    
+<a class="url" href="../can.html#CAN_MOIPR81">CAN_MOIPR81</a>,    
+<a class="url" href="../can.html#CAN_MOIPR82">CAN_MOIPR82</a>,    
+<a class="url" href="../can.html#CAN_MOIPR83">CAN_MOIPR83</a>,    
+<a class="url" href="../can.html#CAN_MOIPR84">CAN_MOIPR84</a>,    
+<a class="url" href="../can.html#CAN_MOIPR85">CAN_MOIPR85</a>,    
+<a class="url" href="../can.html#CAN_MOIPR86">CAN_MOIPR86</a>,    
+<a class="url" href="../can.html#CAN_MOIPR87">CAN_MOIPR87</a>,    
+<a class="url" href="../can.html#CAN_MOIPR88">CAN_MOIPR88</a>,    
+<a class="url" href="../can.html#CAN_MOIPR89">CAN_MOIPR89</a>,    
+<a class="url" href="../can.html#CAN_MOIPR9">CAN_MOIPR9</a>,    
+<a class="url" href="../can.html#CAN_MOIPR90">CAN_MOIPR90</a>,    
+<a class="url" href="../can.html#CAN_MOIPR91">CAN_MOIPR91</a>,    
+<a class="url" href="../can.html#CAN_MOIPR92">CAN_MOIPR92</a>,    
+<a class="url" href="../can.html#CAN_MOIPR93">CAN_MOIPR93</a>,    
+<a class="url" href="../can.html#CAN_MOIPR94">CAN_MOIPR94</a>,    
+<a class="url" href="../can.html#CAN_MOIPR95">CAN_MOIPR95</a>,    
+<a class="url" href="../can.html#CAN_MOIPR96">CAN_MOIPR96</a>,    
+<a class="url" href="../can.html#CAN_MOIPR97">CAN_MOIPR97</a>,    
+<a class="url" href="../can.html#CAN_MOIPR98">CAN_MOIPR98</a>,    
+<a class="url" href="../can.html#CAN_MOIPR99">CAN_MOIPR99</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MSIDm_t"><b>CAN_MSIDm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Message Index Register n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MSIDm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int INDEX:6</td>
+<td>0 - 5</td>
+<td>CAN_MSIDm_INDEX_MASK</td>
+<td>0x0000003f</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MSID0">CAN_MSID0</a>,    
+<a class="url" href="../can.html#CAN_MSID1">CAN_MSID1</a>,    
+<a class="url" href="../can.html#CAN_MSID2">CAN_MSID2</a>,    
+<a class="url" href="../can.html#CAN_MSID3">CAN_MSID3</a>,    
+<a class="url" href="../can.html#CAN_MSID4">CAN_MSID4</a>,    
+<a class="url" href="../can.html#CAN_MSID5">CAN_MSID5</a>,    
+<a class="url" href="../can.html#CAN_MSID6">CAN_MSID6</a>,    
+<a class="url" href="../can.html#CAN_MSID7">CAN_MSID7</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MSIMASK_t"><b>CAN_MSIMASK_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Message Index Mask Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_MSIMASK_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IM:32</td>
+<td>0 - 31</td>
+<td>CAN_MSIMASK_IM_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MSIMASK">CAN_MSIMASK</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_MSPNDm_t"><b>CAN_MSPNDm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Message Pending Register n</b></td></tr>
+<tr><td colspan="5"><b>CAN_MSPNDm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PND:32</td>
+<td>0 - 31</td>
+<td>CAN_MSPNDm_PND_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_MSPND0">CAN_MSPND0</a>,    
+<a class="url" href="../can.html#CAN_MSPND1">CAN_MSPND1</a>,    
+<a class="url" href="../can.html#CAN_MSPND2">CAN_MSPND2</a>,    
+<a class="url" href="../can.html#CAN_MSPND3">CAN_MSPND3</a>,    
+<a class="url" href="../can.html#CAN_MSPND4">CAN_MSPND4</a>,    
+<a class="url" href="../can.html#CAN_MSPND5">CAN_MSPND5</a>,    
+<a class="url" href="../can.html#CAN_MSPND6">CAN_MSPND6</a>,    
+<a class="url" href="../can.html#CAN_MSPND7">CAN_MSPND7</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_NBTRm_t"><b>CAN_NBTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Node n Bit Timing Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_NBTRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BRP:6</td>
+<td>0 - 5</td>
+<td>CAN_NBTRm_BRP_MASK</td>
+<td>0x0000003f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SJW:2</td>
+<td>6 - 7</td>
+<td>CAN_NBTRm_SJW_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int TSEG1:4</td>
+<td>8 - 11</td>
+<td>CAN_NBTRm_TSEG1_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TSEG2:3</td>
+<td>12 - 14</td>
+<td>CAN_NBTRm_TSEG2_MASK</td>
+<td>0x00007000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DIV8:1</td>
+<td>15 - 15</td>
+<td>CAN_NBTRm_DIV8_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int FTX:1</td>
+<td>16 - 16</td>
+<td>CAN_NBTRm_FTX_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_NBTR0">CAN_NBTR0</a>,    
+<a class="url" href="../can.html#CAN_NBTR1">CAN_NBTR1</a>,    
+<a class="url" href="../can.html#CAN_NBTR2">CAN_NBTR2</a>,    
+<a class="url" href="../can.html#CAN_NBTR3">CAN_NBTR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_NCRm_t"><b>CAN_NCRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Node n Control Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_NCRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int INIT:1</td>
+<td>0 - 0</td>
+<td>CAN_NCRm_INIT_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TRIE:1</td>
+<td>1 - 1</td>
+<td>CAN_NCRm_TRIE_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LECIE:1</td>
+<td>2 - 2</td>
+<td>CAN_NCRm_LECIE_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ALIE:1</td>
+<td>3 - 3</td>
+<td>CAN_NCRm_ALIE_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CANDIS:1</td>
+<td>4 - 4</td>
+<td>CAN_NCRm_CANDIS_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CCE:1</td>
+<td>6 - 6</td>
+<td>CAN_NCRm_CCE_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CALM:1</td>
+<td>7 - 7</td>
+<td>CAN_NCRm_CALM_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int SUSEN:1</td>
+<td>8 - 8</td>
+<td>CAN_NCRm_SUSEN_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_NCR0">CAN_NCR0</a>,    
+<a class="url" href="../can.html#CAN_NCR1">CAN_NCR1</a>,    
+<a class="url" href="../can.html#CAN_NCR2">CAN_NCR2</a>,    
+<a class="url" href="../can.html#CAN_NCR3">CAN_NCR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_NECNTm_t"><b>CAN_NECNTm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Node n Error Counter Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_NECNTm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int REC:8</td>
+<td>0 - 7</td>
+<td>CAN_NECNTm_REC_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TEC:8</td>
+<td>8 - 15</td>
+<td>CAN_NECNTm_TEC_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int EWRNLVL:8</td>
+<td>16 - 23</td>
+<td>CAN_NECNTm_EWRNLVL_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int LETD:1</td>
+<td>24 - 24</td>
+<td>CAN_NECNTm_LETD_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int LEINC:1</td>
+<td>25 - 25</td>
+<td>CAN_NECNTm_LEINC_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_NECNT0">CAN_NECNT0</a>,    
+<a class="url" href="../can.html#CAN_NECNT1">CAN_NECNT1</a>,    
+<a class="url" href="../can.html#CAN_NECNT2">CAN_NECNT2</a>,    
+<a class="url" href="../can.html#CAN_NECNT3">CAN_NECNT3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_NFCRm_t"><b>CAN_NFCRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Node n Frame Counter Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_NFCRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CFC:16</td>
+<td>0 - 15</td>
+<td>CAN_NFCRm_CFC_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CFSEL:3</td>
+<td>16 - 18</td>
+<td>CAN_NFCRm_CFSEL_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CFMOD:2</td>
+<td>19 - 20</td>
+<td>CAN_NFCRm_CFMOD_MASK</td>
+<td>0x00180000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CFCIE:1</td>
+<td>22 - 22</td>
+<td>CAN_NFCRm_CFCIE_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int CFCOV:1</td>
+<td>23 - 23</td>
+<td>CAN_NFCRm_CFCOV_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_NFCR0">CAN_NFCR0</a>,    
+<a class="url" href="../can.html#CAN_NFCR1">CAN_NFCR1</a>,    
+<a class="url" href="../can.html#CAN_NFCR2">CAN_NFCR2</a>,    
+<a class="url" href="../can.html#CAN_NFCR3">CAN_NFCR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_NIPRm_t"><b>CAN_NIPRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Node n Interrupt Pointer Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_NIPRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ALINP:4</td>
+<td>0 - 3</td>
+<td>CAN_NIPRm_ALINP_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LECINP:4</td>
+<td>4 - 7</td>
+<td>CAN_NIPRm_LECINP_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TRINP:4</td>
+<td>8 - 11</td>
+<td>CAN_NIPRm_TRINP_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CFCINP:4</td>
+<td>12 - 15</td>
+<td>CAN_NIPRm_CFCINP_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_NIPR0">CAN_NIPR0</a>,    
+<a class="url" href="../can.html#CAN_NIPR1">CAN_NIPR1</a>,    
+<a class="url" href="../can.html#CAN_NIPR2">CAN_NIPR2</a>,    
+<a class="url" href="../can.html#CAN_NIPR3">CAN_NIPR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_NPCRm_t"><b>CAN_NPCRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Node n Port Control Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_NPCRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RXSEL:3</td>
+<td>0 - 2</td>
+<td>CAN_NPCRm_RXSEL_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LBM:1</td>
+<td>8 - 8</td>
+<td>CAN_NPCRm_LBM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_NPCR0">CAN_NPCR0</a>,    
+<a class="url" href="../can.html#CAN_NPCR1">CAN_NPCR1</a>,    
+<a class="url" href="../can.html#CAN_NPCR2">CAN_NPCR2</a>,    
+<a class="url" href="../can.html#CAN_NPCR3">CAN_NPCR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_NSRm_t"><b>CAN_NSRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Node n Status Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_NSRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEC:3</td>
+<td>0 - 2</td>
+<td>CAN_NSRm_LEC_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TXOK:1</td>
+<td>3 - 3</td>
+<td>CAN_NSRm_TXOK_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RXOK:1</td>
+<td>4 - 4</td>
+<td>CAN_NSRm_RXOK_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ALERT:1</td>
+<td>5 - 5</td>
+<td>CAN_NSRm_ALERT_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int EWRN:1</td>
+<td>6 - 6</td>
+<td>CAN_NSRm_EWRN_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int BOFF:1</td>
+<td>7 - 7</td>
+<td>CAN_NSRm_BOFF_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int LLE:1</td>
+<td>8 - 8</td>
+<td>CAN_NSRm_LLE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int LOE:1</td>
+<td>9 - 9</td>
+<td>CAN_NSRm_LOE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>10 - 10</td>
+<td>CAN_NSRm_SUSACK_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_NSR0">CAN_NSR0</a>,    
+<a class="url" href="../can.html#CAN_NSR1">CAN_NSR1</a>,    
+<a class="url" href="../can.html#CAN_NSR2">CAN_NSR2</a>,    
+<a class="url" href="../can.html#CAN_NSR3">CAN_NSR3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_PANCTR_t"><b>CAN_PANCTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Panel Control Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_PANCTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PANCMD:8</td>
+<td>0 - 7</td>
+<td>CAN_PANCTR_PANCMD_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int BUSY:1</td>
+<td>8 - 8</td>
+<td>CAN_PANCTR_BUSY_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RBUSY:1</td>
+<td>9 - 9</td>
+<td>CAN_PANCTR_RBUSY_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int PANAR1:8</td>
+<td>16 - 23</td>
+<td>CAN_PANCTR_PANAR1_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PANAR2:8</td>
+<td>24 - 31</td>
+<td>CAN_PANCTR_PANAR2_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_PANCTR">CAN_PANCTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_REFMR_t"><b>CAN_REFMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Reference Mark Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_REFMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int REFMFR:7</td>
+<td>9 - 15</td>
+<td>CAN_REFMR_REFMFR_MASK</td>
+<td>0x0000fe00</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int REFM:16</td>
+<td>16 - 31</td>
+<td>CAN_REFMR_REFM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_REFMR">CAN_REFMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_SISR_t"><b>CAN_SISR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Scheduler Instruction Status Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_SISR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int INP:4</td>
+<td>0 - 3</td>
+<td>CAN_SISR_INP_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int IENTRAF0:1</td>
+<td>4 - 4</td>
+<td>CAN_SISR_IENTRAF0_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int IENTRAF1:1</td>
+<td>5 - 5</td>
+<td>CAN_SISR_IENTRAF1_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int IENRECF0:1</td>
+<td>6 - 6</td>
+<td>CAN_SISR_IENRECF0_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int IENRECF1:1</td>
+<td>7 - 7</td>
+<td>CAN_SISR_IENRECF1_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int CHEN:1</td>
+<td>8 - 8</td>
+<td>CAN_SISR_CHEN_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TREN:1</td>
+<td>9 - 9</td>
+<td>CAN_SISR_TREN_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int ALTMSG:2</td>
+<td>10 - 11</td>
+<td>CAN_SISR_ALTMSG_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int ARBM:2</td>
+<td>12 - 13</td>
+<td>CAN_SISR_ARBM_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int GM:1</td>
+<td>14 - 14</td>
+<td>CAN_SISR_GM_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int ICF:1</td>
+<td>15 - 15</td>
+<td>CAN_SISR_ICF_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int RCEV:1</td>
+<td>16 - 16</td>
+<td>CAN_SISR_RCEV_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int TCEV:1</td>
+<td>17 - 17</td>
+<td>CAN_SISR_TCEV_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int ICEV:1</td>
+<td>18 - 18</td>
+<td>CAN_SISR_ICEV_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ARBV:1</td>
+<td>19 - 19</td>
+<td>CAN_SISR_ARBV_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int TMEV:1</td>
+<td>20 - 20</td>
+<td>CAN_SISR_TMEV_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int RMEV:1</td>
+<td>21 - 21</td>
+<td>CAN_SISR_RMEV_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int BCEV:1</td>
+<td>22 - 22</td>
+<td>CAN_SISR_BCEV_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_SISR">CAN_SISR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_SRCm_t"><b>CAN_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Service Request Control Register n</b></td></tr>
+<tr><td colspan="5"><b>CAN_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>CAN_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>CAN_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>CAN_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>CAN_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>CAN_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>CAN_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_SRC0">CAN_SRC0</a>,    
+<a class="url" href="../can.html#CAN_SRC1">CAN_SRC1</a>,    
+<a class="url" href="../can.html#CAN_SRC10">CAN_SRC10</a>,    
+<a class="url" href="../can.html#CAN_SRC11">CAN_SRC11</a>,    
+<a class="url" href="../can.html#CAN_SRC12">CAN_SRC12</a>,    
+<a class="url" href="../can.html#CAN_SRC13">CAN_SRC13</a>,    
+<a class="url" href="../can.html#CAN_SRC14">CAN_SRC14</a>,    
+<a class="url" href="../can.html#CAN_SRC15">CAN_SRC15</a>,    
+<a class="url" href="../can.html#CAN_SRC2">CAN_SRC2</a>,    
+<a class="url" href="../can.html#CAN_SRC3">CAN_SRC3</a>,    
+<a class="url" href="../can.html#CAN_SRC4">CAN_SRC4</a>,    
+<a class="url" href="../can.html#CAN_SRC5">CAN_SRC5</a>,    
+<a class="url" href="../can.html#CAN_SRC6">CAN_SRC6</a>,    
+<a class="url" href="../can.html#CAN_SRC7">CAN_SRC7</a>,    
+<a class="url" href="../can.html#CAN_SRC8">CAN_SRC8</a>,    
+<a class="url" href="../can.html#CAN_SRC9">CAN_SRC9</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_STPTR0_t"><b>CAN_STPTR0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Scheduler Start Pointer Node 0 Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_STPTR0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STPTR:7</td>
+<td>0 - 6</td>
+<td>CAN_STPTR0_STPTR_MASK</td>
+<td>0x0000007f</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_STPTR0">CAN_STPTR0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_STSRH_t"><b>CAN_STSRH_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Scheduler Timing Status Register High</b></td></tr>
+<tr><td colspan="5"><b>CAN_STSRH_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TMETMV:16</td>
+<td>0 - 15</td>
+<td>CAN_STSRH_TMETMV_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int RCEMSGNR:8</td>
+<td>16 - 23</td>
+<td>CAN_STSRH_RCEMSGNR_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int TCEMSGNR:8</td>
+<td>24 - 31</td>
+<td>CAN_STSRH_TCEMSGNR_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_STSRH">CAN_STSRH</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_STSRL_t"><b>CAN_STSRL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Scheduler Timing Status Register Low</b></td></tr>
+<tr><td colspan="5"><b>CAN_STSRL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RMETMV:16</td>
+<td>0 - 15</td>
+<td>CAN_STSRL_RMETMV_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int BCETMV:16</td>
+<td>16 - 31</td>
+<td>CAN_STSRL_BCETMV_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_STSRL">CAN_STSRL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_SYNMR_t"><b>CAN_SYNMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Synchronization Mark Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_SYNMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SYNMFR:7</td>
+<td>9 - 15</td>
+<td>CAN_SYNMR_SYNMFR_MASK</td>
+<td>0x0000fe00</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SYNM:16</td>
+<td>16 - 31</td>
+<td>CAN_SYNMR_SYNM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_SYNMR">CAN_SYNMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TTCFGR_t"><b>CAN_TTCFGR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Trigger Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TTCFGR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IRO:7</td>
+<td>0 - 6</td>
+<td>CAN_TTCFGR_IRO_MASK</td>
+<td>0x0000007f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int EXPTT:8</td>
+<td>8 - 15</td>
+<td>CAN_TTCFGR_EXPTT_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RTO:8</td>
+<td>16 - 23</td>
+<td>CAN_TTCFGR_RTO_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int TTCNT:8</td>
+<td>24 - 31</td>
+<td>CAN_TTCFGR_TTCNT_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TTCFGR">CAN_TTCFGR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TTCR_t"><b>CAN_TTCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Trigger Control Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TTCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TTM:2</td>
+<td>0 - 1</td>
+<td>CAN_TTCR_TTM_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ETESEL:2</td>
+<td>2 - 3</td>
+<td>CAN_TTCR_ETESEL_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ETSSEL:3</td>
+<td>4 - 6</td>
+<td>CAN_TTCR_ETSSEL_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ETM:1</td>
+<td>7 - 7</td>
+<td>CAN_TTCR_ETM_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TTLVL:1</td>
+<td>8 - 8</td>
+<td>CAN_TTCR_TTLVL_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TMPRIO:3</td>
+<td>12 - 14</td>
+<td>CAN_TTCR_TMPRIO_MASK</td>
+<td>0x00007000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CYCLE:6</td>
+<td>16 - 21</td>
+<td>CAN_TTCR_CYCLE_MASK</td>
+<td>0x003f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int TENW:4</td>
+<td>24 - 27</td>
+<td>CAN_TTCR_TENW_MASK</td>
+<td>0x0f000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int RMDLC:4</td>
+<td>28 - 31</td>
+<td>CAN_TTCR_RMDLC_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TTCR">CAN_TTCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TTFMR_t"><b>CAN_TTFMR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Trigger Flag Modification Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TTFMR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CFGMEL:2</td>
+<td>0 - 1</td>
+<td>CAN_TTFMR_CFGMEL_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int NIGSR:2</td>
+<td>2 - 3</td>
+<td>CAN_TTFMR_NIGSR_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int STE:1</td>
+<td>4 - 4</td>
+<td>CAN_TTFMR_STE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ETREVR:1</td>
+<td>5 - 5</td>
+<td>CAN_TTFMR_ETREVR_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TTFMR">CAN_TTFMR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TTIER_t"><b>CAN_TTIER_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Trigger Interrupt Enable Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TTIER_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NBCIE:2</td>
+<td>0 - 1</td>
+<td>CAN_TTIER_NBCIE_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TENWERIE:1</td>
+<td>2 - 2</td>
+<td>CAN_TTIER_TENWERIE_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TTERIE:1</td>
+<td>3 - 3</td>
+<td>CAN_TTIER_TTERIE_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int WTEIE:1</td>
+<td>6 - 6</td>
+<td>CAN_TTIER_WTEIE_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int AWDIE:1</td>
+<td>7 - 7</td>
+<td>CAN_TTIER_AWDIE_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ERRSCIE:1</td>
+<td>8 - 8</td>
+<td>CAN_TTIER_ERRSCIE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MSRCIE:1</td>
+<td>9 - 9</td>
+<td>CAN_TTIER_MSRCIE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SYNCSCIE:1</td>
+<td>10 - 10</td>
+<td>CAN_TTIER_SYNCSCIE_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SEIE:1</td>
+<td>11 - 11</td>
+<td>CAN_TTIER_SEIE_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int NOTIFIE:1</td>
+<td>12 - 12</td>
+<td>CAN_TTIER_NOTIFIE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TTIER">CAN_TTIER</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TTINPR_t"><b>CAN_TTINPR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Trigger Interrupt Node Pointer Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TTINPR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ERRINP:4</td>
+<td>0 - 3</td>
+<td>CAN_TTINPR_ERRINP_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int NBCINP:4</td>
+<td>4 - 7</td>
+<td>CAN_TTINPR_NBCINP_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int NOTIFINP:4</td>
+<td>8 - 11</td>
+<td>CAN_TTINPR_NOTIFINP_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TTINPR">CAN_TTINPR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TTIRR_t"><b>CAN_TTIRR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Trigger Interrupt Request Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TTIRR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NMC:1</td>
+<td>0 - 0</td>
+<td>CAN_TTIRR_NMC_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int NBC:1</td>
+<td>1 - 1</td>
+<td>CAN_TTIRR_NBC_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int TENWER:1</td>
+<td>2 - 2</td>
+<td>CAN_TTIRR_TENWER_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TTUF:1</td>
+<td>3 - 3</td>
+<td>CAN_TTIRR_TTUF_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int TTOF:1</td>
+<td>4 - 4</td>
+<td>CAN_TTIRR_TTOF_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WTE:1</td>
+<td>5 - 5</td>
+<td>CAN_TTIRR_WTE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int IWTE:1</td>
+<td>6 - 6</td>
+<td>CAN_TTIRR_IWTE_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int AWDERR:1</td>
+<td>7 - 7</td>
+<td>CAN_TTIRR_AWDERR_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ERRSC:1</td>
+<td>8 - 8</td>
+<td>CAN_TTIRR_ERRSC_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MSRC:1</td>
+<td>9 - 9</td>
+<td>CAN_TTIRR_MSRC_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int SYNCSC:1</td>
+<td>10 - 10</td>
+<td>CAN_TTIRR_SYNCSC_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int EOS:1</td>
+<td>11 - 11</td>
+<td>CAN_TTIRR_EOS_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int WFE:1</td>
+<td>12 - 12</td>
+<td>CAN_TTIRR_WFE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DISC:1</td>
+<td>13 - 13</td>
+<td>CAN_TTIRR_DISC_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int SERR1:1</td>
+<td>14 - 14</td>
+<td>CAN_TTIRR_SERR1_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SERR2:1</td>
+<td>15 - 15</td>
+<td>CAN_TTIRR_SERR2_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int CFGERR:1</td>
+<td>16 - 16</td>
+<td>CAN_TTIRR_CFGERR_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int TURERR:1</td>
+<td>17 - 17</td>
+<td>CAN_TTIRR_TURERR_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TTIRR">CAN_TTIRR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TTSR_t"><b>CAN_TTSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Trigger Status Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TTSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ERRS:2</td>
+<td>0 - 1</td>
+<td>CAN_TTSR_ERRS_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MSR:2</td>
+<td>2 - 3</td>
+<td>CAN_TTSR_MSR_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SYNCS:2</td>
+<td>4 - 5</td>
+<td>CAN_TTSR_SYNCS_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int EFI:1</td>
+<td>8 - 8</td>
+<td>CAN_TTSR_EFI_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int EFF:1</td>
+<td>9 - 9</td>
+<td>CAN_TTSR_EFF_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int REFTRG:1</td>
+<td>10 - 10</td>
+<td>CAN_TTSR_REFTRG_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int ARB:1</td>
+<td>11 - 11</td>
+<td>CAN_TTSR_ARB_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int CFGM:1</td>
+<td>12 - 12</td>
+<td>CAN_TTSR_CFGM_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int TMPC:1</td>
+<td>13 - 13</td>
+<td>CAN_TTSR_TMPC_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int TRAF:1</td>
+<td>14 - 14</td>
+<td>CAN_TTSR_TRAF_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RECF:1</td>
+<td>15 - 15</td>
+<td>CAN_TTSR_RECF_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int MSCMIN:3</td>
+<td>16 - 18</td>
+<td>CAN_TTSR_MSCMIN_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MSCMAX:3</td>
+<td>20 - 22</td>
+<td>CAN_TTSR_MSCMAX_MASK</td>
+<td>0x00700000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int NIG:1</td>
+<td>24 - 24</td>
+<td>CAN_TTSR_NIG_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int ETR:1</td>
+<td>25 - 25</td>
+<td>CAN_TTSR_ETR_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int ETREV:1</td>
+<td>26 - 26</td>
+<td>CAN_TTSR_ETREV_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TTSR">CAN_TTSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CAN_TURR_t"><b>CAN_TURR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CAN Time Unit Ratio Register</b></td></tr>
+<tr><td colspan="5"><b>CAN_TURR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADJEN:1</td>
+<td>0 - 0</td>
+<td>CAN_TURR_ADJEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TURADJ:10</td>
+<td>6 - 15</td>
+<td>CAN_TURR_TURADJ_MASK</td>
+<td>0x0000ffc0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int VAL:1</td>
+<td>16 - 16</td>
+<td>CAN_TURR_VAL_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int LTCS:1</td>
+<td>17 - 17</td>
+<td>CAN_TURR_LTCS_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int LTDIV:3</td>
+<td>18 - 20</td>
+<td>CAN_TURR_LTDIV_MASK</td>
+<td>0x001c0000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int TUR:10</td>
+<td>22 - 31</td>
+<td>CAN_TURR_TUR_MASK</td>
+<td>0xffc00000</td>
+<td align="right">22</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../can.html#CAN_TURR">CAN_TURR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../can.html">CAN</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_COMDATA_t"><b>CBS_COMDATA_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Communication Mode Data Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_COMDATA_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_COMDATA">CBS_COMDATA</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_ICTSA_t"><b>CBS_ICTSA_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Internal Controlled Trace Source Address Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_ICTSA_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_ICTSA">CBS_ICTSA</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_ICTTA_t"><b>CBS_ICTTA_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Internal Controlled Trace Target Address Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_ICTTA_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_ICTTA">CBS_ICTTA</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_INTMOD_t"><b>CBS_INTMOD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Internal Mode Status and Control Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_INTMOD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_INTMOD">CBS_INTMOD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_IOSR_t"><b>CBS_IOSR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Status Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_IOSR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_IOSR">CBS_IOSR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_JDPID_t"><b>CBS_JDPID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_JDPID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_JDPID">CBS_JDPID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_MCDBBS_t"><b>CBS_MCDBBS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Break Bus Switch Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_MCDBBS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_MCDBBS">CBS_MCDBBS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_MCDBBSS_t"><b>CBS_MCDBBSS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Break Bus Switch Status Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_MCDBBSS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_MCDBBSS">CBS_MCDBBSS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_MCDSSG_t"><b>CBS_MCDSSG_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Suspend Signal Generation Status and Control Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_MCDSSG_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_MCDSSG">CBS_MCDSSG</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_MCDSSGC_t"><b>CBS_MCDSSGC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Suspend Signal Generation Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_MCDSSGC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_MCDSSGC">CBS_MCDSSGC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_OCNTRL_t"><b>CBS_OCNTRL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus OSCU Configuration and Control Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_OCNTRL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_OCNTRL">CBS_OCNTRL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_OEC_t"><b>CBS_OEC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus OCDS Enable Control Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_OEC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_OEC">CBS_OEC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_OSTATE_t"><b>CBS_OSTATE_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus OSCU Status Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_OSTATE_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_OSTATE">CBS_OSTATE</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CBS_SRC_t"><b>CBS_SRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Cerberus Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>CBS_SRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cerberus.html#CBS_SRC">CBS_SRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cerberus.html">Cerberus</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CHIPID_t"><b>CHIPID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Chip Identification Register</b></td></tr>
+<tr><td colspan="5"><b>CHIPID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CHREV:8</td>
+<td>0 - 7</td>
+<td>CHIPID_CHREV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CHID:8</td>
+<td>8 - 15</td>
+<td>CHIPID_CHID_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#CHIPID">CHIPID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CPMn_t"><b>CPMn_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Code Protection Mode Register Set n</b></td></tr>
+<tr><td colspan="5"><b>CPMn_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#CPM0">CPM0</a>,    
+<a class="url" href="../mpr.html#CPM1">CPM1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CPRn_mL_t"><b>CPRn_mL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Code Segment Protection Register Set n, Range m, Lower Boundary</b></td></tr>
+<tr><td colspan="5"><b>CPRn_mL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#CPR0_0L">CPR0_0L</a>,    
+<a class="url" href="../mpr.html#CPR0_1L">CPR0_1L</a>,    
+<a class="url" href="../mpr.html#CPR1_0L">CPR1_0L</a>,    
+<a class="url" href="../mpr.html#CPR1_1L">CPR1_1L</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CPRn_mU_t"><b>CPRn_mU_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Code Segment Protection Register Set n, Range m, Upper Boundary</b></td></tr>
+<tr><td colspan="5"><b>CPRn_mU_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#CPR0_0U">CPR0_0U</a>,    
+<a class="url" href="../mpr.html#CPR0_1U">CPR0_1U</a>,    
+<a class="url" href="../mpr.html#CPR1_0U">CPR1_0U</a>,    
+<a class="url" href="../mpr.html#CPR1_1U">CPR1_1U</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CPS_ID_t"><b>CPS_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CPS Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>CPS_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cps.html#CPS_ID">CPS_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cps.html">CPS</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CPU_ID_t"><b>CPU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CPU Identification Register</b></td></tr>
+<tr><td colspan="5"><b>CPU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../csfr.html#CPU_ID">CPU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../csfr.html">CSFR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CPU_SBSRC0_t"><b>CPU_SBSRC0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CPU Software Break Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>CPU_SBSRC0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>CPU_SBSRC0_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>CPU_SBSRC0_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>CPU_SBSRC0_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>CPU_SBSRC0_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>CPU_SBSRC0_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>CPU_SBSRC0_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cps.html#CPU_SBSRC0">CPU_SBSRC0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cps.html">CPS</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CPU_SRCm_t"><b>CPU_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>CPU Service Request Control Register n</b></td></tr>
+<tr><td colspan="5"><b>CPU_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>CPU_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>CPU_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>CPU_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>CPU_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>CPU_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>CPU_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cps.html#CPU_SRC0">CPU_SRC0</a>,    
+<a class="url" href="../cps.html#CPU_SRC1">CPU_SRC1</a>,    
+<a class="url" href="../cps.html#CPU_SRC2">CPU_SRC2</a>,    
+<a class="url" href="../cps.html#CPU_SRC3">CPU_SRC3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cps.html">CPS</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="CREVT_t"><b>CREVT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Core SFR Access Break Event Specifier Register</b></td></tr>
+<tr><td colspan="5"><b>CREVT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../core_debug.html#CREVT">CREVT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../core_debug.html">Core_Debug</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

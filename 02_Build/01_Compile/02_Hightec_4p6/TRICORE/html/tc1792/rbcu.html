@@ -1,0 +1,1557 @@
+<html>
+<head>
+<title>TriCore TC1792 (RBCU)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>RBCU</h2>
+
+<h2><tt>#include &lt;tc1792/rbcu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#RBCU_ID">RBCU_ID</a></td>
+<td>RBCU Module Identification Register</td>
+<td>0xF0100008</td>
+<td><a class="url" href="types/r.html#RBCU_ID_t">RBCU_ID_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_CON">RBCU_CON</a></td>
+<td>RBCU Control Register</td>
+<td>0xF0100010</td>
+<td><a class="url" href="types/r.html#RBCU_CON_t">RBCU_CON_t</a></td>
+<td>0x4009FFFF</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_ECON">RBCU_ECON</a></td>
+<td>RBCU Error Control Capture Register</td>
+<td>0xF0100020</td>
+<td><a class="url" href="types/r.html#RBCU_ECON_t">RBCU_ECON_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_EADD">RBCU_EADD</a></td>
+<td>RBCU Error Address Capture Register</td>
+<td>0xF0100024</td>
+<td><a class="url" href="types/r.html#RBCU_EADD_t">RBCU_EADD_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_EDAT">RBCU_EDAT</a></td>
+<td>RBCU Error Data Capture Register</td>
+<td>0xF0100028</td>
+<td><a class="url" href="types/r.html#RBCU_EDAT_t">RBCU_EDAT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBCNTL">RBCU_DBCNTL</a></td>
+<td>RBCU Debug Control Register</td>
+<td>0xF0100030</td>
+<td><a class="url" href="types/r.html#RBCU_DBCNTL_t">RBCU_DBCNTL_t</a></td>
+<td>0x00007003</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBGRNT">RBCU_DBGRNT</a></td>
+<td>RBCU Debug Grant Mask Register</td>
+<td>0xF0100034</td>
+<td><a class="url" href="types/r.html#RBCU_DBGRNT_t">RBCU_DBGRNT_t</a></td>
+<td>0x0000FFFF</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBADR1">RBCU_DBADR1</a></td>
+<td>RBCU Debug Address  1 Register</td>
+<td>0xF0100038</td>
+<td><a class="url" href="types/r.html#RBCU_DBADRm_t">RBCU_DBADRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBADR2">RBCU_DBADR2</a></td>
+<td>RBCU Debug Address 2 Register</td>
+<td>0xF010003C</td>
+<td><a class="url" href="types/r.html#RBCU_DBADRm_t">RBCU_DBADRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBBOS">RBCU_DBBOS</a></td>
+<td>RBCU Debug Bus Operation Signals Register</td>
+<td>0xF0100040</td>
+<td><a class="url" href="types/r.html#RBCU_DBBOS_t">RBCU_DBBOS_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBGNTT">RBCU_DBGNTT</a></td>
+<td>RBCU Debug Trapped Master Register</td>
+<td>0xF0100044</td>
+<td><a class="url" href="types/r.html#RBCU_DBGNTT_t">RBCU_DBGNTT_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBADRT">RBCU_DBADRT</a></td>
+<td>RBCU Debug Trapped Address Register</td>
+<td>0xF0100048</td>
+<td><a class="url" href="types/r.html#RBCU_DBADRT_t">RBCU_DBADRT_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_DBBOST">RBCU_DBBOST</a></td>
+<td>RBCU Debug Trapped Bus Operation Signals Register</td>
+<td>0xF010004C</td>
+<td><a class="url" href="types/r.html#RBCU_DBBOST_t">RBCU_DBBOST_t</a></td>
+<td>0x00003180</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#RBCU_SRC">RBCU_SRC</a></td>
+<td>RBCU Service Request Control Register</td>
+<td>0xF01000FC</td>
+<td><a class="url" href="types/r.html#RBCU_SRC_t">RBCU_SRC_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_CON_t">RBCU_CON_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_CON">RBCU_CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_DBADRT_t">RBCU_DBADRT_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_DBADRT">RBCU_DBADRT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_DBADRm_t">RBCU_DBADRm_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_DBADR1">RBCU_DBADR1</a>,       
+<a class="url" href="rbcu.html#RBCU_DBADR2">RBCU_DBADR2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_DBBOS_t">RBCU_DBBOS_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_DBBOS">RBCU_DBBOS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_DBBOST_t">RBCU_DBBOST_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_DBBOST">RBCU_DBBOST</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_DBCNTL_t">RBCU_DBCNTL_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_DBCNTL">RBCU_DBCNTL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_DBGNTT_t">RBCU_DBGNTT_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_DBGNTT">RBCU_DBGNTT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_DBGRNT_t">RBCU_DBGRNT_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_DBGRNT">RBCU_DBGRNT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_EADD_t">RBCU_EADD_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_EADD">RBCU_EADD</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_ECON_t">RBCU_ECON_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_ECON">RBCU_ECON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_EDAT_t">RBCU_EDAT_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_EDAT">RBCU_EDAT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_ID_t">RBCU_ID_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_ID">RBCU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/r.html#RBCU_SRC_t">RBCU_SRC_t</a></td>
+<td><a class="url" href="rbcu.html#RBCU_SRC">RBCU_SRC</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="RBCU_ID">&nbsp;</a>
+<h3>RBCU_ID</h3>
+<h3>"RBCU Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_ID_ADDR = 0xF0100008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_ID_t">RBCU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_ID.bits</b>&nbsp;&quot;RBCU Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_ID_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_CON">&nbsp;</a>
+<h3>RBCU_CON</h3>
+<h3>"RBCU Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_CON_ADDR = 0xF0100010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x4009FFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_CON_t">RBCU_CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_CON.bits</b>&nbsp;&quot;RBCU Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TOUT</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>RBCU_CON_TOUT_MASK</td>
+<td><tt>0x0000ffff</tt></td>
+<td>rw</td>
+<td>RBCU_CON_TOUT_SHIFT</td>
+</tr>
+<tr>
+<td>DBG</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>RBCU_CON_DBG_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>RBCU_CON_DBG_SHIFT</td>
+</tr>
+<tr>
+<td>PSE</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>RBCU_CON_PSE_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>RBCU_CON_PSE_SHIFT</td>
+</tr>
+<tr>
+<td>SPE</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>RBCU_CON_SPE_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>RBCU_CON_SPE_SHIFT</td>
+</tr>
+<tr>
+<td>SPC</td>
+<td>8</td>
+<td>24 - 31</td>
+<td>RBCU_CON_SPC_MASK</td>
+<td><tt>0xff000000</tt></td>
+<td>rw</td>
+<td>RBCU_CON_SPC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_CON_MASK</td><td><tt>0xff0dffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0dffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0dffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_ECON">&nbsp;</a>
+<h3>RBCU_ECON</h3>
+<h3>"RBCU Error Control Capture Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_ECON_ADDR = 0xF0100020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_ECON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_ECON_t">RBCU_ECON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_ECON.bits</b>&nbsp;&quot;RBCU Error Control Capture Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ERRCNT</td>
+<td>16</td>
+<td>0 - 15</td>
+<td>RBCU_ECON_ERRCNT_MASK</td>
+<td><tt>0x0000ffff</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_ERRCNT_SHIFT</td>
+</tr>
+<tr>
+<td>TOUT</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>RBCU_ECON_TOUT_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_TOUT_SHIFT</td>
+</tr>
+<tr>
+<td>RDY</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>RBCU_ECON_RDY_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_RDY_SHIFT</td>
+</tr>
+<tr>
+<td>ABT</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>RBCU_ECON_ABT_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_ABT_SHIFT</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>2</td>
+<td>19 - 20</td>
+<td>RBCU_ECON_ACK_MASK</td>
+<td><tt>0x00180000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_ACK_SHIFT</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>RBCU_ECON_SVM_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_SVM_SHIFT</td>
+</tr>
+<tr>
+<td>WRN</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>RBCU_ECON_WRN_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_WRN_SHIFT</td>
+</tr>
+<tr>
+<td>RDN</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>RBCU_ECON_RDN_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_RDN_SHIFT</td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>RBCU_ECON_TAG_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_TAG_SHIFT</td>
+</tr>
+<tr>
+<td>OPC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>RBCU_ECON_OPC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rwh</td>
+<td>RBCU_ECON_OPC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_ECON_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_EADD">&nbsp;</a>
+<h3>RBCU_EADD</h3>
+<h3>"RBCU Error Address Capture Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_EADD_ADDR = 0xF0100024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_EADD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_EADD_t">RBCU_EADD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_EADD.bits</b>&nbsp;&quot;RBCU Error Address Capture Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FPIADR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>RBCU_EADD_FPIADR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rwh</td>
+<td>RBCU_EADD_FPIADR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_EADD_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_EDAT">&nbsp;</a>
+<h3>RBCU_EDAT</h3>
+<h3>"RBCU Error Data Capture Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_EDAT_ADDR = 0xF0100028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_EDAT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_EDAT_t">RBCU_EDAT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_EDAT.bits</b>&nbsp;&quot;RBCU Error Data Capture Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FPIDAT</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>RBCU_EDAT_FPIDAT_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rwh</td>
+<td>RBCU_EDAT_FPIDAT_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_EDAT_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBCNTL">&nbsp;</a>
+<h3>RBCU_DBCNTL</h3>
+<h3>"RBCU Debug Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBCNTL_ADDR = 0xF0100030</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBCNTL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00007003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBCNTL_t">RBCU_DBCNTL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBCNTL.bits</b>&nbsp;&quot;RBCU Debug Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EO</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>RBCU_DBCNTL_EO_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>r</td>
+<td>RBCU_DBCNTL_EO_SHIFT</td>
+</tr>
+<tr>
+<td>OA</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>RBCU_DBCNTL_OA_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>r</td>
+<td>RBCU_DBCNTL_OA_SHIFT</td>
+</tr>
+<tr>
+<td>RA</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>RBCU_DBCNTL_RA_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>RBCU_DBCNTL_RA_SHIFT</td>
+</tr>
+<tr>
+<td>CONCOM0</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>RBCU_DBCNTL_CONCOM0_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_CONCOM0_SHIFT</td>
+</tr>
+<tr>
+<td>CONCOM1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>RBCU_DBCNTL_CONCOM1_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_CONCOM1_SHIFT</td>
+</tr>
+<tr>
+<td>CONCOM2</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>RBCU_DBCNTL_CONCOM2_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_CONCOM2_SHIFT</td>
+</tr>
+<tr>
+<td>ONG</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>RBCU_DBCNTL_ONG_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_ONG_SHIFT</td>
+</tr>
+<tr>
+<td>ONA1</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>RBCU_DBCNTL_ONA1_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_ONA1_SHIFT</td>
+</tr>
+<tr>
+<td>ONA2</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>RBCU_DBCNTL_ONA2_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_ONA2_SHIFT</td>
+</tr>
+<tr>
+<td>ONBOS0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>RBCU_DBCNTL_ONBOS0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_ONBOS0_SHIFT</td>
+</tr>
+<tr>
+<td>ONBOS1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>RBCU_DBCNTL_ONBOS1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_ONBOS1_SHIFT</td>
+</tr>
+<tr>
+<td>ONBOS2</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>RBCU_DBCNTL_ONBOS2_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_ONBOS2_SHIFT</td>
+</tr>
+<tr>
+<td>ONBOS3</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>RBCU_DBCNTL_ONBOS3_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>RBCU_DBCNTL_ONBOS3_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBCNTL_MASK</td><td><tt>0xf3317013</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf3317003</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf3317010</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBGRNT">&nbsp;</a>
+<h3>RBCU_DBGRNT</h3>
+<h3>"RBCU Debug Grant Mask Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBGRNT_ADDR = 0xF0100034</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBGRNT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000FFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBGRNT_t">RBCU_DBGRNT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBGRNT.bits</b>&nbsp;&quot;RBCU Debug Grant Mask Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DMAH</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>RBCU_DBGRNT_DMAH_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>RBCU_DBGRNT_DMAH_SHIFT</td>
+</tr>
+<tr>
+<td>DMAL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>RBCU_DBGRNT_DMAL_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>RBCU_DBGRNT_DMAL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBGRNT_MASK</td><td><tt>0x00000050</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000050</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000050</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBADR1">&nbsp;</a>
+<h3>RBCU_DBADR1</h3>
+<h3>"RBCU Debug Address  1 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBADR1_ADDR = 0xF0100038</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBADRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBADRm_t">RBCU_DBADRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBADR1.bits</b>&nbsp;&quot;RBCU Debug Address  1 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADRn</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>RBCU_DBADRm_ADRn_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>RBCU_DBADRm_ADRn_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBADRm_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBADR2">&nbsp;</a>
+<h3>RBCU_DBADR2</h3>
+<h3>"RBCU Debug Address 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBADR2_ADDR = 0xF010003C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBADRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBADRm_t">RBCU_DBADRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBADR2.bits</b>&nbsp;&quot;RBCU Debug Address 2 Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ADRn</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>RBCU_DBADRm_ADRn_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rw</td>
+<td>RBCU_DBADRm_ADRn_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBADRm_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBBOS">&nbsp;</a>
+<h3>RBCU_DBBOS</h3>
+<h3>"RBCU Debug Bus Operation Signals Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBBOS_ADDR = 0xF0100040</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBBOS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBBOS_t">RBCU_DBBOS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBBOS.bits</b>&nbsp;&quot;RBCU Debug Bus Operation Signals Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OPC</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>RBCU_DBBOS_OPC_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>RBCU_DBBOS_OPC_SHIFT</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>RBCU_DBBOS_SVM_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>RBCU_DBBOS_SVM_SHIFT</td>
+</tr>
+<tr>
+<td>WR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>RBCU_DBBOS_WR_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>RBCU_DBBOS_WR_SHIFT</td>
+</tr>
+<tr>
+<td>RD</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>RBCU_DBBOS_RD_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>RBCU_DBBOS_RD_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBBOS_MASK</td><td><tt>0x0000111f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000111f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000111f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBGNTT">&nbsp;</a>
+<h3>RBCU_DBGNTT</h3>
+<h3>"RBCU Debug Trapped Master Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBGNTT_ADDR = 0xF0100044</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBGNTT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBGNTT_t">RBCU_DBGNTT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBGNTT.bits</b>&nbsp;&quot;RBCU Debug Trapped Master Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DMAH</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>RBCU_DBGNTT_DMAH_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_DMAH_SHIFT</td>
+</tr>
+<tr>
+<td>DMAL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>RBCU_DBGNTT_DMAL_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_DMAL_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR00</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>RBCU_DBGNTT_CHNR00_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR00_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR01</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>RBCU_DBGNTT_CHNR01_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR01_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR02</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>RBCU_DBGNTT_CHNR02_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR02_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR03</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>RBCU_DBGNTT_CHNR03_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR03_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR04</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>RBCU_DBGNTT_CHNR04_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR04_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR05</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>RBCU_DBGNTT_CHNR05_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR05_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR06</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>RBCU_DBGNTT_CHNR06_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR06_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR07</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>RBCU_DBGNTT_CHNR07_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR07_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR10</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>RBCU_DBGNTT_CHNR10_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR10_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR11</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>RBCU_DBGNTT_CHNR11_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR11_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR12</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>RBCU_DBGNTT_CHNR12_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR12_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR13</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>RBCU_DBGNTT_CHNR13_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR13_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR14</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>RBCU_DBGNTT_CHNR14_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR14_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR15</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>RBCU_DBGNTT_CHNR15_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR15_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR16</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>RBCU_DBGNTT_CHNR16_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR16_SHIFT</td>
+</tr>
+<tr>
+<td>CHNR17</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>RBCU_DBGNTT_CHNR17_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rh</td>
+<td>RBCU_DBGNTT_CHNR17_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBGNTT_MASK</td><td><tt>0xffff0050</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffff0050</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffff0050</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBADRT">&nbsp;</a>
+<h3>RBCU_DBADRT</h3>
+<h3>"RBCU Debug Trapped Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBADRT_ADDR = 0xF0100048</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBADRT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBADRT_t">RBCU_DBADRT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBADRT.bits</b>&nbsp;&quot;RBCU Debug Trapped Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FPIADR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>RBCU_DBADRT_FPIADR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>r</td>
+<td>RBCU_DBADRT_FPIADR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBADRT_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_DBBOST">&nbsp;</a>
+<h3>RBCU_DBBOST</h3>
+<h3>"RBCU Debug Trapped Bus Operation Signals Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_DBBOST_ADDR = 0xF010004C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_DBBOST_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00003180</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_DBBOST_t">RBCU_DBBOST_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_DBBOST.bits</b>&nbsp;&quot;RBCU Debug Trapped Bus Operation Signals Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FPIOPC</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>RBCU_DBBOST_FPIOPC_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIOPC_SHIFT</td>
+</tr>
+<tr>
+<td>FPISVM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>RBCU_DBBOST_FPISVM_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPISVM_SHIFT</td>
+</tr>
+<tr>
+<td>FPIACK</td>
+<td>2</td>
+<td>5 - 6</td>
+<td>RBCU_DBBOST_FPIACK_MASK</td>
+<td><tt>0x00000060</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIACK_SHIFT</td>
+</tr>
+<tr>
+<td>FPIRDY</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>RBCU_DBBOST_FPIRDY_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIRDY_SHIFT</td>
+</tr>
+<tr>
+<td>FPIWR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>RBCU_DBBOST_FPIWR_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIWR_SHIFT</td>
+</tr>
+<tr>
+<td>FPIRST</td>
+<td>2</td>
+<td>9 - 10</td>
+<td>RBCU_DBBOST_FPIRST_MASK</td>
+<td><tt>0x00000600</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIRST_SHIFT</td>
+</tr>
+<tr>
+<td>FPIOPS</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>RBCU_DBBOST_FPIOPS_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIOPS_SHIFT</td>
+</tr>
+<tr>
+<td>FPIRD</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>RBCU_DBBOST_FPIRD_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIRD_SHIFT</td>
+</tr>
+<tr>
+<td>FPIABORT</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>RBCU_DBBOST_FPIABORT_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPIABORT_SHIFT</td>
+</tr>
+<tr>
+<td>FPITOUT</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>RBCU_DBBOST_FPITOUT_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPITOUT_SHIFT</td>
+</tr>
+<tr>
+<td>FPITAG</td>
+<td>4</td>
+<td>16 - 19</td>
+<td>RBCU_DBBOST_FPITAG_MASK</td>
+<td><tt>0x000f0000</tt></td>
+<td>rh</td>
+<td>RBCU_DBBOST_FPITAG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_DBBOST_MASK</td><td><tt>0x000f7fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000f7fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000f7fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="RBCU_SRC">&nbsp;</a>
+<h3>RBCU_SRC</h3>
+<h3>"RBCU Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>RBCU_SRC_ADDR = 0xF01000FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>RBCU_SRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/r.html#RBCU_SRC_t">RBCU_SRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>RBCU_SRC.bits</b>&nbsp;&quot;RBCU Service Request Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>RBCU_SRC_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>RBCU_SRC_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>RBCU_SRC_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>RBCU_SRC_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>RBCU_SRC_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>RBCU_SRC_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>RBCU_SRC_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>RBCU_SRC_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>RBCU_SRC_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>RBCU_SRC_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>RBCU_SRC_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>RBCU_SRC_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>RBCU_SRC_MASK</td><td><tt>0x0000fcff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d0ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,340 @@
+<html>
+<head>
+<title>TriCore TC1792 (PMI)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>PMI</h2>
+
+<h2><tt>#include &lt;tc1792/pmi.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#PMI_ID">PMI_ID</a></td>
+<td>PMI Module Identification Register</td>
+<td>0xF87FFD08</td>
+<td><a class="url" href="types/p.html#PMI_ID_t">PMI_ID_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV,32</td>
+<td>U,SV,NC,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PMI_CON0">PMI_CON0</a></td>
+<td>PMI Control Register 0</td>
+<td>0xF87FFD10</td>
+<td><a class="url" href="types/p.html#PMI_CON0_t">PMI_CON0_t</a></td>
+<td>0x00000002</td>
+<td>U,SV,32</td>
+<td>SV,E,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PMI_CON1">PMI_CON1</a></td>
+<td>PMI Control Register 1</td>
+<td>0xF87FFD14</td>
+<td><a class="url" href="types/p.html#PMI_CON1_t">PMI_CON1_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PMI_CON2">PMI_CON2</a></td>
+<td>PMI Control Register 2</td>
+<td>0xF87FFD18</td>
+<td><a class="url" href="types/p.html#PMI_CON2_t">PMI_CON2_t</a></td>
+<td>0x00000073</td>
+<td>U,SV,32</td>
+<td>SV,NC,32</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PMI_CON0_t">PMI_CON0_t</a></td>
+<td><a class="url" href="pmi.html#PMI_CON0">PMI_CON0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PMI_CON1_t">PMI_CON1_t</a></td>
+<td><a class="url" href="pmi.html#PMI_CON1">PMI_CON1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PMI_CON2_t">PMI_CON2_t</a></td>
+<td><a class="url" href="pmi.html#PMI_CON2">PMI_CON2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PMI_ID_t">PMI_ID_t</a></td>
+<td><a class="url" href="pmi.html#PMI_ID">PMI_ID</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="PMI_ID">&nbsp;</a>
+<h3>PMI_ID</h3>
+<h3>"PMI Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMI_ID_ADDR = 0xF87FFD08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMI_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMI_ID_t">PMI_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PMI_ID.bits</b>&nbsp;&quot;PMI Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PMI_ID_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PMI_CON0">&nbsp;</a>
+<h3>PMI_CON0</h3>
+<h3>"PMI Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMI_CON0_ADDR = 0xF87FFD10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMI_CON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000002</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMI_CON0_t">PMI_CON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PMI_CON0.bits</b>&nbsp;&quot;PMI Control Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CC2SPR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>PMI_CON0_CC2SPR_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>PMI_CON0_CC2SPR_SHIFT</td>
+</tr>
+<tr>
+<td>CCBYP</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>PMI_CON0_CCBYP_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>PMI_CON0_CCBYP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PMI_CON0_MASK</td><td><tt>0x00000003</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PMI_CON1">&nbsp;</a>
+<h3>PMI_CON1</h3>
+<h3>"PMI Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMI_CON1_ADDR = 0xF87FFD14</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMI_CON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMI_CON1_t">PMI_CON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PMI_CON1.bits</b>&nbsp;&quot;PMI Control Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CCINV</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>PMI_CON1_CCINV_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>PMI_CON1_CCINV_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PMI_CON1_MASK</td><td><tt>0x00000001</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PMI_CON2">&nbsp;</a>
+<h3>PMI_CON2</h3>
+<h3>"PMI Control Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMI_CON2_ADDR = 0xF87FFD18</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMI_CON2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000073</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMI_CON2_t">PMI_CON2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PMI_CON2.bits</b>&nbsp;&quot;PMI Control Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PCSZ</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>PMI_CON2_PCSZ_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>r</td>
+<td>PMI_CON2_PCSZ_SHIFT</td>
+</tr>
+<tr>
+<td>PMEMSZ</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>PMI_CON2_PMEMSZ_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>r</td>
+<td>PMI_CON2_PMEMSZ_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PMI_CON2_MASK</td><td><tt>0x00000073</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000073</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

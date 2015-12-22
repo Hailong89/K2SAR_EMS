@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-15">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.2  (Linux)">
+	<META NAME="CREATED" CONTENT="20040107;19011000">
+	<META NAME="CHANGED" CONTENT="20040202;19420300">
+</HEAD>
+<BODY LANG="en-US">
+<H1 ALIGN=CENTER><SPAN LANG="en-GB">&quot;/*&quot; within comment</SPAN><BR><FONT COLOR="#23ff23">Not
+dangerous</FONT></H1>
+<HR>
+<P><B>Problem</B></P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm">A begin of commentary /*
+is following a non terminated previous /*, or you tried to use nested
+commentaries (in the case you probably get an error before.)</P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<HR>
+<P><A NAME="Todo"></A><B>Solution</B></P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm; font-weight: medium">Always
+use a matching pair of /* and */ in your code. The comments are
+working by pair, but they can't be nested.</P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm; font-weight: medium"><BR>
+</P>
+<HR>
+<P><A NAME="thanks_to"></A><B>Example</B></P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000">The
+compiler warns on the red &quot;begin of commentary&quot;, but the
+really problem concerns the non terminated previous one (blue)</FONT></P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, monospace"><I><FONT COLOR="#008000">/************************************************************/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+calculate unlimited value of dwmsvo_w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><B><FONT COLOR="#0000ff">/*</FONT></B><FONT COLOR="#008000">
+use Int16 addition against overflow</FONT></I><FONT COLOR="#000000"><BR></FONT><I><B><FONT COLOR="#ff0000">/*</FONT></B><FONT COLOR="#008000">
+dwmsvvst_w -3276.7...3276.8 16 Bit 0.1 Grad KW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+DWMSVRDR -3276.7...3276.8 16 Bit 0.1 Grad KW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+(legal range: -360/SY_CAMNMSV ... +360/SY_CAMNMSV)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/************************************************************/</FONT></I></FONT></P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm">The correction is very
+simple(blue):</P>
+<P LANG="en-GB" STYLE="margin-bottom: 0cm"><FONT FACE="Courier, monospace"><I><FONT COLOR="#008000">/************************************************************/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+calculate unlimited value of dwmsvo_w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+use Int16 addition against overflow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT><FONT COLOR="#0000ff"><B>*/</B></FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+dwmsvvst_w -3276.7...3276.8 16 Bit 0.1 Grad KW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+DWMSVRDR -3276.7...3276.8 16 Bit 0.1 Grad KW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/*
+(legal range: -360/SY_CAMNMSV ... +360/SY_CAMNMSV)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*/</FONT></I><FONT COLOR="#000000"><BR></FONT><I><FONT COLOR="#008000">/************************************************************/</FONT></I></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium"><BR>
+</P>
+<HR>
+<P><A HREF="index.html">Main index of help</A><BR><A HREF="very_dangerous.html">Very
+dangerous warnings</A><BR><A HREF="potentially_problem.html">Potentially
+problematic warning</A><BR><A HREF="not_dangerous.html">Not dangerous
+warnings</A></P>
+<HR>
+</BODY>
+</HTML>

@@ -1,0 +1,318 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1167/mli0-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1167_MLI0_STRUCTS_H_
+#define _TC1167_MLI0_STRUCTS_H_
+/*
+   TriCore TC1167
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1167/<a class="url" href="../mli.html">mli.h</a>&gt;
+#ifndef MLI_BASE
+#define MLI_BASE 0xf010c000
+#endif /* MLI_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved0[0x2];</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_ID_t">MLI0_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_FDR_t">MLI0_FDR_t</a></td>
+<td>FDR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TCR_t">MLI0_TCR_t</a></td>
+<td>TCR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TSTATR_t">MLI0_TSTATR_t</a></td>
+<td>TSTATR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>TP0STATR;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>TP1STATR;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>TP2STATR;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmSTATR_t">MLI0_TPmSTATR_t</a></td>
+<td>TP3STATR;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TCMDR_t">MLI0_TCMDR_t</a></td>
+<td>TCMDR;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TRSTATR_t">MLI0_TRSTATR_t</a></td>
+<td>TRSTATR;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>TP0AOFR;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>TP1AOFR;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>TP2AOFR;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmAOFR_t">MLI0_TPmAOFR_t</a></td>
+<td>TP3AOFR;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>TP0DATAR;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>TP1DATAR;</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>TP2DATAR;</td>
+<td>/* 0x48 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmDATAR_t">MLI0_TPmDATAR_t</a></td>
+<td>TP3DATAR;</td>
+<td>/* 0x4c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TDRAR_t">MLI0_TDRAR_t</a></td>
+<td>TDRAR;</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>TP0BAR;</td>
+<td>/* 0x54 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>TP1BAR;</td>
+<td>/* 0x58 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>TP2BAR;</td>
+<td>/* 0x5c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TPmBAR_t">MLI0_TPmBAR_t</a></td>
+<td>TP3BAR;</td>
+<td>/* 0x60 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TCBAR_t">MLI0_TCBAR_t</a></td>
+<td>TCBAR;</td>
+<td>/* 0x64 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RCR_t">MLI0_RCR_t</a></td>
+<td>RCR;</td>
+<td>/* 0x68 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>RP0BAR;</td>
+<td>/* 0x6c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>RP1BAR;</td>
+<td>/* 0x70 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>RP2BAR;</td>
+<td>/* 0x74 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmBAR_t">MLI0_RPmBAR_t</a></td>
+<td>RP3BAR;</td>
+<td>/* 0x78 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>RP0STATR;</td>
+<td>/* 0x7c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>RP1STATR;</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>RP2STATR;</td>
+<td>/* 0x84 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RPmSTATR_t">MLI0_RPmSTATR_t</a></td>
+<td>RP3STATR;</td>
+<td>/* 0x88 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RADRR_t">MLI0_RADRR_t</a></td>
+<td>RADRR;</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RDATAR_t">MLI0_RDATAR_t</a></td>
+<td>RDATAR;</td>
+<td>/* 0x90 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_SCR_t">MLI0_SCR_t</a></td>
+<td>SCR;</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TIER_t">MLI0_TIER_t</a></td>
+<td>TIER;</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TISR_t">MLI0_TISR_t</a></td>
+<td>TISR;</td>
+<td>/* 0x9c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_TINPR_t">MLI0_TINPR_t</a></td>
+<td>TINPR;</td>
+<td>/* 0xa0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RIER_t">MLI0_RIER_t</a></td>
+<td>RIER;</td>
+<td>/* 0xa4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RISR_t">MLI0_RISR_t</a></td>
+<td>RISR;</td>
+<td>/* 0xa8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_RINPR_t">MLI0_RINPR_t</a></td>
+<td>RINPR;</td>
+<td>/* 0xac */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_GINTR_t">MLI0_GINTR_t</a></td>
+<td>GINTR;</td>
+<td>/* 0xb0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_OICR_t">MLI0_OICR_t</a></td>
+<td>OICR;</td>
+<td>/* 0xb4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_AER_t">MLI0_AER_t</a></td>
+<td>AER;</td>
+<td>/* 0xb8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/m.html#MLI0_ARR_t">MLI0_ARR_t</a></td>
+<td>ARR;</td>
+<td>/* 0xbc */</td>
+</tr>
+
+<tr><td colspan="4">} MLI0_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1167_MLI0_STRUCTS_H_ */ -->
+</body>
+</html>

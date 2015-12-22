@@ -1,0 +1,663 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1793/can-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1793_CAN_STRUCTS_H_
+#define _TC1793_CAN_STRUCTS_H_
+/*
+   TriCore TC1793
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1793/<a class="url" href="../can.html">can.h</a>&gt;
+#ifndef CAN_BASE
+#define CAN_BASE 0xf0004000
+#endif /* CAN_BASE */
+</pre>
+
+<a name="CAN_NODE_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_NCRm_t">CAN_NCRm_t</a></td>
+<td>CR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_NSRm_t">CAN_NSRm_t</a></td>
+<td>SR;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_NIPRm_t">CAN_NIPRm_t</a></td>
+<td>IPR;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_NPCRm_t">CAN_NPCRm_t</a></td>
+<td>PCR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_NBTRm_t">CAN_NBTRm_t</a></td>
+<td>BTR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_NECNTm_t">CAN_NECNTm_t</a></td>
+<td>ECNT;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_NFCRm_t">CAN_NFCRm_t</a></td>
+<td>FCR;</td>
+<td>/* 0x18 */</td>
+</tr>
+
+<tr><td colspan="4">} CAN_NODE_t;</td></tr>
+</table>
+<a name="CAN_MO_t"><hr></a>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MOFCRm_t">CAN_MOFCRm_t</a></td>
+<td>FCR;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MOFGPRm_t">CAN_MOFGPRm_t</a></td>
+<td>FGPR;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MOIPRm_t">CAN_MOIPRm_t</a></td>
+<td>IPR;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MOAMRm_t">CAN_MOAMRm_t</a></td>
+<td>AMR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MODATALm_t">CAN_MODATALm_t</a></td>
+<td>DATAL;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MODATAHm_t">CAN_MODATAHm_t</a></td>
+<td>DATAH;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MOARm_t">CAN_MOARm_t</a></td>
+<td>AR;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MOCTRm_t">CAN_MOCTRm_t</a></td>
+<td>CTR;</td>
+<td>/* 0x1c */</td>
+</tr>
+
+<tr><td colspan="4">} CAN_MO_t;</td></tr>
+</table>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_CLC_t">CAN_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved1[0x1];</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_ID_t">CAN_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_FDR_t">CAN_FDR_t</a></td>
+<td>FDR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved4[0x2c];</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC15;</td>
+<td>/* 0xc0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC14;</td>
+<td>/* 0xc4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC13;</td>
+<td>/* 0xc8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC12;</td>
+<td>/* 0xcc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC11;</td>
+<td>/* 0xd0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC10;</td>
+<td>/* 0xd4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC9;</td>
+<td>/* 0xd8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC8;</td>
+<td>/* 0xdc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC7;</td>
+<td>/* 0xe0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC6;</td>
+<td>/* 0xe4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC5;</td>
+<td>/* 0xe8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC4;</td>
+<td>/* 0xec */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC3;</td>
+<td>/* 0xf0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC2;</td>
+<td>/* 0xf4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0xf8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SRCm_t">CAN_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0xfc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST0;</td>
+<td>/* 0x100 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST1;</td>
+<td>/* 0x104 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST2;</td>
+<td>/* 0x108 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST3;</td>
+<td>/* 0x10c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST4;</td>
+<td>/* 0x110 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST5;</td>
+<td>/* 0x114 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST6;</td>
+<td>/* 0x118 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LISTm_t">CAN_LISTm_t</a></td>
+<td>LIST7;</td>
+<td>/* 0x11c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved29[0x8];</td>
+<td>/* 0x120 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND0;</td>
+<td>/* 0x140 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND1;</td>
+<td>/* 0x144 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND2;</td>
+<td>/* 0x148 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND3;</td>
+<td>/* 0x14c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND4;</td>
+<td>/* 0x150 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND5;</td>
+<td>/* 0x154 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND6;</td>
+<td>/* 0x158 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSPNDm_t">CAN_MSPNDm_t</a></td>
+<td>MSPND7;</td>
+<td>/* 0x15c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved38[0x8];</td>
+<td>/* 0x160 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID0;</td>
+<td>/* 0x180 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID1;</td>
+<td>/* 0x184 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID2;</td>
+<td>/* 0x188 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID3;</td>
+<td>/* 0x18c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID4;</td>
+<td>/* 0x190 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID5;</td>
+<td>/* 0x194 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID6;</td>
+<td>/* 0x198 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIDm_t">CAN_MSIDm_t</a></td>
+<td>MSID7;</td>
+<td>/* 0x19c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved47[0x8];</td>
+<td>/* 0x1a0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MSIMASK_t">CAN_MSIMASK_t</a></td>
+<td>MSIMASK;</td>
+<td>/* 0x1c0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_PANCTR_t">CAN_PANCTR_t</a></td>
+<td>PANCTR;</td>
+<td>/* 0x1c4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MCR_t">CAN_MCR_t</a></td>
+<td>MCR;</td>
+<td>/* 0x1c8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_MITR_t">CAN_MITR_t</a></td>
+<td>MITR;</td>
+<td>/* 0x1cc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved52[0xc];</td>
+<td>/* 0x1d0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#CAN_NODE_t">CAN_NODE_t</a></td>
+<td>NODE0;</td>
+<td>/* 0x200 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved54[0x19];</td>
+<td>/* 0x21c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LTR_t">CAN_LTR_t</a></td>
+<td>LTR;</td>
+<td>/* 0x280 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SYNMR_t">CAN_SYNMR_t</a></td>
+<td>SYNMR;</td>
+<td>/* 0x284 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_REFMR_t">CAN_REFMR_t</a></td>
+<td>REFMR;</td>
+<td>/* 0x288 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LREFMR_t">CAN_LREFMR_t</a></td>
+<td>LREFMR;</td>
+<td>/* 0x28c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TURR_t">CAN_TURR_t</a></td>
+<td>TURR;</td>
+<td>/* 0x290 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_CYCTMR_t">CAN_CYCTMR_t</a></td>
+<td>CYCTMR;</td>
+<td>/* 0x294 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LOR_t">CAN_LOR_t</a></td>
+<td>LOR;</td>
+<td>/* 0x298 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_GMR_t">CAN_GMR_t</a></td>
+<td>GMR;</td>
+<td>/* 0x29c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_LGMR_t">CAN_LGMR_t</a></td>
+<td>LGMR;</td>
+<td>/* 0x2a0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_AWDR_t">CAN_AWDR_t</a></td>
+<td>AWDR;</td>
+<td>/* 0x2a4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved65[0x6];</td>
+<td>/* 0x2a8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TTCR_t">CAN_TTCR_t</a></td>
+<td>TTCR;</td>
+<td>/* 0x2c0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TTCFGR_t">CAN_TTCFGR_t</a></td>
+<td>TTCFGR;</td>
+<td>/* 0x2c4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TTSR_t">CAN_TTSR_t</a></td>
+<td>TTSR;</td>
+<td>/* 0x2c8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TTFMR_t">CAN_TTFMR_t</a></td>
+<td>TTFMR;</td>
+<td>/* 0x2cc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TTIRR_t">CAN_TTIRR_t</a></td>
+<td>TTIRR;</td>
+<td>/* 0x2d0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TTIER_t">CAN_TTIER_t</a></td>
+<td>TTIER;</td>
+<td>/* 0x2d4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_TTINPR_t">CAN_TTINPR_t</a></td>
+<td>TTINPR;</td>
+<td>/* 0x2d8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved73[0x5];</td>
+<td>/* 0x2dc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_STSRL_t">CAN_STSRL_t</a></td>
+<td>STSRL;</td>
+<td>/* 0x2f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_STSRH_t">CAN_STSRH_t</a></td>
+<td>STSRH;</td>
+<td>/* 0x2f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_SISR_t">CAN_SISR_t</a></td>
+<td>SISR;</td>
+<td>/* 0x2f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved77[0x1];</td>
+<td>/* 0x2fc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#CAN_NODE_t">CAN_NODE_t</a></td>
+<td>NODE1;</td>
+<td>/* 0x300 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved79[0x39];</td>
+<td>/* 0x31c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#CAN_NODE_t">CAN_NODE_t</a></td>
+<td>NODE2;</td>
+<td>/* 0x400 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved81[0x39];</td>
+<td>/* 0x41c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#CAN_NODE_t">CAN_NODE_t</a></td>
+<td>NODE3;</td>
+<td>/* 0x500 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved83[0x2b9];</td>
+<td>/* 0x51c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="#CAN_MO_t">CAN_MO_t</a></td>
+<td>MO[0x80];</td>
+<td>/* 0x1000 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved85[0x7ff];</td>
+<td>/* 0x2000 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/c.html#CAN_STPTR0_t">CAN_STPTR0_t</a></td>
+<td>STPTR0;</td>
+<td>/* 0x3ffc */</td>
+</tr>
+
+<tr><td colspan="4">} CAN_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1793_CAN_STRUCTS_H_ */ -->
+</body>
+</html>

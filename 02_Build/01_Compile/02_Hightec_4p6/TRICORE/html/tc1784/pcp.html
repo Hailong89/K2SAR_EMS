@@ -1,0 +1,2105 @@
+<html>
+<head>
+<title>TriCore TC1784 (PCP)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>PCP</h2>
+
+<h2><tt>#include &lt;tc1784/pcp.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#PCP_CLC">PCP_CLC</a></td>
+<td>PCP Clock Control Register</td>
+<td>0xF0043F00</td>
+<td><a class="url" href="types/p.html#PCP_CLC_t">PCP_CLC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_ID">PCP_ID</a></td>
+<td>PCP Module Identification Register</td>
+<td>0xF0043F08</td>
+<td><a class="url" href="types/p.html#PCP_ID_t">PCP_ID_t</a></td>
+<td>0x0020C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_CS">PCP_CS</a></td>
+<td>PCP Control/Status Register</td>
+<td>0xF0043F10</td>
+<td><a class="url" href="types/p.html#PCP_CS_t">PCP_CS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_ES">PCP_ES</a></td>
+<td>PCP Error/Debug Status Register</td>
+<td>0xF0043F14</td>
+<td><a class="url" href="types/p.html#PCP_ES_t">PCP_ES_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_ICR">PCP_ICR</a></td>
+<td>PCP Interrupt Control Register</td>
+<td>0xF0043F20</td>
+<td><a class="url" href="types/p.html#PCP_ICR_t">PCP_ICR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_ITR">PCP_ITR</a></td>
+<td>PCP Interrupt Threshold Control Register</td>
+<td>0xF0043F24</td>
+<td><a class="url" href="types/p.html#PCP_ITR_t">PCP_ITR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_ICON">PCP_ICON</a></td>
+<td>PCP Interrupt Configuration Register</td>
+<td>0xF0043F28</td>
+<td><a class="url" href="types/p.html#PCP_ICON_t">PCP_ICON_t</a></td>
+<td>0x000003E4</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SSR">PCP_SSR</a></td>
+<td>PCP Stall Status Register</td>
+<td>0xF0043F2C</td>
+<td><a class="url" href="types/p.html#PCP_SSR_t">PCP_SSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC11">PCP_SRC11</a></td>
+<td>PCP Service Request Control Register 11</td>
+<td>0xF0043FD0</td>
+<td><a class="url" href="types/p.html#PCP_SRC11_t">PCP_SRC11_t</a></td>
+<td>0x00001400</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC10">PCP_SRC10</a></td>
+<td>PCP Service Request Control Register 10</td>
+<td>0xF0043FD4</td>
+<td><a class="url" href="types/p.html#PCP_SRC10_t">PCP_SRC10_t</a></td>
+<td>0x00001400</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC9">PCP_SRC9</a></td>
+<td>PCP Service Request Control Register 9</td>
+<td>0xF0043FD8</td>
+<td><a class="url" href="types/p.html#PCP_SRC9_t">PCP_SRC9_t</a></td>
+<td>0x00001400</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC8">PCP_SRC8</a></td>
+<td>PCP Service Request Control Register 8</td>
+<td>0xF0043FDC</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC7">PCP_SRC7</a></td>
+<td>PCP Service Request Control Register 7</td>
+<td>0xF0043FE0</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC6">PCP_SRC6</a></td>
+<td>PCP Service Request Control Register 6</td>
+<td>0xF0043FE4</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC5">PCP_SRC5</a></td>
+<td>PCP Service Request Control Register 5</td>
+<td>0xF0043FE8</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC4">PCP_SRC4</a></td>
+<td>PCP Service Request Control Register 4</td>
+<td>0xF0043FEC</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC3">PCP_SRC3</a></td>
+<td>PCP Service Request Control Register 3</td>
+<td>0xF0043FF0</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001400</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC2">PCP_SRC2</a></td>
+<td>PCP Service Request Control Register 2</td>
+<td>0xF0043FF4</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001400</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC1">PCP_SRC1</a></td>
+<td>PCP Service Request Control Register 1</td>
+<td>0xF0043FF8</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PCP_SRC0">PCP_SRC0</a></td>
+<td>PCP Service Request Control Register 0</td>
+<td>0xF0043FFC</td>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td>0x00001000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_CLC_t">PCP_CLC_t</a></td>
+<td><a class="url" href="pcp.html#PCP_CLC">PCP_CLC</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_CS_t">PCP_CS_t</a></td>
+<td><a class="url" href="pcp.html#PCP_CS">PCP_CS</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_ES_t">PCP_ES_t</a></td>
+<td><a class="url" href="pcp.html#PCP_ES">PCP_ES</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_ICON_t">PCP_ICON_t</a></td>
+<td><a class="url" href="pcp.html#PCP_ICON">PCP_ICON</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_ICR_t">PCP_ICR_t</a></td>
+<td><a class="url" href="pcp.html#PCP_ICR">PCP_ICR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_ID_t">PCP_ID_t</a></td>
+<td><a class="url" href="pcp.html#PCP_ID">PCP_ID</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_ITR_t">PCP_ITR_t</a></td>
+<td><a class="url" href="pcp.html#PCP_ITR">PCP_ITR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_SRC10_t">PCP_SRC10_t</a></td>
+<td><a class="url" href="pcp.html#PCP_SRC10">PCP_SRC10</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_SRC11_t">PCP_SRC11_t</a></td>
+<td><a class="url" href="pcp.html#PCP_SRC11">PCP_SRC11</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_SRC9_t">PCP_SRC9_t</a></td>
+<td><a class="url" href="pcp.html#PCP_SRC9">PCP_SRC9</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td>
+<td><a class="url" href="pcp.html#PCP_SRC8">PCP_SRC8</a>,
+<a class="url" href="pcp.html#PCP_SRC7">PCP_SRC7</a>,
+<a class="url" href="pcp.html#PCP_SRC6">PCP_SRC6</a>,
+<a class="url" href="pcp.html#PCP_SRC5">PCP_SRC5</a>,
+<a class="url" href="pcp.html#PCP_SRC4">PCP_SRC4</a>,
+<a class="url" href="pcp.html#PCP_SRC3">PCP_SRC3</a>,
+<a class="url" href="pcp.html#PCP_SRC2">PCP_SRC2</a>,
+<a class="url" href="pcp.html#PCP_SRC1">PCP_SRC1</a>,
+<a class="url" href="pcp.html#PCP_SRC0">PCP_SRC0</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCP_SSR_t">PCP_SSR_t</a></td>
+<td><a class="url" href="pcp.html#PCP_SSR">PCP_SSR</a>
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="PCP_CLC">&nbsp;</a>
+<h3>PCP_CLC</h3>
+<h3>"PCP Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_CLC_ADDR = 0xF0043F00</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_CLC_t">PCP_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_CLC.bits</b>&nbsp;&quot;PCP Clock Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PCGDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>PCP_CLC_PCGDIS_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>PCP_CLC_PCGDIS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_CLC_MASK</td><td><tt>0x00008000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_ID">&nbsp;</a>
+<h3>PCP_ID</h3>
+<h3>"PCP Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_ID_ADDR = 0xF0043F08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0020C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_ID_t">PCP_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_ID.bits</b>&nbsp;&quot;PCP Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>REVNUM</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_ID_REVNUM_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>PCP_ID_REVNUM_SHIFT</td>
+</tr>
+<tr>
+<td>ID32BIT</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>PCP_ID_ID32BIT_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>PCP_ID_ID32BIT_SHIFT</td>
+</tr>
+<tr>
+<td>MODNUM</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>PCP_ID_MODNUM_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>PCP_ID_MODNUM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_CS">&nbsp;</a>
+<h3>PCP_CS</h3>
+<h3>"PCP Control/Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_CS_ADDR = 0xF0043F10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_CS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_CS_t">PCP_CS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_CS.bits</b>&nbsp;&quot;PCP Control/Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>EN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>PCP_CS_EN_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>PCP_CS_EN_SHIFT</td>
+</tr>
+<tr>
+<td>RST</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>PCP_CS_RST_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rwh</td>
+<td>PCP_CS_RST_SHIFT</td>
+</tr>
+<tr>
+<td>RS</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>PCP_CS_RS_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>PCP_CS_RS_SHIFT</td>
+</tr>
+<tr>
+<td>RCB</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>PCP_CS_RCB_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>PCP_CS_RCB_SHIFT</td>
+</tr>
+<tr>
+<td>EIE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>PCP_CS_EIE_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>PCP_CS_EIE_SHIFT</td>
+</tr>
+<tr>
+<td>CS</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>PCP_CS_CS_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>PCP_CS_CS_SHIFT</td>
+</tr>
+<tr>
+<td>PPE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>PCP_CS_PPE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>PCP_CS_PPE_SHIFT</td>
+</tr>
+<tr>
+<td>PPS</td>
+<td>7</td>
+<td>9 - 15</td>
+<td>PCP_CS_PPS_MASK</td>
+<td><tt>0x0000fe00</tt></td>
+<td>rw</td>
+<td>PCP_CS_PPS_SHIFT</td>
+</tr>
+<tr>
+<td>CWE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>PCP_CS_CWE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>PCP_CS_CWE_SHIFT</td>
+</tr>
+<tr>
+<td>CWT</td>
+<td>7</td>
+<td>17 - 23</td>
+<td>PCP_CS_CWT_MASK</td>
+<td><tt>0x00fe0000</tt></td>
+<td>rw</td>
+<td>PCP_CS_CWT_SHIFT</td>
+</tr>
+<tr>
+<td>ESR</td>
+<td>8</td>
+<td>24 - 31</td>
+<td>PCP_CS_ESR_MASK</td>
+<td><tt>0xff000000</tt></td>
+<td>rw</td>
+<td>PCP_CS_ESR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_CS_MASK</td><td><tt>0xfffffff7</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffff3</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000006</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_ES">&nbsp;</a>
+<h3>PCP_ES</h3>
+<h3>"PCP Error/Debug Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_ES_ADDR = 0xF0043F14</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_ES_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_ES_t">PCP_ES_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_ES.bits</b>&nbsp;&quot;PCP Error/Debug Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BER</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>PCP_ES_BER_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>PCP_ES_BER_SHIFT</td>
+</tr>
+<tr>
+<td>IOP</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>PCP_ES_IOP_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>PCP_ES_IOP_SHIFT</td>
+</tr>
+<tr>
+<td>DCR</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>PCP_ES_DCR_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>PCP_ES_DCR_SHIFT</td>
+</tr>
+<tr>
+<td>IAE</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>PCP_ES_IAE_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>PCP_ES_IAE_SHIFT</td>
+</tr>
+<tr>
+<td>DBE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>PCP_ES_DBE_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>PCP_ES_DBE_SHIFT</td>
+</tr>
+<tr>
+<td>ME</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>PCP_ES_ME_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>r</td>
+<td>PCP_ES_ME_SHIFT</td>
+</tr>
+<tr>
+<td>CWD</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>PCP_ES_CWD_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>PCP_ES_CWD_SHIFT</td>
+</tr>
+<tr>
+<td>PPC</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>PCP_ES_PPC_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>PCP_ES_PPC_SHIFT</td>
+</tr>
+<tr>
+<td>EPN</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>PCP_ES_EPN_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>rh</td>
+<td>PCP_ES_EPN_SHIFT</td>
+</tr>
+<tr>
+<td>EPC</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>PCP_ES_EPC_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>rh</td>
+<td>PCP_ES_EPC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_ES_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffdf</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_ICR">&nbsp;</a>
+<h3>PCP_ICR</h3>
+<h3>"PCP Interrupt Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_ICR_ADDR = 0xF0043F20</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_ICR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_ICR_t">PCP_ICR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_ICR.bits</b>&nbsp;&quot;PCP Interrupt Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CPPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_ICR_CPPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_ICR_CPPN_SHIFT</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>PCP_ICR_IE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>PCP_ICR_IE_SHIFT</td>
+</tr>
+<tr>
+<td>PIPN</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>PCP_ICR_PIPN_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rh</td>
+<td>PCP_ICR_PIPN_SHIFT</td>
+</tr>
+<tr>
+<td>PARBCYC</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>PCP_ICR_PARBCYC_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>PCP_ICR_PARBCYC_SHIFT</td>
+</tr>
+<tr>
+<td>PONECYC</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>PCP_ICR_PONECYC_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>PCP_ICR_PONECYC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_ICR_MASK</td><td><tt>0x07ff01ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x07ff01ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x07000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00ff01ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_ITR">&nbsp;</a>
+<h3>PCP_ITR</h3>
+<h3>"PCP Interrupt Threshold Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_ITR_ADDR = 0xF0043F24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_ITR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_ITR_t">PCP_ITR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_ITR.bits</b>&nbsp;&quot;PCP Interrupt Threshold Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>ITP</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_ITR_ITP_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>PCP_ITR_ITP_SHIFT</td>
+</tr>
+<tr>
+<td>ITL</td>
+<td>4</td>
+<td>16 - 19</td>
+<td>PCP_ITR_ITL_MASK</td>
+<td><tt>0x000f0000</tt></td>
+<td>rw</td>
+<td>PCP_ITR_ITL_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_ITR_MASK</td><td><tt>0x000f00ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000f00ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000f00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_ICON">&nbsp;</a>
+<h3>PCP_ICON</h3>
+<h3>"PCP Interrupt Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_ICON_ADDR = 0xF0043F28</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_ICON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000003E4</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_ICON_t">PCP_ICON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_ICON.bits</b>&nbsp;&quot;PCP Interrupt Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>P0T</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>PCP_ICON_P0T_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>r</td>
+<td>PCP_ICON_P0T_SHIFT</td>
+</tr>
+<tr>
+<td>P1T</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>PCP_ICON_P1T_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>r</td>
+<td>PCP_ICON_P1T_SHIFT</td>
+</tr>
+<tr>
+<td>P2T</td>
+<td>2</td>
+<td>4 - 5</td>
+<td>PCP_ICON_P2T_MASK</td>
+<td><tt>0x00000030</tt></td>
+<td>r</td>
+<td>PCP_ICON_P2T_SHIFT</td>
+</tr>
+<tr>
+<td>P3T</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>PCP_ICON_P3T_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>r</td>
+<td>PCP_ICON_P3T_SHIFT</td>
+</tr>
+<tr>
+<td>IP0E</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>PCP_ICON_IP0E_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>r</td>
+<td>PCP_ICON_IP0E_SHIFT</td>
+</tr>
+<tr>
+<td>IP1E</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>PCP_ICON_IP1E_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>r</td>
+<td>PCP_ICON_IP1E_SHIFT</td>
+</tr>
+<tr>
+<td>IP2E</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>PCP_ICON_IP2E_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>r</td>
+<td>PCP_ICON_IP2E_SHIFT</td>
+</tr>
+<tr>
+<td>IP3E</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>PCP_ICON_IP3E_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>r</td>
+<td>PCP_ICON_IP3E_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_ICON_MASK</td><td><tt>0x00000fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SSR">&nbsp;</a>
+<h3>PCP_SSR</h3>
+<h3>"PCP Stall Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SSR_ADDR = 0xF0043F2C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SSR_t">PCP_SSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SSR.bits</b>&nbsp;&quot;PCP Stall Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SSRN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SSR_SSRN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SSR_SSRN_SHIFT</td>
+</tr>
+<tr>
+<td>STOS</td>
+<td>2</td>
+<td>8 - 9</td>
+<td>PCP_SSR_STOS_MASK</td>
+<td><tt>0x00000300</tt></td>
+<td>rh</td>
+<td>PCP_SSR_STOS_SHIFT</td>
+</tr>
+<tr>
+<td>ST</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>PCP_SSR_ST_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>PCP_SSR_ST_SHIFT</td>
+</tr>
+<tr>
+<td>SCHN</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>PCP_SSR_SCHN_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rh</td>
+<td>PCP_SSR_SCHN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SSR_MASK</td><td><tt>0x00ff83ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00ff83ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00ff83ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC11">&nbsp;</a>
+<h3>PCP_SRC11</h3>
+<h3>"PCP Service Request Control Register 11"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC11_ADDR = 0xF0043FD0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRC11_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001400</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRC11_t">PCP_SRC11_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC11.bits</b>&nbsp;&quot;PCP Service Request Control Register 11&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRC11_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRC11_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRC11_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRC11_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRC11_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRC11_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRC11_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRC11_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>SRCN</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>PCP_SRC11_SRCN_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rh</td>
+<td>PCP_SRC11_SRCN_SHIFT</td>
+</tr>
+<tr>
+<td>RRQ</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>PCP_SRC11_RRQ_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>PCP_SRC11_RRQ_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRC11_MASK</td><td><tt>0x10ff3cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x10ff3cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x10ff20ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC10">&nbsp;</a>
+<h3>PCP_SRC10</h3>
+<h3>"PCP Service Request Control Register 10"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC10_ADDR = 0xF0043FD4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRC10_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001400</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRC10_t">PCP_SRC10_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC10.bits</b>&nbsp;&quot;PCP Service Request Control Register 10&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRC10_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRC10_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRC10_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRC10_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRC10_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRC10_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRC10_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRC10_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>SRCN</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>PCP_SRC10_SRCN_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rh</td>
+<td>PCP_SRC10_SRCN_SHIFT</td>
+</tr>
+<tr>
+<td>RRQ</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>PCP_SRC10_RRQ_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>PCP_SRC10_RRQ_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRC10_MASK</td><td><tt>0x10ff3cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x10ff3cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x10ff20ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC9">&nbsp;</a>
+<h3>PCP_SRC9</h3>
+<h3>"PCP Service Request Control Register 9"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC9_ADDR = 0xF0043FD8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRC9_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001400</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRC9_t">PCP_SRC9_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC9.bits</b>&nbsp;&quot;PCP Service Request Control Register 9&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRC9_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRC9_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRC9_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRC9_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRC9_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRC9_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRC9_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRC9_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>SRCN</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>PCP_SRC9_SRCN_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rh</td>
+<td>PCP_SRC9_SRCN_SHIFT</td>
+</tr>
+<tr>
+<td>RRQ</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>PCP_SRC9_RRQ_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>PCP_SRC9_RRQ_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRC9_MASK</td><td><tt>0x10ff3cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x10ff3cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x10ff20ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC8">&nbsp;</a>
+<h3>PCP_SRC8</h3>
+<h3>"PCP Service Request Control Register 8"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC8_ADDR = 0xF0043FDC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC8.bits</b>&nbsp;&quot;PCP Service Request Control Register 8&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000c00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC7">&nbsp;</a>
+<h3>PCP_SRC7</h3>
+<h3>"PCP Service Request Control Register 7"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC7_ADDR = 0xF0043FE0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC7.bits</b>&nbsp;&quot;PCP Service Request Control Register 7&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000c00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC6">&nbsp;</a>
+<h3>PCP_SRC6</h3>
+<h3>"PCP Service Request Control Register 6"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC6_ADDR = 0xF0043FE4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC6.bits</b>&nbsp;&quot;PCP Service Request Control Register 6&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000c00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC5">&nbsp;</a>
+<h3>PCP_SRC5</h3>
+<h3>"PCP Service Request Control Register 5"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC5_ADDR = 0xF0043FE8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC5.bits</b>&nbsp;&quot;PCP Service Request Control Register 5&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000c00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC4">&nbsp;</a>
+<h3>PCP_SRC4</h3>
+<h3>"PCP Service Request Control Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC4_ADDR = 0xF0043FEC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC4.bits</b>&nbsp;&quot;PCP Service Request Control Register 4&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000c00</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC3">&nbsp;</a>
+<h3>PCP_SRC3</h3>
+<h3>"PCP Service Request Control Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC3_ADDR = 0xF0043FF0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001400</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC3.bits</b>&nbsp;&quot;PCP Service Request Control Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC2">&nbsp;</a>
+<h3>PCP_SRC2</h3>
+<h3>"PCP Service Request Control Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC2_ADDR = 0xF0043FF4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001400</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC2.bits</b>&nbsp;&quot;PCP Service Request Control Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC1">&nbsp;</a>
+<h3>PCP_SRC1</h3>
+<h3>"PCP Service Request Control Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC1_ADDR = 0xF0043FF8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC1.bits</b>&nbsp;&quot;PCP Service Request Control Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PCP_SRC0">&nbsp;</a>
+<h3>PCP_SRC0</h3>
+<h3>"PCP Service Request Control Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCP_SRC0_ADDR = 0xF0043FFC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCP_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00001000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCP_SRCm_t">PCP_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCP_SRC0.bits</b>&nbsp;&quot;PCP Service Request Control Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PCP_SRCm_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PCP_SRCm_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>PCP_SRCm_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>PCP_SRCm_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>r</td>
+<td>PCP_SRCm_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>PCP_SRCm_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>PCP_SRCm_SRR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCP_SRCm_MASK</td><td><tt>0x00003cff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000020ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,1862 @@
+<html>
+<head>
+<title>TriCore TC1782 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="LBCU_ID_t"><b>LBCU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>LBCU_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>LBCU_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>LBCU_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_ID">LBCU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEADDR_t"><b>LBCU_LEADDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Address Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEADDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEADDR:32</td>
+<td>0 - 31</td>
+<td>LBCU_LEADDR_LEADDR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEADDR">LBCU_LEADDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEATT_t"><b>LBCU_LEATT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Attribute Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEATT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEC:1</td>
+<td>0 - 0</td>
+<td>LBCU_LEATT_LEC_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FPITAG:4</td>
+<td>4 - 7</td>
+<td>LBCU_LEATT_FPITAG_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int NOS:1</td>
+<td>14 - 14</td>
+<td>LBCU_LEATT_NOS_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int LOC:1</td>
+<td>15 - 15</td>
+<td>LBCU_LEATT_LOC_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int ACK:3</td>
+<td>16 - 18</td>
+<td>LBCU_LEATT_ACK_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int UIS:1</td>
+<td>19 - 19</td>
+<td>LBCU_LEATT_UIS_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>21 - 21</td>
+<td>LBCU_LEATT_SVM_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int WR:1</td>
+<td>22 - 22</td>
+<td>LBCU_LEATT_WR_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RD:1</td>
+<td>23 - 23</td>
+<td>LBCU_LEATT_RD_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int TAG:3</td>
+<td>24 - 26</td>
+<td>LBCU_LEATT_TAG_MASK</td>
+<td>0x07000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>28 - 31</td>
+<td>LBCU_LEATT_OPC_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEATT">LBCU_LEATT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEDATH_t"><b>LBCU_LEDATH_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Data High Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEDATH_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEDAT_63_32:32</td>
+<td>0 - 31</td>
+<td>LBCU_LEDATH_LEDAT_63_32_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEDATH">LBCU_LEDATH</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_LEDATL_t"><b>LBCU_LEDATL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU LMB Error Data Low Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_LEDATL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LEDAT_31_0:32</td>
+<td>0 - 31</td>
+<td>LBCU_LEDATL_LEDAT_31_0_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_LEDATL">LBCU_LEDATL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LBCU_SRC_t"><b>LBCU_SRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LBCU Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>LBCU_SRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>LBCU_SRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:2</td>
+<td>10 - 11</td>
+<td>LBCU_SRC_TOS_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>LBCU_SRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>LBCU_SRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>LBCU_SRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>LBCU_SRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LBCU_SRC">LBCU_SRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LCX_t"><b>LCX_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Free CSA List Limit Pointer</b></td></tr>
+<tr><td colspan="5"><b>LCX_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LCXO:16</td>
+<td>0 - 15</td>
+<td>LCX_LCXO_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LCXS:4</td>
+<td>16 - 19</td>
+<td>LCX_LCXS_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#LCX">LCX</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LFI_CON_t"><b>LFI_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LFI Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>LFI_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LTAG:3</td>
+<td>4 - 6</td>
+<td>LFI_CON_LTAG_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FTAG:4</td>
+<td>8 - 11</td>
+<td>LFI_CON_FTAG_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LFI_CON">LFI_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LFI_ID_t"><b>LFI_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>LFI_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>LFI_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>LFI_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>LFI_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../buses.html#LFI_ID">LFI_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../buses.html">Buses</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_ID_t"><b>LTCA2_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LTCA2 Identification Register</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>LTCA2_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>LTCA2_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUM:16</td>
+<td>16 - 31</td>
+<td>LTCA2_ID_MOD_NUM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_ID">LTCA2_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_LTCCTR31_t"><b>LTCA2_LTCCTR31_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Local Timer Cell Control Register 31</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_LTCCTR31_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BRM:1</td>
+<td>0 - 0</td>
+<td>LTCA2_LTCCTR31_BRM_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>1 - 1</td>
+<td>LTCA2_LTCCTR31_OSM_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int REN:2</td>
+<td>2 - 3</td>
+<td>LTCA2_LTCCTR31_REN_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int RED:1</td>
+<td>4 - 4</td>
+<td>LTCA2_LTCCTR31_RED_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FED:1</td>
+<td>5 - 5</td>
+<td>LTCA2_LTCCTR31_FED_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>LTCA2_LTCCTR31_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>LTCA2_LTCCTR31_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>LTCA2_LTCCTR31_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR31">LTCA2_LTCCTR31</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_LTCCTRm_t"><b>LTCA2_LTCCTRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Local Timer Cell Control Register n [Capture Mode]</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_LTCCTRm_t.capt</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>LTCA2_LTCCTRm_CAPT_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>LTCA2_LTCCTRm_CAPT_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>LTCA2_LTCCTRm_CAPT_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RED:1</td>
+<td>4 - 4</td>
+<td>LTCA2_LTCCTRm_CAPT_RED_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FED:1</td>
+<td>5 - 5</td>
+<td>LTCA2_LTCCTRm_CAPT_FED_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int BYP:1</td>
+<td>6 - 6</td>
+<td>LTCA2_LTCCTRm_CAPT_BYP_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int EOA:1</td>
+<td>7 - 7</td>
+<td>LTCA2_LTCCTRm_CAPT_EOA_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>LTCA2_LTCCTRm_CAPT_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SLL:1</td>
+<td>9 - 9</td>
+<td>LTCA2_LTCCTRm_CAPT_SLL_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>LTCA2_LTCCTRm_CAPT_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>LTCA2_LTCCTRm_CAPT_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>LTCA2_LTCCTRm_CAPT_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>LTCA2_LTCCTRm_CAPT_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GBYP:1</td>
+<td>16 - 16</td>
+<td>LTCA2_LTCCTRm_CAPT_GBYP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Local Timer Cell Control Register n [Compare Mode]</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_LTCCTRm_t.comp</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>LTCA2_LTCCTRm_COMP_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>LTCA2_LTCCTRm_COMP_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>LTCA2_LTCCTRm_COMP_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SOL:1</td>
+<td>4 - 4</td>
+<td>LTCA2_LTCCTRm_COMP_SOL_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SOH:1</td>
+<td>5 - 5</td>
+<td>LTCA2_LTCCTRm_COMP_SOH_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int BYP:1</td>
+<td>6 - 6</td>
+<td>LTCA2_LTCCTRm_COMP_BYP_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int EOA:1</td>
+<td>7 - 7</td>
+<td>LTCA2_LTCCTRm_COMP_EOA_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>LTCA2_LTCCTRm_COMP_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SLL:1</td>
+<td>9 - 9</td>
+<td>LTCA2_LTCCTRm_COMP_SLL_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>LTCA2_LTCCTRm_COMP_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>LTCA2_LTCCTRm_COMP_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>LTCA2_LTCCTRm_COMP_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>LTCA2_LTCCTRm_COMP_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GBYP:1</td>
+<td>16 - 16</td>
+<td>LTCA2_LTCCTRm_COMP_GBYP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Local Timer Cell Control Register n [Timer Mode]</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_LTCCTRm_t.timer</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:2</td>
+<td>0 - 1</td>
+<td>LTCA2_LTCCTRm_TIMER_MOD_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OSM:1</td>
+<td>2 - 2</td>
+<td>LTCA2_LTCCTRm_TIMER_OSM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int REN:1</td>
+<td>3 - 3</td>
+<td>LTCA2_LTCCTRm_TIMER_REN_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RED:1</td>
+<td>4 - 4</td>
+<td>LTCA2_LTCCTRm_TIMER_RED_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FED:1</td>
+<td>5 - 5</td>
+<td>LTCA2_LTCCTRm_TIMER_FED_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SLO:1</td>
+<td>6 - 6</td>
+<td>LTCA2_LTCCTRm_TIMER_SLO_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CUDCLR:1</td>
+<td>7 - 7</td>
+<td>LTCA2_LTCCTRm_TIMER_CUDCLR_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ILM:1</td>
+<td>8 - 8</td>
+<td>LTCA2_LTCCTRm_TIMER_ILM_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CUD:1</td>
+<td>9 - 9</td>
+<td>LTCA2_LTCCTRm_TIMER_CUD_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CEN:1</td>
+<td>10 - 10</td>
+<td>LTCA2_LTCCTRm_TIMER_CEN_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int OCM:3</td>
+<td>11 - 13</td>
+<td>LTCA2_LTCCTRm_TIMER_OCM_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int OIA:1</td>
+<td>14 - 14</td>
+<td>LTCA2_LTCCTRm_TIMER_OIA_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int OUT:1</td>
+<td>15 - 15</td>
+<td>LTCA2_LTCCTRm_TIMER_OUT_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int GBYP:1</td>
+<td>16 - 16</td>
+<td>LTCA2_LTCCTRm_TIMER_GBYP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR00">LTCA2_LTCCTR00</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR01">LTCA2_LTCCTR01</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR02">LTCA2_LTCCTR02</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR03">LTCA2_LTCCTR03</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR04">LTCA2_LTCCTR04</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR05">LTCA2_LTCCTR05</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR06">LTCA2_LTCCTR06</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR07">LTCA2_LTCCTR07</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR08">LTCA2_LTCCTR08</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR09">LTCA2_LTCCTR09</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR10">LTCA2_LTCCTR10</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR11">LTCA2_LTCCTR11</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR12">LTCA2_LTCCTR12</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR13">LTCA2_LTCCTR13</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR14">LTCA2_LTCCTR14</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR15">LTCA2_LTCCTR15</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR16">LTCA2_LTCCTR16</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR17">LTCA2_LTCCTR17</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR18">LTCA2_LTCCTR18</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR19">LTCA2_LTCCTR19</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR20">LTCA2_LTCCTR20</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR21">LTCA2_LTCCTR21</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR22">LTCA2_LTCCTR22</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR23">LTCA2_LTCCTR23</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR24">LTCA2_LTCCTR24</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR25">LTCA2_LTCCTR25</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR26">LTCA2_LTCCTR26</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR27">LTCA2_LTCCTR27</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR28">LTCA2_LTCCTR28</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR29">LTCA2_LTCCTR29</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCCTR30">LTCA2_LTCCTR30</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_LTCXR31_t"><b>LTCA2_LTCXR31_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Local Timer Cell X Register 31</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_LTCXR31_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int X:16</td>
+<td>0 - 15</td>
+<td>LTCA2_LTCXR31_X_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int XS:16</td>
+<td>16 - 31</td>
+<td>LTCA2_LTCXR31_XS_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_LTCXR31">LTCA2_LTCXR31</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_LTCXRm_t"><b>LTCA2_LTCXRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Local Timer Cell X Register n</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_LTCXRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int X:16</td>
+<td>0 - 15</td>
+<td>LTCA2_LTCXRm_X_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_LTCXR00">LTCA2_LTCXR00</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR01">LTCA2_LTCXR01</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR02">LTCA2_LTCXR02</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR03">LTCA2_LTCXR03</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR04">LTCA2_LTCXR04</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR05">LTCA2_LTCXR05</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR06">LTCA2_LTCXR06</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR07">LTCA2_LTCXR07</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR08">LTCA2_LTCXR08</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR09">LTCA2_LTCXR09</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR10">LTCA2_LTCXR10</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR11">LTCA2_LTCXR11</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR12">LTCA2_LTCXR12</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR13">LTCA2_LTCXR13</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR14">LTCA2_LTCXR14</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR15">LTCA2_LTCXR15</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR16">LTCA2_LTCXR16</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR17">LTCA2_LTCXR17</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR18">LTCA2_LTCXR18</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR19">LTCA2_LTCXR19</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR20">LTCA2_LTCXR20</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR21">LTCA2_LTCXR21</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR22">LTCA2_LTCXR22</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR23">LTCA2_LTCXR23</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR24">LTCA2_LTCXR24</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR25">LTCA2_LTCXR25</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR26">LTCA2_LTCXR26</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR27">LTCA2_LTCXR27</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR28">LTCA2_LTCXR28</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR29">LTCA2_LTCXR29</a>,    
+<a class="url" href="../ltca2.html#LTCA2_LTCXR30">LTCA2_LTCXR30</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_MRACTL_t"><b>LTCA2_MRACTL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Multiplexer Register Array Control Register</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_MRACTL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MAEN:1</td>
+<td>0 - 0</td>
+<td>LTCA2_MRACTL_MAEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WCRES:1</td>
+<td>1 - 1</td>
+<td>LTCA2_MRACTL_WCRES_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int FIFOFULL:1</td>
+<td>2 - 2</td>
+<td>LTCA2_MRACTL_FIFOFULL_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int FIFOFILLCNT:6</td>
+<td>8 - 13</td>
+<td>LTCA2_MRACTL_FIFOFILLCNT_MASK</td>
+<td>0x00003f00</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_MRACTL">LTCA2_MRACTL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_MRADIN_t"><b>LTCA2_MRADIN_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Multiplexer Register Array Data In Register</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_MRADIN_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATAIN:32</td>
+<td>0 - 31</td>
+<td>LTCA2_MRADIN_DATAIN_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_MRADIN">LTCA2_MRADIN</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_MRADOUT_t"><b>LTCA2_MRADOUT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Multiplexer Register Array Data Out Register</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_MRADOUT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATAOUT:32</td>
+<td>0 - 31</td>
+<td>LTCA2_MRADOUT_DATAOUT_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_MRADOUT">LTCA2_MRADOUT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_SRCm_t"><b>LTCA2_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LTCA2 Interrupt Service Request Control Register m</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>LTCA2_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>LTCA2_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>LTCA2_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>LTCA2_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>LTCA2_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>LTCA2_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_SRC00">LTCA2_SRC00</a>,    
+<a class="url" href="../ltca2.html#LTCA2_SRC01">LTCA2_SRC01</a>,    
+<a class="url" href="../ltca2.html#LTCA2_SRC02">LTCA2_SRC02</a>,    
+<a class="url" href="../ltca2.html#LTCA2_SRC03">LTCA2_SRC03</a>,    
+<a class="url" href="../ltca2.html#LTCA2_SRC04">LTCA2_SRC04</a>,    
+<a class="url" href="../ltca2.html#LTCA2_SRC05">LTCA2_SRC05</a>,    
+<a class="url" href="../ltca2.html#LTCA2_SRC06">LTCA2_SRC06</a>,    
+<a class="url" href="../ltca2.html#LTCA2_SRC07">LTCA2_SRC07</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_SRSC2_t"><b>LTCA2_SRSC2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LTCA2 Service Request State Clear Register 2</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_SRSC2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LTC0:1</td>
+<td>0 - 0</td>
+<td>LTCA2_SRSC2_LTC0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LTC1:1</td>
+<td>1 - 1</td>
+<td>LTCA2_SRSC2_LTC1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LTC2:1</td>
+<td>2 - 2</td>
+<td>LTCA2_SRSC2_LTC2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int LTC3:1</td>
+<td>3 - 3</td>
+<td>LTCA2_SRSC2_LTC3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int LTC4:1</td>
+<td>4 - 4</td>
+<td>LTCA2_SRSC2_LTC4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int LTC5:1</td>
+<td>5 - 5</td>
+<td>LTCA2_SRSC2_LTC5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int LTC6:1</td>
+<td>6 - 6</td>
+<td>LTCA2_SRSC2_LTC6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int LTC7:1</td>
+<td>7 - 7</td>
+<td>LTCA2_SRSC2_LTC7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int LTC8:1</td>
+<td>8 - 8</td>
+<td>LTCA2_SRSC2_LTC8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int LTC9:1</td>
+<td>9 - 9</td>
+<td>LTCA2_SRSC2_LTC9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LTC10:1</td>
+<td>10 - 10</td>
+<td>LTCA2_SRSC2_LTC10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int LTC11:1</td>
+<td>11 - 11</td>
+<td>LTCA2_SRSC2_LTC11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int LTC12:1</td>
+<td>12 - 12</td>
+<td>LTCA2_SRSC2_LTC12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int LTC13:1</td>
+<td>13 - 13</td>
+<td>LTCA2_SRSC2_LTC13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int LTC14:1</td>
+<td>14 - 14</td>
+<td>LTCA2_SRSC2_LTC14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int LTC15:1</td>
+<td>15 - 15</td>
+<td>LTCA2_SRSC2_LTC15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int LTC16:1</td>
+<td>16 - 16</td>
+<td>LTCA2_SRSC2_LTC16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int LTC17:1</td>
+<td>17 - 17</td>
+<td>LTCA2_SRSC2_LTC17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int LTC18:1</td>
+<td>18 - 18</td>
+<td>LTCA2_SRSC2_LTC18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int LTC19:1</td>
+<td>19 - 19</td>
+<td>LTCA2_SRSC2_LTC19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int LTC20:1</td>
+<td>20 - 20</td>
+<td>LTCA2_SRSC2_LTC20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int LTC21:1</td>
+<td>21 - 21</td>
+<td>LTCA2_SRSC2_LTC21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int LTC22:1</td>
+<td>22 - 22</td>
+<td>LTCA2_SRSC2_LTC22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int LTC23:1</td>
+<td>23 - 23</td>
+<td>LTCA2_SRSC2_LTC23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int LTC24:1</td>
+<td>24 - 24</td>
+<td>LTCA2_SRSC2_LTC24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int LTC25:1</td>
+<td>25 - 25</td>
+<td>LTCA2_SRSC2_LTC25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int LTC26:1</td>
+<td>26 - 26</td>
+<td>LTCA2_SRSC2_LTC26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int LTC27:1</td>
+<td>27 - 27</td>
+<td>LTCA2_SRSC2_LTC27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int LTC28:1</td>
+<td>28 - 28</td>
+<td>LTCA2_SRSC2_LTC28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int LTC29:1</td>
+<td>29 - 29</td>
+<td>LTCA2_SRSC2_LTC29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int LTC30:1</td>
+<td>30 - 30</td>
+<td>LTCA2_SRSC2_LTC30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int LTC31:1</td>
+<td>31 - 31</td>
+<td>LTCA2_SRSC2_LTC31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_SRSC2">LTCA2_SRSC2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="LTCA2_SRSS2_t"><b>LTCA2_SRSS2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>LTCA2 Service Request State Set Register 2</b></td></tr>
+<tr><td colspan="5"><b>LTCA2_SRSS2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LTC0:1</td>
+<td>0 - 0</td>
+<td>LTCA2_SRSS2_LTC0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int LTC1:1</td>
+<td>1 - 1</td>
+<td>LTCA2_SRSS2_LTC1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int LTC2:1</td>
+<td>2 - 2</td>
+<td>LTCA2_SRSS2_LTC2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int LTC3:1</td>
+<td>3 - 3</td>
+<td>LTCA2_SRSS2_LTC3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int LTC4:1</td>
+<td>4 - 4</td>
+<td>LTCA2_SRSS2_LTC4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int LTC5:1</td>
+<td>5 - 5</td>
+<td>LTCA2_SRSS2_LTC5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int LTC6:1</td>
+<td>6 - 6</td>
+<td>LTCA2_SRSS2_LTC6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int LTC7:1</td>
+<td>7 - 7</td>
+<td>LTCA2_SRSS2_LTC7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int LTC8:1</td>
+<td>8 - 8</td>
+<td>LTCA2_SRSS2_LTC8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int LTC9:1</td>
+<td>9 - 9</td>
+<td>LTCA2_SRSS2_LTC9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LTC10:1</td>
+<td>10 - 10</td>
+<td>LTCA2_SRSS2_LTC10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int LTC11:1</td>
+<td>11 - 11</td>
+<td>LTCA2_SRSS2_LTC11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int LTC12:1</td>
+<td>12 - 12</td>
+<td>LTCA2_SRSS2_LTC12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int LTC13:1</td>
+<td>13 - 13</td>
+<td>LTCA2_SRSS2_LTC13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int LTC14:1</td>
+<td>14 - 14</td>
+<td>LTCA2_SRSS2_LTC14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int LTC15:1</td>
+<td>15 - 15</td>
+<td>LTCA2_SRSS2_LTC15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int LTC16:1</td>
+<td>16 - 16</td>
+<td>LTCA2_SRSS2_LTC16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int LTC17:1</td>
+<td>17 - 17</td>
+<td>LTCA2_SRSS2_LTC17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int LTC18:1</td>
+<td>18 - 18</td>
+<td>LTCA2_SRSS2_LTC18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int LTC19:1</td>
+<td>19 - 19</td>
+<td>LTCA2_SRSS2_LTC19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int LTC20:1</td>
+<td>20 - 20</td>
+<td>LTCA2_SRSS2_LTC20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int LTC21:1</td>
+<td>21 - 21</td>
+<td>LTCA2_SRSS2_LTC21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int LTC22:1</td>
+<td>22 - 22</td>
+<td>LTCA2_SRSS2_LTC22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int LTC23:1</td>
+<td>23 - 23</td>
+<td>LTCA2_SRSS2_LTC23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int LTC24:1</td>
+<td>24 - 24</td>
+<td>LTCA2_SRSS2_LTC24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int LTC25:1</td>
+<td>25 - 25</td>
+<td>LTCA2_SRSS2_LTC25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int LTC26:1</td>
+<td>26 - 26</td>
+<td>LTCA2_SRSS2_LTC26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int LTC27:1</td>
+<td>27 - 27</td>
+<td>LTCA2_SRSS2_LTC27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int LTC28:1</td>
+<td>28 - 28</td>
+<td>LTCA2_SRSS2_LTC28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int LTC29:1</td>
+<td>29 - 29</td>
+<td>LTCA2_SRSS2_LTC29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int LTC30:1</td>
+<td>30 - 30</td>
+<td>LTCA2_SRSS2_LTC30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int LTC31:1</td>
+<td>31 - 31</td>
+<td>LTCA2_SRSS2_LTC31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ltca2.html#LTCA2_SRSS2">LTCA2_SRSS2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ltca2.html">LTCA2</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<html>
+<head>
+<title>TriCore TC1766B (MCHK)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>MCHK</h2>
+
+<h2><tt>#include &lt;tc1766b/mchk.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#MCHK_ID">MCHK_ID</a></td>
+<td>MCHK Module Identification Register</td>
+<td>0xF010C208</td>
+<td><a class="url" href="types/m.html#MCHK_ID_t">MCHK_ID_t</a></td>
+<td>0x001BC001</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MCHK_IR">MCHK_IR</a></td>
+<td>MCHK Memory Checker Input Register</td>
+<td>0xF010C210</td>
+<td><a class="url" href="types/m.html#MCHK_IR_t">MCHK_IR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MCHK_RR">MCHK_RR</a></td>
+<td>Memory Checker Result Register</td>
+<td>0xF010C214</td>
+<td><a class="url" href="types/m.html#MCHK_RR_t">MCHK_RR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#MCHK_WR">MCHK_WR</a></td>
+<td>Write Register</td>
+<td>0xF010C220</td>
+<td><a class="url" href="types/m.html#MCHK_WR_t">MCHK_WR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>U,SV</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MCHK_ID_t">MCHK_ID_t</a></td>
+<td><a class="url" href="mchk.html#MCHK_ID">MCHK_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MCHK_IR_t">MCHK_IR_t</a></td>
+<td><a class="url" href="mchk.html#MCHK_IR">MCHK_IR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MCHK_RR_t">MCHK_RR_t</a></td>
+<td><a class="url" href="mchk.html#MCHK_RR">MCHK_RR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/m.html#MCHK_WR_t">MCHK_WR_t</a></td>
+<td><a class="url" href="mchk.html#MCHK_WR">MCHK_WR</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="MCHK_ID">&nbsp;</a>
+<h3>MCHK_ID</h3>
+<h3>"MCHK Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MCHK_ID_ADDR = 0xF010C208</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MCHK_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x001BC001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MCHK_ID_t">MCHK_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MCHK_ID.bits</b>&nbsp;&quot;MCHK Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>MCHK_ID_MOD_REV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>MCHK_ID_MOD_REV_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>MCHK_ID_MOD_TYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>MCHK_ID_MOD_TYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>MCHK_ID_MOD_NUMBER_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>MCHK_ID_MOD_NUMBER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MCHK_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MCHK_IR">&nbsp;</a>
+<h3>MCHK_IR</h3>
+<h3>"MCHK Memory Checker Input Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MCHK_IR_ADDR = 0xF010C210</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MCHK_IR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MCHK_IR_t">MCHK_IR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MCHK_IR.bits</b>&nbsp;&quot;MCHK Memory Checker Input Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MCHKIN</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MCHK_IR_MCHKIN_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>w</td>
+<td>MCHK_IR_MCHKIN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MCHK_IR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MCHK_RR">&nbsp;</a>
+<h3>MCHK_RR</h3>
+<h3>"Memory Checker Result Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MCHK_RR_ADDR = 0xF010C214</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MCHK_RR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MCHK_RR_t">MCHK_RR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MCHK_RR.bits</b>&nbsp;&quot;Memory Checker Result Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MCHKR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>MCHK_RR_MCHKR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rwh</td>
+<td>MCHK_RR_MCHKR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MCHK_RR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="MCHK_WR">&nbsp;</a>
+<h3>MCHK_WR</h3>
+<h3>"Write Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>MCHK_WR_ADDR = 0xF010C220</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>MCHK_WR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/m.html#MCHK_WR_t">MCHK_WR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>MCHK_WR.bits</b>&nbsp;&quot;Write Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WO</td>
+<td>31</td>
+<td>0 - 30</td>
+<td>MCHK_WR_WO_MASK</td>
+<td><tt>0x7fffffff</tt></td>
+<td>w</td>
+<td>MCHK_WR_WO_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>MCHK_WR_MASK</td><td><tt>0x7fffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x7fffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

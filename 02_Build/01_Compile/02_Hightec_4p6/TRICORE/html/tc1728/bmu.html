@@ -1,0 +1,2156 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1728 (BMU)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>BMU</h2>
+
+<h2><tt>#include &lt;tc1728/bmu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#BMU_CLC">BMU_CLC</a></td>
+<td>Control Clock Register</td>
+<td>0xF0323000</td>
+<td><a class="url" href="types/b.html#BMU_CLC_t">BMU_CLC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_ID">BMU_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0323008</td>
+<td><a class="url" href="types/b.html#BMU_ID_t">BMU_ID_t</a></td>
+<td>0x0089C001</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_CTL">BMU_CTL</a></td>
+<td>Transaction Filtering Control</td>
+<td>0xF0323020</td>
+<td><a class="url" href="types/b.html#BMU_CTL_t">BMU_CTL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_PTR">BMU_PTR</a></td>
+<td>Pointer Information for Bus Transaction Fifo</td>
+<td>0xF0323024</td>
+<td><a class="url" href="types/b.html#BMU_PTR_t">BMU_PTR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_FULLNESS">BMU_FULLNESS</a></td>
+<td>Fullness Information for Bus Transaction Fifo</td>
+<td>0xF0323028</td>
+<td><a class="url" href="types/b.html#BMU_FULLNESS_t">BMU_FULLNESS_t</a></td>
+<td>0x04000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_PSET0">BMU_PSET0</a></td>
+<td>Peripheral Set 0 Configuration</td>
+<td>0xF0323030</td>
+<td><a class="url" href="types/b.html#BMU_PSETm_t">BMU_PSETm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_PSET1">BMU_PSET1</a></td>
+<td>Peripheral Set 1 Configuration</td>
+<td>0xF0323034</td>
+<td><a class="url" href="types/b.html#BMU_PSETm_t">BMU_PSETm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_TID">BMU_TID</a></td>
+<td>FPI Transaction ID Set 0 Configuration</td>
+<td>0xF0323038</td>
+<td><a class="url" href="types/b.html#BMU_TID_t">BMU_TID_t</a></td>
+<td>0x0000000D</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_FMCTL">BMU_FMCTL</a></td>
+<td>Fifo Monitor control register</td>
+<td>0xF0323040</td>
+<td><a class="url" href="types/b.html#BMU_FMCTL_t">BMU_FMCTL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_FMSTS">BMU_FMSTS</a></td>
+<td>Fifo Monitor Status Register</td>
+<td>0xF0323044</td>
+<td><a class="url" href="types/b.html#BMU_FMSTS_t">BMU_FMSTS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_FMTH">BMU_FMTH</a></td>
+<td>Fifo Monitor: Fullness Threshold Register</td>
+<td>0xF0323048</td>
+<td><a class="url" href="types/b.html#BMU_FMTH_t">BMU_FMTH_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_SMACON">BMU_SMACON</a></td>
+<td>SIST Mode Access Control Register</td>
+<td>0xF0323050</td>
+<td><a class="url" href="types/b.html#BMU_SMACON_t">BMU_SMACON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_MIECON">BMU_MIECON</a></td>
+<td>Memory Integrity Error Control Register</td>
+<td>0xF0323054</td>
+<td><a class="url" href="types/b.html#BMU_MIECON_t">BMU_MIECON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_MIECON2">BMU_MIECON2</a></td>
+<td>Memory Integrity Error Control 2 Register</td>
+<td>0xF0323058</td>
+<td><a class="url" href="types/b.html#BMU_MIECON2_t">BMU_MIECON2_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BMU_SRC">BMU_SRC</a></td>
+<td>Service Request Control Register</td>
+<td>0xF03230FC</td>
+<td><a class="url" href="types/b.html#BMU_SRC_t">BMU_SRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_CLC_t">BMU_CLC_t</a></td>
+<td><a class="url" href="bmu.html#BMU_CLC">BMU_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_CTL_t">BMU_CTL_t</a></td>
+<td><a class="url" href="bmu.html#BMU_CTL">BMU_CTL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_FMCTL_t">BMU_FMCTL_t</a></td>
+<td><a class="url" href="bmu.html#BMU_FMCTL">BMU_FMCTL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_FMSTS_t">BMU_FMSTS_t</a></td>
+<td><a class="url" href="bmu.html#BMU_FMSTS">BMU_FMSTS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_FMTH_t">BMU_FMTH_t</a></td>
+<td><a class="url" href="bmu.html#BMU_FMTH">BMU_FMTH</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_FULLNESS_t">BMU_FULLNESS_t</a></td>
+<td><a class="url" href="bmu.html#BMU_FULLNESS">BMU_FULLNESS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_ID_t">BMU_ID_t</a></td>
+<td><a class="url" href="bmu.html#BMU_ID">BMU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_MIECON_t">BMU_MIECON_t</a></td>
+<td><a class="url" href="bmu.html#BMU_MIECON">BMU_MIECON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_MIECON2_t">BMU_MIECON2_t</a></td>
+<td><a class="url" href="bmu.html#BMU_MIECON2">BMU_MIECON2</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_PSETm_t">BMU_PSETm_t</a></td>
+<td><a class="url" href="bmu.html#BMU_PSET0">BMU_PSET0</a>,       
+<a class="url" href="bmu.html#BMU_PSET1">BMU_PSET1</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_PTR_t">BMU_PTR_t</a></td>
+<td><a class="url" href="bmu.html#BMU_PTR">BMU_PTR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_SMACON_t">BMU_SMACON_t</a></td>
+<td><a class="url" href="bmu.html#BMU_SMACON">BMU_SMACON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_SRC_t">BMU_SRC_t</a></td>
+<td><a class="url" href="bmu.html#BMU_SRC">BMU_SRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BMU_TID_t">BMU_TID_t</a></td>
+<td><a class="url" href="bmu.html#BMU_TID">BMU_TID</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="BMU_CLC">&nbsp;</a>
+<h3>BMU_CLC</h3>
+<h3>"Control Clock Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_CLC_ADDR = 0xF0323000</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_CLC_t">BMU_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_CLC.bits</b>&nbsp;&quot;Control Clock Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_CLC_MASK = <tt>0x00000003</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Module Disable Bit Request
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Module Disable Bit Status
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000003</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000002</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_ID">&nbsp;</a>
+<h3>BMU_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_ID_ADDR = 0xF0323008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0089C001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_ID_t">BMU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_ID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_ID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_ID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision Number
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_CTL">&nbsp;</a>
+<h3>BMU_CTL</h3>
+<h3>"Transaction Filtering Control"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_CTL_ADDR = 0xF0323020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_CTL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_CTL_t">BMU_CTL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_CTL.bits</b>&nbsp;&quot;Transaction Filtering Control&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_CTL_MASK = <tt>0x00000003</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_CTL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_CTL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MODE</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Access Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The BTF is accessed in linear mode as a standard memory mapped SRAM</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The BTF is used in FIFO Mode enabling to log the write transaction to the regions selected in and registers.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TMF</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Transaction Master Filtering
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Logging controlled by the transaction master identifier disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Logging controlled by the transaction master identifier Enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000003</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_PTR">&nbsp;</a>
+<h3>BMU_PTR</h3>
+<h3>"Pointer Information for Bus Transaction Fifo"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_PTR_ADDR = 0xF0323024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_PTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_PTR_t">BMU_PTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_PTR.bits</b>&nbsp;&quot;Pointer Information for Bus Transaction Fifo&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_PTR_MASK = <tt>0x03ff03ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_PTR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_PTR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>RPTR</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>rh</td>
+<td><tt>0x000003ff</tt></td>
+<td>Read Pointer for a 1024 entry SRAM
+</td>
+</tr>
+<tr>
+<td>WPTR</td>
+<td>10</td>
+<td>16 - 25</td>
+<td>rh</td>
+<td><tt>0x03ff0000</tt></td>
+<td>Write Pointer for a 1024 entry SRAM
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x03ff03ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x03ff03ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_FULLNESS">&nbsp;</a>
+<h3>BMU_FULLNESS</h3>
+<h3>"Fullness Information for Bus Transaction Fifo"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_FULLNESS_ADDR = 0xF0323028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_FULLNESS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x04000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_FULLNESS_t">BMU_FULLNESS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_FULLNESS.bits</b>&nbsp;&quot;Fullness Information for Bus Transaction Fifo&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_FULLNESS_MASK = <tt>0x07ff07ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_FULLNESS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_FULLNESS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>UCELLS</td>
+<td>11</td>
+<td>0 - 10</td>
+<td>rh</td>
+<td><tt>0x000007ff</tt></td>
+<td>Number of valid (used) entries in the BTF
+</td>
+</tr>
+<tr>
+<td>FCELLS</td>
+<td>11</td>
+<td>16 - 26</td>
+<td>rh</td>
+<td><tt>0x07ff0000</tt></td>
+<td>Number of free entries in the BTF
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x07ff07ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x07ff07ff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_PSET0">&nbsp;</a>
+<h3>BMU_PSET0</h3>
+<h3>"Peripheral Set 0 Configuration"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_PSET0_ADDR = 0xF0323030</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_PSETm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_PSETm_t">BMU_PSETm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_PSET0.bits</b>&nbsp;&quot;Peripheral Set 0 Configuration&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_PSETm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_PSETm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_PSETm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FPI_SEL0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Select Bit for FPI Region 0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Select Bit for FPI Region 1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Select Bit for FPI Region 2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Select Bit for FPI Region 3
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Select Bit for FPI Region 4
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Select Bit for FPI Region 5
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Select Bit for FPI Region 6
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Select Bit for FPI Region 7
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Select Bit for FPI Region 8
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Select Bit for FPI Region 9
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Select Bit for FPI Region 10
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Select Bit for FPI Region 11
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Select Bit for FPI Region 12
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Select Bit for FPI Region 13
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Select Bit for FPI Region 14
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Select Bit for FPI Region 15
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rw</td>
+<td><tt>0x00010000</tt></td>
+<td>Select Bit for FPI Region 16
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rw</td>
+<td><tt>0x00020000</tt></td>
+<td>Select Bit for FPI Region 17
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rw</td>
+<td><tt>0x00040000</tt></td>
+<td>Select Bit for FPI Region 18
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rw</td>
+<td><tt>0x00080000</tt></td>
+<td>Select Bit for FPI Region 19
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rw</td>
+<td><tt>0x00100000</tt></td>
+<td>Select Bit for FPI Region 20
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rw</td>
+<td><tt>0x00200000</tt></td>
+<td>Select Bit for FPI Region 21
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rw</td>
+<td><tt>0x00400000</tt></td>
+<td>Select Bit for FPI Region 22
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rw</td>
+<td><tt>0x00800000</tt></td>
+<td>Select Bit for FPI Region 23
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rw</td>
+<td><tt>0x01000000</tt></td>
+<td>Select Bit for FPI Region 24
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rw</td>
+<td><tt>0x02000000</tt></td>
+<td>Select Bit for FPI Region 25
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rw</td>
+<td><tt>0x04000000</tt></td>
+<td>Select Bit for FPI Region 26
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>rw</td>
+<td><tt>0x08000000</tt></td>
+<td>Select Bit for FPI Region 27
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rw</td>
+<td><tt>0x10000000</tt></td>
+<td>Select Bit for FPI Region 28
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rw</td>
+<td><tt>0x20000000</tt></td>
+<td>Select Bit for FPI Region 29
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>Select Bit for FPI Region 30
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>Select Bit for FPI Region 31
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_PSET1">&nbsp;</a>
+<h3>BMU_PSET1</h3>
+<h3>"Peripheral Set 1 Configuration"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_PSET1_ADDR = 0xF0323034</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_PSETm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_PSETm_t">BMU_PSETm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_PSET1.bits</b>&nbsp;&quot;Peripheral Set 1 Configuration&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_PSETm_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_PSETm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_PSETm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FPI_SEL0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Select Bit for FPI Region 0
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Select Bit for FPI Region 1
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Select Bit for FPI Region 2
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Select Bit for FPI Region 3
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Select Bit for FPI Region 4
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Select Bit for FPI Region 5
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Select Bit for FPI Region 6
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Select Bit for FPI Region 7
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Select Bit for FPI Region 8
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Select Bit for FPI Region 9
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Select Bit for FPI Region 10
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rw</td>
+<td><tt>0x00000800</tt></td>
+<td>Select Bit for FPI Region 11
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Select Bit for FPI Region 12
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Select Bit for FPI Region 13
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Select Bit for FPI Region 14
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rw</td>
+<td><tt>0x00008000</tt></td>
+<td>Select Bit for FPI Region 15
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rw</td>
+<td><tt>0x00010000</tt></td>
+<td>Select Bit for FPI Region 16
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rw</td>
+<td><tt>0x00020000</tt></td>
+<td>Select Bit for FPI Region 17
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rw</td>
+<td><tt>0x00040000</tt></td>
+<td>Select Bit for FPI Region 18
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rw</td>
+<td><tt>0x00080000</tt></td>
+<td>Select Bit for FPI Region 19
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rw</td>
+<td><tt>0x00100000</tt></td>
+<td>Select Bit for FPI Region 20
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rw</td>
+<td><tt>0x00200000</tt></td>
+<td>Select Bit for FPI Region 21
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rw</td>
+<td><tt>0x00400000</tt></td>
+<td>Select Bit for FPI Region 22
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rw</td>
+<td><tt>0x00800000</tt></td>
+<td>Select Bit for FPI Region 23
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rw</td>
+<td><tt>0x01000000</tt></td>
+<td>Select Bit for FPI Region 24
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rw</td>
+<td><tt>0x02000000</tt></td>
+<td>Select Bit for FPI Region 25
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rw</td>
+<td><tt>0x04000000</tt></td>
+<td>Select Bit for FPI Region 26
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>rw</td>
+<td><tt>0x08000000</tt></td>
+<td>Select Bit for FPI Region 27
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rw</td>
+<td><tt>0x10000000</tt></td>
+<td>Select Bit for FPI Region 28
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rw</td>
+<td><tt>0x20000000</tt></td>
+<td>Select Bit for FPI Region 29
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rw</td>
+<td><tt>0x40000000</tt></td>
+<td>Select Bit for FPI Region 30
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>FPI_SEL31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rw</td>
+<td><tt>0x80000000</tt></td>
+<td>Select Bit for FPI Region 31
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Region Disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Region Enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_TID">&nbsp;</a>
+<h3>BMU_TID</h3>
+<h3>"FPI Transaction ID Set 0 Configuration"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_TID_ADDR = 0xF0323038</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_TID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000000D</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_TID_t">BMU_TID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_TID.bits</b>&nbsp;&quot;FPI Transaction ID Set 0 Configuration&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_TID_MASK = <tt>0x0000000f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_TID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_TID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TID0</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>r</td>
+<td><tt>0x0000000f</tt></td>
+<td>Transaction Identifier 0
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000000f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_FMCTL">&nbsp;</a>
+<h3>BMU_FMCTL</h3>
+<h3>"Fifo Monitor control register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_FMCTL_ADDR = 0xF0323040</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_FMCTL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_FMCTL_t">BMU_FMCTL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_FMCTL.bits</b>&nbsp;&quot;Fifo Monitor control register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_FMCTL_MASK = <tt>0x00000006</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_FMCTL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_FMCTL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FHT_INT</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Interrupt Enable for Fifo High Threshold
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>interrupt generation disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>interrupt generation enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>UDF_INT</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Interrupt Enable for Underflow Detection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>interrupt generation disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>interrupt generation enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000006</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000006</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_FMSTS">&nbsp;</a>
+<h3>BMU_FMSTS</h3>
+<h3>"Fifo Monitor Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_FMSTS_ADDR = 0xF0323044</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_FMSTS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_FMSTS_t">BMU_FMSTS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_FMSTS.bits</b>&nbsp;&quot;Fifo Monitor Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_FMSTS_MASK = <tt>0x00000007</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_FMSTS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_FMSTS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FHT_STS</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rwh</td>
+<td><tt>0x00000001</tt></td>
+<td>Status Flag for Fifo High Threshold interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Event related to High Threshold monitoring has been detected. The event leads to an interrupt if FMCTL.FHT_INT = 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OVF_STS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rwh</td>
+<td><tt>0x00000002</tt></td>
+<td>Status Flag for Overrun interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Event related to overflow monitoring has been detected. The event leads to an interrupt if FMCTL.OVF_INT = 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>UDF_STS</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rwh</td>
+<td><tt>0x00000004</tt></td>
+<td>Status Flag for Underflow interrupt
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No interrupt pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Event related to underflow monitoring has been detected. The event leads to an interrupt if FMCTL.UDF_INT = 1.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000007</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000007</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000007</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_FMTH">&nbsp;</a>
+<h3>BMU_FMTH</h3>
+<h3>"Fifo Monitor: Fullness Threshold Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_FMTH_ADDR = 0xF0323048</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_FMTH_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_FMTH_t">BMU_FMTH_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_FMTH.bits</b>&nbsp;&quot;Fifo Monitor: Fullness Threshold Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_FMTH_MASK = <tt>0x000003ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_FMTH_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_FMTH_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>FHT</td>
+<td>10</td>
+<td>0 - 9</td>
+<td>rw</td>
+<td><tt>0x000003ff</tt></td>
+<td>Fifo High Threshold
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000003ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000003ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_SMACON">&nbsp;</a>
+<h3>BMU_SMACON</h3>
+<h3>"SIST Mode Access Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_SMACON_ADDR = 0xF0323050</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_SMACON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_SMACON_t">BMU_SMACON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_SMACON.bits</b>&nbsp;&quot;SIST Mode Access Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_SMACON_MASK = <tt>0x00000003</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_SMACON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_SMACON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>BMURAM</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>rw</td>
+<td><tt>0x00000003</tt></td>
+<td>SIST mode access control
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Normal Operation, No Mapping</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Data Array Mapping, no error detection/correction</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Check Array Mapping, no error detection/correction</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>Data Array Mapping, error detection/correction enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000003</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_MIECON">&nbsp;</a>
+<h3>BMU_MIECON</h3>
+<h3>"Memory Integrity Error Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_MIECON_ADDR = 0xF0323054</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_MIECON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_MIECON_t">BMU_MIECON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_MIECON.bits</b>&nbsp;&quot;Memory Integrity Error Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_MIECON_MASK = <tt>0x00000001</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_MIECON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_MIECON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DED_EN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Double error detection enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Double bit error detection for BMURAM disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Double bit error detection for BMURAM enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000001</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_MIECON2">&nbsp;</a>
+<h3>BMU_MIECON2</h3>
+<h3>"Memory Integrity Error Control 2 Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_MIECON2_ADDR = 0xF0323058</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_MIECON2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_MIECON2_t">BMU_MIECON2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_MIECON2.bits</b>&nbsp;&quot;Memory Integrity Error Control 2 Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_MIECON2_MASK = <tt>0x00000001</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_MIECON2_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_MIECON2_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SEC_EN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Single error correction enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Single bit error correction for BMURAM disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Single bit error correction for BMURAM enabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000001</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BMU_SRC">&nbsp;</a>
+<h3>BMU_SRC</h3>
+<h3>"Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BMU_SRC_ADDR = 0xF03230FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BMU_SRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BMU_SRC_t">BMU_SRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>BMU_SRC.bits</b>&nbsp;&quot;Service Request Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>BMU_SRC_MASK = <tt>0x0000f4ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>BMU_SRC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>BMU_SRC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Service request is never serviced</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Service request is on lowest priority</td></tr>
+<tr><td>FF</td><td>&nbsp;</td><td>Service request is on highest priority</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Type of Service Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CPU service is initiated</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP service is initiated</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Service request is disabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request is enabled</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rwh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request is pending</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A service request is pendingThe bit field SRR is automatically cleared by hardware at the end of an interrupt arbitration round if the node was the winner, therefore this information is not suitable for interrupt plausibility checks.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear SRR; bit value is not stored; read always returns 0; no action if SETR is set also.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SRR; bit value is not stored; read always returns 0; no action if CLRR is set also.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000034ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000f4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

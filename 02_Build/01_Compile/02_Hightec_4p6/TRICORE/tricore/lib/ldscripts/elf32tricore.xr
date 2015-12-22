@@ -1,0 +1,143 @@
+/* Script for ld -r: link without relocation */
+OUTPUT_FORMAT("elf32-tricore")
+OUTPUT_ARCH(tricore)
+SECTIONS
+{
+   CORE(.zrodata) 0: FLAGS(arl)
+  {
+    *(.zrodata)
+    *(.zrodata.*)
+  }
+  CORE(.bbss) 0 : FLAGS(aw)
+  {
+	  *(.bbss)
+	  *(.bbss.*)
+  }
+ CORE(.zbss) 0 :
+  {
+    *(.zbss)
+
+  }
+  CORE(.bbata) 0 :
+  {
+	  *(.bbata)
+	  *(.bbata.*)
+  }
+  CORE(.zdata)  0 :
+  {
+   *(.zdata)
+
+  }
+  CORE(.zrodata)  0 :
+  {
+
+
+  }
+  CORE(.init)  0 :
+  {
+      /* we have to keep all .init/.fini section
+         because the linker should not delete this
+         sections with --gc-sections
+       */
+	KEEP( *(SORT(.init*)) )
+	KEEP( *(SORT(.fini*)) )
+  }
+  CORE(.text)  0 :
+  {
+    *(.text)
+  }
+  CORE(.rodata)  0  :
+  {
+    *(.rodata)
+  }
+  CORE(.sdata2)  0 :
+  {
+    *(.sdata.rodata)
+    *(.sdata.rodata.*)
+    *(.srodata)
+    *(.srodata.*)
+  }
+  CORE(.eh_frame)  0 :
+  {
+    *(.eh_frame)
+  }
+  .jcr          0 : { KEEP (*(.jcr)) }
+  .pcptext 0 :
+  {
+    KEEP(*(.pcptext))
+  }
+  .pcpdata 0 :
+  {
+    KEEP(*(.pcpdata))
+  }
+  CORE(.data) 0 :
+  {
+    *(.data)
+  }
+  CORE(.sdata)  0 :
+  {
+
+    *(.sdata)
+  }
+  CORE(.sbss) 0 :
+  {
+    *(.sbss)
+  }
+  CORE(.bss) 0 :
+  {
+    *(.bss)
+  }
+  CORE(.ustack)  :
+  {
+  }
+  CORE(.istack)  :
+  {
+  }
+  CORE(.heap)  :
+  {
+  }
+  /*
+   * DWARF debug sections.
+   * Symbols in the DWARF debugging sections are relative to the
+   * beginning of the section, so we begin them at 0.
+   */
+  /*
+   * DWARF 1
+   */
+  .comment         0 : { *(.comment) }
+  .debug           0 : { *(.debug) }
+  .line            0 : { *(.line) }
+  /*
+   * GNU DWARF 1 extensions
+   */
+  .debug_srcinfo   0 : { *(.debug_srcinfo) }
+  .debug_sfnames   0 : { *(.debug_sfnames) }
+  /*
+   * DWARF 1.1 and DWARF 2
+   */
+  .debug_aranges   0 : { *(.debug_aranges) }
+  .debug_pubnames  0 : { *(.debug_pubnames) }
+  /*
+   * DWARF 2
+   */
+  .debug_info      0 : { *(.debug_info) }
+  .debug_abbrev    0 : { *(.debug_abbrev) }
+  .debug_line      0 : { *(.debug_line) }
+  .debug_frame     0 : { *(.debug_frame) }
+  .debug_str       0 : { *(.debug_str) }
+  .debug_loc       0 : { *(.debug_loc) }
+  .debug_macinfo   0 : { *(.debug_macinfo) }
+  .debug_ranges    0 : { *(.debug_ranges) }
+  /*
+   * SGI/MIPS DWARF 2 extensions
+   */
+  .debug_weaknames 0 : { *(.debug_weaknames) }
+  .debug_funcnames 0 : { *(.debug_funcnames) }
+  .debug_typenames 0 : { *(.debug_typenames) }
+  .debug_varnames  0 : { *(.debug_varnames) }
+  /*
+   * Optional sections that may appear regardless of relocating.
+   */
+  .version_info    0 : { *(.version_info) }
+  .boffs           0 : { KEEP (*(.boffs)) }
+}

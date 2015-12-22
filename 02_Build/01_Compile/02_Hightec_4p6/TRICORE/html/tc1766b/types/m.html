@@ -1,0 +1,4977 @@
+<html>
+<head>
+<title>TriCore TC1766B (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="MANID_t"><b>MANID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Manufacturer Identification Register</b></td></tr>
+<tr><td colspan="5"><b>MANID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DEPT:5</td>
+<td>0 - 4</td>
+<td>MANID_DEPT_MASK</td>
+<td>0x0000001f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MANUF:11</td>
+<td>5 - 15</td>
+<td>MANID_MANUF_MASK</td>
+<td>0x0000ffe0</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#MANID">MANID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MCHK_ID_t"><b>MCHK_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MCHK Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>MCHK_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>MCHK_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>MCHK_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>MCHK_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mchk.html#MCHK_ID">MCHK_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mchk.html">MCHK</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MCHK_IR_t"><b>MCHK_IR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MCHK Memory Checker Input Register</b></td></tr>
+<tr><td colspan="5"><b>MCHK_IR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MCHKIN:32</td>
+<td>0 - 31</td>
+<td>MCHK_IR_MCHKIN_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mchk.html#MCHK_IR">MCHK_IR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mchk.html">MCHK</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MCHK_RR_t"><b>MCHK_RR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Memory Checker Result Register</b></td></tr>
+<tr><td colspan="5"><b>MCHK_RR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MCHKR:32</td>
+<td>0 - 31</td>
+<td>MCHK_RR_MCHKR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mchk.html#MCHK_RR">MCHK_RR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mchk.html">MCHK</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MCHK_WR_t"><b>MCHK_WR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Write Register</b></td></tr>
+<tr><td colspan="5"><b>MCHK_WR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int WO:31</td>
+<td>0 - 30</td>
+<td>MCHK_WR_WO_MASK</td>
+<td>0x7fffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mchk.html#MCHK_WR">MCHK_WR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mchk.html">MCHK</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_AER_t"><b>MLIn_AER_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Access Enable Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_AER_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int AEN0:1</td>
+<td>0 - 0</td>
+<td>MLIn_AER_AEN0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int AEN1:1</td>
+<td>1 - 1</td>
+<td>MLIn_AER_AEN1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int AEN2:1</td>
+<td>2 - 2</td>
+<td>MLIn_AER_AEN2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int AEN3:1</td>
+<td>3 - 3</td>
+<td>MLIn_AER_AEN3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int AEN4:1</td>
+<td>4 - 4</td>
+<td>MLIn_AER_AEN4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int AEN5:1</td>
+<td>5 - 5</td>
+<td>MLIn_AER_AEN5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int AEN6:1</td>
+<td>6 - 6</td>
+<td>MLIn_AER_AEN6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int AEN7:1</td>
+<td>7 - 7</td>
+<td>MLIn_AER_AEN7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int AEN8:1</td>
+<td>8 - 8</td>
+<td>MLIn_AER_AEN8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int AEN9:1</td>
+<td>9 - 9</td>
+<td>MLIn_AER_AEN9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int AEN10:1</td>
+<td>10 - 10</td>
+<td>MLIn_AER_AEN10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int AEN11:1</td>
+<td>11 - 11</td>
+<td>MLIn_AER_AEN11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int AEN12:1</td>
+<td>12 - 12</td>
+<td>MLIn_AER_AEN12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int AEN13:1</td>
+<td>13 - 13</td>
+<td>MLIn_AER_AEN13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int AEN14:1</td>
+<td>14 - 14</td>
+<td>MLIn_AER_AEN14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int AEN15:1</td>
+<td>15 - 15</td>
+<td>MLIn_AER_AEN15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int AEN16:1</td>
+<td>16 - 16</td>
+<td>MLIn_AER_AEN16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int AEN17:1</td>
+<td>17 - 17</td>
+<td>MLIn_AER_AEN17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int AEN18:1</td>
+<td>18 - 18</td>
+<td>MLIn_AER_AEN18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int AEN19:1</td>
+<td>19 - 19</td>
+<td>MLIn_AER_AEN19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int AEN20:1</td>
+<td>20 - 20</td>
+<td>MLIn_AER_AEN20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int AEN21:1</td>
+<td>21 - 21</td>
+<td>MLIn_AER_AEN21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int AEN22:1</td>
+<td>22 - 22</td>
+<td>MLIn_AER_AEN22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int AEN23:1</td>
+<td>23 - 23</td>
+<td>MLIn_AER_AEN23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int AEN24:1</td>
+<td>24 - 24</td>
+<td>MLIn_AER_AEN24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int AEN25:1</td>
+<td>25 - 25</td>
+<td>MLIn_AER_AEN25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int AEN26:1</td>
+<td>26 - 26</td>
+<td>MLIn_AER_AEN26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int AEN27:1</td>
+<td>27 - 27</td>
+<td>MLIn_AER_AEN27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int AEN28:1</td>
+<td>28 - 28</td>
+<td>MLIn_AER_AEN28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int AEN29:1</td>
+<td>29 - 29</td>
+<td>MLIn_AER_AEN29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int AEN30:1</td>
+<td>30 - 30</td>
+<td>MLIn_AER_AEN30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int AEN31:1</td>
+<td>31 - 31</td>
+<td>MLIn_AER_AEN31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_AER">MLI0_AER</a>,    
+<a class="url" href="../mli1.html#MLI1_AER">MLI1_AER</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_ARR_t"><b>MLIn_ARR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Access Range Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_ARR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SLICE0:5</td>
+<td>0 - 4</td>
+<td>MLIn_ARR_SLICE0_MASK</td>
+<td>0x0000001f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SIZE0:3</td>
+<td>5 - 7</td>
+<td>MLIn_ARR_SIZE0_MASK</td>
+<td>0x000000e0</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SLICE1:5</td>
+<td>8 - 12</td>
+<td>MLIn_ARR_SLICE1_MASK</td>
+<td>0x00001f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SIZE1:3</td>
+<td>13 - 15</td>
+<td>MLIn_ARR_SIZE1_MASK</td>
+<td>0x0000e000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int SLICE2:5</td>
+<td>16 - 20</td>
+<td>MLIn_ARR_SLICE2_MASK</td>
+<td>0x001f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SIZE2:3</td>
+<td>21 - 23</td>
+<td>MLIn_ARR_SIZE2_MASK</td>
+<td>0x00e00000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int SLICE3:5</td>
+<td>24 - 28</td>
+<td>MLIn_ARR_SLICE3_MASK</td>
+<td>0x1f000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int SIZE3:3</td>
+<td>29 - 31</td>
+<td>MLIn_ARR_SIZE3_MASK</td>
+<td>0xe0000000</td>
+<td align="right">29</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_ARR">MLI0_ARR</a>,    
+<a class="url" href="../mli1.html#MLI1_ARR">MLI1_ARR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_FDR_t"><b>MLIn_FDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MLI Fractional Divider Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_FDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STEP:10</td>
+<td>0 - 9</td>
+<td>MLIn_FDR_STEP_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SM:1</td>
+<td>11 - 11</td>
+<td>MLIn_FDR_SM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SC:2</td>
+<td>12 - 13</td>
+<td>MLIn_FDR_SC_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DM:2</td>
+<td>14 - 15</td>
+<td>MLIn_FDR_DM_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RESULT:10</td>
+<td>16 - 25</td>
+<td>MLIn_FDR_RESULT_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>28 - 28</td>
+<td>MLIn_FDR_SUSACK_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SUSREQ:1</td>
+<td>29 - 29</td>
+<td>MLIn_FDR_SUSREQ_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENHW:1</td>
+<td>30 - 30</td>
+<td>MLIn_FDR_ENHW_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int DISCLK:1</td>
+<td>31 - 31</td>
+<td>MLIn_FDR_DISCLK_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_FDR">MLI0_FDR</a>,    
+<a class="url" href="../mli1.html#MLI1_FDR">MLI1_FDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_GINTR_t"><b>MLIn_GINTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MLI Global Interrupt Set Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_GINTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SIMLI0:1</td>
+<td>0 - 0</td>
+<td>MLIn_GINTR_SIMLI0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SIMLI1:1</td>
+<td>1 - 1</td>
+<td>MLIn_GINTR_SIMLI1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SIMLI2:1</td>
+<td>2 - 2</td>
+<td>MLIn_GINTR_SIMLI2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SIMLI3:1</td>
+<td>3 - 3</td>
+<td>MLIn_GINTR_SIMLI3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SIMLI4:1</td>
+<td>4 - 4</td>
+<td>MLIn_GINTR_SIMLI4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SIMLI5:1</td>
+<td>5 - 5</td>
+<td>MLIn_GINTR_SIMLI5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SIMLI6:1</td>
+<td>6 - 6</td>
+<td>MLIn_GINTR_SIMLI6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SIMLI7:1</td>
+<td>7 - 7</td>
+<td>MLIn_GINTR_SIMLI7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_GINTR">MLI0_GINTR</a>,    
+<a class="url" href="../mli1.html#MLI1_GINTR">MLI1_GINTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_ID_t"><b>MLIn_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MLI Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>MLIn_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>MLIn_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>MLIn_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_ID">MLI0_ID</a>,    
+<a class="url" href="../mli1.html#MLI1_ID">MLI1_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_OICR_t"><b>MLIn_OICR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Output Input Control Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_OICR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TVEA:1</td>
+<td>0 - 0</td>
+<td>MLIn_OICR_TVEA_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TVEB:1</td>
+<td>1 - 1</td>
+<td>MLIn_OICR_TVEB_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int TVEC:1</td>
+<td>2 - 2</td>
+<td>MLIn_OICR_TVEC_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int TVED:1</td>
+<td>3 - 3</td>
+<td>MLIn_OICR_TVED_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int TVPA:1</td>
+<td>4 - 4</td>
+<td>MLIn_OICR_TVPA_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TVPB:1</td>
+<td>5 - 5</td>
+<td>MLIn_OICR_TVPB_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int TVPC:1</td>
+<td>6 - 6</td>
+<td>MLIn_OICR_TVPC_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int TVPD:1</td>
+<td>7 - 7</td>
+<td>MLIn_OICR_TVPD_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TRS:2</td>
+<td>8 - 9</td>
+<td>MLIn_OICR_TRS_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TRP:1</td>
+<td>10 - 10</td>
+<td>MLIn_OICR_TRP_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int TRE:1</td>
+<td>11 - 11</td>
+<td>MLIn_OICR_TRE_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int TCE:1</td>
+<td>12 - 12</td>
+<td>MLIn_OICR_TCE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int TCP:1</td>
+<td>13 - 13</td>
+<td>MLIn_OICR_TCP_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int TDP:1</td>
+<td>14 - 14</td>
+<td>MLIn_OICR_TDP_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RVE:1</td>
+<td>15 - 15</td>
+<td>MLIn_OICR_RVE_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int RRS:2</td>
+<td>16 - 17</td>
+<td>MLIn_OICR_RRS_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int RRPA:1</td>
+<td>18 - 18</td>
+<td>MLIn_OICR_RRPA_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int RRPB:1</td>
+<td>19 - 19</td>
+<td>MLIn_OICR_RRPB_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int RRPC:1</td>
+<td>20 - 20</td>
+<td>MLIn_OICR_RRPC_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int RRPD:1</td>
+<td>21 - 21</td>
+<td>MLIn_OICR_RRPD_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int RVS:2</td>
+<td>22 - 23</td>
+<td>MLIn_OICR_RVS_MASK</td>
+<td>0x00c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RVP:1</td>
+<td>24 - 24</td>
+<td>MLIn_OICR_RVP_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int RCS:2</td>
+<td>25 - 26</td>
+<td>MLIn_OICR_RCS_MASK</td>
+<td>0x06000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int RCP:1</td>
+<td>27 - 27</td>
+<td>MLIn_OICR_RCP_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int RCE:1</td>
+<td>28 - 28</td>
+<td>MLIn_OICR_RCE_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int RDS:2</td>
+<td>29 - 30</td>
+<td>MLIn_OICR_RDS_MASK</td>
+<td>0x60000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int RDP:1</td>
+<td>31 - 31</td>
+<td>MLIn_OICR_RDP_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_OICR">MLI0_OICR</a>,    
+<a class="url" href="../mli1.html#MLI1_OICR">MLI1_OICR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RADRR_t"><b>MLIn_RADRR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Address Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RADRR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDR:32</td>
+<td>0 - 31</td>
+<td>MLIn_RADRR_ADDR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RADRR">MLI0_RADRR</a>,    
+<a class="url" href="../mli1.html#MLI1_RADRR">MLI1_RADRR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RCR_t"><b>MLIn_RCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Control Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DPE:4</td>
+<td>0 - 3</td>
+<td>MLIn_RCR_DPE_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CMDP3:4</td>
+<td>4 - 7</td>
+<td>MLIn_RCR_CMDP3_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MOD:1</td>
+<td>8 - 8</td>
+<td>MLIn_RCR_MOD_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DW:2</td>
+<td>9 - 10</td>
+<td>MLIn_RCR_DW_MASK</td>
+<td>0x00000600</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int TF:2</td>
+<td>11 - 12</td>
+<td>MLIn_RCR_TF_MASK</td>
+<td>0x00001800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int PE:1</td>
+<td>13 - 13</td>
+<td>MLIn_RCR_PE_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int RPN:2</td>
+<td>14 - 15</td>
+<td>MLIn_RCR_RPN_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int MPE:4</td>
+<td>16 - 19</td>
+<td>MLIn_RCR_MPE_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int BEN:1</td>
+<td>20 - 20</td>
+<td>MLIn_RCR_BEN_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int RCVRST:1</td>
+<td>24 - 24</td>
+<td>MLIn_RCR_RCVRST_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RCR">MLI0_RCR</a>,    
+<a class="url" href="../mli1.html#MLI1_RCR">MLI1_RCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RDATAR_t"><b>MLIn_RDATAR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Data Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RDATAR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATA:32</td>
+<td>0 - 31</td>
+<td>MLIn_RDATAR_DATA_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RDATAR">MLI0_RDATAR</a>,    
+<a class="url" href="../mli1.html#MLI1_RDATAR">MLI1_RDATAR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RIER_t"><b>MLIn_RIER_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Interrupt Enable Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RIER_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NFRIE:2</td>
+<td>0 - 1</td>
+<td>MLIn_RIER_NFRIE_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CFRIE0:1</td>
+<td>2 - 2</td>
+<td>MLIn_RIER_CFRIE0_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CFRIE1:1</td>
+<td>3 - 3</td>
+<td>MLIn_RIER_CFRIE1_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CFRIE2:1</td>
+<td>4 - 4</td>
+<td>MLIn_RIER_CFRIE2_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CFRIE3:1</td>
+<td>5 - 5</td>
+<td>MLIn_RIER_CFRIE3_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ICE:1</td>
+<td>6 - 6</td>
+<td>MLIn_RIER_ICE_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int PEIE:1</td>
+<td>7 - 7</td>
+<td>MLIn_RIER_PEIE_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int MPEIE:1</td>
+<td>8 - 8</td>
+<td>MLIn_RIER_MPEIE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DRAIE:1</td>
+<td>9 - 9</td>
+<td>MLIn_RIER_DRAIE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int NFRIR:1</td>
+<td>16 - 16</td>
+<td>MLIn_RIER_NFRIR_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MEIR:1</td>
+<td>17 - 17</td>
+<td>MLIn_RIER_MEIR_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int CFRIR0:1</td>
+<td>18 - 18</td>
+<td>MLIn_RIER_CFRIR0_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int CFRIR1:1</td>
+<td>19 - 19</td>
+<td>MLIn_RIER_CFRIR1_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CFRIR2:1</td>
+<td>20 - 20</td>
+<td>MLIn_RIER_CFRIR2_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int CFRIR3:1</td>
+<td>21 - 21</td>
+<td>MLIn_RIER_CFRIR3_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int ICER:1</td>
+<td>22 - 22</td>
+<td>MLIn_RIER_ICER_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int PEIR:1</td>
+<td>23 - 23</td>
+<td>MLIn_RIER_PEIR_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int MPEIR:1</td>
+<td>24 - 24</td>
+<td>MLIn_RIER_MPEIR_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int DRAIR:1</td>
+<td>25 - 25</td>
+<td>MLIn_RIER_DRAIR_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RIER">MLI0_RIER</a>,    
+<a class="url" href="../mli1.html#MLI1_RIER">MLI1_RIER</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RINPR_t"><b>MLIn_RINPR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Interrupt Node Pointer Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RINPR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NFRIP:3</td>
+<td>0 - 2</td>
+<td>MLIn_RINPR_NFRIP_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CFRIP:3</td>
+<td>4 - 6</td>
+<td>MLIn_RINPR_CFRIP_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MPPEIP:3</td>
+<td>8 - 10</td>
+<td>MLIn_RINPR_MPPEIP_MASK</td>
+<td>0x00000700</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DRAIP:3</td>
+<td>12 - 14</td>
+<td>MLIn_RINPR_DRAIP_MASK</td>
+<td>0x00007000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RINPR">MLI0_RINPR</a>,    
+<a class="url" href="../mli1.html#MLI1_RINPR">MLI1_RINPR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RISR_t"><b>MLIn_RISR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Interrupt Status Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RISR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NFRI:1</td>
+<td>0 - 0</td>
+<td>MLIn_RISR_NFRI_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MEI:1</td>
+<td>1 - 1</td>
+<td>MLIn_RISR_MEI_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CFRI0:1</td>
+<td>2 - 2</td>
+<td>MLIn_RISR_CFRI0_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CFRI1:1</td>
+<td>3 - 3</td>
+<td>MLIn_RISR_CFRI1_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CFRI2:1</td>
+<td>4 - 4</td>
+<td>MLIn_RISR_CFRI2_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CFRI3:1</td>
+<td>5 - 5</td>
+<td>MLIn_RISR_CFRI3_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int IC:1</td>
+<td>6 - 6</td>
+<td>MLIn_RISR_IC_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int PEI:1</td>
+<td>7 - 7</td>
+<td>MLIn_RISR_PEI_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int MPEI:1</td>
+<td>8 - 8</td>
+<td>MLIn_RISR_MPEI_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DRAI:1</td>
+<td>9 - 9</td>
+<td>MLIn_RISR_DRAI_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RISR">MLI0_RISR</a>,    
+<a class="url" href="../mli1.html#MLI1_RISR">MLI1_RISR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RPmBAR_t"><b>MLIn_RPmBAR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Pipe n Base Address Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RPmBAR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDR:28</td>
+<td>4 - 31</td>
+<td>MLIn_RPmBAR_ADDR_MASK</td>
+<td>0xfffffff0</td>
+<td align="right">4</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RP0BAR">MLI0_RP0BAR</a>,    
+<a class="url" href="../mli0.html#MLI0_RP1BAR">MLI0_RP1BAR</a>,    
+<a class="url" href="../mli0.html#MLI0_RP2BAR">MLI0_RP2BAR</a>,    
+<a class="url" href="../mli0.html#MLI0_RP3BAR">MLI0_RP3BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP0BAR">MLI1_RP0BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP1BAR">MLI1_RP1BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP2BAR">MLI1_RP2BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP3BAR">MLI1_RP3BAR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_RPmSTATR_t"><b>MLIn_RPmSTATR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Receiver Pipe n Status Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_RPmSTATR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BS:4</td>
+<td>0 - 3</td>
+<td>MLIn_RPmSTATR_BS_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int AP:10</td>
+<td>6 - 15</td>
+<td>MLIn_RPmSTATR_AP_MASK</td>
+<td>0x0000ffc0</td>
+<td align="right">6</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_RP0STATR">MLI0_RP0STATR</a>,    
+<a class="url" href="../mli0.html#MLI0_RP1STATR">MLI0_RP1STATR</a>,    
+<a class="url" href="../mli0.html#MLI0_RP2STATR">MLI0_RP2STATR</a>,    
+<a class="url" href="../mli0.html#MLI0_RP3STATR">MLI0_RP3STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP0STATR">MLI1_RP0STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP1STATR">MLI1_RP1STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP2STATR">MLI1_RP2STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_RP3STATR">MLI1_RP3STATR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_SCR_t"><b>MLIn_SCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Set Clear Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_SCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SCV0:1</td>
+<td>0 - 0</td>
+<td>MLIn_SCR_SCV0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SCV1:1</td>
+<td>1 - 1</td>
+<td>MLIn_SCR_SCV1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SCV2:1</td>
+<td>2 - 2</td>
+<td>MLIn_SCR_SCV2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SCV3:1</td>
+<td>3 - 3</td>
+<td>MLIn_SCR_SCV3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SMOD:1</td>
+<td>4 - 4</td>
+<td>MLIn_SCR_SMOD_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CDV0:1</td>
+<td>8 - 8</td>
+<td>MLIn_SCR_CDV0_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CDV1:1</td>
+<td>9 - 9</td>
+<td>MLIn_SCR_CDV1_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CDV2:1</td>
+<td>10 - 10</td>
+<td>MLIn_SCR_CDV2_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CDV3:1</td>
+<td>11 - 11</td>
+<td>MLIn_SCR_CDV3_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int CCV0:1</td>
+<td>12 - 12</td>
+<td>MLIn_SCR_CCV0_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CCV1:1</td>
+<td>13 - 13</td>
+<td>MLIn_SCR_CCV1_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CCV2:1</td>
+<td>14 - 14</td>
+<td>MLIn_SCR_CCV2_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int CCV3:1</td>
+<td>15 - 15</td>
+<td>MLIn_SCR_CCV3_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int CMOD:1</td>
+<td>16 - 16</td>
+<td>MLIn_SCR_CMOD_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CBAV:1</td>
+<td>17 - 17</td>
+<td>MLIn_SCR_CBAV_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int CAV:1</td>
+<td>24 - 24</td>
+<td>MLIn_SCR_CAV_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int CRPE:1</td>
+<td>25 - 25</td>
+<td>MLIn_SCR_CRPE_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int CTPE:1</td>
+<td>26 - 26</td>
+<td>MLIn_SCR_CTPE_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int CNAE:1</td>
+<td>27 - 27</td>
+<td>MLIn_SCR_CNAE_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int CCIV0:1</td>
+<td>28 - 28</td>
+<td>MLIn_SCR_CCIV0_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int CCIV1:1</td>
+<td>29 - 29</td>
+<td>MLIn_SCR_CCIV1_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int CCIV2:1</td>
+<td>30 - 30</td>
+<td>MLIn_SCR_CCIV2_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int CCIV3:1</td>
+<td>31 - 31</td>
+<td>MLIn_SCR_CCIV3_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_SCR">MLI0_SCR</a>,    
+<a class="url" href="../mli1.html#MLI1_SCR">MLI1_SCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TCBAR_t"><b>MLIn_TCBAR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Copy Base Address Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TCBAR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDR:28</td>
+<td>4 - 31</td>
+<td>MLIn_TCBAR_ADDR_MASK</td>
+<td>0xfffffff0</td>
+<td align="right">4</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TCBAR">MLI0_TCBAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TCBAR">MLI1_TCBAR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TCMDR_t"><b>MLIn_TCMDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Command Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TCMDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CMDP0:4</td>
+<td>0 - 3</td>
+<td>MLIn_TCMDR_CMDP0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CMDP1:4</td>
+<td>8 - 11</td>
+<td>MLIn_TCMDR_CMDP1_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CMDP2:4</td>
+<td>16 - 19</td>
+<td>MLIn_TCMDR_CMDP2_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CMDP3:4</td>
+<td>24 - 27</td>
+<td>MLIn_TCMDR_CMDP3_MASK</td>
+<td>0x0f000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TCMDR">MLI0_TCMDR</a>,    
+<a class="url" href="../mli1.html#MLI1_TCMDR">MLI1_TCMDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TCR_t"><b>MLIn_TCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Control Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD:1</td>
+<td>0 - 0</td>
+<td>MLIn_TCR_MOD_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DNT:1</td>
+<td>1 - 1</td>
+<td>MLIn_TCR_DNT_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RTY:1</td>
+<td>2 - 2</td>
+<td>MLIn_TCR_RTY_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int MPE:4</td>
+<td>4 - 7</td>
+<td>MLIn_TCR_MPE_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MNAE:2</td>
+<td>8 - 9</td>
+<td>MLIn_TCR_MNAE_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MDP:4</td>
+<td>10 - 13</td>
+<td>MLIn_TCR_MDP_MASK</td>
+<td>0x00003c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int NO:1</td>
+<td>14 - 14</td>
+<td>MLIn_TCR_NO_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int TP:1</td>
+<td>15 - 15</td>
+<td>MLIn_TCR_TP_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TCR">MLI0_TCR</a>,    
+<a class="url" href="../mli1.html#MLI1_TCR">MLI1_TCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TDRAR_t"><b>MLIn_TDRAR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Data Read Answer Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TDRAR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATA:32</td>
+<td>0 - 31</td>
+<td>MLIn_TDRAR_DATA_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TDRAR">MLI0_TDRAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TDRAR">MLI1_TDRAR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TIER_t"><b>MLIn_TIER_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Interrupt Enable Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TIER_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NFSIE0:1</td>
+<td>0 - 0</td>
+<td>MLIn_TIER_NFSIE0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int NFSIE1:1</td>
+<td>1 - 1</td>
+<td>MLIn_TIER_NFSIE1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int NFSIE2:1</td>
+<td>2 - 2</td>
+<td>MLIn_TIER_NFSIE2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int NFSIE3:1</td>
+<td>3 - 3</td>
+<td>MLIn_TIER_NFSIE3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CFSIE0:1</td>
+<td>4 - 4</td>
+<td>MLIn_TIER_CFSIE0_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CFSIE1:1</td>
+<td>5 - 5</td>
+<td>MLIn_TIER_CFSIE1_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CFSIE2:1</td>
+<td>6 - 6</td>
+<td>MLIn_TIER_CFSIE2_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CFSIE3:1</td>
+<td>7 - 7</td>
+<td>MLIn_TIER_CFSIE3_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int PEIE:1</td>
+<td>8 - 8</td>
+<td>MLIn_TIER_PEIE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TEIE:1</td>
+<td>9 - 9</td>
+<td>MLIn_TIER_TEIE_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int NFSIR0:1</td>
+<td>16 - 16</td>
+<td>MLIn_TIER_NFSIR0_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int NFSIR1:1</td>
+<td>17 - 17</td>
+<td>MLIn_TIER_NFSIR1_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int NFSIR2:1</td>
+<td>18 - 18</td>
+<td>MLIn_TIER_NFSIR2_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int NFSIR3:1</td>
+<td>19 - 19</td>
+<td>MLIn_TIER_NFSIR3_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int CFSIR0:1</td>
+<td>20 - 20</td>
+<td>MLIn_TIER_CFSIR0_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int CFSIR1:1</td>
+<td>21 - 21</td>
+<td>MLIn_TIER_CFSIR1_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int CFSIR2:1</td>
+<td>22 - 22</td>
+<td>MLIn_TIER_CFSIR2_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int CFSIR3:1</td>
+<td>23 - 23</td>
+<td>MLIn_TIER_CFSIR3_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int PEIR:1</td>
+<td>24 - 24</td>
+<td>MLIn_TIER_PEIR_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int TEIR:1</td>
+<td>25 - 25</td>
+<td>MLIn_TIER_TEIR_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TIER">MLI0_TIER</a>,    
+<a class="url" href="../mli1.html#MLI1_TIER">MLI1_TIER</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TINPR_t"><b>MLIn_TINPR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Interrupt Node Pointer Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TINPR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NFSIP0:3</td>
+<td>0 - 2</td>
+<td>MLIn_TINPR_NFSIP0_MASK</td>
+<td>0x00000007</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int NFSIP1:3</td>
+<td>4 - 6</td>
+<td>MLIn_TINPR_NFSIP1_MASK</td>
+<td>0x00000070</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int NFSIP2:3</td>
+<td>8 - 10</td>
+<td>MLIn_TINPR_NFSIP2_MASK</td>
+<td>0x00000700</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int NFSIP3:3</td>
+<td>12 - 14</td>
+<td>MLIn_TINPR_NFSIP3_MASK</td>
+<td>0x00007000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int CFSIP:3</td>
+<td>16 - 18</td>
+<td>MLIn_TINPR_CFSIP_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PTEIP:3</td>
+<td>20 - 22</td>
+<td>MLIn_TINPR_PTEIP_MASK</td>
+<td>0x00700000</td>
+<td align="right">20</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TINPR">MLI0_TINPR</a>,    
+<a class="url" href="../mli1.html#MLI1_TINPR">MLI1_TINPR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TISR_t"><b>MLIn_TISR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Interrupt Status Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TISR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int NFSI0:1</td>
+<td>0 - 0</td>
+<td>MLIn_TISR_NFSI0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int NFSI1:1</td>
+<td>1 - 1</td>
+<td>MLIn_TISR_NFSI1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int NFSI2:1</td>
+<td>2 - 2</td>
+<td>MLIn_TISR_NFSI2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int NFSI3:1</td>
+<td>3 - 3</td>
+<td>MLIn_TISR_NFSI3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CFSI0:1</td>
+<td>4 - 4</td>
+<td>MLIn_TISR_CFSI0_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CFSI1:1</td>
+<td>5 - 5</td>
+<td>MLIn_TISR_CFSI1_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CFSI2:1</td>
+<td>6 - 6</td>
+<td>MLIn_TISR_CFSI2_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CFSI3:1</td>
+<td>7 - 7</td>
+<td>MLIn_TISR_CFSI3_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int PEI:1</td>
+<td>8 - 8</td>
+<td>MLIn_TISR_PEI_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TEI:1</td>
+<td>9 - 9</td>
+<td>MLIn_TISR_TEI_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TISR">MLI0_TISR</a>,    
+<a class="url" href="../mli1.html#MLI1_TISR">MLI1_TISR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TPmAOFR_t"><b>MLIn_TPmAOFR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Pipe n Address Offset Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TPmAOFR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int AOFF:16</td>
+<td>0 - 15</td>
+<td>MLIn_TPmAOFR_AOFF_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TP0AOFR">MLI0_TP0AOFR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP1AOFR">MLI0_TP1AOFR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP2AOFR">MLI0_TP2AOFR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP3AOFR">MLI0_TP3AOFR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP0AOFR">MLI1_TP0AOFR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP1AOFR">MLI1_TP1AOFR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP2AOFR">MLI1_TP2AOFR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP3AOFR">MLI1_TP3AOFR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TPmBAR_t"><b>MLIn_TPmBAR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Pipe n Base Address Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TPmBAR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BS:4</td>
+<td>0 - 3</td>
+<td>MLIn_TPmBAR_BS_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ADDR:28</td>
+<td>4 - 31</td>
+<td>MLIn_TPmBAR_ADDR_MASK</td>
+<td>0xfffffff0</td>
+<td align="right">4</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TP0BAR">MLI0_TP0BAR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP1BAR">MLI0_TP1BAR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP2BAR">MLI0_TP2BAR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP3BAR">MLI0_TP3BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP0BAR">MLI1_TP0BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP1BAR">MLI1_TP1BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP2BAR">MLI1_TP2BAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP3BAR">MLI1_TP3BAR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TPmDATAR_t"><b>MLIn_TPmDATAR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Pipe n Data Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TPmDATAR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATA:32</td>
+<td>0 - 31</td>
+<td>MLIn_TPmDATAR_DATA_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TP0DATAR">MLI0_TP0DATAR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP1DATAR">MLI0_TP1DATAR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP2DATAR">MLI0_TP2DATAR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP3DATAR">MLI0_TP3DATAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP0DATAR">MLI1_TP0DATAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP1DATAR">MLI1_TP1DATAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP2DATAR">MLI1_TP2DATAR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP3DATAR">MLI1_TP3DATAR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TPmSTATR_t"><b>MLIn_TPmSTATR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Pipe n Status Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TPmSTATR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BS:4</td>
+<td>0 - 3</td>
+<td>MLIn_TPmSTATR_BS_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DW:2</td>
+<td>4 - 5</td>
+<td>MLIn_TPmSTATR_DW_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int AP:10</td>
+<td>6 - 15</td>
+<td>MLIn_TPmSTATR_AP_MASK</td>
+<td>0x0000ffc0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int OP:1</td>
+<td>16 - 16</td>
+<td>MLIn_TPmSTATR_OP_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TP0STATR">MLI0_TP0STATR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP1STATR">MLI0_TP1STATR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP2STATR">MLI0_TP2STATR</a>,    
+<a class="url" href="../mli0.html#MLI0_TP3STATR">MLI0_TP3STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP0STATR">MLI1_TP0STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP1STATR">MLI1_TP1STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP2STATR">MLI1_TP2STATR</a>,    
+<a class="url" href="../mli1.html#MLI1_TP3STATR">MLI1_TP3STATR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TRSTATR_t"><b>MLIn_TRSTATR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Registers Status Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TRSTATR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CIV0:1</td>
+<td>0 - 0</td>
+<td>MLIn_TRSTATR_CIV0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CIV1:1</td>
+<td>1 - 1</td>
+<td>MLIn_TRSTATR_CIV1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CIV2:1</td>
+<td>2 - 2</td>
+<td>MLIn_TRSTATR_CIV2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CIV3:1</td>
+<td>3 - 3</td>
+<td>MLIn_TRSTATR_CIV3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CV0:1</td>
+<td>4 - 4</td>
+<td>MLIn_TRSTATR_CV0_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CV1:1</td>
+<td>5 - 5</td>
+<td>MLIn_TRSTATR_CV1_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CV2:1</td>
+<td>6 - 6</td>
+<td>MLIn_TRSTATR_CV2_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int CV3:1</td>
+<td>7 - 7</td>
+<td>MLIn_TRSTATR_CV3_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int AV:1</td>
+<td>8 - 8</td>
+<td>MLIn_TRSTATR_AV_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int BAV:1</td>
+<td>9 - 9</td>
+<td>MLIn_TRSTATR_BAV_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int DV0:1</td>
+<td>16 - 16</td>
+<td>MLIn_TRSTATR_DV0_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DV1:1</td>
+<td>17 - 17</td>
+<td>MLIn_TRSTATR_DV1_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int DV2:1</td>
+<td>18 - 18</td>
+<td>MLIn_TRSTATR_DV2_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int DV3:1</td>
+<td>19 - 19</td>
+<td>MLIn_TRSTATR_DV3_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int RP0:1</td>
+<td>20 - 20</td>
+<td>MLIn_TRSTATR_RP0_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int RP1:1</td>
+<td>21 - 21</td>
+<td>MLIn_TRSTATR_RP1_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int RP2:1</td>
+<td>22 - 22</td>
+<td>MLIn_TRSTATR_RP2_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int RP3:1</td>
+<td>23 - 23</td>
+<td>MLIn_TRSTATR_RP3_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int PN:2</td>
+<td>24 - 25</td>
+<td>MLIn_TRSTATR_PN_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TRSTATR">MLI0_TRSTATR</a>,    
+<a class="url" href="../mli1.html#MLI1_TRSTATR">MLI1_TRSTATR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MLIn_TSTATR_t"><b>MLIn_TSTATR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transmitter Status Register</b></td></tr>
+<tr><td colspan="5"><b>MLIn_TSTATR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RDC:5</td>
+<td>0 - 4</td>
+<td>MLIn_TSTATR_RDC_MASK</td>
+<td>0x0000001f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int APN:2</td>
+<td>5 - 6</td>
+<td>MLIn_TSTATR_APN_MASK</td>
+<td>0x00000060</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int PE:1</td>
+<td>7 - 7</td>
+<td>MLIn_TSTATR_PE_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int NAE:1</td>
+<td>8 - 8</td>
+<td>MLIn_TSTATR_NAE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mli0.html#MLI0_TSTATR">MLI0_TSTATR</a>,    
+<a class="url" href="../mli1.html#MLI1_TSTATR">MLI1_TSTATR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mli0.html">MLI0</a>, 
+<a class="url" href="../mli1.html">MLI1</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MPR_CPMm_t"><b>MPR_CPMm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Code Memory Protection Mode Register n</b></td></tr>
+<tr><td colspan="5"><b>MPR_CPMm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BU0:1</td>
+<td>0 - 0</td>
+<td>MPR_CPMm_BU0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int BL0:1</td>
+<td>3 - 3</td>
+<td>MPR_CPMm_BL0_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int XS0:1</td>
+<td>5 - 5</td>
+<td>MPR_CPMm_XS0_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int XE0:1</td>
+<td>7 - 7</td>
+<td>MPR_CPMm_XE0_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int BU1:1</td>
+<td>8 - 8</td>
+<td>MPR_CPMm_BU1_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int BL1:1</td>
+<td>11 - 11</td>
+<td>MPR_CPMm_BL1_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int XS1:1</td>
+<td>13 - 13</td>
+<td>MPR_CPMm_XS1_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int XE1:1</td>
+<td>15 - 15</td>
+<td>MPR_CPMm_XE1_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#MPR_CPM0">MPR_CPM0</a>,    
+<a class="url" href="../mpr.html#MPR_CPM1">MPR_CPM1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MPR_CPRn_mL_t"><b>MPR_CPRn_mL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Code Segment Protection Register Set n, Range m, Lower</b></td></tr>
+<tr><td colspan="5"><b>MPR_CPRn_mL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LOWBND:32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mL_LOWBND_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#MPR_CPR0_0L">MPR_CPR0_0L</a>,    
+<a class="url" href="../mpr.html#MPR_CPR0_1L">MPR_CPR0_1L</a>,    
+<a class="url" href="../mpr.html#MPR_CPR1_0L">MPR_CPR1_0L</a>,    
+<a class="url" href="../mpr.html#MPR_CPR1_1L">MPR_CPR1_1L</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MPR_CPRn_mU_t"><b>MPR_CPRn_mU_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Code Segment Protection Register Set n, Range m, Upper</b></td></tr>
+<tr><td colspan="5"><b>MPR_CPRn_mU_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int UPPBND:32</td>
+<td>0 - 31</td>
+<td>MPR_CPRn_mU_UPPBND_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#MPR_CPR0_0U">MPR_CPR0_0U</a>,    
+<a class="url" href="../mpr.html#MPR_CPR0_1U">MPR_CPR0_1U</a>,    
+<a class="url" href="../mpr.html#MPR_CPR1_0U">MPR_CPR1_0U</a>,    
+<a class="url" href="../mpr.html#MPR_CPR1_1U">MPR_CPR1_1U</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MPR_DPMm_t"><b>MPR_DPMm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Data Memory Protection Mode Register n</b></td></tr>
+<tr><td colspan="5"><b>MPR_DPMm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RBU0:1</td>
+<td>0 - 0</td>
+<td>MPR_DPMm_RBU0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WBU0:1</td>
+<td>1 - 1</td>
+<td>MPR_DPMm_WBU0_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int RBL0:1</td>
+<td>2 - 2</td>
+<td>MPR_DPMm_RBL0_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int WBL0:1</td>
+<td>3 - 3</td>
+<td>MPR_DPMm_WBL0_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RS0:1</td>
+<td>4 - 4</td>
+<td>MPR_DPMm_RS0_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WS0:1</td>
+<td>5 - 5</td>
+<td>MPR_DPMm_WS0_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int RE0:1</td>
+<td>6 - 6</td>
+<td>MPR_DPMm_RE0_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int WE0:1</td>
+<td>7 - 7</td>
+<td>MPR_DPMm_WE0_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int RBU1:1</td>
+<td>8 - 8</td>
+<td>MPR_DPMm_RBU1_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int WBU1:1</td>
+<td>9 - 9</td>
+<td>MPR_DPMm_WBU1_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int RBL1:1</td>
+<td>10 - 10</td>
+<td>MPR_DPMm_RBL1_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int WBL1:1</td>
+<td>11 - 11</td>
+<td>MPR_DPMm_WBL1_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int RS1:1</td>
+<td>12 - 12</td>
+<td>MPR_DPMm_RS1_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int WS1:1</td>
+<td>13 - 13</td>
+<td>MPR_DPMm_WS1_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int RE1:1</td>
+<td>14 - 14</td>
+<td>MPR_DPMm_RE1_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int WE1:1</td>
+<td>15 - 15</td>
+<td>MPR_DPMm_WE1_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int RBU2:1</td>
+<td>16 - 16</td>
+<td>MPR_DPMm_RBU2_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int WBU2:1</td>
+<td>17 - 17</td>
+<td>MPR_DPMm_WBU2_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int RBL2:1</td>
+<td>18 - 18</td>
+<td>MPR_DPMm_RBL2_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int WBL2:1</td>
+<td>19 - 19</td>
+<td>MPR_DPMm_WBL2_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int RS2:1</td>
+<td>20 - 20</td>
+<td>MPR_DPMm_RS2_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int WS2:1</td>
+<td>21 - 21</td>
+<td>MPR_DPMm_WS2_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int RE2:1</td>
+<td>22 - 22</td>
+<td>MPR_DPMm_RE2_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int WE2:1</td>
+<td>23 - 23</td>
+<td>MPR_DPMm_WE2_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int RBU3:1</td>
+<td>24 - 24</td>
+<td>MPR_DPMm_RBU3_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int WBU3:1</td>
+<td>25 - 25</td>
+<td>MPR_DPMm_WBU3_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int RBL3:1</td>
+<td>26 - 26</td>
+<td>MPR_DPMm_RBL3_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int WBL3:1</td>
+<td>27 - 27</td>
+<td>MPR_DPMm_WBL3_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int RS3:1</td>
+<td>28 - 28</td>
+<td>MPR_DPMm_RS3_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int WS3:1</td>
+<td>29 - 29</td>
+<td>MPR_DPMm_WS3_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int RE3:1</td>
+<td>30 - 30</td>
+<td>MPR_DPMm_RE3_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int WE3:1</td>
+<td>31 - 31</td>
+<td>MPR_DPMm_WE3_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#MPR_DPM0">MPR_DPM0</a>,    
+<a class="url" href="../mpr.html#MPR_DPM1">MPR_DPM1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MPR_DPRn_mL_t"><b>MPR_DPRn_mL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Data Segment Protection Register Set n, Range m, Lower</b></td></tr>
+<tr><td colspan="5"><b>MPR_DPRn_mL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int LOWBND:32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mL_LOWBND_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#MPR_DPR0_0L">MPR_DPR0_0L</a>,    
+<a class="url" href="../mpr.html#MPR_DPR0_1L">MPR_DPR0_1L</a>,    
+<a class="url" href="../mpr.html#MPR_DPR0_2L">MPR_DPR0_2L</a>,    
+<a class="url" href="../mpr.html#MPR_DPR0_3L">MPR_DPR0_3L</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_0L">MPR_DPR1_0L</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_1L">MPR_DPR1_1L</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_2L">MPR_DPR1_2L</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_3L">MPR_DPR1_3L</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MPR_DPRn_mU_t"><b>MPR_DPRn_mU_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Data Segment Protection Register Set n, Range m, Upper</b></td></tr>
+<tr><td colspan="5"><b>MPR_DPRn_mU_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int UPPBND:32</td>
+<td>0 - 31</td>
+<td>MPR_DPRn_mU_UPPBND_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../mpr.html#MPR_DPR0_0U">MPR_DPR0_0U</a>,    
+<a class="url" href="../mpr.html#MPR_DPR0_1U">MPR_DPR0_1U</a>,    
+<a class="url" href="../mpr.html#MPR_DPR0_2U">MPR_DPR0_2U</a>,    
+<a class="url" href="../mpr.html#MPR_DPR0_3U">MPR_DPR0_3U</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_0U">MPR_DPR1_0U</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_1U">MPR_DPR1_1U</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_2U">MPR_DPR1_2U</a>,    
+<a class="url" href="../mpr.html#MPR_DPR1_3U">MPR_DPR1_3U</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../mpr.html">MPR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_CLC_t"><b>MSC0_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MSC Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>MSC0_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>MSC0_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SPEN:1</td>
+<td>2 - 2</td>
+<td>MSC0_CLC_SPEN_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int EDIS:1</td>
+<td>3 - 3</td>
+<td>MSC0_CLC_EDIS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SBWE:1</td>
+<td>4 - 4</td>
+<td>MSC0_CLC_SBWE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FSOE:1</td>
+<td>5 - 5</td>
+<td>MSC0_CLC_FSOE_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_CLC">MSC0_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_DC_t"><b>MSC0_DC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Downstream Command Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_DC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DCL:16</td>
+<td>0 - 15</td>
+<td>MSC0_DC_DCL_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DCH:16</td>
+<td>16 - 31</td>
+<td>MSC0_DC_DCH_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_DC">MSC0_DC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_DD_t"><b>MSC0_DD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Downstream Data Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_DD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DDL:16</td>
+<td>0 - 15</td>
+<td>MSC0_DD_DDL_MASK</td>
+<td>0x0000ffff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DDH:16</td>
+<td>16 - 31</td>
+<td>MSC0_DD_DDH_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_DD">MSC0_DD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_DSC_t"><b>MSC0_DSC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Downstream Control Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_DSC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TM:1</td>
+<td>0 - 0</td>
+<td>MSC0_DSC_TM_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CP:1</td>
+<td>1 - 1</td>
+<td>MSC0_DSC_CP_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int DP:1</td>
+<td>2 - 2</td>
+<td>MSC0_DSC_DP_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int NDBL:5</td>
+<td>3 - 7</td>
+<td>MSC0_DSC_NDBL_MASK</td>
+<td>0x000000f8</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int NDBH:5</td>
+<td>8 - 12</td>
+<td>MSC0_DSC_NDBH_MASK</td>
+<td>0x00001f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int ENSELL:1</td>
+<td>13 - 13</td>
+<td>MSC0_DSC_ENSELL_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int ENSELH:1</td>
+<td>14 - 14</td>
+<td>MSC0_DSC_ENSELH_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int DSDIS:1</td>
+<td>15 - 15</td>
+<td>MSC0_DSC_DSDIS_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int NBC:6</td>
+<td>16 - 21</td>
+<td>MSC0_DSC_NBC_MASK</td>
+<td>0x003f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PPD:5</td>
+<td>24 - 28</td>
+<td>MSC0_DSC_PPD_MASK</td>
+<td>0x1f000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_DSC">MSC0_DSC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_DSDSH_t"><b>MSC0_DSDSH_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Downstream Select Data Source Register High</b></td></tr>
+<tr><td colspan="5"><b>MSC0_DSDSH_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SH0:2</td>
+<td>0 - 1</td>
+<td>MSC0_DSDSH_SH0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SH1:2</td>
+<td>2 - 3</td>
+<td>MSC0_DSDSH_SH1_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SH2:2</td>
+<td>4 - 5</td>
+<td>MSC0_DSDSH_SH2_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SH3:2</td>
+<td>6 - 7</td>
+<td>MSC0_DSDSH_SH3_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SH4:2</td>
+<td>8 - 9</td>
+<td>MSC0_DSDSH_SH4_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SH5:2</td>
+<td>10 - 11</td>
+<td>MSC0_DSDSH_SH5_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SH6:2</td>
+<td>12 - 13</td>
+<td>MSC0_DSDSH_SH6_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SH7:2</td>
+<td>14 - 15</td>
+<td>MSC0_DSDSH_SH7_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SH8:2</td>
+<td>16 - 17</td>
+<td>MSC0_DSDSH_SH8_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SH9:2</td>
+<td>18 - 19</td>
+<td>MSC0_DSDSH_SH9_MASK</td>
+<td>0x000c0000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int SH10:2</td>
+<td>20 - 21</td>
+<td>MSC0_DSDSH_SH10_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int SH11:2</td>
+<td>22 - 23</td>
+<td>MSC0_DSDSH_SH11_MASK</td>
+<td>0x00c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int SH12:2</td>
+<td>24 - 25</td>
+<td>MSC0_DSDSH_SH12_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int SH13:2</td>
+<td>26 - 27</td>
+<td>MSC0_DSDSH_SH13_MASK</td>
+<td>0x0c000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int SH14:2</td>
+<td>28 - 29</td>
+<td>MSC0_DSDSH_SH14_MASK</td>
+<td>0x30000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SH15:2</td>
+<td>30 - 31</td>
+<td>MSC0_DSDSH_SH15_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_DSDSH">MSC0_DSDSH</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_DSDSL_t"><b>MSC0_DSDSL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Downstream Select Data Source Register Low</b></td></tr>
+<tr><td colspan="5"><b>MSC0_DSDSL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SL0:2</td>
+<td>0 - 1</td>
+<td>MSC0_DSDSL_SL0_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SL1:2</td>
+<td>2 - 3</td>
+<td>MSC0_DSDSL_SL1_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SL2:2</td>
+<td>4 - 5</td>
+<td>MSC0_DSDSL_SL2_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SL3:2</td>
+<td>6 - 7</td>
+<td>MSC0_DSDSL_SL3_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SL4:2</td>
+<td>8 - 9</td>
+<td>MSC0_DSDSL_SL4_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int SL5:2</td>
+<td>10 - 11</td>
+<td>MSC0_DSDSL_SL5_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SL6:2</td>
+<td>12 - 13</td>
+<td>MSC0_DSDSL_SL6_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SL7:2</td>
+<td>14 - 15</td>
+<td>MSC0_DSDSL_SL7_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SL8:2</td>
+<td>16 - 17</td>
+<td>MSC0_DSDSL_SL8_MASK</td>
+<td>0x00030000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SL9:2</td>
+<td>18 - 19</td>
+<td>MSC0_DSDSL_SL9_MASK</td>
+<td>0x000c0000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int SL10:2</td>
+<td>20 - 21</td>
+<td>MSC0_DSDSL_SL10_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int SL11:2</td>
+<td>22 - 23</td>
+<td>MSC0_DSDSL_SL11_MASK</td>
+<td>0x00c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int SL12:2</td>
+<td>24 - 25</td>
+<td>MSC0_DSDSL_SL12_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int SL13:2</td>
+<td>26 - 27</td>
+<td>MSC0_DSDSL_SL13_MASK</td>
+<td>0x0c000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int SL14:2</td>
+<td>28 - 29</td>
+<td>MSC0_DSDSL_SL14_MASK</td>
+<td>0x30000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SL15:2</td>
+<td>30 - 31</td>
+<td>MSC0_DSDSL_SL15_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_DSDSL">MSC0_DSDSL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_DSS_t"><b>MSC0_DSS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Downstream Status Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_DSS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PFC:4</td>
+<td>0 - 3</td>
+<td>MSC0_DSS_PFC_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int NPTF:4</td>
+<td>8 - 11</td>
+<td>MSC0_DSS_NPTF_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int DC:7</td>
+<td>16 - 22</td>
+<td>MSC0_DSS_DC_MASK</td>
+<td>0x007f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DFA:1</td>
+<td>24 - 24</td>
+<td>MSC0_DSS_DFA_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int CFA:1</td>
+<td>25 - 25</td>
+<td>MSC0_DSS_CFA_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_DSS">MSC0_DSS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_ESR_t"><b>MSC0_ESR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MSC Emergency Stop Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_ESR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ENL0:1</td>
+<td>0 - 0</td>
+<td>MSC0_ESR_ENL0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ENL1:1</td>
+<td>1 - 1</td>
+<td>MSC0_ESR_ENL1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ENL2:1</td>
+<td>2 - 2</td>
+<td>MSC0_ESR_ENL2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ENL3:1</td>
+<td>3 - 3</td>
+<td>MSC0_ESR_ENL3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int ENL4:1</td>
+<td>4 - 4</td>
+<td>MSC0_ESR_ENL4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ENL5:1</td>
+<td>5 - 5</td>
+<td>MSC0_ESR_ENL5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ENL6:1</td>
+<td>6 - 6</td>
+<td>MSC0_ESR_ENL6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int ENL7:1</td>
+<td>7 - 7</td>
+<td>MSC0_ESR_ENL7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int ENL8:1</td>
+<td>8 - 8</td>
+<td>MSC0_ESR_ENL8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int ENL9:1</td>
+<td>9 - 9</td>
+<td>MSC0_ESR_ENL9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int ENL10:1</td>
+<td>10 - 10</td>
+<td>MSC0_ESR_ENL10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int ENL11:1</td>
+<td>11 - 11</td>
+<td>MSC0_ESR_ENL11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int ENL12:1</td>
+<td>12 - 12</td>
+<td>MSC0_ESR_ENL12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int ENL13:1</td>
+<td>13 - 13</td>
+<td>MSC0_ESR_ENL13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int ENL14:1</td>
+<td>14 - 14</td>
+<td>MSC0_ESR_ENL14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int ENL15:1</td>
+<td>15 - 15</td>
+<td>MSC0_ESR_ENL15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int ENH0:1</td>
+<td>16 - 16</td>
+<td>MSC0_ESR_ENH0_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int ENH1:1</td>
+<td>17 - 17</td>
+<td>MSC0_ESR_ENH1_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int ENH2:1</td>
+<td>18 - 18</td>
+<td>MSC0_ESR_ENH2_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ENH3:1</td>
+<td>19 - 19</td>
+<td>MSC0_ESR_ENH3_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int ENH4:1</td>
+<td>20 - 20</td>
+<td>MSC0_ESR_ENH4_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int ENH5:1</td>
+<td>21 - 21</td>
+<td>MSC0_ESR_ENH5_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int ENH6:1</td>
+<td>22 - 22</td>
+<td>MSC0_ESR_ENH6_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int ENH7:1</td>
+<td>23 - 23</td>
+<td>MSC0_ESR_ENH7_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int ENH8:1</td>
+<td>24 - 24</td>
+<td>MSC0_ESR_ENH8_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int ENH9:1</td>
+<td>25 - 25</td>
+<td>MSC0_ESR_ENH9_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int ENH10:1</td>
+<td>26 - 26</td>
+<td>MSC0_ESR_ENH10_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int ENH11:1</td>
+<td>27 - 27</td>
+<td>MSC0_ESR_ENH11_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int ENH12:1</td>
+<td>28 - 28</td>
+<td>MSC0_ESR_ENH12_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int ENH13:1</td>
+<td>29 - 29</td>
+<td>MSC0_ESR_ENH13_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENH14:1</td>
+<td>30 - 30</td>
+<td>MSC0_ESR_ENH14_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int ENH15:1</td>
+<td>31 - 31</td>
+<td>MSC0_ESR_ENH15_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_ESR">MSC0_ESR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_FDR_t"><b>MSC0_FDR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MSC Fractional Divider Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_FDR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int STEP:10</td>
+<td>0 - 9</td>
+<td>MSC0_FDR_STEP_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SM:1</td>
+<td>11 - 11</td>
+<td>MSC0_FDR_SM_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int SC:2</td>
+<td>12 - 13</td>
+<td>MSC0_FDR_SC_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DM:2</td>
+<td>14 - 15</td>
+<td>MSC0_FDR_DM_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int RESULT:10</td>
+<td>16 - 25</td>
+<td>MSC0_FDR_RESULT_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SUSACK:1</td>
+<td>28 - 28</td>
+<td>MSC0_FDR_SUSACK_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int SUSREQ:1</td>
+<td>29 - 29</td>
+<td>MSC0_FDR_SUSREQ_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int ENHW:1</td>
+<td>30 - 30</td>
+<td>MSC0_FDR_ENHW_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int DISCLK:1</td>
+<td>31 - 31</td>
+<td>MSC0_FDR_DISCLK_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_FDR">MSC0_FDR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_ICR_t"><b>MSC0_ICR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MSC Interrupt Control Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_ICR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int EDIP:2</td>
+<td>0 - 1</td>
+<td>MSC0_ICR_EDIP_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int EDIE:2</td>
+<td>2 - 3</td>
+<td>MSC0_ICR_EDIE_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ECIP:2</td>
+<td>4 - 5</td>
+<td>MSC0_ICR_ECIP_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ECIE:1</td>
+<td>7 - 7</td>
+<td>MSC0_ICR_ECIE_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int TFIP:2</td>
+<td>8 - 9</td>
+<td>MSC0_ICR_TFIP_MASK</td>
+<td>0x00000300</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int TFIE:1</td>
+<td>11 - 11</td>
+<td>MSC0_ICR_TFIE_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int RDIP:2</td>
+<td>12 - 13</td>
+<td>MSC0_ICR_RDIP_MASK</td>
+<td>0x00003000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int RDIE:2</td>
+<td>14 - 15</td>
+<td>MSC0_ICR_RDIE_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_ICR">MSC0_ICR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_ID_t"><b>MSC0_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MSC Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>MSC0_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>MSC0_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>MSC0_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_ID">MSC0_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_ISC_t"><b>MSC0_ISC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Interrupt Set Clear Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_ISC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CDEDI:1</td>
+<td>0 - 0</td>
+<td>MSC0_ISC_CDEDI_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int CDECI:1</td>
+<td>1 - 1</td>
+<td>MSC0_ISC_CDECI_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CDTFI:1</td>
+<td>2 - 2</td>
+<td>MSC0_ISC_CDTFI_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int CURDI:1</td>
+<td>3 - 3</td>
+<td>MSC0_ISC_CURDI_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CDP:1</td>
+<td>4 - 4</td>
+<td>MSC0_ISC_CDP_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int CCP:1</td>
+<td>5 - 5</td>
+<td>MSC0_ISC_CCP_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int CDDIS:1</td>
+<td>6 - 6</td>
+<td>MSC0_ISC_CDDIS_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SDEDI:1</td>
+<td>16 - 16</td>
+<td>MSC0_ISC_SDEDI_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int SDECI:1</td>
+<td>17 - 17</td>
+<td>MSC0_ISC_SDECI_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int SDTFI:1</td>
+<td>18 - 18</td>
+<td>MSC0_ISC_SDTFI_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int SURDI:1</td>
+<td>19 - 19</td>
+<td>MSC0_ISC_SURDI_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SDP:1</td>
+<td>20 - 20</td>
+<td>MSC0_ISC_SDP_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int SCP:1</td>
+<td>21 - 21</td>
+<td>MSC0_ISC_SCP_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int SDDIS:1</td>
+<td>22 - 22</td>
+<td>MSC0_ISC_SDDIS_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_ISC">MSC0_ISC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_ISR_t"><b>MSC0_ISR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MSC Interrupt Status Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_ISR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DEDI:1</td>
+<td>0 - 0</td>
+<td>MSC0_ISR_DEDI_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DECI:1</td>
+<td>1 - 1</td>
+<td>MSC0_ISR_DECI_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int DTFI:1</td>
+<td>2 - 2</td>
+<td>MSC0_ISR_DTFI_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int URDI:1</td>
+<td>3 - 3</td>
+<td>MSC0_ISR_URDI_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_ISR">MSC0_ISR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_OCR_t"><b>MSC0_OCR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Output Control Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_OCR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int CLP:1</td>
+<td>0 - 0</td>
+<td>MSC0_OCR_CLP_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SLP:1</td>
+<td>1 - 1</td>
+<td>MSC0_OCR_SLP_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int CSLP:1</td>
+<td>2 - 2</td>
+<td>MSC0_OCR_CSLP_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ILP:1</td>
+<td>3 - 3</td>
+<td>MSC0_OCR_ILP_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int CLKCTRL:1</td>
+<td>8 - 8</td>
+<td>MSC0_OCR_CLKCTRL_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int CSL:2</td>
+<td>9 - 10</td>
+<td>MSC0_OCR_CSL_MASK</td>
+<td>0x00000600</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CSH:2</td>
+<td>11 - 12</td>
+<td>MSC0_OCR_CSH_MASK</td>
+<td>0x00001800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int CSC:2</td>
+<td>13 - 14</td>
+<td>MSC0_OCR_CSC_MASK</td>
+<td>0x00006000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int SDISEL:3</td>
+<td>16 - 18</td>
+<td>MSC0_OCR_SDISEL_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_OCR">MSC0_OCR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_SRCm_t"><b>MSC0_SRCm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>MSC Service Request Control Register n</b></td></tr>
+<tr><td colspan="5"><b>MSC0_SRCm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>MSC0_SRCm_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>MSC0_SRCm_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>MSC0_SRCm_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>MSC0_SRCm_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>MSC0_SRCm_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>MSC0_SRCm_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_SRC0">MSC0_SRC0</a>,    
+<a class="url" href="../msc0.html#MSC0_SRC1">MSC0_SRC1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_UDm_t"><b>MSC0_UDm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Upstream Data Register n</b></td></tr>
+<tr><td colspan="5"><b>MSC0_UDm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DATA:8</td>
+<td>0 - 7</td>
+<td>MSC0_UDm_DATA_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int V:1</td>
+<td>16 - 16</td>
+<td>MSC0_UDm_V_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int P:1</td>
+<td>17 - 17</td>
+<td>MSC0_UDm_P_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int C:1</td>
+<td>18 - 18</td>
+<td>MSC0_UDm_C_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int LABF:2</td>
+<td>19 - 20</td>
+<td>MSC0_UDm_LABF_MASK</td>
+<td>0x00180000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int IPF:1</td>
+<td>21 - 21</td>
+<td>MSC0_UDm_IPF_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int PERR:1</td>
+<td>22 - 22</td>
+<td>MSC0_UDm_PERR_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_UD0">MSC0_UD0</a>,    
+<a class="url" href="../msc0.html#MSC0_UD1">MSC0_UD1</a>,    
+<a class="url" href="../msc0.html#MSC0_UD2">MSC0_UD2</a>,    
+<a class="url" href="../msc0.html#MSC0_UD3">MSC0_UD3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="MSC0_USR_t"><b>MSC0_USR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Upstream Status Register</b></td></tr>
+<tr><td colspan="5"><b>MSC0_USR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int UFT:1</td>
+<td>0 - 0</td>
+<td>MSC0_USR_UFT_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int URR:3</td>
+<td>1 - 3</td>
+<td>MSC0_USR_URR_MASK</td>
+<td>0x0000000e</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int PCTR:1</td>
+<td>4 - 4</td>
+<td>MSC0_USR_PCTR_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int UC:5</td>
+<td>16 - 20</td>
+<td>MSC0_USR_UC_MASK</td>
+<td>0x001f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../msc0.html#MSC0_USR">MSC0_USR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../msc0.html">MSC0</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

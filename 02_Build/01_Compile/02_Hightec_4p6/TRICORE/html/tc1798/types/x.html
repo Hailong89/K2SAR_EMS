@@ -1,0 +1,2207 @@
+<html>
+<head>
+<title>TriCore TC1798 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="XBAR_ARBCOND_t"><b>XBAR_ARBCOND_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Control Register D</b></td></tr>
+<tr><td colspan="5"><b>XBAR_ARBCOND_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PRERREN:1</td>
+<td>0 - 0</td>
+<td>XBAR_ARBCOND_PRERREN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SCERREN:1</td>
+<td>1 - 1</td>
+<td>XBAR_ARBCOND_SCERREN_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SETPRINT:1</td>
+<td>2 - 2</td>
+<td>XBAR_ARBCOND_SETPRINT_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SETSCINT:1</td>
+<td>3 - 3</td>
+<td>XBAR_ARBCOND_SETSCINT_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int INTACK:1</td>
+<td>4 - 4</td>
+<td>XBAR_ARBCOND_INTACK_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SMEN:1</td>
+<td>19 - 19</td>
+<td>XBAR_ARBCOND_SMEN_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SPC:12</td>
+<td>20 - 31</td>
+<td>XBAR_ARBCOND_SPC_MASK</td>
+<td>0xfff00000</td>
+<td align="right">20</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_ARBCOND">XBAR_ARBCOND</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_ARBCONm_t"><b>XBAR_ARBCONm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Control Register n</b></td></tr>
+<tr><td colspan="5"><b>XBAR_ARBCONm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int PRERREN:1</td>
+<td>0 - 0</td>
+<td>XBAR_ARBCONm_PRERREN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SCERREN:1</td>
+<td>1 - 1</td>
+<td>XBAR_ARBCONm_SCERREN_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SETPRINT:1</td>
+<td>2 - 2</td>
+<td>XBAR_ARBCONm_SETPRINT_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SETSCINT:1</td>
+<td>3 - 3</td>
+<td>XBAR_ARBCONm_SETSCINT_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int INTACK:1</td>
+<td>4 - 4</td>
+<td>XBAR_ARBCONm_INTACK_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SMEN:1</td>
+<td>19 - 19</td>
+<td>XBAR_ARBCONm_SMEN_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int SPC:12</td>
+<td>20 - 31</td>
+<td>XBAR_ARBCONm_SPC_MASK</td>
+<td>0xfff00000</td>
+<td align="right">20</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_ARBCON0">XBAR_ARBCON0</a>,    
+<a class="url" href="../xbar.html#XBAR_ARBCON1">XBAR_ARBCON1</a>,    
+<a class="url" href="../xbar.html#XBAR_ARBCON2">XBAR_ARBCON2</a>,    
+<a class="url" href="../xbar.html#XBAR_ARBCON3">XBAR_ARBCON3</a>,    
+<a class="url" href="../xbar.html#XBAR_ARBCON4">XBAR_ARBCON4</a>,    
+<a class="url" href="../xbar.html#XBAR_ARBCON5">XBAR_ARBCON5</a>,    
+<a class="url" href="../xbar.html#XBAR_ARBCON6">XBAR_ARBCON6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBADD0_t"><b>XBAR_DBADD0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 0</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBADD0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:28</td>
+<td>2 - 29</td>
+<td>XBAR_DBADD0_ADDRESS_MASK</td>
+<td>0x3ffffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:2</td>
+<td>30 - 31</td>
+<td>XBAR_DBADD0_ONE_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBADD0">XBAR_DBADD0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBADD1_t"><b>XBAR_DBADD1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 1</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBADD1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:20</td>
+<td>2 - 21</td>
+<td>XBAR_DBADD1_ADDRESS_MASK</td>
+<td>0x003ffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:2</td>
+<td>30 - 31</td>
+<td>XBAR_DBADD1_ONE_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBADD1">XBAR_DBADD1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBADD2_t"><b>XBAR_DBADD2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 2</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBADD2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:20</td>
+<td>2 - 21</td>
+<td>XBAR_DBADD2_ADDRESS_MASK</td>
+<td>0x003ffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:4</td>
+<td>28 - 31</td>
+<td>XBAR_DBADD2_ONE_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBADD2">XBAR_DBADD2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBADD5_t"><b>XBAR_DBADD5_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 5</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBADD5_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:28</td>
+<td>2 - 29</td>
+<td>XBAR_DBADD5_ADDRESS_MASK</td>
+<td>0x3ffffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:1</td>
+<td>31 - 31</td>
+<td>XBAR_DBADD5_ONE_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBADD5">XBAR_DBADD5</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBADDD_t"><b>XBAR_DBADDD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Address Register D</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBADDD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int UPPER:30</td>
+<td>2 - 31</td>
+<td>XBAR_DBADDD_UPPER_MASK</td>
+<td>0xfffffffc</td>
+<td align="right">2</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBADDD">XBAR_DBADDD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBADDm_t"><b>XBAR_DBADDm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register n</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBADDm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:29</td>
+<td>2 - 30</td>
+<td>XBAR_DBADDm_ADDRESS_MASK</td>
+<td>0x7ffffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:1</td>
+<td>31 - 31</td>
+<td>XBAR_DBADDm_ONE_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBADD3">XBAR_DBADD3</a>,    
+<a class="url" href="../xbar.html#XBAR_DBADD4">XBAR_DBADD4</a>,    
+<a class="url" href="../xbar.html#XBAR_DBADD6">XBAR_DBADD6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBCOND_t"><b>XBAR_DBCOND_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Control Register D</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBCOND_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DBEN:1</td>
+<td>0 - 0</td>
+<td>XBAR_DBCOND_DBEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DBSAT:1</td>
+<td>1 - 1</td>
+<td>XBAR_DBCOND_DBSAT_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int REARM:1</td>
+<td>2 - 2</td>
+<td>XBAR_DBCOND_REARM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SETDBEVT:1</td>
+<td>3 - 3</td>
+<td>XBAR_DBCOND_SETDBEVT_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RDEN:1</td>
+<td>16 - 16</td>
+<td>XBAR_DBCOND_RDEN_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int WREN:1</td>
+<td>17 - 17</td>
+<td>XBAR_DBCOND_WREN_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int SVMEN:1</td>
+<td>18 - 18</td>
+<td>XBAR_DBCOND_SVMEN_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ADDEN:1</td>
+<td>19 - 19</td>
+<td>XBAR_DBCOND_ADDEN_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int ERREN:1</td>
+<td>20 - 20</td>
+<td>XBAR_DBCOND_ERREN_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int MASEN:1</td>
+<td>23 - 23</td>
+<td>XBAR_DBCOND_MASEN_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int MASTER:4</td>
+<td>24 - 27</td>
+<td>XBAR_DBCOND_MASTER_MASK</td>
+<td>0x0f000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBCOND">XBAR_DBCOND</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBCONm_t"><b>XBAR_DBCONm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Control Register n</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBCONm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DBEN:1</td>
+<td>0 - 0</td>
+<td>XBAR_DBCONm_DBEN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DBSAT:1</td>
+<td>1 - 1</td>
+<td>XBAR_DBCONm_DBSAT_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int REARM:1</td>
+<td>2 - 2</td>
+<td>XBAR_DBCONm_REARM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SETDBEVT:1</td>
+<td>3 - 3</td>
+<td>XBAR_DBCONm_SETDBEVT_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int RDEN:1</td>
+<td>16 - 16</td>
+<td>XBAR_DBCONm_RDEN_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int WREN:1</td>
+<td>17 - 17</td>
+<td>XBAR_DBCONm_WREN_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int SVMEN:1</td>
+<td>18 - 18</td>
+<td>XBAR_DBCONm_SVMEN_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ADDEN:1</td>
+<td>19 - 19</td>
+<td>XBAR_DBCONm_ADDEN_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int ERREN:1</td>
+<td>20 - 20</td>
+<td>XBAR_DBCONm_ERREN_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int MASEN:1</td>
+<td>23 - 23</td>
+<td>XBAR_DBCONm_MASEN_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int MASTER:4</td>
+<td>24 - 27</td>
+<td>XBAR_DBCONm_MASTER_MASK</td>
+<td>0x0f000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBCON0">XBAR_DBCON0</a>,    
+<a class="url" href="../xbar.html#XBAR_DBCON1">XBAR_DBCON1</a>,    
+<a class="url" href="../xbar.html#XBAR_DBCON2">XBAR_DBCON2</a>,    
+<a class="url" href="../xbar.html#XBAR_DBCON3">XBAR_DBCON3</a>,    
+<a class="url" href="../xbar.html#XBAR_DBCON4">XBAR_DBCON4</a>,    
+<a class="url" href="../xbar.html#XBAR_DBCON5">XBAR_DBCON5</a>,    
+<a class="url" href="../xbar.html#XBAR_DBCON6">XBAR_DBCON6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBMADD0_t"><b>XBAR_DBMADD0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 0</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBMADD0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:28</td>
+<td>2 - 29</td>
+<td>XBAR_DBMADD0_ADDRESS_MASK</td>
+<td>0x3ffffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:2</td>
+<td>30 - 31</td>
+<td>XBAR_DBMADD0_ONE_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBMADD0">XBAR_DBMADD0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBMADD1_t"><b>XBAR_DBMADD1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 1</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBMADD1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:20</td>
+<td>2 - 21</td>
+<td>XBAR_DBMADD1_ADDRESS_MASK</td>
+<td>0x003ffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:4</td>
+<td>28 - 31</td>
+<td>XBAR_DBMADD1_ONE_MASK</td>
+<td>0xf0000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBMADD1">XBAR_DBMADD1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBMADD2_t"><b>XBAR_DBMADD2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 2</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBMADD2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:20</td>
+<td>2 - 21</td>
+<td>XBAR_DBMADD2_ADDRESS_MASK</td>
+<td>0x003ffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:10</td>
+<td>22 - 31</td>
+<td>XBAR_DBMADD2_ONE_MASK</td>
+<td>0xffc00000</td>
+<td align="right">22</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBMADD2">XBAR_DBMADD2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBMADD5_t"><b>XBAR_DBMADD5_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register 5</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBMADD5_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:28</td>
+<td>2 - 29</td>
+<td>XBAR_DBMADD5_ADDRESS_MASK</td>
+<td>0x3ffffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:2</td>
+<td>30 - 31</td>
+<td>XBAR_DBMADD5_ONE_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBMADD5">XBAR_DBMADD5</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBMADDD_t"><b>XBAR_DBMADDD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register D</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBMADDD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:30</td>
+<td>2 - 31</td>
+<td>XBAR_DBMADDD_ADDRESS_MASK</td>
+<td>0xfffffffc</td>
+<td align="right">2</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBMADDD">XBAR_DBMADDD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBMADDm_t"><b>XBAR_DBMADDm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Mask Address Register n</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBMADDm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDRESS:29</td>
+<td>2 - 30</td>
+<td>XBAR_DBMADDm_ADDRESS_MASK</td>
+<td>0x7ffffffc</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ONE:1</td>
+<td>31 - 31</td>
+<td>XBAR_DBMADDm_ONE_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBMADD3">XBAR_DBMADD3</a>,    
+<a class="url" href="../xbar.html#XBAR_DBMADD4">XBAR_DBMADD4</a>,    
+<a class="url" href="../xbar.html#XBAR_DBMADD6">XBAR_DBMADD6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_DBSAT_t"><b>XBAR_DBSAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Debug Trigger Event Status Register</b></td></tr>
+<tr><td colspan="5"><b>XBAR_DBSAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SCI0:1</td>
+<td>0 - 0</td>
+<td>XBAR_DBSAT_SCI0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SCI1:1</td>
+<td>1 - 1</td>
+<td>XBAR_DBSAT_SCI1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SCI2:1</td>
+<td>2 - 2</td>
+<td>XBAR_DBSAT_SCI2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SCI3:1</td>
+<td>3 - 3</td>
+<td>XBAR_DBSAT_SCI3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SCI4:1</td>
+<td>4 - 4</td>
+<td>XBAR_DBSAT_SCI4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SCI5:1</td>
+<td>5 - 5</td>
+<td>XBAR_DBSAT_SCI5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SCI6:1</td>
+<td>6 - 6</td>
+<td>XBAR_DBSAT_SCI6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SCID:1</td>
+<td>15 - 15</td>
+<td>XBAR_DBSAT_SCID_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_DBSAT">XBAR_DBSAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_ERRADDRD_t"><b>XBAR_ERRADDRD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Error/Debug Address Capture Register D</b></td></tr>
+<tr><td colspan="5"><b>XBAR_ERRADDRD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDR:32</td>
+<td>0 - 31</td>
+<td>XBAR_ERRADDRD_ADDR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_ERRADDRD">XBAR_ERRADDRD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_ERRADDRm_t"><b>XBAR_ERRADDRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Error/Debug Address Capture Register n</b></td></tr>
+<tr><td colspan="5"><b>XBAR_ERRADDRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ADDR:32</td>
+<td>0 - 31</td>
+<td>XBAR_ERRADDRm_ADDR_MASK</td>
+<td>0xffffffff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_ERRADDR0">XBAR_ERRADDR0</a>,    
+<a class="url" href="../xbar.html#XBAR_ERRADDR1">XBAR_ERRADDR1</a>,    
+<a class="url" href="../xbar.html#XBAR_ERRADDR2">XBAR_ERRADDR2</a>,    
+<a class="url" href="../xbar.html#XBAR_ERRADDR3">XBAR_ERRADDR3</a>,    
+<a class="url" href="../xbar.html#XBAR_ERRADDR4">XBAR_ERRADDR4</a>,    
+<a class="url" href="../xbar.html#XBAR_ERRADDR5">XBAR_ERRADDR5</a>,    
+<a class="url" href="../xbar.html#XBAR_ERRADDR6">XBAR_ERRADDR6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_ERRD_t"><b>XBAR_ERRD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Error/Debug Capture Register D</b></td></tr>
+<tr><td colspan="5"><b>XBAR_ERRD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RD:1</td>
+<td>0 - 0</td>
+<td>XBAR_ERRD_RD_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WR:1</td>
+<td>1 - 1</td>
+<td>XBAR_ERRD_WR_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>2 - 2</td>
+<td>XBAR_ERRD_SVM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>4 - 7</td>
+<td>XBAR_ERRD_OPC_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TR_ID:6</td>
+<td>8 - 13</td>
+<td>XBAR_ERRD_TR_ID_MASK</td>
+<td>0x00003f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int ADDR_ECC:8</td>
+<td>16 - 23</td>
+<td>XBAR_ERRD_ADDR_ECC_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MCI_SBS:8</td>
+<td>24 - 31</td>
+<td>XBAR_ERRD_MCI_SBS_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_ERRD">XBAR_ERRD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_ERRm_t"><b>XBAR_ERRm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Error/Debug Capture Register n</b></td></tr>
+<tr><td colspan="5"><b>XBAR_ERRm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RD:1</td>
+<td>0 - 0</td>
+<td>XBAR_ERRm_RD_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WR:1</td>
+<td>1 - 1</td>
+<td>XBAR_ERRm_WR_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SVM:1</td>
+<td>2 - 2</td>
+<td>XBAR_ERRm_SVM_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int OPC:4</td>
+<td>4 - 7</td>
+<td>XBAR_ERRm_OPC_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int TR_ID:6</td>
+<td>8 - 13</td>
+<td>XBAR_ERRm_TR_ID_MASK</td>
+<td>0x00003f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int ADDR_ECC:8</td>
+<td>16 - 23</td>
+<td>XBAR_ERRm_ADDR_ECC_MASK</td>
+<td>0x00ff0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MCI_SBS:8</td>
+<td>24 - 31</td>
+<td>XBAR_ERRm_MCI_SBS_MASK</td>
+<td>0xff000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_ERR0">XBAR_ERR0</a>,    
+<a class="url" href="../xbar.html#XBAR_ERR1">XBAR_ERR1</a>,    
+<a class="url" href="../xbar.html#XBAR_ERR2">XBAR_ERR2</a>,    
+<a class="url" href="../xbar.html#XBAR_ERR3">XBAR_ERR3</a>,    
+<a class="url" href="../xbar.html#XBAR_ERR4">XBAR_ERR4</a>,    
+<a class="url" href="../xbar.html#XBAR_ERR5">XBAR_ERR5</a>,    
+<a class="url" href="../xbar.html#XBAR_ERR6">XBAR_ERR6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_EXTCON2_t"><b>XBAR_EXTCON2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>External Control Register 2</b></td></tr>
+<tr><td colspan="5"><b>XBAR_EXTCON2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int WFWD:1</td>
+<td>3 - 3</td>
+<td>XBAR_EXTCON2_WFWD_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int FREQDISS:1</td>
+<td>4 - 4</td>
+<td>XBAR_EXTCON2_FREQDISS_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FFREQS:1</td>
+<td>5 - 5</td>
+<td>XBAR_EXTCON2_FFREQS_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int FREQDISF:1</td>
+<td>6 - 6</td>
+<td>XBAR_EXTCON2_FREQDISF_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int NODELTR:1</td>
+<td>9 - 9</td>
+<td>XBAR_EXTCON2_NODELTR_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int NORMW:1</td>
+<td>10 - 10</td>
+<td>XBAR_EXTCON2_NORMW_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int MAX_WS:7</td>
+<td>13 - 19</td>
+<td>XBAR_EXTCON2_MAX_WS_MASK</td>
+<td>0x000fe000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int RETRY_CNT:4</td>
+<td>20 - 23</td>
+<td>XBAR_EXTCON2_RETRY_CNT_MASK</td>
+<td>0x00f00000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int NOPDIS:1</td>
+<td>24 - 24</td>
+<td>XBAR_EXTCON2_NOPDIS_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_EXTCON2">XBAR_EXTCON2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_ID_t"><b>XBAR_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>XBAR_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>XBAR_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>XBAR_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>XBAR_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_ID">XBAR_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_IDINTEN_t"><b>XBAR_IDINTEN_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transaction ID Interrupt Enable Register</b></td></tr>
+<tr><td colspan="5"><b>XBAR_IDINTEN_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ENSCI0:1</td>
+<td>0 - 0</td>
+<td>XBAR_IDINTEN_ENSCI0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ENSCI1:1</td>
+<td>1 - 1</td>
+<td>XBAR_IDINTEN_ENSCI1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int ENSCI2:1</td>
+<td>2 - 2</td>
+<td>XBAR_IDINTEN_ENSCI2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int ENSCI3:1</td>
+<td>3 - 3</td>
+<td>XBAR_IDINTEN_ENSCI3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int ENSCI4:1</td>
+<td>4 - 4</td>
+<td>XBAR_IDINTEN_ENSCI4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ENSCI5:1</td>
+<td>5 - 5</td>
+<td>XBAR_IDINTEN_ENSCI5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ENSCI6:1</td>
+<td>6 - 6</td>
+<td>XBAR_IDINTEN_ENSCI6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int ENSCID:1</td>
+<td>15 - 15</td>
+<td>XBAR_IDINTEN_ENSCID_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int ENMCI16:1</td>
+<td>16 - 16</td>
+<td>XBAR_IDINTEN_ENMCI16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int ENMCI17:1</td>
+<td>17 - 17</td>
+<td>XBAR_IDINTEN_ENMCI17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int ENMCI18:1</td>
+<td>18 - 18</td>
+<td>XBAR_IDINTEN_ENMCI18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int ENMCI19:1</td>
+<td>19 - 19</td>
+<td>XBAR_IDINTEN_ENMCI19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int ENMCI20:1</td>
+<td>20 - 20</td>
+<td>XBAR_IDINTEN_ENMCI20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int ENMCI21:1</td>
+<td>21 - 21</td>
+<td>XBAR_IDINTEN_ENMCI21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_IDINTEN">XBAR_IDINTEN</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_IDINTSAT_t"><b>XBAR_IDINTSAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transaction ID Interrupt Status Register</b></td></tr>
+<tr><td colspan="5"><b>XBAR_IDINTSAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int IDSCI0:1</td>
+<td>0 - 0</td>
+<td>XBAR_IDINTSAT_IDSCI0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int IDSCI1:1</td>
+<td>1 - 1</td>
+<td>XBAR_IDINTSAT_IDSCI1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int IDSCI2:1</td>
+<td>2 - 2</td>
+<td>XBAR_IDINTSAT_IDSCI2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int IDSCI3:1</td>
+<td>3 - 3</td>
+<td>XBAR_IDINTSAT_IDSCI3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int IDSCI4:1</td>
+<td>4 - 4</td>
+<td>XBAR_IDINTSAT_IDSCI4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int IDSCI5:1</td>
+<td>5 - 5</td>
+<td>XBAR_IDINTSAT_IDSCI5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int IDSCI6:1</td>
+<td>6 - 6</td>
+<td>XBAR_IDINTSAT_IDSCI6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int IDSCID:1</td>
+<td>15 - 15</td>
+<td>XBAR_IDINTSAT_IDSCID_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int IDMCI16:1</td>
+<td>16 - 16</td>
+<td>XBAR_IDINTSAT_IDMCI16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int IDMCI17:1</td>
+<td>17 - 17</td>
+<td>XBAR_IDINTSAT_IDMCI17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int IDMCI18:1</td>
+<td>18 - 18</td>
+<td>XBAR_IDINTSAT_IDMCI18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int IDMCI19:1</td>
+<td>19 - 19</td>
+<td>XBAR_IDINTSAT_IDMCI19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int IDMCI20:1</td>
+<td>20 - 20</td>
+<td>XBAR_IDINTSAT_IDMCI20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int IDMCI21:1</td>
+<td>21 - 21</td>
+<td>XBAR_IDINTSAT_IDMCI21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_IDINTSAT">XBAR_IDINTSAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_INTSAT_t"><b>XBAR_INTSAT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Interrupt Status Register</b></td></tr>
+<tr><td colspan="5"><b>XBAR_INTSAT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SCSCI0:1</td>
+<td>0 - 0</td>
+<td>XBAR_INTSAT_SCSCI0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int SCSCI1:1</td>
+<td>1 - 1</td>
+<td>XBAR_INTSAT_SCSCI1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int SCSCI2:1</td>
+<td>2 - 2</td>
+<td>XBAR_INTSAT_SCSCI2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int SCSCI3:1</td>
+<td>3 - 3</td>
+<td>XBAR_INTSAT_SCSCI3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int SCSCI4:1</td>
+<td>4 - 4</td>
+<td>XBAR_INTSAT_SCSCI4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int SCSCI5:1</td>
+<td>5 - 5</td>
+<td>XBAR_INTSAT_SCSCI5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int SCSCI6:1</td>
+<td>6 - 6</td>
+<td>XBAR_INTSAT_SCSCI6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int SCSCID:1</td>
+<td>15 - 15</td>
+<td>XBAR_INTSAT_SCSCID_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int PRSCI16:1</td>
+<td>16 - 16</td>
+<td>XBAR_INTSAT_PRSCI16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PRSCI17:1</td>
+<td>17 - 17</td>
+<td>XBAR_INTSAT_PRSCI17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int PRSCI18:1</td>
+<td>18 - 18</td>
+<td>XBAR_INTSAT_PRSCI18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int PRSCI19:1</td>
+<td>19 - 19</td>
+<td>XBAR_INTSAT_PRSCI19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int PRSCI20:1</td>
+<td>20 - 20</td>
+<td>XBAR_INTSAT_PRSCI20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int PRSCI21:1</td>
+<td>21 - 21</td>
+<td>XBAR_INTSAT_PRSCI21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int PRSCI22:1</td>
+<td>22 - 22</td>
+<td>XBAR_INTSAT_PRSCI22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int PRSCID:1</td>
+<td>31 - 31</td>
+<td>XBAR_INTSAT_PRSCID_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_INTSAT">XBAR_INTSAT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_PRIOL0_t"><b>XBAR_PRIOL0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Priority Register 0</b></td></tr>
+<tr><td colspan="5"><b>XBAR_PRIOL0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MASTER0:4</td>
+<td>0 - 3</td>
+<td>XBAR_PRIOL0_MASTER0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MASTER1:4</td>
+<td>4 - 7</td>
+<td>XBAR_PRIOL0_MASTER1_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MASTER2:4</td>
+<td>8 - 11</td>
+<td>XBAR_PRIOL0_MASTER2_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MASTER3:4</td>
+<td>12 - 15</td>
+<td>XBAR_PRIOL0_MASTER3_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int MASTER4:4</td>
+<td>16 - 19</td>
+<td>XBAR_PRIOL0_MASTER4_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_PRIOL0">XBAR_PRIOL0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_PRIOL1_t"><b>XBAR_PRIOL1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Priority Register 1</b></td></tr>
+<tr><td colspan="5"><b>XBAR_PRIOL1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MASTER0:4</td>
+<td>0 - 3</td>
+<td>XBAR_PRIOL1_MASTER0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MASTER1:4</td>
+<td>4 - 7</td>
+<td>XBAR_PRIOL1_MASTER1_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MASTER2:4</td>
+<td>8 - 11</td>
+<td>XBAR_PRIOL1_MASTER2_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MASTER3:4</td>
+<td>12 - 15</td>
+<td>XBAR_PRIOL1_MASTER3_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int MASTER5:4</td>
+<td>20 - 23</td>
+<td>XBAR_PRIOL1_MASTER5_MASK</td>
+<td>0x00f00000</td>
+<td align="right">20</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_PRIOL1">XBAR_PRIOL1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_PRIOL2_t"><b>XBAR_PRIOL2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Priority Register 2</b></td></tr>
+<tr><td colspan="5"><b>XBAR_PRIOL2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MASTER4:4</td>
+<td>16 - 19</td>
+<td>XBAR_PRIOL2_MASTER4_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_PRIOL2">XBAR_PRIOL2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_PRIOLD_t"><b>XBAR_PRIOLD_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Priority Register D</b></td></tr>
+<tr><td colspan="5"><b>XBAR_PRIOLD_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MASTER0:4</td>
+<td>0 - 3</td>
+<td>XBAR_PRIOLD_MASTER0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MASTER1:4</td>
+<td>4 - 7</td>
+<td>XBAR_PRIOLD_MASTER1_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MASTER2:4</td>
+<td>8 - 11</td>
+<td>XBAR_PRIOLD_MASTER2_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MASTER3:4</td>
+<td>12 - 15</td>
+<td>XBAR_PRIOLD_MASTER3_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int MASTER4:4</td>
+<td>16 - 19</td>
+<td>XBAR_PRIOLD_MASTER4_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MASTER5:4</td>
+<td>20 - 23</td>
+<td>XBAR_PRIOLD_MASTER5_MASK</td>
+<td>0x00f00000</td>
+<td align="right">20</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_PRIOLD">XBAR_PRIOLD</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_PRIOLm_t"><b>XBAR_PRIOLm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Arbiter Priority Register n</b></td></tr>
+<tr><td colspan="5"><b>XBAR_PRIOLm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MASTER0:4</td>
+<td>0 - 3</td>
+<td>XBAR_PRIOLm_MASTER0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MASTER1:4</td>
+<td>4 - 7</td>
+<td>XBAR_PRIOLm_MASTER1_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int MASTER2:4</td>
+<td>8 - 11</td>
+<td>XBAR_PRIOLm_MASTER2_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MASTER3:4</td>
+<td>12 - 15</td>
+<td>XBAR_PRIOLm_MASTER3_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int MASTER4:4</td>
+<td>16 - 19</td>
+<td>XBAR_PRIOLm_MASTER4_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int MASTER5:4</td>
+<td>20 - 23</td>
+<td>XBAR_PRIOLm_MASTER5_MASK</td>
+<td>0x00f00000</td>
+<td align="right">20</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_PRIOL3">XBAR_PRIOL3</a>,    
+<a class="url" href="../xbar.html#XBAR_PRIOL4">XBAR_PRIOL4</a>,    
+<a class="url" href="../xbar.html#XBAR_PRIOL5">XBAR_PRIOL5</a>,    
+<a class="url" href="../xbar.html#XBAR_PRIOL6">XBAR_PRIOL6</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="XBAR_SRC_t"><b>XBAR_SRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>XBar_SRI Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>XBAR_SRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>XBAR_SRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:2</td>
+<td>10 - 11</td>
+<td>XBAR_SRC_TOS_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>XBAR_SRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>XBAR_SRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>XBAR_SRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>XBAR_SRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../xbar.html#XBAR_SRC">XBAR_SRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../xbar.html">XBAR</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

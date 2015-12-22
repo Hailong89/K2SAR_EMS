@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>TriCore TC1792 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="WDT_CON0_t"><b>WDT_CON0_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Watchdog Timer Control Register 0</b></td></tr>
+<tr><td colspan="5"><b>WDT_CON0_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int ENDINIT:1</td>
+<td>0 - 0</td>
+<td>WDT_CON0_ENDINIT_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WDTLCK:1</td>
+<td>1 - 1</td>
+<td>WDT_CON0_WDTLCK_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int WDTHPW0:2</td>
+<td>2 - 3</td>
+<td>WDT_CON0_WDTHPW0_MASK</td>
+<td>0x0000000c</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int WDTHPW1:4</td>
+<td>4 - 7</td>
+<td>WDT_CON0_WDTHPW1_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WDTPW:8</td>
+<td>8 - 15</td>
+<td>WDT_CON0_WDTPW_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int WDTREL:16</td>
+<td>16 - 31</td>
+<td>WDT_CON0_WDTREL_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#WDT_CON0">WDT_CON0</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="WDT_CON1_t"><b>WDT_CON1_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Watchdog Timer Control Register 1</b></td></tr>
+<tr><td colspan="5"><b>WDT_CON1_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int WDTIR:1</td>
+<td>2 - 2</td>
+<td>WDT_CON1_WDTIR_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int WDTDR:1</td>
+<td>3 - 3</td>
+<td>WDT_CON1_WDTDR_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#WDT_CON1">WDT_CON1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="WDT_SR_t"><b>WDT_SR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Watchdog Timer Status Register</b></td></tr>
+<tr><td colspan="5"><b>WDT_SR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int WDTAE:1</td>
+<td>0 - 0</td>
+<td>WDT_SR_WDTAE_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WDTOE:1</td>
+<td>1 - 1</td>
+<td>WDT_SR_WDTOE_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int WDTIS:1</td>
+<td>2 - 2</td>
+<td>WDT_SR_WDTIS_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int WDTDS:1</td>
+<td>3 - 3</td>
+<td>WDT_SR_WDTDS_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int WDTTO:1</td>
+<td>4 - 4</td>
+<td>WDT_SR_WDTTO_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WDTPR:1</td>
+<td>5 - 5</td>
+<td>WDT_SR_WDTPR_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int WDTTIM:16</td>
+<td>16 - 31</td>
+<td>WDT_SR_WDTTIM_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#WDT_SR">WDT_SR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

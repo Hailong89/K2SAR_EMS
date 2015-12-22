@@ -1,0 +1,180 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1791/sscg-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1791_SSCG_STRUCTS_H_
+#define _TC1791_SSCG_STRUCTS_H_
+/*
+   TriCore TC1791
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1791/<a class="url" href="../sscg0.html">sscg0.h</a>&gt;
+#ifndef SSCG0_BASE
+#define SSCG0_BASE 0xf0310800
+#endif /* SSCG0_BASE */
+</pre>
+<pre>
+#include &lt;tc1791/<a class="url" href="../sscg1.html">sscg1.h</a>&gt;
+#ifndef SSCG1_BASE
+#define SSCG1_BASE 0xf0310a00
+#endif /* SSCG1_BASE */
+</pre>
+<pre>
+#include &lt;tc1791/<a class="url" href="../sscg2.html">sscg2.h</a>&gt;
+#ifndef SSCG2_BASE
+#define SSCG2_BASE 0xf0310c00
+#endif /* SSCG2_BASE */
+</pre>
+<pre>
+#include &lt;tc1791/<a class="url" href="../sscg3.html">sscg3.h</a>&gt;
+#ifndef SSCG3_BASE
+#define SSCG3_BASE 0xf0310e00
+#endif /* SSCG3_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_CLC_t">SSCGn_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_PISEL_t">SSCGn_PISEL_t</a></td>
+<td>PISEL;</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_ID_t">SSCGn_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_FDR_t">SSCGn_FDR_t</a></td>
+<td>FDR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_CON_t">SSCGn_CON_t</a></td>
+<td>CON;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_BR_t">SSCGn_BR_t</a></td>
+<td>BR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_SSOC_t">SSCGn_SSOC_t</a></td>
+<td>SSOC;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_SSOTC_t">SSCGn_SSOTC_t</a></td>
+<td>SSOTC;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_TB_t">SSCGn_TB_t</a></td>
+<td>TB;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_RB_t">SSCGn_RB_t</a></td>
+<td>RB;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_STAT_t">SSCGn_STAT_t</a></td>
+<td>STAT;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_EFM_t">SSCGn_EFM_t</a></td>
+<td>EFM;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved12[0x34];</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_TB1_t">SSCGn_TB1_t</a></td>
+<td>TB1;</td>
+<td>/* 0x100 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_TB1SNAP_t">SSCGn_TB1SNAP_t</a></td>
+<td>TB1SNAP;</td>
+<td>/* 0x104 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_RBSNAP_t">SSCGn_RBSNAP_t</a></td>
+<td>RBSNAP;</td>
+<td>/* 0x108 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_GSTAT_t">SSCGn_GSTAT_t</a></td>
+<td>GSTAT;</td>
+<td>/* 0x10c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_GEFM_t">SSCGn_GEFM_t</a></td>
+<td>GEFM;</td>
+<td>/* 0x110 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_GEN_t">SSCGn_GEN_t</a></td>
+<td>GEN;</td>
+<td>/* 0x114 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved19[0x39];</td>
+<td>/* 0x118 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/s.html#SSCGn_GSRC_t">SSCGn_GSRC_t</a></td>
+<td>GSRC;</td>
+<td>/* 0x1fc */</td>
+</tr>
+
+<tr><td colspan="4">} SSCG_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1791_SSCG_STRUCTS_H_ */ -->
+</body>
+</html>

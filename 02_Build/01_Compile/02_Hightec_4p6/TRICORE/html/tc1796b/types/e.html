@@ -1,0 +1,1190 @@
+<html>
+<head>
+<title>TriCore TC1796B (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="EBU_ADDRSELm_t"><b>EBU_ADDRSELm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Address Select Register n</b></td></tr>
+<tr><td colspan="5"><b>EBU_ADDRSELm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int REGENAB:1</td>
+<td>0 - 0</td>
+<td>EBU_ADDRSELm_REGENAB_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ALTENAB:1</td>
+<td>1 - 1</td>
+<td>EBU_ADDRSELm_ALTENAB_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int MASK:4</td>
+<td>4 - 7</td>
+<td>EBU_ADDRSELm_MASK_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ALTSEG:4</td>
+<td>8 - 11</td>
+<td>EBU_ADDRSELm_ALTSEG_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int BASE:20</td>
+<td>12 - 31</td>
+<td>EBU_ADDRSELm_BASE_MASK</td>
+<td>0xfffff000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_ADDRSEL0">EBU_ADDRSEL0</a>,    
+<a class="url" href="../ebu.html#EBU_ADDRSEL1">EBU_ADDRSEL1</a>,    
+<a class="url" href="../ebu.html#EBU_ADDRSEL2">EBU_ADDRSEL2</a>,    
+<a class="url" href="../ebu.html#EBU_ADDRSEL3">EBU_ADDRSEL3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_BFCON_t"><b>EBU_BFCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Burst Flash Control Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_BFCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FETBLEN0:4</td>
+<td>0 - 3</td>
+<td>EBU_BFCON_FETBLEN0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FBBMSEL0:1</td>
+<td>4 - 4</td>
+<td>EBU_BFCON_FBBMSEL0_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WAITFUNC0:1</td>
+<td>5 - 5</td>
+<td>EBU_BFCON_WAITFUNC0_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int EXTCLOCK:2</td>
+<td>6 - 7</td>
+<td>EBU_BFCON_EXTCLOCK_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int BFCMSEL:1</td>
+<td>8 - 8</td>
+<td>EBU_BFCON_BFCMSEL_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int EBSE0:1</td>
+<td>9 - 9</td>
+<td>EBU_BFCON_EBSE0_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int DBA0:1</td>
+<td>10 - 10</td>
+<td>EBU_BFCON_DBA0_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int FDBKEN:1</td>
+<td>11 - 11</td>
+<td>EBU_BFCON_FDBKEN_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int DTALTNCY:4</td>
+<td>12 - 15</td>
+<td>EBU_BFCON_DTALTNCY_MASK</td>
+<td>0x0000f000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int FETBLEN1:4</td>
+<td>16 - 19</td>
+<td>EBU_BFCON_FETBLEN1_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int FBBMSEL1:1</td>
+<td>20 - 20</td>
+<td>EBU_BFCON_FBBMSEL1_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int WAITFUNC1:1</td>
+<td>21 - 21</td>
+<td>EBU_BFCON_WAITFUNC1_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int EBSE1:1</td>
+<td>25 - 25</td>
+<td>EBU_BFCON_EBSE1_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int DBA1:1</td>
+<td>26 - 26</td>
+<td>EBU_BFCON_DBA1_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_BFCON">EBU_BFCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_BUSAPm_t"><b>EBU_BUSAPm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Bus Access Parameter Register n</b></td></tr>
+<tr><td colspan="5"><b>EBU_BUSAPm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DTACS:4</td>
+<td>0 - 3</td>
+<td>EBU_BUSAPm_DTACS_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DTARDWR:4</td>
+<td>4 - 7</td>
+<td>EBU_BUSAPm_DTARDWR_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WRRECOVC:3</td>
+<td>8 - 10</td>
+<td>EBU_BUSAPm_WRRECOVC_MASK</td>
+<td>0x00000700</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RDRECOVC:3</td>
+<td>11 - 13</td>
+<td>EBU_BUSAPm_RDRECOVC_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int DATAC:2</td>
+<td>14 - 15</td>
+<td>EBU_BUSAPm_DATAC_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int BURSTC:3</td>
+<td>16 - 18</td>
+<td>EBU_BUSAPm_BURSTC_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int WAITWRC:3</td>
+<td>19 - 21</td>
+<td>EBU_BUSAPm_WAITWRC_MASK</td>
+<td>0x00380000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int WAITRDC:3</td>
+<td>22 - 24</td>
+<td>EBU_BUSAPm_WAITRDC_MASK</td>
+<td>0x01c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int CMDDELAY:3</td>
+<td>25 - 27</td>
+<td>EBU_BUSAPm_CMDDELAY_MASK</td>
+<td>0x0e000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int ADDRC:2</td>
+<td>30 - 31</td>
+<td>EBU_BUSAPm_ADDRC_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_BUSAP0">EBU_BUSAP0</a>,    
+<a class="url" href="../ebu.html#EBU_BUSAP1">EBU_BUSAP1</a>,    
+<a class="url" href="../ebu.html#EBU_BUSAP2">EBU_BUSAP2</a>,    
+<a class="url" href="../ebu.html#EBU_BUSAP3">EBU_BUSAP3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_BUSCONm_t"><b>EBU_BUSCONm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Bus Configuration Register n</b></td></tr>
+<tr><td colspan="5"><b>EBU_BUSCONm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MULTMAP:7</td>
+<td>0 - 6</td>
+<td>EBU_BUSCONm_MULTMAP_MASK</td>
+<td>0x0000007f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WEAKPREF:1</td>
+<td>8 - 8</td>
+<td>EBU_BUSCONm_WEAKPREF_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int AALIGN:1</td>
+<td>9 - 9</td>
+<td>EBU_BUSCONm_AALIGN_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CTYPE:2</td>
+<td>10 - 11</td>
+<td>EBU_BUSCONm_CTYPE_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CMULT:3</td>
+<td>13 - 15</td>
+<td>EBU_BUSCONm_CMULT_MASK</td>
+<td>0x0000e000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int ENDIAN:1</td>
+<td>16 - 16</td>
+<td>EBU_BUSCONm_ENDIAN_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DLOAD:1</td>
+<td>17 - 17</td>
+<td>EBU_BUSCONm_DLOAD_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int PREFETCH:1</td>
+<td>18 - 18</td>
+<td>EBU_BUSCONm_PREFETCH_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int WAITINV:1</td>
+<td>19 - 19</td>
+<td>EBU_BUSCONm_WAITINV_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int BCGEN:2</td>
+<td>20 - 21</td>
+<td>EBU_BUSCONm_BCGEN_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int PORTW:2</td>
+<td>22 - 23</td>
+<td>EBU_BUSCONm_PORTW_MASK</td>
+<td>0x00c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int WAIT:2</td>
+<td>24 - 25</td>
+<td>EBU_BUSCONm_WAIT_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int AGEN:3</td>
+<td>28 - 30</td>
+<td>EBU_BUSCONm_AGEN_MASK</td>
+<td>0x70000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int WRITE:1</td>
+<td>31 - 31</td>
+<td>EBU_BUSCONm_WRITE_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_BUSCON0">EBU_BUSCON0</a>,    
+<a class="url" href="../ebu.html#EBU_BUSCON1">EBU_BUSCON1</a>,    
+<a class="url" href="../ebu.html#EBU_BUSCON2">EBU_BUSCON2</a>,    
+<a class="url" href="../ebu.html#EBU_BUSCON3">EBU_BUSCON3</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_CLC_t"><b>EBU_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Clock Control Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>EBU_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>EBU_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_CLC">EBU_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_CON_t"><b>EBU_CON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_CON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int EXTLOCK:1</td>
+<td>4 - 4</td>
+<td>EBU_CON_EXTLOCK_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ARBSYNC:1</td>
+<td>5 - 5</td>
+<td>EBU_CON_ARBSYNC_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int ARBMODE:2</td>
+<td>6 - 7</td>
+<td>EBU_CON_ARBMODE_MASK</td>
+<td>0x000000c0</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int TIMEOUTC:8</td>
+<td>8 - 15</td>
+<td>EBU_CON_TIMEOUTC_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int GLOBALCS:4</td>
+<td>16 - 19</td>
+<td>EBU_CON_GLOBALCS_MASK</td>
+<td>0x000f0000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int CS0FAM:1</td>
+<td>27 - 27</td>
+<td>EBU_CON_CS0FAM_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int EMUFAM:1</td>
+<td>28 - 28</td>
+<td>EBU_CON_EMUFAM_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int BFSSS:1</td>
+<td>29 - 29</td>
+<td>EBU_CON_BFSSS_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_CON">EBU_CON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_EMUAS_t"><b>EBU_EMUAS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Emulator Address Select Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_EMUAS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int REGENAB:1</td>
+<td>0 - 0</td>
+<td>EBU_EMUAS_REGENAB_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int ALTENAB:1</td>
+<td>1 - 1</td>
+<td>EBU_EMUAS_ALTENAB_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int MASK:4</td>
+<td>4 - 7</td>
+<td>EBU_EMUAS_MASK_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int ALTSEG:4</td>
+<td>8 - 11</td>
+<td>EBU_EMUAS_ALTSEG_MASK</td>
+<td>0x00000f00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int BASE:20</td>
+<td>12 - 31</td>
+<td>EBU_EMUAS_BASE_MASK</td>
+<td>0xfffff000</td>
+<td align="right">12</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_EMUAS">EBU_EMUAS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_EMUBAP_t"><b>EBU_EMUBAP_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Emulator Bus Access Parameter Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_EMUBAP_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DTACS:4</td>
+<td>0 - 3</td>
+<td>EBU_EMUBAP_DTACS_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DTARDWR:4</td>
+<td>4 - 7</td>
+<td>EBU_EMUBAP_DTARDWR_MASK</td>
+<td>0x000000f0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int WRRECOVC:3</td>
+<td>8 - 10</td>
+<td>EBU_EMUBAP_WRRECOVC_MASK</td>
+<td>0x00000700</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int RDRECOVC:3</td>
+<td>11 - 13</td>
+<td>EBU_EMUBAP_RDRECOVC_MASK</td>
+<td>0x00003800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int DATAC:2</td>
+<td>14 - 15</td>
+<td>EBU_EMUBAP_DATAC_MASK</td>
+<td>0x0000c000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int BURSTC:3</td>
+<td>16 - 18</td>
+<td>EBU_EMUBAP_BURSTC_MASK</td>
+<td>0x00070000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int WAITWRC:3</td>
+<td>19 - 21</td>
+<td>EBU_EMUBAP_WAITWRC_MASK</td>
+<td>0x00380000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int WAITRDC:3</td>
+<td>22 - 24</td>
+<td>EBU_EMUBAP_WAITRDC_MASK</td>
+<td>0x01c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int CMDDELAY:3</td>
+<td>25 - 27</td>
+<td>EBU_EMUBAP_CMDDELAY_MASK</td>
+<td>0x0e000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int ADDRC:2</td>
+<td>30 - 31</td>
+<td>EBU_EMUBAP_ADDRC_MASK</td>
+<td>0xc0000000</td>
+<td align="right">30</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_EMUBAP">EBU_EMUBAP</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_EMUBC_t"><b>EBU_EMUBC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Emulator Bus Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_EMUBC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MULTMAP:7</td>
+<td>0 - 6</td>
+<td>EBU_EMUBC_MULTMAP_MASK</td>
+<td>0x0000007f</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WEAKPREF:1</td>
+<td>8 - 8</td>
+<td>EBU_EMUBC_WEAKPREF_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int AALIGN:1</td>
+<td>9 - 9</td>
+<td>EBU_EMUBC_AALIGN_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int CTYPE:2</td>
+<td>10 - 11</td>
+<td>EBU_EMUBC_CTYPE_MASK</td>
+<td>0x00000c00</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int CMULT:3</td>
+<td>13 - 15</td>
+<td>EBU_EMUBC_CMULT_MASK</td>
+<td>0x0000e000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int ENDIAN:1</td>
+<td>16 - 16</td>
+<td>EBU_EMUBC_ENDIAN_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int DLOAD:1</td>
+<td>17 - 17</td>
+<td>EBU_EMUBC_DLOAD_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int PREFETCH:1</td>
+<td>18 - 18</td>
+<td>EBU_EMUBC_PREFETCH_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int WAITINV:1</td>
+<td>19 - 19</td>
+<td>EBU_EMUBC_WAITINV_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int BCGEN:2</td>
+<td>20 - 21</td>
+<td>EBU_EMUBC_BCGEN_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int PORTW:2</td>
+<td>22 - 23</td>
+<td>EBU_EMUBC_PORTW_MASK</td>
+<td>0x00c00000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int WAIT:2</td>
+<td>24 - 25</td>
+<td>EBU_EMUBC_WAIT_MASK</td>
+<td>0x03000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int AGEN:3</td>
+<td>28 - 30</td>
+<td>EBU_EMUBC_AGEN_MASK</td>
+<td>0x70000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int WRITE:1</td>
+<td>31 - 31</td>
+<td>EBU_EMUBC_WRITE_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_EMUBC">EBU_EMUBC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_EMUOVL_t"><b>EBU_EMUOVL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Emulator Overlay Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_EMUOVL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int OVERLAY:4</td>
+<td>0 - 3</td>
+<td>EBU_EMUOVL_OVERLAY_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_EMUOVL">EBU_EMUOVL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_ID_t"><b>EBU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_ID">EBU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EBU_USERCON_t"><b>EBU_USERCON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>EBU Test/Control Configuration Register</b></td></tr>
+<tr><td colspan="5"><b>EBU_USERCON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DIP:1</td>
+<td>0 - 0</td>
+<td>EBU_USERCON_DIP_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../ebu.html#EBU_USERCON">EBU_USERCON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../ebu.html">EBU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EICRn_t"><b>EICRn_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>External Input Channel Register n</b></td></tr>
+<tr><td colspan="5"><b>EICRn_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int EXIS0:2</td>
+<td>4 - 5</td>
+<td>EICRn_EXIS0_MASK</td>
+<td>0x00000030</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FEN0:1</td>
+<td>8 - 8</td>
+<td>EICRn_FEN0_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int REN0:1</td>
+<td>9 - 9</td>
+<td>EICRn_REN0_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int LDEN0:1</td>
+<td>10 - 10</td>
+<td>EICRn_LDEN0_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int EIEN0:1</td>
+<td>11 - 11</td>
+<td>EICRn_EIEN0_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int INP0:3</td>
+<td>12 - 14</td>
+<td>EICRn_INP0_MASK</td>
+<td>0x00007000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int EXIS1:2</td>
+<td>20 - 21</td>
+<td>EICRn_EXIS1_MASK</td>
+<td>0x00300000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int FEN1:1</td>
+<td>24 - 24</td>
+<td>EICRn_FEN1_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int REN1:1</td>
+<td>25 - 25</td>
+<td>EICRn_REN1_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int LDEN1:1</td>
+<td>26 - 26</td>
+<td>EICRn_LDEN1_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int EIEN1:1</td>
+<td>27 - 27</td>
+<td>EICRn_EIEN1_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int INP1:3</td>
+<td>28 - 30</td>
+<td>EICRn_INP1_MASK</td>
+<td>0x70000000</td>
+<td align="right">28</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#EICR0">EICR0</a>,    
+<a class="url" href="../scu.html#EICR1">EICR1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EIFR_t"><b>EIFR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>External Input Flag Register</b></td></tr>
+<tr><td colspan="5"><b>EIFR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int INTF0:1</td>
+<td>0 - 0</td>
+<td>EIFR_INTF0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int INTF1:1</td>
+<td>1 - 1</td>
+<td>EIFR_INTF1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int INTF2:1</td>
+<td>2 - 2</td>
+<td>EIFR_INTF2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int INTF3:1</td>
+<td>3 - 3</td>
+<td>EIFR_INTF3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../scu.html#EIFR">EIFR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../scu.html">SCU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="EXEVT_t"><b>EXEVT_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>External Break Input Event Specifier Register</b></td></tr>
+<tr><td colspan="5"><b>EXEVT_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../core_debug.html#EXEVT">EXEVT</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../core_debug.html">Core_Debug</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

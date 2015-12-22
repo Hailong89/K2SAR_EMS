@@ -1,0 +1,1019 @@
+<html>
+<head>
+<title>TriCore TC1791 (C types)</title>
+</head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+<body>
+
+<dl>
+<dt><a name="BIV_t"><b>BIV_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Base Interrupt Vector Table Pointer</b></td></tr>
+<tr><td colspan="5"><b>BIV_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BIV:31</td>
+<td>1 - 31</td>
+<td>BIV_BIV_MASK</td>
+<td>0xfffffffe</td>
+<td align="right">1</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#BIV">BIV</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMACON_t"><b>BMACON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>BIST Mode Access Control Register</b></td></tr>
+<tr><td colspan="5"><b>BMACON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DSMBE:1</td>
+<td>0 - 0</td>
+<td>BMACON_DSMBE_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DCMBE:1</td>
+<td>4 - 4</td>
+<td>BMACON_DCMBE_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int PSMBE:1</td>
+<td>8 - 8</td>
+<td>BMACON_PSMBE_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int PCMBE:1</td>
+<td>12 - 12</td>
+<td>BMACON_PCMBE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int DTMBE:1</td>
+<td>16 - 16</td>
+<td>BMACON_DTMBE_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int PTMBE:1</td>
+<td>18 - 18</td>
+<td>BMACON_PTMBE_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#BMACON">BMACON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_CLC_t"><b>BMU_CLC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Control Clock Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_CLC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DISR:1</td>
+<td>0 - 0</td>
+<td>BMU_CLC_DISR_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int DISS:1</td>
+<td>1 - 1</td>
+<td>BMU_CLC_DISS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_CLC">BMU_CLC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_CTL_t"><b>BMU_CTL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Transaction Filtering Control</b></td></tr>
+<tr><td colspan="5"><b>BMU_CTL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MODE:1</td>
+<td>0 - 0</td>
+<td>BMU_CTL_MODE_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TMF:1</td>
+<td>1 - 1</td>
+<td>BMU_CTL_TMF_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_CTL">BMU_CTL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_FMCTL_t"><b>BMU_FMCTL_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Fifo Monitor control register</b></td></tr>
+<tr><td colspan="5"><b>BMU_FMCTL_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FHT_INT:1</td>
+<td>1 - 1</td>
+<td>BMU_FMCTL_FHT_INT_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int OVF_INT:1</td>
+<td>2 - 2</td>
+<td>BMU_FMCTL_OVF_INT_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int UDF_INT:1</td>
+<td>3 - 3</td>
+<td>BMU_FMCTL_UDF_INT_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_FMCTL">BMU_FMCTL</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_FMSTS_t"><b>BMU_FMSTS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Fifo Monitor Status Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_FMSTS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FHT_STS:1</td>
+<td>0 - 0</td>
+<td>BMU_FMSTS_FHT_STS_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int OVF_STS:1</td>
+<td>1 - 1</td>
+<td>BMU_FMSTS_OVF_STS_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int UDF_STS:1</td>
+<td>2 - 2</td>
+<td>BMU_FMSTS_UDF_STS_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_FMSTS">BMU_FMSTS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_FMTH_t"><b>BMU_FMTH_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Fifo Monitor: Fullness Threshold Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_FMTH_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FHT:10</td>
+<td>0 - 9</td>
+<td>BMU_FMTH_FHT_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_FMTH">BMU_FMTH</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_FULLNESS_t"><b>BMU_FULLNESS_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Fullness Information for Bus Transaction Fifo</b></td></tr>
+<tr><td colspan="5"><b>BMU_FULLNESS_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int UCELLS:11</td>
+<td>0 - 10</td>
+<td>BMU_FULLNESS_UCELLS_MASK</td>
+<td>0x000007ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FCELLS:11</td>
+<td>16 - 26</td>
+<td>BMU_FULLNESS_FCELLS_MASK</td>
+<td>0x07ff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_FULLNESS">BMU_FULLNESS</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_ID_t"><b>BMU_ID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Module Identification Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_ID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int MOD_REV:8</td>
+<td>0 - 7</td>
+<td>BMU_ID_MOD_REV_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int MOD_TYPE:8</td>
+<td>8 - 15</td>
+<td>BMU_ID_MOD_TYPE_MASK</td>
+<td>0x0000ff00</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int MOD_NUMBER:16</td>
+<td>16 - 31</td>
+<td>BMU_ID_MOD_NUMBER_MASK</td>
+<td>0xffff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_ID">BMU_ID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_MIECON_t"><b>BMU_MIECON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Memory Integrity Error Control Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_MIECON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int DED_EN:1</td>
+<td>0 - 0</td>
+<td>BMU_MIECON_DED_EN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_MIECON">BMU_MIECON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_MIECON2_t"><b>BMU_MIECON2_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Memory Integrity Error Control 2 Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_MIECON2_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SEC_EN:1</td>
+<td>0 - 0</td>
+<td>BMU_MIECON2_SEC_EN_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_MIECON2">BMU_MIECON2</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_PSETm_t"><b>BMU_PSETm_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Peripheral Set n Configuration</b></td></tr>
+<tr><td colspan="5"><b>BMU_PSETm_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL0:1</td>
+<td>0 - 0</td>
+<td>BMU_PSETm_FPI_SEL0_MASK</td>
+<td>0x00000001</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL1:1</td>
+<td>1 - 1</td>
+<td>BMU_PSETm_FPI_SEL1_MASK</td>
+<td>0x00000002</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL2:1</td>
+<td>2 - 2</td>
+<td>BMU_PSETm_FPI_SEL2_MASK</td>
+<td>0x00000004</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL3:1</td>
+<td>3 - 3</td>
+<td>BMU_PSETm_FPI_SEL3_MASK</td>
+<td>0x00000008</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL4:1</td>
+<td>4 - 4</td>
+<td>BMU_PSETm_FPI_SEL4_MASK</td>
+<td>0x00000010</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL5:1</td>
+<td>5 - 5</td>
+<td>BMU_PSETm_FPI_SEL5_MASK</td>
+<td>0x00000020</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL6:1</td>
+<td>6 - 6</td>
+<td>BMU_PSETm_FPI_SEL6_MASK</td>
+<td>0x00000040</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL7:1</td>
+<td>7 - 7</td>
+<td>BMU_PSETm_FPI_SEL7_MASK</td>
+<td>0x00000080</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL8:1</td>
+<td>8 - 8</td>
+<td>BMU_PSETm_FPI_SEL8_MASK</td>
+<td>0x00000100</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL9:1</td>
+<td>9 - 9</td>
+<td>BMU_PSETm_FPI_SEL9_MASK</td>
+<td>0x00000200</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL10:1</td>
+<td>10 - 10</td>
+<td>BMU_PSETm_FPI_SEL10_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL11:1</td>
+<td>11 - 11</td>
+<td>BMU_PSETm_FPI_SEL11_MASK</td>
+<td>0x00000800</td>
+<td align="right">11</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL12:1</td>
+<td>12 - 12</td>
+<td>BMU_PSETm_FPI_SEL12_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL13:1</td>
+<td>13 - 13</td>
+<td>BMU_PSETm_FPI_SEL13_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL14:1</td>
+<td>14 - 14</td>
+<td>BMU_PSETm_FPI_SEL14_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL15:1</td>
+<td>15 - 15</td>
+<td>BMU_PSETm_FPI_SEL15_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL16:1</td>
+<td>16 - 16</td>
+<td>BMU_PSETm_FPI_SEL16_MASK</td>
+<td>0x00010000</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL17:1</td>
+<td>17 - 17</td>
+<td>BMU_PSETm_FPI_SEL17_MASK</td>
+<td>0x00020000</td>
+<td align="right">17</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL18:1</td>
+<td>18 - 18</td>
+<td>BMU_PSETm_FPI_SEL18_MASK</td>
+<td>0x00040000</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL19:1</td>
+<td>19 - 19</td>
+<td>BMU_PSETm_FPI_SEL19_MASK</td>
+<td>0x00080000</td>
+<td align="right">19</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL20:1</td>
+<td>20 - 20</td>
+<td>BMU_PSETm_FPI_SEL20_MASK</td>
+<td>0x00100000</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL21:1</td>
+<td>21 - 21</td>
+<td>BMU_PSETm_FPI_SEL21_MASK</td>
+<td>0x00200000</td>
+<td align="right">21</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL22:1</td>
+<td>22 - 22</td>
+<td>BMU_PSETm_FPI_SEL22_MASK</td>
+<td>0x00400000</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL23:1</td>
+<td>23 - 23</td>
+<td>BMU_PSETm_FPI_SEL23_MASK</td>
+<td>0x00800000</td>
+<td align="right">23</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL24:1</td>
+<td>24 - 24</td>
+<td>BMU_PSETm_FPI_SEL24_MASK</td>
+<td>0x01000000</td>
+<td align="right">24</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL25:1</td>
+<td>25 - 25</td>
+<td>BMU_PSETm_FPI_SEL25_MASK</td>
+<td>0x02000000</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL26:1</td>
+<td>26 - 26</td>
+<td>BMU_PSETm_FPI_SEL26_MASK</td>
+<td>0x04000000</td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL27:1</td>
+<td>27 - 27</td>
+<td>BMU_PSETm_FPI_SEL27_MASK</td>
+<td>0x08000000</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL28:1</td>
+<td>28 - 28</td>
+<td>BMU_PSETm_FPI_SEL28_MASK</td>
+<td>0x10000000</td>
+<td align="right">28</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL29:1</td>
+<td>29 - 29</td>
+<td>BMU_PSETm_FPI_SEL29_MASK</td>
+<td>0x20000000</td>
+<td align="right">29</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL30:1</td>
+<td>30 - 30</td>
+<td>BMU_PSETm_FPI_SEL30_MASK</td>
+<td>0x40000000</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td>unsigned int FPI_SEL31:1</td>
+<td>31 - 31</td>
+<td>BMU_PSETm_FPI_SEL31_MASK</td>
+<td>0x80000000</td>
+<td align="right">31</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_PSET0">BMU_PSET0</a>,    
+<a class="url" href="../bmu.html#BMU_PSET1">BMU_PSET1</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_PTR_t"><b>BMU_PTR_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Pointer Information for Bus Transaction Fifo</b></td></tr>
+<tr><td colspan="5"><b>BMU_PTR_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int RPTR:10</td>
+<td>0 - 9</td>
+<td>BMU_PTR_RPTR_MASK</td>
+<td>0x000003ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int WPTR:10</td>
+<td>16 - 25</td>
+<td>BMU_PTR_WPTR_MASK</td>
+<td>0x03ff0000</td>
+<td align="right">16</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_PTR">BMU_PTR</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_SMACON_t"><b>BMU_SMACON_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>SIST Mode Access Control Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_SMACON_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BMURAM:2</td>
+<td>0 - 1</td>
+<td>BMU_SMACON_BMURAM_MASK</td>
+<td>0x00000003</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_SMACON">BMU_SMACON</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_SRC_t"><b>BMU_SRC_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Service Request Control Register</b></td></tr>
+<tr><td colspan="5"><b>BMU_SRC_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int SRPN:8</td>
+<td>0 - 7</td>
+<td>BMU_SRC_SRPN_MASK</td>
+<td>0x000000ff</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>unsigned int TOS:1</td>
+<td>10 - 10</td>
+<td>BMU_SRC_TOS_MASK</td>
+<td>0x00000400</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>unsigned int SRE:1</td>
+<td>12 - 12</td>
+<td>BMU_SRC_SRE_MASK</td>
+<td>0x00001000</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>unsigned int SRR:1</td>
+<td>13 - 13</td>
+<td>BMU_SRC_SRR_MASK</td>
+<td>0x00002000</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>unsigned int CLRR:1</td>
+<td>14 - 14</td>
+<td>BMU_SRC_CLRR_MASK</td>
+<td>0x00004000</td>
+<td align="right">14</td>
+</tr>
+<tr>
+<td>unsigned int SETR:1</td>
+<td>15 - 15</td>
+<td>BMU_SRC_SETR_MASK</td>
+<td>0x00008000</td>
+<td align="right">15</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_SRC">BMU_SRC</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BMU_TID_t"><b>BMU_TID_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>FPI Transaction ID Set 0 Configuration</b></td></tr>
+<tr><td colspan="5"><b>BMU_TID_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int TID0:4</td>
+<td>0 - 3</td>
+<td>BMU_TID_TID0_MASK</td>
+<td>0x0000000f</td>
+<td align="right">0</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../bmu.html#BMU_TID">BMU_TID</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../bmu.html">BMU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+<dt><a name="BTV_t"><b>BTV_t</b></a></dt>
+<dd>
+&nbsp;<br>
+<table border="1" cellpadding="1" cellspacing="0">
+<tr><td colspan="5"><b>Base Trap Vector Table Pointer</b></td></tr>
+<tr><td colspan="5"><b>BTV_t.bits</b></td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Shift</b></td>
+</tr>
+<tr>
+<td>unsigned int BTV:31</td>
+<td>1 - 31</td>
+<td>BTV_BTV_MASK</td>
+<td>0xfffffffe</td>
+<td align="right">1</td>
+</tr>
+
+</table>
+
+<br>
+<dl>
+<dt>Registers</dt>
+<dd>
+<a class="url" href="../cpu.html#BTV">BTV</a>   
+
+</dd>
+<dt>Function Unit(s)</dt>
+<dd>
+<a class="url" href="../cpu.html">CPU</a>
+
+</dd>
+</dl>
+<hr>
+</dd>
+
+</dl>
+
+</body>
+</html>

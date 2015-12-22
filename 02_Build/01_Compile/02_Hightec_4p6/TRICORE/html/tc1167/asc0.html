@@ -1,0 +1,1387 @@
+<html>
+<head>
+<title>TriCore TC1167 (ASC0)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>ASC0</h2>
+
+<h2><tt>#include &lt;tc1167/asc0.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#ASC0_CLC">ASC0_CLC</a></td>
+<td>ASC0 Clock Control Register</td>
+<td>0xF0000A00</td>
+<td><a class="url" href="types/a.html#ASC0_CLC_t">ASC0_CLC_t</a></td>
+<td>0x00000003</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_PISEL">ASC0_PISEL</a></td>
+<td>ASC0 Peripheral Input Select Register</td>
+<td>0xF0000A04</td>
+<td><a class="url" href="types/a.html#ASCn_PISEL_t">ASCn_PISEL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_ID">ASC0_ID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0000A08</td>
+<td><a class="url" href="types/a.html#ASCn_ID_t">ASCn_ID_t</a></td>
+<td>0x000044XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_CON">ASC0_CON</a></td>
+<td>Control Register</td>
+<td>0xF0000A10</td>
+<td><a class="url" href="types/a.html#ASCn_CON_t">ASCn_CON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_BG">ASC0_BG</a></td>
+<td>Baud Rate Timer/Reload Register</td>
+<td>0xF0000A14</td>
+<td><a class="url" href="types/a.html#ASCn_BG_t">ASCn_BG_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_FDV">ASC0_FDV</a></td>
+<td>Fractional Divider Register</td>
+<td>0xF0000A18</td>
+<td><a class="url" href="types/a.html#ASCn_FDV_t">ASCn_FDV_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_TBUF">ASC0_TBUF</a></td>
+<td>Transmit Buffer Register</td>
+<td>0xF0000A20</td>
+<td><a class="url" href="types/a.html#ASCn_TBUF_t">ASCn_TBUF_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_RBUF">ASC0_RBUF</a></td>
+<td>Receive Buffer Register</td>
+<td>0xF0000A24</td>
+<td><a class="url" href="types/a.html#ASCn_RBUF_t">ASCn_RBUF_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_WHBCON">ASC0_WHBCON</a></td>
+<td>Write Hardware Bits Control Register</td>
+<td>0xF0000A50</td>
+<td><a class="url" href="types/a.html#ASCn_WHBCON_t">ASCn_WHBCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_TSRC">ASC0_TSRC</a></td>
+<td>Transmit Interrupt Service Request Control Register</td>
+<td>0xF0000AF0</td>
+<td><a class="url" href="types/a.html#ASCn_TSRC_t">ASCn_TSRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_RSRC">ASC0_RSRC</a></td>
+<td>Receive Interrupt Service Request Control Register</td>
+<td>0xF0000AF4</td>
+<td><a class="url" href="types/a.html#ASCn_RSRC_t">ASCn_RSRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_ESRC">ASC0_ESRC</a></td>
+<td>Error Interrupt Service Request Control Register</td>
+<td>0xF0000AF8</td>
+<td><a class="url" href="types/a.html#ASCn_ESRC_t">ASCn_ESRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ASC0_TBSRC">ASC0_TBSRC</a></td>
+<td>Transmit Buffer Interrupt Service Request Control Register</td>
+<td>0xF0000AFC</td>
+<td><a class="url" href="types/a.html#ASCn_TBSRC_t">ASCn_TBSRC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASC0_CLC_t">ASC0_CLC_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_CLC">ASC0_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_BG_t">ASCn_BG_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_BG">ASC0_BG</a>,       
+<a class="url" href="asc1.html#ASC1_BG">ASC1_BG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_CON_t">ASCn_CON_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_CON">ASC0_CON</a>,       
+<a class="url" href="asc1.html#ASC1_CON">ASC1_CON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_ESRC_t">ASCn_ESRC_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_ESRC">ASC0_ESRC</a>,       
+<a class="url" href="asc1.html#ASC1_ESRC">ASC1_ESRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_FDV_t">ASCn_FDV_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_FDV">ASC0_FDV</a>,       
+<a class="url" href="asc1.html#ASC1_FDV">ASC1_FDV</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_ID_t">ASCn_ID_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_ID">ASC0_ID</a>,       
+<a class="url" href="asc1.html#ASC1_ID">ASC1_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_PISEL_t">ASCn_PISEL_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_PISEL">ASC0_PISEL</a>,       
+<a class="url" href="asc1.html#ASC1_PISEL">ASC1_PISEL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_RBUF_t">ASCn_RBUF_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_RBUF">ASC0_RBUF</a>,       
+<a class="url" href="asc1.html#ASC1_RBUF">ASC1_RBUF</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_RSRC_t">ASCn_RSRC_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_RSRC">ASC0_RSRC</a>,       
+<a class="url" href="asc1.html#ASC1_RSRC">ASC1_RSRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_TBSRC_t">ASCn_TBSRC_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_TBSRC">ASC0_TBSRC</a>,       
+<a class="url" href="asc1.html#ASC1_TBSRC">ASC1_TBSRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_TBUF_t">ASCn_TBUF_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_TBUF">ASC0_TBUF</a>,       
+<a class="url" href="asc1.html#ASC1_TBUF">ASC1_TBUF</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_TSRC_t">ASCn_TSRC_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_TSRC">ASC0_TSRC</a>,       
+<a class="url" href="asc1.html#ASC1_TSRC">ASC1_TSRC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/a.html#ASCn_WHBCON_t">ASCn_WHBCON_t</a></td>
+<td><a class="url" href="asc0.html#ASC0_WHBCON">ASC0_WHBCON</a>,       
+<a class="url" href="asc1.html#ASC1_WHBCON">ASC1_WHBCON</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="ASC0_CLC">&nbsp;</a>
+<h3>ASC0_CLC</h3>
+<h3>"ASC0 Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_CLC_ADDR = 0xF0000A00</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASC0_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASC0_CLC_t">ASC0_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_CLC.bits</b>&nbsp;&quot;ASC0 Clock Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>ASC0_CLC_DISR_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>ASC0_CLC_DISR_SHIFT</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>ASC0_CLC_DISS_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>r</td>
+<td>ASC0_CLC_DISS_SHIFT</td>
+</tr>
+<tr>
+<td>SPEN</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>ASC0_CLC_SPEN_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>ASC0_CLC_SPEN_SHIFT</td>
+</tr>
+<tr>
+<td>EDIS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>ASC0_CLC_EDIS_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>ASC0_CLC_EDIS_SHIFT</td>
+</tr>
+<tr>
+<td>SBWE</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>ASC0_CLC_SBWE_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>ASC0_CLC_SBWE_SHIFT</td>
+</tr>
+<tr>
+<td>FSOE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>ASC0_CLC_FSOE_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>ASC0_CLC_FSOE_SHIFT</td>
+</tr>
+<tr>
+<td>RMC</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>ASC0_CLC_RMC_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>rw</td>
+<td>ASC0_CLC_RMC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASC0_CLC_MASK</td><td><tt>0x0000ff3f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ff2f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000ff3d</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_PISEL">&nbsp;</a>
+<h3>ASC0_PISEL</h3>
+<h3>"ASC0 Peripheral Input Select Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_PISEL_ADDR = 0xF0000A04</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_PISEL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_PISEL_t">ASCn_PISEL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_PISEL.bits</b>&nbsp;&quot;ASC0 Peripheral Input Select Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RIS</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>ASCn_PISEL_RIS_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>ASCn_PISEL_RIS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_PISEL_MASK</td><td><tt>0x00000001</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_ID">&nbsp;</a>
+<h3>ASC0_ID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_ID_ADDR = 0xF0000A08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000044XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_ID_t">ASCn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_ID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MODREV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>ASCn_ID_MODREV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>ASCn_ID_MODREV_SHIFT</td>
+</tr>
+<tr>
+<td>MODNUM</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>ASCn_ID_MODNUM_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>ASCn_ID_MODNUM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_ID_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_CON">&nbsp;</a>
+<h3>ASC0_CON</h3>
+<h3>"Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_CON_ADDR = 0xF0000A10</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_CON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_CON_t">ASCn_CON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_CON.bits</b>&nbsp;&quot;Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>M</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>ASCn_CON_M_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>ASCn_CON_M_SHIFT</td>
+</tr>
+<tr>
+<td>STP</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>ASCn_CON_STP_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>ASCn_CON_STP_SHIFT</td>
+</tr>
+<tr>
+<td>REN</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>ASCn_CON_REN_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rwh</td>
+<td>ASCn_CON_REN_SHIFT</td>
+</tr>
+<tr>
+<td>PEN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>ASCn_CON_PEN_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>ASCn_CON_PEN_SHIFT</td>
+</tr>
+<tr>
+<td>FEN</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>ASCn_CON_FEN_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>ASCn_CON_FEN_SHIFT</td>
+</tr>
+<tr>
+<td>OEN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>ASCn_CON_OEN_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>ASCn_CON_OEN_SHIFT</td>
+</tr>
+<tr>
+<td>PE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>ASCn_CON_PE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rwh</td>
+<td>ASCn_CON_PE_SHIFT</td>
+</tr>
+<tr>
+<td>FE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>ASCn_CON_FE_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rwh</td>
+<td>ASCn_CON_FE_SHIFT</td>
+</tr>
+<tr>
+<td>OE</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>ASCn_CON_OE_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rwh</td>
+<td>ASCn_CON_OE_SHIFT</td>
+</tr>
+<tr>
+<td>FDE</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>ASCn_CON_FDE_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rw</td>
+<td>ASCn_CON_FDE_SHIFT</td>
+</tr>
+<tr>
+<td>ODD</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>ASCn_CON_ODD_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>ASCn_CON_ODD_SHIFT</td>
+</tr>
+<tr>
+<td>BRS</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>ASCn_CON_BRS_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>ASCn_CON_BRS_SHIFT</td>
+</tr>
+<tr>
+<td>LB</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>ASCn_CON_LB_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>ASCn_CON_LB_SHIFT</td>
+</tr>
+<tr>
+<td>R</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>ASCn_CON_R_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>ASCn_CON_R_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_CON_MASK</td><td><tt>0x0000ffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000ffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000710</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_BG">&nbsp;</a>
+<h3>ASC0_BG</h3>
+<h3>"Baud Rate Timer/Reload Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_BG_ADDR = 0xF0000A14</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_BG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_BG_t">ASCn_BG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_BG.bits</b>&nbsp;&quot;Baud Rate Timer/Reload Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>BR_VALUE</td>
+<td>13</td>
+<td>0 - 12</td>
+<td>ASCn_BG_BR_VALUE_MASK</td>
+<td><tt>0x00001fff</tt></td>
+<td>rwh</td>
+<td>ASCn_BG_BR_VALUE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_BG_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_FDV">&nbsp;</a>
+<h3>ASC0_FDV</h3>
+<h3>"Fractional Divider Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_FDV_ADDR = 0xF0000A18</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_FDV_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_FDV_t">ASCn_FDV_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_FDV.bits</b>&nbsp;&quot;Fractional Divider Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FD_VALUE</td>
+<td>9</td>
+<td>0 - 8</td>
+<td>ASCn_FDV_FD_VALUE_MASK</td>
+<td><tt>0x000001ff</tt></td>
+<td>rw</td>
+<td>ASCn_FDV_FD_VALUE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_FDV_MASK</td><td><tt>0x000001ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_TBUF">&nbsp;</a>
+<h3>ASC0_TBUF</h3>
+<h3>"Transmit Buffer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_TBUF_ADDR = 0xF0000A20</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_TBUF_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_TBUF_t">ASCn_TBUF_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_TBUF.bits</b>&nbsp;&quot;Transmit Buffer Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TD_VALUE</td>
+<td>9</td>
+<td>0 - 8</td>
+<td>ASCn_TBUF_TD_VALUE_MASK</td>
+<td><tt>0x000001ff</tt></td>
+<td>rw</td>
+<td>ASCn_TBUF_TD_VALUE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_TBUF_MASK</td><td><tt>0x000001ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_RBUF">&nbsp;</a>
+<h3>ASC0_RBUF</h3>
+<h3>"Receive Buffer Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_RBUF_ADDR = 0xF0000A24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_RBUF_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_RBUF_t">ASCn_RBUF_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_RBUF.bits</b>&nbsp;&quot;Receive Buffer Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RD_VALUE</td>
+<td>9</td>
+<td>0 - 8</td>
+<td>ASCn_RBUF_RD_VALUE_MASK</td>
+<td><tt>0x000001ff</tt></td>
+<td>rh</td>
+<td>ASCn_RBUF_RD_VALUE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_RBUF_MASK</td><td><tt>0x000001ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000001ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_WHBCON">&nbsp;</a>
+<h3>ASC0_WHBCON</h3>
+<h3>"Write Hardware Bits Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_WHBCON_ADDR = 0xF0000A50</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_WHBCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_WHBCON_t">ASCn_WHBCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_WHBCON.bits</b>&nbsp;&quot;Write Hardware Bits Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CLRREN</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>ASCn_WHBCON_CLRREN_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_CLRREN_SHIFT</td>
+</tr>
+<tr>
+<td>SETREN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>ASCn_WHBCON_SETREN_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_SETREN_SHIFT</td>
+</tr>
+<tr>
+<td>CLRPE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>ASCn_WHBCON_CLRPE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_CLRPE_SHIFT</td>
+</tr>
+<tr>
+<td>CLRFE</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>ASCn_WHBCON_CLRFE_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_CLRFE_SHIFT</td>
+</tr>
+<tr>
+<td>CLROE</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>ASCn_WHBCON_CLROE_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_CLROE_SHIFT</td>
+</tr>
+<tr>
+<td>SETPE</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>ASCn_WHBCON_SETPE_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_SETPE_SHIFT</td>
+</tr>
+<tr>
+<td>SETFE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>ASCn_WHBCON_SETFE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_SETFE_SHIFT</td>
+</tr>
+<tr>
+<td>SETOE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>ASCn_WHBCON_SETOE_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>w</td>
+<td>ASCn_WHBCON_SETOE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_WHBCON_MASK</td><td><tt>0x00003f30</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00003f30</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_TSRC">&nbsp;</a>
+<h3>ASC0_TSRC</h3>
+<h3>"Transmit Interrupt Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_TSRC_ADDR = 0xF0000AF0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_TSRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_TSRC_t">ASCn_TSRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_TSRC.bits</b>&nbsp;&quot;Transmit Interrupt Service Request Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>ASCn_TSRC_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>ASCn_TSRC_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>ASCn_TSRC_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>ASCn_TSRC_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>ASCn_TSRC_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>ASCn_TSRC_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>ASCn_TSRC_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>ASCn_TSRC_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>ASCn_TSRC_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>ASCn_TSRC_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>ASCn_TSRC_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>ASCn_TSRC_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_TSRC_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_RSRC">&nbsp;</a>
+<h3>ASC0_RSRC</h3>
+<h3>"Receive Interrupt Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_RSRC_ADDR = 0xF0000AF4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_RSRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_RSRC_t">ASCn_RSRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_RSRC.bits</b>&nbsp;&quot;Receive Interrupt Service Request Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>ASCn_RSRC_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>ASCn_RSRC_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>ASCn_RSRC_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>ASCn_RSRC_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>ASCn_RSRC_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>ASCn_RSRC_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>ASCn_RSRC_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>ASCn_RSRC_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>ASCn_RSRC_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>ASCn_RSRC_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>ASCn_RSRC_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>ASCn_RSRC_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_RSRC_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_ESRC">&nbsp;</a>
+<h3>ASC0_ESRC</h3>
+<h3>"Error Interrupt Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_ESRC_ADDR = 0xF0000AF8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_ESRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_ESRC_t">ASCn_ESRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_ESRC.bits</b>&nbsp;&quot;Error Interrupt Service Request Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>ASCn_ESRC_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>ASCn_ESRC_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>ASCn_ESRC_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>ASCn_ESRC_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>ASCn_ESRC_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>ASCn_ESRC_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>ASCn_ESRC_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>ASCn_ESRC_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>ASCn_ESRC_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>ASCn_ESRC_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>ASCn_ESRC_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>ASCn_ESRC_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_ESRC_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ASC0_TBSRC">&nbsp;</a>
+<h3>ASC0_TBSRC</h3>
+<h3>"Transmit Buffer Interrupt Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ASC0_TBSRC_ADDR = 0xF0000AFC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>ASCn_TBSRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/a.html#ASCn_TBSRC_t">ASCn_TBSRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ASC0_TBSRC.bits</b>&nbsp;&quot;Transmit Buffer Interrupt Service Request Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>ASCn_TBSRC_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>ASCn_TBSRC_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>ASCn_TBSRC_TOS_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rw</td>
+<td>ASCn_TBSRC_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>ASCn_TBSRC_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>ASCn_TBSRC_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>ASCn_TBSRC_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>ASCn_TBSRC_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>ASCn_TBSRC_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>ASCn_TBSRC_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>ASCn_TBSRC_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>ASCn_TBSRC_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ASCn_TBSRC_MASK</td><td><tt>0x0000f4ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000034ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d4ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

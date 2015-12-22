@@ -1,0 +1,306 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1792/adc1-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1792_ADC1_STRUCTS_H_
+#define _TC1792_ADC1_STRUCTS_H_
+/*
+   TriCore TC1792
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1792/<a class="url" href="../adc1.html">adc1.h</a>&gt;
+#ifndef ADC1_BASE
+#define ADC1_BASE 0xf0100600
+#endif /* ADC1_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved0[0x4];</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHCONm_t">ADCn_CHCONm_t</a></td>
+<td>CHCON[0x10];</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved2[0xd];</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_AP_t">ADCn_AP_t</a></td>
+<td>AP;</td>
+<td>/* 0x84 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SAL_t">ADCn_SAL_t</a></td>
+<td>SAL;</td>
+<td>/* 0x88 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_TTC_t">ADCn_TTC_t</a></td>
+<td>TTC;</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_EXTC_t">ADCn_EXTC_t</a></td>
+<td>EXTC;</td>
+<td>/* 0x90 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved7[0x1];</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SCON_t">ADCn_SCON_t</a></td>
+<td>SCON;</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved9[0x19];</td>
+<td>/* 0x9c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCCONm_t">ADCn_LCCONm_t</a></td>
+<td>LCCON0;</td>
+<td>/* 0x100 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCCONm_t">ADCn_LCCONm_t</a></td>
+<td>LCCON1;</td>
+<td>/* 0x104 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCCONm_t">ADCn_LCCONm_t</a></td>
+<td>LCCON2;</td>
+<td>/* 0x108 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_LCCONm_t">ADCn_LCCONm_t</a></td>
+<td>LCCON3;</td>
+<td>/* 0x10c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved14[0x1];</td>
+<td>/* 0x110 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_TCON_t">ADCn_TCON_t</a></td>
+<td>TCON;</td>
+<td>/* 0x114 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHIN_t">ADCn_CHIN_t</a></td>
+<td>CHIN;</td>
+<td>/* 0x118 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QR_t">ADCn_QR_t</a></td>
+<td>QR;</td>
+<td>/* 0x11c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CON_t">ADCn_CON_t</a></td>
+<td>CON;</td>
+<td>/* 0x120 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SCN_t">ADCn_SCN_t</a></td>
+<td>SCN;</td>
+<td>/* 0x124 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_REQ0_t">ADCn_REQ0_t</a></td>
+<td>REQ0;</td>
+<td>/* 0x128 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved21[0x1];</td>
+<td>/* 0x12c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_CHSTATm_t">ADCn_CHSTATm_t</a></td>
+<td>CHSTAT[0x10];</td>
+<td>/* 0x130 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_QUEUE0_t">ADCn_QUEUE0_t</a></td>
+<td>QUEUE0;</td>
+<td>/* 0x170 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved24[0x3];</td>
+<td>/* 0x174 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SW0CRP_t">ADCn_SW0CRP_t</a></td>
+<td>SW0CRP;</td>
+<td>/* 0x180 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved26[0x1];</td>
+<td>/* 0x184 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_ASCRP_t">ADCn_ASCRP_t</a></td>
+<td>ASCRP;</td>
+<td>/* 0x188 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved28[0x1];</td>
+<td>/* 0x18c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SYSTAT_t">ADCn_SYSTAT_t</a></td>
+<td>SYSTAT;</td>
+<td>/* 0x190 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved30[0x7];</td>
+<td>/* 0x194 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_TSTAT_t">ADCn_TSTAT_t</a></td>
+<td>TSTAT;</td>
+<td>/* 0x1b0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_STAT_t">ADCn_STAT_t</a></td>
+<td>STAT;</td>
+<td>/* 0x1b4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_TCRP_t">ADCn_TCRP_t</a></td>
+<td>TCRP;</td>
+<td>/* 0x1b8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_EXCRP_t">ADCn_EXCRP_t</a></td>
+<td>EXCRP;</td>
+<td>/* 0x1bc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved35[0x4];</td>
+<td>/* 0x1c0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_MSS0_t">ADCn_MSS0_t</a></td>
+<td>MSS0;</td>
+<td>/* 0x1d0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_MSS1_t">ADCn_MSS1_t</a></td>
+<td>MSS1;</td>
+<td>/* 0x1d4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved38[0x1];</td>
+<td>/* 0x1d8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SRNP_t">ADCn_SRNP_t</a></td>
+<td>SRNP;</td>
+<td>/* 0x1dc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved40[0x4];</td>
+<td>/* 0x1e0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SRCm_t">ADCn_SRCm_t</a></td>
+<td>SRC3;</td>
+<td>/* 0x1f0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SRCm_t">ADCn_SRCm_t</a></td>
+<td>SRC2;</td>
+<td>/* 0x1f4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SRCm_t">ADCn_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0x1f8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/a.html#ADCn_SRCm_t">ADCn_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0x1fc */</td>
+</tr>
+
+<tr><td colspan="4">} ADC1_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1792_ADC1_STRUCTS_H_ */ -->
+</body>
+</html>

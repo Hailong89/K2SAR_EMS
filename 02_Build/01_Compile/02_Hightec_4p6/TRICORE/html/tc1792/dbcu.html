@@ -1,0 +1,586 @@
+<html>
+<head>
+<title>TriCore TC1792 (DBCU)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>DBCU</h2>
+
+<h2><tt>#include &lt;tc1792/dbcu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#DBCU_ID">DBCU_ID</a></td>
+<td>DBCU Module Identification Register</td>
+<td>0xF87FFA08</td>
+<td><a class="url" href="types/d.html#DBCU_ID_t">DBCU_ID_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DBCU_LEATT">DBCU_LEATT</a></td>
+<td>DBCU LMB Error Attribute Register</td>
+<td>0xF87FFA20</td>
+<td><a class="url" href="types/d.html#DBCU_LEATT_t">DBCU_LEATT_t</a></td>
+<td>0xXXXXXXX0</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DBCU_LEADDR">DBCU_LEADDR</a></td>
+<td>DBCU LMB Error Address Register</td>
+<td>0xF87FFA24</td>
+<td><a class="url" href="types/d.html#DBCU_LEADDR_t">DBCU_LEADDR_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV,32</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DBCU_LEDATL">DBCU_LEDATL</a></td>
+<td>DBCU LMB Error Data Low Register</td>
+<td>0xF87FFA28</td>
+<td><a class="url" href="types/d.html#DBCU_LEDATL_t">DBCU_LEDATL_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV,32</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DBCU_LEDATH">DBCU_LEDATH</a></td>
+<td>DBCU LMB Error Data High Register</td>
+<td>0xF87FFA2C</td>
+<td><a class="url" href="types/d.html#DBCU_LEDATH_t">DBCU_LEDATH_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV,32</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DBCU_SRC">DBCU_SRC</a></td>
+<td>DBCU Service Request Control Register</td>
+<td>0xF87FFAFC</td>
+<td><a class="url" href="types/d.html#DBCU_SRC_t">DBCU_SRC_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DBCU_ID_t">DBCU_ID_t</a></td>
+<td><a class="url" href="dbcu.html#DBCU_ID">DBCU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DBCU_LEADDR_t">DBCU_LEADDR_t</a></td>
+<td><a class="url" href="dbcu.html#DBCU_LEADDR">DBCU_LEADDR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DBCU_LEATT_t">DBCU_LEATT_t</a></td>
+<td><a class="url" href="dbcu.html#DBCU_LEATT">DBCU_LEATT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DBCU_LEDATH_t">DBCU_LEDATH_t</a></td>
+<td><a class="url" href="dbcu.html#DBCU_LEDATH">DBCU_LEDATH</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DBCU_LEDATL_t">DBCU_LEDATL_t</a></td>
+<td><a class="url" href="dbcu.html#DBCU_LEDATL">DBCU_LEDATL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DBCU_SRC_t">DBCU_SRC_t</a></td>
+<td><a class="url" href="dbcu.html#DBCU_SRC">DBCU_SRC</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="DBCU_ID">&nbsp;</a>
+<h3>DBCU_ID</h3>
+<h3>"DBCU Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DBCU_ID_ADDR = 0xF87FFA08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DBCU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DBCU_ID_t">DBCU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DBCU_ID.bits</b>&nbsp;&quot;DBCU Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DBCU_ID_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DBCU_LEATT">&nbsp;</a>
+<h3>DBCU_LEATT</h3>
+<h3>"DBCU LMB Error Attribute Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DBCU_LEATT_ADDR = 0xF87FFA20</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DBCU_LEATT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXX0</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DBCU_LEATT_t">DBCU_LEATT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DBCU_LEATT.bits</b>&nbsp;&quot;DBCU LMB Error Attribute Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LEC</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>DBCU_LEATT_LEC_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rwh</td>
+<td>DBCU_LEATT_LEC_SHIFT</td>
+</tr>
+<tr>
+<td>FPITAG</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>DBCU_LEATT_FPITAG_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_FPITAG_SHIFT</td>
+</tr>
+<tr>
+<td>LOC</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>DBCU_LEATT_LOC_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_LOC_SHIFT</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>3</td>
+<td>16 - 18</td>
+<td>DBCU_LEATT_ACK_MASK</td>
+<td><tt>0x00070000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_ACK_SHIFT</td>
+</tr>
+<tr>
+<td>UIS</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>DBCU_LEATT_UIS_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_UIS_SHIFT</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>DBCU_LEATT_SVM_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_SVM_SHIFT</td>
+</tr>
+<tr>
+<td>WR</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>DBCU_LEATT_WR_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_WR_SHIFT</td>
+</tr>
+<tr>
+<td>RD</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>DBCU_LEATT_RD_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_RD_SHIFT</td>
+</tr>
+<tr>
+<td>TAG</td>
+<td>3</td>
+<td>24 - 26</td>
+<td>DBCU_LEATT_TAG_MASK</td>
+<td><tt>0x07000000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_TAG_SHIFT</td>
+</tr>
+<tr>
+<td>OPC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DBCU_LEATT_OPC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rh</td>
+<td>DBCU_LEATT_OPC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DBCU_LEATT_MASK</td><td><tt>0xf7ef80f1</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf7ef80f1</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xf7ef80f1</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DBCU_LEADDR">&nbsp;</a>
+<h3>DBCU_LEADDR</h3>
+<h3>"DBCU LMB Error Address Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DBCU_LEADDR_ADDR = 0xF87FFA24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DBCU_LEADDR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DBCU_LEADDR_t">DBCU_LEADDR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DBCU_LEADDR.bits</b>&nbsp;&quot;DBCU LMB Error Address Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LEADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>DBCU_LEADDR_LEADDR_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>DBCU_LEADDR_LEADDR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DBCU_LEADDR_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DBCU_LEDATL">&nbsp;</a>
+<h3>DBCU_LEDATL</h3>
+<h3>"DBCU LMB Error Data Low Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DBCU_LEDATL_ADDR = 0xF87FFA28</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DBCU_LEDATL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DBCU_LEDATL_t">DBCU_LEDATL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DBCU_LEDATL.bits</b>&nbsp;&quot;DBCU LMB Error Data Low Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LEDAT_31_0</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>DBCU_LEDATL_LEDAT_31_0_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>DBCU_LEDATL_LEDAT_31_0_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DBCU_LEDATL_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DBCU_LEDATH">&nbsp;</a>
+<h3>DBCU_LEDATH</h3>
+<h3>"DBCU LMB Error Data High Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DBCU_LEDATH_ADDR = 0xF87FFA2C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DBCU_LEDATH_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DBCU_LEDATH_t">DBCU_LEDATH_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DBCU_LEDATH.bits</b>&nbsp;&quot;DBCU LMB Error Data High Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>LEDAT_63_32</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>DBCU_LEDATH_LEDAT_63_32_MASK</td>
+<td><tt>0xffffffff</tt></td>
+<td>rh</td>
+<td>DBCU_LEDATH_LEDAT_63_32_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DBCU_LEDATH_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DBCU_SRC">&nbsp;</a>
+<h3>DBCU_SRC</h3>
+<h3>"DBCU Service Request Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DBCU_SRC_ADDR = 0xF87FFAFC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DBCU_SRC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DBCU_SRC_t">DBCU_SRC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DBCU_SRC.bits</b>&nbsp;&quot;DBCU Service Request Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>DBCU_SRC_SRPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rw</td>
+<td>DBCU_SRC_SRPN_SHIFT</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>DBCU_SRC_TOS_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>r</td>
+<td>DBCU_SRC_TOS_SHIFT</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>DBCU_SRC_SRE_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>DBCU_SRC_SRE_SHIFT</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>DBCU_SRC_SRR_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>DBCU_SRC_SRR_SHIFT</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>DBCU_SRC_CLRR_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>w</td>
+<td>DBCU_SRC_CLRR_SHIFT</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>DBCU_SRC_SETR_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>w</td>
+<td>DBCU_SRC_SETR_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DBCU_SRC_MASK</td><td><tt>0x0000fcff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00003cff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000d0ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

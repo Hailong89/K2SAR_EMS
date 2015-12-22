@@ -1,0 +1,3388 @@
+<html>
+<head>
+<title>TriCore TC1767 (EBU)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>EBU</h2>
+
+<h2><tt>#include &lt;tc1767/ebu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#EBU_CLC">EBU_CLC</a></td>
+<td>EBU Clock Control Register</td>
+<td>0xF8000000</td>
+<td><a class="url" href="types/e.html#EBU_CLC_t">EBU_CLC_t</a></td>
+<td>0x00010000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_MODCON">EBU_MODCON</a></td>
+<td>EBU Configuration Register</td>
+<td>0xF8000004</td>
+<td><a class="url" href="types/e.html#EBU_MODCON_t">EBU_MODCON_t</a></td>
+<td>0x00000021</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_USERCON">EBU_USERCON</a></td>
+<td>EBU Test/Control Configuration Register</td>
+<td>0xF800000C</td>
+<td><a class="url" href="types/e.html#EBU_USERCON_t">EBU_USERCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_EXTBOOT">EBU_EXTBOOT</a></td>
+<td>EBU External Boot Configuration Register</td>
+<td>0xF8000010</td>
+<td><a class="url" href="types/e.html#EBU_EXTBOOT_t">EBU_EXTBOOT_t</a></td>
+<td>0x00000001</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_ADDRSEL0">EBU_ADDRSEL0</a></td>
+<td>EBU Address Select Register 0</td>
+<td>0xF8000018</td>
+<td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td>
+<td>0xA0000001</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_ADDRSEL1">EBU_ADDRSEL1</a></td>
+<td>EBU Address Select Register 1</td>
+<td>0xF800001C</td>
+<td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_ADDRSEL2">EBU_ADDRSEL2</a></td>
+<td>EBU Address Select Register 2</td>
+<td>0xF8000020</td>
+<td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_ADDRSEL3">EBU_ADDRSEL3</a></td>
+<td>EBU Address Select Register 3</td>
+<td>0xF8000024</td>
+<td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRCON0">EBU_BUSRCON0</a></td>
+<td>EBU Bus Configuration Register</td>
+<td>0xF8000028</td>
+<td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td>
+<td>0x00530040</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRAP0">EBU_BUSRAP0</a></td>
+<td>EBU Bus Read Access Parameter Register</td>
+<td>0xF800002C</td>
+<td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWCON0">EBU_BUSWCON0</a></td>
+<td>EBU Bus Write Configuration Register</td>
+<td>0xF8000030</td>
+<td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td>
+<td>0x00530000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWAP0">EBU_BUSWAP0</a></td>
+<td>EBU Bus Write Access Parameter Register</td>
+<td>0xF8000034</td>
+<td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRCON1">EBU_BUSRCON1</a></td>
+<td>EBU Bus Configuration Register</td>
+<td>0xF8000038</td>
+<td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td>
+<td>0x00530040</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRAP1">EBU_BUSRAP1</a></td>
+<td>EBU Bus Read Access Parameter Register</td>
+<td>0xF800003C</td>
+<td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWCON1">EBU_BUSWCON1</a></td>
+<td>EBU Bus Write Configuration Register</td>
+<td>0xF8000040</td>
+<td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td>
+<td>0x00530000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWAP1">EBU_BUSWAP1</a></td>
+<td>EBU Bus Write Access Parameter Register</td>
+<td>0xF8000044</td>
+<td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRCON2">EBU_BUSRCON2</a></td>
+<td>EBU Bus Configuration Register</td>
+<td>0xF8000048</td>
+<td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td>
+<td>0x00530040</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRAP2">EBU_BUSRAP2</a></td>
+<td>EBU Bus Read Access Parameter Register</td>
+<td>0xF800004C</td>
+<td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWCON2">EBU_BUSWCON2</a></td>
+<td>EBU Bus Write Configuration Register</td>
+<td>0xF8000050</td>
+<td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td>
+<td>0x00530000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWAP2">EBU_BUSWAP2</a></td>
+<td>EBU Bus Write Access Parameter Register</td>
+<td>0xF8000054</td>
+<td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRCON3">EBU_BUSRCON3</a></td>
+<td>EBU Bus Configuration Register</td>
+<td>0xF8000058</td>
+<td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td>
+<td>0x00530040</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSRAP3">EBU_BUSRAP3</a></td>
+<td>EBU Bus Read Access Parameter Register</td>
+<td>0xF800005C</td>
+<td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWCON3">EBU_BUSWCON3</a></td>
+<td>EBU Bus Write Configuration Register</td>
+<td>0xF8000060</td>
+<td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td>
+<td>0x00530000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#EBU_BUSWAP3">EBU_BUSWAP3</a></td>
+<td>EBU Bus Write Access Parameter Register</td>
+<td>0xF8000064</td>
+<td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td>
+<td>0xFFFFFFFF</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td>
+<td><a class="url" href="ebu.html#EBU_ADDRSEL0">EBU_ADDRSEL0</a>,       
+<a class="url" href="ebu.html#EBU_ADDRSEL1">EBU_ADDRSEL1</a>,       
+<a class="url" href="ebu.html#EBU_ADDRSEL2">EBU_ADDRSEL2</a>,       
+<a class="url" href="ebu.html#EBU_ADDRSEL3">EBU_ADDRSEL3</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td>
+<td><a class="url" href="ebu.html#EBU_BUSRAP0">EBU_BUSRAP0</a>,       
+<a class="url" href="ebu.html#EBU_BUSRAP1">EBU_BUSRAP1</a>,       
+<a class="url" href="ebu.html#EBU_BUSRAP2">EBU_BUSRAP2</a>,       
+<a class="url" href="ebu.html#EBU_BUSRAP3">EBU_BUSRAP3</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td>
+<td><a class="url" href="ebu.html#EBU_BUSRCON0">EBU_BUSRCON0</a>,       
+<a class="url" href="ebu.html#EBU_BUSRCON1">EBU_BUSRCON1</a>,       
+<a class="url" href="ebu.html#EBU_BUSRCON2">EBU_BUSRCON2</a>,       
+<a class="url" href="ebu.html#EBU_BUSRCON3">EBU_BUSRCON3</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td>
+<td><a class="url" href="ebu.html#EBU_BUSWAP0">EBU_BUSWAP0</a>,       
+<a class="url" href="ebu.html#EBU_BUSWAP1">EBU_BUSWAP1</a>,       
+<a class="url" href="ebu.html#EBU_BUSWAP2">EBU_BUSWAP2</a>,       
+<a class="url" href="ebu.html#EBU_BUSWAP3">EBU_BUSWAP3</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td>
+<td><a class="url" href="ebu.html#EBU_BUSWCON0">EBU_BUSWCON0</a>,       
+<a class="url" href="ebu.html#EBU_BUSWCON1">EBU_BUSWCON1</a>,       
+<a class="url" href="ebu.html#EBU_BUSWCON2">EBU_BUSWCON2</a>,       
+<a class="url" href="ebu.html#EBU_BUSWCON3">EBU_BUSWCON3</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_CLC_t">EBU_CLC_t</a></td>
+<td><a class="url" href="ebu.html#EBU_CLC">EBU_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_EXTBOOT_t">EBU_EXTBOOT_t</a></td>
+<td><a class="url" href="ebu.html#EBU_EXTBOOT">EBU_EXTBOOT</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_MODCON_t">EBU_MODCON_t</a></td>
+<td><a class="url" href="ebu.html#EBU_MODCON">EBU_MODCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/e.html#EBU_USERCON_t">EBU_USERCON_t</a></td>
+<td><a class="url" href="ebu.html#EBU_USERCON">EBU_USERCON</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="EBU_CLC">&nbsp;</a>
+<h3>EBU_CLC</h3>
+<h3>"EBU Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_CLC_ADDR = 0xF8000000</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00010000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_CLC_t">EBU_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_CLC.bits</b>&nbsp;&quot;EBU Clock Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_CLC_DISR_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>EBU_CLC_DISR_SHIFT</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>EBU_CLC_DISS_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>r</td>
+<td>EBU_CLC_DISS_SHIFT</td>
+</tr>
+<tr>
+<td>EPE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>EBU_CLC_EPE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rw</td>
+<td>EBU_CLC_EPE_SHIFT</td>
+</tr>
+<tr>
+<td>SYNC</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_CLC_SYNC_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_CLC_SYNC_SHIFT</td>
+</tr>
+<tr>
+<td>DDR</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_CLC_DDR_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_CLC_DDR_SHIFT</td>
+</tr>
+<tr>
+<td>EBUDIV</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_CLC_EBUDIV_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_CLC_EBUDIV_SHIFT</td>
+</tr>
+<tr>
+<td>SYNCACK</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>EBU_CLC_SYNCACK_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>r</td>
+<td>EBU_CLC_SYNCACK_SHIFT</td>
+</tr>
+<tr>
+<td>DDRACK</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>EBU_CLC_DDRACK_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>r</td>
+<td>EBU_CLC_DDRACK_SHIFT</td>
+</tr>
+<tr>
+<td>EBUDIVACK</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_CLC_EBUDIVACK_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>r</td>
+<td>EBU_CLC_EBUDIVACK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_CLC_MASK</td><td><tt>0x00ff0103</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00ff0103</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000f0101</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_MODCON">&nbsp;</a>
+<h3>EBU_MODCON</h3>
+<h3>"EBU Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_MODCON_ADDR = 0xF8000004</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_MODCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000021</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_MODCON_t">EBU_MODCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_MODCON.bits</b>&nbsp;&quot;EBU Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STS</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_MODCON_STS_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>r</td>
+<td>EBU_MODCON_STS_SHIFT</td>
+</tr>
+<tr>
+<td>LCKABRT</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>EBU_MODCON_LCKABRT_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>EBU_MODCON_LCKABRT_SHIFT</td>
+</tr>
+<tr>
+<td>EXTLOCK</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>EBU_MODCON_EXTLOCK_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>EBU_MODCON_EXTLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>ARBSYNC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>EBU_MODCON_ARBSYNC_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>EBU_MODCON_ARBSYNC_SHIFT</td>
+</tr>
+<tr>
+<td>ARBMODE</td>
+<td>2</td>
+<td>6 - 7</td>
+<td>EBU_MODCON_ARBMODE_MASK</td>
+<td><tt>0x000000c0</tt></td>
+<td>rw</td>
+<td>EBU_MODCON_ARBMODE_SHIFT</td>
+</tr>
+<tr>
+<td>TIMEOUTC</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>EBU_MODCON_TIMEOUTC_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>rw</td>
+<td>EBU_MODCON_TIMEOUTC_SHIFT</td>
+</tr>
+<tr>
+<td>LOCK_TIMEOUT</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>EBU_MODCON_LOCK_TIMEOUT_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rw</td>
+<td>EBU_MODCON_LOCK_TIMEOUT_SHIFT</td>
+</tr>
+<tr>
+<td>ALE</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>EBU_MODCON_ALE_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>EBU_MODCON_ALE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_MODCON_MASK</td><td><tt>0x80fffff3</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x80fffff3</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x80fffff2</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_USERCON">&nbsp;</a>
+<h3>EBU_USERCON</h3>
+<h3>"EBU Test/Control Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_USERCON_ADDR = 0xF800000C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_USERCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_USERCON_t">EBU_USERCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_USERCON.bits</b>&nbsp;&quot;EBU Test/Control Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>DIP</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_USERCON_DIP_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>EBU_USERCON_DIP_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_USERCON_MASK</td><td><tt>0x00000001</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_EXTBOOT">&nbsp;</a>
+<h3>EBU_EXTBOOT</h3>
+<h3>"EBU External Boot Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_EXTBOOT_ADDR = 0xF8000010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_EXTBOOT_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_EXTBOOT_t">EBU_EXTBOOT_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_EXTBOOT.bits</b>&nbsp;&quot;EBU External Boot Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CFGEND</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_EXTBOOT_CFGEND_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>EBU_EXTBOOT_CFGEND_SHIFT</td>
+</tr>
+<tr>
+<td>CFGERR</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>EBU_EXTBOOT_CFGERR_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>EBU_EXTBOOT_CFGERR_SHIFT</td>
+</tr>
+<tr>
+<td>EBUCFG</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>EBU_EXTBOOT_EBUCFG_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>w</td>
+<td>EBU_EXTBOOT_EBUCFG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_EXTBOOT_MASK</td><td><tt>0x80000003</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000003</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x80000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000003</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_ADDRSEL0">&nbsp;</a>
+<h3>EBU_ADDRSEL0</h3>
+<h3>"EBU Address Select Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_ADDRSEL0_ADDR = 0xF8000018</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_ADDRSELm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xA0000001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_ADDRSEL0.bits</b>&nbsp;&quot;EBU Address Select Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>REGENAB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_ADDRSELm_REGENAB_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_REGENAB_SHIFT</td>
+</tr>
+<tr>
+<td>ALTENAB</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>EBU_ADDRSELm_ALTENAB_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTENAB_SHIFT</td>
+</tr>
+<tr>
+<td>WPROT</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>EBU_ADDRSELm_WPROT_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_WPROT_SHIFT</td>
+</tr>
+<tr>
+<td>MASK</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>EBU_ADDRSELm_MASK_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_MASK_SHIFT</td>
+</tr>
+<tr>
+<td>ALTSEG</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>EBU_ADDRSELm_ALTSEG_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTSEG_SHIFT</td>
+</tr>
+<tr>
+<td>BASE</td>
+<td>20</td>
+<td>12 - 31</td>
+<td>EBU_ADDRSELm_BASE_MASK</td>
+<td><tt>0xfffff000</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_BASE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_ADDRSELm_MASK</td><td><tt>0xfffffff7</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_ADDRSEL1">&nbsp;</a>
+<h3>EBU_ADDRSEL1</h3>
+<h3>"EBU Address Select Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_ADDRSEL1_ADDR = 0xF800001C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_ADDRSELm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_ADDRSEL1.bits</b>&nbsp;&quot;EBU Address Select Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>REGENAB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_ADDRSELm_REGENAB_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_REGENAB_SHIFT</td>
+</tr>
+<tr>
+<td>ALTENAB</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>EBU_ADDRSELm_ALTENAB_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTENAB_SHIFT</td>
+</tr>
+<tr>
+<td>WPROT</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>EBU_ADDRSELm_WPROT_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_WPROT_SHIFT</td>
+</tr>
+<tr>
+<td>MASK</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>EBU_ADDRSELm_MASK_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_MASK_SHIFT</td>
+</tr>
+<tr>
+<td>ALTSEG</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>EBU_ADDRSELm_ALTSEG_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTSEG_SHIFT</td>
+</tr>
+<tr>
+<td>BASE</td>
+<td>20</td>
+<td>12 - 31</td>
+<td>EBU_ADDRSELm_BASE_MASK</td>
+<td><tt>0xfffff000</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_BASE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_ADDRSELm_MASK</td><td><tt>0xfffffff7</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_ADDRSEL2">&nbsp;</a>
+<h3>EBU_ADDRSEL2</h3>
+<h3>"EBU Address Select Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_ADDRSEL2_ADDR = 0xF8000020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_ADDRSELm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_ADDRSEL2.bits</b>&nbsp;&quot;EBU Address Select Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>REGENAB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_ADDRSELm_REGENAB_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_REGENAB_SHIFT</td>
+</tr>
+<tr>
+<td>ALTENAB</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>EBU_ADDRSELm_ALTENAB_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTENAB_SHIFT</td>
+</tr>
+<tr>
+<td>WPROT</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>EBU_ADDRSELm_WPROT_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_WPROT_SHIFT</td>
+</tr>
+<tr>
+<td>MASK</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>EBU_ADDRSELm_MASK_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_MASK_SHIFT</td>
+</tr>
+<tr>
+<td>ALTSEG</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>EBU_ADDRSELm_ALTSEG_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTSEG_SHIFT</td>
+</tr>
+<tr>
+<td>BASE</td>
+<td>20</td>
+<td>12 - 31</td>
+<td>EBU_ADDRSELm_BASE_MASK</td>
+<td><tt>0xfffff000</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_BASE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_ADDRSELm_MASK</td><td><tt>0xfffffff7</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_ADDRSEL3">&nbsp;</a>
+<h3>EBU_ADDRSEL3</h3>
+<h3>"EBU Address Select Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_ADDRSEL3_ADDR = 0xF8000024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_ADDRSELm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_ADDRSELm_t">EBU_ADDRSELm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_ADDRSEL3.bits</b>&nbsp;&quot;EBU Address Select Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>REGENAB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>EBU_ADDRSELm_REGENAB_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_REGENAB_SHIFT</td>
+</tr>
+<tr>
+<td>ALTENAB</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>EBU_ADDRSELm_ALTENAB_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTENAB_SHIFT</td>
+</tr>
+<tr>
+<td>WPROT</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>EBU_ADDRSELm_WPROT_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_WPROT_SHIFT</td>
+</tr>
+<tr>
+<td>MASK</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>EBU_ADDRSELm_MASK_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_MASK_SHIFT</td>
+</tr>
+<tr>
+<td>ALTSEG</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>EBU_ADDRSELm_ALTSEG_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_ALTSEG_SHIFT</td>
+</tr>
+<tr>
+<td>BASE</td>
+<td>20</td>
+<td>12 - 31</td>
+<td>EBU_ADDRSELm_BASE_MASK</td>
+<td><tt>0xfffff000</tt></td>
+<td>rw</td>
+<td>EBU_ADDRSELm_BASE_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_ADDRSELm_MASK</td><td><tt>0xfffffff7</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffff7</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRCON0">&nbsp;</a>
+<h3>EBU_BUSRCON0</h3>
+<h3>"EBU Bus Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRCON0_ADDR = 0xF8000028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530040</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRCON0.bits</b>&nbsp;&quot;EBU Bus Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSRCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSRCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>BFSSS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>EBU_BUSRCONm_BFSSS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFSSS_SHIFT</td>
+</tr>
+<tr>
+<td>FDBKEN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>EBU_BUSRCONm_FDBKEN_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FDBKEN_SHIFT</td>
+</tr>
+<tr>
+<td>BFCMSEL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>EBU_BUSRCONm_BFCMSEL_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFCMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSRCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSRCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSRCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>DBA</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>EBU_BUSRCONm_DBA_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_DBA_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSRCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSRCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSRCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSRCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSRCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRCONm_MASK</td><td><tt>0xf7ff00ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRAP0">&nbsp;</a>
+<h3>EBU_BUSRAP0</h3>
+<h3>"EBU Bus Read Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRAP0_ADDR = 0xF800002C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRAP0.bits</b>&nbsp;&quot;EBU Bus Read Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RDDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSRAPm_RDDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>RDRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSRAPm_RDRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITRDC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSRAPm_WAITRDC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_WAITRDC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSRAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSRAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSRAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSRAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWCON0">&nbsp;</a>
+<h3>EBU_BUSWCON0</h3>
+<h3>"EBU Bus Write Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWCON0_ADDR = 0xF8000030</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWCON0.bits</b>&nbsp;&quot;EBU Bus Write Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSWCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSWCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSWCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSWCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSWCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSWCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSWCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSWCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSWCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSWCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>LOCKCS</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>EBU_BUSWCONm_LOCKCS_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_LOCKCS_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWCONm_MASK</td><td><tt>0xfffb008f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffb008f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff3b000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWAP0">&nbsp;</a>
+<h3>EBU_BUSWAP0</h3>
+<h3>"EBU Bus Write Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWAP0_ADDR = 0xF8000034</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWAP0.bits</b>&nbsp;&quot;EBU Bus Write Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WRDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSWAPm_WRDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>WRRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSWAPm_WRRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITWRC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSWAPm_WAITWRC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WAITWRC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSWAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSWAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSWAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSWAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRCON1">&nbsp;</a>
+<h3>EBU_BUSRCON1</h3>
+<h3>"EBU Bus Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRCON1_ADDR = 0xF8000038</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530040</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRCON1.bits</b>&nbsp;&quot;EBU Bus Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSRCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSRCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>BFSSS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>EBU_BUSRCONm_BFSSS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFSSS_SHIFT</td>
+</tr>
+<tr>
+<td>FDBKEN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>EBU_BUSRCONm_FDBKEN_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FDBKEN_SHIFT</td>
+</tr>
+<tr>
+<td>BFCMSEL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>EBU_BUSRCONm_BFCMSEL_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFCMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSRCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSRCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSRCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>DBA</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>EBU_BUSRCONm_DBA_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_DBA_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSRCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSRCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSRCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSRCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSRCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRCONm_MASK</td><td><tt>0xf7ff00ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRAP1">&nbsp;</a>
+<h3>EBU_BUSRAP1</h3>
+<h3>"EBU Bus Read Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRAP1_ADDR = 0xF800003C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRAP1.bits</b>&nbsp;&quot;EBU Bus Read Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RDDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSRAPm_RDDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>RDRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSRAPm_RDRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITRDC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSRAPm_WAITRDC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_WAITRDC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSRAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSRAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSRAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSRAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWCON1">&nbsp;</a>
+<h3>EBU_BUSWCON1</h3>
+<h3>"EBU Bus Write Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWCON1_ADDR = 0xF8000040</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWCON1.bits</b>&nbsp;&quot;EBU Bus Write Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSWCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSWCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSWCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSWCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSWCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSWCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSWCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSWCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSWCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSWCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>LOCKCS</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>EBU_BUSWCONm_LOCKCS_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_LOCKCS_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWCONm_MASK</td><td><tt>0xfffb008f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffb008f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff3b000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWAP1">&nbsp;</a>
+<h3>EBU_BUSWAP1</h3>
+<h3>"EBU Bus Write Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWAP1_ADDR = 0xF8000044</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWAP1.bits</b>&nbsp;&quot;EBU Bus Write Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WRDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSWAPm_WRDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>WRRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSWAPm_WRRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITWRC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSWAPm_WAITWRC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WAITWRC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSWAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSWAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSWAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSWAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRCON2">&nbsp;</a>
+<h3>EBU_BUSRCON2</h3>
+<h3>"EBU Bus Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRCON2_ADDR = 0xF8000048</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530040</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRCON2.bits</b>&nbsp;&quot;EBU Bus Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSRCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSRCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>BFSSS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>EBU_BUSRCONm_BFSSS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFSSS_SHIFT</td>
+</tr>
+<tr>
+<td>FDBKEN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>EBU_BUSRCONm_FDBKEN_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FDBKEN_SHIFT</td>
+</tr>
+<tr>
+<td>BFCMSEL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>EBU_BUSRCONm_BFCMSEL_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFCMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSRCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSRCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSRCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>DBA</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>EBU_BUSRCONm_DBA_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_DBA_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSRCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSRCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSRCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSRCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSRCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRCONm_MASK</td><td><tt>0xf7ff00ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRAP2">&nbsp;</a>
+<h3>EBU_BUSRAP2</h3>
+<h3>"EBU Bus Read Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRAP2_ADDR = 0xF800004C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRAP2.bits</b>&nbsp;&quot;EBU Bus Read Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RDDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSRAPm_RDDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>RDRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSRAPm_RDRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITRDC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSRAPm_WAITRDC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_WAITRDC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSRAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSRAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSRAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSRAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWCON2">&nbsp;</a>
+<h3>EBU_BUSWCON2</h3>
+<h3>"EBU Bus Write Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWCON2_ADDR = 0xF8000050</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWCON2.bits</b>&nbsp;&quot;EBU Bus Write Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSWCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSWCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSWCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSWCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSWCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSWCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSWCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSWCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSWCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSWCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>LOCKCS</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>EBU_BUSWCONm_LOCKCS_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_LOCKCS_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWCONm_MASK</td><td><tt>0xfffb008f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffb008f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff3b000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWAP2">&nbsp;</a>
+<h3>EBU_BUSWAP2</h3>
+<h3>"EBU Bus Write Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWAP2_ADDR = 0xF8000054</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWAP2.bits</b>&nbsp;&quot;EBU Bus Write Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WRDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSWAPm_WRDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>WRRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSWAPm_WRRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITWRC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSWAPm_WAITWRC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WAITWRC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSWAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSWAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSWAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSWAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRCON3">&nbsp;</a>
+<h3>EBU_BUSRCON3</h3>
+<h3>"EBU Bus Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRCON3_ADDR = 0xF8000058</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530040</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRCONm_t">EBU_BUSRCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRCON3.bits</b>&nbsp;&quot;EBU Bus Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSRCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSRCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>BFSSS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>EBU_BUSRCONm_BFSSS_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFSSS_SHIFT</td>
+</tr>
+<tr>
+<td>FDBKEN</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>EBU_BUSRCONm_FDBKEN_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_FDBKEN_SHIFT</td>
+</tr>
+<tr>
+<td>BFCMSEL</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>EBU_BUSRCONm_BFCMSEL_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BFCMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSRCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSRCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSRCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>DBA</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>EBU_BUSRCONm_DBA_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_DBA_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSRCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSRCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSRCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSRCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSRCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRCONm_MASK</td><td><tt>0xf7ff00ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xf7ff00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSRAP3">&nbsp;</a>
+<h3>EBU_BUSRAP3</h3>
+<h3>"EBU Bus Read Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSRAP3_ADDR = 0xF800005C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSRAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSRAPm_t">EBU_BUSRAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSRAP3.bits</b>&nbsp;&quot;EBU Bus Read Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>RDDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSRAPm_RDDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>RDRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSRAPm_RDRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_RDRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITRDC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSRAPm_WAITRDC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_WAITRDC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSRAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSRAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSRAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSRAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSRAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSRAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSRAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWCON3">&nbsp;</a>
+<h3>EBU_BUSWCON3</h3>
+<h3>"EBU Bus Write Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWCON3_ADDR = 0xF8000060</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWCONm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00530000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWCONm_t">EBU_BUSWCONm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWCON3.bits</b>&nbsp;&quot;EBU Bus Write Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>FETBLEN</td>
+<td>3</td>
+<td>0 - 2</td>
+<td>EBU_BUSWCONm_FETBLEN_MASK</td>
+<td><tt>0x00000007</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FETBLEN_SHIFT</td>
+</tr>
+<tr>
+<td>FBBMSEL</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>EBU_BUSWCONm_FBBMSEL_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_FBBMSEL_SHIFT</td>
+</tr>
+<tr>
+<td>NAA</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>EBU_BUSWCONm_NAA_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_NAA_SHIFT</td>
+</tr>
+<tr>
+<td>ECSE</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>EBU_BUSWCONm_ECSE_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_ECSE_SHIFT</td>
+</tr>
+<tr>
+<td>EBSE</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>EBU_BUSWCONm_EBSE_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_EBSE_SHIFT</td>
+</tr>
+<tr>
+<td>WAITINV</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>EBU_BUSWCONm_WAITINV_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAITINV_SHIFT</td>
+</tr>
+<tr>
+<td>BCGEN</td>
+<td>2</td>
+<td>20 - 21</td>
+<td>EBU_BUSWCONm_BCGEN_MASK</td>
+<td><tt>0x00300000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_BCGEN_SHIFT</td>
+</tr>
+<tr>
+<td>PORTW</td>
+<td>2</td>
+<td>22 - 23</td>
+<td>EBU_BUSWCONm_PORTW_MASK</td>
+<td><tt>0x00c00000</tt></td>
+<td>r</td>
+<td>EBU_BUSWCONm_PORTW_SHIFT</td>
+</tr>
+<tr>
+<td>WAIT</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>EBU_BUSWCONm_WAIT_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_WAIT_SHIFT</td>
+</tr>
+<tr>
+<td>AAP</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>EBU_BUSWCONm_AAP_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AAP_SHIFT</td>
+</tr>
+<tr>
+<td>LOCKCS</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>EBU_BUSWCONm_LOCKCS_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_LOCKCS_SHIFT</td>
+</tr>
+<tr>
+<td>AGEN</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWCONm_AGEN_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWCONm_AGEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWCONm_MASK</td><td><tt>0xfffb008f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffb008f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff3b000f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="EBU_BUSWAP3">&nbsp;</a>
+<h3>EBU_BUSWAP3</h3>
+<h3>"EBU Bus Write Access Parameter Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>EBU_BUSWAP3_ADDR = 0xF8000064</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>EBU_BUSWAPm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xFFFFFFFF</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/e.html#EBU_BUSWAPm_t">EBU_BUSWAPm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>EBU_BUSWAP3.bits</b>&nbsp;&quot;EBU Bus Write Access Parameter Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WRDTACS</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>EBU_BUSWAPm_WRDTACS_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRDTACS_SHIFT</td>
+</tr>
+<tr>
+<td>WRRECOVC</td>
+<td>3</td>
+<td>4 - 6</td>
+<td>EBU_BUSWAPm_WRRECOVC_MASK</td>
+<td><tt>0x00000070</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WRRECOVC_SHIFT</td>
+</tr>
+<tr>
+<td>WAITWRC</td>
+<td>5</td>
+<td>7 - 11</td>
+<td>EBU_BUSWAPm_WAITWRC_MASK</td>
+<td><tt>0x00000f80</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_WAITWRC_SHIFT</td>
+</tr>
+<tr>
+<td>DATAC</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>EBU_BUSWAPm_DATAC_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_DATAC_SHIFT</td>
+</tr>
+<tr>
+<td>EXTCLOCK</td>
+<td>2</td>
+<td>16 - 17</td>
+<td>EBU_BUSWAPm_EXTCLOCK_MASK</td>
+<td><tt>0x00030000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTCLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>EXTDATA</td>
+<td>2</td>
+<td>18 - 19</td>
+<td>EBU_BUSWAPm_EXTDATA_MASK</td>
+<td><tt>0x000c0000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_EXTDATA_SHIFT</td>
+</tr>
+<tr>
+<td>AHOLDC</td>
+<td>4</td>
+<td>24 - 27</td>
+<td>EBU_BUSWAPm_AHOLDC_MASK</td>
+<td><tt>0x0f000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_AHOLDC_SHIFT</td>
+</tr>
+<tr>
+<td>ADDRC</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>EBU_BUSWAPm_ADDRC_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>EBU_BUSWAPm_ADDRC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>EBU_BUSWAPm_MASK</td><td><tt>0xff0fffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff0fffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,4054 @@
+<html>
+<head>
+<title>TriCore TC1792 (DMU)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>DMU</h2>
+
+<h2><tt>#include &lt;tc1792/dmu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#DMU_ID">DMU_ID</a></td>
+<td>DMU Module Identification Register</td>
+<td>0xF8010108</td>
+<td><a class="url" href="types/d.html#DMU_ID_t">DMU_ID_t</a></td>
+<td>0xXXXXXXXX</td>
+<td>U,SV</td>
+<td>BE</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR0">DMU_RABR0</a></td>
+<td>DMU Redirected Address Base Register 0</td>
+<td>0xF8010120</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR0">DMU_OTAR0</a></td>
+<td>DMU Overlay Target Address Register 0</td>
+<td>0xF8010124</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK0">DMU_OMASK0</a></td>
+<td>DMU Overlay Mask Register 0</td>
+<td>0xF8010128</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR1">DMU_RABR1</a></td>
+<td>DMU Redirected Address Base Register 1</td>
+<td>0xF801012C</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR1">DMU_OTAR1</a></td>
+<td>DMU Overlay Target Address Register 1</td>
+<td>0xF8010130</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK1">DMU_OMASK1</a></td>
+<td>DMU Overlay Mask Register 1</td>
+<td>0xF8010134</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR2">DMU_RABR2</a></td>
+<td>DMU Redirected Address Base Register 2</td>
+<td>0xF8010138</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR2">DMU_OTAR2</a></td>
+<td>DMU Overlay Target Address Register 2</td>
+<td>0xF801013C</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK2">DMU_OMASK2</a></td>
+<td>DMU Overlay Mask Register 2</td>
+<td>0xF8010140</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR3">DMU_RABR3</a></td>
+<td>DMU Redirected Address Base Register 3</td>
+<td>0xF8010144</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR3">DMU_OTAR3</a></td>
+<td>DMU Overlay Target Address Register 3</td>
+<td>0xF8010148</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK3">DMU_OMASK3</a></td>
+<td>DMU Overlay Mask Register 3</td>
+<td>0xF801014C</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR4">DMU_RABR4</a></td>
+<td>DMU Redirected Address Base Register 4</td>
+<td>0xF8010150</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR4">DMU_OTAR4</a></td>
+<td>DMU Overlay Target Address Register 4</td>
+<td>0xF8010154</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK4">DMU_OMASK4</a></td>
+<td>DMU Overlay Mask Register 4</td>
+<td>0xF8010158</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR5">DMU_RABR5</a></td>
+<td>DMU Redirected Address Base Register 5</td>
+<td>0xF801015C</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR5">DMU_OTAR5</a></td>
+<td>DMU Overlay Target Address Register 5</td>
+<td>0xF8010160</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK5">DMU_OMASK5</a></td>
+<td>DMU Overlay Mask Register 5</td>
+<td>0xF8010164</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR6">DMU_RABR6</a></td>
+<td>DMU Redirected Address Base Register 6</td>
+<td>0xF8010168</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR6">DMU_OTAR6</a></td>
+<td>DMU Overlay Target Address Register 6</td>
+<td>0xF801016C</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK6">DMU_OMASK6</a></td>
+<td>DMU Overlay Mask Register 6</td>
+<td>0xF8010170</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR7">DMU_RABR7</a></td>
+<td>DMU Redirected Address Base Register 7</td>
+<td>0xF8010174</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR7">DMU_OTAR7</a></td>
+<td>DMU Overlay Target Address Register 7</td>
+<td>0xF8010178</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK7">DMU_OMASK7</a></td>
+<td>DMU Overlay Mask Register 7</td>
+<td>0xF801017C</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR8">DMU_RABR8</a></td>
+<td>DMU Redirected Address Base Register 8</td>
+<td>0xF8010180</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR8">DMU_OTAR8</a></td>
+<td>DMU Overlay Target Address Register 8</td>
+<td>0xF8010184</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK8">DMU_OMASK8</a></td>
+<td>DMU Overlay Mask Register 8</td>
+<td>0xF8010188</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR9">DMU_RABR9</a></td>
+<td>DMU Redirected Address Base Register 9</td>
+<td>0xF801018C</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR9">DMU_OTAR9</a></td>
+<td>DMU Overlay Target Address Register 9</td>
+<td>0xF8010190</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK9">DMU_OMASK9</a></td>
+<td>DMU Overlay Mask Register 9</td>
+<td>0xF8010194</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR10">DMU_RABR10</a></td>
+<td>DMU Redirected Address Base Register 10</td>
+<td>0xF8010198</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR10">DMU_OTAR10</a></td>
+<td>DMU Overlay Target Address Register 10</td>
+<td>0xF801019C</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK10">DMU_OMASK10</a></td>
+<td>DMU Overlay Mask Register 10</td>
+<td>0xF80101A0</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR11">DMU_RABR11</a></td>
+<td>DMU Redirected Address Base Register 11</td>
+<td>0xF80101A4</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR11">DMU_OTAR11</a></td>
+<td>DMU Overlay Target Address Register 11</td>
+<td>0xF80101A8</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK11">DMU_OMASK11</a></td>
+<td>DMU Overlay Mask Register 11</td>
+<td>0xF80101AC</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR12">DMU_RABR12</a></td>
+<td>DMU Redirected Address Base Register 12</td>
+<td>0xF80101B0</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR12">DMU_OTAR12</a></td>
+<td>DMU Overlay Target Address Register 12</td>
+<td>0xF80101B4</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK12">DMU_OMASK12</a></td>
+<td>DMU Overlay Mask Register 12</td>
+<td>0xF80101B8</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR13">DMU_RABR13</a></td>
+<td>DMU Redirected Address Base Register 13</td>
+<td>0xF80101BC</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR13">DMU_OTAR13</a></td>
+<td>DMU Overlay Target Address Register 13</td>
+<td>0xF80101C0</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK13">DMU_OMASK13</a></td>
+<td>DMU Overlay Mask Register 13</td>
+<td>0xF80101C4</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR14">DMU_RABR14</a></td>
+<td>DMU Redireced Address Base Register 14</td>
+<td>0xF80101C8</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR14">DMU_OTAR14</a></td>
+<td>DMU Overlay Target Address Register 14</td>
+<td>0xF80101CC</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK14">DMU_OMASK14</a></td>
+<td>DMU Overlay Mask Register 14</td>
+<td>0xF80101D0</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_RABR15">DMU_RABR15</a></td>
+<td>DMU Redirected Address Base Register 15</td>
+<td>0xF80101D4</td>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OTAR15">DMU_OTAR15</a></td>
+<td>DMU Overlay Target Address Register 15</td>
+<td>0xF80101D8</td>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_OMASK15">DMU_OMASK15</a></td>
+<td>DMU Overlay Mask Register 15</td>
+<td>0xF80101DC</td>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td>0x0FFFFE00</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#DMU_SBRCTR">DMU_SBRCTR</a></td>
+<td>DMU Stand-by SRAM Control Register</td>
+<td>0xF80101E0</td>
+<td><a class="url" href="types/d.html#DMU_SBRCTR_t">DMU_SBRCTR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV</td>
+<td>SV</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DMU_ID_t">DMU_ID_t</a></td>
+<td><a class="url" href="dmu.html#DMU_ID">DMU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td>
+<td><a class="url" href="dmu.html#DMU_OMASK0">DMU_OMASK0</a>,       
+<a class="url" href="dmu.html#DMU_OMASK1">DMU_OMASK1</a>,       
+<a class="url" href="dmu.html#DMU_OMASK2">DMU_OMASK2</a>,       
+<a class="url" href="dmu.html#DMU_OMASK3">DMU_OMASK3</a>,       
+<a class="url" href="dmu.html#DMU_OMASK4">DMU_OMASK4</a>,       
+<a class="url" href="dmu.html#DMU_OMASK5">DMU_OMASK5</a>,       
+<a class="url" href="dmu.html#DMU_OMASK6">DMU_OMASK6</a>,       
+<a class="url" href="dmu.html#DMU_OMASK7">DMU_OMASK7</a>,       
+<a class="url" href="dmu.html#DMU_OMASK8">DMU_OMASK8</a>,       
+<a class="url" href="dmu.html#DMU_OMASK9">DMU_OMASK9</a>,       
+<a class="url" href="dmu.html#DMU_OMASK10">DMU_OMASK10</a>,       
+<a class="url" href="dmu.html#DMU_OMASK11">DMU_OMASK11</a>,       
+<a class="url" href="dmu.html#DMU_OMASK12">DMU_OMASK12</a>,       
+<a class="url" href="dmu.html#DMU_OMASK13">DMU_OMASK13</a>,       
+<a class="url" href="dmu.html#DMU_OMASK14">DMU_OMASK14</a>,       
+<a class="url" href="dmu.html#DMU_OMASK15">DMU_OMASK15</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td>
+<td><a class="url" href="dmu.html#DMU_OTAR0">DMU_OTAR0</a>,       
+<a class="url" href="dmu.html#DMU_OTAR1">DMU_OTAR1</a>,       
+<a class="url" href="dmu.html#DMU_OTAR2">DMU_OTAR2</a>,       
+<a class="url" href="dmu.html#DMU_OTAR3">DMU_OTAR3</a>,       
+<a class="url" href="dmu.html#DMU_OTAR4">DMU_OTAR4</a>,       
+<a class="url" href="dmu.html#DMU_OTAR5">DMU_OTAR5</a>,       
+<a class="url" href="dmu.html#DMU_OTAR6">DMU_OTAR6</a>,       
+<a class="url" href="dmu.html#DMU_OTAR7">DMU_OTAR7</a>,       
+<a class="url" href="dmu.html#DMU_OTAR8">DMU_OTAR8</a>,       
+<a class="url" href="dmu.html#DMU_OTAR9">DMU_OTAR9</a>,       
+<a class="url" href="dmu.html#DMU_OTAR10">DMU_OTAR10</a>,       
+<a class="url" href="dmu.html#DMU_OTAR11">DMU_OTAR11</a>,       
+<a class="url" href="dmu.html#DMU_OTAR12">DMU_OTAR12</a>,       
+<a class="url" href="dmu.html#DMU_OTAR13">DMU_OTAR13</a>,       
+<a class="url" href="dmu.html#DMU_OTAR14">DMU_OTAR14</a>,       
+<a class="url" href="dmu.html#DMU_OTAR15">DMU_OTAR15</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td>
+<td><a class="url" href="dmu.html#DMU_RABR0">DMU_RABR0</a>,       
+<a class="url" href="dmu.html#DMU_RABR1">DMU_RABR1</a>,       
+<a class="url" href="dmu.html#DMU_RABR2">DMU_RABR2</a>,       
+<a class="url" href="dmu.html#DMU_RABR3">DMU_RABR3</a>,       
+<a class="url" href="dmu.html#DMU_RABR4">DMU_RABR4</a>,       
+<a class="url" href="dmu.html#DMU_RABR5">DMU_RABR5</a>,       
+<a class="url" href="dmu.html#DMU_RABR6">DMU_RABR6</a>,       
+<a class="url" href="dmu.html#DMU_RABR7">DMU_RABR7</a>,       
+<a class="url" href="dmu.html#DMU_RABR8">DMU_RABR8</a>,       
+<a class="url" href="dmu.html#DMU_RABR9">DMU_RABR9</a>,       
+<a class="url" href="dmu.html#DMU_RABR10">DMU_RABR10</a>,       
+<a class="url" href="dmu.html#DMU_RABR11">DMU_RABR11</a>,       
+<a class="url" href="dmu.html#DMU_RABR12">DMU_RABR12</a>,       
+<a class="url" href="dmu.html#DMU_RABR13">DMU_RABR13</a>,       
+<a class="url" href="dmu.html#DMU_RABR14">DMU_RABR14</a>,       
+<a class="url" href="dmu.html#DMU_RABR15">DMU_RABR15</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/d.html#DMU_SBRCTR_t">DMU_SBRCTR_t</a></td>
+<td><a class="url" href="dmu.html#DMU_SBRCTR">DMU_SBRCTR</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="DMU_ID">&nbsp;</a>
+<h3>DMU_ID</h3>
+<h3>"DMU Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_ID_ADDR = 0xF8010108</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xXXXXXXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_ID_t">DMU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_ID.bits</b>&nbsp;&quot;DMU Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_ID_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR0">&nbsp;</a>
+<h3>DMU_RABR0</h3>
+<h3>"DMU Redirected Address Base Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR0_ADDR = 0xF8010120</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR0.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR0">&nbsp;</a>
+<h3>DMU_OTAR0</h3>
+<h3>"DMU Overlay Target Address Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR0_ADDR = 0xF8010124</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR0.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK0">&nbsp;</a>
+<h3>DMU_OMASK0</h3>
+<h3>"DMU Overlay Mask Register 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK0_ADDR = 0xF8010128</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK0.bits</b>&nbsp;&quot;DMU Overlay Mask Register 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR1">&nbsp;</a>
+<h3>DMU_RABR1</h3>
+<h3>"DMU Redirected Address Base Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR1_ADDR = 0xF801012C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR1.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR1">&nbsp;</a>
+<h3>DMU_OTAR1</h3>
+<h3>"DMU Overlay Target Address Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR1_ADDR = 0xF8010130</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR1.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK1">&nbsp;</a>
+<h3>DMU_OMASK1</h3>
+<h3>"DMU Overlay Mask Register 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK1_ADDR = 0xF8010134</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK1.bits</b>&nbsp;&quot;DMU Overlay Mask Register 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR2">&nbsp;</a>
+<h3>DMU_RABR2</h3>
+<h3>"DMU Redirected Address Base Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR2_ADDR = 0xF8010138</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR2.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR2">&nbsp;</a>
+<h3>DMU_OTAR2</h3>
+<h3>"DMU Overlay Target Address Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR2_ADDR = 0xF801013C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR2.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK2">&nbsp;</a>
+<h3>DMU_OMASK2</h3>
+<h3>"DMU Overlay Mask Register 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK2_ADDR = 0xF8010140</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK2.bits</b>&nbsp;&quot;DMU Overlay Mask Register 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR3">&nbsp;</a>
+<h3>DMU_RABR3</h3>
+<h3>"DMU Redirected Address Base Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR3_ADDR = 0xF8010144</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR3.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR3">&nbsp;</a>
+<h3>DMU_OTAR3</h3>
+<h3>"DMU Overlay Target Address Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR3_ADDR = 0xF8010148</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR3.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK3">&nbsp;</a>
+<h3>DMU_OMASK3</h3>
+<h3>"DMU Overlay Mask Register 3"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK3_ADDR = 0xF801014C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK3.bits</b>&nbsp;&quot;DMU Overlay Mask Register 3&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR4">&nbsp;</a>
+<h3>DMU_RABR4</h3>
+<h3>"DMU Redirected Address Base Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR4_ADDR = 0xF8010150</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR4.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 4&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR4">&nbsp;</a>
+<h3>DMU_OTAR4</h3>
+<h3>"DMU Overlay Target Address Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR4_ADDR = 0xF8010154</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR4.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 4&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK4">&nbsp;</a>
+<h3>DMU_OMASK4</h3>
+<h3>"DMU Overlay Mask Register 4"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK4_ADDR = 0xF8010158</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK4.bits</b>&nbsp;&quot;DMU Overlay Mask Register 4&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR5">&nbsp;</a>
+<h3>DMU_RABR5</h3>
+<h3>"DMU Redirected Address Base Register 5"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR5_ADDR = 0xF801015C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR5.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 5&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR5">&nbsp;</a>
+<h3>DMU_OTAR5</h3>
+<h3>"DMU Overlay Target Address Register 5"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR5_ADDR = 0xF8010160</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR5.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 5&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK5">&nbsp;</a>
+<h3>DMU_OMASK5</h3>
+<h3>"DMU Overlay Mask Register 5"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK5_ADDR = 0xF8010164</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK5.bits</b>&nbsp;&quot;DMU Overlay Mask Register 5&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR6">&nbsp;</a>
+<h3>DMU_RABR6</h3>
+<h3>"DMU Redirected Address Base Register 6"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR6_ADDR = 0xF8010168</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR6.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 6&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR6">&nbsp;</a>
+<h3>DMU_OTAR6</h3>
+<h3>"DMU Overlay Target Address Register 6"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR6_ADDR = 0xF801016C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR6.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 6&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK6">&nbsp;</a>
+<h3>DMU_OMASK6</h3>
+<h3>"DMU Overlay Mask Register 6"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK6_ADDR = 0xF8010170</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK6.bits</b>&nbsp;&quot;DMU Overlay Mask Register 6&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR7">&nbsp;</a>
+<h3>DMU_RABR7</h3>
+<h3>"DMU Redirected Address Base Register 7"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR7_ADDR = 0xF8010174</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR7.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 7&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR7">&nbsp;</a>
+<h3>DMU_OTAR7</h3>
+<h3>"DMU Overlay Target Address Register 7"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR7_ADDR = 0xF8010178</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR7.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 7&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK7">&nbsp;</a>
+<h3>DMU_OMASK7</h3>
+<h3>"DMU Overlay Mask Register 7"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK7_ADDR = 0xF801017C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK7.bits</b>&nbsp;&quot;DMU Overlay Mask Register 7&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR8">&nbsp;</a>
+<h3>DMU_RABR8</h3>
+<h3>"DMU Redirected Address Base Register 8"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR8_ADDR = 0xF8010180</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR8.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 8&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR8">&nbsp;</a>
+<h3>DMU_OTAR8</h3>
+<h3>"DMU Overlay Target Address Register 8"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR8_ADDR = 0xF8010184</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR8.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 8&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK8">&nbsp;</a>
+<h3>DMU_OMASK8</h3>
+<h3>"DMU Overlay Mask Register 8"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK8_ADDR = 0xF8010188</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK8.bits</b>&nbsp;&quot;DMU Overlay Mask Register 8&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR9">&nbsp;</a>
+<h3>DMU_RABR9</h3>
+<h3>"DMU Redirected Address Base Register 9"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR9_ADDR = 0xF801018C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR9.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 9&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR9">&nbsp;</a>
+<h3>DMU_OTAR9</h3>
+<h3>"DMU Overlay Target Address Register 9"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR9_ADDR = 0xF8010190</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR9.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 9&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK9">&nbsp;</a>
+<h3>DMU_OMASK9</h3>
+<h3>"DMU Overlay Mask Register 9"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK9_ADDR = 0xF8010194</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK9.bits</b>&nbsp;&quot;DMU Overlay Mask Register 9&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR10">&nbsp;</a>
+<h3>DMU_RABR10</h3>
+<h3>"DMU Redirected Address Base Register 10"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR10_ADDR = 0xF8010198</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR10.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 10&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR10">&nbsp;</a>
+<h3>DMU_OTAR10</h3>
+<h3>"DMU Overlay Target Address Register 10"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR10_ADDR = 0xF801019C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR10.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 10&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK10">&nbsp;</a>
+<h3>DMU_OMASK10</h3>
+<h3>"DMU Overlay Mask Register 10"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK10_ADDR = 0xF80101A0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK10.bits</b>&nbsp;&quot;DMU Overlay Mask Register 10&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR11">&nbsp;</a>
+<h3>DMU_RABR11</h3>
+<h3>"DMU Redirected Address Base Register 11"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR11_ADDR = 0xF80101A4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR11.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 11&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR11">&nbsp;</a>
+<h3>DMU_OTAR11</h3>
+<h3>"DMU Overlay Target Address Register 11"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR11_ADDR = 0xF80101A8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR11.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 11&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK11">&nbsp;</a>
+<h3>DMU_OMASK11</h3>
+<h3>"DMU Overlay Mask Register 11"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK11_ADDR = 0xF80101AC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK11.bits</b>&nbsp;&quot;DMU Overlay Mask Register 11&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR12">&nbsp;</a>
+<h3>DMU_RABR12</h3>
+<h3>"DMU Redirected Address Base Register 12"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR12_ADDR = 0xF80101B0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR12.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 12&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR12">&nbsp;</a>
+<h3>DMU_OTAR12</h3>
+<h3>"DMU Overlay Target Address Register 12"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR12_ADDR = 0xF80101B4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR12.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 12&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK12">&nbsp;</a>
+<h3>DMU_OMASK12</h3>
+<h3>"DMU Overlay Mask Register 12"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK12_ADDR = 0xF80101B8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK12.bits</b>&nbsp;&quot;DMU Overlay Mask Register 12&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR13">&nbsp;</a>
+<h3>DMU_RABR13</h3>
+<h3>"DMU Redirected Address Base Register 13"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR13_ADDR = 0xF80101BC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR13.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 13&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR13">&nbsp;</a>
+<h3>DMU_OTAR13</h3>
+<h3>"DMU Overlay Target Address Register 13"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR13_ADDR = 0xF80101C0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR13.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 13&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK13">&nbsp;</a>
+<h3>DMU_OMASK13</h3>
+<h3>"DMU Overlay Mask Register 13"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK13_ADDR = 0xF80101C4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK13.bits</b>&nbsp;&quot;DMU Overlay Mask Register 13&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR14">&nbsp;</a>
+<h3>DMU_RABR14</h3>
+<h3>"DMU Redireced Address Base Register 14"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR14_ADDR = 0xF80101C8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR14.bits</b>&nbsp;&quot;DMU Redireced Address Base Register 14&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR14">&nbsp;</a>
+<h3>DMU_OTAR14</h3>
+<h3>"DMU Overlay Target Address Register 14"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR14_ADDR = 0xF80101CC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR14.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 14&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK14">&nbsp;</a>
+<h3>DMU_OMASK14</h3>
+<h3>"DMU Overlay Mask Register 14"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK14_ADDR = 0xF80101D0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK14.bits</b>&nbsp;&quot;DMU Overlay Mask Register 14&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_RABR15">&nbsp;</a>
+<h3>DMU_RABR15</h3>
+<h3>"DMU Redirected Address Base Register 15"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_RABR15_ADDR = 0xF80101D4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_RABRm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_RABRm_t">DMU_RABRm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_RABR15.bits</b>&nbsp;&quot;DMU Redirected Address Base Register 15&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OBASE</td>
+<td>15</td>
+<td>1 - 15</td>
+<td>DMU_RABRm_OBASE_MASK</td>
+<td><tt>0x0000fffe</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OBASE_SHIFT</td>
+</tr>
+<tr>
+<td>RC0</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>DMU_RABRm_RC0_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC0_SHIFT</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>DMU_RABRm_RC1_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_RC1_SHIFT</td>
+</tr>
+<tr>
+<td>IEMS</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>DMU_RABRm_IEMS_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>r</td>
+<td>DMU_RABRm_IEMS_SHIFT</td>
+</tr>
+<tr>
+<td>OVEN</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>DMU_RABRm_OVEN_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>DMU_RABRm_OVEN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_RABRm_MASK</td><td><tt>0xf000fffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xf000fffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x8000fffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OTAR15">&nbsp;</a>
+<h3>DMU_OTAR15</h3>
+<h3>"DMU Overlay Target Address Register 15"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OTAR15_ADDR = 0xF80101D8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OTARm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OTARm_t">DMU_OTARm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OTAR15.bits</b>&nbsp;&quot;DMU Overlay Target Address Register 15&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>TBASE</td>
+<td>27</td>
+<td>1 - 27</td>
+<td>DMU_OTARm_TBASE_MASK</td>
+<td><tt>0x0ffffffe</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TBASE_SHIFT</td>
+</tr>
+<tr>
+<td>TSEG</td>
+<td>4</td>
+<td>28 - 31</td>
+<td>DMU_OTARm_TSEG_MASK</td>
+<td><tt>0xf0000000</tt></td>
+<td>rw</td>
+<td>DMU_OTARm_TSEG_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OTARm_MASK</td><td><tt>0xfffffffe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xfffffffe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_OMASK15">&nbsp;</a>
+<h3>DMU_OMASK15</h3>
+<h3>"DMU Overlay Mask Register 15"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_OMASK15_ADDR = 0xF80101DC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_OMASKm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0FFFFE00</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_OMASKm_t">DMU_OMASKm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_OMASK15.bits</b>&nbsp;&quot;DMU Overlay Mask Register 15&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OMASK</td>
+<td>8</td>
+<td>1 - 8</td>
+<td>DMU_OMASKm_OMASK_MASK</td>
+<td><tt>0x000001fe</tt></td>
+<td>rw</td>
+<td>DMU_OMASKm_OMASK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_OMASKm_MASK</td><td><tt>0x000001fe</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000001fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="DMU_SBRCTR">&nbsp;</a>
+<h3>DMU_SBRCTR</h3>
+<h3>"DMU Stand-by SRAM Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>DMU_SBRCTR_ADDR = 0xF80101E0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>DMU_SBRCTR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/d.html#DMU_SBRCTR_t">DMU_SBRCTR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>DMU_SBRCTR.bits</b>&nbsp;&quot;DMU Stand-by SRAM Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>STBLOCK</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>DMU_SBRCTR_STBLOCK_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>DMU_SBRCTR_STBLOCK_SHIFT</td>
+</tr>
+<tr>
+<td>STBULK</td>
+<td>3</td>
+<td>1 - 3</td>
+<td>DMU_SBRCTR_STBULK_MASK</td>
+<td><tt>0x0000000e</tt></td>
+<td>w</td>
+<td>DMU_SBRCTR_STBULK_SHIFT</td>
+</tr>
+<tr>
+<td>STBSLK</td>
+<td>4</td>
+<td>4 - 7</td>
+<td>DMU_SBRCTR_STBSLK_MASK</td>
+<td><tt>0x000000f0</tt></td>
+<td>w</td>
+<td>DMU_SBRCTR_STBSLK_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>DMU_SBRCTR_MASK</td><td><tt>0x000000ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x000000fe</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000001</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

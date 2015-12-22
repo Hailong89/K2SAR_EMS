@@ -1,0 +1,430 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1793 (LMU)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>LMU</h2>
+
+<h2><tt>#include &lt;tc1793/lmu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#LMU_CLC">LMU_CLC</a></td>
+<td>LMU Clock Control Register</td>
+<td>0xF8700800</td>
+<td><a class="url" href="types/l.html#LMU_CLC_t">LMU_CLC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LMU_MEMCON">LMU_MEMCON</a></td>
+<td>LMU Memory Control Register</td>
+<td>0xF8700804</td>
+<td><a class="url" href="types/l.html#LMU_MEMCON_t">LMU_MEMCON_t</a></td>
+<td>0x00000800</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LMU_MODID">LMU_MODID</a></td>
+<td>LMU Module ID Register</td>
+<td>0xF8700808</td>
+<td><a class="url" href="types/l.html#LMU_MODID_t">LMU_MODID_t</a></td>
+<td>0x0088C001</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LMU_CLC_t">LMU_CLC_t</a></td>
+<td><a class="url" href="lmu.html#LMU_CLC">LMU_CLC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LMU_MEMCON_t">LMU_MEMCON_t</a></td>
+<td><a class="url" href="lmu.html#LMU_MEMCON">LMU_MEMCON</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LMU_MODID_t">LMU_MODID_t</a></td>
+<td><a class="url" href="lmu.html#LMU_MODID">LMU_MODID</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="LMU_CLC">&nbsp;</a>
+<h3>LMU_CLC</h3>
+<h3>"LMU Clock Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LMU_CLC_ADDR = 0xF8700800</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LMU_CLC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LMU_CLC_t">LMU_CLC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LMU_CLC.bits</b>&nbsp;&quot;LMU Clock Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LMU_CLC_MASK = <tt>0x00000003</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LMU_CLC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LMU_CLC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DISR</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>LMU Disable Request Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>LMU disable is not requested</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>LMU disable is requested</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DISS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>LMU Disable Status Bit
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>LMU is enabled (default after reset)</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>LMU is disabled</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000003</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000001</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000002</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LMU_MEMCON">&nbsp;</a>
+<h3>LMU_MEMCON</h3>
+<h3>"LMU Memory Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LMU_MEMCON_ADDR = 0xF8700804</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LMU_MEMCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000800</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LMU_MEMCON_t">LMU_MEMCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LMU_MEMCON.bits</b>&nbsp;&quot;LMU Memory Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LMU_MEMCON_MASK = <tt>0xffffdfff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LMU_MEMCON_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LMU_MEMCON_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>OLDAEN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Online Data Acquisition Enabled
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Trap generation on write access to OLDA memory range is enabled</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>No trap generated on write access to OLDA memory range.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>POLDAEN</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Protection Bit for OLDAEN
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Bit Protection: Bit OLDAEN remains unchanged after LMU_MEMCON write.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>OLDAEN can be changed by current write to LMU_MEMCON</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES0</td>
+<td>5</td>
+<td>2 - 6</td>
+<td>r</td>
+<td><tt>0x0000007c</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>ADDERR</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rwh</td>
+<td><tt>0x00000080</tt></td>
+<td>SRI Address Phase ECC Error
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No error has occurred</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>An ECC error has been observed on an SRI transaction addressed to the LMU</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>PMIC</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Protection Bit for Memory Integrity Control Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Bit Protection: Bits 23 to 9 remain unchanged after LMU_MEMCON write.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Bits 23 to 9 will be updated by the current write to LMU_MEMCON</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>r</td>
+<td><tt>0x00000200</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>DED_EN</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Memory Integrity Dual Error Detection Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ECC errors in local memory read data do not cause an error indication (interrupt, bus trap, error bits).</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ECC errors are enabled. Memory errors are flagged to the SCU.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES2</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>r</td>
+<td><tt>0x00000800</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>ERRDIS</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>ECC Error Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Normal behaviour. SRI error will occur on SRAM ECC errors if DED_EN is set. Default after reset</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Test Mode. SRI errors will not be generated on an SRAM ECC error. This does not affect the generation of interrupts.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES3</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>r</td>
+<td><tt>0x00004000</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>DBERR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rwh</td>
+<td><tt>0x00008000</tt></td>
+<td>Double Bit Error Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>read access did not have a double bit error</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>read access did have a double bit error</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RES4</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>r</td>
+<td><tt>0x00ff0000</tt></td>
+<td>Reserved
+</td>
+</tr>
+<tr>
+<td>ECCR</td>
+<td>8</td>
+<td>24 - 31</td>
+<td>rh</td>
+<td><tt>0xff000000</tt></td>
+<td>ECC Code for Last Read Access
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffdefd</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00009583</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xff008080</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LMU_MODID">&nbsp;</a>
+<h3>LMU_MODID</h3>
+<h3>"LMU Module ID Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LMU_MODID_ADDR = 0xF8700808</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LMU_MODID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0088C001</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LMU_MODID_t">LMU_MODID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>LMU_MODID.bits</b>&nbsp;&quot;LMU Module ID Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>LMU_MODID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>LMU_MODID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>LMU_MODID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ID_VALUE</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>r</td>
+<td><tt>0xffffffff</tt></td>
+<td>Module Identification Value
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

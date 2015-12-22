@@ -1,0 +1,877 @@
+<html>
+<head>
+<title>TriCore TC1796B (CSFR)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>CSFR</h2>
+
+<h2><tt>#include &lt;tc1796b/csfr.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#PCXI">PCXI</a></td>
+<td>Previous Context Information Register</td>
+<td>0xF7E1FE00</td>
+<td><a class="url" href="types/p.html#PCXI_t">PCXI_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PSW">PSW</a></td>
+<td>Program Status Word</td>
+<td>0xF7E1FE04</td>
+<td><a class="url" href="types/p.html#PSW_t">PSW_t</a></td>
+<td>0x00000B80</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PC">PC</a></td>
+<td>Program Counter</td>
+<td>0xF7E1FE08</td>
+<td><a class="url" href="types/p.html#PC_t">PC_t</a></td>
+<td>0xDFFFFFFC</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#SYSCON">SYSCON</a></td>
+<td>System Configuration Register</td>
+<td>0xF7E1FE14</td>
+<td><a class="url" href="types/s.html#SYSCON_t">SYSCON_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CPU_ID">CPU_ID</a></td>
+<td>CPU Identification Register</td>
+<td>0xF7E1FE18</td>
+<td><a class="url" href="types/c.html#CPU_ID_t">CPU_ID_t</a></td>
+<td>0x000AC005</td>
+<td>U,SV,32</td>
+<td>U,SV,NC,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BIV">BIV</a></td>
+<td>Interrupt Vector Table Pointer</td>
+<td>0xF7E1FE20</td>
+<td><a class="url" href="types/b.html#BIV_t">BIV_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,E,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#BTV">BTV</a></td>
+<td>Trap Vector Table Pointer</td>
+<td>0xF7E1FE24</td>
+<td><a class="url" href="types/b.html#BTV_t">BTV_t</a></td>
+<td>0xA0000100</td>
+<td>U,SV,32</td>
+<td>SV,E,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ISP">ISP</a></td>
+<td>Interrupt Stack Pointer</td>
+<td>0xF7E1FE28</td>
+<td><a class="url" href="types/i.html#ISP_t">ISP_t</a></td>
+<td>0x00000100</td>
+<td>U,SV,32</td>
+<td>SV,E,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#ICR">ICR</a></td>
+<td>ICU Interrupt Control Register</td>
+<td>0xF7E1FE2C</td>
+<td><a class="url" href="types/i.html#ICR_t">ICR_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FCX">FCX</a></td>
+<td>Free Context List Head Pointer</td>
+<td>0xF7E1FE38</td>
+<td><a class="url" href="types/f.html#FCX_t">FCX_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#LCX">LCX</a></td>
+<td>Free Context List Limit Pointer</td>
+<td>0xF7E1FE3C</td>
+<td><a class="url" href="types/l.html#LCX_t">LCX_t</a></td>
+<td>0x00000000</td>
+<td>U,SV,32</td>
+<td>SV,32</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BIV_t">BIV_t</a></td>
+<td><a class="url" href="csfr.html#BIV">BIV</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/b.html#BTV_t">BTV_t</a></td>
+<td><a class="url" href="csfr.html#BTV">BTV</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CPU_ID_t">CPU_ID_t</a></td>
+<td><a class="url" href="csfr.html#CPU_ID">CPU_ID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FCX_t">FCX_t</a></td>
+<td><a class="url" href="csfr.html#FCX">FCX</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/i.html#ICR_t">ICR_t</a></td>
+<td><a class="url" href="csfr.html#ICR">ICR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/i.html#ISP_t">ISP_t</a></td>
+<td><a class="url" href="csfr.html#ISP">ISP</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/l.html#LCX_t">LCX_t</a></td>
+<td><a class="url" href="csfr.html#LCX">LCX</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PC_t">PC_t</a></td>
+<td><a class="url" href="csfr.html#PC">PC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PCXI_t">PCXI_t</a></td>
+<td><a class="url" href="csfr.html#PCXI">PCXI</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PSW_t">PSW_t</a></td>
+<td><a class="url" href="csfr.html#PSW">PSW</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/s.html#SYSCON_t">SYSCON_t</a></td>
+<td><a class="url" href="csfr.html#SYSCON">SYSCON</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="PCXI">&nbsp;</a>
+<h3>PCXI</h3>
+<h3>"Previous Context Information Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PCXI_ADDR = 0xF7E1FE00</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PCXI_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PCXI_t">PCXI_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PCXI.bits</b>&nbsp;&quot;Previous Context Information Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PCXI_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PSW">&nbsp;</a>
+<h3>PSW</h3>
+<h3>"Program Status Word"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PSW_ADDR = 0xF7E1FE04</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PSW_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000B80</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PSW_t">PSW_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PSW.bits</b>&nbsp;&quot;Program Status Word&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CDC</td>
+<td>7</td>
+<td>0 - 6</td>
+<td>PSW_CDC_MASK</td>
+<td><tt>0x0000007f</tt></td>
+<td>rwh</td>
+<td>PSW_CDC_SHIFT</td>
+</tr>
+<tr>
+<td>CDE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>PSW_CDE_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rwh</td>
+<td>PSW_CDE_SHIFT</td>
+</tr>
+<tr>
+<td>GW</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>PSW_GW_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rwh</td>
+<td>PSW_GW_SHIFT</td>
+</tr>
+<tr>
+<td>IS</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>PSW_IS_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rwh</td>
+<td>PSW_IS_SHIFT</td>
+</tr>
+<tr>
+<td>IO</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>PSW_IO_MASK</td>
+<td><tt>0x00000c00</tt></td>
+<td>rwh</td>
+<td>PSW_IO_SHIFT</td>
+</tr>
+<tr>
+<td>PRS</td>
+<td>2</td>
+<td>12 - 13</td>
+<td>PSW_PRS_MASK</td>
+<td><tt>0x00003000</tt></td>
+<td>rwh</td>
+<td>PSW_PRS_SHIFT</td>
+</tr>
+<tr>
+<td>RM</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>PSW_RM_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>PSW_RM_SHIFT</td>
+</tr>
+<tr>
+<td>FX</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>PSW_FX_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rwh</td>
+<td>PSW_FX_SHIFT</td>
+</tr>
+<tr>
+<td>FU</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>PSW_FU_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rwh</td>
+<td>PSW_FU_SHIFT</td>
+</tr>
+<tr>
+<td>FZ</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>PSW_FZ_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rwh</td>
+<td>PSW_FZ_SHIFT</td>
+</tr>
+<tr>
+<td>FV</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>PSW_FV_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rwh</td>
+<td>PSW_FV_SHIFT</td>
+</tr>
+<tr>
+<td>FI</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>PSW_FI_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rwh</td>
+<td>PSW_FI_SHIFT</td>
+</tr>
+<tr>
+<td>FS</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>PSW_FS_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rwh</td>
+<td>PSW_FS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PSW_MASK</td><td><tt>0xff003fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff003fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff003fff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xfc003fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PC">&nbsp;</a>
+<h3>PC</h3>
+<h3>"Program Counter"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PC_ADDR = 0xF7E1FE08</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xDFFFFFFC</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PC_t">PC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PC.bits</b>&nbsp;&quot;Program Counter&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PC_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="SYSCON">&nbsp;</a>
+<h3>SYSCON</h3>
+<h3>"System Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>SYSCON_ADDR = 0xF7E1FE14</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>SYSCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/s.html#SYSCON_t">SYSCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>SYSCON.bits</b>&nbsp;&quot;System Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>SYSCON_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CPU_ID">&nbsp;</a>
+<h3>CPU_ID</h3>
+<h3>"CPU Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CPU_ID_ADDR = 0xF7E1FE18</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>CPU_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x000AC005</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CPU_ID_t">CPU_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>CPU_ID.bits</b>&nbsp;&quot;CPU Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>CPU_ID_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BIV">&nbsp;</a>
+<h3>BIV</h3>
+<h3>"Interrupt Vector Table Pointer"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BIV_ADDR = 0xF7E1FE20</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BIV_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BIV_t">BIV_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>BIV.bits</b>&nbsp;&quot;Interrupt Vector Table Pointer&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>BIV_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="BTV">&nbsp;</a>
+<h3>BTV</h3>
+<h3>"Trap Vector Table Pointer"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>BTV_ADDR = 0xF7E1FE24</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>BTV_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xA0000100</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/b.html#BTV_t">BTV_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>BTV.bits</b>&nbsp;&quot;Trap Vector Table Pointer&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>BTV_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ISP">&nbsp;</a>
+<h3>ISP</h3>
+<h3>"Interrupt Stack Pointer"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ISP_ADDR = 0xF7E1FE28</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>ISP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000100</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/i.html#ISP_t">ISP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ISP.bits</b>&nbsp;&quot;Interrupt Stack Pointer&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ISP_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="ICR">&nbsp;</a>
+<h3>ICR</h3>
+<h3>"ICU Interrupt Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>ICR_ADDR = 0xF7E1FE2C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>ICR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/i.html#ICR_t">ICR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>ICR.bits</b>&nbsp;&quot;ICU Interrupt Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>CCPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>ICR_CCPN_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>rwh</td>
+<td>ICR_CCPN_SHIFT</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>ICR_IE_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rwh</td>
+<td>ICR_IE_SHIFT</td>
+</tr>
+<tr>
+<td>PIPN</td>
+<td>8</td>
+<td>16 - 23</td>
+<td>ICR_PIPN_MASK</td>
+<td><tt>0x00ff0000</tt></td>
+<td>rh</td>
+<td>ICR_PIPN_SHIFT</td>
+</tr>
+<tr>
+<td>CARBCYC</td>
+<td>2</td>
+<td>24 - 25</td>
+<td>ICR_CARBCYC_MASK</td>
+<td><tt>0x03000000</tt></td>
+<td>rw</td>
+<td>ICR_CARBCYC_SHIFT</td>
+</tr>
+<tr>
+<td>CONECYC</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>ICR_CONECYC_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>ICR_CONECYC_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>ICR_MASK</td><td><tt>0x07ff01ff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x07ff01ff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x070001ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00ff01ff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FCX">&nbsp;</a>
+<h3>FCX</h3>
+<h3>"Free Context List Head Pointer"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FCX_ADDR = 0xF7E1FE38</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FCX_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FCX_t">FCX_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FCX.bits</b>&nbsp;&quot;Free Context List Head Pointer&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FCX_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="LCX">&nbsp;</a>
+<h3>LCX</h3>
+<h3>"Free Context List Limit Pointer"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>LCX_ADDR = 0xF7E1FE3C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>LCX_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/l.html#LCX_t">LCX_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>LCX.bits</b>&nbsp;&quot;Free Context List Limit Pointer&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>LCX_MASK</td><td><tt>0x00000000</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,3022 @@
+<html>
+<head>
+<title>TriCore TC1197 (PMU)</title>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>PMU</h2>
+
+<h2><tt>#include &lt;tc1197/pmu.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#PMU0_ID">PMU0_ID</a></td>
+<td>PMU0 Identification Register</td>
+<td>0xF8000508</td>
+<td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td>
+<td>0x0050C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PMU0_OVRCON">PMU0_OVRCON</a></td>
+<td>Overlay RAM Control Register</td>
+<td>0xF8000520</td>
+<td><a class="url" href="types/p.html#PMU0_OVRCON_t">PMU0_OVRCON_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#PMU1_ID">PMU1_ID</a></td>
+<td>PMU1 Identification Register</td>
+<td>0xF8000608</td>
+<td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td>
+<td>0x0051C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_ID">FLASH0_ID</a></td>
+<td>Flash Module Identification Register</td>
+<td>0xF8002008</td>
+<td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td>
+<td>0x0053C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_FSR">FLASH0_FSR</a></td>
+<td>Flash Status Register</td>
+<td>0xF8002010</td>
+<td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td>
+<td>0xX0XXX0X0</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_FCON">FLASH0_FCON</a></td>
+<td>Flash Configuration Register</td>
+<td>0xF8002014</td>
+<td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td>
+<td>0x00070606</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_MARP">FLASH0_MARP</a></td>
+<td>Margin Control Register PFLASH</td>
+<td>0xF8002018</td>
+<td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_MARD">FLASH0_MARD</a></td>
+<td>Margin Control Register DFLASH</td>
+<td>0xF800201C</td>
+<td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_PROCON0">FLASH0_PROCON0</a></td>
+<td>Flash Protection Configuration Register User 0</td>
+<td>0xF8002020</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_PROCON1">FLASH0_PROCON1</a></td>
+<td>Flash Protection Configuration Register User 1</td>
+<td>0xF8002024</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH0_PROCON2">FLASH0_PROCON2</a></td>
+<td>Flash Protection Configuration Register User 2</td>
+<td>0xF8002028</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_ID">FLASH1_ID</a></td>
+<td>Flash Module Identification Register</td>
+<td>0xF8004008</td>
+<td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td>
+<td>0x0055C0XX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_FSR">FLASH1_FSR</a></td>
+<td>Flash Status Register</td>
+<td>0xF8004010</td>
+<td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td>
+<td>0xX0XXX0X0</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_FCON">FLASH1_FCON</a></td>
+<td>Flash Configuration Register</td>
+<td>0xF8004014</td>
+<td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td>
+<td>0x00070606</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_MARP">FLASH1_MARP</a></td>
+<td>Margin Control Register PFLASH</td>
+<td>0xF8004018</td>
+<td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_MARD">FLASH1_MARD</a></td>
+<td>Margin Control Register DFLASH</td>
+<td>0xF800401C</td>
+<td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td>
+<td>0x00008000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_PROCON0">FLASH1_PROCON0</a></td>
+<td>Flash Protection Configuration Register User 0</td>
+<td>0xF8004020</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_PROCON1">FLASH1_PROCON1</a></td>
+<td>Flash Protection Configuration Register User 1</td>
+<td>0xF8004024</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#FLASH1_PROCON2">FLASH1_PROCON2</a></td>
+<td>Flash Protection Configuration Register User 2</td>
+<td>0xF8004028</td>
+<td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td>
+<td>0x0000XXXX</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_FCON">FLASH0_FCON</a>,
+<a class="url" href="pmu.html#FLASH1_FCON">FLASH1_FCON</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_FSR">FLASH0_FSR</a>,
+<a class="url" href="pmu.html#FLASH1_FSR">FLASH1_FSR</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_ID">FLASH0_ID</a>,
+<a class="url" href="pmu.html#FLASH1_ID">FLASH1_ID</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_MARD">FLASH0_MARD</a>,
+<a class="url" href="pmu.html#FLASH1_MARD">FLASH1_MARD</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_MARP">FLASH0_MARP</a>,
+<a class="url" href="pmu.html#FLASH1_MARP">FLASH1_MARP</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_PROCON0">FLASH0_PROCON0</a>,
+<a class="url" href="pmu.html#FLASH1_PROCON0">FLASH1_PROCON0</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_PROCON1">FLASH0_PROCON1</a>,
+<a class="url" href="pmu.html#FLASH1_PROCON1">FLASH1_PROCON1</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td>
+<td><a class="url" href="pmu.html#FLASH0_PROCON2">FLASH0_PROCON2</a>,
+<a class="url" href="pmu.html#FLASH1_PROCON2">FLASH1_PROCON2</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PMU0_OVRCON_t">PMU0_OVRCON_t</a></td>
+<td><a class="url" href="pmu.html#PMU0_OVRCON">PMU0_OVRCON</a>
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td>
+<td><a class="url" href="pmu.html#PMU0_ID">PMU0_ID</a>,
+<a class="url" href="pmu.html#PMU1_ID">PMU1_ID</a>
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="PMU0_ID">&nbsp;</a>
+<h3>PMU0_ID</h3>
+<h3>"PMU0 Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMU0_ID_ADDR = 0xF8000508</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMUn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0050C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PMU0_ID.bits</b>&nbsp;&quot;PMU0 Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PMUn_ID_MOD_REV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>PMUn_ID_MOD_REV_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>PMUn_ID_MOD_TYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>PMUn_ID_MOD_TYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>PMUn_ID_MOD_NUMBER_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>PMUn_ID_MOD_NUMBER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PMUn_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PMU0_OVRCON">&nbsp;</a>
+<h3>PMU0_OVRCON</h3>
+<h3>"Overlay RAM Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMU0_OVRCON_ADDR = 0xF8000520</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMU0_OVRCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMU0_OVRCON_t">PMU0_OVRCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PMU0_OVRCON.bits</b>&nbsp;&quot;Overlay RAM Control Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>OLDAEN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>PMU0_OVRCON_OLDAEN_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rw</td>
+<td>PMU0_OVRCON_OLDAEN_SHIFT</td>
+</tr>
+<tr>
+<td>POLDAEN</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>PMU0_OVRCON_POLDAEN_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>w</td>
+<td>PMU0_OVRCON_POLDAEN_SHIFT</td>
+</tr>
+<tr>
+<td>PPERCTR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>PMU0_OVRCON_PPERCTR_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>w</td>
+<td>PMU0_OVRCON_PPERCTR_SHIFT</td>
+</tr>
+<tr>
+<td>PEREN</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>PMU0_OVRCON_PEREN_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rw</td>
+<td>PMU0_OVRCON_PEREN_SHIFT</td>
+</tr>
+<tr>
+<td>UN</td>
+<td>4</td>
+<td>12 - 15</td>
+<td>PMU0_OVRCON_UN_MASK</td>
+<td><tt>0x0000f000</tt></td>
+<td>r</td>
+<td>PMU0_OVRCON_UN_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PMU0_OVRCON_MASK</td><td><tt>0x0000f303</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000f201</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000303</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="PMU1_ID">&nbsp;</a>
+<h3>PMU1_ID</h3>
+<h3>"PMU1 Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>PMU1_ID_ADDR = 0xF8000608</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>PMUn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0051C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/p.html#PMUn_ID_t">PMUn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>PMU1_ID.bits</b>&nbsp;&quot;PMU1 Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>PMUn_ID_MOD_REV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>PMUn_ID_MOD_REV_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>PMUn_ID_MOD_TYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>PMUn_ID_MOD_TYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>PMUn_ID_MOD_NUMBER_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>PMUn_ID_MOD_NUMBER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>PMUn_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_ID">&nbsp;</a>
+<h3>FLASH0_ID</h3>
+<h3>"Flash Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_ID_ADDR = 0xF8002008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0053C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_ID.bits</b>&nbsp;&quot;Flash Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>FLASHn_ID_MOD_REV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>FLASHn_ID_MOD_REV_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>FLASHn_ID_MOD_TYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>FLASHn_ID_MOD_TYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>FLASHn_ID_MOD_NUMBER_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>FLASHn_ID_MOD_NUMBER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_FSR">&nbsp;</a>
+<h3>FLASH0_FSR</h3>
+<h3>"Flash Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_FSR_ADDR = 0xF8002010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xX0XXX0X0</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_FSR.bits</b>&nbsp;&quot;Flash Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PBUSY</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_FSR_PBUSY_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PBUSY_SHIFT</td>
+</tr>
+<tr>
+<td>FABUSY</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_FSR_FABUSY_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_FABUSY_SHIFT</td>
+</tr>
+<tr>
+<td>D0BUSY</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_FSR_D0BUSY_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_D0BUSY_SHIFT</td>
+</tr>
+<tr>
+<td>D1BUSY</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_FSR_D1BUSY_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_D1BUSY_SHIFT</td>
+</tr>
+<tr>
+<td>PROG</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_FSR_PROG_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PROG_SHIFT</td>
+</tr>
+<tr>
+<td>ERASE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_FSR_ERASE_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_ERASE_SHIFT</td>
+</tr>
+<tr>
+<td>PFPAGE</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_FSR_PFPAGE_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFPAGE_SHIFT</td>
+</tr>
+<tr>
+<td>DFPAGE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_FSR_DFPAGE_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFPAGE_SHIFT</td>
+</tr>
+<tr>
+<td>PFOPER</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_FSR_PFOPER_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFOPER_SHIFT</td>
+</tr>
+<tr>
+<td>DFOPER</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_FSR_DFOPER_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFOPER_SHIFT</td>
+</tr>
+<tr>
+<td>SQER</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_FSR_SQER_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_SQER_SHIFT</td>
+</tr>
+<tr>
+<td>PROER</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_FSR_PROER_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PROER_SHIFT</td>
+</tr>
+<tr>
+<td>PFSBER</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_FSR_PFSBER_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFSBER_SHIFT</td>
+</tr>
+<tr>
+<td>DFSBER</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FLASHn_FSR_DFSBER_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFSBER_SHIFT</td>
+</tr>
+<tr>
+<td>PFDBER</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FLASHn_FSR_PFDBER_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFDBER_SHIFT</td>
+</tr>
+<tr>
+<td>DFDBER</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_FSR_DFDBER_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFDBER_SHIFT</td>
+</tr>
+<tr>
+<td>PROIN</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>FLASHn_FSR_PROIN_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PROIN_SHIFT</td>
+</tr>
+<tr>
+<td>RPROIN</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>FLASHn_FSR_RPROIN_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_RPROIN_SHIFT</td>
+</tr>
+<tr>
+<td>RPRODIS</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>FLASHn_FSR_RPRODIS_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_RPRODIS_SHIFT</td>
+</tr>
+<tr>
+<td>WPROIN0</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>FLASHn_FSR_WPROIN0_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPROIN0_SHIFT</td>
+</tr>
+<tr>
+<td>WPROIN1</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>FLASHn_FSR_WPROIN1_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPROIN1_SHIFT</td>
+</tr>
+<tr>
+<td>WPROIN2</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>FLASHn_FSR_WPROIN2_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPROIN2_SHIFT</td>
+</tr>
+<tr>
+<td>WPRODIS0</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>FLASHn_FSR_WPRODIS0_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPRODIS0_SHIFT</td>
+</tr>
+<tr>
+<td>WPRODIS1</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>FLASHn_FSR_WPRODIS1_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPRODIS1_SHIFT</td>
+</tr>
+<tr>
+<td>SLM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>FLASHn_FSR_SLM_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_SLM_SHIFT</td>
+</tr>
+<tr>
+<td>X</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>FLASHn_FSR_X_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_X_SHIFT</td>
+</tr>
+<tr>
+<td>VER</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FLASHn_FSR_VER_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_VER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_FSR_MASK</td><td><tt>0xd6edffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xd6edffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xd6edffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_FCON">&nbsp;</a>
+<h3>FLASH0_FCON</h3>
+<h3>"Flash Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_FCON_ADDR = 0xF8002014</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00070606</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_FCON.bits</b>&nbsp;&quot;Flash Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WSPFLASH</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>FLASHn_FCON_WSPFLASH_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSPFLASH_SHIFT</td>
+</tr>
+<tr>
+<td>WSECPF</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_FCON_WSECPF_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSECPF_SHIFT</td>
+</tr>
+<tr>
+<td>WSDFLASH</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>FLASHn_FCON_WSDFLASH_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSDFLASH_SHIFT</td>
+</tr>
+<tr>
+<td>WSECDF</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_FCON_WSECDF_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSECDF_SHIFT</td>
+</tr>
+<tr>
+<td>IDLE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FLASHn_FCON_IDLE_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_IDLE_SHIFT</td>
+</tr>
+<tr>
+<td>ESLDIS</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FLASHn_FCON_ESLDIS_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_ESLDIS_SHIFT</td>
+</tr>
+<tr>
+<td>SLEEP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_FCON_SLEEP_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_SLEEP_SHIFT</td>
+</tr>
+<tr>
+<td>RPA</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>FLASHn_FCON_RPA_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>FLASHn_FCON_RPA_SHIFT</td>
+</tr>
+<tr>
+<td>DCF</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>FLASHn_FCON_DCF_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rwh</td>
+<td>FLASHn_FCON_DCF_SHIFT</td>
+</tr>
+<tr>
+<td>DDF</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>FLASHn_FCON_DDF_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rwh</td>
+<td>FLASHn_FCON_DDF_SHIFT</td>
+</tr>
+<tr>
+<td>DDFDMA</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>FLASHn_FCON_DDFDMA_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DDFDMA_SHIFT</td>
+</tr>
+<tr>
+<td>DDFPCP</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>FLASHn_FCON_DDFPCP_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DDFPCP_SHIFT</td>
+</tr>
+<tr>
+<td>VOPERM</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>FLASHn_FCON_VOPERM_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_VOPERM_SHIFT</td>
+</tr>
+<tr>
+<td>SQERM</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>FLASHn_FCON_SQERM_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_SQERM_SHIFT</td>
+</tr>
+<tr>
+<td>PROERM</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>FLASHn_FCON_PROERM_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_PROERM_SHIFT</td>
+</tr>
+<tr>
+<td>PFSBERM</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>FLASHn_FCON_PFSBERM_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_PFSBERM_SHIFT</td>
+</tr>
+<tr>
+<td>DFSBERM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>FLASHn_FCON_DFSBERM_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DFSBERM_SHIFT</td>
+</tr>
+<tr>
+<td>PFDBERM</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>FLASHn_FCON_PFDBERM_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_PFDBERM_SHIFT</td>
+</tr>
+<tr>
+<td>DFDBERM</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>FLASHn_FCON_DFDBERM_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DFDBERM_SHIFT</td>
+</tr>
+<tr>
+<td>EOBM</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FLASHn_FCON_EOBM_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_EOBM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_FCON_MASK</td><td><tt>0xff37ff1f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff37ff1f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff36ff1f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00070000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_MARP">&nbsp;</a>
+<h3>FLASH0_MARP</h3>
+<h3>"Margin Control Register PFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_MARP_ADDR = 0xF8002018</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_MARP.bits</b>&nbsp;&quot;Margin Control Register PFLASH&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MARGIN0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FLASHn_MARP_MARGIN0_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FLASHn_MARP_MARGIN0_SHIFT</td>
+</tr>
+<tr>
+<td>MARGIN1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>FLASHn_MARP_MARGIN1_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>FLASHn_MARP_MARGIN1_SHIFT</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_MARP_TRAPDIS_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FLASHn_MARP_TRAPDIS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_MARP_MASK</td><td><tt>0x0000800f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000800f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000800f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_MARD">&nbsp;</a>
+<h3>FLASH0_MARD</h3>
+<h3>"Margin Control Register DFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_MARD_ADDR = 0xF800201C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_MARD.bits</b>&nbsp;&quot;Margin Control Register DFLASH&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MARGIN0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FLASHn_MARD_MARGIN0_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_MARGIN0_SHIFT</td>
+</tr>
+<tr>
+<td>MARGIN1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>FLASHn_MARD_MARGIN1_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_MARGIN1_SHIFT</td>
+</tr>
+<tr>
+<td>BNKSEL</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_MARD_BNKSEL_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_BNKSEL_SHIFT</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_MARD_TRAPDIS_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_TRAPDIS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_MARD_MASK</td><td><tt>0x0000801f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000801f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000801f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_PROCON0">&nbsp;</a>
+<h3>FLASH0_PROCON0</h3>
+<h3>"Flash Protection Configuration Register User 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_PROCON0_ADDR = 0xF8002020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_PROCON0.bits</b>&nbsp;&quot;Flash Protection Configuration Register User 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_PROCON0_S0L_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S0L_SHIFT</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_PROCON0_S1L_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S1L_SHIFT</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_PROCON0_S2L_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S2L_SHIFT</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_PROCON0_S3L_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S3L_SHIFT</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_PROCON0_S4L_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S4L_SHIFT</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_PROCON0_S5L_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S5L_SHIFT</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_PROCON0_S6L_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S6L_SHIFT</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_PROCON0_S7L_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S7L_SHIFT</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_PROCON0_S8L_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S8L_SHIFT</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_PROCON0_S9L_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S9L_SHIFT</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_PROCON0_S10_S11L_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S10_S11L_SHIFT</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_PROCON0_S12_S13L_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S12_S13L_SHIFT</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_PROCON0_S14_S15L_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S14_S15L_SHIFT</td>
+</tr>
+<tr>
+<td>DFEXPRO</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FLASHn_PROCON0_DFEXPRO_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_DFEXPRO_SHIFT</td>
+</tr>
+<tr>
+<td>RPRO</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_PROCON0_RPRO_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_RPRO_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_PROCON0_MASK</td><td><tt>0x0000dfff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000dfff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000dfff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_PROCON1">&nbsp;</a>
+<h3>FLASH0_PROCON1</h3>
+<h3>"Flash Protection Configuration Register User 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_PROCON1_ADDR = 0xF8002024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_PROCON1.bits</b>&nbsp;&quot;Flash Protection Configuration Register User 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_PROCON1_S0L_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S0L_SHIFT</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_PROCON1_S1L_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S1L_SHIFT</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_PROCON1_S2L_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S2L_SHIFT</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_PROCON1_S3L_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S3L_SHIFT</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_PROCON1_S4L_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S4L_SHIFT</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_PROCON1_S5L_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S5L_SHIFT</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_PROCON1_S6L_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S6L_SHIFT</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_PROCON1_S7L_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S7L_SHIFT</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_PROCON1_S8L_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S8L_SHIFT</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_PROCON1_S9L_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S9L_SHIFT</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_PROCON1_S10_S11L_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S10_S11L_SHIFT</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_PROCON1_S12_S13L_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S12_S13L_SHIFT</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_PROCON1_S14_S15L_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S14_S15L_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_PROCON1_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH0_PROCON2">&nbsp;</a>
+<h3>FLASH0_PROCON2</h3>
+<h3>"Flash Protection Configuration Register User 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH0_PROCON2_ADDR = 0xF8002028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH0_PROCON2.bits</b>&nbsp;&quot;Flash Protection Configuration Register User 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>S0ROM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_PROCON2_S0ROM_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S0ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S1ROM</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_PROCON2_S1ROM_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S1ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S2ROM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_PROCON2_S2ROM_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S2ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S3ROM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_PROCON2_S3ROM_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S3ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S4ROM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_PROCON2_S4ROM_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S4ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S5ROM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_PROCON2_S5ROM_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S5ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S6ROM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_PROCON2_S6ROM_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S6ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S7ROM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_PROCON2_S7ROM_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S7ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S8ROM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_PROCON2_S8ROM_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S8ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S9ROM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_PROCON2_S9ROM_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S9ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S10_S11ROM</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_PROCON2_S10_S11ROM_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S10_S11ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S12_S13ROM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_PROCON2_S12_S13ROM_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S12_S13ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S14_S15ROM</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_PROCON2_S14_S15ROM_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S14_S15ROM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_PROCON2_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_ID">&nbsp;</a>
+<h3>FLASH1_ID</h3>
+<h3>"Flash Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_ID_ADDR = 0xF8004008</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_ID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0055C0XX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_ID_t">FLASHn_ID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_ID.bits</b>&nbsp;&quot;Flash Module Identification Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>FLASHn_ID_MOD_REV_MASK</td>
+<td><tt>0x000000ff</tt></td>
+<td>r</td>
+<td>FLASHn_ID_MOD_REV_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>FLASHn_ID_MOD_TYPE_MASK</td>
+<td><tt>0x0000ff00</tt></td>
+<td>r</td>
+<td>FLASHn_ID_MOD_TYPE_SHIFT</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>FLASHn_ID_MOD_NUMBER_MASK</td>
+<td><tt>0xffff0000</tt></td>
+<td>r</td>
+<td>FLASHn_ID_MOD_NUMBER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_ID_MASK</td><td><tt>0xffffffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_FSR">&nbsp;</a>
+<h3>FLASH1_FSR</h3>
+<h3>"Flash Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_FSR_ADDR = 0xF8004010</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0xX0XXX0X0</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FSR_t">FLASHn_FSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_FSR.bits</b>&nbsp;&quot;Flash Status Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>PBUSY</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_FSR_PBUSY_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PBUSY_SHIFT</td>
+</tr>
+<tr>
+<td>FABUSY</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_FSR_FABUSY_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_FABUSY_SHIFT</td>
+</tr>
+<tr>
+<td>D0BUSY</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_FSR_D0BUSY_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_D0BUSY_SHIFT</td>
+</tr>
+<tr>
+<td>D1BUSY</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_FSR_D1BUSY_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_D1BUSY_SHIFT</td>
+</tr>
+<tr>
+<td>PROG</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_FSR_PROG_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PROG_SHIFT</td>
+</tr>
+<tr>
+<td>ERASE</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_FSR_ERASE_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_ERASE_SHIFT</td>
+</tr>
+<tr>
+<td>PFPAGE</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_FSR_PFPAGE_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFPAGE_SHIFT</td>
+</tr>
+<tr>
+<td>DFPAGE</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_FSR_DFPAGE_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFPAGE_SHIFT</td>
+</tr>
+<tr>
+<td>PFOPER</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_FSR_PFOPER_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFOPER_SHIFT</td>
+</tr>
+<tr>
+<td>DFOPER</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_FSR_DFOPER_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFOPER_SHIFT</td>
+</tr>
+<tr>
+<td>SQER</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_FSR_SQER_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_SQER_SHIFT</td>
+</tr>
+<tr>
+<td>PROER</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_FSR_PROER_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PROER_SHIFT</td>
+</tr>
+<tr>
+<td>PFSBER</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_FSR_PFSBER_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFSBER_SHIFT</td>
+</tr>
+<tr>
+<td>DFSBER</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FLASHn_FSR_DFSBER_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFSBER_SHIFT</td>
+</tr>
+<tr>
+<td>PFDBER</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FLASHn_FSR_PFDBER_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PFDBER_SHIFT</td>
+</tr>
+<tr>
+<td>DFDBER</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_FSR_DFDBER_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_DFDBER_SHIFT</td>
+</tr>
+<tr>
+<td>PROIN</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>FLASHn_FSR_PROIN_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_PROIN_SHIFT</td>
+</tr>
+<tr>
+<td>RPROIN</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>FLASHn_FSR_RPROIN_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_RPROIN_SHIFT</td>
+</tr>
+<tr>
+<td>RPRODIS</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>FLASHn_FSR_RPRODIS_MASK</td>
+<td><tt>0x00080000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_RPRODIS_SHIFT</td>
+</tr>
+<tr>
+<td>WPROIN0</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>FLASHn_FSR_WPROIN0_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPROIN0_SHIFT</td>
+</tr>
+<tr>
+<td>WPROIN1</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>FLASHn_FSR_WPROIN1_MASK</td>
+<td><tt>0x00400000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPROIN1_SHIFT</td>
+</tr>
+<tr>
+<td>WPROIN2</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>FLASHn_FSR_WPROIN2_MASK</td>
+<td><tt>0x00800000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPROIN2_SHIFT</td>
+</tr>
+<tr>
+<td>WPRODIS0</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>FLASHn_FSR_WPRODIS0_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPRODIS0_SHIFT</td>
+</tr>
+<tr>
+<td>WPRODIS1</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>FLASHn_FSR_WPRODIS1_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_WPRODIS1_SHIFT</td>
+</tr>
+<tr>
+<td>SLM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>FLASHn_FSR_SLM_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_SLM_SHIFT</td>
+</tr>
+<tr>
+<td>X</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>FLASHn_FSR_X_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_X_SHIFT</td>
+</tr>
+<tr>
+<td>VER</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FLASHn_FSR_VER_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rh</td>
+<td>FLASHn_FSR_VER_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_FSR_MASK</td><td><tt>0xd6edffff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xd6edffff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xd6edffff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_FCON">&nbsp;</a>
+<h3>FLASH1_FCON</h3>
+<h3>"Flash Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_FCON_ADDR = 0xF8004014</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_FCON_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00070606</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_FCON_t">FLASHn_FCON_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_FCON.bits</b>&nbsp;&quot;Flash Configuration Register&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>WSPFLASH</td>
+<td>4</td>
+<td>0 - 3</td>
+<td>FLASHn_FCON_WSPFLASH_MASK</td>
+<td><tt>0x0000000f</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSPFLASH_SHIFT</td>
+</tr>
+<tr>
+<td>WSECPF</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_FCON_WSECPF_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSECPF_SHIFT</td>
+</tr>
+<tr>
+<td>WSDFLASH</td>
+<td>4</td>
+<td>8 - 11</td>
+<td>FLASHn_FCON_WSDFLASH_MASK</td>
+<td><tt>0x00000f00</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSDFLASH_SHIFT</td>
+</tr>
+<tr>
+<td>WSECDF</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_FCON_WSECDF_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_WSECDF_SHIFT</td>
+</tr>
+<tr>
+<td>IDLE</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>FLASHn_FCON_IDLE_MASK</td>
+<td><tt>0x00002000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_IDLE_SHIFT</td>
+</tr>
+<tr>
+<td>ESLDIS</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FLASHn_FCON_ESLDIS_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_ESLDIS_SHIFT</td>
+</tr>
+<tr>
+<td>SLEEP</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_FCON_SLEEP_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_SLEEP_SHIFT</td>
+</tr>
+<tr>
+<td>RPA</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>FLASHn_FCON_RPA_MASK</td>
+<td><tt>0x00010000</tt></td>
+<td>rh</td>
+<td>FLASHn_FCON_RPA_SHIFT</td>
+</tr>
+<tr>
+<td>DCF</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>FLASHn_FCON_DCF_MASK</td>
+<td><tt>0x00020000</tt></td>
+<td>rwh</td>
+<td>FLASHn_FCON_DCF_SHIFT</td>
+</tr>
+<tr>
+<td>DDF</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>FLASHn_FCON_DDF_MASK</td>
+<td><tt>0x00040000</tt></td>
+<td>rwh</td>
+<td>FLASHn_FCON_DDF_SHIFT</td>
+</tr>
+<tr>
+<td>DDFDMA</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>FLASHn_FCON_DDFDMA_MASK</td>
+<td><tt>0x00100000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DDFDMA_SHIFT</td>
+</tr>
+<tr>
+<td>DDFPCP</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>FLASHn_FCON_DDFPCP_MASK</td>
+<td><tt>0x00200000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DDFPCP_SHIFT</td>
+</tr>
+<tr>
+<td>VOPERM</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>FLASHn_FCON_VOPERM_MASK</td>
+<td><tt>0x01000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_VOPERM_SHIFT</td>
+</tr>
+<tr>
+<td>SQERM</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>FLASHn_FCON_SQERM_MASK</td>
+<td><tt>0x02000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_SQERM_SHIFT</td>
+</tr>
+<tr>
+<td>PROERM</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>FLASHn_FCON_PROERM_MASK</td>
+<td><tt>0x04000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_PROERM_SHIFT</td>
+</tr>
+<tr>
+<td>PFSBERM</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>FLASHn_FCON_PFSBERM_MASK</td>
+<td><tt>0x08000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_PFSBERM_SHIFT</td>
+</tr>
+<tr>
+<td>DFSBERM</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>FLASHn_FCON_DFSBERM_MASK</td>
+<td><tt>0x10000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DFSBERM_SHIFT</td>
+</tr>
+<tr>
+<td>PFDBERM</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>FLASHn_FCON_PFDBERM_MASK</td>
+<td><tt>0x20000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_PFDBERM_SHIFT</td>
+</tr>
+<tr>
+<td>DFDBERM</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>FLASHn_FCON_DFDBERM_MASK</td>
+<td><tt>0x40000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_DFDBERM_SHIFT</td>
+</tr>
+<tr>
+<td>EOBM</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>FLASHn_FCON_EOBM_MASK</td>
+<td><tt>0x80000000</tt></td>
+<td>rw</td>
+<td>FLASHn_FCON_EOBM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_FCON_MASK</td><td><tt>0xff37ff1f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0xff37ff1f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0xff36ff1f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00070000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_MARP">&nbsp;</a>
+<h3>FLASH1_MARP</h3>
+<h3>"Margin Control Register PFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_MARP_ADDR = 0xF8004018</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARP_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARP_t">FLASHn_MARP_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_MARP.bits</b>&nbsp;&quot;Margin Control Register PFLASH&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MARGIN0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FLASHn_MARP_MARGIN0_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FLASHn_MARP_MARGIN0_SHIFT</td>
+</tr>
+<tr>
+<td>MARGIN1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>FLASHn_MARP_MARGIN1_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>FLASHn_MARP_MARGIN1_SHIFT</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_MARP_TRAPDIS_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FLASHn_MARP_TRAPDIS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_MARP_MASK</td><td><tt>0x0000800f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000800f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000800f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_MARD">&nbsp;</a>
+<h3>FLASH1_MARD</h3>
+<h3>"Margin Control Register DFLASH"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_MARD_ADDR = 0xF800401C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_MARD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00008000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_MARD_t">FLASHn_MARD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_MARD.bits</b>&nbsp;&quot;Margin Control Register DFLASH&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>MARGIN0</td>
+<td>2</td>
+<td>0 - 1</td>
+<td>FLASHn_MARD_MARGIN0_MASK</td>
+<td><tt>0x00000003</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_MARGIN0_SHIFT</td>
+</tr>
+<tr>
+<td>MARGIN1</td>
+<td>2</td>
+<td>2 - 3</td>
+<td>FLASHn_MARD_MARGIN1_MASK</td>
+<td><tt>0x0000000c</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_MARGIN1_SHIFT</td>
+</tr>
+<tr>
+<td>BNKSEL</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_MARD_BNKSEL_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_BNKSEL_SHIFT</td>
+</tr>
+<tr>
+<td>TRAPDIS</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_MARD_TRAPDIS_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rw</td>
+<td>FLASHn_MARD_TRAPDIS_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_MARD_MASK</td><td><tt>0x0000801f</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000801f</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x0000801f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_PROCON0">&nbsp;</a>
+<h3>FLASH1_PROCON0</h3>
+<h3>"Flash Protection Configuration Register User 0"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_PROCON0_ADDR = 0xF8004020</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON0_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON0_t">FLASHn_PROCON0_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_PROCON0.bits</b>&nbsp;&quot;Flash Protection Configuration Register User 0&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_PROCON0_S0L_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S0L_SHIFT</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_PROCON0_S1L_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S1L_SHIFT</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_PROCON0_S2L_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S2L_SHIFT</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_PROCON0_S3L_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S3L_SHIFT</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_PROCON0_S4L_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S4L_SHIFT</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_PROCON0_S5L_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S5L_SHIFT</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_PROCON0_S6L_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S6L_SHIFT</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_PROCON0_S7L_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S7L_SHIFT</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_PROCON0_S8L_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S8L_SHIFT</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_PROCON0_S9L_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S9L_SHIFT</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_PROCON0_S10_S11L_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S10_S11L_SHIFT</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_PROCON0_S12_S13L_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S12_S13L_SHIFT</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_PROCON0_S14_S15L_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_S14_S15L_SHIFT</td>
+</tr>
+<tr>
+<td>DFEXPRO</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>FLASHn_PROCON0_DFEXPRO_MASK</td>
+<td><tt>0x00004000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_DFEXPRO_SHIFT</td>
+</tr>
+<tr>
+<td>RPRO</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>FLASHn_PROCON0_RPRO_MASK</td>
+<td><tt>0x00008000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON0_RPRO_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_PROCON0_MASK</td><td><tt>0x0000dfff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x0000dfff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0000dfff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_PROCON1">&nbsp;</a>
+<h3>FLASH1_PROCON1</h3>
+<h3>"Flash Protection Configuration Register User 1"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_PROCON1_ADDR = 0xF8004024</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON1_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON1_t">FLASHn_PROCON1_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_PROCON1.bits</b>&nbsp;&quot;Flash Protection Configuration Register User 1&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>S0L</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_PROCON1_S0L_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S0L_SHIFT</td>
+</tr>
+<tr>
+<td>S1L</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_PROCON1_S1L_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S1L_SHIFT</td>
+</tr>
+<tr>
+<td>S2L</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_PROCON1_S2L_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S2L_SHIFT</td>
+</tr>
+<tr>
+<td>S3L</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_PROCON1_S3L_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S3L_SHIFT</td>
+</tr>
+<tr>
+<td>S4L</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_PROCON1_S4L_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S4L_SHIFT</td>
+</tr>
+<tr>
+<td>S5L</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_PROCON1_S5L_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S5L_SHIFT</td>
+</tr>
+<tr>
+<td>S6L</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_PROCON1_S6L_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S6L_SHIFT</td>
+</tr>
+<tr>
+<td>S7L</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_PROCON1_S7L_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S7L_SHIFT</td>
+</tr>
+<tr>
+<td>S8L</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_PROCON1_S8L_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S8L_SHIFT</td>
+</tr>
+<tr>
+<td>S9L</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_PROCON1_S9L_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S9L_SHIFT</td>
+</tr>
+<tr>
+<td>S10_S11L</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_PROCON1_S10_S11L_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S10_S11L_SHIFT</td>
+</tr>
+<tr>
+<td>S12_S13L</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_PROCON1_S12_S13L_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S12_S13L_SHIFT</td>
+</tr>
+<tr>
+<td>S14_S15L</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_PROCON1_S14_S15L_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON1_S14_S15L_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_PROCON1_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="FLASH1_PROCON2">&nbsp;</a>
+<h3>FLASH1_PROCON2</h3>
+<h3>"Flash Protection Configuration Register User 2"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>FLASH1_PROCON2_ADDR = 0xF8004028</tt></td></tr>
+<tr><td>Absolute addressable</td><td>No</td></tr>
+<!--tr><td>C type</td><td>FLASHn_PROCON2_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0000XXXX</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/f.html#FLASHn_PROCON2_t">FLASHn_PROCON2_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="7"><b>FLASH1_PROCON2.bits</b>&nbsp;&quot;Flash Protection Configuration Register User 2&quot;</td>
+</tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Mask Name</b></td>
+<td><b>Mask</b></td>
+<td><b>Access</b></td>
+<td><b>Shift (LSB)</b></td>
+</tr>
+<tr>
+<td>S0ROM</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>FLASHn_PROCON2_S0ROM_MASK</td>
+<td><tt>0x00000001</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S0ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S1ROM</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>FLASHn_PROCON2_S1ROM_MASK</td>
+<td><tt>0x00000002</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S1ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S2ROM</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>FLASHn_PROCON2_S2ROM_MASK</td>
+<td><tt>0x00000004</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S2ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S3ROM</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>FLASHn_PROCON2_S3ROM_MASK</td>
+<td><tt>0x00000008</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S3ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S4ROM</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>FLASHn_PROCON2_S4ROM_MASK</td>
+<td><tt>0x00000010</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S4ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S5ROM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>FLASHn_PROCON2_S5ROM_MASK</td>
+<td><tt>0x00000020</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S5ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S6ROM</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>FLASHn_PROCON2_S6ROM_MASK</td>
+<td><tt>0x00000040</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S6ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S7ROM</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>FLASHn_PROCON2_S7ROM_MASK</td>
+<td><tt>0x00000080</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S7ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S8ROM</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>FLASHn_PROCON2_S8ROM_MASK</td>
+<td><tt>0x00000100</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S8ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S9ROM</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>FLASHn_PROCON2_S9ROM_MASK</td>
+<td><tt>0x00000200</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S9ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S10_S11ROM</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>FLASHn_PROCON2_S10_S11ROM_MASK</td>
+<td><tt>0x00000400</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S10_S11ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S12_S13ROM</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>FLASHn_PROCON2_S12_S13ROM_MASK</td>
+<td><tt>0x00000800</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S12_S13ROM_SHIFT</td>
+</tr>
+<tr>
+<td>S14_S15ROM</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>FLASHn_PROCON2_S14_S15ROM_MASK</td>
+<td><tt>0x00001000</tt></td>
+<td>rh</td>
+<td>FLASHn_PROCON2_S14_S15ROM_SHIFT</td>
+</tr>
+
+<tr><td colspan="3" rowspan="4">&nbsp;</td><td>FLASHn_PROCON2_MASK</td><td><tt>0x00001fff</tt></td><td colspan="2" rowspan="4">&nbsp;</td></tr>
+<tr><td>readable</td><td><tt>0x00001fff</tt></td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00001fff</tt></td></tr>
+</table>
+
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,4363 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+
+<title>TriCore TC1791 (OCDS)</title>
+<style type="text/css">
+.url { text-decoration:none; }
+td   { vertical-align:top; }
+</style>
+</head>
+<body>
+
+<a name="top">&nbsp;</a>
+
+<h2>OCDS</h2>
+
+<h2><tt>#include &lt;tc1791/ocds.h&gt;</tt></h2>
+
+<h3>&rarr;&nbsp;<a href="#c-types">defined C types</a></h3>
+
+
+<h3>defined SFRs</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Register Name</b></td>
+<td><b>Description</b></td>
+<td><b>Address</b></td>
+<td><b>Type</b></td>
+<td><b>Reset</b></td>
+<td><b>access (read)</b></td>
+<td><b>access (write)</b></td>
+</tr>
+
+<tr>
+<td><a class="url" href="#CBS_JDPID">CBS_JDPID</a></td>
+<td>Module Identification Register</td>
+<td>0xF0000408</td>
+<td><a class="url" href="types/c.html#CBS_JDPID_t">CBS_JDPID_t</a></td>
+<td>0x00006350</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_JTAGID">CBS_JTAGID</a></td>
+<td>JTAG Device Identification Register</td>
+<td>0xF0000464</td>
+<td><a class="url" href="types/c.html#CBS_JTAGID_t">CBS_JTAGID_t</a></td>
+<td>0x101BE083</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_COMDATA">CBS_COMDATA</a></td>
+<td>Communication Mode Data Register</td>
+<td>0xF0000468</td>
+<td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_IOSR">CBS_IOSR</a></td>
+<td>IOClient Status and Control Register</td>
+<td>0xF000046C</td>
+<td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDBBS">CBS_MCDBBS</a></td>
+<td>Break Bus Switch Configuration Register</td>
+<td>0xF0000470</td>
+<td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td>
+<td>0x00600000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDSSG">CBS_MCDSSG</a></td>
+<td>Suspend Source Status and Control Register</td>
+<td>0xF0000474</td>
+<td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OEC">CBS_OEC</a></td>
+<td>OCDS Enable Control Register</td>
+<td>0xF0000478</td>
+<td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OCNTRL">CBS_OCNTRL</a></td>
+<td>OSCU Control Register</td>
+<td>0xF000047C</td>
+<td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_OSTATE">CBS_OSTATE</a></td>
+<td>OSCU Status Register</td>
+<td>0xF0000480</td>
+<td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td>
+<td>0x00010000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_INTMOD">CBS_INTMOD</a></td>
+<td>Internal Mode Status and Control Register</td>
+<td>0xF0000484</td>
+<td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_ICTSA">CBS_ICTSA</a></td>
+<td>Internally Controlled Trace Source Register</td>
+<td>0xF0000488</td>
+<td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_ICTTA">CBS_ICTTA</a></td>
+<td>Internally Controlled Trace Destination Register</td>
+<td>0xF000048C</td>
+<td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td>
+<td>0x0010F068</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDBBSS">CBS_MCDBBSS</a></td>
+<td>Break Bus Switch Status Register</td>
+<td>0xF0000490</td>
+<td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_MCDSSGC">CBS_MCDSSGC</a></td>
+<td>Suspend Signal Target Control Register</td>
+<td>0xF0000494</td>
+<td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_TRIGS">CBS_TRIGS</a></td>
+<td>Set Trigger to Host Register</td>
+<td>0xF00004A0</td>
+<td><a class="url" href="types/c.html#CBS_TRIGS_t">CBS_TRIGS_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_TRIGC">CBS_TRIGC</a></td>
+<td>Clear Trigger to Host Register</td>
+<td>0xF00004A4</td>
+<td><a class="url" href="types/c.html#CBS_TRIGC_t">CBS_TRIGC_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_TRIG">CBS_TRIG</a></td>
+<td>Trigger to Host Register</td>
+<td>0xF00004A8</td>
+<td><a class="url" href="types/c.html#CBS_TRIG_t">CBS_TRIG_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_SRC1">CBS_SRC1</a></td>
+<td>Service Request Node2 Control Register</td>
+<td>0xF00004F8</td>
+<td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+<tr>
+<td><a class="url" href="#CBS_SRC0">CBS_SRC0</a></td>
+<td>Service Request Node1 Control Register</td>
+<td>0xF00004FC</td>
+<td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td>
+<td>0x00000000</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+
+
+</table>
+
+
+
+<a name="c-types"><hr></a>
+
+<h3>defined C types</h3>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td><b>Type</b></td>
+<td><b>Registers</b></td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td>
+<td><a class="url" href="ocds.html#CBS_COMDATA">CBS_COMDATA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td>
+<td><a class="url" href="ocds.html#CBS_ICTSA">CBS_ICTSA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td>
+<td><a class="url" href="ocds.html#CBS_ICTTA">CBS_ICTTA</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td>
+<td><a class="url" href="ocds.html#CBS_INTMOD">CBS_INTMOD</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td>
+<td><a class="url" href="ocds.html#CBS_IOSR">CBS_IOSR</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_JDPID_t">CBS_JDPID_t</a></td>
+<td><a class="url" href="ocds.html#CBS_JDPID">CBS_JDPID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_JTAGID_t">CBS_JTAGID_t</a></td>
+<td><a class="url" href="ocds.html#CBS_JTAGID">CBS_JTAGID</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td>
+<td><a class="url" href="ocds.html#CBS_MCDBBS">CBS_MCDBBS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td>
+<td><a class="url" href="ocds.html#CBS_MCDBBSS">CBS_MCDBBSS</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td>
+<td><a class="url" href="ocds.html#CBS_MCDSSG">CBS_MCDSSG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td>
+<td><a class="url" href="ocds.html#CBS_MCDSSGC">CBS_MCDSSGC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td>
+<td><a class="url" href="ocds.html#CBS_OCNTRL">CBS_OCNTRL</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td>
+<td><a class="url" href="ocds.html#CBS_OEC">CBS_OEC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td>
+<td><a class="url" href="ocds.html#CBS_OSTATE">CBS_OSTATE</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td>
+<td><a class="url" href="ocds.html#CBS_SRC1">CBS_SRC1</a>,       
+<a class="url" href="ocds.html#CBS_SRC0">CBS_SRC0</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_TRIG_t">CBS_TRIG_t</a></td>
+<td><a class="url" href="ocds.html#CBS_TRIG">CBS_TRIG</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_TRIGC_t">CBS_TRIGC_t</a></td>
+<td><a class="url" href="ocds.html#CBS_TRIGC">CBS_TRIGC</a>      
+</td>
+</tr>
+<tr>
+<td><a class="url" href="types/c.html#CBS_TRIGS_t">CBS_TRIGS_t</a></td>
+<td><a class="url" href="ocds.html#CBS_TRIGS">CBS_TRIGS</a>      
+</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<a name="CBS_JDPID">&nbsp;</a>
+<h3>CBS_JDPID</h3>
+<h3>"Module Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_JDPID_ADDR = 0xF0000408</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_JDPID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00006350</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_JDPID_t">CBS_JDPID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_JDPID.bits</b>&nbsp;&quot;Module Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_JDPID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_JDPID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_JDPID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>MOD_REV</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>r</td>
+<td><tt>0x000000ff</tt></td>
+<td>Module Revision
+</td>
+</tr>
+<tr>
+<td>MOD_TYPE</td>
+<td>8</td>
+<td>8 - 15</td>
+<td>r</td>
+<td><tt>0x0000ff00</tt></td>
+<td>Module Type
+</td>
+</tr>
+<tr>
+<td>MOD_NUMBER</td>
+<td>16</td>
+<td>16 - 31</td>
+<td>r</td>
+<td><tt>0xffff0000</tt></td>
+<td>Module Number
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_JTAGID">&nbsp;</a>
+<h3>CBS_JTAGID</h3>
+<h3>"JTAG Device Identification Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_JTAGID_ADDR = 0xF0000464</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_JTAGID_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x101BE083</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_JTAGID_t">CBS_JTAGID_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_JTAGID.bits</b>&nbsp;&quot;JTAG Device Identification Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_JTAGID_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_JTAGID_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_JTAGID_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>JTAG_ID</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>JTAG Device ID
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_COMDATA">&nbsp;</a>
+<h3>CBS_COMDATA</h3>
+<h3>"Communication Mode Data Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_COMDATA_ADDR = 0xF0000468</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_COMDATA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_COMDATA_t">CBS_COMDATA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_COMDATA.bits</b>&nbsp;&quot;Communication Mode Data Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_COMDATA_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_COMDATA_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_COMDATA_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>Read/Write Data
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_IOSR">&nbsp;</a>
+<h3>CBS_IOSR</h3>
+<h3>"IOClient Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_IOSR_ADDR = 0xF000046C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_IOSR_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_IOSR_t">CBS_IOSR_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_IOSR.bits</b>&nbsp;&quot;IOClient Status and Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_IOSR_MASK = <tt>0x000071f0</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_IOSR_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_IOSR_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>CRSYNC</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Communication Mode Read Sync Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No receive request pending.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Data required to be written into .</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CWSYNC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Communication Mode Write Sync Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No send request pending.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>New data available in .</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CW_ACK</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Communication Mode Write Acknowledge
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear the CWSYNC bit.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>COM_SYNC</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Communication Mode Synchronization Flag
+</td>
+</tr>
+<tr>
+<td>HOSTED</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Tool Interface in Use
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DAP Interface not in Active state.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DAP Interface in Active state</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHANNEL</td>
+<td>3</td>
+<td>12 - 14</td>
+<td>rh</td>
+<td><tt>0x00007000</tt></td>
+<td>Channel Indication
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000071b0</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000040</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000071b0</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDBBS">&nbsp;</a>
+<h3>CBS_MCDBBS</h3>
+<h3>"Break Bus Switch Configuration Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDBBS_ADDR = 0xF0000470</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDBBS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00600000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDBBS_t">CBS_MCDBBS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_MCDBBS.bits</b>&nbsp;&quot;Break Bus Switch Configuration Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_MCDBBS_MASK = <tt>0x01ff71ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_MCDBBS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_MCDBBS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>BSSB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rw</td>
+<td><tt>0x00000001</tt></td>
+<td>Break Source SPB/MCDS Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SPB and MCDS are connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SPB and MCDS are connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSDMA</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Break Source DMA Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSMLI</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Break Source MLI Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>MLI is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>MLI is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSSRI</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Break Source SRI Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SRI is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SRI is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSPCP</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Break Source PCP Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>PCP is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSTC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Break Source TriCore Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>TriCore is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>TriCore is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSPCPEN</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Break Source PCP Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>PCP DEBUG does not cause a break.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP DEBUG also causes a break.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSHLTEN</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Break Source TriCore Halt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>HALT does not cause a break on its own.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>HALT of the TriCore also causes a break.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTMCD</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rw</td>
+<td><tt>0x00000100</tt></td>
+<td>Break Target MCDS Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>MCDS is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>MCDS is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTPCP</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Break Target PCP Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>PCP is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTTC</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rw</td>
+<td><tt>0x00002000</tt></td>
+<td>Break Target TriCore Selection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>TriCore is connected to break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>TriCore is connected to break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTPCPEN</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rw</td>
+<td><tt>0x00004000</tt></td>
+<td>Break Target PCP Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break target PCP disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break target PCP enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSP0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rw</td>
+<td><tt>0x00010000</tt></td>
+<td>Break Source Input Pin Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break Input pin i is disconnected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break Input pin i is connected to break bus i.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSP1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rw</td>
+<td><tt>0x00020000</tt></td>
+<td>Break Source Input Pin Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break Input pin i is disconnected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break Input pin i is connected to break bus i.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTP0</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rw</td>
+<td><tt>0x00040000</tt></td>
+<td>Break Target Output Pin Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break Output pin i is not used by Cerberus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break Output pin i is driven by break bus i.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTP1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rw</td>
+<td><tt>0x00080000</tt></td>
+<td>Break Target Output Pin Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break Output pin i is not used by Cerberus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break Output pin i is driven by break bus i.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTT</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rw</td>
+<td><tt>0x00100000</tt></td>
+<td>Break Target Triggered Transfer
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>transfer_trigger is driven by break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>transfer_trigger is driven by break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTPS</td>
+<td>2</td>
+<td>21 - 22</td>
+<td>rw</td>
+<td><tt>0x00600000</tt></td>
+<td>Break Pin Select
+</td>
+</tr>
+<tr>
+<td>BTSS</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rw</td>
+<td><tt>0x00800000</tt></td>
+<td>Break To Suspend Source Select
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Suspend can be derived from break bus 0.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Suspend can be derived from break bus 1.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTTIEN</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rw</td>
+<td><tt>0x01000000</tt></td>
+<td>Break Target Interrupt Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No service request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service request posted by break bus BTT.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x01ff71ff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x01ff71ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDSSG">&nbsp;</a>
+<h3>CBS_MCDSSG</h3>
+<h3>"Suspend Source Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDSSG_ADDR = 0xF0000474</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDSSG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDSSG_t">CBS_MCDSSG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_MCDSSG.bits</b>&nbsp;&quot;Suspend Source Status and Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_MCDSSG_MASK = <tt>0x034d07c1</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_MCDSSG_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_MCDSSG_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>BTSCL</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Break To Suspend Capture Clear
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear the Break To Suspend capture flip-flop.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SUS_P</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>SUS Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SUS is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SUS is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SUS</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rw</td>
+<td><tt>0x00000080</tt></td>
+<td>Manual Suspend
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear SUS bit if SUS_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set SUS bit if SUS_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTS_P</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Break To Suspend Control Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>BTSM and BTSEN are not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>BTSM and BTSEN are updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTSEN</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rw</td>
+<td><tt>0x00000200</tt></td>
+<td>Break To Suspend Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break to Suspend logic is disconnected.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break to Suspend logic is connected to the suspend bus.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BTSM</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rw</td>
+<td><tt>0x00000400</tt></td>
+<td>Break To Suspend Conversion Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break to Suspend logic in Capture Mode.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break to Suspend logic in Direct Mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SSSTC</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Suspend Source TriCore Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from TriCore is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from TriCore is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SSSSCU</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>Suspend Source SCU Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal sleep from SCU is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal sleep from SCU is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SSSMCD</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>Suspend Source MCDS (EMEM) Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from EMEM is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from EMEM is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SSSBRK</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Status of Break To Suspend Converter Output
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from Break to Suspend Converter is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from Break to Suspend Converter is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SOS</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rh</td>
+<td><tt>0x01000000</tt></td>
+<td>Current Status of the Suspend Bus
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Suspend bus is currently inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Suspend bus is currently asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SDS</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rh</td>
+<td><tt>0x02000000</tt></td>
+<td>Current Status of the Delayed Suspend Bus
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Delayed suspend bus is currently inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Delayed suspend bus is currently asserted.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x034d0680</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000007c1</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x034d0000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OEC">&nbsp;</a>
+<h3>CBS_OEC</h3>
+<h3>"OCDS Enable Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OEC_ADDR = 0xF0000478</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OEC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OEC_t">CBS_OEC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_OEC.bits</b>&nbsp;&quot;OCDS Enable Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_OEC_MASK = <tt>0x000f01ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_OEC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_OEC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>PAT</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>w</td>
+<td><tt>0x000000ff</tt></td>
+<td>OCDS Enabling Pattern
+</td>
+</tr>
+<tr>
+<td>DS</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Disable OCDS
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear .OEN.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IF_LCK_P</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>IF_LCK Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>IF_LCK is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>IF_LCK is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IF_LCK</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>w</td>
+<td><tt>0x00020000</tt></td>
+<td>Set/Clear Interface Locked Indication
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .IF_LCK if IF_LCK_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .IF_LCK if IF_LCK_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AUT_OK_P</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>AUT_OK Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>AUT_OK is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>AUT_OK is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AUT_OK</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>w</td>
+<td><tt>0x00080000</tt></td>
+<td>Set/Clear the Authorization OK Indication
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .AUT_OK if AUT_OK_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .AUT_OK if AUT_OK_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x000f01ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OCNTRL">&nbsp;</a>
+<h3>CBS_OCNTRL</h3>
+<h3>"OSCU Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OCNTRL_ADDR = 0xF000047C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OCNTRL_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OCNTRL_t">CBS_OCNTRL_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_OCNTRL.bits</b>&nbsp;&quot;OSCU Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_OCNTRL_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_OCNTRL_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_OCNTRL_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>OC0_P</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>OCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC0</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Set/Clear OCDS Control Bits Bus Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC1_P</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>OCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC1</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Set/Clear OCDS Control Bits Bus Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC2_P</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>OCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC2</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Set/Clear OCDS Control Bits Bus Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC3_P</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>OCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC3</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Set/Clear OCDS Control Bits Bus Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC4_P</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>OCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC4</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Set/Clear OCDS Control Bits Bus Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC5_P</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>OCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OC5</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Set/Clear OCDS Control Bits Bus Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OCi if OCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WDTSUS_P</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>w</td>
+<td><tt>0x00001000</tt></td>
+<td>WDTSUS Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.WDTSUS is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.WDTSUS is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WDTSUS</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Set/Clear Watchdog Timer Suspension Control
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .WDTSUS if WDTSUS_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .WDTSUS if WDTSUS_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STABLE_P</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>STABLE Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.STABLE is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.STABLE is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STABLE</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Initialize System Reset Indication
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .STABLE if STABLE_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .STABLE if STABLE_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC0_P</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC0</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>w</td>
+<td><tt>0x00020000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC1_P</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>w</td>
+<td><tt>0x00080000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC2_P</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>w</td>
+<td><tt>0x00100000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC2</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>w</td>
+<td><tt>0x00200000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC3_P</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>w</td>
+<td><tt>0x00400000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC3</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>w</td>
+<td><tt>0x00800000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC4_P</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>w</td>
+<td><tt>0x01000000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC4</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>w</td>
+<td><tt>0x02000000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC5_P</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>w</td>
+<td><tt>0x04000000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC5</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>w</td>
+<td><tt>0x08000000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC6_P</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>w</td>
+<td><tt>0x10000000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC6</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>w</td>
+<td><tt>0x20000000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC7_P</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>w</td>
+<td><tt>0x40000000</tt></td>
+<td>OJCi Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.OJCi is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.OJCi is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC7</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>w</td>
+<td><tt>0x80000000</tt></td>
+<td>Set/Clear OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Clear .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .OJCi if OJCi_P is'1' concurrently in this write access.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_OSTATE">&nbsp;</a>
+<h3>CBS_OSTATE</h3>
+<h3>"OSCU Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_OSTATE_ADDR = 0xF0000480</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_OSTATE_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00010000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_OSTATE_t">CBS_OSTATE_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_OSTATE.bits</b>&nbsp;&quot;OSCU Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_OSTATE_MASK = <tt>0x0007bfff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_OSTATE_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_OSTATE_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>OEN</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>OCDS Enabled Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>OCDS is disabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>OCDS is enabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DJMODE</td>
+<td>2</td>
+<td>1 - 2</td>
+<td>rh</td>
+<td><tt>0x00000006</tt></td>
+<td>OCDS IOClient Interface Mode
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Two-pin DAP mode (Default)</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Two-pin DAP with disabled .</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Forced JTAG mode.</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>DAPRST</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>OCDS IOClient Protocol Clear
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Force DAP back to Enabled state.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>ENIDIS</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>OCDS ENDINIT Protection Override
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>ENDINIT protection is controlled by SCU.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>ENDINIT protection is disabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EECTRC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>On Chip Trace Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>All trace ports are turned off.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>All trace ports towards MCDS are turned on.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>EECDIS</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Emulation Logic Disable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>EEC is enabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>EEC is disabled.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>WDTSUS</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Control of Watchdog Timer Suspension
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The Watchdog Timer is suspended as long as OCDS is enabled.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The Watchdog Timer is only suspended when the Suspend Bus is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>HARR</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Halt after Reset Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>After System Reset the application code (according to boot option) is started.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>After the next System Reset the processor is sent to HALT state prior to executing any application code.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC1</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Default behavior.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Special behavior.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC2</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Default behavior.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Special behavior.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>OJC3</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>OCDS Control Bits IOClient Domain
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Default behavior.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Special behavior.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RSTCL0</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>OCDS System Reset (Class 0) Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A reset request (class 0) is sent to the SCU.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RSTCL1</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>OCDS Debug Reset (Class 1) Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A reset request (class 1) is sent to the SCU.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>RSTCL3</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>OCDS Application Reset (Class 3) Request
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>A reset request (class 3) is sent to the SCU.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>IF_LCK</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Interface Locked Indication
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>The IOClient is allowed to gain access.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>The IOClient is not allowed to enter RW Mode.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>AUT_OK</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Authorization OK Indication
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Default behavior.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Special behavior.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STABLE</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>System Reset Indication
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>At least one reset occurred since last set operation.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>No System Reset since last set operation.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0007bfff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x0007bfff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_INTMOD">&nbsp;</a>
+<h3>CBS_INTMOD</h3>
+<h3>"Internal Mode Status and Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_INTMOD_ADDR = 0xF0000484</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_INTMOD_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_INTMOD_t">CBS_INTMOD_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_INTMOD.bits</b>&nbsp;&quot;Internal Mode Status and Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_INTMOD_MASK = <tt>0x037d00ff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_INTMOD_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_INTMOD_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SET_CRS</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Set Read Sync Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .CRSYNCCan be done concurrently with SET_INT_MOD in one write access to ..</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SET_CWS</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Set Write Sync Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .CWSYNC1).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SET_CS</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Set Communication Synchronization Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Set .COM_SYNC1).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLR_CS</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Clear Communication Synchronization Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Clear .COM_SYNC1).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHANNEL_P</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>CHANNEL Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>CHANNEL is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>CHANNEL is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CHANNEL</td>
+<td>3</td>
+<td>5 - 7</td>
+<td>rw</td>
+<td><tt>0x000000e0</tt></td>
+<td>Channel Indication
+</td>
+</tr>
+<tr>
+<td>SET_INT_MOD</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>Enter Internal Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enter Internal Mode if the other preconditions are met (see ).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>SET_INT_TRC</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Enable Internally Controlled Triggered Transfer
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Enable Internally Controlled Triggered Transfer if the other preconditions are met1).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CLR_INT_TRC</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>w</td>
+<td><tt>0x00080000</tt></td>
+<td>Disable Internally Controlled Triggered Transfer
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>no action.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Disable Internally Controlled Triggered Transfer1).</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRC_MOD_P</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>w</td>
+<td><tt>0x00100000</tt></td>
+<td>TRC_MOD Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>TRC_MOD is not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>TRC_MOD is updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRC_MOD</td>
+<td>2</td>
+<td>21 - 22</td>
+<td>rw</td>
+<td><tt>0x00600000</tt></td>
+<td>Data Size Definition for Triggered Transfer
+<table class="valdesc">
+<tr><td>00</td><td>&nbsp;</td><td>Word (32 bit).</td></tr>
+<tr><td>01</td><td>&nbsp;</td><td>Half word (16 bit).</td></tr>
+<tr><td>10</td><td>&nbsp;</td><td>Byte (8 bit).</td></tr>
+<tr><td>11</td><td>&nbsp;</td><td>reserved.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INT_MOD</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rh</td>
+<td><tt>0x01000000</tt></td>
+<td>Internal Mode Enabled Flag
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Internal Mode not active.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Internal Mode active.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>INT_TRC</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rh</td>
+<td><tt>0x02000000</tt></td>
+<td>Internally Controlled Triggered Transfer Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No Internally Controlled Triggered Transfer.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Internally Controlled Triggered Transfer is enabled.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x036000e0</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x007d00ff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x03000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_ICTSA">&nbsp;</a>
+<h3>CBS_ICTSA</h3>
+<h3>"Internally Controlled Trace Source Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_ICTSA_ADDR = 0xF0000488</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_ICTSA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_ICTSA_t">CBS_ICTSA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_ICTSA.bits</b>&nbsp;&quot;Internally Controlled Trace Source Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_ICTSA_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_ICTSA_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_ICTSA_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>Source Address
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_ICTTA">&nbsp;</a>
+<h3>CBS_ICTTA</h3>
+<h3>"Internally Controlled Trace Destination Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_ICTTA_ADDR = 0xF000048C</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_ICTTA_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x0010F068</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_ICTTA_t">CBS_ICTTA_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_ICTTA.bits</b>&nbsp;&quot;Internally Controlled Trace Destination Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_ICTTA_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_ICTTA_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_ICTTA_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>ADDR</td>
+<td>32</td>
+<td>0 - 31</td>
+<td>rw</td>
+<td><tt>0xffffffff</tt></td>
+<td>Destination Address
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDBBSS">&nbsp;</a>
+<h3>CBS_MCDBBSS</h3>
+<h3>"Break Bus Switch Status Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDBBSS_ADDR = 0xF0000490</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDBBSS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDBBSS_t">CBS_MCDBBSS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_MCDBBSS.bits</b>&nbsp;&quot;Break Bus Switch Status Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_MCDBBSS_MASK = <tt>0x010f3f3f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_MCDBBSS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_MCDBBSS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>BSSSB</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Break Source SPB/MCDS Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signals from SPB and MCDS are inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>At least one signal from SPB or MCDS is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSSDMA</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Break Source DMA Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from DMA is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from DMA is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSSMLI</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Break Source MLI Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from MLI is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from MLI is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSSSRI</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Break Source SRI Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from SRI is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from SRI is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSSPCP</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Break Source PCP Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from PCP is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from PCP is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSSTC</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Break Source TriCore Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from TriCore is inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from TriCore is asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSCSB</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Break Source SPB/MCDS Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signals from SPB and MCDS were permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>At least one of the signals from MCDS or SPB was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSCDMA</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Break Source DMA Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from DMA was permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from DMA was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSCMLI</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Break Source MLI Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from MLI was permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from MLI was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSCSRI</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Break Source SRI Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from SRI was permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from SRI was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSCPCP</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Break Source PCP Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from PCP was permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from PCP was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BSCTC</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Break Source TriCore Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Signal from TriCore was permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Signal from TriCore was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BBS0</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Break Bus Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break bus i is currently inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break bus i is currently asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BBS1</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Break Bus Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break bus i is currently inactive.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break bus i is currently asserted.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BBC0</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>Break Bus Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break bus i was permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break bus i was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>BBC1</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>Break Bus Captured Status
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>Break bus i was permanently inactive since last CAPCLR.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Break bus i was asserted at least once since last CAPCLR.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>CAPCLR</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>w</td>
+<td><tt>0x01000000</tt></td>
+<td>Clear Capture Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No effect.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>All BSCi and BBCi bits are cleared.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x000f3f3f</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x01000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x000f3f3f</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_MCDSSGC">&nbsp;</a>
+<h3>CBS_MCDSSGC</h3>
+<h3>"Suspend Signal Target Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_MCDSSGC_ADDR = 0xF0000494</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_MCDSSGC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_MCDSSGC_t">CBS_MCDSSGC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_MCDSSGC.bits</b>&nbsp;&quot;Suspend Signal Target Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_MCDSSGC_MASK = <tt>0x0000007f</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_MCDSSGC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_MCDSSGC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>STC_P</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Suspend Target Write Protection
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>STC* are not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>STC* are updated by this write access.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STCM</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rw</td>
+<td><tt>0x00000002</tt></td>
+<td>Global Target Suspend Mode
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>All selected suspend targets are connected to the suspend bus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>All selected suspend targets are suspended.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STCTC</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rw</td>
+<td><tt>0x00000004</tt></td>
+<td>Suspend Target TriCore Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>TriCore is not affected by the suspend bus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>TriCore is connected to the suspend bus or suspended depending on STCM.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STCPCP</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rw</td>
+<td><tt>0x00000008</tt></td>
+<td>Suspend Target PCP Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>PCP is not affected by the suspend bus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>PCP is connected to the suspend bus or suspended depending on STCM.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STCDMA</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rw</td>
+<td><tt>0x00000010</tt></td>
+<td>Suspend Target DMA/MLI Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>DMA and MLI are not affected by the suspend bus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>DMA and MLI are connected to the suspend bus or suspended depending on STCM.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STCSDM</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rw</td>
+<td><tt>0x00000020</tt></td>
+<td>Suspend Target SDMA Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SDMA is not affected by the suspend bus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SDMA is connected to the suspend bus or suspended depending on STCM.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>STCSHE</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rw</td>
+<td><tt>0x00000040</tt></td>
+<td>Suspend Target SHE Enable
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>SHE is not affected by the suspend bus.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>SHE is connected to the suspend bus or suspended depending on STCM.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x0000007e</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000007f</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_TRIGS">&nbsp;</a>
+<h3>CBS_TRIGS</h3>
+<h3>"Set Trigger to Host Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_TRIGS_ADDR = 0xF00004A0</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_TRIGS_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_TRIGS_t">CBS_TRIGS_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_TRIGS.bits</b>&nbsp;&quot;Set Trigger to Host Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_TRIGS_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_TRIGS_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_TRIGS_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TRG0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>w</td>
+<td><tt>0x00001000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>w</td>
+<td><tt>0x00020000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>w</td>
+<td><tt>0x00080000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>w</td>
+<td><tt>0x00100000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>w</td>
+<td><tt>0x00200000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>w</td>
+<td><tt>0x00400000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>w</td>
+<td><tt>0x00800000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>w</td>
+<td><tt>0x01000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>w</td>
+<td><tt>0x02000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>w</td>
+<td><tt>0x04000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>w</td>
+<td><tt>0x08000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>w</td>
+<td><tt>0x10000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>w</td>
+<td><tt>0x20000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>w</td>
+<td><tt>0x40000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>w</td>
+<td><tt>0x80000000</tt></td>
+<td>Set Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is set.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_TRIGC">&nbsp;</a>
+<h3>CBS_TRIGC</h3>
+<h3>"Clear Trigger to Host Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_TRIGC_ADDR = 0xF00004A4</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_TRIGC_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_TRIGC_t">CBS_TRIGC_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_TRIGC.bits</b>&nbsp;&quot;Clear Trigger to Host Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_TRIGC_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_TRIGC_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_TRIGC_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TRG0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>w</td>
+<td><tt>0x00000001</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>w</td>
+<td><tt>0x00000002</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>w</td>
+<td><tt>0x00000004</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>w</td>
+<td><tt>0x00000008</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>w</td>
+<td><tt>0x00000010</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>w</td>
+<td><tt>0x00000020</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>w</td>
+<td><tt>0x00000040</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>w</td>
+<td><tt>0x00000080</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>w</td>
+<td><tt>0x00000100</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>w</td>
+<td><tt>0x00000200</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>w</td>
+<td><tt>0x00000400</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>w</td>
+<td><tt>0x00000800</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>w</td>
+<td><tt>0x00001000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>w</td>
+<td><tt>0x00002000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>w</td>
+<td><tt>0x00010000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>w</td>
+<td><tt>0x00020000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>w</td>
+<td><tt>0x00040000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>w</td>
+<td><tt>0x00080000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>w</td>
+<td><tt>0x00100000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>w</td>
+<td><tt>0x00200000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>w</td>
+<td><tt>0x00400000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>w</td>
+<td><tt>0x00800000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>w</td>
+<td><tt>0x01000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>w</td>
+<td><tt>0x02000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>w</td>
+<td><tt>0x04000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>w</td>
+<td><tt>0x08000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>w</td>
+<td><tt>0x10000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>w</td>
+<td><tt>0x20000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>w</td>
+<td><tt>0x40000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>w</td>
+<td><tt>0x80000000</tt></td>
+<td>Clear Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>.TRGi not changed.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>.TRGi is cleared.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00000000</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0xffffffff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00000000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_TRIG">&nbsp;</a>
+<h3>CBS_TRIG</h3>
+<h3>"Trigger to Host Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_TRIG_ADDR = 0xF00004A8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_TRIG_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_TRIG_t">CBS_TRIG_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_TRIG.bits</b>&nbsp;&quot;Trigger to Host Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_TRIG_MASK = <tt>0xffffffff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_TRIG_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_TRIG_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>TRG0</td>
+<td>1</td>
+<td>0 - 0</td>
+<td>rh</td>
+<td><tt>0x00000001</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG1</td>
+<td>1</td>
+<td>1 - 1</td>
+<td>rh</td>
+<td><tt>0x00000002</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG2</td>
+<td>1</td>
+<td>2 - 2</td>
+<td>rh</td>
+<td><tt>0x00000004</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG3</td>
+<td>1</td>
+<td>3 - 3</td>
+<td>rh</td>
+<td><tt>0x00000008</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG4</td>
+<td>1</td>
+<td>4 - 4</td>
+<td>rh</td>
+<td><tt>0x00000010</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG5</td>
+<td>1</td>
+<td>5 - 5</td>
+<td>rh</td>
+<td><tt>0x00000020</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG6</td>
+<td>1</td>
+<td>6 - 6</td>
+<td>rh</td>
+<td><tt>0x00000040</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG7</td>
+<td>1</td>
+<td>7 - 7</td>
+<td>rh</td>
+<td><tt>0x00000080</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG8</td>
+<td>1</td>
+<td>8 - 8</td>
+<td>rh</td>
+<td><tt>0x00000100</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG9</td>
+<td>1</td>
+<td>9 - 9</td>
+<td>rh</td>
+<td><tt>0x00000200</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG10</td>
+<td>1</td>
+<td>10 - 10</td>
+<td>rh</td>
+<td><tt>0x00000400</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG11</td>
+<td>1</td>
+<td>11 - 11</td>
+<td>rh</td>
+<td><tt>0x00000800</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG12</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rh</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG13</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG14</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>rh</td>
+<td><tt>0x00004000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG15</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>rh</td>
+<td><tt>0x00008000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG16</td>
+<td>1</td>
+<td>16 - 16</td>
+<td>rh</td>
+<td><tt>0x00010000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG17</td>
+<td>1</td>
+<td>17 - 17</td>
+<td>rh</td>
+<td><tt>0x00020000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG18</td>
+<td>1</td>
+<td>18 - 18</td>
+<td>rh</td>
+<td><tt>0x00040000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG19</td>
+<td>1</td>
+<td>19 - 19</td>
+<td>rh</td>
+<td><tt>0x00080000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG20</td>
+<td>1</td>
+<td>20 - 20</td>
+<td>rh</td>
+<td><tt>0x00100000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG21</td>
+<td>1</td>
+<td>21 - 21</td>
+<td>rh</td>
+<td><tt>0x00200000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG22</td>
+<td>1</td>
+<td>22 - 22</td>
+<td>rh</td>
+<td><tt>0x00400000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG23</td>
+<td>1</td>
+<td>23 - 23</td>
+<td>rh</td>
+<td><tt>0x00800000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG24</td>
+<td>1</td>
+<td>24 - 24</td>
+<td>rh</td>
+<td><tt>0x01000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG25</td>
+<td>1</td>
+<td>25 - 25</td>
+<td>rh</td>
+<td><tt>0x02000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG26</td>
+<td>1</td>
+<td>26 - 26</td>
+<td>rh</td>
+<td><tt>0x04000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG27</td>
+<td>1</td>
+<td>27 - 27</td>
+<td>rh</td>
+<td><tt>0x08000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG28</td>
+<td>1</td>
+<td>28 - 28</td>
+<td>rh</td>
+<td><tt>0x10000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG29</td>
+<td>1</td>
+<td>29 - 29</td>
+<td>rh</td>
+<td><tt>0x20000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG30</td>
+<td>1</td>
+<td>30 - 30</td>
+<td>rh</td>
+<td><tt>0x40000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TRG31</td>
+<td>1</td>
+<td>31 - 31</td>
+<td>rh</td>
+<td><tt>0x80000000</tt></td>
+<td>Service Request Bits
+<table class="valdesc">
+<tr><td>0</td><td>&nbsp;</td><td>No request.</td></tr>
+<tr><td>1</td><td>&nbsp;</td><td>Service i requested.</td></tr>
+</table>
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0xffffffff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>volatile</td><td><tt>0xffffffff</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_SRC1">&nbsp;</a>
+<h3>CBS_SRC1</h3>
+<h3>"Service Request Node2 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_SRC1_ADDR = 0xF00004F8</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_SRC1.bits</b>&nbsp;&quot;Service Request Node2 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_SRCm_MASK = <tt>0x0000fcff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00003cff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000dcff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+<a name="CBS_SRC0">&nbsp;</a>
+<h3>CBS_SRC0</h3>
+<h3>"Service Request Node1 Control Register"</h3>
+
+<table>
+<tr><td>Address</td><td><tt>CBS_SRC0_ADDR = 0xF00004FC</tt></td></tr>
+<tr><td>Absolute addressable</td><td>Yes</td></tr>
+<!--tr><td>C type</td><td>CBS_SRCm_t</td></tr--!>
+<tr><td>Reset value</td><td><tt>0x00000000</tt></td></tr>
+<tr><td>C type</td><td><a class="url" href="types/c.html#CBS_SRCm_t">CBS_SRCm_t</a></td></tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan="6"><b>CBS_SRC0.bits</b>&nbsp;&quot;Service Request Node1 Control Register&quot;</td>
+</tr>
+<tr><td colspan="6">
+<table border="0" callpadding="1" cellspacing="0">
+<tr><td>Mask:</td><td>CBS_SRCm_MASK = <tt>0x0000fcff</tt></td><tr>
+<td>Masks:&nbsp;&nbsp;</td><td>CBS_SRCm_&lt;<i>Bit field</i>&gt;_MASK</td></tr>
+<tr><td>LSBs:</td><td>CBS_SRCm_&lt;<i>Bit field</i>&gt;_SHIFT</td></tr>
+</table>
+</td></tr>
+<tr>
+<td><b>Bit field</b></td>
+<td><b>#Bits</b></td>
+<td><b>Bits' position</b></td>
+<td><b>Access</b></td>
+<td><b>Mask</b></td>
+<td><b>Description</b></td>
+</tr>
+<tr>
+<td>SRPN</td>
+<td>8</td>
+<td>0 - 7</td>
+<td>rw</td>
+<td><tt>0x000000ff</tt></td>
+<td>Service Request Priority Number
+</td>
+</tr>
+<tr>
+<td>TOS</td>
+<td>2</td>
+<td>10 - 11</td>
+<td>rw</td>
+<td><tt>0x00000c00</tt></td>
+<td>Type of Service Control
+</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td>1</td>
+<td>12 - 12</td>
+<td>rw</td>
+<td><tt>0x00001000</tt></td>
+<td>Service Request Enable
+</td>
+</tr>
+<tr>
+<td>SRR</td>
+<td>1</td>
+<td>13 - 13</td>
+<td>rh</td>
+<td><tt>0x00002000</tt></td>
+<td>Service Request Flag
+</td>
+</tr>
+<tr>
+<td>CLRR</td>
+<td>1</td>
+<td>14 - 14</td>
+<td>w</td>
+<td><tt>0x00004000</tt></td>
+<td>Request Clear Bit
+</td>
+</tr>
+<tr>
+<td>SETR</td>
+<td>1</td>
+<td>15 - 15</td>
+<td>w</td>
+<td><tt>0x00008000</tt></td>
+<td>Request Set Bit
+</td>
+</tr>
+
+<tr><td colspan="3" rowspan="3">&nbsp;</td><td>readable</td><td><tt>0x00003cff</tt></td><td rowspan="3">&nbsp;</td></tr>
+<tr><td>writeable</td><td><tt>0x0000dcff</tt></td></tr>
+<tr><td>volatile</td><td><tt>0x00002000</tt></td></tr>
+</table>
+<br>
+
+<br>
+
+<a href="#top">Top</a>
+
+<br><hr><br>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,264 @@
+<html>
+<head>
+<style type="text/css">
+.url {text-decoration:none;}
+</style>
+</head>
+<body>
+<h2>#include &lt;tc1792/fadc-struct.h&gt;</h2>
+<hr>
+<!--
+#ifndef _TC1792_FADC_STRUCTS_H_
+#define _TC1792_FADC_STRUCTS_H_
+/*
+   TriCore TC1792
+   Some struct definitions for conveniance
+*/
+-->
+<pre>
+#include &lt;tc1792/<a class="url" href="../fadc.html">fadc.h</a>&gt;
+#ifndef FADC_BASE
+#define FADC_BASE 0xf0100300
+#endif /* FADC_BASE */
+</pre>
+
+
+<hr>
+<table>
+<tr><td colspan="2">typedef struct<td><td colspan="2">&nbsp;</td></tr>
+<tr><td>{&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CLC_t">FADC_CLC_t</a></td>
+<td>CLC;</td>
+<td>/* 0x0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved1[0x1];</td>
+<td>/* 0x4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_ID_t">FADC_ID_t</a></td>
+<td>ID;</td>
+<td>/* 0x8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_FDR_t">FADC_FDR_t</a></td>
+<td>FDR;</td>
+<td>/* 0xc */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CRSR_t">FADC_CRSR_t</a></td>
+<td>CRSR;</td>
+<td>/* 0x10 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_FMR_t">FADC_FMR_t</a></td>
+<td>FMR;</td>
+<td>/* 0x14 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_NCTR_t">FADC_NCTR_t</a></td>
+<td>NCTR;</td>
+<td>/* 0x18 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_GCR_t">FADC_GCR_t</a></td>
+<td>GCR;</td>
+<td>/* 0x1c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>CFGR0;</td>
+<td>/* 0x20 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>CFGR1;</td>
+<td>/* 0x24 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>CFGR2;</td>
+<td>/* 0x28 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CFGRm_t">FADC_CFGRm_t</a></td>
+<td>CFGR3;</td>
+<td>/* 0x2c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>ACR0;</td>
+<td>/* 0x30 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>ACR1;</td>
+<td>/* 0x34 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>ACR2;</td>
+<td>/* 0x38 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_ACRm_t">FADC_ACRm_t</a></td>
+<td>ACR3;</td>
+<td>/* 0x3c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>RCH0;</td>
+<td>/* 0x40 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>RCH1;</td>
+<td>/* 0x44 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>RCH2;</td>
+<td>/* 0x48 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_RCHm_t">FADC_RCHm_t</a></td>
+<td>RCH3;</td>
+<td>/* 0x4c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved20[0x4];</td>
+<td>/* 0x50 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>FCR0;</td>
+<td>/* 0x60 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CRR0_t">FADC_CRR0_t</a></td>
+<td>CRR0;</td>
+<td>/* 0x64 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>IRR10;</td>
+<td>/* 0x68 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>IRR20;</td>
+<td>/* 0x6c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_IRRm_t">FADC_IRRm_t</a></td>
+<td>IRR30;</td>
+<td>/* 0x70 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_FRR0_t">FADC_FRR0_t</a></td>
+<td>FRR0;</td>
+<td>/* 0x74 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved27[0x2];</td>
+<td>/* 0x78 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_FCRm_t">FADC_FCRm_t</a></td>
+<td>FCR1;</td>
+<td>/* 0x80 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_CRR1_t">FADC_CRR1_t</a></td>
+<td>CRR1;</td>
+<td>/* 0x84 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_IRR11_t">FADC_IRR11_t</a></td>
+<td>IRR11;</td>
+<td>/* 0x88 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved31[0x2];</td>
+<td>/* 0x8c */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_FRR1_t">FADC_FRR1_t</a></td>
+<td>FRR1;</td>
+<td>/* 0x94 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>unsigned int</td>
+<td>reserved33[0x16];</td>
+<td>/* 0x98 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>SRC3;</td>
+<td>/* 0xf0 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>SRC2;</td>
+<td>/* 0xf4 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>SRC1;</td>
+<td>/* 0xf8 */</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a class="url" href="../types/f.html#FADC_SRCm_t">FADC_SRCm_t</a></td>
+<td>SRC0;</td>
+<td>/* 0xfc */</td>
+</tr>
+
+<tr><td colspan="4">} FADC_t;</td></tr>
+</table>
+
+<!-- #endif /* _TC1792_FADC_STRUCTS_H_ */ -->
+</body>
+</html>
